@@ -20,11 +20,13 @@ const CATEGORIES: { value: Category; label: string }[] = [
   { value: "answers", label: "Answers" },
 ];
 const CHAPTERS = ["1", "2", "3", "4", "5", "6", "7", "8"];
+const PAGE_SIZE = 50;
 
 export default function Search() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category>("all");
   const [chapter, setChapter] = useState("all");
+  const [limit, setLimit] = useState(PAGE_SIZE);
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -45,7 +47,10 @@ export default function Search() {
       <input
         type="search"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => {
+          setQuery(e.target.value);
+          setLimit(PAGE_SIZE);
+        }}
         placeholder="Search kana, romaji, or English..."
         className="w-full rounded-lg bg-neutral-900 border border-neutral-700 px-4 py-3 text-lg outline-none focus:border-neutral-400"
       />
@@ -54,7 +59,10 @@ export default function Search() {
         {CATEGORIES.map((cat) => (
           <button
             key={cat.value}
-            onClick={() => setCategory(cat.value)}
+            onClick={() => {
+              setCategory(cat.value);
+              setLimit(PAGE_SIZE);
+            }}
             className={
               "rounded-full px-3 py-1 text-sm border " +
               (category === cat.value
@@ -67,7 +75,10 @@ export default function Search() {
         ))}
         <select
           value={chapter}
-          onChange={(e) => setChapter(e.target.value)}
+          onChange={(e) => {
+            setChapter(e.target.value);
+            setLimit(PAGE_SIZE);
+          }}
           className="rounded-full px-3 py-1 text-sm border border-neutral-700 bg-neutral-900 text-neutral-300"
         >
           <option value="all">All chapters</option>
@@ -87,10 +98,18 @@ export default function Search() {
       )}
 
       <ul className="mt-3 space-y-2">
-        {results.slice(0, 50).map((item, i) => (
+        {results.slice(0, limit).map((item, i) => (
           <ResultCard key={i} item={item} doc={docsById.get(item.d)} />
         ))}
       </ul>
+      {results.length > limit && (
+        <button
+          onClick={() => setLimit(limit + PAGE_SIZE)}
+          className="mt-4 w-full rounded-lg border border-neutral-700 py-3 text-neutral-300 hover:border-neutral-400"
+        >
+          Show more ({results.length - limit} left)
+        </button>
+      )}
     </div>
   );
 }
