@@ -3,8 +3,10 @@
 import { useMemo, useState } from "react";
 import rawData from "@/data/lesson-data.json";
 import type { LessonData } from "@/types/lesson";
+import ResultCard from "@/components/ResultCard";
 
 const data = rawData as LessonData;
+const docsById = new Map(data.docs.map((doc) => [doc.n, doc]));
 
 export default function Search() {
   const [query, setQuery] = useState("");
@@ -31,10 +33,7 @@ export default function Search() {
 
       <ul className="mt-3 space-y-2">
         {results.slice(0, 50).map((item, i) => (
-          <li key={i} className="rounded-lg bg-neutral-900 p-3">
-            <p className="text-xs text-neutral-500">{item.b}</p>
-            <p className="mt-1">{item.x}</p>
-          </li>
+          <ResultCard key={i} item={item} doc={docsById.get(item.d)} />
         ))}
       </ul>
     </div>
