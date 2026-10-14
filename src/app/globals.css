@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.lesson h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 0.75rem; }
+.lesson h3 { font-size: 1.15rem; font-weight: 600; margin: 1.75rem 0 0.5rem; color: #d4d4d4; }
+.lesson p { margin: 0.75rem 0; line-height: 1.7; }
+.lesson ul, .lesson ol { margin: 0.75rem 0; padding-left: 1.5rem; }
+.lesson ul { list-style: disc; }
+.lesson ol { list-style: decimal; }
+.lesson li { margin: 0.25rem 0; }
+.lesson strong { color: #fff; }
+.lesson .tw { overflow-x: auto; margin: 1rem 0; }
+.lesson table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.lesson th, .lesson td { border: 1px solid #404040; padding: 0.5rem 0.75rem; text-align: left; }
+.lesson th { background: #171717; color: #a3a3a3; font-weight: 600; }
+.lesson [id] { scroll-margin-top: 1.5rem; }
