@@ -19,23 +19,26 @@ const CATEGORIES: { value: Category; label: string }[] = [
   { value: "practice", label: "Practice" },
   { value: "answers", label: "Answers" },
 ];
+const CHAPTERS = ["1", "2", "3", "4", "5", "6", "7", "8"];
 
 export default function Search() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<Category>("all");
+  const [chapter, setChapter] = useState("all");
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase();
-    // Nothing typed and no category picked: show nothing
-    if (!q && category === "all") return [];
+    if (!q && category === "all" && chapter === "all") return [];
     return data.items.filter(
       (item) =>
         (category === "all" || item.c === category) &&
-        item.x.toLowerCase().includes(q)
+        (chapter === "all" || item.ch === chapter) &&
+        item.x.toLowerCase().includes(q),
     );
-  }, [query, category]);
+  }, [query, category, chapter]);
 
-  const showing = query.trim() !== "" || category !== "all";
+  const showing =
+    query.trim() !== "" || category !== "all" || chapter !== "all";
 
   return (
     <div className="mt-6">
@@ -62,6 +65,18 @@ export default function Search() {
             {cat.label}
           </button>
         ))}
+        <select
+          value={chapter}
+          onChange={(e) => setChapter(e.target.value)}
+          className="rounded-full px-3 py-1 text-sm border border-neutral-700 bg-neutral-900 text-neutral-300"
+        >
+          <option value="all">All chapters</option>
+          {CHAPTERS.map((ch) => (
+            <option key={ch} value={ch}>
+              Chapter {ch}
+            </option>
+          ))}
+        </select>
       </div>
 
       {showing && (
