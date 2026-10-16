@@ -19,7 +19,7 @@ const CATEGORIES: { value: Category; label: string }[] = [
   { value: "practice", label: "Practice" },
   { value: "answers", label: "Answers" },
 ];
-const CHAPTERS = ["1", "2", "3", "4", "5", "6", "7", "8"];
+const CHAPTERS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 const PAGE_SIZE = 50;
 
 export default function Search() {
