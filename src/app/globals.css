@@ -27,6 +27,7 @@ body {
 
 .lesson h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 0.75rem; }
 .lesson h3 { font-size: 1.15rem; font-weight: 600; margin: 1.75rem 0 0.5rem; color: #d4d4d4; }
+.lesson h4 { font-size: 1rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: #a3a3a3; }
 .lesson p { margin: 0.75rem 0; line-height: 1.7; }
 .lesson ul, .lesson ol { margin: 0.75rem 0; padding-left: 1.5rem; }
 .lesson ul { list-style: disc; }

@@ -37,3 +37,11 @@ export type TextItem = ItemBase & {
 export type Item = RowItem | TextItem;
 
 export type LessonData = { docs: Doc[]; items: Item[] };
+
+export type Chapter = {
+  ch: string;      // "1"
+  title: string;   // "Copula Sentences"
+  intro: string;   // the short paragraph under the title
+  sections: { id: string; title: string; html: string }[];
+  toc: { a: string; t: string; l: number }[];
+};
