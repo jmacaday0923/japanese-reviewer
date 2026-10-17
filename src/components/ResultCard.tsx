@@ -1,31 +1,38 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import type { Doc, Item } from "@/types/lesson";
+import { lessonHref, type SearchEntry } from "@/lib/search";
 
-type Props = { item: Item; doc?: Doc };
+type Props = {
+  entry: SearchEntry;
+  docTitle?: string;
+  header?: string[]; // column headers, for table rows
+  badge?: string;    // optional label, like the category
+};
 
-export default function ResultCard({ item, doc }: Props) {
+export default function ResultCard({ entry, docTitle, header, badge }: Props) {
   // Where it came from: document title, then section
-  const where = [doc?.title, item.b].filter(Boolean).join(" › ");
-
-  // Lesson page URL, jumping to the section the item sits in (if it has one)
-  const href = `/lessons/${item.d}${item.a ? `#${item.a}` : ""}`;
+  const where = [docTitle, entry.b].filter(Boolean).join(" › ");
 
   return (
     <li>
       <Link
-        href={href}
+        href={lessonHref(entry)}
         className="block rounded-card border border-border bg-background p-4 transition-colors hover:border-border-strong hover:bg-surface-raised"
       >
-        <p className="text-xs text-subtle">{where}</p>
+        <div className="flex items-start justify-between gap-3">
+          <p className="min-w-0 text-xs text-subtle">{where}</p>
+          {badge && (
+            <span className="shrink-0 rounded-full border border-border px-2 py-0.5 text-xs text-muted">{badge}</span>
+          )}
+        </div>
 
-        {item.t === "r" ? (
+        {header ? (
           // Table row: show each column with its header
           <dl className="mt-2 grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-1">
-            {item.x.split(" | ").map((value, i) =>
+            {entry.x.split(" | ").map((value, i) =>
               value.trim() ? (
                 <Fragment key={i}>
-                  <dt className="text-sm text-subtle">{item.hd[i]}</dt>
+                  <dt className="text-sm text-subtle">{header[i]}</dt>
                   <dd className="min-w-0 break-words">{value}</dd>
                 </Fragment>
               ) : null
@@ -33,7 +40,7 @@ export default function ResultCard({ item, doc }: Props) {
           </dl>
         ) : (
           // Paragraph or list point
-          <p className="mt-1 break-words">{item.x}</p>
+          <p className="mt-1 break-words">{entry.x}</p>
         )}
       </Link>
     </li>

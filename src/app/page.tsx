@@ -1,9 +1,11 @@
+import { Suspense } from "react";
 import rawData from "@/data/lesson-data.json";
 import rawChapters from "@/data/chapters.json";
 import rawKana from "@/data/kana.json";
 import rawKanji from "@/data/kanji.json";
 import type { Chapter, LessonData } from "@/types/lesson";
-import Search from "@/components/Search";
+import { getSearchPayload } from "@/lib/search-data";
+import Search, { SearchFallback } from "@/components/Search";
 import OverviewStats from "@/components/OverviewStats";
 import QuickAccess from "@/components/QuickAccess";
 import StudySection from "@/components/StudySection";
@@ -15,6 +17,9 @@ const kana = rawKana as Chapter[];
 const kanji = rawKanji as Chapter[];
 
 export default function Home() {
+  // Only the fields the search needs; the full JSON stays on the server
+  const searchPayload = getSearchPayload();
+
   const stats = [
     { label: "Chapters", value: chapters.length },
     { label: "Kana & Kanji pages", value: kana.length + kanji.length },
@@ -45,7 +50,11 @@ export default function Home() {
           in kana, romaji or English. Narrow it with a category or a chapter. The chapter, kana and
           kanji pages below are separate study pages and are not part of the search.
         </p>
-        <Search />
+        {/* Search reads the URL (?q=...), so it renders in the browser; the
+            fallback keeps the same layout in the first HTML */}
+        <Suspense fallback={<SearchFallback chapters={searchPayload.chapters} />}>
+          <Search payload={searchPayload} />
+        </Suspense>
       </section>
 
       <StudySection
