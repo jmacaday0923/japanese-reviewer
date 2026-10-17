@@ -44,14 +44,14 @@ export default function Search() {
   const showing = query.trim() !== "" || category !== "all" || chapter !== "all";
 
   return (
-    <div className="mt-6">
+    <div className="mt-4">
       <input
         type="search"
         value={query}
         onChange={(e) => { setQuery(e.target.value); setLimit(PAGE_SIZE); }}
         placeholder="Search kana, romaji, or English..."
         aria-label="Search lessons"
-        className="w-full rounded-card border border-border bg-surface px-4 py-3 text-lg text-foreground placeholder:text-subtle transition-colors focus:border-accent"
+        className="w-full rounded-card border border-border bg-background px-4 py-3 text-lg text-foreground placeholder:text-subtle transition-colors focus:border-accent"
       />
 
       <div className="mt-3 flex flex-wrap gap-2">
@@ -65,7 +65,7 @@ export default function Search() {
               "min-h-10 rounded-full border px-4 text-sm transition-colors " +
               (category === cat.value
                 ? "border-accent bg-accent-soft text-accent-text"
-                : "border-border bg-surface text-muted hover:border-border-strong hover:text-foreground")
+                : "border-border bg-background text-muted hover:border-border-strong hover:text-foreground")
             }
           >
             {cat.label}
@@ -76,7 +76,7 @@ export default function Search() {
             value={chapter}
             onChange={(e) => { setChapter(e.target.value); setLimit(PAGE_SIZE); }}
             aria-label="Filter by chapter"
-            className="min-h-10 appearance-none rounded-full border border-border bg-surface pl-4 pr-9 text-sm text-muted transition-colors hover:border-border-strong"
+            className="min-h-10 appearance-none rounded-full border border-border bg-background pl-4 pr-9 text-sm text-muted transition-colors hover:border-border-strong"
           >
             <option value="all">All chapters</option>
             {CHAPTERS.map((ch) => (
@@ -108,7 +108,7 @@ export default function Search() {
         <button
           type="button"
           onClick={() => setLimit(limit + PAGE_SIZE)}
-          className="mt-4 min-h-11 w-full rounded-card border border-border bg-surface py-3 text-muted transition-colors hover:border-border-strong hover:bg-surface-raised hover:text-foreground"
+          className="mt-4 min-h-11 w-full rounded-card border border-border bg-background py-3 text-muted transition-colors hover:border-border-strong hover:bg-surface-raised hover:text-foreground"
         >
           Show more ({results.length - limit} left)
         </button>

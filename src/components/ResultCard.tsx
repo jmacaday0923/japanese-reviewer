@@ -15,7 +15,7 @@ export default function ResultCard({ item, doc }: Props) {
     <li>
       <Link
         href={href}
-        className="block rounded-card border border-border bg-surface p-4 transition-colors hover:border-border-strong hover:bg-surface-raised"
+        className="block rounded-card border border-border bg-background p-4 transition-colors hover:border-border-strong hover:bg-surface-raised"
       >
         <p className="text-xs text-subtle">{where}</p>
 
