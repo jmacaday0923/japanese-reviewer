@@ -34,9 +34,12 @@ function describe(state: SearchState) {
 export default function SearchResults({ state, active, results, docs, headers, onReset }: Props) {
   const docTitles = useMemo(() => new Map(docs.map((doc) => [doc.n, doc.title])), [docs]);
 
-  // Back to the first page whenever the search changes
+  // Back to the first page whenever the search changes. The stored page is
+  // replaced (not just ignored), so returning to an earlier search starts at
+  // 50 again instead of picking up its old "Show more" count.
   const key = [state.q.trim(), state.category, state.chapter].join("\n");
   const [page, setPage] = useState({ key, limit: PAGE_SIZE });
+  if (page.key !== key) setPage({ key, limit: PAGE_SIZE });
   const limit = page.key === key ? page.limit : PAGE_SIZE;
 
   const count = results.length;
