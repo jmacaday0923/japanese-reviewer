@@ -18,33 +18,31 @@ export default async function LessonPage({ params }: Props) {
   if (!doc) notFound();
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 p-8">
-      <div className="mx-auto max-w-3xl">
-        <Link href="/" className="text-sm text-neutral-400 hover:text-neutral-100">
-          ← Back to search
-        </Link>
+    <main className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6 lg:py-10">
+      <Link href="/" className="rounded-control text-sm text-muted transition-colors hover:text-foreground">
+        ← Back to search
+      </Link>
 
-        <h1 className="mt-4 text-3xl font-bold">{doc.title}</h1>
-        <p className="mt-1 text-sm text-neutral-500">
-          {[doc.kind, doc.date].filter(Boolean).join(" · ")}
+      <h1 className="mt-4 text-3xl font-bold tracking-tight">{doc.title}</h1>
+      <p className="mt-1 text-sm text-subtle">
+        {[doc.kind, doc.date].filter(Boolean).join(" · ")}
+      </p>
+
+      {doc.html ? (
+        // The lesson content is HTML from your own data file, so it is safe to insert
+        <article
+          className="lesson mt-8"
+          dangerouslySetInnerHTML={{ __html: doc.html }}
+        />
+      ) : (
+        // The N5 Practice Exam has no content here; it lives on its own page
+        <p className="mt-8">
+          {doc.intro}{" "}
+          <a href={doc.link} className="text-accent-text underline underline-offset-4">
+            Open it
+          </a>
         </p>
-
-        {doc.html ? (
-          // The lesson content is HTML from your own data file, so it is safe to insert
-          <article
-            className="lesson mt-8"
-            dangerouslySetInnerHTML={{ __html: doc.html }}
-          />
-        ) : (
-          // The N5 Practice Exam has no content here; it lives on its own page
-          <p className="mt-8">
-            {doc.intro}{" "}
-            <a href={doc.link} className="underline">
-              Open it
-            </a>
-          </p>
-        )}
-      </div>
+      )}
     </main>
   );
 }

@@ -1,41 +1,125 @@
 @import "tailwindcss";
 
+/* Design tokens: one dark theme for now. Components use these through the
+   Tailwind names below (bg-surface, text-muted, border-border, ...), so a
+   later light theme only has to redefine this block. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+
+  --background: #0b0d12;
+  --surface: #12151c;
+  --surface-raised: #191d26;
+  --border: #272c37;
+  --border-strong: #3a4150;
+
+  --foreground: #e6e8ee;
+  --muted: #a3a9b6;
+  --subtle: #868d9b;
+
+  --accent: #818cf8;
+  --accent-text: #a5b4fc;
+  --accent-soft: rgb(129 140 248 / 0.12);
+
+  --header-height: 3.5rem;
+
+  /* Geist for Latin text, then Japanese system fonts for kana and kanji */
+  --font-body: var(--font-geist-sans), "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans JP", "Noto Sans CJK JP",
+    system-ui, sans-serif;
+  --font-code: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-code);
+
+  --radius-control: 0.5rem;
+  --radius-card: 0.75rem;
+
+  --spacing-header: var(--header-height);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    /* Anchor jumps land below the sticky header */
+    scroll-padding-top: calc(var(--header-height) + 1rem);
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    overflow-x: clip;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
 
+/* Lesson and chapter content comes from the data files as HTML */
+.lesson {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
 .lesson h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 0.75rem; }
-.lesson h3 { font-size: 1.15rem; font-weight: 600; margin: 1.75rem 0 0.5rem; color: #d4d4d4; }
-.lesson h4 { font-size: 1rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: #a3a3a3; }
-.lesson p { margin: 0.75rem 0; line-height: 1.7; }
+.lesson h3 { font-size: 1.15rem; font-weight: 600; margin: 2rem 0 0.5rem; color: var(--foreground); }
+.lesson h4 { font-size: 1rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: var(--muted); }
+.lesson p { margin: 0.75rem 0; }
 .lesson ul, .lesson ol { margin: 0.75rem 0; padding-left: 1.5rem; }
 .lesson ul { list-style: disc; }
 .lesson ol { list-style: decimal; }
 .lesson li { margin: 0.25rem 0; }
-.lesson strong { color: #fff; }
-.lesson .tw { overflow-x: auto; margin: 1rem 0; }
+.lesson li::marker { color: var(--subtle); }
+.lesson strong { color: var(--foreground); font-weight: 600; }
+
+/* Wide tables scroll inside their own wrapper, never the whole page */
+.lesson .tw {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
 .lesson table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
-.lesson th, .lesson td { border: 1px solid #404040; padding: 0.5rem 0.75rem; text-align: left; }
-.lesson th { background: #171717; color: #a3a3a3; font-weight: 600; }
-.lesson [id] { scroll-margin-top: 1.5rem; }
+.lesson th, .lesson td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  /* Keep Japanese words whole; a wide table scrolls instead of squeezing */
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+.lesson th + th, .lesson td + td { border-left: 1px solid var(--border); }
+.lesson tbody tr:last-child td { border-bottom: 0; }
+.lesson th { background: var(--surface); color: var(--muted); font-weight: 600; white-space: nowrap; }
