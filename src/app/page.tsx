@@ -1,11 +1,19 @@
 import Link from "next/link";
 import rawData from "@/data/lesson-data.json";
 import rawChapters from "@/data/chapters.json";
+import rawKana from "@/data/kana.json";
+import rawKanji from "@/data/kanji.json";
 import type { Chapter, LessonData } from "@/types/lesson";
 import Search from "@/components/Search";
 
 const data = rawData as LessonData;
-const chapters = rawChapters as Chapter[];
+
+// The three sections on the home page, each with its own pages
+const groups = [
+  { heading: "Chapters", label: "Chapter", basePath: "/chapters", pages: rawChapters as Chapter[] },
+  { heading: "Kana", label: "Kana", basePath: "/kana", pages: rawKana as Chapter[] },
+  { heading: "Kanji", label: "Kanji", basePath: "/kanji", pages: rawKanji as Chapter[] },
+];
 
 export default function Home() {
   return (
@@ -18,22 +26,24 @@ export default function Home() {
 
         <Search />
 
-        <section className="mt-12">
-          <h2 className="text-xl font-semibold">Chapters</h2>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-            {chapters.map((c) => (
-              <li key={c.ch}>
-                <Link
-                  href={`/chapters/${c.ch}`}
-                  className="block h-full rounded-lg bg-neutral-900 p-4 border border-transparent hover:border-neutral-600"
-                >
-                  <p className="text-xs text-neutral-500">Chapter {c.ch}</p>
-                  <p className="mt-1 font-medium">{c.title}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
+        {groups.map((g) => (
+          <section key={g.heading} className="mt-12">
+            <h2 className="text-xl font-semibold">{g.heading}</h2>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+              {g.pages.map((c) => (
+                <li key={c.ch}>
+                  <Link
+                    href={`${g.basePath}/${c.ch}`}
+                    className="block h-full rounded-lg bg-neutral-900 p-4 border border-transparent hover:border-neutral-600"
+                  >
+                    <p className="text-xs text-neutral-500">{g.label} {c.ch}</p>
+                    <p className="mt-1 font-medium">{c.title}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
         <section className="mt-12">
           <h2 className="text-xl font-semibold">All documents</h2>
