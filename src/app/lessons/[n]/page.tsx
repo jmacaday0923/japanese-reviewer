@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import rawData from "@/data/lesson-data.json";
 import type { LessonData } from "@/types/lesson";
+import { documentOutline } from "@/lib/toc";
+import ReaderLayout from "@/components/ReaderLayout";
+import LessonContent from "@/components/LessonContent";
 
 const data = rawData as LessonData;
 
@@ -17,32 +19,35 @@ export default async function LessonPage({ params }: Props) {
   const doc = data.docs.find((d) => d.n === Number(n));
   if (!doc) notFound();
 
+  const meta = [doc.kind, doc.date].filter(Boolean).join(" · ");
+
   return (
-    <main className="mx-auto w-full max-w-3xl px-4 py-8 sm:px-6 lg:py-10">
-      <Link href="/" className="rounded-control text-sm text-muted transition-colors hover:text-foreground">
-        ← Back to search
-      </Link>
-
-      <h1 className="mt-4 text-3xl font-bold tracking-tight">{doc.title}</h1>
-      <p className="mt-1 text-sm text-subtle">
-        {[doc.kind, doc.date].filter(Boolean).join(" · ")}
-      </p>
-
+    <ReaderLayout
+      breadcrumbs={[
+        { label: "Home", href: "/" },
+        { label: "Documents", href: "/#documents" },
+        { label: doc.title },
+      ]}
+      title={doc.title}
+      meta={meta || undefined}
+      outline={documentOutline(doc.toc)}
+    >
       {doc.html ? (
-        // The lesson content is HTML from your own data file, so it is safe to insert
-        <article
-          className="lesson mt-8"
-          dangerouslySetInnerHTML={{ __html: doc.html }}
-        />
+        <LessonContent as="article" html={doc.html} className="mt-8" />
       ) : (
-        // The N5 Practice Exam has no content here; it lives on its own page
+        // A document with no content here: show its intro, and a link only if there is one
         <p className="mt-8">
-          {doc.intro}{" "}
-          <a href={doc.link} className="text-accent-text underline underline-offset-4">
-            Open it
-          </a>
+          {doc.intro || "This document has no content here yet."}
+          {doc.link && (
+            <>
+              {" "}
+              <a href={doc.link} className="text-accent-text underline underline-offset-4">
+                Open it
+              </a>
+            </>
+          )}
         </p>
       )}
-    </main>
+    </ReaderLayout>
   );
 }

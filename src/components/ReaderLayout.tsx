@@ -1,0 +1,80 @@
+import type { ReactNode } from "react";
+import { countLinks, type TocNode } from "@/lib/toc";
+import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
+import TableOfContents from "@/components/TableOfContents";
+
+// The shared frame for every reader page (chapters, kana, kanji, documents):
+// breadcrumbs, title block, reading column, outline, and an optional footer
+// such as previous/next links. It owns the page's one <main> and one <h1>.
+//
+// Wide screens (xl, 1280px and up, where the 15rem site sidebar still leaves
+// room) get a two-column grid with a sticky outline on the right. Smaller
+// screens get the same outline as a collapsed disclosure above the content.
+// Pages with no outline stay a single centered column.
+type Props = {
+  breadcrumbs: Crumb[];
+  eyebrow?: string;  // small line above the title, like "Chapter 3"
+  title: string;
+  meta?: ReactNode;  // like "Reviewer · Oct 8, 2026"
+  intro?: ReactNode;
+  outline: TocNode[];
+  footer?: ReactNode;
+  children: ReactNode;
+};
+
+export default function ReaderLayout({ breadcrumbs, eyebrow, title, meta, intro, outline, footer, children }: Props) {
+  const hasOutline = outline.length > 0;
+  const links = countLinks(outline);
+
+  return (
+    <main
+      className={
+        "mx-auto w-full max-w-3xl px-4 py-8 sm:px-6 lg:py-10 " +
+        (hasOutline ? "xl:grid xl:max-w-[68rem] xl:grid-cols-[minmax(0,1fr)_15rem] xl:gap-x-12 xl:px-10" : "")
+      }
+    >
+      <header className="min-w-0 xl:col-start-1">
+        <Breadcrumbs items={breadcrumbs} />
+        {eyebrow && <p className="mt-6 text-sm font-medium uppercase tracking-wide text-subtle">{eyebrow}</p>}
+        <h1 className={(eyebrow ? "mt-1" : "mt-6") + " text-3xl font-bold tracking-tight break-words"}>{title}</h1>
+        {meta && <p className="mt-1 text-sm text-subtle">{meta}</p>}
+        {intro && <p className="mt-3 leading-relaxed text-muted">{intro}</p>}
+
+        {hasOutline && (
+          // Phones, tablets and narrow desktops: a compact outline you open when needed
+          <details className="group/outline mt-6 rounded-card border border-border bg-surface xl:hidden">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-3 rounded-card px-4 text-sm font-medium [&::-webkit-details-marker]:hidden">
+              <span>
+                On this page <span className="font-normal text-subtle">({links} links)</span>
+              </span>
+              <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="size-4 shrink-0 text-subtle transition-transform group-open/outline:rotate-180">
+                <path d="M6 8l4 4 4-4" />
+              </svg>
+            </summary>
+            <nav aria-label="On this page" className="border-t border-border p-2">
+              <TableOfContents nodes={outline} />
+            </nav>
+          </details>
+        )}
+      </header>
+
+      {hasOutline && (
+        // Wide screens: beside the text, sticky below the site header, scrolling on its own when long
+        <aside className="hidden xl:col-start-2 xl:row-span-2 xl:row-start-1 xl:block">
+          <nav
+            aria-label="On this page"
+            className="sticky top-[calc(var(--header-height)+1.5rem)] max-h-[calc(100dvh-var(--header-height)-3rem)] overflow-y-auto overscroll-contain p-1"
+          >
+            <p className="px-2 pb-2 text-xs font-medium uppercase tracking-wide text-subtle">On this page</p>
+            <TableOfContents nodes={outline} />
+          </nav>
+        </aside>
+      )}
+
+      <div className="min-w-0 xl:col-start-1">
+        {children}
+        {footer}
+      </div>
+    </main>
+  );
+}
