@@ -49,8 +49,15 @@ export default function Search({ payload }: Props) {
 
   const results = useMemo(() => matchEntries(payload.entries, state), [payload.entries, state]);
 
+  // The URL as it is right now. useSearchParams catches up a moment after
+  // each history write, so two quick changes in a row (a category, then a
+  // chapter) must build on the address bar, not on the last render.
+  function latest() {
+    return parseSearchState(new URLSearchParams(window.location.search), chapterValues);
+  }
+
   function commitText(value: string) {
-    writeUrl({ ...state, q: value }, "replace");
+    writeUrl({ ...latest(), q: value }, "replace");
   }
 
   function handleDraftChange(value: string, composing: boolean) {
@@ -60,16 +67,16 @@ export default function Search({ payload }: Props) {
   }
 
   function handleCategoryChange(category: CategoryFilter) {
-    writeUrl({ ...state, q: draft, category }, "push");
+    writeUrl({ ...latest(), q: draft, category }, "push");
   }
 
   function handleChapterChange(chapter: string) {
-    writeUrl({ ...state, q: draft, chapter }, "push");
+    writeUrl({ ...latest(), q: draft, chapter }, "push");
   }
 
   function handleClearText() {
     setDraft("");
-    writeUrl({ ...state, q: "" }, "push");
+    writeUrl({ ...latest(), q: "" }, "push");
     inputRef.current?.focus();
   }
 

@@ -69,6 +69,26 @@ test.describe("search", () => {
     await expect(s.results).toHaveCount(Math.min(50, expectedCount("a", "vocab", "6")));
   });
 
+  // Regression: a second change made before the page re-rendered used to
+  // build on the old URL and drop the first one. Both changes are fired in
+  // the same task here, which is the fastest a person (or a slow phone) can be.
+  test("two quick filter changes both stick", async ({ page }) => {
+    await page.goto("/");
+    const s = search(page);
+    await expect(s.box).toBeEnabled();
+    await page.evaluate(() => {
+      const section = document.getElementById("search")!;
+      const chip = [...section.querySelectorAll("button")].find((b) => b.textContent === "Vocabulary")!;
+      const select = section.querySelector("select")!;
+      chip.click();
+      select.value = "6";
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+    });
+    await expect(page).toHaveURL("/?category=vocab&chapter=6");
+    await expect(s.chip("Vocabulary")).toHaveAttribute("aria-pressed", "true");
+    await expect(s.status).toHaveText(statusText(expectedCount("", "vocab", "6")));
+  });
+
   test("General, Kana and Kanji are chapter options and filter", async ({ page }) => {
     await page.goto("/");
     const s = search(page);

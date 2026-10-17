@@ -98,6 +98,16 @@ test.describe("readers", () => {
     await expect(page).toHaveURL("/chapters/4" + href);
   });
 
+  // Direct #anchor links rely on the content being in the first HTML, not
+  // streamed in after a placeholder
+  test("reader pages arrive complete in the first HTML", async ({ request }) => {
+    for (const [path, anchor] of [["/lessons/1", "d1-question-words"], ["/chapters/2", "vocab"], ["/kana/1", "answers"]]) {
+      const html = await (await request.get(path)).text();
+      expect(html, path).toContain(`id="${anchor}"`);
+      expect(html, path).not.toContain('aria-busy="true"');
+    }
+  });
+
   test("a direct fragment URL lands on its heading", async ({ page }) => {
     await page.goto("/lessons/1#d1-question-words");
     await expect.poll(() => offsetFromAnchorTarget(page, "d1-question-words")).toBeLessThanOrEqual(1);
