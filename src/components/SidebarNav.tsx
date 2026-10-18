@@ -1,22 +1,12 @@
-import Link from "next/link";
-import { NAV_ITEMS } from "@/components/nav-items";
+import NavLinks from "@/components/NavLinks";
 
-// Desktop navigation, always visible on large screens
+// Desktop navigation, always visible on large screens. Only the links
+// themselves are client code (to mark the current section).
 export default function SidebarNav() {
   return (
-    <nav aria-label="Main" className="p-4">
-      <ul className="space-y-1">
-        {NAV_ITEMS.map((item) => (
-          <li key={item.href}>
-            <Link
-              href={item.href}
-              className="block rounded-control px-3 py-2 text-sm text-muted transition-colors hover:bg-surface-raised hover:text-foreground"
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav aria-label="Main" className="px-3 py-6">
+      <p className="px-3 pb-2 text-xs font-medium uppercase tracking-[0.08em] text-subtle">Study</p>
+      <NavLinks size="sidebar" />
     </nav>
   );
 }

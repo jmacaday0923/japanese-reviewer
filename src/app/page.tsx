@@ -31,29 +31,34 @@ export default function Home() {
 
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
-      <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Japanese Lesson Reviewer</h1>
-      <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-        Review your Japanese lessons in one place. Search vocabulary, grammar, kana and kanji, read each
-        chapter from its lessons through to the answer key, or open the original documents.
+      {/* 1. Title and a short introduction */}
+      <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-[2.5rem] sm:leading-tight">
+        Japanese Lesson Reviewer
+      </h1>
+      <p className="mt-2 max-w-2xl leading-relaxed text-muted">
+        Search your lessons, pick up where you left off, and read each chapter from its lessons through to the answer key.
       </p>
 
-      {/* Bookmarks and the last page you studied, from this browser */}
-      <StudyShelf pages={studyPages({ chapters, kana, kanji, docs: data.docs })} />
+      {/* 2. Library numbers, with jump links to the sections further down */}
+      <div className="mt-6 flex flex-col gap-3 rounded-card border border-border px-4 py-3 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+        <OverviewStats stats={stats} />
+        <QuickAccess />
+      </div>
 
-      <OverviewStats stats={stats} />
-
-      <QuickAccess />
-
+      {/* 3. Search, near the top so it's there without scrolling */}
       <section
         id="search"
         aria-labelledby="search-heading"
-        className="mt-10 rounded-card border border-border bg-surface p-4 sm:p-6"
+        className="mt-6 rounded-card border border-border bg-surface p-4 sm:p-6"
       >
-        <h2 id="search-heading" className="text-xl font-semibold">Search</h2>
+        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <h2 id="search-heading" className="text-xl font-semibold tracking-tight">Search</h2>
+          <p className="text-sm text-subtle">
+            {data.docs.length} documents · {data.items.length.toLocaleString("en-US")} entries
+          </p>
+        </div>
         <p className="mt-1 text-sm text-muted">
-          Searches the {data.docs.length} documents ({data.items.length.toLocaleString("en-US")} entries)
-          in kana, romaji or English. Narrow it with a category or a chapter. The chapter, kana and
-          kanji pages below are separate study pages and are not part of the search.
+          Kana, romaji or English. The chapter, kana and kanji study pages below aren&apos;t part of the search.
         </p>
         {/* Search reads the URL (?q=...), so it renders in the browser; the
             fallback keeps the same layout in the first HTML */}
@@ -62,6 +67,10 @@ export default function Home() {
         </Suspense>
       </section>
 
+      {/* 4. Continue studying and Bookmarks, from this browser */}
+      <StudyShelf pages={studyPages({ chapters, kana, kanji, docs: data.docs })} />
+
+      {/* 5 to 7. Chapters, Kana and Kanji, then every document */}
       <StudySection
         id="chapters"
         heading="Chapters"
@@ -79,6 +88,7 @@ export default function Home() {
           heading="Kana"
           description="Hiragana and katakana, learned as pairs."
           label="Kana"
+          marker="あ"
           basePath="/kana"
           pages={kana}
         />
@@ -87,6 +97,7 @@ export default function Home() {
           heading="Kanji"
           description="Readings, example words and practice."
           label="Kanji"
+          marker="漢"
           basePath="/kanji"
           pages={kanji}
         />

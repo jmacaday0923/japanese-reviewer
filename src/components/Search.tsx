@@ -87,7 +87,7 @@ export default function Search({ payload }: Props) {
   }
 
   return (
-    <div className="mt-4">
+    <div>
       <SearchFilters
         inputRef={inputRef}
         draft={draft}
@@ -118,7 +118,7 @@ const noop = () => {};
 // real controls, disabled, so nothing jumps when they take over.
 export function SearchFallback({ chapters }: { chapters: ChapterOption[] }) {
   return (
-    <div className="mt-4" aria-busy="true">
+    <div aria-busy="true">
       <SearchFilters
         disabled
         draft=""

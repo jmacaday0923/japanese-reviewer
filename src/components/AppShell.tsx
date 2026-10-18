@@ -14,17 +14,24 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         Skip to content
       </a>
 
-      <header className="sticky top-0 z-40 h-header border-b border-border bg-background/90 backdrop-blur">
-        <div className="relative flex h-full items-center gap-2 px-2 sm:px-4 lg:px-6">
+      <header className="sticky top-0 z-40 h-header border-b border-border bg-background/95 backdrop-blur">
+        <div className="relative flex h-full items-center gap-1 px-2 sm:px-4 lg:px-6">
           <MobileNav />
-          <Link href="/" className="rounded-control px-2 py-1 font-semibold tracking-tight">
+          <Link href="/" className="flex min-h-10 items-center gap-2.5 rounded-control px-2 font-semibold tracking-tight">
+            {/* Brand mark: 学 (study) in a small square; the text beside it names the link */}
+            <span
+              aria-hidden="true"
+              className="flex size-7 items-center justify-center rounded-[0.4rem] border border-accent/50 text-[0.9375rem] font-medium leading-none text-accent-text"
+            >
+              学
+            </span>
             Japanese Lesson Reviewer
           </Link>
         </div>
       </header>
 
       <div className="lg:grid lg:grid-cols-[15rem_minmax(0,1fr)]">
-        <aside className="hidden border-r border-border lg:block">
+        <aside className="hidden border-r border-border bg-background lg:block">
           <div className="sticky top-header max-h-[calc(100dvh-var(--header-height))] overflow-y-auto">
             <SidebarNav />
           </div>

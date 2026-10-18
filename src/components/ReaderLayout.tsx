@@ -38,10 +38,10 @@ export default function ReaderLayout({ page, breadcrumbs, eyebrow, title, meta, 
     >
       <header className="min-w-0 xl:col-start-1">
         <Breadcrumbs items={breadcrumbs} />
-        {eyebrow && <p className="mt-6 text-sm font-medium uppercase tracking-wide text-subtle">{eyebrow}</p>}
-        <h1 className={(eyebrow ? "mt-1" : "mt-6") + " text-3xl font-bold tracking-tight break-words"}>{title}</h1>
-        {meta && <p className="mt-1 text-sm text-subtle">{meta}</p>}
-        {intro && <p className="mt-3 leading-relaxed text-muted">{intro}</p>}
+        {eyebrow && <p className="mt-8 text-xs font-medium uppercase tracking-[0.08em] text-accent-text">{eyebrow}</p>}
+        <h1 className={(eyebrow ? "mt-2" : "mt-8") + " text-3xl font-semibold leading-tight tracking-tight break-words sm:text-[2.25rem]"}>{title}</h1>
+        {meta && <p className="mt-2 text-sm text-subtle">{meta}</p>}
+        {intro && <p className="mt-4 text-[1.0625rem] leading-relaxed text-muted">{intro}</p>}
         <BookmarkControls kind={page.kind} id={page.id} outline={outline} />
 
         {hasOutline && (
@@ -69,7 +69,7 @@ export default function ReaderLayout({ page, breadcrumbs, eyebrow, title, meta, 
             aria-label="On this page"
             className="sticky top-[calc(var(--header-height)+1.5rem)] max-h-[calc(100dvh-var(--header-height)-3rem)] overflow-y-auto overscroll-contain p-1"
           >
-            <p className="px-2 pb-2 text-xs font-medium uppercase tracking-wide text-subtle">On this page</p>
+            <p className="px-2 pb-2 text-xs font-medium uppercase tracking-[0.08em] text-subtle">On this page</p>
             <TableOfContents nodes={outline} />
           </nav>
         </aside>

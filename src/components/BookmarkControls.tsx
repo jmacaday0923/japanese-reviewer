@@ -49,7 +49,7 @@ export default function BookmarkControls({ kind, id, outline }: Props) {
   const here = anchor ? { kind, id, anchor, section: label } : null;
 
   return (
-    <div className="mt-4">
+    <div className="mt-5">
       <div className="flex flex-wrap gap-2">
         <ToggleButton
           pressed={isBookmarked(data, page)}
@@ -77,7 +77,7 @@ export default function BookmarkControls({ kind, id, outline }: Props) {
   );
 }
 
-// Same look as the search filter chips
+// Quiet outlined buttons, so they stay secondary to the title above them
 function ToggleButton({ pressed, disabled, onClick, children }: {
   pressed: boolean;
   disabled: boolean;
@@ -91,13 +91,13 @@ function ToggleButton({ pressed, disabled, onClick, children }: {
       disabled={disabled}
       onClick={onClick}
       className={
-        "inline-flex min-h-10 max-w-full items-center gap-2 rounded-full border px-4 text-left text-sm break-words transition-colors disabled:opacity-60 " +
+        "inline-flex min-h-10 max-w-full items-center gap-2 rounded-control border px-3 text-left text-sm break-words transition-colors disabled:opacity-60 " +
         (pressed
-          ? "border-accent bg-accent-soft text-accent-text"
-          : "border-border bg-background text-muted hover:border-border-strong hover:text-foreground")
+          ? "border-accent/50 bg-accent-soft text-accent-text"
+          : "border-border text-muted hover:border-border-strong hover:text-foreground")
       }
     >
-      <svg aria-hidden="true" viewBox="0 0 20 20" fill={pressed ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.75" strokeLinejoin="round" className="size-4 shrink-0">
+      <svg aria-hidden="true" viewBox="0 0 20 20" fill={pressed ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" className="size-4 shrink-0">
         <path d="M5.5 3.5h9a.5.5 0 0 1 .5.5v12.6a.3.3 0 0 1-.48.24L10 13.5l-4.52 3.34A.3.3 0 0 1 5 16.6V4a.5.5 0 0 1 .5-.5z" />
       </svg>
       <span className="min-w-0">{children}</span>

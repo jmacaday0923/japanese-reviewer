@@ -38,41 +38,57 @@ export default function StudyShelf({ pages }: Props) {
   }
 
   return (
-    <section aria-labelledby="study-heading" className="mt-8">
+    <section aria-labelledby="study-heading" className="mt-10">
       <h2 id="study-heading" className="sr-only">Your study</h2>
-      <div className="grid gap-3 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
-        <div className="rounded-card border border-border bg-surface p-4" aria-busy={!ready}>
-          <h3 className="text-sm font-medium uppercase tracking-wide text-subtle">Continue studying</h3>
+      <div className="grid gap-3 lg:grid-cols-2 lg:items-start">
+        {/* The card stands out when there's somewhere to go back to */}
+        <div
+          className={
+            "rounded-card border p-5 " +
+            (ready && lastVisit ? "border-accent/40 bg-surface-raised" : "border-border bg-surface")
+          }
+          aria-busy={!ready}
+        >
+          <h3
+            className={
+              "text-xs font-medium uppercase tracking-[0.08em] " + (ready && lastVisit ? "text-accent-text" : "text-subtle")
+            }
+          >
+            Continue studying
+          </h3>
           {!ready ? (
             <Loading />
           ) : lastVisit ? (
-            <PlaceLink place={lastVisit} className="mt-3" />
+            <ResumeLink place={lastVisit} />
           ) : (
-            <p className="mt-3 text-sm text-muted">
-              Open any chapter, kana, kanji or document page and it shows up here, so you can pick up where you left off.
-            </p>
+            <p className="mt-2 text-sm text-muted">Open any chapter, kana, kanji or document page to pick up from here later.</p>
           )}
         </div>
 
-        <div className="rounded-card border border-border bg-surface p-4" aria-busy={!ready}>
-          <h3 ref={bookmarksHeading} tabIndex={-1} className="rounded-control text-sm font-medium uppercase tracking-wide text-subtle">
+        <div className="flex min-w-0 flex-col rounded-card border border-border bg-surface p-5" aria-busy={!ready}>
+          <h3
+            ref={bookmarksHeading}
+            tabIndex={-1}
+            className="self-start rounded-control text-xs font-medium uppercase tracking-[0.08em] text-subtle"
+          >
             Bookmarks{ready && bookmarks.length > 0 && <span className="normal-case tracking-normal"> ({bookmarks.length})</span>}
           </h3>
           {!ready ? (
             <Loading />
           ) : bookmarks.length ? (
-            <ul className="mt-3 space-y-2">
+            // A long list scrolls inside the card; every row stays reachable with Tab
+            <ul className="-mx-2 mt-2 max-h-[19rem] divide-y divide-border overflow-y-auto overscroll-contain">
               {bookmarks.map(({ saved, shown }) => {
                 const name = shown.section ?? shown.title;
                 return (
                   // Keyed and removed by what's saved, even when it's shown as the whole page
-                  <li key={studyHref(saved)} className="flex items-start gap-2">
-                    <PlaceLink place={shown} className="min-w-0 flex-1" />
+                  <li key={studyHref(saved)} className="flex items-center gap-1 py-1">
+                    <BookmarkLink place={shown} />
                     <button
                       type="button"
                       onClick={() => remove(saved)}
                       aria-label={`Remove bookmark: ${name}`}
-                      className="min-h-10 shrink-0 rounded-control px-3 text-sm text-subtle transition-colors hover:bg-surface-raised hover:text-foreground"
+                      className="min-h-10 shrink-0 rounded-control px-3 text-sm text-subtle transition-colors hover:bg-surface hover:text-foreground focus-visible:outline-offset-[-2px]"
                     >
                       Remove
                     </button>
@@ -81,8 +97,8 @@ export default function StudyShelf({ pages }: Props) {
               })}
             </ul>
           ) : (
-            <p className="mt-3 text-sm text-muted">
-              No bookmarks yet. Use Bookmark page on any chapter, kana, kanji or document page. After you jump to a section from On this page, you can bookmark that section too.
+            <p className="mt-2 text-sm text-muted">
+              No bookmarks yet. Use Bookmark page on any study page, or Bookmark section after jumping to one.
             </p>
           )}
         </div>
@@ -97,24 +113,55 @@ export default function StudyShelf({ pages }: Props) {
 }
 
 function Loading() {
-  return <p className="mt-3 text-sm text-subtle">Loading your saved pages…</p>;
+  return <p className="mt-2 text-sm text-subtle">Loading your saved pages…</p>;
+}
+
+function MissingSection() {
+  return <span className="mt-1 block text-xs text-subtle">The saved section is no longer on this page, so this opens the page.</span>;
+}
+
+// The last place studied: page label, its real title, the section when it
+// still exists, and a clear Resume. The whole card is one link.
+function ResumeLink({ place }: { place: ResolvedPlace }) {
+  return (
+    <Link
+      href={place.href}
+      className="group mt-3 flex flex-col gap-4 rounded-control sm:flex-row sm:items-end sm:justify-between"
+    >
+      <span className="min-w-0">
+        <span className="block text-sm text-muted">{place.label}</span>
+        <span className="mt-0.5 block break-words text-xl font-semibold leading-snug text-foreground">{place.title}</span>
+        {place.section && (
+          <span className="mt-1 block break-words text-sm text-muted">
+            <span className="text-subtle">Section: </span>
+            {place.section}
+          </span>
+        )}
+        {place.sectionMissing && <MissingSection />}
+      </span>
+      <span className="inline-flex min-h-10 shrink-0 items-center gap-1.5 self-start rounded-control bg-accent px-4 text-sm font-medium text-background transition-opacity group-hover:opacity-90 sm:self-auto">
+        Resume
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="size-4">
+          <path d="M4.5 10h11m-4.5-4.5L15.5 10 11 14.5" />
+        </svg>
+      </span>
+    </Link>
+  );
 }
 
 // "Chapter 3 · Copula Sentences" over "Vocabulary" for a section,
 // "Chapter 3" over "Copula Sentences" for a whole page
-function PlaceLink({ place, className }: { place: ResolvedPlace; className: string }) {
+function BookmarkLink({ place }: { place: ResolvedPlace }) {
   return (
     <Link
       href={place.href}
-      className={`${className} flex flex-col rounded-control border border-border bg-background px-3 py-2 transition-colors hover:border-border-strong hover:bg-surface-raised`}
+      className="min-w-0 flex-1 rounded-control px-2 py-2 transition-colors hover:bg-surface-raised focus-visible:outline-offset-[-2px]"
     >
-      <span className="text-xs text-subtle break-words">
+      <span className="block break-words text-xs text-subtle">
         {place.section ? `${place.label} · ${place.title}` : place.label}
       </span>
-      <span className="font-medium text-foreground break-words">{place.section ?? place.title}</span>
-      {place.sectionMissing && (
-        <span className="mt-0.5 text-xs text-subtle">The saved section is no longer on this page, so this opens the page.</span>
-      )}
+      <span className="block break-words font-medium text-foreground">{place.section ?? place.title}</span>
+      {place.sectionMissing && <MissingSection />}
     </Link>
   );
 }

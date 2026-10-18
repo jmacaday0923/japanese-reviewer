@@ -1,28 +1,29 @@
 const LINKS = [
-  { href: "#chapters", label: "Chapters", description: "Lessons, vocabulary, exercises and answers, one page per chapter" },
-  { href: "#kana", label: "Kana", description: "Hiragana and katakana study pages" },
-  { href: "#kanji", label: "Kanji", description: "Readings, example words and practice" },
-  { href: "#documents", label: "Documents", description: "The original reviewers, answer keys and extras" },
+  { href: "#chapters", label: "Chapters" },
+  { href: "#kana", label: "Kana" },
+  { href: "#kanji", label: "Kanji" },
+  { href: "#documents", label: "Documents" },
 ];
 
-// Jump links to the sections further down this page
+// Small jump links to the sections further down this page
 export default function QuickAccess() {
   return (
-    <nav aria-labelledby="quick-access-heading" className="mt-10">
-      <h2 id="quick-access-heading" className="text-sm font-medium uppercase tracking-wide text-subtle">
-        Quick access
+    <nav aria-labelledby="quick-access-heading" className="-mx-2 flex flex-wrap items-center gap-x-1 lg:mx-0">
+      {/* Phones have room for the links on one line only without the label */}
+      <h2 id="quick-access-heading" className="mr-1 text-xs font-medium uppercase tracking-[0.08em] text-subtle max-sm:sr-only">
+        Jump to
       </h2>
-      <ul className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <ul className="flex flex-wrap">
         {LINKS.map((l) => (
           <li key={l.href}>
             <a
               href={l.href}
-              className="flex h-full min-h-11 flex-col rounded-card border border-border bg-surface px-4 py-3 transition-colors hover:border-border-strong hover:bg-surface-raised"
+              className="inline-flex min-h-10 items-center gap-1 rounded-control px-2 text-sm text-muted transition-colors hover:bg-surface-raised hover:text-foreground"
             >
-              <span className="font-medium text-foreground">
-                {l.label} <span aria-hidden="true" className="text-accent-text">↓</span>
-              </span>
-              <span className="mt-0.5 text-sm text-muted">{l.description}</span>
+              {l.label}
+              <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="size-3.5 text-subtle max-sm:hidden">
+                <path d="M10 4.5v11m-4.5-4.5L10 15.5l4.5-4.5" />
+              </svg>
             </a>
           </li>
         ))}
