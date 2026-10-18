@@ -10,6 +10,7 @@ import {
   type SearchState,
 } from "@/lib/search";
 import ResultCard from "@/components/ResultCard";
+import Icon from "@/components/Icon";
 
 type Props = {
   state: SearchState;
@@ -53,31 +54,30 @@ export default function SearchResults({ state, active, results, docs, headers, o
   return (
     <>
       {/* Takes no room while idle, so the hint sits right under the filters */}
-      <div className={"mt-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-1" + (active ? " min-h-8" : "")}>
+      <div className={"flex flex-wrap items-center justify-between gap-x-4 gap-y-1" + (active ? " mt-4 min-h-8" : "")}>
         {/* Always in the page, so screen readers hear each new count */}
-        <p className="text-sm text-muted" aria-live="polite">
+        <p className="text-sm font-medium text-muted" aria-live="polite">
           {status}
         </p>
         {active && (
           <button
             type="button"
             onClick={onReset}
-            className="min-h-8 rounded-control px-2 text-sm text-accent-text transition-colors hover:bg-surface-raised"
+            className="min-h-8 rounded-control px-2 text-sm font-medium text-accent-text transition-colors hover:bg-surface-raised"
           >
             Reset search
           </button>
         )}
       </div>
 
-      {!active && (
-        <p className="mt-1 text-sm text-subtle">
-          Type a word in kana, romaji or English, or pick a category or chapter.
-        </p>
-      )}
+      {!active && <SearchHint />}
 
       {active && count === 0 && (
-        <div className="mt-2 rounded-card border border-dashed border-border-strong/60 px-4 py-8 text-center">
-          <p className="text-foreground">Nothing matches {describe(state)}.</p>
+        <div className="mt-2 flex flex-col items-center rounded-card border border-dashed border-border-strong/60 px-4 py-10 text-center">
+          <span className="flex size-10 items-center justify-center rounded-full bg-surface-raised text-subtle">
+            <Icon name="search" />
+          </span>
+          <p className="mt-3 text-foreground">Nothing matches {describe(state)}.</p>
           <p className="mt-1 text-sm text-muted">Try fewer letters, another spelling, or a different filter.</p>
         </div>
       )}
@@ -90,7 +90,7 @@ export default function SearchResults({ state, active, results, docs, headers, o
               entry={entry}
               docTitle={docTitles.get(entry.d)}
               header={entry.h === null ? undefined : headers[entry.h]}
-              badge={state.category === "all" ? categoryLabel(entry.c) : undefined}
+              showCategory={state.category === "all"}
             />
           ))}
         </ul>
@@ -100,11 +100,21 @@ export default function SearchResults({ state, active, results, docs, headers, o
         <button
           type="button"
           onClick={() => setPage({ key, limit: limit + PAGE_SIZE })}
-          className="mt-3 min-h-11 w-full rounded-card border border-border bg-background py-3 text-sm text-muted transition-colors hover:border-border-strong hover:bg-surface-raised hover:text-foreground"
+          className="mt-3 min-h-11 w-full rounded-card border border-border bg-background py-3 text-sm font-medium text-muted transition-colors hover:border-border-strong hover:bg-surface-raised hover:text-foreground"
         >
           Show more ({count - limit} left)
         </button>
       )}
     </>
+  );
+}
+
+// What the search covers, under the filters before anything is typed. The
+// fallback in the first HTML shows it too, so nothing moves on load.
+export function SearchHint() {
+  return (
+    <p className="mt-4 text-sm text-subtle">
+      Search covers the document entries. Browse the chapter, kana and kanji study pages below.
+    </p>
   );
 }

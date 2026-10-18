@@ -1,30 +1,33 @@
 @import "tailwindcss";
 
-/* Design tokens: one dark theme for now, a calm charcoal workspace with ivory
-   text and one muted terracotta accent. Components use these through the
-   Tailwind names below (bg-surface, text-muted, border-border, ...), so a
-   later light theme only has to redefine this block.
+/* Design tokens: one dark theme for now, a near-black workspace with
+   charcoal cards, white headings and one bright blue accent. Components use
+   these through the Tailwind names below (bg-surface, text-muted,
+   border-border, ...), so a later light theme only has to redefine this block.
 
-   Contrast (WCAG): foreground 13:1 or more on every surface, muted 6.9:1,
-   subtle 5:1 on the raised surface, accent-text 8.4:1, dark text on the
-   accent 8.6:1. border-strong is 3:1 against surfaces, so it marks form
-   fields; border is a quiet divider only. */
+   Contrast (WCAG): foreground 15:1 or more on every surface, muted 7:1,
+   subtle 5.2:1 on the raised surface, accent-text 6.4:1. White on the accent
+   is 5.2:1 (6.7:1 on the hover shade). border-strong is 3:1 or more against
+   every surface, so it marks form fields; border is a quiet divider only.
+   Focus rings use accent-text, 7:1 against the background. */
 :root {
   color-scheme: dark;
 
-  --background: #111315;
-  --surface: #1a1d21;
-  --surface-raised: #23272d;
-  --border: #2e3238;
-  --border-strong: #666b73;
+  --background: #0c0e11;
+  --surface: #14171c;
+  --surface-raised: #1c2027;
+  --border: #262b33;
+  --border-strong: #646c78;
 
-  --foreground: #f3efe7;
-  --muted: #adb0b5;
-  --subtle: #92969d;
+  --foreground: #f5f7fa;
+  --muted: #a3abb7;
+  --subtle: #8a929e;
 
-  --accent: #e6a083;
-  --accent-text: #eeb59c;
-  --accent-soft: rgb(230 160 131 / 0.14);
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-foreground: #ffffff;
+  --accent-text: #6ea2ff;
+  --accent-soft: rgb(37 99 235 / 0.16);
 
   --header-height: 3.5rem;
 
@@ -45,6 +48,8 @@
   --color-muted: var(--muted);
   --color-subtle: var(--subtle);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
   --color-accent-text: var(--accent-text);
   --color-accent-soft: var(--accent-soft);
 
@@ -71,12 +76,12 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--accent-text);
     outline-offset: 2px;
   }
 
   ::selection {
-    background: var(--accent-soft);
+    background: rgb(37 99 235 / 0.35);
   }
 }
 

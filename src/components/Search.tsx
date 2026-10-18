@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   DEFAULT_STATE,
@@ -14,7 +14,7 @@ import {
   type SearchState,
 } from "@/lib/search";
 import SearchFilters from "@/components/SearchFilters";
-import SearchResults from "@/components/SearchResults";
+import SearchResults, { SearchHint } from "@/components/SearchResults";
 
 type Props = { payload: SearchPayload };
 
@@ -28,6 +28,14 @@ function writeUrl(state: SearchState, mode: "push" | "replace") {
   if (url === current) return;
   if (mode === "push") window.history.pushState(null, "", url);
   else window.history.replaceState(null, "", url);
+}
+
+// The shortcut's label for this keyboard, read only in the browser: the
+// server and hydration render no label, so the hint appears once the
+// shortcut below is listening.
+const noSubscribe = () => () => {};
+function shortcutLabel() {
+  return /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent) ? "⌘K" : "Ctrl K";
 }
 
 export default function Search({ payload }: Props) {
@@ -46,6 +54,19 @@ export default function Search({ payload }: Props) {
     setSeenQ(state.q);
     if (state.q.trim() !== draft.trim()) setDraft(state.q);
   }
+
+  // Cmd+K or Ctrl+K focuses the search box from anywhere on the page
+  const shortcut = useSyncExternalStore(noSubscribe, shortcutLabel, () => null);
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key.toLowerCase() !== "k" || !(e.metaKey || e.ctrlKey) || e.altKey || e.shiftKey || e.isComposing) return;
+      e.preventDefault(); // Ctrl+K would otherwise open the browser's own search
+      inputRef.current?.focus();
+      inputRef.current?.select();
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   const results = useMemo(() => matchEntries(payload.entries, state), [payload.entries, state]);
 
@@ -94,6 +115,7 @@ export default function Search({ payload }: Props) {
         category={state.category}
         chapter={state.chapter}
         chapters={payload.chapters}
+        shortcut={shortcut}
         onDraftChange={handleDraftChange}
         onCompositionEnd={commitText}
         onCategoryChange={handleCategoryChange}
@@ -131,6 +153,7 @@ export function SearchFallback({ chapters }: { chapters: ChapterOption[] }) {
         onChapterChange={noop}
         onClearText={noop}
       />
+      <SearchHint />
     </div>
   );
 }

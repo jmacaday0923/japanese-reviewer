@@ -9,9 +9,11 @@ import {
   studyPageIndex,
   type ResolvedPlace,
   type StudyPageInfo,
+  type StudyPageKind,
   type StudyPlace,
 } from "@/lib/study";
 import { studyStore, useStudy } from "@/components/use-study";
+import Icon, { type IconName } from "@/components/Icon";
 
 // "Continue studying" and the saved bookmarks, at the top of the dashboard.
 // They live in this browser's localStorage, so this part renders in the
@@ -38,66 +40,58 @@ export default function StudyShelf({ pages }: Props) {
   }
 
   return (
-    <section aria-labelledby="study-heading" className="mt-10">
+    <section aria-labelledby="study-heading" className="mt-8">
       <h2 id="study-heading" className="sr-only">Your study</h2>
-      <div className="grid gap-3 lg:grid-cols-2 lg:items-start">
-        {/* The card stands out when there's somewhere to go back to */}
-        <div
-          className={
-            "rounded-card border p-5 " +
-            (ready && lastVisit ? "border-accent/40 bg-surface-raised" : "border-border bg-surface")
-          }
-          aria-busy={!ready}
-        >
-          <h3
-            className={
-              "text-xs font-medium uppercase tracking-[0.08em] " + (ready && lastVisit ? "text-accent-text" : "text-subtle")
-            }
-          >
-            Continue studying
-          </h3>
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start">
+        <div className="rounded-card border border-border bg-surface p-5 sm:p-6" aria-busy={!ready}>
+          <h3 className="text-[0.6875rem] font-semibold uppercase tracking-[0.1em] text-subtle">Continue studying</h3>
           {!ready ? (
             <Loading />
           ) : lastVisit ? (
             <ResumeLink place={lastVisit} />
           ) : (
-            <p className="mt-2 text-sm text-muted">Open any chapter, kana, kanji or document page to pick up from here later.</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              Open any chapter, kana, kanji or document page to pick up from here later.
+            </p>
           )}
         </div>
 
-        <div className="flex min-w-0 flex-col rounded-card border border-border bg-surface p-5" aria-busy={!ready}>
+        {/* #bookmarks is where the sidebar's Saved link lands */}
+        <div id="bookmarks" className="flex min-w-0 flex-col rounded-card border border-border bg-surface p-5" aria-busy={!ready}>
           <h3
             ref={bookmarksHeading}
             tabIndex={-1}
-            className="self-start rounded-control text-xs font-medium uppercase tracking-[0.08em] text-subtle"
+            className="flex items-center gap-2 self-start rounded-control text-lg font-semibold tracking-tight text-foreground"
           >
-            Bookmarks{ready && bookmarks.length > 0 && <span className="normal-case tracking-normal"> ({bookmarks.length})</span>}
+            <Icon name="bookmark" className="size-5 text-accent-text" />
+            Bookmarks{ready && bookmarks.length > 0 && <span className="font-normal text-muted"> ({bookmarks.length})</span>}
           </h3>
           {!ready ? (
             <Loading />
           ) : bookmarks.length ? (
             // A long list scrolls inside the card; every row stays reachable with Tab
-            <ul className="-mx-2 mt-2 max-h-[19rem] divide-y divide-border overflow-y-auto overscroll-contain">
+            <ul className="-mx-1 mt-3 max-h-[17.5rem] space-y-2 overflow-y-auto overscroll-contain px-1 py-0.5">
               {bookmarks.map(({ saved, shown }) => {
                 const name = shown.section ?? shown.title;
                 return (
                   // Keyed and removed by what's saved, even when it's shown as the whole page
-                  <li key={studyHref(saved)} className="flex items-center gap-1 py-1">
-                    <BookmarkLink place={shown} />
+                  <li key={studyHref(saved)} className="flex items-center gap-1">
+                    <BookmarkLink place={shown} kind={saved.kind} />
                     <button
                       type="button"
                       onClick={() => remove(saved)}
                       aria-label={`Remove bookmark: ${name}`}
-                      className="min-h-10 shrink-0 rounded-control px-3 text-sm text-subtle transition-colors hover:bg-surface hover:text-foreground focus-visible:outline-offset-[-2px]"
+                      title="Remove bookmark"
+                      className="flex size-10 shrink-0 items-center justify-center rounded-control text-subtle transition-colors hover:bg-surface-raised hover:text-foreground focus-visible:outline-offset-[-2px]"
                     >
-                      Remove
+                      <Icon name="close" className="size-4" />
                     </button>
                   </li>
                 );
               })}
             </ul>
           ) : (
-            <p className="mt-2 text-sm text-muted">
+            <p className="mt-2 text-sm leading-relaxed text-muted">
               No bookmarks yet. Use Bookmark page on any study page, or Bookmark section after jumping to one.
             </p>
           )}
@@ -112,6 +106,13 @@ export default function StudyShelf({ pages }: Props) {
   );
 }
 
+const KIND_ICONS: Record<StudyPageKind, IconName> = {
+  chapter: "chapters",
+  kana: "kana",
+  kanji: "kanji",
+  lesson: "documents",
+};
+
 function Loading() {
   return <p className="mt-2 text-sm text-subtle">Loading your saved pages…</p>;
 }
@@ -120,48 +121,59 @@ function MissingSection() {
   return <span className="mt-1 block text-xs text-subtle">The saved section is no longer on this page, so this opens the page.</span>;
 }
 
-// The last place studied: page label, its real title, the section when it
-// still exists, and a clear Resume. The whole card is one link.
+// The last place studied: its real title, the page label and section when it
+// still exists, and a clear Resume button. The whole card is one link.
 function ResumeLink({ place }: { place: ResolvedPlace }) {
   return (
-    <Link
-      href={place.href}
-      className="group mt-3 flex flex-col gap-4 rounded-control sm:flex-row sm:items-end sm:justify-between"
-    >
+    <Link href={place.href} className="group mt-2 flex items-start justify-between gap-6 rounded-control">
       <span className="min-w-0">
-        <span className="block text-sm text-muted">{place.label}</span>
-        <span className="mt-0.5 block break-words text-xl font-semibold leading-snug text-foreground">{place.title}</span>
-        {place.section && (
-          <span className="mt-1 block break-words text-sm text-muted">
-            <span className="text-subtle">Section: </span>
-            {place.section}
-          </span>
-        )}
+        <span className="block break-words text-2xl font-semibold leading-tight tracking-tight text-foreground sm:text-[1.75rem]">
+          {place.title}
+        </span>
+        <span className="mt-1.5 block break-words text-muted">
+          {place.label}
+          {place.section && (
+            <>
+              <span aria-hidden="true" className="px-2 text-subtle">·</span>
+              <span className="sr-only">, section: </span>
+              {place.section}
+            </>
+          )}
+        </span>
         {place.sectionMissing && <MissingSection />}
+        <span className="mt-4 block text-sm text-muted">Pick up where you left off.</span>
+        <span className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-control bg-accent px-5 text-[0.9375rem] font-medium text-accent-foreground transition-colors group-hover:bg-accent-hover">
+          Resume lesson
+          <Icon name="arrow" className="size-4" />
+        </span>
       </span>
-      <span className="inline-flex min-h-10 shrink-0 items-center gap-1.5 self-start rounded-control bg-accent px-4 text-sm font-medium text-background transition-opacity group-hover:opacity-90 sm:self-auto">
-        Resume
-        <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="size-4">
-          <path d="M4.5 10h11m-4.5-4.5L15.5 10 11 14.5" />
-        </svg>
+      {/* Decorative */}
+      <span className="hidden size-20 shrink-0 items-center justify-center rounded-card border border-border bg-surface-raised text-muted sm:flex">
+        <Icon name="book" className="size-9" />
       </span>
     </Link>
   );
 }
 
-// "Chapter 3 · Copula Sentences" over "Vocabulary" for a section,
-// "Chapter 3" over "Copula Sentences" for a whole page
-function BookmarkLink({ place }: { place: ResolvedPlace }) {
+// "Vocabulary" over "Kana 1 · Hiragana and Katakana" for a section,
+// "Copula Sentences" over "Chapter 1" for a whole page
+function BookmarkLink({ place, kind }: { place: ResolvedPlace; kind: StudyPageKind }) {
   return (
     <Link
       href={place.href}
-      className="min-w-0 flex-1 rounded-control px-2 py-2 transition-colors hover:bg-surface-raised focus-visible:outline-offset-[-2px]"
+      className="group flex min-w-0 flex-1 items-center gap-3 rounded-control border border-border bg-background/50 px-3 py-2.5 transition-colors hover:border-border-strong hover:bg-surface-raised focus-visible:outline-offset-[-2px]"
     >
-      <span className="block break-words text-xs text-subtle">
-        {place.section ? `${place.label} · ${place.title}` : place.label}
+      <span className="flex size-9 shrink-0 items-center justify-center rounded-control bg-surface-raised text-accent-text">
+        <Icon name={KIND_ICONS[kind]} className="size-[1.125rem]" />
       </span>
-      <span className="block break-words font-medium text-foreground">{place.section ?? place.title}</span>
-      {place.sectionMissing && <MissingSection />}
+      <span className="min-w-0 flex-1">
+        <span className="block break-words text-sm font-medium text-foreground">{place.section ?? place.title}</span>
+        <span className="mt-0.5 block break-words text-xs text-subtle">
+          {place.section ? `${place.label} · ${place.title}` : place.label}
+        </span>
+        {place.sectionMissing && <MissingSection />}
+      </span>
+      <Icon name="chevron" className="size-4 text-subtle transition-colors group-hover:text-foreground" />
     </Link>
   );
 }

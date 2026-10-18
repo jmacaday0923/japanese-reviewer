@@ -90,6 +90,11 @@ The search lives in the URL of the home page, so a search can be bookmarked or s
 - Example: `/?q=gakkou&category=vocab&chapter=1`
 - Unknown values fall back to the default. Other parameters and the `#hash` are kept.
 - Typing replaces the current history entry. Filters, Clear and Reset add one, so Back undoes them.
+- On the home page, Ctrl+K (⌘K on a Mac) puts the cursor in the search box.
+
+## Document tags
+
+Each row in the home page's Documents list shows what's inside the document: Grammar, Vocabulary, Kana & Kanji, Practice and Answers. They come from the search entries in `lesson-data.json` (every entry whose `d` matches the document's `n`, using its `c` category), worked out when the page is built (`src/lib/documents.ts`). Titles and the document's `kind` aren't used for this; `kind` (Reviewer, Answer key, ...) is shown separately under the title.
 
 ## Bookmarks and Continue studying
 
@@ -107,7 +112,7 @@ Reader pages have a **Bookmark page** button, and a **Bookmark section** button 
 | `src/data/` | The four JSON datasets: lesson-data (documents and search entries), chapters, kana, kanji |
 | `src/app/` | Routes: `/`, `/chapters/[ch]`, `/kana/[ch]`, `/kanji/[ch]`, `/lessons/[n]` |
 | `src/components/` | Shell, dashboard cards, search, the shared reader (ReaderLayout, TableOfContents, LessonContent), and the bookmark parts (BookmarkControls, StudyShelf, use-study) |
-| `src/lib/` | Search helpers, the server-only search payload, outline builders, bookmark storage (`study.ts`) |
+| `src/lib/` | Search helpers, the server-only search payload, outline builders, bookmark storage (`study.ts`), document tags (`documents.ts`) |
 | `tests/` | Node tests (`*.test.mjs`) |
 | `e2e/` | Browser tests (`*.spec.ts`), including the hosted smoke tests (`smoke.spec.ts`) |
 | `.github/workflows/` | The CI workflow (`ci.yml`) |

@@ -30,8 +30,8 @@ async function expectReader(page: Page, section: string) {
 test("home page loads with its sections", async ({ page }) => {
   const response = await page.goto("/");
   expect(response?.status()).toBe(200);
-  await expect(page.getByRole("heading", { name: "Japanese Lesson Reviewer", level: 1 })).toBeVisible();
-  for (const name of ["Search", "Chapters", "Kana", "Kanji"]) {
+  await expect(page.getByRole("heading", { name: "Your study space", level: 1 })).toBeVisible();
+  for (const name of ["Find something to review", "Chapters", "Kana & kanji", "Documents"]) {
     await expect(page.getByRole("heading", { name, level: 2, exact: true })).toBeVisible();
   }
 });

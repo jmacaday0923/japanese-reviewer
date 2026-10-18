@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import NavLinks from "@/components/NavLinks";
+import Icon from "@/components/Icon";
 
 // Menu button and drop-down list for phones and tablets
 export default function MobileNav() {
@@ -32,16 +33,14 @@ export default function MobileNav() {
         className="inline-flex size-11 items-center justify-center rounded-control text-muted transition-colors hover:bg-surface-raised hover:text-foreground"
       >
         <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
-        <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round">
-          {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-        </svg>
+        <Icon name={open ? "close" : "menu"} />
       </button>
 
       <nav
         id="mobile-nav"
         aria-label="Main"
         hidden={!open}
-        className="absolute inset-x-0 top-full border-b border-border bg-background px-3 py-3"
+        className="absolute inset-x-0 top-full max-h-[calc(100dvh-var(--header-height))] overflow-y-auto overscroll-contain border-b border-border bg-background px-3 py-4"
       >
         <NavLinks size="menu" onNavigate={() => setOpen(false)} />
       </nav>

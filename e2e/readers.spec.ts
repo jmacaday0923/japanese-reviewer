@@ -55,7 +55,9 @@ test.describe("readers", () => {
     await expect(breadcrumb.getByRole("link", { name: "Home" })).toHaveAttribute("href", "/");
     await breadcrumb.getByRole("link", { name: "Kanji" }).click();
     await expect(page).toHaveURL("/#kanji");
-    await expect(page.getByRole("heading", { name: "Kanji", level: 2 })).toBeInViewport();
+    // Kana and Kanji share one section; #kanji is the first Kanji card
+    await expect(page.locator("#kanji")).toBeInViewport();
+    await expect(page.locator("#kanji").getByRole("link")).toHaveAttribute("href", "/kanji/1");
 
     await page.goto("/lessons/5");
     await page.getByRole("navigation", { name: "Breadcrumb" }).getByRole("link", { name: "Documents" }).click();

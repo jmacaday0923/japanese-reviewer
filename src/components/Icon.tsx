@@ -1,8 +1,6 @@
-import type { NavIcon } from "@/components/nav-items";
-
 // Small line icons on a 20px grid, all drawn with the same stroke so they
 // read as one set. Decorative: the text next to each icon carries the meaning.
-const PATHS: Record<NavIcon | "search" | "arrow", string> = {
+const PATHS = {
   home: "M3.5 9 10 3.75 16.5 9v6.75a.75.75 0 0 1-.75.75H12.5V12h-5v4.5H4.25a.75.75 0 0 1-.75-.75Z",
   chapters: "M4 4.75A1.75 1.75 0 0 1 5.75 3H16v11.5H5.75A1.75 1.75 0 0 0 4 16.25Zm0 11.5A1.75 1.75 0 0 0 5.75 18H16",
   // a character with its reading beside it
@@ -10,11 +8,20 @@ const PATHS: Record<NavIcon | "search" | "arrow", string> = {
   // a writing-practice square, as in genkō yōshi paper
   kanji: "M3.75 3.75h12.5v12.5H3.75ZM10 3.75v12.5M3.75 10h12.5",
   documents: "M6 3h5.75L15.5 6.75V16.25a.75.75 0 0 1-.75.75H6a.75.75 0 0 1-.75-.75V3.75A.75.75 0 0 1 6 3Zm5.5 0v4h4M8 10.5h5M8 13.5h3.5",
+  bookmark: "M6 3.5h8a.75.75 0 0 1 .75.75V16.5L10 13.25 5.25 16.5V4.25A.75.75 0 0 1 6 3.5Z",
+  // an open book
+  book: "M10 5.5C8.5 4.25 6.25 3.75 3.25 4v11c3-.25 5.25.25 6.75 1.5 1.5-1.25 3.75-1.75 6.75-1.5V4c-3-.25-5.25.25-6.75 1.5Zm0 0v11",
   search: "M9 15.5a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13ZM13.75 13.75 17.5 17.5",
   arrow: "M4.5 10h11m-4.5-4.5L15.5 10 11 14.5",
-};
+  chevron: "M8 5.5 12.5 10 8 14.5",
+  "chevron-down": "M6 8l4 4 4-4",
+  close: "M5.5 5.5l9 9M14.5 5.5l-9 9",
+  menu: "M3.5 6h13M3.5 10h13M3.5 14h13",
+} as const;
 
-export default function Icon({ name, className = "size-5" }: { name: keyof typeof PATHS; className?: string }) {
+export type IconName = keyof typeof PATHS;
+
+export default function Icon({ name, className = "size-5" }: { name: IconName; className?: string }) {
   return (
     <svg
       aria-hidden="true"

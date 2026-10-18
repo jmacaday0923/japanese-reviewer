@@ -7,7 +7,7 @@ test.describe("search", () => {
     await expect(s.box).toBeEnabled();
     await expect(s.box).toHaveValue("");
     await expect(s.status).toHaveText("");
-    await expect(page.getByText("Type a word in kana, romaji or English")).toBeVisible();
+    await expect(page.getByText("Search covers the document entries")).toBeVisible();
     await expect(s.results).toHaveCount(0);
     await expect(s.reset).toHaveCount(0);
   });

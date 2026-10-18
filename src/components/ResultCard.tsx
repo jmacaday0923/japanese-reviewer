@@ -1,12 +1,13 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { lessonHref, type SearchEntry } from "@/lib/search";
+import CategoryTag from "@/components/CategoryTag";
 
 type Props = {
   entry: SearchEntry;
   docTitle?: string;
   header?: string[]; // column headers, for table rows
-  badge?: string;    // optional label, like the category
+  showCategory?: boolean; // the category tag, when results aren't already filtered to one
 };
 
 // Vocabulary rows whose first three columns are the word, its romaji and its
@@ -18,7 +19,7 @@ function vocabularyColumns(entry: SearchEntry, header: string[] | undefined) {
   return entry.x.split(" | ");
 }
 
-export default function ResultCard({ entry, docTitle, header, badge }: Props) {
+export default function ResultCard({ entry, docTitle, header, showCategory = false }: Props) {
   // Where it came from: document title, then section
   const where = [docTitle, entry.b].filter(Boolean).join(" › ");
   const vocab = vocabularyColumns(entry, header);
@@ -31,9 +32,7 @@ export default function ResultCard({ entry, docTitle, header, badge }: Props) {
       >
         <div className="flex items-start justify-between gap-3">
           <p className="min-w-0 break-words text-xs leading-relaxed text-subtle">{where}</p>
-          {badge && (
-            <span className="shrink-0 rounded-full bg-surface-raised px-2 py-0.5 text-xs text-muted">{badge}</span>
-          )}
+          {showCategory && <CategoryTag category={entry.c} />}
         </div>
 
         {vocab && header ? (
