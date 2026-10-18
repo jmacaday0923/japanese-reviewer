@@ -30,7 +30,13 @@ If styles look stale in development, stop the server, delete `.next`, and start 
 npm test
 ```
 
-**Browser tests** (Playwright, Chromium) check what you see and do: search, readers, layout at several widths, and keyboard use. They run against the production build:
+**Type check.** A fresh checkout has no `.next` folder or `next-env.d.ts` (git ignores both), so this script generates the Next.js route types first, then runs TypeScript:
+
+```bash
+npm run typecheck   # next typegen && tsc --noEmit --incremental false
+```
+
+**Browser tests** (Playwright, Chromium) check what you see and do: search, readers, layout at several widths, keyboard use, and the smoke checks below. They run against the production build:
 
 ```bash
 npx playwright install chromium   # once, downloads the browser
@@ -46,11 +52,30 @@ Before committing, run all checks:
 
 ```bash
 npm run lint
-npx tsc --noEmit --incremental false
+npm run typecheck
 npm test
 npm run build
 npm run test:e2e
 ```
+
+### Smoke tests against a deployed site
+
+`e2e/smoke.spec.ts` is a short check that a live site works: the home page and search, one chapter, Kana, Kanji and document page, a section anchor opened directly, and no page errors, console errors or failed requests. It doesn't compare counts with your local data, so it passes even when the deployed data differs from your checkout.
+
+Set `E2E_BASE_URL` to the site's address. Playwright then tests that site and starts no local server, so you don't need a build:
+
+```bash
+npx playwright install chromium   # once
+E2E_BASE_URL=https://japanese-reviewer.vercel.app npm run test:smoke
+```
+
+- Use the same command with a Vercel preview URL to check a branch before merging. Previews that ask you to log in (Vercel Authentication) can't be tested this way.
+- `npm run test:smoke` without `E2E_BASE_URL` runs the same checks against your local build on port 3100.
+- `E2E_BASE_URL=... npm run test:e2e` runs the full suite against the site, but its exact counts expect the deployed data to match your checkout.
+
+### GitHub Actions
+
+`.github/workflows/ci.yml` runs on every push to `main`, on every pull request, and by hand from the Actions tab (Run workflow). It uses Node.js 24 and runs, in order: `npm ci`, `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`, `npx playwright install --with-deps chromium`, and `npm run test:e2e`. When a step fails, the Playwright report and traces are attached to the run as the `playwright-report` artifact for 14 days. Download it, unzip it, and open it with `npx playwright show-report playwright-report`, or drop a `trace.zip` from `test-results/` onto https://trace.playwright.dev.
 
 ## Search URLs
 
@@ -75,7 +100,8 @@ The search lives in the URL of the home page, so a search can be bookmarked or s
 | `src/components/` | Shell, dashboard cards, search, and the shared reader (ReaderLayout, TableOfContents, LessonContent) |
 | `src/lib/` | Search helpers, the server-only search payload, outline builders |
 | `tests/` | Node tests (`*.test.mjs`) |
-| `e2e/` | Browser tests (`*.spec.ts`) |
+| `e2e/` | Browser tests (`*.spec.ts`), including the hosted smoke tests (`smoke.spec.ts`) |
+| `.github/workflows/` | The CI workflow (`ci.yml`) |
 
 ## Manual checklist
 

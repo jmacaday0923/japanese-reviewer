@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A newer push to the same pull request cancels the older run
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  NEXT_TELEMETRY_DISABLED: 1
+
+jobs:
+  checks:
+    name: Lint, types, tests, build, browser tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # A fresh checkout has no .next folder and no next-env.d.ts (git ignores
+      # both). `next typegen` writes the route types (PageProps, LayoutProps)
+      # and next-env.d.ts without a build, so tsc can check every file.
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Node tests
+        run: npm test
+
+      # Also type-checks the app again, the same way Vercel's build does
+      - name: Build
+        run: npm run build
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      # Starts `next start` on port 3100 from the build above
+      - name: Browser tests
+        run: npm run test:e2e
+
+      - name: Upload Playwright report and traces
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+          if-no-files-found: ignore
