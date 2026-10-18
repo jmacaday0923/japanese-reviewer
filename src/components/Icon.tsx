@@ -16,6 +16,8 @@ const PATHS = {
   chevron: "M8 5.5 12.5 10 8 14.5",
   "chevron-down": "M6 8l4 4 4-4",
   close: "M5.5 5.5l9 9M14.5 5.5l-9 9",
+  check: "M4.5 10.5 8 14l7.5-8",
+  retry: "M4.5 10a5.5 5.5 0 1 0 1.6-3.9M4.5 3.75v2.5H7",
   menu: "M3.5 6h13M3.5 10h13M3.5 14h13",
 } as const;
 

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import raw from "@/data/chapters.json";
 import type { Chapter } from "@/types/lesson";
 import ChapterView from "@/components/ChapterView";
+import { chapterExercises } from "@/lib/exercise-bank";
 
 const pages = raw as Chapter[];
 
@@ -30,6 +31,8 @@ export default async function ChapterPage({ params }: Props) {
       basePath="/chapters"
       prev={pages[index - 1]}
       next={pages[index + 1]}
+      // Only this chapter's exercises reach the browser
+      exercises={chapterExercises(ch)}
     />
   );
 }

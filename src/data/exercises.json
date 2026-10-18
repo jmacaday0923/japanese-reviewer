@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "chapters": [
+    {
+      "chapter": "1",
+      "sets": [
+        {
+          "id": "c1-particles",
+          "type": "particles",
+          "title": "Part A: Fill in the marker (wa, no, to, ka or mo)",
+          "questions": [
+            {
+              "id": "c1-particles-1",
+              "prompt": "watashi ____ kenshuusei desu. (I am a trainee.)",
+              "answer": "wa (は)",
+              "accepted": [
+                "wa",
+                "は"
+              ],
+              "why": "wa marks the topic: watashi wa.",
+              "source": {
+                "exercise": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+                "answerKey": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or-2",
+                "number": 1
+              }
+            },
+            {
+              "id": "c1-particles-2",
+              "prompt": "ana san ____ tomodachi (Ana's friend)",
+              "answer": "no (の)",
+              "accepted": [
+                "no",
+                "の"
+              ],
+              "why": "A no B: Ana's friend.",
+              "source": {
+                "exercise": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+                "answerKey": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or-2",
+                "number": 2
+              }
+            },
+            {
+              "id": "c1-particles-3",
+              "prompt": "sensei ____ gakusei (teacher and student)",
+              "answer": "to (と)",
+              "accepted": [
+                "to",
+                "と"
+              ],
+              "why": "to means \"and\" between nouns.",
+              "source": {
+                "exercise": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+                "answerKey": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or-2",
+                "number": 3
+              }
+            },
+            {
+              "id": "c1-particles-4",
+              "prompt": "nihonjin ____ amerikajin (Japanese or American)",
+              "answer": "ka (か)",
+              "accepted": [
+                "ka",
+                "か"
+              ],
+              "why": "ka between two nouns means \"or\".",
+              "source": {
+                "exercise": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+                "answerKey": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or-2",
+                "number": 4
+              }
+            },
+            {
+              "id": "c1-particles-5",
+              "prompt": "ben san wa enjinia desu. ana san ____ enjinia desu. (Ana is also an engineer.)",
+              "answer": "mo (も)",
+              "accepted": [
+                "mo",
+                "も"
+              ],
+              "why": "mo means \"also\" and takes the place of wa.",
+              "source": {
+                "exercise": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+                "answerKey": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or-2",
+                "number": 5
+              }
+            },
+            {
+              "id": "c1-particles-6",
+              "prompt": "sensei wa nihonjin desu ____. (Is the teacher Japanese?)",
+              "answer": "ka (か)",
+              "accepted": [
+                "ka",
+                "か"
+              ],
+              "why": "ka at the end makes the sentence a question.",
+              "source": {
+                "exercise": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+                "answerKey": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or-2",
+                "number": 6
+              }
+            },
+            {
+              "id": "c1-particles-7",
+              "prompt": "tanaka san mo shain desu ka. iie, tanaka san ____ shain ja arimasen.",
+              "answer": "wa (は)",
+              "accepted": [
+                "wa",
+                "は"
+              ],
+              "why": "In a no answer, mo turns back into wa.",
+              "source": {
+                "exercise": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+                "answerKey": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or-2",
+                "number": 7
+              }
+            },
+            {
+              "id": "c1-particles-8",
+              "prompt": "kono hon wa nihongo ____ hon desu. (This is a Japanese book.)",
+              "answer": "no (の)",
+              "accepted": [
+                "no",
+                "の"
+              ],
+              "why": "nihongo no hon is a Japanese-language book.",
+              "source": {
+                "exercise": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+                "answerKey": "c1-part-a-fill-in-the-marker-wa-no-to-ka-or-2",
+                "number": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "c1-vocabulary",
+          "type": "vocabulary",
+          "title": "Part H: Vocabulary check",
+          "pairs": [
+            {
+              "id": "c1-vocabulary-1",
+              "question": "What does kaishain mean?",
+              "answer": "company employee",
+              "japanese": "kaishain",
+              "kana": null,
+              "english": "company employee",
+              "why": "kaisha (company) + in (member).",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 1
+              }
+            },
+            {
+              "id": "c1-vocabulary-2",
+              "question": "Say \"parking lot\" in Japanese.",
+              "answer": "chuushajou (ちゅうしゃじょう)",
+              "japanese": "chuushajou",
+              "kana": "ちゅうしゃじょう",
+              "english": "parking lot",
+              "why": "Parking lot.",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 2
+              }
+            },
+            {
+              "id": "c1-vocabulary-3",
+              "question": "What does otearai mean?",
+              "answer": "washroom",
+              "japanese": "otearai",
+              "kana": null,
+              "english": "washroom",
+              "why": "otearai has the respect prefix o.",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 3
+              }
+            },
+            {
+              "id": "c1-vocabulary-4",
+              "question": "Say \"department head\" in Japanese.",
+              "answer": "buchou (ぶちょう)",
+              "japanese": "buchou",
+              "kana": "ぶちょう",
+              "english": "department head",
+              "why": "Department head. kachou is the section head or supervisor.",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 4
+              }
+            },
+            {
+              "id": "c1-vocabulary-5",
+              "question": "What does kenshuusei mean?",
+              "answer": "trainee",
+              "japanese": "kenshuusei",
+              "kana": null,
+              "english": "trainee",
+              "why": "A person in a training program.",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 5
+              }
+            },
+            {
+              "id": "c1-vocabulary-6",
+              "question": "Say \"slippers\" in Japanese.",
+              "answer": "surippa (スリッパ)",
+              "japanese": "surippa",
+              "kana": "スリッパ",
+              "english": "slippers",
+              "why": "A katakana word from English \"slipper\".",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 6
+              }
+            },
+            {
+              "id": "c1-vocabulary-7",
+              "question": "What does kuruma mean?",
+              "answer": "car",
+              "japanese": "kuruma",
+              "kana": null,
+              "english": "car",
+              "why": "kuruma.",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 7
+              }
+            },
+            {
+              "id": "c1-vocabulary-8",
+              "question": "Say \"Good morning\" in Japanese.",
+              "answer": "ohayou gozaimasu (おはようございます)",
+              "japanese": "ohayou gozaimasu",
+              "kana": "おはようございます",
+              "english": "Good morning",
+              "why": "The polite morning greeting.",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 8
+              }
+            },
+            {
+              "id": "c1-vocabulary-9",
+              "question": "What does hajimemashite mean?",
+              "answer": "Nice to meet you (the first time you meet someone)",
+              "japanese": "hajimemashite",
+              "kana": null,
+              "english": "Nice to meet you (the first time you meet someone)",
+              "why": "Say it first in a self-introduction.",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 9
+              }
+            },
+            {
+              "id": "c1-vocabulary-10",
+              "question": "Say \"school\" in Japanese.",
+              "answer": "gakkou (がっこう)",
+              "japanese": "gakkou",
+              "kana": "がっこう",
+              "english": "school",
+              "why": "gakkou has a double k and a long ou.",
+              "source": {
+                "exercise": "c1-part-h-vocabulary-check",
+                "answerKey": "c1-part-h-vocabulary-check-2",
+                "number": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": "2",
+      "sets": [
+        {
+          "id": "c2-particles",
+          "type": "particles",
+          "title": "Part F: Fill in the marker (wa, ni or ga)",
+          "questions": [
+            {
+              "id": "c2-particles-1",
+              "prompt": "ginkou ____ asoko ni arimasu. (The bank is over there.)",
+              "answer": "wa (は)",
+              "accepted": [
+                "wa",
+                "は"
+              ],
+              "why": "Shape one: the thing you are talking about gets wa.",
+              "source": {
+                "exercise": "c2-part-f-fill-in-the-marker-wa-ni-or-ga",
+                "answerKey": "c2-part-f-fill-in-the-marker-wa-ni-or-ga-2",
+                "number": 1
+              }
+            },
+            {
+              "id": "c2-particles-2",
+              "prompt": "heya ____ terebi ga arimasu. (There is a television in the room.)",
+              "answer": "ni (に)",
+              "accepted": [
+                "ni",
+                "に"
+              ],
+              "why": "ni points to the place.",
+              "source": {
+                "exercise": "c2-part-f-fill-in-the-marker-wa-ni-or-ga",
+                "answerKey": "c2-part-f-fill-in-the-marker-wa-ni-or-ga-2",
+                "number": 2
+              }
+            },
+            {
+              "id": "c2-particles-3",
+              "prompt": "heya ni terebi ____ arimasu. (There is a television in the room.)",
+              "answer": "ga (が)",
+              "accepted": [
+                "ga",
+                "が"
+              ],
+              "why": "Shape two: the thing that exists gets ga.",
+              "source": {
+                "exercise": "c2-part-f-fill-in-the-marker-wa-ni-or-ga",
+                "answerKey": "c2-part-f-fill-in-the-marker-wa-ni-or-ga-2",
+                "number": 3
+              }
+            },
+            {
+              "id": "c2-particles-4",
+              "prompt": "ana san wa nihon ____ imasu. (Ana is in Japan.)",
+              "answer": "ni (に)",
+              "accepted": [
+                "ni",
+                "に"
+              ],
+              "why": "ni points to the place where Ana is.",
+              "source": {
+                "exercise": "c2-part-f-fill-in-the-marker-wa-ni-or-ga",
+                "answerKey": "c2-part-f-fill-in-the-marker-wa-ni-or-ga-2",
+                "number": 4
+              }
+            },
+            {
+              "id": "c2-particles-5",
+              "prompt": "asoko ni gakusei ____ imasu. (There are students over there.)",
+              "answer": "ga (が)",
+              "accepted": [
+                "ga",
+                "が"
+              ],
+              "why": "The students are what exists there, so ga.",
+              "source": {
+                "exercise": "c2-part-f-fill-in-the-marker-wa-ni-or-ga",
+                "answerKey": "c2-part-f-fill-in-the-marker-wa-ni-or-ga-2",
+                "number": 5
+              }
+            },
+            {
+              "id": "c2-particles-6",
+              "prompt": "kaban wa heya ____ arimasu. (The bag is in the room.)",
+              "answer": "ni (に)",
+              "accepted": [
+                "ni",
+                "に"
+              ],
+              "why": "ni points to the room.",
+              "source": {
+                "exercise": "c2-part-f-fill-in-the-marker-wa-ni-or-ga",
+                "answerKey": "c2-part-f-fill-in-the-marker-wa-ni-or-ga-2",
+                "number": 6
+              }
+            },
+            {
+              "id": "c2-particles-7",
+              "prompt": "ryou ____ nihonjin ga imasen. (There are no Japanese in the dormitory.)",
+              "answer": "ni (に)",
+              "accepted": [
+                "ni",
+                "に",
+                "ni wa",
+                "には"
+              ],
+              "why": "You may also say ryou ni wa for emphasis.",
+              "source": {
+                "exercise": "c2-part-f-fill-in-the-marker-wa-ni-or-ga",
+                "answerKey": "c2-part-f-fill-in-the-marker-wa-ni-or-ga-2",
+                "number": 7
+              }
+            },
+            {
+              "id": "c2-particles-8",
+              "prompt": "kagi ____ tsukue no ue ni arimasu. (The key is on top of the desk.)",
+              "answer": "wa (は)",
+              "accepted": [
+                "wa",
+                "は"
+              ],
+              "why": "kagi is the topic, so wa.",
+              "source": {
+                "exercise": "c2-part-f-fill-in-the-marker-wa-ni-or-ga",
+                "answerKey": "c2-part-f-fill-in-the-marker-wa-ni-or-ga-2",
+                "number": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "c2-vocabulary",
+          "type": "vocabulary",
+          "title": "Part H: Vocabulary check",
+          "pairs": [
+            {
+              "id": "c2-vocabulary-1",
+              "question": "What does toshokan mean?",
+              "answer": "library",
+              "japanese": "toshokan",
+              "kana": null,
+              "english": "library",
+              "why": "toshokan.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 1
+              }
+            },
+            {
+              "id": "c2-vocabulary-2",
+              "question": "Say \"bank\" in Japanese.",
+              "answer": "ginkou (ぎんこう)",
+              "japanese": "ginkou",
+              "kana": "ぎんこう",
+              "english": "bank",
+              "why": "Bank.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 2
+              }
+            },
+            {
+              "id": "c2-vocabulary-3",
+              "question": "What does ryoushin mean?",
+              "answer": "parents",
+              "japanese": "ryoushin",
+              "kana": null,
+              "english": "parents",
+              "why": "Do not confuse it with ryou (dormitory).",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 3
+              }
+            },
+            {
+              "id": "c2-vocabulary-4",
+              "question": "Say \"dormitory\" in Japanese.",
+              "answer": "ryou (りょう)",
+              "japanese": "ryou",
+              "kana": "りょう",
+              "english": "dormitory",
+              "why": "Dormitory.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 4
+              }
+            },
+            {
+              "id": "c2-vocabulary-5",
+              "question": "What does mukou mean?",
+              "answer": "across",
+              "japanese": "mukou",
+              "kana": null,
+              "english": "across",
+              "why": "mukou.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 5
+              }
+            },
+            {
+              "id": "c2-vocabulary-6",
+              "question": "Say \"drawer\" in Japanese.",
+              "answer": "hikidashi (ひきだし)",
+              "japanese": "hikidashi",
+              "kana": "ひきだし",
+              "english": "drawer",
+              "why": "Drawer.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 6
+              }
+            },
+            {
+              "id": "c2-vocabulary-7",
+              "question": "Say \"left\" in Japanese.",
+              "answer": "hidari (ひだり)",
+              "japanese": "hidari",
+              "kana": "ひだり",
+              "english": "left",
+              "why": "Left. migi is right.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 7
+              }
+            },
+            {
+              "id": "c2-vocabulary-8",
+              "question": "What does kyoushitsu mean?",
+              "answer": "classroom",
+              "japanese": "kyoushitsu",
+              "kana": null,
+              "english": "classroom",
+              "why": "kyoushitsu.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 8
+              }
+            },
+            {
+              "id": "c2-vocabulary-9",
+              "question": "Say \"north\" in Japanese.",
+              "answer": "kita (きた)",
+              "japanese": "kita",
+              "kana": "きた",
+              "english": "north",
+              "why": "North. The others are minami, nishi and higashi.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 9
+              }
+            },
+            {
+              "id": "c2-vocabulary-10",
+              "question": "Say \"cat\" in Japanese.",
+              "answer": "neko (ねこ)",
+              "japanese": "neko",
+              "kana": "ねこ",
+              "english": "cat",
+              "why": "Cat. inu is dog.",
+              "source": {
+                "exercise": "c2-part-h-vocabulary-check",
+                "answerKey": "c2-part-h-vocabulary-check-2",
+                "number": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

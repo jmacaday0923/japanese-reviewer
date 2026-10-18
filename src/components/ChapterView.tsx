@@ -6,6 +6,8 @@ import type { Crumb } from "@/components/Breadcrumbs";
 import ReaderLayout from "@/components/ReaderLayout";
 import LessonContent from "@/components/LessonContent";
 import type { StudyPageKind } from "@/lib/study";
+import type { ChapterExercises } from "@/types/exercise";
+import InteractiveExercises from "@/components/InteractiveExercises";
 
 const KINDS = { "/chapters": "chapter", "/kana": "kana", "/kanji": "kanji" } as const satisfies Record<string, StudyPageKind>;
 
@@ -16,9 +18,10 @@ type Props = {
   basePath: keyof typeof KINDS; // "/chapters", "/kana" or "/kanji"
   prev?: Chapter;
   next?: Chapter;
+  exercises?: ChapterExercises | null; // interactive practice, for chapters that have it
 };
 
-export default function ChapterView({ chapter, label, basePath, prev, next }: Props) {
+export default function ChapterView({ chapter, label, basePath, prev, next, exercises }: Props) {
   // The group's section on the home page: "/chapters" goes back to "/#chapters"
   const group = NAV_ITEMS.find((item) => item.href === `/#${basePath.slice(1)}`);
   const breadcrumbs: Crumb[] = [
@@ -57,6 +60,11 @@ export default function ChapterView({ chapter, label, basePath, prev, next }: Pr
       {chapter.sections.map((s, i) => (
         <section key={s.id} id={s.id} className={i === 0 ? "mt-12" : "mt-16"}>
           <h2 className="border-b border-border pb-3 text-[1.625rem] font-semibold tracking-tight">{s.title}</h2>
+          {/* Practice first, then the original exercise tables as reference.
+              Keyed by chapter, so answers never carry over to another chapter. */}
+          {s.id === "exercises" && exercises && exercises.sets.length > 0 && (
+            <InteractiveExercises key={exercises.chapter} exercises={exercises} />
+          )}
           <LessonContent html={s.html} className="mt-6" />
         </section>
       ))}

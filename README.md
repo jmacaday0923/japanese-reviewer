@@ -96,6 +96,14 @@ The search lives in the URL of the home page, so a search can be bookmarked or s
 
 Each row in the home page's Documents list shows what's inside the document: Grammar, Vocabulary, Kana & Kanji, Practice and Answers. They come from the search entries in `lesson-data.json` (every entry whose `d` matches the document's `n`, using its `c` category), worked out when the page is built (`src/lib/documents.ts`). Titles and the document's `kind` aren't used for this; `kind` (Reviewer, Answer key, ...) is shown separately under the title.
 
+## Interactive exercises
+
+Chapters 1 and 2 have an **Interactive practice** panel at the top of their Exercises section: **Particles** (fill in the marker) and **Vocabulary** (match each Japanese word to its meaning). The original exercise tables and answer keys stay below it. Answers are checked in the browser and not saved: reloading starts fresh, and the bookmark storage isn't touched.
+
+The questions live in `src/data/exercises.json`, copied from `chapters.json` word for word (the Question, Answer and Why cells), with each question's source part, answer key part and number. `tests/exercises.test.mjs` checks every question against the original tables.
+
+To add another chapter: add an entry to `src/data/exercises.json` like the existing ones (set ids `c<chapter>-particles` and `c<chapter>-vocabulary`, question ids `<set id>-<number>`), fill in `accepted` deliberately (romaji and kana, plus any alternative the answer key itself allows), then extend the expected chapter list in the first test. Run `npm test`: it fails on any word that doesn't match the source.
+
 ## Bookmarks and Continue studying
 
 Reader pages have a **Bookmark page** button, and a **Bookmark section** button after you jump to a section from On this page. The dashboard shows your bookmarks and the last study page you opened.
@@ -112,7 +120,7 @@ Reader pages have a **Bookmark page** button, and a **Bookmark section** button 
 | `src/data/` | The four JSON datasets: lesson-data (documents and search entries), chapters, kana, kanji |
 | `src/app/` | Routes: `/`, `/chapters/[ch]`, `/kana/[ch]`, `/kanji/[ch]`, `/lessons/[n]` |
 | `src/components/` | Shell, dashboard cards, search, the shared reader (ReaderLayout, TableOfContents, LessonContent), and the bookmark parts (BookmarkControls, StudyShelf, use-study) |
-| `src/lib/` | Search helpers, the server-only search payload, outline builders, bookmark storage (`study.ts`), document tags (`documents.ts`) |
+| `src/lib/` | Search helpers, the server-only search payload, outline builders, bookmark storage (`study.ts`), document tags (`documents.ts`), exercise grading (`exercises.ts`) and the server-only exercise bank (`exercise-bank.ts`) |
 | `tests/` | Node tests (`*.test.mjs`) |
 | `e2e/` | Browser tests (`*.spec.ts`), including the hosted smoke tests (`smoke.spec.ts`) |
 | `.github/workflows/` | The CI workflow (`ci.yml`) |

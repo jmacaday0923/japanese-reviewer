@@ -144,6 +144,8 @@ test("continue studying shows the last page and section opened", async ({ page }
   await expect.poll(() => offsetFromAnchorTarget(page, "d1-question-words")).toBeLessThanOrEqual(1);
 
   await page.goto("/chapters/2");
+  // The visit is saved once the page runs in the browser; leave only after that
+  await expect.poll(async () => (await readSaved(page))?.lastVisit).toMatchObject({ kind: "chapter", id: "2" });
   await page.goto("/");
   link = shelf(page).resume.getByRole("link");
   await expect(link).toHaveAttribute("href", "/chapters/2");
