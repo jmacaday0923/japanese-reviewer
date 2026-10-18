@@ -29,6 +29,7 @@ export default async function LessonPage({ params }: Props) {
 
   return (
     <ReaderLayout
+      page={{ kind: "lesson", id: String(doc.n) }}
       breadcrumbs={[
         { label: "Home", href: "/" },
         { label: "Documents", href: "/#documents" },

@@ -5,11 +5,13 @@ import rawKana from "@/data/kana.json";
 import rawKanji from "@/data/kanji.json";
 import type { Chapter, LessonData } from "@/types/lesson";
 import { getSearchPayload } from "@/lib/search-data";
+import { studyPages } from "@/lib/study";
 import Search, { SearchFallback } from "@/components/Search";
 import OverviewStats from "@/components/OverviewStats";
 import QuickAccess from "@/components/QuickAccess";
 import StudySection from "@/components/StudySection";
 import DocumentLibrary from "@/components/DocumentLibrary";
+import StudyShelf from "@/components/StudyShelf";
 
 const data = rawData as LessonData;
 const chapters = rawChapters as Chapter[];
@@ -34,6 +36,9 @@ export default function Home() {
         Review your Japanese lessons in one place. Search vocabulary, grammar, kana and kanji, read each
         chapter from its lessons through to the answer key, or open the original documents.
       </p>
+
+      {/* Bookmarks and the last page you studied, from this browser */}
+      <StudyShelf pages={studyPages({ chapters, kana, kanji, docs: data.docs })} />
 
       <OverviewStats stats={stats} />
 

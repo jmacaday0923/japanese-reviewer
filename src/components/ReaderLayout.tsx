@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 import { countLinks, type TocNode } from "@/lib/toc";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import TableOfContents from "@/components/TableOfContents";
+import BookmarkControls from "@/components/BookmarkControls";
+import type { StudyPageKind } from "@/lib/study";
 
 // The shared frame for every reader page (chapters, kana, kanji, documents):
 // breadcrumbs, title block, reading column, outline, and an optional footer
@@ -12,6 +14,7 @@ import TableOfContents from "@/components/TableOfContents";
 // screens get the same outline as a collapsed disclosure above the content.
 // Pages with no outline stay a single centered column.
 type Props = {
+  page: { kind: StudyPageKind; id: string }; // which page this is, for bookmarks
   breadcrumbs: Crumb[];
   eyebrow?: string;  // small line above the title, like "Chapter 3"
   title: string;
@@ -22,7 +25,7 @@ type Props = {
   children: ReactNode;
 };
 
-export default function ReaderLayout({ breadcrumbs, eyebrow, title, meta, intro, outline, footer, children }: Props) {
+export default function ReaderLayout({ page, breadcrumbs, eyebrow, title, meta, intro, outline, footer, children }: Props) {
   const hasOutline = outline.length > 0;
   const links = countLinks(outline);
 
@@ -39,6 +42,7 @@ export default function ReaderLayout({ breadcrumbs, eyebrow, title, meta, intro,
         <h1 className={(eyebrow ? "mt-1" : "mt-6") + " text-3xl font-bold tracking-tight break-words"}>{title}</h1>
         {meta && <p className="mt-1 text-sm text-subtle">{meta}</p>}
         {intro && <p className="mt-3 leading-relaxed text-muted">{intro}</p>}
+        <BookmarkControls kind={page.kind} id={page.id} outline={outline} />
 
         {hasOutline && (
           // Phones, tablets and narrow desktops: a compact outline you open when needed

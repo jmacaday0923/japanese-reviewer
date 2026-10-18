@@ -91,14 +91,23 @@ The search lives in the URL of the home page, so a search can be bookmarked or s
 - Unknown values fall back to the default. Other parameters and the `#hash` are kept.
 - Typing replaces the current history entry. Filters, Clear and Reset add one, so Back undoes them.
 
+## Bookmarks and Continue studying
+
+Reader pages have a **Bookmark page** button, and a **Bookmark section** button after you jump to a section from On this page. The dashboard shows your bookmarks and the last study page you opened.
+
+- Saved only in this browser, in localStorage under `japanese-reviewer:study`, as JSON with a `version` number (currently 1). Nothing is sent to a server, so bookmarks don't follow you to another browser or device.
+- Saved data that can't be read is ignored and replaced on the next change. Bookmarks to pages that no longer exist are hidden.
+- If the browser blocks storage (some private modes, or site data turned off), bookmarks still work until you close the tab, and the page says so.
+- To clear everything: in DevTools, Application, Local Storage, delete `japanese-reviewer:study`.
+
 ## Project layout
 
 | Path | What it is |
 | --- | --- |
 | `src/data/` | The four JSON datasets: lesson-data (documents and search entries), chapters, kana, kanji |
 | `src/app/` | Routes: `/`, `/chapters/[ch]`, `/kana/[ch]`, `/kanji/[ch]`, `/lessons/[n]` |
-| `src/components/` | Shell, dashboard cards, search, and the shared reader (ReaderLayout, TableOfContents, LessonContent) |
-| `src/lib/` | Search helpers, the server-only search payload, outline builders |
+| `src/components/` | Shell, dashboard cards, search, the shared reader (ReaderLayout, TableOfContents, LessonContent), and the bookmark parts (BookmarkControls, StudyShelf, use-study) |
+| `src/lib/` | Search helpers, the server-only search payload, outline builders, bookmark storage (`study.ts`) |
 | `tests/` | Node tests (`*.test.mjs`) |
 | `e2e/` | Browser tests (`*.spec.ts`), including the hosted smoke tests (`smoke.spec.ts`) |
 | `.github/workflows/` | The CI workflow (`ci.yml`) |
@@ -113,3 +122,5 @@ Automated tests use Chromium and synthetic input. Check these by hand before a r
 - [ ] Search `gakkou`, open a result, check it lands on the right heading, then press Back.
 - [ ] `/kana/1` at full width: the outline stays beside the text while scrolling.
 - [ ] `/chapters/99` shows "Page not found".
+- [ ] Bookmark a page and a section, close the browser, open it again: both are on the dashboard.
+- [ ] Safari private window: bookmarks still work while the tab is open.

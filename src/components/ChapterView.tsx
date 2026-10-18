@@ -5,12 +5,15 @@ import { NAV_ITEMS } from "@/components/nav-items";
 import type { Crumb } from "@/components/Breadcrumbs";
 import ReaderLayout from "@/components/ReaderLayout";
 import LessonContent from "@/components/LessonContent";
+import type { StudyPageKind } from "@/lib/study";
+
+const KINDS = { "/chapters": "chapter", "/kana": "kana", "/kanji": "kanji" } as const satisfies Record<string, StudyPageKind>;
 
 // One page layout shared by chapters, kana and kanji
 type Props = {
   chapter: Chapter;
   label: string; // "Chapter", "Kana" or "Kanji"
-  basePath: string; // "/chapters", "/kana" or "/kanji"
+  basePath: keyof typeof KINDS; // "/chapters", "/kana" or "/kanji"
   prev?: Chapter;
   next?: Chapter;
 };
@@ -26,6 +29,7 @@ export default function ChapterView({ chapter, label, basePath, prev, next }: Pr
 
   return (
     <ReaderLayout
+      page={{ kind: KINDS[basePath], id: chapter.ch }}
       breadcrumbs={breadcrumbs}
       eyebrow={`${label} ${chapter.ch}`}
       title={chapter.title}
