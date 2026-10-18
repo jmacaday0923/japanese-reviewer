@@ -1,16 +1,11 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
-import { test, expect, docs, search, visibleMain, type Page } from "./fixtures";
+import { test, expect, index, library, search, visibleMain, type Page } from "./fixtures";
+import { categoryLabel, matchEntries } from "../src/lib/search";
 
 // The dashboard's layout and the parts added with the blue redesign: the
-// grouped navigation and toolbar, stats from the data, document tags, the
-// search shortcut and the Last opened badge.
+// grouped navigation and toolbar, stats from the data, the Practice section,
+// the search shortcut and the Last opened badge.
 
-const load = (file: string) => JSON.parse(readFileSync(join(__dirname, "../src/data", file), "utf8"));
-const chapters = load("chapters.json") as { ch: string; title: string }[];
-const kana = load("kana.json") as unknown[];
-const kanji = load("kanji.json") as unknown[];
-const items = load("lesson-data.json").items as { d: number; c: string }[];
+const { chapters, kana, kanji, practice } = library;
 
 test.use({ viewport: { width: 1440, height: 900 } });
 
@@ -28,7 +23,7 @@ const top = (page: Page, selector: string) =>
 
 test("dashboard sections come in order", async ({ page }) => {
   await page.goto("/");
-  const order = ["h1", "#overview-heading + dl", "#bookmarks", "#search", "#chapters", "#kana-kanji", "#documents"];
+  const order = ["h1", "#overview-heading + dl", "#bookmarks", "#search", "#chapters", "#kana-kanji", "#practice"];
   const tops = [];
   for (const selector of order) tops.push(await top(page, selector));
   expect(tops).toEqual([...tops].sort((a, b) => a - b));
@@ -43,36 +38,34 @@ test("stats are counted from the data files", async ({ page }) => {
   const stat = (label: string) => dl.locator("div").filter({ has: page.locator("dt", { hasText: new RegExp(`^${label}$`) }) }).locator("dd");
   await expect(stat("chapters")).toHaveText(String(chapters.length));
   await expect(stat("kana & kanji pages")).toHaveText(String(kana.length + kanji.length));
-  await expect(stat("documents")).toHaveText(String(docs.length));
-  await expect(stat("searchable entries")).toHaveText(items.length.toLocaleString("en-US"));
+  await expect(stat(practice.length === 1 ? "practice exam" : "practice exams")).toHaveText(String(practice.length));
+  await expect(stat("searchable entries")).toHaveText(index.entries.length.toLocaleString("en-US"));
+  await expect(dl.locator("dt")).toHaveText(["chapters", "kana & kanji pages", "practice exam", "searchable entries"]);
 });
 
-test("every document is listed with tags from its own entries", async ({ page }) => {
+test("the library has chapters, kana, kanji and practice, and no Documents section", async ({ page }) => {
   await page.goto("/");
-  const rows = visibleMain(page).locator("#documents li");
-  await expect(rows).toHaveCount(docs.length);
+  const main = visibleMain(page);
+  // #kana and #kanji mark each group's first card, inside the shared section
+  await expect(main.locator("#chapters article")).toHaveCount(chapters.length);
+  await expect(main.locator('#kana-kanji article a[href^="/kana/"]')).toHaveCount(kana.length);
+  await expect(main.locator('#kana-kanji article a[href^="/kanji/"]')).toHaveCount(kanji.length);
+  const exams = main.locator("#practice article");
+  await expect(exams).toHaveCount(practice.length);
+  await expect(main.getByRole("heading", { name: "Practice", level: 2 })).toBeVisible();
+  await expect(exams.first().getByRole("link")).toHaveText(practice[0].title);
+  await expect(exams.first().getByRole("link")).toHaveAttribute("href", "/practice/1");
+  // Kanji 2 is listed with Kanji 1
+  await expect(main.locator('#kana-kanji article a[href^="/kanji/"]')).toHaveText(kanji.map((k) => k.title));
 
-  const labels: Record<string, string> = {
-    grammar: "Grammar",
-    vocab: "Vocabulary",
-    script: "Kana & Kanji",
-    practice: "Practice",
-    answers: "Answers",
-  };
-  for (const [i, doc] of docs.entries()) {
-    const own = new Set(items.filter((item) => item.d === doc.n).map((item) => item.c));
-    const expected = Object.keys(labels).filter((c) => own.has(c)).map((c) => labels[c]);
-    const row = rows.nth(i);
-    await expect(row.getByRole("link")).toHaveText(doc.title);
-    await expect(row.getByRole("link")).toHaveAttribute("href", `/lessons/${doc.n}`);
-    await expect(row.locator("span.rounded-full")).toHaveText(expected);
-  }
-  // The first reviewer covers three kinds of content
-  await expect(rows.first().locator("span.rounded-full")).toHaveText(["Grammar", "Vocabulary", "Practice"]);
+  // nothing points at the old documents
+  await expect(main.locator("#documents")).toHaveCount(0);
+  await expect(main.getByRole("heading", { name: /Documents/ })).toHaveCount(0);
+  await expect(page.locator('a[href^="/lessons"]')).toHaveCount(0);
 
-  // The whole row opens the document
-  await rows.nth(4).click({ position: { x: 900, y: 20 } });
-  await expect(page).toHaveURL(`/lessons/${docs[4].n}`);
+  await exams.first().getByRole("link").click();
+  await expect(page).toHaveURL("/practice/1");
+  await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText(practice[0].title);
 });
 
 test("sidebar: grouped links, current section, and a working Bookmarks link", async ({ page }) => {
@@ -80,7 +73,7 @@ test("sidebar: grouped links, current section, and a working Bookmarks link", as
   const sidebar = page.locator("aside").first();
   await expect(sidebar.getByRole("link", { name: "Japanese Lesson Reviewer" })).toHaveAttribute("href", "/");
   const study = sidebar.getByRole("list", { name: "Study" });
-  await expect(study.getByRole("link")).toHaveText(["Home", "Chapters", "Kana", "Kanji", "Documents"]);
+  await expect(study.getByRole("link")).toHaveText(["Home", "Chapters", "Kana", "Kanji", "Practice"]);
   await expect(study.getByRole("link", { name: "Chapters" })).toHaveAttribute("aria-current", "true");
   await expect(page.locator("body > header")).toContainText("Chapters");
 
@@ -91,9 +84,19 @@ test("sidebar: grouped links, current section, and a working Bookmarks link", as
   await expect(sidebar.getByRole("link", { name: "Bookmarks" })).not.toHaveAttribute("aria-current");
 });
 
+test("the Practice link opens the Practice section and is current on the practice page", async ({ page }) => {
+  await page.goto("/practice/1");
+  const study = page.locator("aside").first().getByRole("list", { name: "Study" });
+  await expect(study.getByRole("link", { name: "Practice" })).toHaveAttribute("aria-current", "true");
+  await expect(study.getByRole("link", { name: "Chapters" })).not.toHaveAttribute("aria-current");
+  await study.getByRole("link", { name: "Practice" }).click();
+  await expect(page).toHaveURL("/#practice");
+  await expect(visibleMain(page).getByRole("heading", { name: "Practice", level: 2 })).toBeInViewport();
+});
+
 test("phone menu has the Saved group too", async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 800 });
-  await page.goto("/lessons/2");
+  await page.goto("/kanji/2");
   await page.getByRole("button", { name: "Open menu" }).click();
   const menu = page.locator("#mobile-nav");
   await menu.getByRole("list", { name: "Saved" }).getByRole("link", { name: "Bookmarks" }).click();
@@ -124,9 +127,11 @@ test("Ctrl+K and Cmd+K focus the search, and the hint shows only once that works
 test("search results show category tags only when not filtered to one", async ({ page }) => {
   await page.goto("/?q=gakkou");
   const s = search(page);
-  await expect(s.results.first().locator("span.rounded-full")).toHaveText("Vocabulary");
-  await s.chip("Vocabulary").click();
-  await expect(s.chip("Vocabulary")).toHaveAttribute("aria-pressed", "true");
+  // the first match is in a Chapter 1 lesson
+  const first = categoryLabel(matchEntries(index.entries, { q: "gakkou", category: "all", chapter: "all" })[0].c);
+  await expect(s.results.first().locator("span.rounded-full")).toHaveText(first);
+  await s.chip(first).click();
+  await expect(s.chip(first)).toHaveAttribute("aria-pressed", "true");
   await expect(s.results.first()).toBeVisible();
   await expect(s.results.first().locator("span.rounded-full")).toHaveCount(0);
 });

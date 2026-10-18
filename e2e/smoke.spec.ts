@@ -14,7 +14,8 @@ const readers = [
   { path: "/chapters/1", section: "Chapters" },
   { path: "/kana/1", section: "Kana" },
   { path: "/kanji/1", section: "Kanji" },
-  { path: "/lessons/1", section: "Documents" },
+  { path: "/kanji/2", section: "Kanji" },
+  { path: "/practice/1", section: "Practice" },
 ];
 
 async function expectReader(page: Page, section: string) {
@@ -31,7 +32,7 @@ test("home page loads with its sections", async ({ page }) => {
   const response = await page.goto("/");
   expect(response?.status()).toBe(200);
   await expect(page.getByRole("heading", { name: "Your study space", level: 1 })).toBeVisible();
-  for (const name of ["Find something to review", "Chapters", "Kana & kanji", "Documents"]) {
+  for (const name of ["Find something to review", "Chapters", "Kana & kanji", "Practice"]) {
     await expect(page.getByRole("heading", { name, level: 2, exact: true })).toBeVisible();
   }
 });
@@ -47,7 +48,7 @@ test("search finds results and a result opens at its heading", async ({ page }) 
 
   const link = s.results.first().getByRole("link");
   const href = (await link.getAttribute("href"))!;
-  expect(href).toMatch(/^\/lessons\/\d+#.+/);
+  expect(href).toMatch(/^\/(chapters|kana|kanji|practice)\/\d+#.+/);
   await link.click();
   await expect(page).toHaveURL(href);
   await expect.poll(() => offsetFromAnchorTarget(page, decodeURIComponent(href.split("#")[1]))).toBeLessThanOrEqual(1);
@@ -63,6 +64,12 @@ for (const { path, section } of readers) {
     await expectReader(page, section);
   });
 }
+
+test("an old document link still lands on its study page", async ({ page }) => {
+  await page.goto("/lessons/18#d18-cheat-sheet-seasons");
+  await expect(page).toHaveURL("/kanji/2#c2-seasons");
+  await expectReader(page, "Kanji");
+});
 
 test("a section anchor from the outline works when opened directly", async ({ page, request }) => {
   await page.goto("/chapters/1");

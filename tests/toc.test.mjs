@@ -3,18 +3,19 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { anchorIds, countLinks, documentOutline, flattenIds, studyOutline } from "../src/lib/toc.ts";
+import { anchorIds, countLinks, flattenIds, studyOutline } from "../src/lib/toc.ts";
 
 const load = (name) => JSON.parse(readFileSync(new URL(`../src/data/${name}`, import.meta.url), "utf8"));
 const studyPages = [
   ...load("chapters.json").map((p) => ["chapter", p]),
   ...load("kana.json").map((p) => ["kana", p]),
   ...load("kanji.json").map((p) => ["kanji", p]),
+  ...load("practice.json").map((p) => ["practice", p]),
 ];
-const { docs, items } = load("lesson-data.json");
 
-test("study outlines: five sections on top, every toc entry under the section that holds it", () => {
-  assert.equal(studyPages.length, 12);
+test("study outlines: the page sections on top, every toc entry under the section that holds it", () => {
+  // 10 chapters, the kana page, Kanji 1 and 2, and the N5 practice exam
+  assert.equal(studyPages.length, 14);
   for (const [group, page] of studyPages) {
     const name = `${group} ${page.ch}`;
     const outline = studyOutline(page.sections, page.toc);
@@ -42,6 +43,14 @@ test("the 118-entry kana outline is grouped, not flat", () => {
   assert.ok(Math.max(...outline.map((n) => n.children.length)) < 118);
 });
 
+test("the practice page has only its exercises and answer key", () => {
+  const exam = load("practice.json")[0];
+  const outline = studyOutline(exam.sections, exam.toc);
+  assert.deepEqual(outline.map((n) => n.id), ["exercises", "answers"]);
+  assert.deepEqual(outline.map((n) => n.children.length), [8, 9]); // 5 chapter sets and 3 passages; their answers and the translations
+  assert.deepEqual(flattenIds(outline).slice(0, 3), ["exercises", "p1-exam-1-chapter-1-copula-sentences", "p1-exam-1-chapter-2-existential-sentences"]);
+});
+
 test("study outline edge cases", () => {
   const sections = [
     { id: "lessons", title: "Lessons", html: '<h3 id="a">A</h3><h3 id="shared">S</h3>' },
@@ -60,38 +69,7 @@ test("study outline edge cases", () => {
   assert.deepEqual(studyOutline([], []), []);
 });
 
-test("document outlines keep toc order and nest level 3 under level 2", () => {
-  assert.equal(docs.length, 20);
-  for (const doc of docs) {
-    const outline = documentOutline(doc.toc);
-    assert.deepEqual(flattenIds(outline), doc.toc.map((e) => e.a), `doc ${doc.n}`);
-    assert.equal(countLinks(outline), doc.toc.length);
-    const level = new Map(doc.toc.map((e) => [e.a, e.l]));
-    for (const node of outline) {
-      assert.equal(level.get(node.id), 2, `doc ${doc.n}: top level should be level 2`);
-      for (const child of node.children) assert.equal(level.get(child.id), 3);
-    }
-  }
-  assert.deepEqual(documentOutline(docs.find((d) => d.n === 20).toc), []);
-});
-
-test("document outline edge cases", () => {
-  const e = (a, l) => ({ a, t: a.toUpperCase(), l });
-  const outline = documentOutline([e("intro", 3), e("one", 2), e("one-a", 3), e("one-b", 3), e("two", 2), e("two-a", 3), e("deep", 4), e("three", 2)]);
-  assert.deepEqual(outline.map((n) => n.id), ["intro", "one", "two", "three"]); // a level 3 with no level 2 above stays on top
-  assert.deepEqual(outline[1].children.map((n) => n.id), ["one-a", "one-b"]);
-  assert.deepEqual(outline[2].children[0].children.map((n) => n.id), ["deep"]);
-  assert.equal(outline[1].children[0].label, "ONE-A");
-  assert.deepEqual(documentOutline([]), []);
-});
-
-test("anchors: every toc and search anchor exists in the page HTML", () => {
-  for (const doc of docs) {
-    const ids = new Set(anchorIds(doc.html));
-    for (const entry of doc.toc) assert.ok(ids.has(entry.a), `doc ${doc.n}: ${entry.a}`);
-  }
-  const docIds = new Map(docs.map((doc) => [doc.n, new Set(anchorIds(doc.html))]));
-  for (const item of items) if (item.a) assert.ok(docIds.get(item.d).has(item.a), `search anchor ${item.d}#${item.a}`);
+test("anchors: every toc anchor exists in the page HTML, once", () => {
   for (const [, page] of studyPages) {
     const ids = new Set([...page.sections.map((s) => s.id), ...page.sections.flatMap((s) => anchorIds(s.html))]);
     for (const entry of page.toc) assert.ok(ids.has(entry.a));

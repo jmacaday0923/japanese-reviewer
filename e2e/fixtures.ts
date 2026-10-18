@@ -1,6 +1,8 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { test as base, expect, type Page } from "@playwright/test";
+import { buildSearchIndex, matchEntries, type CategoryFilter } from "../src/lib/search";
+import type { Chapter } from "../src/types/lesson";
 
 // Every test fails if the page logs an error, throws, or an app request fails.
 // Tests that open a missing page on purpose list the status they expect.
@@ -39,23 +41,24 @@ export const test = base.extend<Fixtures>({
 
 export { expect };
 
-// ---- Data, for expected counts (same rules as the search: trimmed, case-insensitive "contains") ----
+// ---- Data, for expected counts (built the same way as /search-index.json) ----
 
-type Item = { d: number; a: string; ch: string; c: string; x: string };
-const data = JSON.parse(readFileSync(join(__dirname, "../src/data/lesson-data.json"), "utf8")) as {
-  docs: { n: number; title: string }[];
-  items: Item[];
+const load = (file: string) => JSON.parse(readFileSync(join(__dirname, "../src/data", file), "utf8"));
+export const library = {
+  chapters: load("chapters.json") as Chapter[],
+  kana: load("kana.json") as Chapter[],
+  kanji: load("kanji.json") as Chapter[],
+  practice: load("practice.json") as Chapter[],
 };
-export const docs = data.docs;
+export const index = buildSearchIndex([
+  { kind: "chapter", label: "Chapter", basePath: "/chapters", pages: library.chapters },
+  { kind: "kana", label: "Kana", basePath: "/kana", pages: library.kana },
+  { kind: "kanji", label: "Kanji", basePath: "/kanji", pages: library.kanji },
+  { kind: "practice", label: "Practice", basePath: "/practice", pages: library.practice },
+]);
 
 export function expectedCount(q: string, category = "all", chapter = "all") {
-  const query = q.trim().toLowerCase();
-  return data.items.filter(
-    (item) =>
-      (category === "all" || item.c === category) &&
-      (chapter === "all" || item.ch === chapter) &&
-      item.x.toLowerCase().includes(query)
-  ).length;
+  return matchEntries(index.entries, { q, category: category as CategoryFilter, chapter }).length;
 }
 
 export function statusText(count: number, shown = 50) {

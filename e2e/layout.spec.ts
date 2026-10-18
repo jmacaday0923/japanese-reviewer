@@ -27,7 +27,7 @@ test.describe("responsive layout", () => {
   for (const width of [375, 768, 1024, 1280, 1440]) {
     test(`${width}px: nothing cut off, one main and h1, the right outline`, async ({ page }) => {
       await page.setViewportSize({ width, height: 900 });
-      for (const path of ["/", "/kana/1", "/lessons/2"]) {
+      for (const path of ["/", "/kana/1", "/kanji/2", "/practice/1"]) {
         await page.goto(path);
         expect(await clippedElements(page), `${path} at ${width}px`).toEqual([]);
         await expect(visibleMain(page)).toHaveCount(1);
@@ -81,8 +81,8 @@ test.describe("responsive layout", () => {
     await wide.evaluate((el) => el.scrollTo({ left: el.scrollWidth }));
     await expect.poll(() => wide.evaluate((el) => el.scrollLeft)).toBeGreaterThan(0);
 
-    // the longest document title
-    await page.goto("/lessons/2");
+    // a long title, and long exam questions in the tables
+    await page.goto("/practice/1");
     const h1 = visibleMain(page).getByRole("heading", { level: 1 });
     expect(await h1.evaluate((el) => el.scrollWidth <= el.clientWidth)).toBe(true);
     expect(await clippedElements(page)).toEqual([]);
@@ -91,7 +91,7 @@ test.describe("responsive layout", () => {
 
 test.describe("keyboard and navigation", () => {
   test("skip link moves focus to the content", async ({ page }) => {
-    await page.goto("/lessons/2");
+    await page.goto("/practice/1");
     await page.keyboard.press("Tab");
     const skip = page.getByRole("link", { name: "Skip to content" });
     await expect(skip).toBeFocused();
@@ -120,7 +120,7 @@ test.describe("keyboard and navigation", () => {
 
   test("outline groups open with Enter and Space, with a visible focus ring", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto("/lessons/2");
+    await page.goto("/practice/1");
     const summary = sideOutline(page).locator("summary").first();
     await summary.focus();
     expect(await summary.evaluate((el) => getComputedStyle(el).outlineStyle)).not.toBe("none");

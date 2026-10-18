@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-// Shown for pages that don't exist, like /chapters/99 or /lessons/abc
+// Shown for pages that don't exist, like /chapters/99 or /practice/abc
 export default function NotFound() {
   return (
     <main className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6">

@@ -1,0 +1,4466 @@
+{
+ "about": "Where each section of the 20 old documents went when they were merged into the study pages. decision is merged (some of it was added to the page), covered (the page already had it), moved (the whole document became a new page or lesson) or dropped (notes about the old document itself). checks are lines that were added and must stay on the page.",
+ "docs": [
+  {
+   "n": 1,
+   "title": "Intensive Japanese 1 Reviewer (Chapters 1 to 5)",
+   "to": "/chapters/1",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/1",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d1-the-five-chapters-at-a-glance",
+     "t": "the five chapters at a glance",
+     "decision": "merged",
+     "to": "/chapters/1#c1-how-each-chapter-works",
+     "note": "Added How each chapter works. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:1",
+       "text": "### How each chapter works"
+      },
+      {
+       "page": "chapter:1",
+       "text": "Chapters 1 to 5 build on each other: first one basic sentence, then where things are, then how many there are, then when something happens, and then how long it takes. The writing changes as you go. Chapters 1 to 3 are all in romaji, hiragana starts in Chapter 4, katakana words carry a romaji guide until Chapter 7, and kanji begins in Chapter 8."
+      }
+     ]
+    },
+    {
+     "a": "d1-before-chapter-1-sounds-and-greetings",
+     "t": "before chapter 1: sounds and greetings",
+     "decision": "covered",
+     "to": "/chapters/1",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-special-sounds",
+     "t": "special sounds",
+     "decision": "merged",
+     "to": "/chapters/1#c1-special-sounds",
+     "note": "Added 2 notes. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:1",
+       "text": "- The sounds i and u are often almost silent: desu, kikimasu, ryuugakusei, wakatteimasu."
+      },
+      {
+       "page": "chapter:1",
+       "text": "- The ng sound: tenki can sound like tengki, and some speakers say arigatou like aringatou."
+      }
+     ]
+    },
+    {
+     "a": "d1-greetings",
+     "t": "greetings",
+     "decision": "covered",
+     "to": "/chapters/1#c1-greetings-and-self-introduction",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-classroom-phrases",
+     "t": "classroom phrases",
+     "decision": "covered",
+     "to": "/chapters/1#c1-classroom-phrases",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-1-copula-sentences-x-is-y",
+     "t": "chapter 1: copula sentences (x is y)",
+     "decision": "covered",
+     "to": "/chapters/1",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-the-core-pattern",
+     "t": "the core pattern",
+     "decision": "covered",
+     "to": "/chapters/1#c1-1-7-a-no-b",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-answering-yes-no-questions",
+     "t": "answering yes/no questions",
+     "decision": "covered",
+     "to": "/chapters/1#c1-part-c-answer-each-question-twice-once-w-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-this-that-which-ko-so-a-do",
+     "t": "this, that, which (ko, so, a, do)",
+     "decision": "covered",
+     "to": "/chapters/1#c1-this-that-and-over-there-ko-so-a",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-question-words",
+     "t": "question words",
+     "decision": "covered",
+     "to": "/chapters/1#c1-1-16-a-wa-question-word-desu-ka",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-family-words",
+     "t": "family words",
+     "decision": "covered",
+     "to": "/chapters/1#c1-family",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-countries-people-languages",
+     "t": "countries, people, languages",
+     "decision": "covered",
+     "to": "/chapters/1#c1-countries-people-and-languages",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-words-worth-locking-in",
+     "t": "words worth locking in",
+     "decision": "covered",
+     "to": "/chapters/1#c1-people-and-jobs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-watch-out",
+     "t": "watch out",
+     "decision": "covered",
+     "to": "/chapters/1#c1-kono-versus-kore",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-2-existence-and-location-is-ther",
+     "t": "chapter 2: existence and location (is there, where is)",
+     "decision": "covered",
+     "to": "/chapters/2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-pick-the-verb",
+     "t": "pick the verb",
+     "decision": "covered",
+     "to": "/chapters/2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-two-shapes-two-jobs",
+     "t": "two shapes, two jobs",
+     "decision": "covered",
+     "to": "/chapters/2#c2-2-10-location-ni-a-ga-arimasu-ka",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-position-words",
+     "t": "position words",
+     "decision": "covered",
+     "to": "/chapters/2#c2-locatives-position-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-words-worth-locking-in-2",
+     "t": "words worth locking in",
+     "decision": "covered",
+     "to": "/chapters/2#c2-places",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-watch-out-2",
+     "t": "watch out",
+     "decision": "covered",
+     "to": "/chapters/2#c2-where-and-what",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-3-counting-prices-phone-numbers",
+     "t": "chapter 3: counting, prices, phone numbers",
+     "decision": "covered",
+     "to": "/chapters/3",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-numbers",
+     "t": "numbers",
+     "decision": "covered",
+     "to": "/chapters/3#c3-numbers-0-to-10",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-hundreds-thousands-ten-thousands",
+     "t": "hundreds, thousands, ten thousands",
+     "decision": "covered",
+     "to": "/chapters/3#c3-3-4-ten-thousands-and-bigger",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-prices",
+     "t": "prices",
+     "decision": "covered",
+     "to": "/chapters/3#c3-3-5-prices-ikura-desu-ka",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-phone-numbers",
+     "t": "phone numbers",
+     "decision": "covered",
+     "to": "/chapters/3#c3-3-6-phone-numbers-denwa-bangou-wa-nan-de",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-counters",
+     "t": "counters",
+     "decision": "covered",
+     "to": "/chapters/3#c3-3-7-counters",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-words-worth-locking-in-3",
+     "t": "words worth locking in",
+     "decision": "covered",
+     "to": "/chapters/3#c3-everyday-objects-and-siblings",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-watch-out-3",
+     "t": "watch out",
+     "decision": "covered",
+     "to": "/chapters/3#c3-big-numbers-with-man-and-oku",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-4-time-expressions",
+     "t": "chapter 4: time expressions",
+     "decision": "covered",
+     "to": "/chapters/4",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-sentence-patterns",
+     "t": "sentence patterns",
+     "decision": "covered",
+     "to": "/chapters/4#c4-4-13-a-wa-time-expression-plus-marker-de",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-telling-the-time",
+     "t": "telling the time",
+     "decision": "covered",
+     "to": "/chapters/4#c4-4-1-telling-the-time-o-clock-and-minutes",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-days-of-the-week",
+     "t": "days of the week",
+     "decision": "covered",
+     "to": "/chapters/4#c4-days-of-the-week",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-months-dates-and-years",
+     "t": "months, dates and years",
+     "decision": "covered",
+     "to": "/chapters/4#c4-4-4-days-of-the-month-nichi",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-non-specific-times",
+     "t": "non-specific times",
+     "decision": "covered",
+     "to": "/chapters/4#c4-4-7-last-this-and-next-weeks-months-and-",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-words-worth-locking-in-4",
+     "t": "words worth locking in",
+     "decision": "covered",
+     "to": "/chapters/4#c4-work-school-and-events",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-watch-out-4",
+     "t": "watch out",
+     "decision": "covered",
+     "to": "/chapters/4#c4-big-to-small-order",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-5-span-of-time-how-long",
+     "t": "chapter 5: span of time (how long)",
+     "decision": "covered",
+     "to": "/chapters/5",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-point-or-span",
+     "t": "point or span?",
+     "decision": "covered",
+     "to": "/chapters/5#c5-5-1-span-of-time-a-point-or-a-length",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-span-of-time-words",
+     "t": "span of time words",
+     "decision": "covered",
+     "to": "/chapters/5#c5-question-words-for-span-of-time",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-sentence-patterns-2",
+     "t": "sentence patterns",
+     "decision": "covered",
+     "to": "/chapters/5#c5-5-15-putting-it-together-from-until-by-a",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-vehicles",
+     "t": "vehicles",
+     "decision": "covered",
+     "to": "/chapters/5#c5-vehicles-and-travel",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-words-worth-locking-in-5",
+     "t": "words worth locking in",
+     "decision": "covered",
+     "to": "/chapters/5#c5-school-and-work-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-watch-out-5",
+     "t": "watch out",
+     "decision": "covered",
+     "to": "/chapters/5#c5-gurai-or-goro",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-self-check",
+     "t": "self-check",
+     "decision": "covered",
+     "to": "/chapters/1#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-1",
+     "t": "chapter 1",
+     "decision": "covered",
+     "to": "/chapters/1#c1-part-a-fill-in-the-marker-wa-no-to-ka-or",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-2",
+     "t": "chapter 2",
+     "decision": "covered",
+     "to": "/chapters/2#c2-part-i-put-the-words-in-order",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-3",
+     "t": "chapter 3",
+     "decision": "covered",
+     "to": "/chapters/3#c3-part-n-translate-into-japanese",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-4",
+     "t": "chapter 4",
+     "decision": "covered",
+     "to": "/chapters/4#c4-translation-page-70",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-chapter-5",
+     "t": "chapter 5",
+     "decision": "covered",
+     "to": "/chapters/5#c5-part-u-ask-the-question",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d1-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/chapters/1#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Intensive Japanese 1 Vocabulary Reviewer (Chapters 1 to 5)",
+   "to": "/chapters/1#vocab",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/1#vocab",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d2-how-to-use-this-reviewer",
+     "t": "how to use this reviewer",
+     "decision": "dropped",
+     "to": "/chapters/1",
+     "note": "Study tips for the old document. The page itself is laid out in the same order."
+    },
+    {
+     "a": "d2-chapter-1-copula-sentences",
+     "t": "chapter 1: copula sentences",
+     "decision": "covered",
+     "to": "/chapters/1",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-people-and-jobs",
+     "t": "people and jobs",
+     "decision": "covered",
+     "to": "/chapters/1#c1-people-and-jobs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-places",
+     "t": "places",
+     "decision": "covered",
+     "to": "/chapters/1#c1-places",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-things",
+     "t": "things",
+     "decision": "covered",
+     "to": "/chapters/1#c1-things",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-countries-people-and-languages",
+     "t": "countries, people and languages",
+     "decision": "covered",
+     "to": "/chapters/1#c1-countries-people-and-languages",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-family",
+     "t": "family",
+     "decision": "covered",
+     "to": "/chapters/1#c1-family",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-this-that-here-there",
+     "t": "this, that, here, there",
+     "decision": "covered",
+     "to": "/chapters/1#c1-this-that-and-over-there-ko-so-a",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-question-words",
+     "t": "question words",
+     "decision": "covered",
+     "to": "/chapters/1#c1-question-words-do",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-extra-words-from-the-examples",
+     "t": "extra words from the examples",
+     "decision": "covered",
+     "to": "/chapters/1#c1-words-from-the-workbook-examples",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-greetings-and-classroom-phrases",
+     "t": "greetings and classroom phrases",
+     "decision": "covered",
+     "to": "/chapters/1#c1-classroom-phrases",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-chapter-2-existential-sentences",
+     "t": "chapter 2: existential sentences",
+     "decision": "covered",
+     "to": "/chapters/2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-places-2",
+     "t": "places",
+     "decision": "covered",
+     "to": "/chapters/2#c2-places",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-people-and-animals",
+     "t": "people and animals",
+     "decision": "covered",
+     "to": "/chapters/2#c2-people-and-animals",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-things-and-furniture",
+     "t": "things and furniture",
+     "decision": "covered",
+     "to": "/chapters/2#c2-things-and-furniture",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-locatives-position-words",
+     "t": "locatives (position words)",
+     "decision": "covered",
+     "to": "/chapters/2#c2-locatives-position-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-verbs-of-existence",
+     "t": "verbs of existence",
+     "decision": "covered",
+     "to": "/chapters/2#c2-verbs-of-existence",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-extra-words-from-the-examples-2",
+     "t": "extra words from the examples",
+     "decision": "covered",
+     "to": "/chapters/2#c2-words-from-the-workbook-examples",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-chapter-3-counting-prices-and-phone-numb",
+     "t": "chapter 3: counting, prices and phone numbers",
+     "decision": "covered",
+     "to": "/chapters/3",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-money-and-prices",
+     "t": "money and prices",
+     "decision": "covered",
+     "to": "/chapters/3#c3-money-and-prices",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-counting-words-and-numbers",
+     "t": "counting words and numbers",
+     "decision": "covered",
+     "to": "/chapters/3#c3-counting-words-and-numbers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-everyday-objects-and-siblings",
+     "t": "everyday objects and siblings",
+     "decision": "covered",
+     "to": "/chapters/3#c3-everyday-objects-and-siblings",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-numbers-0-to-99",
+     "t": "numbers 0 to 99",
+     "decision": "covered",
+     "to": "/chapters/3#c3-3-1-numbers-from-0-to-99",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-hundreds",
+     "t": "hundreds",
+     "decision": "covered",
+     "to": "/chapters/3#c3-hundreds",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-thousands",
+     "t": "thousands",
+     "decision": "covered",
+     "to": "/chapters/3#c3-thousands",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-ten-thousands-and-bigger",
+     "t": "ten thousands and bigger",
+     "decision": "covered",
+     "to": "/chapters/3#c3-ten-thousands-and-bigger",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-counters",
+     "t": "counters",
+     "decision": "covered",
+     "to": "/chapters/3#c3-3-7-counters",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-counter-question-words",
+     "t": "counter question words",
+     "decision": "covered",
+     "to": "/chapters/3#c3-counter-question-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-extra-words-from-the-examples-3",
+     "t": "extra words from the examples",
+     "decision": "covered",
+     "to": "/chapters/3#c3-extra-words-from-the-lessons-and-exercis",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-chapter-4-time-expressions",
+     "t": "chapter 4: time expressions",
+     "decision": "covered",
+     "to": "/chapters/4",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-work-school-and-events",
+     "t": "work, school and events",
+     "decision": "covered",
+     "to": "/chapters/4#c4-work-school-and-events",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-seasons-and-holidays",
+     "t": "seasons and holidays",
+     "decision": "covered",
+     "to": "/chapters/4#c4-seasons-and-holidays",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-times-of-day-and-sequence",
+     "t": "times of day and sequence",
+     "decision": "covered",
+     "to": "/chapters/4#c4-times-of-day-and-sequence",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-time-markers-and-endings",
+     "t": "time markers and endings",
+     "decision": "covered",
+     "to": "/chapters/4#c4-time-markers-and-endings",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-the-clock-hours",
+     "t": "the clock: hours",
+     "decision": "covered",
+     "to": "/chapters/4#c4-the-clock-hours",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-the-clock-minutes",
+     "t": "the clock: minutes",
+     "decision": "covered",
+     "to": "/chapters/4#c4-the-clock-minutes",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-days-of-the-week",
+     "t": "days of the week",
+     "decision": "covered",
+     "to": "/chapters/4#c4-days-of-the-week",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-months",
+     "t": "months",
+     "decision": "covered",
+     "to": "/chapters/4#c4-months",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-days-of-the-month",
+     "t": "days of the month",
+     "decision": "covered",
+     "to": "/chapters/4#c4-days-of-the-month",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-years",
+     "t": "years",
+     "decision": "covered",
+     "to": "/chapters/4#c4-years",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-yesterday-today-tomorrow",
+     "t": "yesterday, today, tomorrow",
+     "decision": "covered",
+     "to": "/chapters/4#c4-4-6-yesterday-today-and-tomorrow-days-mo",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-last-this-and-next-week-month-year",
+     "t": "last, this and next: week, month, year",
+     "decision": "covered",
+     "to": "/chapters/4#c4-4-7-last-this-and-next-weeks-months-and-",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-question-words-for-time",
+     "t": "question words for time",
+     "decision": "covered",
+     "to": "/chapters/4#c4-time-question-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-chapter-5-span-of-time",
+     "t": "chapter 5: span of time",
+     "decision": "covered",
+     "to": "/chapters/5",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-school-and-work-words",
+     "t": "school and work words",
+     "decision": "covered",
+     "to": "/chapters/5#c5-school-and-work-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-vehicles-and-travel",
+     "t": "vehicles and travel",
+     "decision": "covered",
+     "to": "/chapters/5#c5-vehicles-and-travel",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-time-and-length-words",
+     "t": "time and length words",
+     "decision": "covered",
+     "to": "/chapters/5#c5-time-and-length-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-how-long-minutes",
+     "t": "how long: minutes",
+     "decision": "covered",
+     "to": "/chapters/5#c5-how-long-minutes",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-how-long-hours",
+     "t": "how long: hours",
+     "decision": "covered",
+     "to": "/chapters/5#c5-how-long-hours",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-how-long-days",
+     "t": "how long: days",
+     "decision": "covered",
+     "to": "/chapters/5#c5-how-long-days",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-how-long-weeks",
+     "t": "how long: weeks",
+     "decision": "covered",
+     "to": "/chapters/5#c5-how-long-weeks",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-how-long-months",
+     "t": "how long: months",
+     "decision": "covered",
+     "to": "/chapters/5#c5-how-long-months",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-how-long-years",
+     "t": "how long: years",
+     "decision": "covered",
+     "to": "/chapters/5#c5-how-long-years",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-question-words-for-span-of-time",
+     "t": "question words for span of time",
+     "decision": "covered",
+     "to": "/chapters/5#c5-question-words-for-span-of-time",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-extra-words-from-the-examples-4",
+     "t": "extra words from the examples",
+     "decision": "covered",
+     "to": "/chapters/5#c5-extra-words-from-the-lessons-and-exercis",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-vocabulary-self-test",
+     "t": "vocabulary self-test",
+     "decision": "covered",
+     "to": "/chapters/1#vocab",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-chapter-1",
+     "t": "chapter 1",
+     "decision": "merged",
+     "to": "/chapters/1#c1-part-f-family-words",
+     "note": "Added 1 item to Part F: Family words; 1 item to Part J: Translate into Japanese. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:1",
+       "text": "Say \"my older sister\" in Japanese."
+      },
+      {
+       "page": "chapter:1",
+       "text": "Good evening."
+      }
+     ]
+    },
+    {
+     "a": "d2-chapter-2",
+     "t": "chapter 2",
+     "decision": "covered",
+     "to": "/chapters/2#c2-part-h-vocabulary-check",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-chapter-3",
+     "t": "chapter 3",
+     "decision": "covered",
+     "to": "/chapters/3#c3-part-o-vocabulary-check",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-chapter-4",
+     "t": "chapter 4",
+     "decision": "merged",
+     "to": "/chapters/4#c4-part-s-say-the-word-in-japanese",
+     "note": "Added 1 item to Part S: Say the word in Japanese. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:4",
+       "text": "every morning"
+      }
+     ]
+    },
+    {
+     "a": "d2-chapter-5",
+     "t": "chapter 5",
+     "decision": "covered",
+     "to": "/chapters/5#c5-part-s-it-costs-cost-kakarimasu",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d2-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/chapters/1#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "N5 Practice Exam (Chapters 1 to 5)",
+   "to": "/practice/1",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "moved",
+     "to": "/practice/1",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-exam-1-vocabulary-chapters-1-to-5",
+     "t": "exam 1: vocabulary, chapters 1 to 5",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-1-chapter-1-copula-sentences",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-chapter-1-copula-sentences",
+     "t": "chapter 1: copula sentences",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-1-chapter-1-copula-sentences",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-chapter-2-existential-sentences",
+     "t": "chapter 2: existential sentences",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-1-chapter-2-existential-sentences",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-chapter-3-counting-prices-and-phone-numb",
+     "t": "chapter 3: counting, prices and phone numbers",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-1-chapter-3-counting-prices-and-pho",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-chapter-4-time-expressions",
+     "t": "chapter 4: time expressions",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-1-chapter-4-time-expressions",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-chapter-5-span-of-time",
+     "t": "chapter 5: span of time",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-1-chapter-5-span-of-time",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-answer-key-for-exam-1",
+     "t": "answer key for exam 1",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-1-chapter-5-span-of-time-2",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-exam-2-reading-chapters-1-to-5",
+     "t": "exam 2: reading, chapters 1 to 5",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-2-passage-1-a-self-introduction",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-passage-1",
+     "t": "passage 1",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-2-passage-1-a-self-introduction",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-passage-2",
+     "t": "passage 2",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-2-passage-2-a-shop-sign",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-passage-3",
+     "t": "passage 3",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-2-passage-3-a-work-week",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-answer-key-for-exam-2",
+     "t": "answer key for exam 2",
+     "decision": "moved",
+     "to": "/practice/1#p1-exam-2-passage-1-a-self-introduction-2",
+     "note": "Rebuilt as the N5 practice page."
+    },
+    {
+     "a": "d3-english-translations-of-the-passages",
+     "t": "english translations of the passages",
+     "decision": "moved",
+     "to": "/practice/1#p1-english-translations-of-the-passages",
+     "note": "Rebuilt as the N5 practice page."
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Hiragana and Katakana Reviewer",
+   "to": "/kana/1",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/kana/1",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d4-how-to-use-this-reviewer",
+     "t": "how to use this reviewer",
+     "decision": "dropped",
+     "to": "/kana/1",
+     "note": "Study tips for the old document. The page itself is laid out in the same order."
+    },
+    {
+     "a": "d4-hiragana-and-katakana-side-by-side",
+     "t": "hiragana and katakana side by side",
+     "decision": "covered",
+     "to": "/kana/1#c1-how-to-learn-them-as-pairs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-memory-hooks-for-each-pair",
+     "t": "memory hooks for each pair",
+     "decision": "covered",
+     "to": "/kana/1#lessons",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-vowels-k-row-and-s-row",
+     "t": "vowels, k row and s row",
+     "decision": "covered",
+     "to": "/kana/1#c1-s-row-sa-shi-su-se-so",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-t-row-n-row-and-h-row",
+     "t": "t row, n row and h row",
+     "decision": "covered",
+     "to": "/kana/1#c1-t-row-ta-chi-tsu-te-to",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-m-row-y-row-r-row-w-row-and-n",
+     "t": "m row, y row, r row, w row and n",
+     "decision": "covered",
+     "to": "/kana/1#c1-m-row-ma-mi-mu-me-mo",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-marks-and-blended-sounds-side-by-side",
+     "t": "marks and blended sounds, side by side",
+     "decision": "covered",
+     "to": "/kana/1#c1-how-to-learn-them-as-pairs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-two-dots-and-the-small-circle",
+     "t": "two dots and the small circle",
+     "decision": "covered",
+     "to": "/kana/1#c1-g-row-ga-gi-gu-ge-go",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-blended-sounds-with-a-small-ya-yu-or-yo",
+     "t": "blended sounds with a small ya, yu or yo",
+     "decision": "covered",
+     "to": "/kana/1#c1-combination-sounds-k-and-g-kya-kyu-kyo-g",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-sound-rules-that-trip-people-up",
+     "t": "sound rules that trip people up",
+     "decision": "covered",
+     "to": "/kana/1#c1-long-vowels-hiragana-vowels-and-the-kata",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-katakana-only-sounds-for-foreign-words",
+     "t": "katakana-only sounds for foreign words",
+     "decision": "covered",
+     "to": "/kana/1#c1-extra-sounds-with-f-katakana-only-fa-fi-",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-look-alikes-and-how-to-tell-them-apart",
+     "t": "look-alikes and how to tell them apart",
+     "decision": "covered",
+     "to": "/kana/1#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-hiragana-pairs",
+     "t": "hiragana pairs",
+     "decision": "covered",
+     "to": "/kana/1#c1-and",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-katakana-pairs",
+     "t": "katakana pairs",
+     "decision": "covered",
+     "to": "/kana/1#c1-and-11",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-katakana-that-look-like-kanji",
+     "t": "katakana that look like kanji",
+     "decision": "covered",
+     "to": "/kana/1#c1-katakana-that-look-like-kanji",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-katakana-words-from-chapters-1-to-5",
+     "t": "katakana words from chapters 1 to 5",
+     "decision": "covered",
+     "to": "/kana/1#vocab",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-chapter-1",
+     "t": "chapter 1",
+     "decision": "covered",
+     "to": "/kana/1#c1-office-and-school",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-chapter-2",
+     "t": "chapter 2",
+     "decision": "covered",
+     "to": "/kana/1#c1-buildings-and-shops",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-chapter-3",
+     "t": "chapter 3",
+     "decision": "covered",
+     "to": "/kana/1#c1-office-and-school",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-chapter-4",
+     "t": "chapter 4",
+     "decision": "covered",
+     "to": "/kana/1#c1-sports-fun-and-events",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-chapter-5",
+     "t": "chapter 5",
+     "decision": "covered",
+     "to": "/kana/1#c1-office-and-school",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-self-test",
+     "t": "self-test",
+     "decision": "covered",
+     "to": "/kana/1#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-part-a-read-the-hiragana",
+     "t": "part a: read the hiragana",
+     "decision": "merged",
+     "to": "/kana/1#c1-part-i-read-the-words-hiragana",
+     "note": "Added 12 items to Part I: Read the words (hiragana). The rest was already on the page.",
+     "checks": [
+      {
+       "page": "kana:1",
+       "text": "わたし"
+      },
+      {
+       "page": "kana:1",
+       "text": "がくせい"
+      },
+      {
+       "page": "kana:1",
+       "text": "ともだち"
+      },
+      {
+       "page": "kana:1",
+       "text": "かぞく"
+      },
+      {
+       "page": "kana:1",
+       "text": "ぎんこう"
+      },
+      {
+       "page": "kana:1",
+       "text": "としょかん"
+      },
+      {
+       "page": "kana:1",
+       "text": "ひきだし"
+      },
+      {
+       "page": "kana:1",
+       "text": "きょうしつ"
+      },
+      {
+       "page": "kana:1",
+       "text": "りょうしん"
+      },
+      {
+       "page": "kana:1",
+       "text": "えんぴつ"
+      },
+      {
+       "page": "kana:1",
+       "text": "にちようび"
+      },
+      {
+       "page": "kana:1",
+       "text": "ざんぎょう"
+      }
+     ]
+    },
+    {
+     "a": "d4-part-b-read-the-katakana",
+     "t": "part b: read the katakana",
+     "decision": "merged",
+     "to": "/kana/1#c1-part-j-read-the-words-katakana",
+     "note": "Added 12 items to Part J: Read the words (katakana). The rest was already on the page.",
+     "checks": [
+      {
+       "page": "kana:1",
+       "text": "パソコン"
+      },
+      {
+       "page": "kana:1",
+       "text": "スリッパ"
+      },
+      {
+       "page": "kana:1",
+       "text": "エンジニア"
+      },
+      {
+       "page": "kana:1",
+       "text": "オフィス"
+      },
+      {
+       "page": "kana:1",
+       "text": "アパート"
+      },
+      {
+       "page": "kana:1",
+       "text": "ボールペン"
+      },
+      {
+       "page": "kana:1",
+       "text": "クラスメイト"
+      },
+      {
+       "page": "kana:1",
+       "text": "プロジェクト"
+      },
+      {
+       "page": "kana:1",
+       "text": "アルバイト"
+      },
+      {
+       "page": "kana:1",
+       "text": "トレーニング"
+      },
+      {
+       "page": "kana:1",
+       "text": "フィリピン"
+      },
+      {
+       "page": "kana:1",
+       "text": "クリスマス"
+      }
+     ]
+    },
+    {
+     "a": "d4-part-c-pair-match",
+     "t": "part c: pair match",
+     "decision": "covered",
+     "to": "/kana/1#c1-part-c-write-the-katakana-twin",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/kana/1#answers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-part-a-hiragana-words",
+     "t": "part a: hiragana words",
+     "decision": "covered",
+     "to": "/kana/1#c1-part-i-read-the-words-hiragana-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-part-b-katakana-words",
+     "t": "part b: katakana words",
+     "decision": "covered",
+     "to": "/kana/1#c1-part-j-read-the-words-katakana-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d4-part-c-pair-match-2",
+     "t": "part c: pair match",
+     "decision": "covered",
+     "to": "/kana/1#c1-part-c-write-the-katakana-twin-2",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Intensive Japanese 1 Chapter 6 Answer Key",
+   "to": "/chapters/6#c6-workbook-answers",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/6#c6-workbook-answers",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d5-noun-past-tense-page-88",
+     "t": "noun past tense (page 88)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-noun-past-tense-page-88-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-adjective-conjugation-tables-page-92",
+     "t": "adjective conjugation tables (page 92)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-adjective-conjugation-na-adjectives-page-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-change-to-negative-page-93",
+     "t": "change to negative (page 93)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-change-to-negative-page-93-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-change-to-past-tense-page-93",
+     "t": "change to past tense (page 93)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-change-to-past-tense-page-93-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-choose-the-adjective-page-94",
+     "t": "choose the adjective (page 94)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-choose-the-adjective-page-94-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-review-i-choose-the-grammar-pattern-page",
+     "t": "review i, choose the grammar pattern (page 96)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-selecting-grammar-form-page-96-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-review-ii-rearrange-the-words-page-97",
+     "t": "review ii, rearrange the words (page 97)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-sentence-composition-page-97-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-review-iii-and-iv-fill-in-and-reading-pa",
+     "t": "review iii and iv, fill in and reading (pages 98 and 99)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-grammar-usage-page-98-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-review-v-answer-in-sentences-page-100",
+     "t": "review v, answer in sentences (page 100)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-question-and-answer-page-100-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d5-review-vi-translate-to-japanese-page-100",
+     "t": "review vi, translate to japanese (page 100)",
+     "decision": "covered",
+     "to": "/chapters/6#c6-translation-page-100-2",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Intensive Japanese 1 Vocabulary Reviewer (Chapter 6)",
+   "to": "/chapters/6#vocab",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/6#vocab",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d6-how-to-use-this-reviewer",
+     "t": "how to use this reviewer",
+     "decision": "dropped",
+     "to": "/chapters/6",
+     "note": "Study tips for the old document. The page itself is laid out in the same order."
+    },
+    {
+     "a": "d6-chapter-6-adjectives",
+     "t": "chapter 6: adjectives",
+     "decision": "covered",
+     "to": "/chapters/6#c6-adverbs-for-adjectives",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-places",
+     "t": "places",
+     "decision": "covered",
+     "to": "/chapters/6#c6-places",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-home-and-food",
+     "t": "home and food",
+     "decision": "covered",
+     "to": "/chapters/6#c6-home-and-food",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-study-and-writing",
+     "t": "study and writing",
+     "decision": "covered",
+     "to": "/chapters/6#c6-study-and-writing",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-adverbs-for-adjectives",
+     "t": "adverbs for adjectives",
+     "decision": "covered",
+     "to": "/chapters/6#c6-adverbs-for-adjectives",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-adjective-pairs",
+     "t": "adjective pairs",
+     "decision": "covered",
+     "to": "/chapters/6#c6-6-3-basic-adjective-pairs-bunkei-6-1",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-more-adjectives",
+     "t": "more adjectives",
+     "decision": "covered",
+     "to": "/chapters/6#c6-more-adjectives-from-the-grammar-page",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-one-word-several-meanings",
+     "t": "one word, several meanings",
+     "decision": "covered",
+     "to": "/chapters/6#c6-atsui-has-three-meanings",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-easy-to-mix-up",
+     "t": "easy to mix up",
+     "decision": "covered",
+     "to": "/chapters/6#c6-omoshiroi-and-tanoshii",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-words-from-the-lessons-and-exercises",
+     "t": "words from the lessons and exercises",
+     "decision": "covered",
+     "to": "/chapters/6#c6-words-from-the-lessons-and-exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-self-test",
+     "t": "self-test",
+     "decision": "covered",
+     "to": "/chapters/6#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-part-a-what-does-it-mean",
+     "t": "part a: what does it mean?",
+     "decision": "covered",
+     "to": "/chapters/6#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-part-b-what-is-the-opposite",
+     "t": "part b: what is the opposite?",
+     "decision": "merged",
+     "to": "/chapters/6#c6-part-c-say-the-opposite",
+     "note": "Added 2 items to Part C: Say the opposite. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:6",
+       "text": "takai (expensive)"
+      },
+      {
+       "page": "chapter:6",
+       "text": "tsumetai (cold, for things)"
+      }
+     ]
+    },
+    {
+     "a": "d6-part-c-how-do-you-say-it",
+     "t": "part c: how do you say it?",
+     "decision": "covered",
+     "to": "/chapters/6#c6-part-x-say-the-word-in-japanese",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d6-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/chapters/6#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Intensive Japanese 1 Chapter 7 Reviewer",
+   "to": "/chapters/7",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/7",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d7-how-to-use-this-reviewer",
+     "t": "how to use this reviewer",
+     "decision": "dropped",
+     "to": "/chapters/7",
+     "note": "Study tips for the old document. The page itself is laid out in the same order."
+    },
+    {
+     "a": "d7-grammar-verb-endings-and-time-markers",
+     "t": "grammar: verb endings and time markers",
+     "decision": "covered",
+     "to": "/chapters/7#lessons",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-time-markers",
+     "t": "time markers",
+     "decision": "covered",
+     "to": "/chapters/7#c7-7-2-time-expression-ni-verb-bunkei-7-1",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-grammar-adjectives-as-adverbs-and-how-of",
+     "t": "grammar: adjectives as adverbs and how often",
+     "decision": "covered",
+     "to": "/chapters/7#lessons",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-how-often",
+     "t": "how often",
+     "decision": "covered",
+     "to": "/chapters/7#c7-how-often",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-vocabulary",
+     "t": "vocabulary",
+     "decision": "covered",
+     "to": "/chapters/7#vocab",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-verbs",
+     "t": "verbs",
+     "decision": "covered",
+     "to": "/chapters/7#c7-verbs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-nouns",
+     "t": "nouns",
+     "decision": "covered",
+     "to": "/chapters/7#c7-nouns",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-adjectives",
+     "t": "adjectives",
+     "decision": "covered",
+     "to": "/chapters/7#c7-adjectives",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-how-often-2",
+     "t": "how often",
+     "decision": "covered",
+     "to": "/chapters/7#c7-how-often",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-extra-words-from-the-lessons-and-exercis",
+     "t": "extra words from the lessons and exercises",
+     "decision": "covered",
+     "to": "/chapters/7#c7-extra-words-from-the-lessons-and-exercis",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-time-words-from-chapter-4-that-you-need",
+     "t": "time words from chapter 4 that you need",
+     "decision": "covered",
+     "to": "/chapters/7#c7-time-words-from-earlier-chapters-that-yo",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-easy-to-mix-up",
+     "t": "easy to mix up",
+     "decision": "covered",
+     "to": "/chapters/7#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-self-test",
+     "t": "self-test",
+     "decision": "covered",
+     "to": "/chapters/7#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-part-a-what-does-it-mean",
+     "t": "part a: what does it mean?",
+     "decision": "covered",
+     "to": "/chapters/7#c7-verb-conjugation-page-103",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-part-b-fix-the-mistake",
+     "t": "part b: fix the mistake",
+     "decision": "merged",
+     "to": "/chapters/7#c7-part-t-find-and-fix-the-mistake",
+     "note": "Added 1 item to Part T: Find and fix the mistake. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:7",
+       "text": "kare wa majime na benkyoushimasu."
+      }
+     ]
+    },
+    {
+     "a": "d7-part-c-change-the-ending",
+     "t": "part c: change the ending",
+     "decision": "covered",
+     "to": "/chapters/7#c7-verb-conjugation-page-103",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-part-d-say-it-in-japanese",
+     "t": "part d: say it in japanese",
+     "decision": "covered",
+     "to": "/chapters/7#c7-part-w-translate-into-japanese",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d7-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/chapters/7#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Intensive Japanese 1 Chapter 7 Answer Key",
+   "to": "/chapters/7#c7-workbook-answers",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/7#c7-workbook-answers",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d8-verb-conjugation-page-103",
+     "t": "verb conjugation (page 103)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-verb-conjugation-page-103-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-change-to-negative-page-105",
+     "t": "change to negative (page 105)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-change-to-negative-page-105-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-change-to-past-tense-page-105",
+     "t": "change to past tense (page 105)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-change-to-past-tense-page-105-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-choose-between-1-and-2-page-107",
+     "t": "choose between 1 and 2 (page 107)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-choose-between-1-and-2-page-107-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-choose-the-adverb-or-marker-page-110",
+     "t": "choose the adverb or marker (page 110)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-choose-the-adverb-or-marker-page-110-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-review-i-choose-the-grammar-pattern-page",
+     "t": "review i, choose the grammar pattern (page 111)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-selecting-grammar-form-page-111-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-review-ii-rearrange-the-words-page-112",
+     "t": "review ii, rearrange the words (page 112)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-sentence-composition-page-112-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-review-iii-and-iv-fill-in-and-reading-pa",
+     "t": "review iii and iv, fill in and reading (pages 113 and 114)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-grammar-usage-page-113-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-review-v-answer-in-sentences-page-115",
+     "t": "review v, answer in sentences (page 115)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-question-and-answer-page-115-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d8-review-vi-translate-to-japanese-page-115",
+     "t": "review vi, translate to japanese (page 115)",
+     "decision": "covered",
+     "to": "/chapters/7#c7-translation-page-115-2",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Intensive Japanese 1 Chapter 8 Reviewer",
+   "to": "/chapters/8",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/8",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d9-grammar-the-patterns-chapter-8-teaches-w",
+     "t": "grammar: the patterns chapter 8 teaches, with examples",
+     "decision": "covered",
+     "to": "/chapters/8#lessons",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-the-markers-at-a-glance",
+     "t": "the markers at a glance",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-10-question-words-with-the-markers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-8-1-a-object-transitive-verb",
+     "t": "8.1 a は object を transitive verb",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-2-a-wa-object-o-transitive-verb-bunkei",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-8-2-time-expression-transitive-verb",
+     "t": "8.2 time expression に・から・まで・ごろ + transitive verb",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-3-time-expression-ni-kara-made-or-goro",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-8-3-place-of-action",
+     "t": "8.3 place of action で",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-4-place-of-action-de-bunkei-8-3",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-8-4-recipient-of-action",
+     "t": "8.4 recipient of action に",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-5-recipient-of-action-ni-bunkei-8-4",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-8-5-companion",
+     "t": "8.5 companion と・といっしょに",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-6-companion-to-or-to-issho-ni-bunkei-8",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-8-6-method-of-action",
+     "t": "8.6 method of action で",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-7-method-of-action-de-bunkei-8-6",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-8-7-tool-of-action",
+     "t": "8.7 tool of action で",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-8-tool-of-action-de-bunkei-8-7",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-asking-with-question-words",
+     "t": "asking with question words",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-10-question-words-with-the-markers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-more-sample-sentences",
+     "t": "more sample sentences",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-9-markers-at-a-glance-and-more-sample-",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-phrases-from-the-conversations",
+     "t": "phrases from the conversations",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-11-phrases-from-the-conversations",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-vocabulary-every-chapter-8-word-with-rom",
+     "t": "vocabulary: every chapter 8 word with romaji and english",
+     "decision": "covered",
+     "to": "/chapters/8#vocab",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-food",
+     "t": "food (たべもの)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-food-tabemono",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-drinks",
+     "t": "drinks (のみもの)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-drinks-nomimono",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-reading-materials",
+     "t": "reading materials (よみもの)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-reading-materials-yomimono",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-other-nouns",
+     "t": "other nouns",
+     "decision": "covered",
+     "to": "/chapters/8#c8-other-nouns",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-verbs",
+     "t": "verbs (どうしリスト)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-verbs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-which-verb-goes-with-which-noun",
+     "t": "which verb goes with which noun",
+     "decision": "covered",
+     "to": "/chapters/8#c8-verbs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-handy-words-from-the-examples",
+     "t": "handy words from the examples",
+     "decision": "covered",
+     "to": "/chapters/8#c8-things-and-places-from-the-examples",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-easy-to-mix-up",
+     "t": "easy to mix up",
+     "decision": "covered",
+     "to": "/chapters/8#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-markers-that-look-alike",
+     "t": "markers that look alike",
+     "decision": "covered",
+     "to": "/chapters/8#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-verbs-that-look-or-sound-alike",
+     "t": "verbs that look or sound alike",
+     "decision": "covered",
+     "to": "/chapters/8#c8-kikimasu-and-kakimasu",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-one-verb-two-meanings",
+     "t": "one verb, two meanings",
+     "decision": "covered",
+     "to": "/chapters/8#c8-kikimasu-listen-or-ask",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-little-words-that-travel-together",
+     "t": "little words that travel together",
+     "decision": "covered",
+     "to": "/chapters/8#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-food-and-drink-look-alikes",
+     "t": "food and drink look-alikes",
+     "decision": "covered",
+     "to": "/chapters/8#c8-look-alike-food-and-drink-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-self-test-with-answer-key",
+     "t": "self-test with answer key",
+     "decision": "covered",
+     "to": "/chapters/8#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d9-part-a-fill-in-the-marker",
+     "t": "part a: fill in the marker (を, で, に, と)",
+     "decision": "merged",
+     "to": "/chapters/8#c8-part-f-pick-the-marker",
+     "note": "Added 10 items to Part F: Pick the marker. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "watashi wa asa gyuunyuu ____ nomimasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "kinou toshokan ____ hon o yomimashita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "haha ____ me-ru o kakimashita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "tomodachi ____ karaoke de utaimasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "supu-n ____ su-pu o nomimasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "nichiyoubi ____ kazoku to shokudou de tabemashita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "maiban nyu-su ____ mimasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "imouto ____ issho ni bangohan o tabemasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "ben san wa eigo ____ repo-to o kakimashita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "dare ____ denwa o kakemashita ka."
+      }
+     ]
+    },
+    {
+     "a": "d9-part-b-choose-the-question-word",
+     "t": "part b: choose the question word",
+     "decision": "merged",
+     "to": "/chapters/8#c8-part-h-choose-the-question-word",
+     "note": "Added 5 items to Part H: Choose the question word. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "A: ____ zasshi o yomimasu ka. B: heya de yomimasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "A: ____ ko-hi- o nomimasu ka. B: tomodachi to nomimasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "A: ____ kaimashita ka. B: pan to gyuunyuu o kaimashita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "A: ____ denwa o kakemashita ka. B: okaasan ni kakemashita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "A: ____ nihongo o oshiemasu ka. B: eigo de oshiemasu."
+      }
+     ]
+    },
+    {
+     "a": "d9-part-c-write-the-verb-form",
+     "t": "part c: write the verb form",
+     "decision": "merged",
+     "to": "/chapters/8#c8-part-d-verb-forms",
+     "note": "Added 4 items to Part D: Verb forms. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "kakemasu: present negative"
+      },
+      {
+       "page": "chapter:8",
+       "text": "oshiemasu: past negative"
+      },
+      {
+       "page": "chapter:8",
+       "text": "hanashimasu: present negative"
+      },
+      {
+       "page": "chapter:8",
+       "text": "tabemasu: past positive"
+      }
+     ]
+    },
+    {
+     "a": "d9-part-d-pick-the-verb-that-fits",
+     "t": "part d: pick the verb that fits",
+     "decision": "merged",
+     "to": "/chapters/8#c8-part-c-which-verb-goes-with-the-noun",
+     "note": "Added 2 items to Part C: Which verb goes with the noun? The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "karaoke de uta o ____."
+      },
+      {
+       "page": "chapter:8",
+       "text": "ana san ni denwa o ____."
+      }
+     ]
+    },
+    {
+     "a": "d9-part-e-translate-into-japanese",
+     "t": "part e: translate into japanese",
+     "decision": "merged",
+     "to": "/chapters/8#c8-part-w-translate-into-japanese",
+     "note": "Added 4 items to Part W: Translate into Japanese. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "I drank tea at the cafeteria this morning."
+      },
+      {
+       "page": "chapter:8",
+       "text": "I write the report with a pencil."
+      },
+      {
+       "page": "chapter:8",
+       "text": "I sang at karaoke with my friends yesterday."
+      },
+      {
+       "page": "chapter:8",
+       "text": "I read the newspaper at around seven every morning."
+      }
+     ]
+    },
+    {
+     "a": "d9-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/chapters/8#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Intensive Japanese 1 Chapter 8 Answer Key",
+   "to": "/chapters/8#c8-workbook-answers",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/8#c8-workbook-answers",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d10-verb-conjugation-page-118",
+     "t": "verb conjugation (page 118)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-part-d-verb-forms-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d10-fill-in-the-appropriate-marker-page-122",
+     "t": "fill in the appropriate marker (page 122)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-fill-in-the-appropriate-marker-page-122-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d10-review-i-choose-the-correct-grammatical-",
+     "t": "review i: choose the correct grammatical pattern (page 125)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-choose-the-correct-grammatical-pattern-p-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d10-review-ii-rearrange-the-words-page-126",
+     "t": "review ii: rearrange the words (page 126)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-rearrange-the-words-page-126-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d10-review-iii-fill-in-the-proper-word-or-ph",
+     "t": "review iii: fill in the proper word or phrase (page 127)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-fill-in-the-proper-word-or-phrase-page-1-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d10-review-iv-read-and-answer-page-128",
+     "t": "review iv: read and answer (page 128)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-read-and-answer-page-128-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d10-review-v-questions-and-answers-in-senten",
+     "t": "review v: questions and answers in sentence form (page 129)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-questions-and-answers-in-sentence-form-p-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d10-review-vi-translate-into-japanese-page-1",
+     "t": "review vi: translate into japanese (page 129)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-translate-into-japanese-page-129-2",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "title": "Intensive Japanese 1 Vocabulary Reviewer (Chapters 6 to 8)",
+   "to": "/chapters/6#vocab",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/6#vocab",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d11-chapter-6-adjectives",
+     "t": "chapter 6: adjectives",
+     "decision": "covered",
+     "to": "/chapters/6",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-places",
+     "t": "places",
+     "decision": "covered",
+     "to": "/chapters/6#c6-places",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-home-and-food",
+     "t": "home and food",
+     "decision": "covered",
+     "to": "/chapters/6#c6-home-and-food",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-study-and-writing",
+     "t": "study and writing",
+     "decision": "covered",
+     "to": "/chapters/6#c6-study-and-writing",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-adverbs-for-adjectives",
+     "t": "adverbs for adjectives",
+     "decision": "covered",
+     "to": "/chapters/6#c6-adverbs-for-adjectives",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-adjective-pairs",
+     "t": "adjective pairs",
+     "decision": "covered",
+     "to": "/chapters/6#c6-6-3-basic-adjective-pairs-bunkei-6-1",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-more-adjectives",
+     "t": "more adjectives",
+     "decision": "covered",
+     "to": "/chapters/6#c6-more-adjectives-from-the-grammar-page",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-one-word-several-meanings",
+     "t": "one word, several meanings",
+     "decision": "covered",
+     "to": "/chapters/6#c6-takai-has-two-meanings",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-words-from-the-lessons-and-exercises",
+     "t": "words from the lessons and exercises",
+     "decision": "covered",
+     "to": "/chapters/6#c6-words-from-the-lessons-and-exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-chapter-7-daily-routines",
+     "t": "chapter 7: daily routines",
+     "decision": "covered",
+     "to": "/chapters/7",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-verbs",
+     "t": "verbs",
+     "decision": "covered",
+     "to": "/chapters/7#c7-verbs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-nouns",
+     "t": "nouns",
+     "decision": "covered",
+     "to": "/chapters/7#c7-nouns",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-adjectives",
+     "t": "adjectives",
+     "decision": "covered",
+     "to": "/chapters/7#c7-adjectives",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-how-often",
+     "t": "how often",
+     "decision": "covered",
+     "to": "/chapters/7#c7-how-often",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-extra-words-from-the-lessons-and-exercis",
+     "t": "extra words from the lessons and exercises",
+     "decision": "covered",
+     "to": "/chapters/7#c7-extra-words-from-the-lessons-and-exercis",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-time-words-from-chapter-4-that-you-need",
+     "t": "time words from chapter 4 that you need",
+     "decision": "covered",
+     "to": "/chapters/7#c7-time-words-from-earlier-chapters-that-yo",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-chapter-8-food-drinks-and-everyday-verbs",
+     "t": "chapter 8: food, drinks and everyday verbs",
+     "decision": "covered",
+     "to": "/chapters/8",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-food",
+     "t": "food (たべもの)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-food-tabemono",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-drinks",
+     "t": "drinks (のみもの)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-drinks-nomimono",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-reading-materials",
+     "t": "reading materials (よみもの)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-reading-materials-yomimono",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-other-nouns",
+     "t": "other nouns",
+     "decision": "covered",
+     "to": "/chapters/8#c8-other-nouns",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-verbs-2",
+     "t": "verbs (どうしリスト)",
+     "decision": "covered",
+     "to": "/chapters/8#c8-verbs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-which-verb-goes-with-which-noun",
+     "t": "which verb goes with which noun",
+     "decision": "covered",
+     "to": "/chapters/8#c8-8-12-which-verb-goes-with-which-noun-ext",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-handy-words-from-the-examples",
+     "t": "handy words from the examples",
+     "decision": "covered",
+     "to": "/chapters/8#c8-things-and-places-from-the-examples",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-easy-to-mix-up",
+     "t": "easy to mix up",
+     "decision": "covered",
+     "to": "/chapters/6#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-words-that-start-the-same",
+     "t": "words that start the same",
+     "decision": "merged",
+     "to": "/chapters/8#c8-words-that-start-the-same",
+     "note": "Added Words that start the same. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "### Words that start the same"
+      },
+      {
+       "page": "chapter:8",
+       "text": "### Where the katakana words come from"
+      }
+     ]
+    },
+    {
+     "a": "d11-one-word-more-than-one-meaning",
+     "t": "one word, more than one meaning",
+     "decision": "covered",
+     "to": "/chapters/6#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-two-words-same-meaning",
+     "t": "two words, same meaning",
+     "decision": "covered",
+     "to": "/chapters/6#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-noun-plus-makes-a-verb",
+     "t": "noun plus します makes a verb",
+     "decision": "covered",
+     "to": "/chapters/7#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-opposites-from-chapters-7-and-8",
+     "t": "opposites from chapters 7 and 8",
+     "decision": "covered",
+     "to": "/chapters/8#c8-kaimasu-urimasu-and-utaimasu",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-how-strong-is-it",
+     "t": "how strong is it?",
+     "decision": "merged",
+     "to": "/chapters/7#c7-how-strong-is-it",
+     "note": "Added How strong is it? The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:7",
+       "text": "### How strong is it?"
+      }
+     ]
+    },
+    {
+     "a": "d11-katakana-words-from-these-chapters",
+     "t": "katakana words from these chapters",
+     "decision": "merged",
+     "to": "/chapters/8#c8-where-the-katakana-words-come-from",
+     "note": "Added Where the katakana words come from. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "### Words that start the same"
+      },
+      {
+       "page": "chapter:8",
+       "text": "### Where the katakana words come from"
+      }
+     ]
+    },
+    {
+     "a": "d11-self-test-with-answer-key",
+     "t": "self-test with answer key",
+     "decision": "covered",
+     "to": "/chapters/6#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-part-a-what-does-it-mean",
+     "t": "part a: what does it mean?",
+     "decision": "merged",
+     "to": "/chapters/6#c6-part-d-what-does-the-adjective-mean",
+     "note": "Added 1 item to Part D: What does the adjective mean? The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:6",
+       "text": "tsumaranai"
+      }
+     ]
+    },
+    {
+     "a": "d11-part-b-how-do-you-say-it",
+     "t": "part b: how do you say it?",
+     "decision": "covered",
+     "to": "/chapters/8#c8-part-b-say-the-word-in-japanese",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d11-part-c-what-is-the-opposite",
+     "t": "part c: what is the opposite?",
+     "decision": "merged",
+     "to": "/chapters/6#c6-part-c-say-the-opposite",
+     "note": "Added 2 items to Part C: Say the opposite. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:6",
+       "text": "takai (expensive)"
+      },
+      {
+       "page": "chapter:6",
+       "text": "tsumetai (cold, for things)"
+      }
+     ]
+    },
+    {
+     "a": "d11-part-d-which-word-fits",
+     "t": "part d: which word fits?",
+     "decision": "merged",
+     "to": "/chapters/8#c8-part-y-review-of-chapters-6-to-8-which-w",
+     "note": "Added 8 items to Part Y: Review of Chapters 6 to 8: which word fits? The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "kusuri o ____ de kaimashita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "kono heya wa ____ hirokunai desu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "yuube ____ nemasen deshita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "sensei wa shiken no ____ o oshiemashita."
+      },
+      {
+       "page": "chapter:8",
+       "text": "____ de nemasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "kazoku no ____ o mimasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "maiban terebi de ____ o mimasu."
+      },
+      {
+       "page": "chapter:8",
+       "text": "kyou wa ____ shimasu."
+      }
+     ]
+    },
+    {
+     "a": "d11-part-e-which-one-does-not-belong",
+     "t": "part e: which one does not belong?",
+     "decision": "merged",
+     "to": "/chapters/8#c8-part-z-review-of-chapters-6-to-8-which-o",
+     "note": "Added 7 items to Part Z: Review of Chapters 6 to 8: which one does not belong? The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:8",
+       "text": "bi-ru, wain, osake, pan"
+      },
+      {
+       "page": "chapter:8",
+       "text": "kouen, kuukou, minato, beddo"
+      },
+      {
+       "page": "chapter:8",
+       "text": "tabemasu, nomimasu, shinbun, yomimasu"
+      },
+      {
+       "page": "chapter:8",
+       "text": "hayai, osoi, kibishii, zasshi"
+      },
+      {
+       "page": "chapter:8",
+       "text": "zangyou, benkyou, hiruyasumi, supu-n"
+      },
+      {
+       "page": "chapter:8",
+       "text": "asagohan, bangohan, hirugohan, shokudou"
+      },
+      {
+       "page": "chapter:8",
+       "text": "chotto, totemo, taihen, tokidoki"
+      }
+     ]
+    },
+    {
+     "a": "d11-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/chapters/8#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "title": "Intensive Japanese 1 Kanji 1 Reviewer",
+   "to": "/kanji/1",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/kanji/1",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d12-kanji-list",
+     "t": "kanji list",
+     "decision": "covered",
+     "to": "/kanji/1#lessons",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-how-readings-work",
+     "t": "how readings work",
+     "decision": "merged",
+     "to": "/kanji/1#c1-how-kanji-readings-work",
+     "note": "Added How kanji readings work. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "kanji:1",
+       "text": "### How kanji readings work"
+      },
+      {
+       "page": "kanji:1",
+       "text": "Most kanji have two kinds of reading. The workbook calls them the Japanese reading (kun'yomi) and the Chinese reading (on'yomi), and the tables on this page list them as Kun'yomi and On'yomi."
+      }
+     ]
+    },
+    {
+     "a": "d12-lesson-1-kanji-1-to-10",
+     "t": "lesson 1: kanji 1 to 10",
+     "decision": "covered",
+     "to": "/kanji/1#c1-one",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-lesson-2-kanji-11-to-20",
+     "t": "lesson 2: kanji 11 to 20",
+     "decision": "covered",
+     "to": "/kanji/1#c1-hundred",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-lesson-3-kanji-21-to-30",
+     "t": "lesson 3: kanji 21 to 30",
+     "decision": "covered",
+     "to": "/kanji/1#c1-yen-round",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-cheat-sheet-counting-small-things",
+     "t": "cheat sheet: counting small things",
+     "decision": "covered",
+     "to": "/kanji/1#c1-counting-pieces",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-cheat-sheet-days-of-the-month",
+     "t": "cheat sheet: days of the month",
+     "decision": "covered",
+     "to": "/kanji/1#c1-days-of-the-month",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-cheat-sheet-months",
+     "t": "cheat sheet: months",
+     "decision": "covered",
+     "to": "/kanji/1#c1-months-of-the-year",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-cheat-sheet-days-of-the-week",
+     "t": "cheat sheet: days of the week",
+     "decision": "covered",
+     "to": "/kanji/1#c1-days-of-the-week",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-cheat-sheet-sound-changes",
+     "t": "cheat sheet: sound changes",
+     "decision": "covered",
+     "to": "/kanji/1#c1-sound-changes-after-numbers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-vocabulary-every-word-the-workbook-uses",
+     "t": "vocabulary: every word the workbook uses",
+     "decision": "covered",
+     "to": "/kanji/1#vocab",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-lesson-1-words",
+     "t": "lesson 1 words",
+     "decision": "covered",
+     "to": "/kanji/1#c1-one",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-lesson-2-words",
+     "t": "lesson 2 words",
+     "decision": "covered",
+     "to": "/kanji/1#c1-hundred",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-lesson-3-words",
+     "t": "lesson 3 words",
+     "decision": "covered",
+     "to": "/kanji/1#c1-yen-round",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-easy-to-mix-up",
+     "t": "easy to mix up",
+     "decision": "covered",
+     "to": "/kanji/1#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-look-alike-kanji",
+     "t": "look-alike kanji",
+     "decision": "covered",
+     "to": "/kanji/1#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-reading-traps",
+     "t": "reading traps",
+     "decision": "covered",
+     "to": "/kanji/1#c1-the-readings-of",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-self-test",
+     "t": "self-test",
+     "decision": "covered",
+     "to": "/kanji/1#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-part-a-read-it-in-hiragana-15",
+     "t": "part a: read it in hiragana (15)",
+     "decision": "merged",
+     "to": "/kanji/1#c1-part-i-more-words-to-read",
+     "note": "Added 10 items to Part I: More words to read. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "kanji:1",
+       "text": "五人"
+      },
+      {
+       "page": "kanji:1",
+       "text": "男子"
+      },
+      {
+       "page": "kanji:1",
+       "text": "火山"
+      },
+      {
+       "page": "kanji:1",
+       "text": "三分"
+      },
+      {
+       "page": "kanji:1",
+       "text": "三千円"
+      },
+      {
+       "page": "kanji:1",
+       "text": "女子"
+      },
+      {
+       "page": "kanji:1",
+       "text": "一万"
+      },
+      {
+       "page": "kanji:1",
+       "text": "千五百円"
+      },
+      {
+       "page": "kanji:1",
+       "text": "九時"
+      },
+      {
+       "page": "kanji:1",
+       "text": "二百五十円"
+      }
+     ]
+    },
+    {
+     "a": "d12-part-b-write-it-in-kanji-15",
+     "t": "part b: write it in kanji (15)",
+     "decision": "merged",
+     "to": "/kanji/1#c1-part-j-more-words-to-write-in-kanji",
+     "note": "Added 14 items to Part J: More words to write in kanji. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "kanji:1",
+       "text": "みっつ"
+      },
+      {
+       "page": "kanji:1",
+       "text": "やっつ"
+      },
+      {
+       "page": "kanji:1",
+       "text": "ななひゃく"
+      },
+      {
+       "page": "kanji:1",
+       "text": "ろっぴゃく"
+      },
+      {
+       "page": "kanji:1",
+       "text": "じゅうまん"
+      },
+      {
+       "page": "kanji:1",
+       "text": "きんようび"
+      },
+      {
+       "page": "kanji:1",
+       "text": "かようび"
+      },
+      {
+       "page": "kanji:1",
+       "text": "はちがつ"
+      },
+      {
+       "page": "kanji:1",
+       "text": "ろくにん"
+      },
+      {
+       "page": "kanji:1",
+       "text": "はちにん"
+      },
+      {
+       "page": "kanji:1",
+       "text": "ひゃくえん"
+      },
+      {
+       "page": "kanji:1",
+       "text": "おとうさん"
+      },
+      {
+       "page": "kanji:1",
+       "text": "じゅういちがつ"
+      },
+      {
+       "page": "kanji:1",
+       "text": "ごせんえん"
+      }
+     ]
+    },
+    {
+     "a": "d12-part-c-what-does-it-mean-10",
+     "t": "part c: what does it mean? (10)",
+     "decision": "merged",
+     "to": "/kanji/1#c1-part-k-what-does-it-mean",
+     "note": "Added 1 item to Part K: What does it mean? The rest was already on the page.",
+     "checks": [
+      {
+       "page": "kanji:1",
+       "text": "百万円"
+      }
+     ]
+    },
+    {
+     "a": "d12-part-d-pick-the-right-kanji-6",
+     "t": "part d: pick the right kanji (6)",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-f-spot-the-look-alike-kanji",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-part-e-say-the-date-8",
+     "t": "part e: say the date (8)",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-g-say-the-dates-months-and-weekdays",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d12-self-test-answers",
+     "t": "self-test answers",
+     "decision": "covered",
+     "to": "/kanji/1#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "title": "Intensive Japanese 1 Kanji 1 Answer Key",
+   "to": "/kanji/1#answers",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "merged",
+     "to": "/kanji/1#answers",
+     "note": "Its note that the answers are derived, not official, opens the Kanji 1 answer key.",
+     "checks": [
+      {
+       "page": "kanji:1",
+       "text": "Parts A to D follow the exercises in the Kanji Workbook N5, Lessons 1 to 3. The workbook's own answer key was not available, so these answers were worked out from the lessons and the word lists. They are model answers, not the official answer key. If one differs from the workbook's key, trust the workbook."
+      }
+     ]
+    },
+    {
+     "a": "d13-how-the-exercises-work",
+     "t": "how the exercises work",
+     "decision": "covered",
+     "to": "/kanji/1#answers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-lesson-1-to-kanji-1-to-10",
+     "t": "lesson 1: 一 to 十 (kanji 1 to 10)",
+     "decision": "covered",
+     "to": "/kanji/1#answers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-i-page-9-hiragana-for-the-underlined-kan",
+     "t": "れんしゅう i (page 9): hiragana for the underlined kanji",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-a-read-the-kanji-words-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-ii-page-9-kanji-and-meaning",
+     "t": "れんしゅう ii (page 9): kanji and meaning",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-b-write-the-words-in-kanji-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-i-page-10-choose-the-reading",
+     "t": "テスト i (page 10): choose the reading",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-c-choose-the-right-reading-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-ii-page-11-choose-the-kanji",
+     "t": "テスト ii (page 11): choose the kanji",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-d-choose-the-right-kanji-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-lesson-2-to-kanji-11-to-20",
+     "t": "lesson 2: 百 to 土 (kanji 11 to 20)",
+     "decision": "covered",
+     "to": "/kanji/1#answers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-i-pages-13-to-14-hiragana-for-the-underl",
+     "t": "れんしゅう i (pages 13 to 14): hiragana for the underlined kanji",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-a-read-the-kanji-words-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-ii-pages-13-to-14-kanji-and-meaning",
+     "t": "れんしゅう ii (pages 13 to 14): kanji and meaning",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-b-write-the-words-in-kanji-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-i-page-15-choose-the-reading",
+     "t": "テスト i (page 15): choose the reading",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-c-choose-the-right-reading-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-ii-pages-15-to-16-choose-the-kanji",
+     "t": "テスト ii (pages 15 to 16): choose the kanji",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-d-choose-the-right-kanji-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-lesson-3-to-kanji-21-to-30",
+     "t": "lesson 3: 円 to 友 (kanji 21 to 30)",
+     "decision": "covered",
+     "to": "/kanji/1#answers",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-i-pages-18-to-19-hiragana-for-the-underl",
+     "t": "れんしゅう i (pages 18 to 19): hiragana for the underlined kanji",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-a-read-the-kanji-words-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-ii-pages-18-to-19-kanji-and-meaning",
+     "t": "れんしゅう ii (pages 18 to 19): kanji and meaning",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-b-write-the-words-in-kanji-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-i-pages-19-to-20-choose-the-reading",
+     "t": "テスト i (pages 19 to 20): choose the reading",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-c-choose-the-right-reading-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d13-ii-page-21-choose-the-kanji",
+     "t": "テスト ii (page 21): choose the kanji",
+     "decision": "covered",
+     "to": "/kanji/1#c1-part-d-choose-the-right-kanji-2",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "title": "Intensive Japanese 1 Chapter 9 Reviewer",
+   "to": "/chapters/9",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/9",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d14-grammar-the-patterns-chapter-9-teaches-w",
+     "t": "grammar: the patterns chapter 9 teaches, with examples",
+     "decision": "covered",
+     "to": "/chapters/9#lessons",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-the-markers-at-a-glance",
+     "t": "the markers at a glance",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-6-question-words-for-motion-verbs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-9-1-a-destination-motion-verb-and-origin",
+     "t": "9.1 a は destination へ・に motion verb, and origin から きました",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-1-destination-e-or-ni-and-origin-kara-",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-9-2-mode-of-transportation-motion-verb",
+     "t": "9.2 mode of transportation で motion verb",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-2-mode-of-transportation-de-bunkei-9-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-9-3-time-expression-verb",
+     "t": "9.3 time expression に・から・まで・ごろ verb",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-3-time-words-ni-kara-made-and-goro-bun",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-9-4-companion-verb",
+     "t": "9.4 companion と・といっしょに verb",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-4-companion-to-or-issho-ni-bunkei-9-4",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-9-5-counter-for-people-verb",
+     "t": "9.5 counter for people で verb",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-5-counter-for-people-de-bunkei-9-5",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-asking-with-question-words",
+     "t": "asking with question words",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-6-question-words-for-motion-verbs",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-9-6-isn-t-it",
+     "t": "9.6 〜ね (isn't it?)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-7-ending-marker-ne-bunkei-9-6",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-9-7-emphasis",
+     "t": "9.7 〜よ (emphasis)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-8-ending-marker-yo-bunkei-9-7",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-masu-form-and-dictionary-form-two-forms-",
+     "t": "masu-form and dictionary form: two forms of every verb",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-9-masu-form-and-dictionary-form-two-fo",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-from-form-to-dictionary-form",
+     "t": "from ます form to dictionary form",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-10-from-masu-form-to-dictionary-form-p",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-from-dictionary-form-to-form",
+     "t": "from dictionary form to ます form",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-9-masu-form-and-dictionary-form-two-fo",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-the-book-s-verb-table-with-the-ending-gr",
+     "t": "the book's verb table, with the ending groups",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-12-verb-groups-by-the-dictionary-form-",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-a-quick-way-to-tell-the-type",
+     "t": "a quick way to tell the type",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-10-from-masu-form-to-dictionary-form-p",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-useful-lines-from-the-review-readings",
+     "t": "useful lines from the review readings",
+     "decision": "covered",
+     "to": "/chapters/9#c9-9-15-phrases-from-the-readings-extra-les",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-vocabulary-every-chapter-9-word-with-rom",
+     "t": "vocabulary: every chapter 9 word with romaji and english",
+     "decision": "covered",
+     "to": "/chapters/9#vocab",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-nature-and-scenery",
+     "t": "nature and scenery",
+     "decision": "covered",
+     "to": "/chapters/9#c9-nature-and-scenery",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-towns-and-places-to-visit",
+     "t": "towns and places to visit",
+     "decision": "covered",
+     "to": "/chapters/9#c9-towns-and-places-to-visit",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-trips-and-going-abroad",
+     "t": "trips and going abroad",
+     "decision": "covered",
+     "to": "/chapters/9#c9-trips-and-going-abroad",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-verbs",
+     "t": "verbs (どうしリスト)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-verbs-of-going-and-doing",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-countries",
+     "t": "countries",
+     "decision": "covered",
+     "to": "/chapters/9#c9-countries",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-which-verb-goes-with-which-place",
+     "t": "which verb goes with which place",
+     "decision": "covered",
+     "to": "/chapters/9#c9-verbs-of-going-and-doing",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-handy-words-from-the-examples-and-exerci",
+     "t": "handy words from the examples and exercises",
+     "decision": "covered",
+     "to": "/chapters/9#vocab",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-ways-to-travel",
+     "t": "ways to travel",
+     "decision": "covered",
+     "to": "/chapters/9#c9-ways-to-travel",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-places-and-people",
+     "t": "places and people",
+     "decision": "covered",
+     "to": "/chapters/9#c9-places",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-things-and-ideas",
+     "t": "things and ideas",
+     "decision": "covered",
+     "to": "/chapters/9#c9-things-and-ideas",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-describing-words",
+     "t": "describing words",
+     "decision": "covered",
+     "to": "/chapters/9#c9-describing-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-time-words",
+     "t": "time words",
+     "decision": "covered",
+     "to": "/chapters/9#c9-time-words",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-dictionary-forms-of-every-verb-you-have-",
+     "t": "dictionary forms of every verb you have met",
+     "decision": "covered",
+     "to": "/chapters/9#c9-verbs-of-going-and-doing",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-easy-to-mix-up",
+     "t": "easy to mix up",
+     "decision": "covered",
+     "to": "/chapters/9#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-markers-that-look-alike",
+     "t": "markers that look alike",
+     "decision": "covered",
+     "to": "/chapters/9#c9-de-for-a-vehicle-de-for-a-number-of-peop",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-verbs-that-look-or-sound-alike",
+     "t": "verbs that look or sound alike",
+     "decision": "covered",
+     "to": "/chapters/9#c9-kaerimasu-kaimasu-and-kakemasu",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-dictionary-form-traps",
+     "t": "dictionary form traps",
+     "decision": "covered",
+     "to": "/chapters/9#c9-which-type-is-it",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-one-word-more-than-one-meaning",
+     "t": "one word, more than one meaning",
+     "decision": "covered",
+     "to": "/chapters/9#c9-one-word-more-than-one-meaning",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-little-words-that-travel-together",
+     "t": "little words that travel together",
+     "decision": "covered",
+     "to": "/chapters/9#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-places-and-trips-that-look-alike",
+     "t": "places and trips that look alike",
+     "decision": "covered",
+     "to": "/chapters/9#c9-places-that-look-alike",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-self-test-with-answer-key",
+     "t": "self-test with answer key",
+     "decision": "covered",
+     "to": "/chapters/9#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-part-a-fill-in-the-marker",
+     "t": "part a: fill in the marker (へ, に, で, と, から)",
+     "decision": "merged",
+     "to": "/chapters/9#c9-part-f-pick-the-marker",
+     "note": "Added 7 items to Part F: Pick the marker. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:9",
+       "text": "supein ____ kimashita."
+      },
+      {
+       "page": "chapter:9",
+       "text": "tomodachi ____ bijutsukan e ikimashita."
+      },
+      {
+       "page": "chapter:9",
+       "text": "imouto wa jitensha ____ gakkou e ikimasu."
+      },
+      {
+       "page": "chapter:9",
+       "text": "haha wa indo ____ kaerimashita."
+      },
+      {
+       "page": "chapter:9",
+       "text": "ana san wa sannin ____ umi e ikimashita."
+      },
+      {
+       "page": "chapter:9",
+       "text": "ashita dare ____ yama e ikimasu ka."
+      },
+      {
+       "page": "chapter:9",
+       "text": "kuji ____ goji made hatarakimasu."
+      }
+     ]
+    },
+    {
+     "a": "d14-part-b-choose-the-question-word",
+     "t": "part b: choose the question word",
+     "decision": "merged",
+     "to": "/chapters/9#c9-part-h-choose-the-question-word",
+     "note": "Added 1 item to Part H: Choose the question word. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:9",
+       "text": "A: maria san wa ____ kimashita ka. B: firipin kara kimashita."
+      }
+     ]
+    },
+    {
+     "a": "d14-part-c-write-the-verb-form",
+     "t": "part c: write the verb form",
+     "decision": "covered",
+     "to": "/chapters/9#c9-verb-conjugation-page-132",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-part-d-dictionary-form-to-form",
+     "t": "part d: dictionary form to ます form",
+     "decision": "merged",
+     "to": "/chapters/9#c9-part-v-dictionary-form-to-masu-form",
+     "note": "Added 2 items to Part V: Dictionary form to masu form. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:9",
+       "text": "neru"
+      },
+      {
+       "page": "chapter:9",
+       "text": "benkyousuru"
+      }
+     ]
+    },
+    {
+     "a": "d14-part-e-form-to-dictionary-form",
+     "t": "part e: ます form to dictionary form",
+     "decision": "merged",
+     "to": "/chapters/9#c9-part-u-masu-form-to-dictionary-form",
+     "note": "Added 3 items to Part U: Masu form to dictionary form. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:9",
+       "text": "kikimasu"
+      },
+      {
+       "page": "chapter:9",
+       "text": "urimasu"
+      },
+      {
+       "page": "chapter:9",
+       "text": "norimasu"
+      }
+     ]
+    },
+    {
+     "a": "d14-part-f-which-type-is-it",
+     "t": "part f: which type is it?",
+     "decision": "covered",
+     "to": "/chapters/9#c9-part-w-which-type-is-it",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d14-part-g-or",
+     "t": "part g: ね or よ?",
+     "decision": "merged",
+     "to": "/chapters/9#c9-part-m-ne-or-yo",
+     "note": "Added 3 items to Part M: Ne or yo? The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:9",
+       "text": "A: kyou wa samui desu ____. B: ee, sou desu ne."
+      },
+      {
+       "page": "chapter:9",
+       "text": "A: kono hikouki wa shingapo-ru e ikimasu ka. B: iie, mare-shia e ikimasu ____."
+      },
+      {
+       "page": "chapter:9",
+       "text": "A: takushi- wa takai desu ka. B: ee, totemo takai desu ____."
+      }
+     ]
+    },
+    {
+     "a": "d14-part-h-translate-into-japanese",
+     "t": "part h: translate into japanese",
+     "decision": "merged",
+     "to": "/chapters/9#c9-part-y-translate-into-japanese",
+     "note": "Added 6 items to Part Y: Translate into Japanese. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:9",
+       "text": "I went to the temple by bus."
+      },
+      {
+       "page": "chapter:9",
+       "text": "My friend came from India."
+      },
+      {
+       "page": "chapter:9",
+       "text": "Ana will go home to Spain next month."
+      },
+      {
+       "page": "chapter:9",
+       "text": "I did not go to the hot spring with my family."
+      },
+      {
+       "page": "chapter:9",
+       "text": "Four of us will go to the seashore on Sunday."
+      },
+      {
+       "page": "chapter:9",
+       "text": "I will go back to the office at around three."
+      }
+     ]
+    },
+    {
+     "a": "d14-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/chapters/9#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "title": "Intensive Japanese 1 Chapter 9 Answer Key",
+   "to": "/chapters/9#c9-workbook-answers",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/9#c9-workbook-answers",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d15-verb-conjugation-page-132",
+     "t": "verb conjugation (page 132)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-verb-conjugation-page-132-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-change-to-negative-page-135",
+     "t": "change to negative (page 135)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-change-to-negative-page-135-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-change-to-past-tense-page-135",
+     "t": "change to past tense (page 135)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-change-to-past-tense-page-135-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-choose-the-proper-marker-page-136",
+     "t": "choose the proper marker (page 136)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-choose-the-proper-marker-page-136-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-change-to-formal-conjugation-verbs-page-",
+     "t": "change to formal conjugation, verbs (page 140)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-change-to-formal-conjugation-irregular-v-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-change-to-formal-conjugation-sentences-p",
+     "t": "change to formal conjugation, sentences (page 140)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-change-to-formal-conjugation-sentences-p-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-review-i-choose-the-correct-grammatical-",
+     "t": "review i: choose the correct grammatical pattern (page 141)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-choose-the-correct-grammatical-pattern-p-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-review-ii-rearrange-the-words-page-142",
+     "t": "review ii: rearrange the words (page 142)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-rearrange-the-words-page-142-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-review-iii-fill-in-the-proper-word-or-ph",
+     "t": "review iii: fill in the proper word or phrase (page 143)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-fill-in-the-proper-word-or-phrase-page-1-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-review-iv-read-and-answer-page-144",
+     "t": "review iv: read and answer (page 144)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-read-and-answer-page-144-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-review-v-questions-and-answers-in-senten",
+     "t": "review v: questions and answers in sentence form (page 145)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-questions-and-answers-in-sentence-form-p-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d15-review-vi-translate-into-japanese-page-1",
+     "t": "review vi: translate into japanese (page 145)",
+     "decision": "covered",
+     "to": "/chapters/9#c9-translate-into-japanese-page-145-2",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "title": "Intensive Japanese 1 Chapter 10 Reviewer",
+   "to": "/chapters/10",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/10",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d16-grammar-the-patterns-chapter-10-teaches-",
+     "t": "grammar: the patterns chapter 10 teaches, with examples",
+     "decision": "covered",
+     "to": "/chapters/10#lessons",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-the-chapter-at-a-glance",
+     "t": "the chapter at a glance",
+     "decision": "covered",
+     "to": "/chapters/10#lessons",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-10-1-noun",
+     "t": "10.1 noun + する (します)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-1-noun-suru-bunkei-10-1-page-148",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-informal-plain-verb-forms",
+     "t": "informal (plain) verb forms",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-2-informal-verbs-the-four-forms-page-",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-irregular-verbs",
+     "t": "irregular verbs",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-22-the-four-forms-of-every-verb-you-h",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-regular-verbs",
+     "t": "regular verbs",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-8-regular-verbs-eru-and-iru-page-149",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-special-verbs",
+     "t": "special verbs",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-9-special-verbs-suru-and-kuru-page-14",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-polite-to-plain-in-sentences",
+     "t": "polite to plain, in sentences",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-10-masu-form-to-the-dictionary-form-p",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-switching-tense-and-polarity-inside-plai",
+     "t": "switching tense and polarity inside plain style (page 153)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-14-present-and-past-page-153",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-ending-markers-and",
+     "t": "ending markers: の and わ",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-17-ending-markers-no-and-wa-with-each",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-10-2-the-casual-question-marker",
+     "t": "10.2 の: the casual question marker",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-18-casual-questions-with-no-bunkei-10",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-10-3-a-soft-ending-for-a-female-speaker",
+     "t": "10.3 わ: a soft ending for a female speaker",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-19-ending-marker-wa-for-women-bunkei-",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-the-ben-and-mari-dialogue-page-156",
+     "t": "the ben and mari dialogue (page 156)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-10-20-one-conversation-two-styles-page-1",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-vocabulary-every-chapter-10-word-with-ro",
+     "t": "vocabulary: every chapter 10 word with romaji and english",
+     "decision": "covered",
+     "to": "/chapters/10#vocab",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-action-nouns-add",
+     "t": "action nouns (add する)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-nouns-that-go-with-suru",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-sports-and-games",
+     "t": "sports and games",
+     "decision": "covered",
+     "to": "/chapters/10#c10-sports-and-games",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-events",
+     "t": "events",
+     "decision": "covered",
+     "to": "/chapters/10#c10-seasonal-events",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-handy-phrases",
+     "t": "handy phrases",
+     "decision": "covered",
+     "to": "/chapters/10#c10-casual-talk",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-new-verbs",
+     "t": "new verbs (どうし)",
+     "decision": "merged",
+     "to": "/chapters/10#c10-verbs-in-the-dictionary-form",
+     "note": "Added Verbs in the dictionary form. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "| のる | 乗る | noru | ride, get on |"
+      }
+     ]
+    },
+    {
+     "a": "d16-which-verb-goes-with-which-noun",
+     "t": "which verb goes with which noun",
+     "decision": "merged",
+     "to": "/chapters/10#c10-10-24-which-verb-goes-with-which-noun-ex",
+     "note": "Added 10.24 Which verb goes with which noun (extra lesson). The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "### 10.24 Which verb goes with which noun (extra lesson)"
+      },
+      {
+       "page": "chapter:10",
+       "text": "The new verbs in this chapter each have a few nouns they like to go with, and learning them in pairs makes the sentences come quicker. Most take their noun with o. Two are different: wakaru takes what you understand with ga, as in nihongo ga wakaru, and shiru is mostly used in the negative, as in ana san o shiranai (I don't know Ana)."
+      }
+     ]
+    },
+    {
+     "a": "d16-verb-bank-every-verb-in-all-four-plain-f",
+     "t": "verb bank: every verb in all four plain forms",
+     "decision": "merged",
+     "to": "/chapters/10#c10-10-22-the-four-forms-of-every-verb-you-h",
+     "note": "Added 2 rows. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "| のる、のらない、のった、のらなかった | noru, noranai, notta, noranakatta | ride (Group 5) |"
+      },
+      {
+       "page": "chapter:10",
+       "text": "| はいる、はいらない、はいった、はいらなかった | hairu, hairanai, haitta, hairanakatta | enter (Group 5, ends in eru or iru) |"
+      }
+     ]
+    },
+    {
+     "a": "d16-handy-words-from-the-examples-and-exerci",
+     "t": "handy words from the examples and exercises",
+     "decision": "merged",
+     "to": "/chapters/10#c10-words-from-the-exercises",
+     "note": "Added Words from the exercises. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "| ひとりで | 一人で | hitori de | alone, by oneself |"
+      }
+     ]
+    },
+    {
+     "a": "d16-easy-to-mix-up",
+     "t": "easy to mix up",
+     "decision": "covered",
+     "to": "/chapters/10#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-building-the-plain-forms",
+     "t": "building the plain forms",
+     "decision": "covered",
+     "to": "/chapters/10#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-verbs-and-nouns-that-look-or-sound-alike",
+     "t": "verbs and nouns that look or sound alike",
+     "decision": "covered",
+     "to": "/chapters/10#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-polite-or-casual",
+     "t": "polite or casual",
+     "decision": "covered",
+     "to": "/chapters/10#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-endings-and-markers-that-look-alike",
+     "t": "endings and markers that look alike",
+     "decision": "covered",
+     "to": "/chapters/10#c10-ending-wa-and-topic-wa",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-little-words-that-travel-together",
+     "t": "little words that travel together",
+     "decision": "covered",
+     "to": "/chapters/10#mixups",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-self-test-with-answer-key",
+     "t": "self-test with answer key",
+     "decision": "covered",
+     "to": "/chapters/10#exercises",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d16-part-a-noun",
+     "t": "part a: noun + する",
+     "decision": "merged",
+     "to": "/chapters/10#c10-part-aa-noun-suru-in-a-sentence",
+     "note": "Added 8 items to Part AA: Noun + suru in a sentence. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "maiasa heya o ____shimasu. (clean) [まいあさ へやを ____します。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "raishuu resutoran o ____shimasu. (reserve) [らいしゅう レストランを ____します。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "kinou hachiji made ____shimashita. (work overtime) [きのう 八時まで ____しました。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "nichiyoubi ni ____shimashita. (do laundry) [日よう日に ____しました。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "tanaka san no me-ru ni ____shimasen deshita. (reply) [たなかさんの メールに ____しませんでした。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "kachou ni atarashii shigoto o ____shimashita. (explain) [かちょうに あたらしい しごとを ____しました。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "chichi wa mainichi kuruma o ____shimasu. (drive) [ちちは まいにち くるまを ____します。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "tomodachi o sensei ni ____shimasu. (introduce) [ともだちを せんせいに ____します。]"
+      }
+     ]
+    },
+    {
+     "a": "d16-part-b-write-the-plain-form",
+     "t": "part b: write the plain form",
+     "decision": "merged",
+     "to": "/chapters/10#c10-part-e-nai-form-present-negative",
+     "note": "Added 3 items to Part E: Nai form (present negative); 2 items to Part F: Ta form (past positive); 2 items to Part G: Nakatta form (past negative). The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "tsukuru [つくる]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "motsu [もつ]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "noru [のる]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "tsukau [つかう]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "hairu [はいる]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "dasu [だす]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "oboeru [おぼえる]"
+      }
+     ]
+    },
+    {
+     "a": "d16-part-c-polite-to-plain",
+     "t": "part c: polite to plain",
+     "decision": "merged",
+     "to": "/chapters/10#c10-part-o-formal-sentences-to-casual-senten",
+     "note": "Added 8 items to Part O: Formal sentences to casual sentences. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "ashita jon san ni denwashimasu. [あした ジョンさんに でんわします。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "mainichi nihongo no zasshi o yomimasu. [まいにち 日本語の ざっしを よみます。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "kinou tenisu o shimasen deshita. [きのう テニスを しませんでした。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "senshuu mo-ru de kutsu o kaimashita. [せんしゅう モールで くつを かいました。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "tomodachi wa pa-ti- e kimasen. [ともだちは パーティーへ きません。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "kesa kaigi de setsumeishimashita. [けさ かいぎで せつめいしました。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "maiasa kouen o arukimasu. [まいあさ こうえんを あるきます。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "asatte onsen de oyogimasen. [あさって おんせんで およぎません。]"
+      }
+     ]
+    },
+    {
+     "a": "d16-part-d-and",
+     "t": "part d: の and わ",
+     "decision": "merged",
+     "to": "/chapters/10#c10-part-q-casual-questions-with-no",
+     "note": "Added 3 items to Part Q: Casual questions with no; 3 items to Part R: Soft ending wa. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "kesa nani o tabemashita ka? [けさ なにを たべましたか？]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "raigetsu nihon e ikimasu ka? [らいげつ 日本へ いきますか？]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "ano hito wa genki desu ka? [あの ひとは げんきですか？]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "kono ryouri wa oishii desu. [この りょうりは おいしいです。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "ashita wa nichiyoubi desu. [あしたは 日よう日です。]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "kinou eiga o mimashita. [きのう えいがを みました。]"
+      }
+     ]
+    },
+    {
+     "a": "d16-part-e-choose-the-correct-word",
+     "t": "part e: choose the correct word",
+     "decision": "merged",
+     "to": "/chapters/10#c10-part-t-pick-the-correct-form",
+     "note": "Added 6 items to Part T: Pick the correct form. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "maiasa shinbun o ____. (1 yomu, 2 yonda, 3 yomanai, 4 yomanakatta) [毎朝 しんぶんを ____。 (1 よむ, 2 よんだ, 3 よまない, 4 よまなかった)]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "ototoi wa zenzen benkyou____. (1 suru, 2 shita, 3 shinai, 4 shinakatta) [おとといは ぜんぜん べんきょう____。 (1 する, 2 した, 3 しない, 4 しなかった)]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "mainichi osake o amari ____. (1 nomu, 2 nonda, 3 nomanai, 4 nomanakatta) [まいにち おさけを あまり ____。 (1 のむ, 2 のんだ, 3 のまない, 4 のまなかった)]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "A: kesa nani o ____ no? B: pan o tabeta yo. (1 taberu, 2 tabeta, 3 tabenai, 4 tabenakatta) [A: けさ なにを ____の？ B: パンを たべたよ。 (1 たべる, 2 たべた, 3 たべない, 4 たべなかった)]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "raishuu kazoku to ____. (1 ryokoushita, 2 ryokousuru, 3 ryokoushinakatta, 4 ryokoushimasen) [来週 かぞくと ____。 (1 りょこうした, 2 りょこうする, 3 りょこうしなかった, 4 りょこうしません)]"
+      },
+      {
+       "page": "chapter:10",
+       "text": "ano hito wa gakusei ____. (A woman states a fact.) (1 wa, 2 dawa, 3 nano, 4 dano) [あの ひとは がくせい____。 (1 わ, 2 だわ, 3 なの, 4 だの)]"
+      }
+     ]
+    },
+    {
+     "a": "d16-part-f-translate-into-japanese-casual-st",
+     "t": "part f: translate into japanese (casual style)",
+     "decision": "merged",
+     "to": "/chapters/10#c10-part-y-translate-into-japanese",
+     "note": "Added 4 items to Part Y: Translate into Japanese. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:10",
+       "text": "I did not call Ana last night."
+      },
+      {
+       "page": "chapter:10",
+       "text": "I will practice with my friend tomorrow."
+      },
+      {
+       "page": "chapter:10",
+       "text": "Mr. Yamada cleans his room every week."
+      },
+      {
+       "page": "chapter:10",
+       "text": "Did you drive yesterday?"
+      }
+     ]
+    },
+    {
+     "a": "d16-answer-key",
+     "t": "answer key",
+     "decision": "covered",
+     "to": "/chapters/10#answers",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "title": "Intensive Japanese 1 Chapter 10 Answer Key",
+   "to": "/chapters/10#c10-workbook-answers",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "dropped",
+     "to": "/chapters/10#c10-workbook-answers",
+     "note": "Describes the old document. The page intro covers the same ground."
+    },
+    {
+     "a": "d17-verb-conjugation-page-150",
+     "t": "verb conjugation (page 150)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-verb-conjugation-page-150-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d17-change-the-verbs-to-past-tense-page-154",
+     "t": "change the verbs to past tense (page 154)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-change-to-past-tense-page-154-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d17-change-the-verbs-to-negative-page-154",
+     "t": "change the verbs to negative (page 154)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-change-to-negative-page-154-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d17-review-i-choose-the-correct-grammatical-",
+     "t": "review i: choose the correct grammatical pattern (page 157)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-choose-the-correct-grammatical-pattern-p-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d17-review-ii-rearrange-the-words-page-158",
+     "t": "review ii: rearrange the words (page 158)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-rearrange-the-words-page-158-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d17-review-iii-fill-in-the-proper-word-or-ph",
+     "t": "review iii: fill in the proper word or phrase (page 159)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-fill-in-the-proper-word-or-phrase-page-1-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d17-review-iv-read-and-answer-page-160",
+     "t": "review iv: read and answer (page 160)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-read-and-answer-page-160-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d17-review-v-questions-and-answers-in-senten",
+     "t": "review v: questions and answers in sentence form (page 161)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-questions-and-answers-in-sentence-form-p-2",
+     "note": "Already on the page."
+    },
+    {
+     "a": "d17-review-vi-translate-into-japanese-page-1",
+     "t": "review vi: translate into japanese (page 161)",
+     "decision": "covered",
+     "to": "/chapters/10#c10-translate-into-japanese-page-161-2",
+     "note": "Already on the page."
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "title": "Intensive Japanese 1 Kanji 2 Reviewer",
+   "to": "/kanji/2",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "moved",
+     "to": "/kanji/2",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-kanji-list",
+     "t": "kanji list",
+     "decision": "moved",
+     "to": "/kanji/2#lessons",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-reading-notes-for-kanji-2",
+     "t": "reading notes for kanji 2",
+     "decision": "moved",
+     "to": "/kanji/2#c2-how-the-readings-are-shown",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-lesson-4-kanji-31-to-40",
+     "t": "lesson 4: kanji 31 to 40",
+     "decision": "moved",
+     "to": "/kanji/2#c2-half",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-lesson-5-kanji-41-to-50",
+     "t": "lesson 5: kanji 41 to 50",
+     "decision": "moved",
+     "to": "/kanji/2#c2-noon",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-lesson-6-kanji-51-to-60",
+     "t": "lesson 6: kanji 51 to 60",
+     "decision": "moved",
+     "to": "/kanji/2#c2-up",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheets",
+     "t": "cheat sheets",
+     "decision": "moved",
+     "to": "/kanji/2#vocab",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-clock-times",
+     "t": "cheat sheet: clock times",
+     "decision": "moved",
+     "to": "/kanji/2#c2-clock-times",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-minutes",
+     "t": "cheat sheet: minutes",
+     "decision": "moved",
+     "to": "/kanji/2#c2-minutes",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-clock-time-or-length-of-time",
+     "t": "cheat sheet: clock time or length of time",
+     "decision": "moved",
+     "to": "/kanji/2#c2-clock-time-or-length-of-time",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-how-long-hours-weeks-years",
+     "t": "cheat sheet: how long (hours, weeks, years)",
+     "decision": "moved",
+     "to": "/kanji/2#c2-how-long-hours-weeks-and-years",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-last-this-next-and-every",
+     "t": "cheat sheet: last, this, next and every",
+     "decision": "moved",
+     "to": "/kanji/2#c2-last-this-next-and-every",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-today-this-morning-and-every",
+     "t": "cheat sheet: today, this morning and every day",
+     "decision": "moved",
+     "to": "/kanji/2#c2-today-this-morning-and-every-day",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-parts-of-the-day",
+     "t": "cheat sheet: parts of the day",
+     "decision": "moved",
+     "to": "/kanji/2#c2-parts-of-the-day",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-seasons",
+     "t": "cheat sheet: seasons",
+     "decision": "moved",
+     "to": "/kanji/2#c2-seasons",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-positions-and-directions",
+     "t": "cheat sheet: positions and directions",
+     "decision": "moved",
+     "to": "/kanji/2#c2-positions-and-directions",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-sound-changes",
+     "t": "cheat sheet: sound changes",
+     "decision": "moved",
+     "to": "/kanji/2#c2-sound-changes",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-cheat-sheet-special-readings",
+     "t": "cheat sheet: special readings",
+     "decision": "moved",
+     "to": "/kanji/2#c2-special-readings",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-vocabulary-every-word-the-workbook-uses",
+     "t": "vocabulary: every word the workbook uses",
+     "decision": "moved",
+     "to": "/kanji/2#lessons",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-lesson-4-words",
+     "t": "lesson 4 words",
+     "decision": "moved",
+     "to": "/kanji/2#c2-half",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-lesson-5-words",
+     "t": "lesson 5 words",
+     "decision": "moved",
+     "to": "/kanji/2#c2-noon",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-lesson-6-words",
+     "t": "lesson 6 words",
+     "decision": "moved",
+     "to": "/kanji/2#c2-up",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-extra-words-from-the-exercises",
+     "t": "extra words from the exercises",
+     "decision": "moved",
+     "to": "/kanji/2#c2-extra-words-from-the-exercises",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-easy-to-mix-up",
+     "t": "easy to mix up",
+     "decision": "moved",
+     "to": "/kanji/2#mixups",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-look-alike-kanji",
+     "t": "look-alike kanji",
+     "decision": "moved",
+     "to": "/kanji/2#mixups",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-reading-traps",
+     "t": "reading traps",
+     "decision": "moved",
+     "to": "/kanji/2#c2-readings-of-now",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-opposites-and-pairs",
+     "t": "opposites and pairs",
+     "decision": "moved",
+     "to": "/kanji/2#c2-opposites-and-pairs",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-self-test",
+     "t": "self-test",
+     "decision": "moved",
+     "to": "/kanji/2#exercises",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-part-a-read-it-in-hiragana-15",
+     "t": "part a: read it in hiragana (15)",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-e-read-it-in-hiragana",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-part-b-write-it-in-kanji-15",
+     "t": "part b: write it in kanji (15)",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-f-write-it-in-kanji",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-part-c-what-does-it-mean-10",
+     "t": "part c: what does it mean? (10)",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-g-what-does-it-mean",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-part-d-pick-the-right-kanji-8",
+     "t": "part d: pick the right kanji (8)",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-h-pick-the-right-kanji",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-part-e-say-the-time-8",
+     "t": "part e: say the time (8)",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-i-say-the-time",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-part-f-opposites-8",
+     "t": "part f: opposites (8)",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-j-opposites",
+     "note": "Rebuilt as Kanji 2."
+    },
+    {
+     "a": "d18-self-test-answers",
+     "t": "self-test answers",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-e-read-it-in-hiragana-2",
+     "note": "Rebuilt as Kanji 2."
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "title": "Intensive Japanese 1 Kanji 2 Answer Key",
+   "to": "/kanji/2#answers",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "moved",
+     "to": "/kanji/2#answers",
+     "note": "Its note that the answers are derived, not official, opens the Kanji 2 answer key."
+    },
+    {
+     "a": "d19-how-the-exercises-work",
+     "t": "how the exercises work",
+     "decision": "moved",
+     "to": "/kanji/2#answers",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-lesson-4-to-kanji-31-to-40",
+     "t": "lesson 4: 半 to 毎 (kanji 31 to 40)",
+     "decision": "moved",
+     "to": "/kanji/2#answers",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-i-page-24-hiragana-for-the-underlined-ka",
+     "t": "れんしゅう i (page 24): hiragana for the underlined kanji",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-a-read-the-kanji-words-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-ii-page-24-kanji-and-meaning",
+     "t": "れんしゅう ii (page 24): kanji and meaning",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-b-write-the-words-in-kanji-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-i-page-25-choose-the-reading",
+     "t": "テスト i (page 25): choose the reading",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-c-read-the-test-words-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-ii-page-26-choose-the-kanji",
+     "t": "テスト ii (page 26): choose the kanji",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-d-write-the-test-words-in-kanji-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-lesson-5-to-kanji-41-to-50",
+     "t": "lesson 5: 午 to 正 (kanji 41 to 50)",
+     "decision": "moved",
+     "to": "/kanji/2#answers",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-i-page-29-hiragana-for-the-underlined-ka",
+     "t": "れんしゅう i (page 29): hiragana for the underlined kanji",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-a-read-the-kanji-words-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-ii-page-29-kanji-and-meaning",
+     "t": "れんしゅう ii (page 29): kanji and meaning",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-b-write-the-words-in-kanji-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-i-page-30-choose-the-reading",
+     "t": "テスト i (page 30): choose the reading",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-c-read-the-test-words-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-ii-page-31-choose-the-kanji",
+     "t": "テスト ii (page 31): choose the kanji",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-d-write-the-test-words-in-kanji-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-lesson-6-to-kanji-51-to-60",
+     "t": "lesson 6: 上 to 東 (kanji 51 to 60)",
+     "decision": "moved",
+     "to": "/kanji/2#answers",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-i-page-34-hiragana-for-the-underlined-ka",
+     "t": "れんしゅう i (page 34): hiragana for the underlined kanji",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-a-read-the-kanji-words-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-ii-page-34-kanji-and-meaning",
+     "t": "れんしゅう ii (page 34): kanji and meaning",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-b-write-the-words-in-kanji-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-i-page-35-choose-the-reading",
+     "t": "テスト i (page 35): choose the reading",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-c-read-the-test-words-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    },
+    {
+     "a": "d19-ii-page-36-choose-the-kanji",
+     "t": "テスト ii (page 36): choose the kanji",
+     "decision": "moved",
+     "to": "/kanji/2#c2-part-d-write-the-test-words-in-kanji-2",
+     "note": "Rebuilt as the Kanji 2 answer key (Parts A to D)."
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "title": "Kim and Ben dialogue (romaji)",
+   "to": "/chapters/3#c3-3-10-supplemental-reading-kim-and-ben",
+   "sections": [
+    {
+     "a": "",
+     "t": "(intro)",
+     "decision": "merged",
+     "to": "/chapters/3#c3-3-10-supplemental-reading-kim-and-ben",
+     "note": "Added 3.10 Supplemental reading: Kim and Ben. The rest was already on the page.",
+     "checks": [
+      {
+       "page": "chapter:3",
+       "text": "### 3.10 Supplemental reading: Kim and Ben"
+      },
+      {
+       "page": "chapter:3",
+       "text": "A short conversation for reading practice. Kim tells Ben about a new computer, and Ben asks where it came from and how much it cost. The price uses gurai (about) after the amount, as in 3.5. A few words come from later chapters: kaimashita (bought) is in Chapter 8, atarashii (new) and mise (shop) are in Chapter 6, and the ending yo, which adds emphasis, is in Chapter 9."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

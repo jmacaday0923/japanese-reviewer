@@ -1,60 +1,35 @@
 import { notFound } from "next/navigation";
-import rawData from "@/data/lesson-data.json";
-import type { LessonData } from "@/types/lesson";
-import { documentOutline } from "@/lib/toc";
-import ReaderLayout from "@/components/ReaderLayout";
-import LessonContent from "@/components/LessonContent";
+import rawLinks from "@/data/legacy-links.json";
+import type { LegacyLinks } from "@/lib/study";
+import LegacyRedirect from "@/components/LegacyRedirect";
 
-const data = rawData as LessonData;
+// The old document pages, /lessons/1 to /lessons/20. Their content now lives
+// in the chapter, kana, kanji and practice pages, so each address just sends
+// you on. The #heading part of an old link never reaches the server, so the
+// browser picks the exact spot from this document's map.
+// JSON arrays come in as plain arrays, so the [href, anchor, label] shape is asserted here
+const links = rawLinks as unknown as LegacyLinks;
 
-// Tell Next.js every lesson page that exists, so it can build them ahead of time
 export function generateStaticParams() {
-  return data.docs.map((doc) => ({ n: String(doc.n) }));
+  return Object.keys(links).map((n) => ({ n }));
 }
 
-// This page is all URL data (which chapter or document), so it can't come
-// from the shared shell that links prefetch. It's prerendered, so the wait
-// is short; allowing it to block keeps the full content in the first HTML,
-// which is what makes direct #anchor links land reliably.
+// Like the study pages, this page is all URL data, so it can't come from the
+// shared shell that links prefetch. It's prerendered, so the wait is short.
 export const instant = false;
 
 type Props = { params: Promise<{ n: string }> };
 
-export default async function LessonPage({ params }: Props) {
+export default async function OldDocumentPage({ params }: Props) {
   const { n } = await params;
-  const doc = data.docs.find((d) => d.n === Number(n));
+  const doc = Object.hasOwn(links, n) ? links[n] : undefined;
   if (!doc) notFound();
 
-  const meta = [doc.kind, doc.date].filter(Boolean).join(" · ");
-
   return (
-    <ReaderLayout
-      page={{ kind: "lesson", id: String(doc.n) }}
-      breadcrumbs={[
-        { label: "Home", href: "/" },
-        { label: "Documents", href: "/#documents" },
-        { label: doc.title },
-      ]}
-      title={doc.title}
-      meta={meta || undefined}
-      outline={documentOutline(doc.toc)}
-    >
-      {doc.html ? (
-        <LessonContent as="article" html={doc.html} className="mt-8" />
-      ) : (
-        // A document with no content here: show its intro, and a link only if there is one
-        <p className="mt-8">
-          {doc.intro || "This document has no content here yet."}
-          {doc.link && (
-            <>
-              {" "}
-              <a href={doc.link} className="text-accent-text underline underline-offset-4">
-                Open it
-              </a>
-            </>
-          )}
-        </p>
-      )}
-    </ReaderLayout>
+    <main className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6">
+      <h1 className="text-3xl font-bold tracking-tight">This page has moved</h1>
+      {/* Only this document's map reaches the browser */}
+      <LegacyRedirect to={doc.to} anchors={doc.anchors} />
+    </main>
   );
 }

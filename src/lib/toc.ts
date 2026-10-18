@@ -40,21 +40,6 @@ export function studyOutline(
   return [...nodes, ...unclaimed];
 }
 
-// Documents: keep the toc order and nest each heading under the closest
-// earlier heading with a smaller level (level 3 under level 2). A heading
-// with nothing above it starts at the top level.
-export function documentOutline(toc: readonly TocEntry[]): TocNode[] {
-  const root: TocNode[] = [];
-  const stack: { level: number; node: TocNode }[] = [];
-  for (const entry of toc) {
-    const node: TocNode = { id: entry.a, label: entry.t, children: [] };
-    while (stack.length && stack[stack.length - 1].level >= entry.l) stack.pop();
-    (stack.length ? stack[stack.length - 1].node.children : root).push(node);
-    stack.push({ level: entry.l, node });
-  }
-  return root;
-}
-
 // How many links an outline has in total
 export function countLinks(nodes: readonly TocNode[]): number {
   return nodes.reduce((sum, node) => sum + 1 + countLinks(node.children), 0);

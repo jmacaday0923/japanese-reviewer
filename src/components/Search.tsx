@@ -10,13 +10,28 @@ import {
   searchUrl,
   type CategoryFilter,
   type ChapterOption,
-  type SearchPayload,
+  type SearchIndex,
   type SearchState,
 } from "@/lib/search";
 import SearchFilters from "@/components/SearchFilters";
 import SearchResults, { SearchHint } from "@/components/SearchResults";
 
-type Props = { payload: SearchPayload };
+type Props = { chapters: ChapterOption[] }; // the chapter filter's options
+
+// The index of every study page is one static file, loaded the first time
+// the search is used (focus, hover, or a search already in the URL) and
+// kept for the rest of the visit. A failed load can be tried again.
+let indexRequest: Promise<SearchIndex> | null = null;
+function loadIndex(): Promise<SearchIndex> {
+  indexRequest ??= fetch("/search-index.json").then((response) => {
+    if (!response.ok) throw new Error(`Search index: ${response.status}`);
+    return response.json() as Promise<SearchIndex>;
+  });
+  indexRequest.catch(() => {
+    indexRequest = null;
+  });
+  return indexRequest;
+}
 
 // The URL is the source of truth for the search (q, category, chapter), so
 // a search can be bookmarked, shared, and stepped through with Back.
@@ -38,10 +53,28 @@ function shortcutLabel() {
   return /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent) ? "⌘K" : "Ctrl K";
 }
 
-export default function Search({ payload }: Props) {
+export default function Search({ chapters }: Props) {
   const searchParams = useSearchParams();
-  const chapterValues = useMemo(() => new Set(payload.chapters.map((o) => o.value)), [payload.chapters]);
+  const chapterValues = useMemo(() => new Set(chapters.map((o) => o.value)), [chapters]);
   const state = useMemo(() => parseSearchState(searchParams, chapterValues), [searchParams, chapterValues]);
+  const active = !isDefaultState(state);
+
+  const [index, setIndex] = useState<SearchIndex | null>(null);
+  const [wanted, setWanted] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => {
+    if (index || failed || !(active || wanted)) return;
+    let current = true;
+    loadIndex().then(
+      (loaded) => current && setIndex(loaded),
+      () => current && setFailed(true)
+    );
+    return () => {
+      current = false;
+    };
+  }, [index, failed, active, wanted, attempt]);
+  const want = () => setWanted(true);
 
   // What's in the box. It can run ahead of the URL while an IME is composing.
   const [draft, setDraft] = useState(state.q);
@@ -68,7 +101,7 @@ export default function Search({ payload }: Props) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  const results = useMemo(() => matchEntries(payload.entries, state), [payload.entries, state]);
+  const results = useMemo(() => (index ? matchEntries(index.entries, state) : []), [index, state]);
 
   // The URL as it is right now. useSearchParams catches up a moment after
   // each history write, so two quick changes in a row (a category, then a
@@ -108,13 +141,14 @@ export default function Search({ payload }: Props) {
   }
 
   return (
-    <div>
+    // Focus or hover anywhere in the search starts loading the index
+    <div onFocus={want} onPointerEnter={want}>
       <SearchFilters
         inputRef={inputRef}
         draft={draft}
         category={state.category}
         chapter={state.chapter}
-        chapters={payload.chapters}
+        chapters={chapters}
         shortcut={shortcut}
         onDraftChange={handleDraftChange}
         onCompositionEnd={commitText}
@@ -124,11 +158,17 @@ export default function Search({ payload }: Props) {
       />
       <SearchResults
         state={state}
-        active={!isDefaultState(state)}
+        active={active}
+        loading={active && !index && !failed}
+        failed={active && failed}
         results={results}
-        docs={payload.docs}
-        headers={payload.headers}
+        pages={index?.pages ?? []}
+        headers={index?.headers ?? []}
         onReset={handleReset}
+        onRetry={() => {
+          setFailed(false);
+          setAttempt((n) => n + 1);
+        }}
       />
     </div>
   );

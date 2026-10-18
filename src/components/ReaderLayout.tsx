@@ -5,7 +5,7 @@ import TableOfContents from "@/components/TableOfContents";
 import BookmarkControls from "@/components/BookmarkControls";
 import type { StudyPageKind } from "@/lib/study";
 
-// The shared frame for every reader page (chapters, kana, kanji, documents):
+// The shared frame for every reader page (chapters, kana, kanji, practice):
 // breadcrumbs, title block, reading column, outline, and an optional footer
 // such as previous/next links. It owns the page's one <main> and one <h1>.
 //
@@ -18,7 +18,7 @@ type Props = {
   breadcrumbs: Crumb[];
   eyebrow?: string;  // small line above the title, like "Chapter 3"
   title: string;
-  meta?: ReactNode;  // like "Reviewer · Oct 8, 2026"
+  meta?: ReactNode;  // a small line under the title
   intro?: ReactNode;
   outline: TocNode[];
   footer?: ReactNode;

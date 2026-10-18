@@ -1,5 +1,4 @@
-import { categoryLabel } from "@/lib/search";
-import type { Category } from "@/lib/documents";
+import { categoryLabel, type Category } from "@/lib/search";
 
 // Written out in full so Tailwind finds every class when it scans the source.
 // The label always names the category, so the color is only a second cue.

@@ -7,7 +7,7 @@ test.describe("search", () => {
     await expect(s.box).toBeEnabled();
     await expect(s.box).toHaveValue("");
     await expect(s.status).toHaveText("");
-    await expect(page.getByText("Search covers the document entries")).toBeVisible();
+    await expect(page.getByText("Search covers every chapter, kana, kanji and practice page")).toBeVisible();
     await expect(s.results).toHaveCount(0);
     await expect(s.reset).toHaveCount(0);
   });
@@ -36,13 +36,13 @@ test.describe("search", () => {
     await expect(s.chip("Vocabulary")).toHaveAttribute("aria-pressed", "true");
 
     const total = expectedCount("", "vocab", "6");
-    expect(total).toBeGreaterThan(100);
+    expect(total).toBeGreaterThan(50);
     await expect(s.status).toHaveText(statusText(total));
     await expect(s.results).toHaveCount(50);
     await expect(s.showMore).toHaveText(`Show more (${total - 50} left)`);
 
     await s.showMore.click();
-    await expect(s.results).toHaveCount(100);
+    await expect(s.results).toHaveCount(Math.min(100, total));
     await expect(s.status).toHaveText(statusText(total, 100));
   });
 
@@ -54,7 +54,7 @@ test.describe("search", () => {
     await s.chapter.selectOption("6");
     await expect(s.results).toHaveCount(50);
     await s.showMore.click();
-    await expect(s.results).toHaveCount(100);
+    await expect(s.results).toHaveCount(Math.min(100, expectedCount("", "vocab", "6")));
 
     await s.chip("Practice").click();
     await expect(s.status).toHaveText(statusText(expectedCount("", "practice", "6")));
@@ -64,7 +64,7 @@ test.describe("search", () => {
 
     // typing also starts again at 50
     await s.showMore.click();
-    await expect(s.results).toHaveCount(100);
+    await expect(s.results).toHaveCount(Math.min(100, expectedCount("", "vocab", "6")));
     await s.box.fill("a");
     await expect(s.results).toHaveCount(Math.min(50, expectedCount("a", "vocab", "6")));
   });
@@ -89,15 +89,13 @@ test.describe("search", () => {
     await expect(s.status).toHaveText(statusText(expectedCount("", "vocab", "6")));
   });
 
-  test("General, Kana and Kanji are chapter options and filter", async ({ page }) => {
+  test("Kana, Kanji and N5 practice are chapter options and filter", async ({ page }) => {
     await page.goto("/");
     const s = search(page);
     const labels = await s.chapter.locator("option").allTextContents();
-    expect(labels.slice(-3)).toEqual(["General", "Kana", "Kanji"]);
-    expect(labels[0]).toBe("All chapters");
-    expect(labels.slice(1, 11)).toEqual(Array.from({ length: 10 }, (_, i) => `Chapter ${i + 1}`));
+    expect(labels).toEqual(["All chapters", ...Array.from({ length: 10 }, (_, i) => `Chapter ${i + 1}`), "Kana", "Kanji", "N5 practice"]);
 
-    for (const [value, label] of [["gen", "General"], ["kana", "Kana"], ["kanji", "Kanji"]]) {
+    for (const [value, label] of [["kana", "Kana"], ["kanji", "Kanji"], ["practice", "N5 practice"]]) {
       await s.chapter.selectOption({ label });
       await expect(page).toHaveURL(`/?chapter=${value}`);
       await expect(s.status).toHaveText(statusText(expectedCount("", "all", value)));
@@ -177,12 +175,13 @@ test.describe("search", () => {
     await expect(page).toHaveURL("/?utm=x&q=desu&category=grammar#search");
   });
 
-  test("a result opens its lesson at the right heading, and Back returns", async ({ page }) => {
+  test("a result opens its study page at the right heading, and Back returns", async ({ page }) => {
     await page.goto("/?q=gakkou");
     const s = search(page);
+    await expect(s.status).toHaveText(statusText(expectedCount("gakkou")));
     const link = s.results.first().getByRole("link");
     const href = (await link.getAttribute("href"))!;
-    expect(href).toMatch(/^\/lessons\/\d+#.+/);
+    expect(href).toMatch(/^\/(chapters|kana|kanji|practice)\/\d+#.+/);
     await link.click();
     await expect(page).toHaveURL(href);
     const id = decodeURIComponent(href.split("#")[1]);
@@ -192,6 +191,65 @@ test.describe("search", () => {
     await expect(page).toHaveURL("/?q=gakkou");
     await expect(s.box).toHaveValue("gakkou");
     await expect(s.status).toHaveText(statusText(expectedCount("gakkou")));
+  });
+
+  // The merged content: Kanji 2, both practice exams and the Kim and Ben dialogue
+  for (const [q, href, where] of [
+    ["いちじかんはん", "/kanji/2#", "Kanji 2"],
+    ["ほんや ミナミ", "/practice/1#p1-exam-2-passage-2-a-shop-sign", "Exam 2, Passage 2: A shop sign"],
+    ["juuman en gurai", "/chapters/3#c3-3-10-supplemental-reading-kim-and-ben", "Kim and Ben"],
+  ]) {
+    test(`"${q}" finds ${where} and opens it`, async ({ page }) => {
+      await page.goto("/?q=" + encodeURIComponent(q));
+      const s = search(page);
+      await expect(s.status).toHaveText(statusText(expectedCount(q)));
+      const result = s.results.filter({ has: page.locator(`a[href^="${href}"]`) }).first();
+      await expect(result).toContainText(where);
+      const link = result.getByRole("link");
+      const target = (await link.getAttribute("href"))!;
+      await link.click();
+      await expect(page).toHaveURL(target);
+      await expect.poll(() => offsetFromAnchorTarget(page, decodeURIComponent(target.split("#")[1]))).toBeLessThanOrEqual(1);
+    });
+  }
+
+  test("the index loads only when the search is used", async ({ page }) => {
+    const requests: string[] = [];
+    page.on("request", (request) => {
+      if (new URL(request.url()).pathname === "/search-index.json") requests.push(request.url());
+    });
+    await page.goto("/");
+    const s = search(page);
+    await expect(s.box).toBeEnabled();
+    await page.waitForLoadState("networkidle");
+    expect(requests).toHaveLength(0);
+    // the home page HTML doesn't carry the index
+    expect(await page.content()).not.toContain('"entries"');
+
+    await s.box.focus();
+    await expect.poll(() => requests.length).toBe(1);
+    await s.box.fill("gakkou");
+    await expect(s.status).toHaveText(statusText(expectedCount("gakkou")));
+    await s.box.fill("desu");
+    await expect(s.status).toHaveText(statusText(expectedCount("desu")));
+    expect(requests).toHaveLength(1);
+  });
+
+  test.describe("when the index can't load", () => {
+    test.use({ allowedStatuses: [404] });
+
+    test("the search says so and Try again works", async ({ page }) => {
+      let fail = true;
+      await page.route("**/search-index.json", (route) => (fail ? route.fulfill({ status: 404, body: "" }) : route.fallback()));
+      await page.goto("/?q=gakkou");
+      const s = search(page);
+      await expect(s.status).toHaveText("The search couldn't load.");
+      await expect(s.results).toHaveCount(0);
+      fail = false;
+      await page.locator("#search").getByRole("button", { name: "Try again" }).click();
+      await expect(s.status).toHaveText(statusText(expectedCount("gakkou")));
+      await expect(s.results.first()).toBeVisible();
+    });
   });
 
   // Synthetic composition events through Chrome DevTools. This checks our

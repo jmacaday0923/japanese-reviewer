@@ -77,7 +77,7 @@ function NavList({ size, onNavigate, current }: Props & { current: string | null
 }
 
 // The toolbar's quiet "you are here": Home, Chapters, Kana, Kanji or
-// Documents with its icon. Plain text, not a link; nothing while unknown.
+// Practice with its icon. Plain text, not a link; nothing while unknown.
 export function NavLocation() {
   return (
     <Suspense fallback={null}>

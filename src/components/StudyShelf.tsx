@@ -8,8 +8,8 @@ import {
   studyHref,
   studyPageIndex,
   type ResolvedPlace,
+  type SavedPageKind,
   type StudyPageInfo,
-  type StudyPageKind,
   type StudyPlace,
 } from "@/lib/study";
 import { studyStore, useStudy } from "@/components/use-study";
@@ -51,7 +51,7 @@ export default function StudyShelf({ pages }: Props) {
             <ResumeLink place={lastVisit} />
           ) : (
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Open any chapter, kana, kanji or document page to pick up from here later.
+              Open any chapter, kana, kanji or practice page to pick up from here later.
             </p>
           )}
         </div>
@@ -106,11 +106,12 @@ export default function StudyShelf({ pages }: Props) {
   );
 }
 
-const KIND_ICONS: Record<StudyPageKind, IconName> = {
+const KIND_ICONS: Record<SavedPageKind, IconName> = {
   chapter: "chapters",
   kana: "kana",
   kanji: "kanji",
-  lesson: "documents",
+  practice: "practice",
+  lesson: "book", // never shown: old document places are moved before they're listed
 };
 
 function Loading() {
@@ -157,7 +158,7 @@ function ResumeLink({ place }: { place: ResolvedPlace }) {
 
 // "Vocabulary" over "Kana 1 · Hiragana and Katakana" for a section,
 // "Copula Sentences" over "Chapter 1" for a whole page
-function BookmarkLink({ place, kind }: { place: ResolvedPlace; kind: StudyPageKind }) {
+function BookmarkLink({ place, kind }: { place: ResolvedPlace; kind: SavedPageKind }) {
   return (
     <Link
       href={place.href}

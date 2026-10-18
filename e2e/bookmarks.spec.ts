@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { test, expect, docs, visibleMain, offsetFromAnchorTarget, type Page } from "./fixtures";
+import { test, expect, library, visibleMain, offsetFromAnchorTarget, type Page } from "./fixtures";
 
 // Bookmarks and "Continue studying". Each test starts with empty storage
 // (Playwright gives every test a fresh browser context). Every test also
@@ -8,7 +8,12 @@ import { test, expect, docs, visibleMain, offsetFromAnchorTarget, type Page } fr
 // browserProblems fixture.
 
 const KEY = "japanese-reviewer:study";
-const chapters = JSON.parse(readFileSync(join(__dirname, "../src/data/chapters.json"), "utf8")) as { ch: string; title: string }[];
+const { chapters, kanji, practice } = library;
+type Target = [href: string, anchor: string | null, label: string | null];
+const legacy = JSON.parse(readFileSync(join(__dirname, "../src/data/legacy-links.json"), "utf8")) as Record<
+  string,
+  { to: Target; anchors: Record<string, Target> }
+>;
 
 test.use({ viewport: { width: 1440, height: 900 } });
 
@@ -45,7 +50,7 @@ async function readSaved(page: Page) {
 test("a first visit shows empty states and an unpressed button", async ({ page }) => {
   await page.goto("/");
   const s = shelf(page);
-  await expect(s.resume).toContainText("Open any chapter, kana, kanji or document page");
+  await expect(s.resume).toContainText("Open any chapter, kana, kanji or practice page");
   await expect(s.bookmarks).toContainText("No bookmarks yet");
   await expect(s.items).toHaveCount(0);
 
@@ -132,16 +137,17 @@ test("only anchors from the page's outline can be bookmarked as sections", async
 });
 
 test("continue studying shows the last page and section opened", async ({ page }) => {
-  await page.goto("/lessons/1#d1-question-words");
-  await expect(reader(page).bookmarkSection).toHaveText("Bookmark section: Question words");
+  await page.goto("/kanji/2#c2-seasons");
+  await expect(reader(page).bookmarkSection).toHaveText("Bookmark section: Seasons");
+  await expect.poll(async () => (await readSaved(page))?.lastVisit).toMatchObject({ kind: "kanji", id: "2", anchor: "c2-seasons" });
   await page.goto("/");
   let link = shelf(page).resume.getByRole("link");
-  await expect(link).toHaveAttribute("href", "/lessons/1#d1-question-words");
-  await expect(link).toContainText(docs[0].title);
-  await expect(link).toContainText("Question words");
+  await expect(link).toHaveAttribute("href", "/kanji/2#c2-seasons");
+  await expect(link).toContainText(kanji[1].title);
+  await expect(link).toContainText("Seasons");
 
   await link.click();
-  await expect.poll(() => offsetFromAnchorTarget(page, "d1-question-words")).toBeLessThanOrEqual(1);
+  await expect.poll(() => offsetFromAnchorTarget(page, "c2-seasons")).toBeLessThanOrEqual(1);
 
   await page.goto("/chapters/2");
   // The visit is saved once the page runs in the browser; leave only after that
@@ -251,10 +257,12 @@ test.describe("damaged or old saved data", () => {
     await expect(s.items.nth(1).getByRole("link")).toContainText("Vocabulary");
     await expect(s.items.nth(1)).not.toContainText("no longer on this page");
 
+    // an old document visit with a heading the map doesn't know moves to that document's page
     const resume = s.resume.getByRole("link");
-    await expect(resume).toHaveAttribute("href", "/lessons/1");
-    await expect(resume).toContainText(docs[0].title);
+    await expect(resume).toHaveAttribute("href", "/chapters/1");
+    await expect(resume).toContainText(chapters[0].title);
     await expect(s.resume).not.toContainText("Old section");
+    await expect.poll(async () => (await readSaved(page)).lastVisit).toMatchObject({ kind: "chapter", id: "1", anchor: null, section: null });
 
     // Remove takes out the saved bookmark, anchor and all; storage keeps its format
     await stale.getByRole("button", { name: `Remove bookmark: ${chapters[2].title}` }).click();
@@ -262,9 +270,57 @@ test.describe("damaged or old saved data", () => {
     expect((await readSaved(page)).bookmarks).toEqual([{ kind: "kana", id: "1", anchor: "vocab", section: "Vocabulary", savedAt: 1 }]);
 
     await resume.click();
-    await expect(page).toHaveURL("/lessons/1");
-    await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText(docs[0].title);
+    await expect(page).toHaveURL("/chapters/1");
+    await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText(chapters[0].title);
   });
+});
+
+test("bookmarks saved on the old document pages move to the study pages", async ({ page }) => {
+  await page.goto("/");
+  const questionWords = legacy["1"].anchors["d1-question-words"];
+  const shopSign = legacy["3"].anchors["d3-passage-2"];
+  await saveRaw(
+    page,
+    JSON.stringify({
+      version: 1,
+      bookmarks: [
+        { kind: "lesson", id: "1", anchor: "d1-question-words", section: "Question words", savedAt: 6 },
+        { kind: "lesson", id: "18", anchor: "d18-cheat-sheet-seasons", section: "Seasons", savedAt: 5 },
+        // the same place, saved again on the new page: kept once
+        { kind: "chapter", id: "1", anchor: questionWords[1], section: questionWords[2], savedAt: 4 },
+        { kind: "lesson", id: "99", anchor: null, section: null, savedAt: 3 }, // no such document
+        { kind: "lesson", id: "3", anchor: null, section: null, savedAt: 2 },
+        { kind: "chapter", id: "5", anchor: null, section: null, savedAt: 1 },
+      ],
+      lastVisit: { kind: "lesson", id: "3", anchor: "d3-passage-2", section: "Passage 2", visitedAt: 7 },
+    })
+  );
+  await page.reload();
+  const s = shelf(page);
+  await expect(s.items.getByRole("link")).toHaveCount(4);
+  const links = s.items.getByRole("link");
+  await expect(links.nth(0)).toHaveAttribute("href", questionWords[0]);
+  await expect(links.nth(0)).toContainText(questionWords[2]!);
+  await expect(links.nth(1)).toHaveAttribute("href", "/kanji/2#c2-seasons");
+  await expect(links.nth(1)).toContainText(kanji[1].title);
+  await expect(links.nth(2)).toHaveAttribute("href", "/practice/1");
+  await expect(links.nth(2)).toContainText(practice[0].title);
+  await expect(links.nth(3)).toHaveAttribute("href", "/chapters/5");
+  await expect(s.resume.getByRole("link")).toHaveAttribute("href", shopSign[0]);
+  await expect(s.resume.getByRole("link")).toContainText(shopSign[2]!);
+
+  // saved in the new form, so it happens once
+  await expect.poll(async () => JSON.stringify(await readSaved(page))).not.toContain('"lesson"');
+  const saved = await readSaved(page);
+  expect(saved.bookmarks.map((b: { savedAt: number }) => b.savedAt)).toEqual([6, 5, 2, 1]);
+  expect(saved.lastVisit).toMatchObject({ kind: "practice", id: "1", anchor: shopSign[1], section: shopSign[2], visitedAt: 7 });
+  await page.reload();
+  await expect(shelf(page).items.getByRole("link")).toHaveCount(4);
+
+  // the moved bookmark is the one the page's button shows
+  await links.nth(1).click();
+  await expect(page).toHaveURL("/kanji/2#c2-seasons");
+  await expect(reader(page).bookmarkSection).toHaveAttribute("aria-pressed", "true");
 });
 
 test.describe("storage the browser won't allow", () => {

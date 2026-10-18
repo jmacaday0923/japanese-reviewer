@@ -1,32 +1,22 @@
 import { Suspense } from "react";
-import rawData from "@/data/lesson-data.json";
-import rawChapters from "@/data/chapters.json";
-import rawKana from "@/data/kana.json";
-import rawKanji from "@/data/kanji.json";
-import type { Chapter, LessonData } from "@/types/lesson";
-import { getSearchPayload } from "@/lib/search-data";
+import { chapters, kana, kanji, practice, LIBRARY } from "@/lib/library";
+import { getSearchChapters, getSearchIndex } from "@/lib/search-data";
 import { studyPages } from "@/lib/study";
-import { documentSummaries } from "@/lib/documents";
 import Search, { SearchFallback } from "@/components/Search";
 import OverviewStats from "@/components/OverviewStats";
 import StudySection from "@/components/StudySection";
-import DocumentLibrary from "@/components/DocumentLibrary";
 import StudyShelf from "@/components/StudyShelf";
 
-const data = rawData as LessonData;
-const chapters = rawChapters as Chapter[];
-const kana = rawKana as Chapter[];
-const kanji = rawKanji as Chapter[];
-
 export default function Home() {
-  // Only the fields the search needs; the full JSON stays on the server
-  const searchPayload = getSearchPayload();
+  // Only the filter options go into the page; the search loads its index
+  // from /search-index.json when it's first used
+  const searchChapters = getSearchChapters();
 
   const stats = [
     { label: "chapters", value: chapters.length, icon: "chapters" },
     { label: "kana & kanji pages", value: kana.length + kanji.length, icon: "book" },
-    { label: "documents", value: data.docs.length, icon: "documents" },
-    { label: "searchable entries", value: data.items.length, icon: "search" },
+    { label: practice.length === 1 ? "practice exam" : "practice exams", value: practice.length, icon: "practice" },
+    { label: "searchable entries", value: getSearchIndex().entries.length, icon: "search" },
   ] as const;
 
   return (
@@ -43,7 +33,7 @@ export default function Home() {
       <OverviewStats stats={[...stats]} />
 
       {/* 3. Continue studying and Bookmarks, from this browser */}
-      <StudyShelf pages={studyPages({ chapters, kana, kanji, docs: data.docs })} />
+      <StudyShelf pages={studyPages(LIBRARY)} />
 
       {/* 4. Search */}
       <section
@@ -56,8 +46,8 @@ export default function Home() {
         </h2>
         {/* Search reads the URL (?q=...), so it renders in the browser; the
             fallback keeps the same layout in the first HTML */}
-        <Suspense fallback={<SearchFallback chapters={searchPayload.chapters} />}>
-          <Search payload={searchPayload} />
+        <Suspense fallback={<SearchFallback chapters={searchChapters} />}>
+          <Search chapters={searchChapters} />
         </Suspense>
       </section>
 
@@ -81,8 +71,14 @@ export default function Home() {
         ]}
       />
 
-      {/* 7. Every document, with content tags worked out here on the server */}
-      <DocumentLibrary docs={documentSummaries(data)} />
+      {/* 7. Practice that mixes several chapters */}
+      <StudySection
+        id="practice"
+        heading="Practice"
+        description="Practice exams that mix questions from several chapters, with an answer key that explains each one."
+        meta={`${practice.length} ${practice.length === 1 ? "exam" : "exams"}`}
+        groups={[{ kind: "practice", label: "Practice", marker: "試", basePath: "/practice", pages: practice }]}
+      />
     </main>
   );
 }

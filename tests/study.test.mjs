@@ -10,7 +10,10 @@ import {
   SERVER_SNAPSHOT,
   STORAGE_KEY,
   createStudyStore,
+  hasLegacyPlaces,
   isBookmarked,
+  legacyTarget,
+  migrateStudyData,
   pageKey,
   parseStudyData,
   recordVisit,
@@ -25,7 +28,18 @@ import {
 
 const page = { kind: "chapter", id: "3", anchor: null, section: null };
 const section = { kind: "chapter", id: "3", anchor: "vocab", section: "Vocabulary" };
+const kanji2 = { kind: "kanji", id: "2", anchor: "c2-half", section: "半 (half)" };
+// A place saved on an old document page, before the documents were merged
 const lesson = { kind: "lesson", id: "1", anchor: "d1-question-words", section: "Question words" };
+
+const load = (name) => JSON.parse(readFileSync(new URL(`../src/data/${name}`, import.meta.url), "utf8"));
+const LIBRARY = [
+  { kind: "chapter", label: "Chapter", pages: load("chapters.json") },
+  { kind: "kana", label: "Kana", pages: load("kana.json") },
+  { kind: "kanji", label: "Kanji", pages: load("kanji.json") },
+  { kind: "practice", label: "Practice", pages: load("practice.json") },
+];
+const links = load("legacy-links.json");
 
 const saved = (data) => JSON.stringify({ version: 1, bookmarks: [], lastVisit: null, ...data });
 
@@ -44,6 +58,8 @@ test("links and keys", () => {
   assert.equal(studyHref(section), "/chapters/3#vocab");
   assert.equal(studyHref({ kind: "kana", id: "1", anchor: null }), "/kana/1");
   assert.equal(studyHref({ kind: "kanji", id: "1", anchor: "readings" }), "/kanji/1#readings");
+  assert.equal(studyHref({ kind: "practice", id: "1", anchor: null }), "/practice/1");
+  // an old document place still links somewhere that works: the old address forwards it
   assert.equal(studyHref(lesson), "/lessons/1#d1-question-words");
   assert.equal(pageKey(section), "chapter:3");
 });
@@ -134,17 +150,17 @@ test("bookmarks: a page and a section on it are separate, and toggling twice rem
 test("bookmarks: a new one past the limit drops the oldest", () => {
   let data = EMPTY_DATA;
   for (let i = 0; i < MAX_BOOKMARKS; i++) data = toggleBookmark(data, { ...page, id: String(i) }, i);
-  data = toggleBookmark(data, lesson, 999);
+  data = toggleBookmark(data, kanji2, 999);
   assert.equal(data.bookmarks.length, MAX_BOOKMARKS);
-  assert.equal(studyHref(data.bookmarks[0]), studyHref(lesson));
+  assert.equal(studyHref(data.bookmarks[0]), studyHref(kanji2));
   assert.ok(!isBookmarked(data, { ...page, id: "0" }));
 });
 
 test("last visit: replaced each time, bookmarks untouched", () => {
   let data = toggleBookmark(EMPTY_DATA, page, 1);
   data = recordVisit(data, section, 10);
-  data = recordVisit(data, lesson, 20);
-  assert.deepEqual(data.lastVisit, { ...lesson, visitedAt: 20 });
+  data = recordVisit(data, kanji2, 20);
+  assert.deepEqual(data.lastVisit, { ...kanji2, visitedAt: 20 });
   assert.equal(data.bookmarks.length, 1);
   assert.equal(recordVisit(EMPTY_DATA, { ...page, section: "x" }, 1).lastVisit.section, null);
 });
@@ -254,10 +270,10 @@ test("store: blocked after another tab's change keeps that change", () => {
   const { storage, state } = blockableStorage({ [STORAGE_KEY]: saved({ bookmarks: [{ ...page, savedAt: 1 }] }) });
   const store = createStudyStore({ getStorage: () => storage });
   store.getSnapshot();
-  storage.items.set(STORAGE_KEY, saved({ bookmarks: [{ ...lesson, savedAt: 2 }, { ...page, savedAt: 1 }] })); // the other tab
+  storage.items.set(STORAGE_KEY, saved({ bookmarks: [{ ...kanji2, savedAt: 2 }, { ...page, savedAt: 1 }] })); // the other tab
   assert.equal(store.getSnapshot().data.bookmarks.length, 2);
   state.blocked = true;
-  assert.deepEqual(store.getSnapshot().data.bookmarks.map(studyHref), [studyHref(lesson), "/chapters/3"]);
+  assert.deepEqual(store.getSnapshot().data.bookmarks.map(studyHref), [studyHref(kanji2), "/chapters/3"]);
 });
 
 test("store: blocked after the storage was cleared stays empty, nothing comes back", () => {
@@ -307,14 +323,10 @@ test("server snapshot: not ready and empty, so the server HTML never shows saved
 });
 
 test("study pages: one entry per real page, with unique keys and the labels the dashboard shows", () => {
-  const load = (name) => JSON.parse(readFileSync(new URL(`../src/data/${name}`, import.meta.url), "utf8"));
-  const chapters = load("chapters.json");
-  const kana = load("kana.json");
-  const kanji = load("kanji.json");
-  const { docs } = load("lesson-data.json");
-  const pages = studyPages({ chapters, kana, kanji, docs });
-
-  assert.equal(pages.length, chapters.length + kana.length + kanji.length + docs.length);
+  const pages = studyPages(LIBRARY);
+  const [chapters, kana, kanji, practice] = LIBRARY.map((g) => g.pages);
+  assert.equal(pages.length, chapters.length + kana.length + kanji.length + practice.length);
+  assert.equal(pages.length, 14);
   assert.equal(new Set(pages.map((p) => p.key)).size, pages.length);
   assert.deepEqual(pages[0], {
     key: "chapter:1",
@@ -324,12 +336,9 @@ test("study pages: one entry per real page, with unique keys and the labels the 
   });
   assert.ok(pages.some((p) => p.key === "kana:1" && p.label === "Kana 1"));
   assert.ok(pages.some((p) => p.key === "kanji:1" && p.label === "Kanji 1"));
-  assert.deepEqual(pages.find((p) => p.key === "lesson:1"), {
-    key: "lesson:1",
-    label: docs[0].kind || "Document",
-    title: docs[0].title,
-    anchors: docs[0].toc.map((t) => t.a),
-  });
+  assert.ok(pages.some((p) => p.key === "kanji:2" && p.label === "Kanji 2" && p.title === "Time, Seasons and Directions"));
+  assert.ok(pages.some((p) => p.key === "practice:1" && p.label === "Practice 1"));
+  assert.ok(!pages.some((p) => p.key.startsWith("lesson:")), "no document pages any more");
   // only ids go to the browser: no lesson HTML, no search entries
   assert.ok(pages.every((p) => Object.keys(p).join() === "key,label,title,anchors"));
   assert.ok(pages.every((p) => p.anchors.every((a) => /^[A-Za-z0-9_-]+$/.test(a))));
@@ -377,14 +386,120 @@ test("resolving: a page that no longer exists resolves to nothing", () => {
 });
 
 test("resolving: anchors are checked per page, against the real data", () => {
-  const load = (name) => JSON.parse(readFileSync(new URL(`../src/data/${name}`, import.meta.url), "utf8"));
-  const index = studyPageIndex(
-    studyPages({ chapters: load("chapters.json"), kana: load("kana.json"), kanji: load("kanji.json"), docs: load("lesson-data.json").docs })
-  );
-  assert.equal(resolvePlace(lesson, index).href, "/lessons/1#d1-question-words");
+  const index = studyPageIndex(studyPages(LIBRARY));
+  assert.equal(resolvePlace(kanji2, index).href, "/kanji/2#c2-half");
   assert.equal(resolvePlace({ ...section, kind: "kana", id: "1", anchor: "mixups" }, index).href, "/kana/1#mixups");
+  assert.equal(resolvePlace({ kind: "practice", id: "1", anchor: "answers", section: "Answer key" }, index).section, "Answer key");
   // a real anchor, but from another page
-  const moved = resolvePlace({ ...lesson, id: "2" }, index);
-  assert.equal(moved.href, "/lessons/2");
+  const moved = resolvePlace({ ...kanji2, id: "1" }, index);
+  assert.equal(moved.href, "/kanji/1");
   assert.equal(moved.sectionMissing, true);
+  // an old document place that hasn't been moved yet is not listed
+  assert.equal(resolvePlace(lesson, index), null);
+});
+
+// ---- Moving places saved on the old document pages ----
+
+test("migration: old bookmarks and the last visit move to the pages that have their content", () => {
+  const data = parseStudyData(
+    saved({
+      bookmarks: [
+        { ...lesson, savedAt: 5 }, // a heading of document 1
+        { kind: "lesson", id: "2", anchor: null, section: null, savedAt: 4 }, // all of document 2 (vocabulary for Chapters 1 to 5)
+        { kind: "lesson", id: "18", anchor: "d18-cheat-sheet-seasons", section: "Cheat sheet: seasons", savedAt: 3 },
+        { ...page, savedAt: 2 }, // already a study page: kept as it is
+      ],
+      lastVisit: { kind: "lesson", id: "3", anchor: "d3-passage-2", section: "Passage 2", visitedAt: 9 },
+    })
+  );
+  assert.equal(data.bookmarks.length, 4, "old places are kept as read until they are moved");
+  assert.ok(hasLegacyPlaces(data));
+
+  const moved = migrateStudyData(data, links);
+  assert.ok(!hasLegacyPlaces(moved));
+  const [heading, wholeDoc, seasons, kept] = moved.bookmarks;
+  assert.equal(heading.kind, "chapter");
+  assert.equal(studyHref(heading), `/chapters/1#${links["1"].anchors["d1-question-words"][1]}`);
+  assert.equal(heading.section, links["1"].anchors["d1-question-words"][2]);
+  assert.equal(heading.savedAt, 5);
+  assert.deepEqual({ ...wholeDoc, savedAt: 0 }, { kind: "chapter", id: "1", anchor: "vocab", section: "Vocabulary", savedAt: 0 });
+  assert.deepEqual([studyHref(seasons), seasons.section], ["/kanji/2#c2-seasons", "Seasons"]);
+  assert.deepEqual(kept, { ...page, savedAt: 2 });
+  assert.deepEqual(moved.lastVisit, { kind: "practice", id: "1", anchor: "p1-exam-2-passage-2-a-shop-sign", section: "Exam 2, Passage 2: A shop sign", visitedAt: 9 });
+
+  // and they all show on the dashboard, with no missing-section note
+  const index = studyPageIndex(studyPages(LIBRARY));
+  for (const place of [...moved.bookmarks, moved.lastVisit]) {
+    const shown = resolvePlace(place, index);
+    assert.ok(shown && !shown.sectionMissing, studyHref(place));
+  }
+  // moving again changes nothing, and data with nothing old is returned as it is
+  assert.deepEqual(migrateStudyData(moved, links), moved);
+  assert.equal(migrateStudyData(moved, links), moved);
+});
+
+test("migration: places that land on the same new spot become one bookmark, the newest", () => {
+  // two old headings that both went to Chapter 1's vocabulary words, and a study page bookmark already there
+  const target = links["2"].anchors["d2-people-and-jobs"];
+  const twin = Object.entries(links["1"].anchors).find(([, t]) => t[1] === target[1]);
+  assert.ok(twin, "document 1 has a heading that went to the same place");
+  const data = {
+    version: 1,
+    bookmarks: [
+      { kind: "lesson", id: "2", anchor: "d2-people-and-jobs", section: "People and jobs", savedAt: 9 },
+      { kind: "lesson", id: "1", anchor: twin[0], section: "x", savedAt: 8 },
+      { kind: "chapter", id: "1", anchor: target[1], section: target[2], savedAt: 7 },
+    ],
+    lastVisit: null,
+  };
+  const moved = migrateStudyData(data, links);
+  assert.equal(moved.bookmarks.length, 1);
+  assert.equal(moved.bookmarks[0].savedAt, 9);
+});
+
+test("migration: unknown documents are dropped, unknown headings open the whole document's new page", () => {
+  const data = {
+    version: 1,
+    bookmarks: [
+      { kind: "lesson", id: "99", anchor: null, section: null, savedAt: 3 },
+      { kind: "lesson", id: "12", anchor: "d12-no-such-heading", section: "Old", savedAt: 2 },
+    ],
+    lastVisit: { kind: "lesson", id: "0", anchor: null, section: null, visitedAt: 1 },
+  };
+  const moved = migrateStudyData(data, links);
+  assert.deepEqual(moved.bookmarks.map(studyHref), ["/kanji/1"]);
+  assert.equal(moved.bookmarks[0].section, null);
+  assert.equal(moved.lastVisit, null);
+  assert.equal(legacyTarget(links, "99", null), null);
+  assert.equal(legacyTarget(links, "__proto__", null), null);
+  assert.deepEqual(legacyTarget(links, "20", "anything"), links["20"].to);
+});
+
+test("migration: the list stays within the limit", () => {
+  const anchors = Object.keys(links["2"].anchors);
+  const bookmarks = [];
+  for (let i = 0; i < MAX_BOOKMARKS; i++) bookmarks.push({ kind: "chapter", id: "5", anchor: `x${i}`, section: "s", savedAt: 1000 - i });
+  bookmarks.unshift(...anchors.slice(0, 5).map((a, i) => ({ kind: "lesson", id: "2", anchor: a, section: "s", savedAt: 2000 - i })));
+  const moved = migrateStudyData({ version: 1, bookmarks: bookmarks.slice(0, MAX_BOOKMARKS), lastVisit: null }, links);
+  assert.ok(moved.bookmarks.length <= MAX_BOOKMARKS);
+  assert.ok(!hasLegacyPlaces(moved));
+});
+
+test("migration through the store: saved once, and it works from memory when storage is blocked", () => {
+  const raw = saved({ bookmarks: [{ ...lesson, savedAt: 1 }] });
+  const storage = memoryStorage({ [STORAGE_KEY]: raw });
+  const store = createStudyStore({ getStorage: () => storage });
+  store.update((d) => migrateStudyData(d, links));
+  const stored = parseStudyData(storage.items.get(STORAGE_KEY));
+  assert.equal(stored.bookmarks[0].kind, "chapter");
+
+  const blocked = createStudyStore({
+    getStorage: () => {
+      throw new Error("blocked");
+    },
+  });
+  blocked.update((d) => ({ ...d, bookmarks: [{ ...lesson, savedAt: 1 }] }));
+  blocked.update((d) => migrateStudyData(d, links));
+  assert.equal(blocked.getSnapshot().saved, false);
+  assert.equal(blocked.getSnapshot().data.bookmarks[0].kind, "chapter");
 });

@@ -1,12 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
   PAGE_SIZE,
   categoryLabel,
   chapterLabel,
-  type SearchDoc,
   type SearchEntry,
+  type SearchPage,
   type SearchState,
 } from "@/lib/search";
 import ResultCard from "@/components/ResultCard";
@@ -15,10 +15,13 @@ import Icon from "@/components/Icon";
 type Props = {
   state: SearchState;
   active: boolean; // false when there's no text and no filter (the idle state)
+  loading: boolean; // a search is waiting for the index to arrive
+  failed: boolean; // the index couldn't be loaded
   results: SearchEntry[];
-  docs: SearchDoc[];
+  pages: SearchPage[];
   headers: string[][];
   onReset: () => void;
+  onRetry: () => void;
 };
 
 // "gakkou" in Vocabulary, Chapter 6
@@ -32,9 +35,7 @@ function describe(state: SearchState) {
   return parts.join(" ");
 }
 
-export default function SearchResults({ state, active, results, docs, headers, onReset }: Props) {
-  const docTitles = useMemo(() => new Map(docs.map((doc) => [doc.n, doc.title])), [docs]);
-
+export default function SearchResults({ state, active, loading, failed, results, pages, headers, onReset, onRetry }: Props) {
   // Back to the first page whenever the search changes. The stored page is
   // replaced (not just ignored), so returning to an earlier search starts at
   // 50 again instead of picking up its old "Show more" count.
@@ -46,7 +47,11 @@ export default function SearchResults({ state, active, results, docs, headers, o
   const count = results.length;
   const status = !active
     ? ""
-    : count === 0
+    : loading
+      ? "Loading search…"
+      : failed
+        ? "The search couldn't load."
+        : count === 0
       ? "No results"
       : `${count.toLocaleString("en-US")} ${count === 1 ? "result" : "results"}` +
         (count > limit ? ` (showing ${limit})` : "");
@@ -72,7 +77,17 @@ export default function SearchResults({ state, active, results, docs, headers, o
 
       {!active && <SearchHint />}
 
-      {active && count === 0 && (
+      {failed && (
+        <button
+          type="button"
+          onClick={onRetry}
+          className="mt-2 min-h-11 w-full rounded-card border border-border bg-background py-3 text-sm font-medium text-muted transition-colors hover:border-border-strong hover:bg-surface-raised hover:text-foreground"
+        >
+          Try again
+        </button>
+      )}
+
+      {active && !loading && !failed && count === 0 && (
         <div className="mt-2 flex flex-col items-center rounded-card border border-dashed border-border-strong/60 px-4 py-10 text-center">
           <span className="flex size-10 items-center justify-center rounded-full bg-surface-raised text-subtle">
             <Icon name="search" />
@@ -88,7 +103,7 @@ export default function SearchResults({ state, active, results, docs, headers, o
             <ResultCard
               key={entry.id}
               entry={entry}
-              docTitle={docTitles.get(entry.d)}
+              pages={pages}
               header={entry.h === null ? undefined : headers[entry.h]}
               showCategory={state.category === "all"}
             />
@@ -114,7 +129,7 @@ export default function SearchResults({ state, active, results, docs, headers, o
 export function SearchHint() {
   return (
     <p className="mt-4 text-sm text-subtle">
-      Search covers the document entries. Browse the chapter, kana and kanji study pages below.
+      Search covers every chapter, kana, kanji and practice page. Browse them all below.
     </p>
   );
 }

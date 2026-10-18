@@ -1,33 +1,43 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import { lessonHref, type SearchEntry } from "@/lib/search";
+import { resultHref, type SearchEntry, type SearchPage } from "@/lib/search";
 import CategoryTag from "@/components/CategoryTag";
 
 type Props = {
   entry: SearchEntry;
-  docTitle?: string;
+  pages: SearchPage[]; // every study page, for the entry's link and page name
   header?: string[]; // column headers, for table rows
   showCategory?: boolean; // the category tag, when results aren't already filtered to one
 };
 
-// Vocabulary rows whose first three columns are the word, its romaji and its
-// meaning get a word-first layout. Every other table keeps the generic one.
+const JAPANESE = ["Kana", "Japanese", "Word", "Kanji"];
+
+// Word lists (on chapter, kana and kanji pages) whose columns are the word,
+// sometimes a second spelling (kana and kanji), its romaji and its meaning
+// get a word-first layout: [word, romaji, meaning, ...extra columns], with
+// the extra columns' headers. Every other table keeps the generic one.
 function vocabularyColumns(entry: SearchEntry, header: string[] | undefined) {
-  if (entry.c !== "vocab" || !header) return null;
-  const [japanese, romaji, english] = header;
-  if (!(japanese === "Kana" || japanese === "Japanese") || romaji !== "Romaji" || english !== "English") return null;
-  return entry.x.split(" | ");
+  if ((entry.c !== "vocab" && entry.c !== "script") || !header || !JAPANESE.includes(header[0])) return null;
+  const spellings = JAPANESE.includes(header[1]) ? 2 : 1;
+  if (header[spellings] !== "Romaji" || header[spellings + 1] !== "English") return null;
+  const values = entry.x.split(" | ");
+  // "のる 乗る": both spellings when there are two, without repeats or blanks
+  const word = [...new Set(values.slice(0, spellings).map((v) => v.trim()).filter(Boolean))].join(" ");
+  return {
+    values: [word, ...values.slice(spellings)],
+    extraHeaders: header.slice(spellings + 2),
+  };
 }
 
-export default function ResultCard({ entry, docTitle, header, showCategory = false }: Props) {
-  // Where it came from: document title, then section
-  const where = [docTitle, entry.b].filter(Boolean).join(" › ");
+export default function ResultCard({ entry, pages, header, showCategory = false }: Props) {
+  // Where it is: the page, then the section and heading on it
+  const where = [pages[entry.p].name, entry.b].filter(Boolean).join(" › ");
   const vocab = vocabularyColumns(entry, header);
 
   return (
     <li>
       <Link
-        href={lessonHref(entry)}
+        href={resultHref(entry, pages)}
         className="block rounded-card border border-border bg-background px-4 py-3.5 transition-colors hover:border-border-strong hover:bg-surface-raised"
       >
         <div className="flex items-start justify-between gap-3">
@@ -35,23 +45,23 @@ export default function ResultCard({ entry, docTitle, header, showCategory = fal
           {showCategory && <CategoryTag category={entry.c} />}
         </div>
 
-        {vocab && header ? (
+        {vocab ? (
           // Vocabulary: the Japanese word first, romaji beside it, the meaning below
           <div className="mt-1.5">
             <p className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
-              {vocab[0]?.trim() && (
-                <span lang="ja" className="text-xl font-medium text-foreground">{vocab[0]}</span>
+              {vocab.values[0]?.trim() && (
+                <span lang="ja" className="text-xl font-medium text-foreground">{vocab.values[0]}</span>
               )}
-              {vocab[1]?.trim() && <span className="text-sm text-accent-text">{vocab[1]}</span>}
+              {vocab.values[1]?.trim() && <span className="text-sm text-accent-text">{vocab.values[1]}</span>}
             </p>
-            {vocab[2]?.trim() && <p className="mt-0.5 break-words text-muted">{vocab[2]}</p>}
+            {vocab.values[2]?.trim() && <p className="mt-0.5 break-words text-muted">{vocab.values[2]}</p>}
             {/* Any extra columns (like Group or Type), small and labeled */}
-            {vocab.length > 3 && (
+            {vocab.values.length > 3 && (
               <dl className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                {vocab.slice(3).map((value, i) =>
+                {vocab.values.slice(3).map((value, i) =>
                   value.trim() ? (
                     <div key={i} className="flex gap-1.5">
-                      <dt className="text-subtle">{header[i + 3]}</dt>
+                      <dt className="text-subtle">{vocab.extraHeaders[i]}</dt>
                       <dd className="min-w-0 break-words text-muted">{value}</dd>
                     </div>
                   ) : null

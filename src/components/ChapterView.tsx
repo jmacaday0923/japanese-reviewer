@@ -9,13 +9,13 @@ import type { StudyPageKind } from "@/lib/study";
 import type { ChapterExercises } from "@/types/exercise";
 import InteractiveExercises from "@/components/InteractiveExercises";
 
-const KINDS = { "/chapters": "chapter", "/kana": "kana", "/kanji": "kanji" } as const satisfies Record<string, StudyPageKind>;
+const KINDS = { "/chapters": "chapter", "/kana": "kana", "/kanji": "kanji", "/practice": "practice" } as const satisfies Record<string, StudyPageKind>;
 
-// One page layout shared by chapters, kana and kanji
+// One page layout shared by chapters, kana, kanji and practice
 type Props = {
   chapter: Chapter;
-  label: string; // "Chapter", "Kana" or "Kanji"
-  basePath: keyof typeof KINDS; // "/chapters", "/kana" or "/kanji"
+  label: string; // "Chapter", "Kana", "Kanji" or "Practice"
+  basePath: keyof typeof KINDS; // "/chapters", "/kana", "/kanji" or "/practice"
   prev?: Chapter;
   next?: Chapter;
   exercises?: ChapterExercises | null; // interactive practice, for chapters that have it

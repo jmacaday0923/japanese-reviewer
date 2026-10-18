@@ -1,14 +1,18 @@
-// Server-only: reads the full lesson data and returns the small search
-// payload. Importing this from a client component fails the build, so the
-// full JSON (with its HTML) never ends up in the browser bundle.
+// Server-only: builds the search index from the study pages. Importing this
+// from a client component fails the build, so the page HTML never ends up in
+// the browser bundle. The browser loads the index from /search-index.json.
 import "server-only";
-import rawData from "@/data/lesson-data.json";
-import type { LessonData } from "@/types/lesson";
-import { buildSearchPayload, type SearchPayload } from "@/lib/search";
+import { LIBRARY } from "@/lib/library";
+import { buildChapterOptions, buildSearchIndex, type ChapterOption, type SearchIndex } from "@/lib/search";
 
-let payload: SearchPayload | undefined;
+let index: SearchIndex | undefined;
 
-export function getSearchPayload(): SearchPayload {
-  payload ??= buildSearchPayload(rawData as LessonData);
-  return payload;
+export function getSearchIndex(): SearchIndex {
+  index ??= buildSearchIndex(LIBRARY);
+  return index;
+}
+
+// The chapter filter's options: every chapter or group that has entries
+export function getSearchChapters(): ChapterOption[] {
+  return buildChapterOptions(getSearchIndex().entries.map((entry) => entry.ch));
 }
