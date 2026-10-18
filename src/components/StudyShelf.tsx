@@ -2,22 +2,34 @@
 
 import Link from "next/link";
 import { useMemo, useRef } from "react";
-import { pageKey, removeBookmark, studyHref, type StudyPageInfo, type StudyPlace } from "@/lib/study";
+import {
+  removeBookmark,
+  resolvePlace,
+  studyHref,
+  studyPageIndex,
+  type ResolvedPlace,
+  type StudyPageInfo,
+  type StudyPlace,
+} from "@/lib/study";
 import { studyStore, useStudy } from "@/components/use-study";
 
 // "Continue studying" and the saved bookmarks, at the top of the dashboard.
 // They live in this browser's localStorage, so this part renders in the
 // browser; the server sends the same frame with a short loading line.
-type Props = { pages: StudyPageInfo[] }; // every study page, for current titles
+type Props = { pages: StudyPageInfo[] }; // every study page: current titles and anchors
 
 export default function StudyShelf({ pages }: Props) {
   const { ready, saved, data } = useStudy();
-  const byKey = useMemo(() => new Map(pages.map((p) => [p.key, p])), [pages]);
+  const index = useMemo(() => studyPageIndex(pages), [pages]);
   const bookmarksHeading = useRef<HTMLHeadingElement>(null);
 
-  // Places on pages that no longer exist are skipped, not shown as broken links
-  const lastVisit = data.lastVisit && byKey.has(pageKey(data.lastVisit)) ? data.lastVisit : null;
-  const bookmarks = data.bookmarks.filter((b) => byKey.has(pageKey(b)));
+  // Checked against the pages and sections that exist now. A missing page is
+  // skipped; a missing section links to its page instead.
+  const lastVisit = data.lastVisit && resolvePlace(data.lastVisit, index);
+  const bookmarks = data.bookmarks.flatMap((saved) => {
+    const shown = resolvePlace(saved, index);
+    return shown ? [{ saved, shown }] : [];
+  });
 
   function remove(place: StudyPlace) {
     studyStore.update((d) => removeBookmark(d, place));
@@ -34,7 +46,7 @@ export default function StudyShelf({ pages }: Props) {
           {!ready ? (
             <Loading />
           ) : lastVisit ? (
-            <PlaceLink place={lastVisit} info={byKey.get(pageKey(lastVisit))!} className="mt-3" />
+            <PlaceLink place={lastVisit} className="mt-3" />
           ) : (
             <p className="mt-3 text-sm text-muted">
               Open any chapter, kana, kanji or document page and it shows up here, so you can pick up where you left off.
@@ -50,15 +62,15 @@ export default function StudyShelf({ pages }: Props) {
             <Loading />
           ) : bookmarks.length ? (
             <ul className="mt-3 space-y-2">
-              {bookmarks.map((b) => {
-                const info = byKey.get(pageKey(b))!;
-                const name = b.section ?? info.title;
+              {bookmarks.map(({ saved, shown }) => {
+                const name = shown.section ?? shown.title;
                 return (
-                  <li key={studyHref(b)} className="flex items-start gap-2">
-                    <PlaceLink place={b} info={info} className="min-w-0 flex-1" />
+                  // Keyed and removed by what's saved, even when it's shown as the whole page
+                  <li key={studyHref(saved)} className="flex items-start gap-2">
+                    <PlaceLink place={shown} className="min-w-0 flex-1" />
                     <button
                       type="button"
-                      onClick={() => remove(b)}
+                      onClick={() => remove(saved)}
                       aria-label={`Remove bookmark: ${name}`}
                       className="min-h-10 shrink-0 rounded-control px-3 text-sm text-subtle transition-colors hover:bg-surface-raised hover:text-foreground"
                     >
@@ -90,16 +102,19 @@ function Loading() {
 
 // "Chapter 3 · Copula Sentences" over "Vocabulary" for a section,
 // "Chapter 3" over "Copula Sentences" for a whole page
-function PlaceLink({ place, info, className }: { place: StudyPlace; info: StudyPageInfo; className: string }) {
+function PlaceLink({ place, className }: { place: ResolvedPlace; className: string }) {
   return (
     <Link
-      href={studyHref(place)}
+      href={place.href}
       className={`${className} flex flex-col rounded-control border border-border bg-background px-3 py-2 transition-colors hover:border-border-strong hover:bg-surface-raised`}
     >
       <span className="text-xs text-subtle break-words">
-        {place.section ? `${info.label} · ${info.title}` : info.label}
+        {place.section ? `${place.label} · ${place.title}` : place.label}
       </span>
-      <span className="font-medium text-foreground break-words">{place.section ?? info.title}</span>
+      <span className="font-medium text-foreground break-words">{place.section ?? place.title}</span>
+      {place.sectionMissing && (
+        <span className="mt-0.5 text-xs text-subtle">The saved section is no longer on this page, so this opens the page.</span>
+      )}
     </Link>
   );
 }

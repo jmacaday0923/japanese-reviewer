@@ -142,24 +142,73 @@ export function recordVisit(data: StudyData, place: StudyPlace, now: number): St
 
 // ---- Pages the dashboard can link to ----
 
-export type StudyPageInfo = { key: string; label: string; title: string };
+// Built on the server from the data files: each page's label and title, and
+// the anchors its "On this page" outline links to (the only sections that
+// can be bookmarked). No lesson HTML, just ids.
+export type StudyPageInfo = { key: string; label: string; title: string; anchors: string[] };
 
-type PageSource = { ch: string; title: string };
+type StudyPageSource = {
+  ch: string;
+  title: string;
+  sections: readonly { id: string }[];
+  toc: readonly { a: string }[];
+};
 
 export function studyPages(source: {
-  chapters: readonly PageSource[];
-  kana: readonly PageSource[];
-  kanji: readonly PageSource[];
-  docs: readonly { n: number; title: string; kind: string }[];
+  chapters: readonly StudyPageSource[];
+  kana: readonly StudyPageSource[];
+  kanji: readonly StudyPageSource[];
+  docs: readonly { n: number; title: string; kind: string; toc: readonly { a: string }[] }[];
 }): StudyPageInfo[] {
-  const group = (kind: StudyPageKind, label: string, pages: readonly PageSource[]) =>
-    pages.map((p) => ({ key: pageKey({ kind, id: p.ch }), label: `${label} ${p.ch}`, title: p.title }));
+  const group = (kind: StudyPageKind, label: string, pages: readonly StudyPageSource[]) =>
+    pages.map((p) => ({
+      key: pageKey({ kind, id: p.ch }),
+      label: `${label} ${p.ch}`,
+      title: p.title,
+      anchors: [...p.sections.map((s) => s.id), ...p.toc.map((t) => t.a)],
+    }));
   return [
     ...group("chapter", "Chapter", source.chapters),
     ...group("kana", "Kana", source.kana),
     ...group("kanji", "Kanji", source.kanji),
-    ...source.docs.map((d) => ({ key: pageKey({ kind: "lesson", id: String(d.n) }), label: d.kind || "Document", title: d.title })),
+    ...source.docs.map((d) => ({
+      key: pageKey({ kind: "lesson", id: String(d.n) }),
+      label: d.kind || "Document",
+      title: d.title,
+      anchors: d.toc.map((t) => t.a),
+    })),
   ];
+}
+
+export type StudyPageIndex = ReadonlyMap<string, { label: string; title: string; anchors: ReadonlySet<string> }>;
+
+export function studyPageIndex(pages: readonly StudyPageInfo[]): StudyPageIndex {
+  return new Map(pages.map((p) => [p.key, { label: p.label, title: p.title, anchors: new Set(p.anchors) }]));
+}
+
+// What the dashboard shows for a saved place, checked against the pages and
+// anchors that exist now
+export type ResolvedPlace = {
+  href: string;
+  label: string;           // "Chapter 3", or the document's kind
+  title: string;           // the page's current title
+  section: string | null;  // only when the saved section still exists
+  sectionMissing: boolean; // a section was saved, but the page no longer has it
+};
+
+// null when the page itself is gone. When only the section is gone, the
+// link opens the page and the old section label isn't shown.
+export function resolvePlace(place: StudyPlace, pages: StudyPageIndex): ResolvedPlace | null {
+  const page = pages.get(pageKey(place));
+  if (!page) return null;
+  const anchor = place.anchor !== null && page.anchors.has(place.anchor) ? place.anchor : null;
+  return {
+    href: studyHref({ kind: place.kind, id: place.id, anchor }),
+    label: page.label,
+    title: page.title,
+    section: anchor ? place.section : null,
+    sectionMissing: place.anchor !== null && anchor === null,
+  };
 }
 
 // ---- The store ----
@@ -182,33 +231,26 @@ type EventSource = Pick<EventTarget, "addEventListener" | "removeEventListener">
 // working from memory and reports saved: false.
 export function createStudyStore(options: { getStorage: () => StorageLike; getEvents?: () => EventSource }) {
   let storage: StorageLike | null | undefined; // undefined: not tried yet, null: unavailable
+  // The last text read from or written to storage. If storage stops working
+  // later, the store carries on from here, so nothing already shown is lost.
   let memory: string | null = null;
   let snapshot: StudySnapshot | undefined;
   let snapshotRaw: string | null = null;
   const listeners = new Set<() => void>();
 
-  function usableStorage() {
-    if (storage === undefined) {
+  function readRaw(): string | null {
+    if (storage !== null) {
       try {
-        const s = options.getStorage();
-        s.getItem(STORAGE_KEY); // throws when access is blocked
-        storage = s;
+        storage ??= options.getStorage();
+        // A successful read is the truth, including another tab's change or
+        // null after the storage was cleared
+        memory = storage.getItem(STORAGE_KEY);
+        return memory;
       } catch {
-        storage = null;
+        storage = null; // blocked: from now on, memory only
       }
     }
-    return storage;
-  }
-
-  function readRaw(): string | null {
-    const s = usableStorage();
-    if (!s) return memory;
-    try {
-      return s.getItem(STORAGE_KEY);
-    } catch {
-      storage = null;
-      return memory;
-    }
+    return memory;
   }
 
   function getSnapshot(): StudySnapshot {
@@ -224,10 +266,9 @@ export function createStudyStore(options: { getStorage: () => StorageLike; getEv
   function update(change: (data: StudyData) => StudyData) {
     const raw = serializeStudyData(change(getSnapshot().data));
     memory = raw;
-    const s = usableStorage();
-    if (s) {
+    if (storage) {
       try {
-        s.setItem(STORAGE_KEY, raw);
+        storage.setItem(STORAGE_KEY, raw);
       } catch {
         storage = null; // full or blocked: carry on from memory
       }

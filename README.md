@@ -96,8 +96,8 @@ The search lives in the URL of the home page, so a search can be bookmarked or s
 Reader pages have a **Bookmark page** button, and a **Bookmark section** button after you jump to a section from On this page. The dashboard shows your bookmarks and the last study page you opened.
 
 - Saved only in this browser, in localStorage under `japanese-reviewer:study`, as JSON with a `version` number (currently 1). Nothing is sent to a server, so bookmarks don't follow you to another browser or device.
-- Saved data that can't be read is ignored and replaced on the next change. Bookmarks to pages that no longer exist are hidden.
-- If the browser blocks storage (some private modes, or site data turned off), bookmarks still work until you close the tab, and the page says so.
+- Saved data that can't be read is ignored and replaced on the next change. Bookmarks to pages that no longer exist are hidden, and a bookmark whose section is gone opens its page instead.
+- If the browser blocks storage (some private modes, or site data turned off), even after the page has loaded, bookmarks still work until you close the tab, and the page says so.
 - To clear everything: in DevTools, Application, Local Storage, delete `japanese-reviewer:study`.
 
 ## Project layout

@@ -219,9 +219,85 @@ test.describe("damaged or old saved data", () => {
     await expect(s.items.getByRole("link")).toHaveAttribute("href", "/kana/1#answers");
     await expect(s.resume).toContainText("Open any chapter");
   });
+
+  // Regression: a section removed from the data used to keep its old label and a dead #link
+  test("a saved section that no longer exists opens its page, without the old label", async ({ page }) => {
+    await page.goto("/");
+    await saveRaw(
+      page,
+      JSON.stringify({
+        version: 1,
+        bookmarks: [
+          { kind: "chapter", id: "3", anchor: "removed-heading", section: "Old heading", savedAt: 2 },
+          { kind: "kana", id: "1", anchor: "vocab", section: "Vocabulary", savedAt: 1 },
+        ],
+        lastVisit: { kind: "lesson", id: "1", anchor: "gone-too", section: "Old section", visitedAt: 3 },
+      })
+    );
+    await page.reload();
+    const s = shelf(page);
+    await expect(s.items).toHaveCount(2);
+
+    const stale = s.items.nth(0);
+    await expect(stale.getByRole("link")).toHaveAttribute("href", "/chapters/3");
+    await expect(stale.getByRole("link")).toContainText(chapters[2].title);
+    await expect(stale.getByRole("link")).toContainText("The saved section is no longer on this page");
+    await expect(stale).not.toContainText("Old heading");
+
+    // a valid section is untouched
+    await expect(s.items.nth(1).getByRole("link")).toHaveAttribute("href", "/kana/1#vocab");
+    await expect(s.items.nth(1).getByRole("link")).toContainText("Vocabulary");
+    await expect(s.items.nth(1)).not.toContainText("no longer on this page");
+
+    const resume = s.resume.getByRole("link");
+    await expect(resume).toHaveAttribute("href", "/lessons/1");
+    await expect(resume).toContainText(docs[0].title);
+    await expect(s.resume).not.toContainText("Old section");
+
+    // Remove takes out the saved bookmark, anchor and all; storage keeps its format
+    await stale.getByRole("button", { name: `Remove bookmark: ${chapters[2].title}` }).click();
+    await expect(s.items).toHaveCount(1);
+    expect((await readSaved(page)).bookmarks).toEqual([{ kind: "kana", id: "1", anchor: "vocab", section: "Vocabulary", savedAt: 1 }]);
+
+    await resume.click();
+    await expect(page).toHaveURL("/lessons/1");
+    await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText(docs[0].title);
+  });
 });
 
 test.describe("storage the browser won't allow", () => {
+  // Regression: losing access after the first read used to empty the dashboard
+  test("blocked after loading: what was already read stays, and new bookmarks still work", async ({ page }) => {
+    await page.goto("/");
+    await saveRaw(page, JSON.stringify({
+      version: 1,
+      bookmarks: [{ kind: "chapter", id: "4", anchor: null, section: null, savedAt: 1 }],
+      lastVisit: null,
+    }));
+    await page.reload();
+    const s = shelf(page);
+    await expect(s.items.getByRole("link")).toHaveAttribute("href", "/chapters/4");
+
+    // Make every read fail from now on, then make the page read again (as another tab's change would)
+    await page.evaluate((key) => {
+      Storage.prototype.getItem = () => {
+        throw new DOMException("The operation is insecure.", "SecurityError");
+      };
+      window.dispatchEvent(new StorageEvent("storage", { key }));
+    }, KEY);
+    await expect(s.notSavedNote).toBeVisible();
+    await expect(s.items).toHaveCount(1);
+    await expect(s.items.getByRole("link")).toHaveAttribute("href", "/chapters/4");
+
+    await s.items.getByRole("link").click();
+    await expect(page).toHaveURL("/chapters/4");
+    const r = reader(page);
+    await expect(r.bookmarkPage).toHaveAttribute("aria-pressed", "true");
+    await visibleMain(page).getByRole("navigation", { name: "Breadcrumb" }).getByRole("link", { name: "Chapters" }).click();
+    await expect(s.items).toHaveCount(1);
+    await expect(s.resume.getByRole("link")).toHaveAttribute("href", "/chapters/4");
+  });
+
   test("blocked localStorage: no errors, bookmarks work until the tab closes", async ({ page }) => {
     await page.addInitScript(() => {
       Object.defineProperty(window, "localStorage", {

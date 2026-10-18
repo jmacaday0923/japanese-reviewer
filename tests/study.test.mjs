@@ -15,8 +15,10 @@ import {
   parseStudyData,
   recordVisit,
   removeBookmark,
+  resolvePlace,
   serializeStudyData,
   studyHref,
+  studyPageIndex,
   studyPages,
   toggleBookmark,
 } from "../src/lib/study.ts";
@@ -191,7 +193,7 @@ test("store: no localStorage at all (blocked) works from memory", () => {
   assert.ok(isBookmarked(snapshot.data, page));
 });
 
-test("store: reading throws (blocked after load) falls back to memory", () => {
+test("store: storage that throws on the very first read starts empty, from memory", () => {
   const store = createStudyStore({
     getStorage: () => ({
       getItem: () => {
@@ -215,6 +217,66 @@ test("store: a full or read-only storage keeps the change in memory and says so"
   const snapshot = store.getSnapshot();
   assert.equal(snapshot.saved, false);
   assert.deepEqual(snapshot.data.bookmarks.map(studyHref), ["/chapters/3#vocab", "/chapters/3"], "the old bookmark is kept too");
+});
+
+// A storage whose reads can be blocked partway through, like a browser
+// that loses access to site data after the page has loaded
+function blockableStorage(initial) {
+  const storage = memoryStorage(initial);
+  const state = { blocked: false };
+  const getItem = storage.getItem;
+  storage.getItem = (key) => {
+    if (state.blocked) throw new Error("SecurityError: access is denied");
+    return getItem(key);
+  };
+  return { storage, state };
+}
+
+// Regression: the store used to forget what it had read, so bookmarks vanished
+test("store: blocked after a successful read keeps the bookmarks it already read", () => {
+  const { storage, state } = blockableStorage({ [STORAGE_KEY]: saved({ bookmarks: [{ ...page, savedAt: 1 }] }) });
+  const store = createStudyStore({ getStorage: () => storage });
+  const before = store.getSnapshot();
+  assert.equal(before.saved, true);
+  assert.equal(before.data.bookmarks.length, 1);
+
+  state.blocked = true;
+  const after = store.getSnapshot();
+  assert.equal(after.saved, false);
+  assert.deepEqual(after.data, before.data, "the bookmark is still there");
+  assert.equal(store.getSnapshot(), after, "and the snapshot stays the same object while nothing changes");
+
+  store.update((d) => toggleBookmark(d, section, 2));
+  assert.deepEqual(store.getSnapshot().data.bookmarks.map(studyHref), ["/chapters/3#vocab", "/chapters/3"]);
+});
+
+test("store: blocked after another tab's change keeps that change", () => {
+  const { storage, state } = blockableStorage({ [STORAGE_KEY]: saved({ bookmarks: [{ ...page, savedAt: 1 }] }) });
+  const store = createStudyStore({ getStorage: () => storage });
+  store.getSnapshot();
+  storage.items.set(STORAGE_KEY, saved({ bookmarks: [{ ...lesson, savedAt: 2 }, { ...page, savedAt: 1 }] })); // the other tab
+  assert.equal(store.getSnapshot().data.bookmarks.length, 2);
+  state.blocked = true;
+  assert.deepEqual(store.getSnapshot().data.bookmarks.map(studyHref), [studyHref(lesson), "/chapters/3"]);
+});
+
+test("store: blocked after the storage was cleared stays empty, nothing comes back", () => {
+  const { storage, state } = blockableStorage({ [STORAGE_KEY]: saved({ bookmarks: [{ ...page, savedAt: 1 }] }) });
+  const store = createStudyStore({ getStorage: () => storage });
+  assert.equal(store.getSnapshot().data.bookmarks.length, 1);
+  storage.items.clear(); // localStorage.clear(), here or in another tab
+  assert.deepEqual(store.getSnapshot().data, EMPTY_DATA);
+  state.blocked = true;
+  assert.deepEqual(store.getSnapshot().data, EMPTY_DATA);
+});
+
+test("store: blocked after this tab's own change keeps it", () => {
+  const { storage, state } = blockableStorage();
+  const store = createStudyStore({ getStorage: () => storage });
+  store.update((d) => toggleBookmark(d, page, 1));
+  state.blocked = true;
+  assert.ok(isBookmarked(store.getSnapshot().data, page));
+  assert.equal(store.getSnapshot().saved, false);
 });
 
 test("store: another tab's change to the same key notifies, other keys don't", () => {
@@ -254,14 +316,75 @@ test("study pages: one entry per real page, with unique keys and the labels the 
 
   assert.equal(pages.length, chapters.length + kana.length + kanji.length + docs.length);
   assert.equal(new Set(pages.map((p) => p.key)).size, pages.length);
-  assert.deepEqual(pages[0], { key: "chapter:1", label: "Chapter 1", title: chapters[0].title });
+  assert.deepEqual(pages[0], {
+    key: "chapter:1",
+    label: "Chapter 1",
+    title: chapters[0].title,
+    anchors: [...chapters[0].sections.map((s) => s.id), ...chapters[0].toc.map((t) => t.a)],
+  });
   assert.ok(pages.some((p) => p.key === "kana:1" && p.label === "Kana 1"));
   assert.ok(pages.some((p) => p.key === "kanji:1" && p.label === "Kanji 1"));
-  assert.deepEqual(pages.find((p) => p.key === "lesson:1"), { key: "lesson:1", label: docs[0].kind || "Document", title: docs[0].title });
+  assert.deepEqual(pages.find((p) => p.key === "lesson:1"), {
+    key: "lesson:1",
+    label: docs[0].kind || "Document",
+    title: docs[0].title,
+    anchors: docs[0].toc.map((t) => t.a),
+  });
+  // only ids go to the browser: no lesson HTML, no search entries
+  assert.ok(pages.every((p) => Object.keys(p).join() === "key,label,title,anchors"));
+  assert.ok(pages.every((p) => p.anchors.every((a) => /^[A-Za-z0-9_-]+$/.test(a))));
   // every page key is a valid saved place, so a bookmark to it survives a reload
   for (const p of pages) {
     const [kind, id] = p.key.split(":");
     const data = parseStudyData(saved({ bookmarks: [{ kind, id, anchor: null, section: null, savedAt: 1 }] }));
     assert.equal(data.bookmarks.length, 1, p.key);
   }
+});
+
+test("resolving: a valid section keeps its link and label", () => {
+  const index = studyPageIndex([{ key: "chapter:3", label: "Chapter 3", title: "Counters", anchors: ["lessons", "vocab"] }]);
+  assert.deepEqual(resolvePlace(section, index), {
+    href: "/chapters/3#vocab",
+    label: "Chapter 3",
+    title: "Counters",
+    section: "Vocabulary",
+    sectionMissing: false,
+  });
+  assert.deepEqual(resolvePlace(page, index), {
+    href: "/chapters/3",
+    label: "Chapter 3",
+    title: "Counters",
+    section: null,
+    sectionMissing: false,
+  });
+});
+
+test("resolving: a section that no longer exists opens its page, without the old label", () => {
+  const index = studyPageIndex([{ key: "chapter:3", label: "Chapter 3", title: "Counters", anchors: ["lessons"] }]);
+  assert.deepEqual(resolvePlace(section, index), {
+    href: "/chapters/3",
+    label: "Chapter 3",
+    title: "Counters",
+    section: null,
+    sectionMissing: true,
+  });
+});
+
+test("resolving: a page that no longer exists resolves to nothing", () => {
+  const index = studyPageIndex([{ key: "chapter:1", label: "Chapter 1", title: "One", anchors: ["vocab"] }]);
+  assert.equal(resolvePlace(section, index), null); // chapter 3 is gone
+  assert.equal(resolvePlace({ ...section, kind: "kana" }, index), null); // same id, other page type
+});
+
+test("resolving: anchors are checked per page, against the real data", () => {
+  const load = (name) => JSON.parse(readFileSync(new URL(`../src/data/${name}`, import.meta.url), "utf8"));
+  const index = studyPageIndex(
+    studyPages({ chapters: load("chapters.json"), kana: load("kana.json"), kanji: load("kanji.json"), docs: load("lesson-data.json").docs })
+  );
+  assert.equal(resolvePlace(lesson, index).href, "/lessons/1#d1-question-words");
+  assert.equal(resolvePlace({ ...section, kind: "kana", id: "1", anchor: "mixups" }, index).href, "/kana/1#mixups");
+  // a real anchor, but from another page
+  const moved = resolvePlace({ ...lesson, id: "2" }, index);
+  assert.equal(moved.href, "/lessons/2");
+  assert.equal(moved.sectionMissing, true);
 });
