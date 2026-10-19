@@ -276,62 +276,83 @@
 }
 .workbook-romaji-body > :last-child { margin-bottom: 0; }
 
-/* One row becomes one stacked example on phones. The same DOM and reading
-   hints remain mounted, so resizing never creates a second set of controls. */
-@media (max-width: 639px) {
-  .lesson .tw.reading-examples { overflow-x: visible; }
-  .lesson .reading-examples table,
-  .lesson .reading-examples thead,
-  .lesson .reading-examples tbody,
-  .lesson .reading-examples tr,
-  .lesson .reading-examples td {
-    display: block;
-    min-width: 0;
-  }
-  .lesson .reading-examples thead tr { position: relative; }
-  /* Keep column headers available to assistive technology. */
-  .lesson .reading-examples .reading-column-heading {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-  .lesson .reading-examples .reading-actions {
-    display: block;
-    padding: 0.625rem 1rem;
-    border-radius: var(--radius-card) var(--radius-card) 0 0;
-  }
+/* Sentence examples get the full reading width at every viewport size.
+   Supporting readings and actions follow the Japanese instead of narrowing it.
+   Keep one semantic table and one set of controls when the viewport changes. */
+.lesson .tw.reading-examples { overflow-x: visible; }
+.lesson .reading-examples table,
+.lesson .reading-examples thead,
+.lesson .reading-examples tbody {
+  display: block;
+  min-width: 0;
+}
+.lesson .reading-examples thead tr { position: relative; display: block; }
+/* Column associations remain available to assistive technology. */
+.lesson .reading-examples .reading-column-heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.lesson .reading-examples .reading-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.625rem 1rem;
+  white-space: normal;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+.lesson .reading-examples tbody tr {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.875rem 1.25rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.lesson .reading-examples tbody tr:last-child { border-bottom: 0; }
+.lesson .reading-examples tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--foreground) 2.5%, transparent);
+}
+.lesson .reading-examples td {
+  display: block;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.lesson .reading-examples tbody tr:nth-child(even) td { background: transparent; }
+.lesson .reading-examples .reading-example-primary,
+.lesson .reading-examples .reading-example-speaker { grid-column: 1 / -1; }
+.lesson .reading-examples .reading-example-primary .reading-japanese {
+  display: block;
+  white-space: normal;
+  line-break: strict;
+}
+.lesson .reading-examples .reading-cell-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--subtle);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.lesson .reading-examples .reading-example-primary .reading-cell-label { display: none; }
+.lesson .reading-examples .reading-example-support .reading-compact > span:not([hidden]) { display: block; }
+.lesson .reading-examples .reading-example-save > div { min-width: 0; }
+.lesson .reading-examples .reading-example-save button { max-width: 100%; }
+@media (min-width: 640px) {
   .lesson .reading-examples tbody tr {
-    padding: 1rem;
-    border-bottom: 1px solid var(--border);
+    grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+    padding: 1.25rem;
   }
-  .lesson .reading-examples tbody tr:last-child { border-bottom: 0; }
-  .lesson .reading-examples tbody tr:nth-child(even) {
-    background: color-mix(in srgb, var(--foreground) 2.5%, transparent);
-  }
-  .lesson .reading-examples td {
-    padding: 0;
-    border: 0;
-    overflow-wrap: anywhere;
-    word-break: normal;
-  }
-  .lesson .reading-examples td + td { margin-top: 0.75rem; }
-  .lesson .reading-examples tbody tr:nth-child(even) td { background: transparent; }
-  .lesson .reading-examples .reading-cell-label {
-    display: block;
-    margin-bottom: 0.25rem;
-    color: var(--subtle);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    line-height: 1.4;
-  }
+  .lesson .reading-examples .reading-example-save { padding-top: 1.1875rem; }
 }
 
 /* Compact romaji hints keep the Japanese prompt and English task readable. */

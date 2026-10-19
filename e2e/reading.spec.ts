@@ -209,10 +209,10 @@ test("Japanese examples lead supporting English in lessons and search", async ({
   await expect(japanese).toHaveAttribute("lang", "ja");
   expect(await japanese.evaluate(el => parseFloat(getComputedStyle(el).fontSize)))
     .toBeGreaterThan(await english.evaluate(el => parseFloat(getComputedStyle(el).fontSize)));
-  expect(await table.evaluate(el => getComputedStyle(el).display)).toBe("table");
+  expect(await row.evaluate(el => getComputedStyle(el).display)).toBe("grid");
   const japaneseCell = await row.locator("td").nth(0).boundingBox();
   const englishCell = await row.locator("td").nth(2).boundingBox();
-  expect(japaneseCell!.y).toBe(englishCell!.y);
+  expect(englishCell!.y).toBeGreaterThanOrEqual(japaneseCell!.y + japaneseCell!.height);
 
   await page.goto("/?q=watashi%20wa%20gakusei%20desu");
   const result = search(page).results.filter({ has: page.locator(".reading-japanese") }).first();
@@ -235,7 +235,7 @@ for (const width of [320, 375]) {
     const english = content(englishHint);
     await expect(english).toBeVisible();
     expect(await frame.evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);
-    expect(await row.evaluate(el => getComputedStyle(el).display)).toBe("block");
+    expect(await row.evaluate(el => getComputedStyle(el).display)).toBe("grid");
     const japaneseCell = await row.locator("td").nth(0).boundingBox();
     const englishCell = await row.locator("td").nth(2).boundingBox();
     expect(englishCell!.y).toBeGreaterThanOrEqual(japaneseCell!.y + japaneseCell!.height);
@@ -256,7 +256,7 @@ for (const width of [320, 375]) {
     await expect(table.locator("thead").getByRole("button", { name: /^All \d+ saved$/ })).toBeDisabled();
 
     await page.setViewportSize({ width: 1440, height: 900 });
-    expect(await table.evaluate(el => getComputedStyle(el).display)).toBe("table");
+    expect(await row.evaluate(el => getComputedStyle(el).display)).toBe("grid");
     await expect(english).toBeVisible();
     await expect(row.getByRole("button", { name: /^Saved to flashcards:/ })).toBeDisabled();
     await expect(table.locator("[data-reading-hint=english]")).toHaveCount(await table.locator("tbody tr").count());
