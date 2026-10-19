@@ -137,3 +137,18 @@ Automated tests use Chromium and synthetic input. Check these by hand before a r
 - [ ] `/chapters/99` shows "Page not found".
 - [ ] Bookmark a page and a section, close the browser, open it again: both are on the dashboard.
 - [ ] Safari private window: bookmarks still work while the tab is open.
+
+
+## Flashcards
+
+Use **Add to flashcards** beside a structured vocabulary row, an individual kanji entry, or a Japanese lesson sentence. Open **Flashcards** from the Saved navigation group.
+
+- Japanese → meaning and English → Japanese have independent schedules and performance counts.
+- Reveal the answer before self-rating Again, Hard, Good or Easy. The question and essential Japanese answer remain visible; secondary answer readings and meanings use the existing reading-aid preferences. Source examples appear only when a verified bilingual sentence is available.
+- Choose one or several chapters/study pages, or all saved cards. Identical cards saved from different pages merge their source links without resetting progress.
+- The default is 20 new cards per local day per direction, configurable from 0 to 200. The allowance spans all chapter filters. It is consumed by the first rating of a new card; scheduled reviews do not consume it.
+- Again returns in 10 minutes. Hard during learning returns in 30 minutes. Initial Good is 1 calendar day and Easy is 4. Established Hard/Good/Easy intervals grow by 1.2/2.5/3.2, rounded up and capped at 3,650 days. Day-based cards are due at local midnight; this is a simple deterministic scheduler, not FSRS.
+- Cards, settings and progress are local to this browser under **japanese-reviewer:flashcards** (version 1). They do not sync between devices, and clearing site data removes the deck. Storage failures retain an in-memory deck while the page stays open; a full reload or closing the tab discards unsaved changes. The deck limit is 5,000 cards.
+- Manage saved cards supports removal and undo. Removing a card removes its schedules; undo restores them. Today's introduction allowance is retained.
+
+**src/lib/flashcard-content.ts** extracts source-backed cards on the server; **src/lib/flashcards.ts** contains pure scheduling, queue and storage helpers. No dependency or lesson-data changes are needed. **tests/flashcards.test.mjs**, **tests/flashcard-content.test.mjs** and **e2e/flashcards.spec.ts** cover the feature.

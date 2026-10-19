@@ -22,7 +22,10 @@ export const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
   },
   {
     label: "Saved",
-    items: [{ href: "/#bookmarks", label: "Bookmarks", icon: "bookmark", segment: false }],
+    items: [
+      { href: "/#bookmarks", label: "Bookmarks", icon: "bookmark", segment: false },
+      { href: "/flashcards", label: "Flashcards", icon: "book", segment: "flashcards" },
+    ],
   },
 ];
 
