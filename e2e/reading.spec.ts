@@ -69,25 +69,27 @@ test("kana readings toggle independently while kanji stays plain, with per-item 
   await expect(visibleMain(page).locator("ruby, rt, [data-reading-word], [data-reading-hint=furigana]")).toHaveCount(0);
 });
 
-test("search uses the same preferences; revealing does not follow the result link", async ({ page }) => {
-  await page.goto("/chapters/1");
-  await aid(page, "romaji").uncheck();
-  await aid(page, "english").uncheck();
+test("search always shows readings and meanings while study choices stay hidden", async ({ page }) => {
+  await page.goto("/kanji/1");
+  for (const kind of ["romaji", "english", "kana readings"]) await aid(page, kind).uncheck();
+  const before = await page.evaluate((storageKey) => localStorage.getItem(storageKey), key);
   await page.goto("/?q=gakkou&category=vocab");
   const s = search(page);
-  await expect(s.results.first()).toBeVisible();
-  await expect(aid(page, "romaji")).not.toBeChecked();
-  const first = hints(page, "english").first();
-  await expect(content(first)).toBeHidden();
-  await first.getByRole("button").click();
-  await expect(content(first)).toBeVisible();
-  await expect(page).toHaveURL("/?q=gakkou&category=vocab");
-  await expect(s.results.first().locator("a button")).toHaveCount(0);
-  const link = s.results.first().getByRole("link");
+  const first = s.results.first();
+  await expect(first).toBeVisible();
+  await expect(page.locator("#search").getByRole("group", { name: "Reading aids" })).toHaveCount(0);
+  await expect(page.locator("#search").getByRole("checkbox")).toHaveCount(0);
+  await expect(page.locator("#search [data-reading-hint]")).toHaveCount(0);
+  for (const value of ["学校", "がっこう", "gakkou", "school"]) {
+    await expect(first.getByText(value, {exact: true})).toBeVisible();
+  }
+  expect(await page.evaluate((storageKey) => localStorage.getItem(storageKey), key)).toBe(before);
+  const link = first.getByRole("link");
   const href = await link.getAttribute("href");
   await link.click();
   await expect(page).toHaveURL(href!);
-  await expect(aid(page, "english")).not.toBeChecked();
+  for (const kind of ["romaji", "english", "kana readings"]) await expect(aid(page, kind)).not.toBeChecked();
+  for (const kind of ["romaji", "english", "kana"]) await expect(content(hints(page, kind).first())).toBeHidden();
 });
 
 test("keyboard reveal controls have expanded state and hidden hints leave the accessible tree", async ({ page }) => {
@@ -179,19 +181,16 @@ test("two-toggle saved preferences keep existing choices and enable kana reading
   await expect(content(hints(page, "kana").first())).toBeVisible();
 });
 
-test("search can reveal a kana reading without following its result or announcing the answer", async ({ page }) => {
+test("kanji search readings stay visible when the study kana toggle is off", async ({ page }) => {
   await page.goto("/kanji/1");
   await aid(page, "kana readings").uncheck();
+  const before = await page.evaluate((storageKey) => localStorage.getItem(storageKey), key);
   await page.goto("/?q=hitotsu&category=script&chapter=kanji");
-  const s = search(page);
-  const row = s.results.filter({ has: page.locator("[data-reading-hint=kana]") }).first();
+  const row = search(page).results.first();
   await expect(row).toBeVisible();
-  const hint = row.locator("[data-reading-hint=kana]").first();
-  await expect(content(hint)).toBeHidden();
-  const kana = (await content(hint).textContent())!.trim();
-  expect(await row.getByRole("link").getAttribute("aria-label")).not.toContain(kana);
-  await hint.getByRole("button").click();
-  await expect(content(hint)).toBeVisible();
-  await expect(page).toHaveURL("/?q=hitotsu&category=script&chapter=kanji");
-  await expect(row.locator("ruby, rt, a button")).toHaveCount(0);
+  await expect(row.getByText("ひとつ", {exact: true})).toBeVisible();
+  await expect(row.getByText("hitotsu", {exact: true})).toBeVisible();
+  await expect(row.locator("[data-reading-hint], ruby, rt, a button")).toHaveCount(0);
+  await expect(page.locator("#search").getByRole("checkbox")).toHaveCount(0);
+  expect(await page.evaluate((storageKey) => localStorage.getItem(storageKey), key)).toBe(before);
 });

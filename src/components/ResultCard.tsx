@@ -1,8 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { resultHref, type SearchEntry, type SearchPage } from "@/lib/search";
-import { columnKind, cellKind, rowLabel } from "@/lib/reading-content";
-import { ReadingHint } from "@/components/ReadingPreferences";
+import { rowLabel } from "@/lib/reading-content";
 import CategoryTag from "@/components/CategoryTag";
 
 type Props = { entry: SearchEntry; pages: SearchPage[]; header?: string[]; showCategory?: boolean; occurrences?: SearchEntry[] };
@@ -36,7 +35,7 @@ export default function ResultCard({ entry, pages, header, showCategory = false,
 
   return (
     <li data-search-result="" className="relative rounded-card border border-border bg-background px-4 py-3.5 transition-colors hover:border-border-strong hover:bg-surface-raised has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-accent-text">
-      {/* One stretched link; reveal buttons are siblings, never nested inside it. */}
+      {/* One stretched primary link; additional locations stay separate. */}
       <div className="flex items-start justify-between gap-3">
         <Link href={resultHref(entry, pages)} aria-label={vocab ? context + " — " + where : undefined}
           className="min-w-0 break-words text-xs leading-relaxed text-subtle after:absolute after:inset-0 after:rounded-card focus-visible:outline-none">
@@ -50,23 +49,20 @@ export default function ResultCard({ entry, pages, header, showCategory = false,
           <p className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
             {vocab.values[0]?.trim() && (
               <span lang="ja" className="inline-flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xl font-medium text-foreground">
-                {vocab.japanese.map((spelling, i) => {
-                  const kind = cellKind(header!, values, spelling.column);
-                  return (
-                    <Fragment key={spelling.column}>
-                      {i > 0 && " "}
-                      <span>{kind ? <ReadingHint kind={kind} context={context}>{spelling.value}</ReadingHint> : spelling.value}</span>
-                    </Fragment>
-                  );
-                })}
+                {vocab.japanese.map((spelling, i) => (
+                  <Fragment key={spelling.column}>
+                    {i > 0 && " "}
+                    <span>{spelling.value}</span>
+                  </Fragment>
+                ))}
               </span>
             )}
             {vocab.values[1]?.trim() && (
-              <span className="text-sm text-accent-text"><ReadingHint kind="romaji" context={context}>{vocab.values[1]}</ReadingHint></span>
+              <span className="text-sm text-accent-text">{vocab.values[1]}</span>
             )}
           </p>
           {vocab.values[2]?.trim() && (
-            <p className="mt-0.5 break-words text-muted"><ReadingHint kind="english" context={context}>{vocab.values[2]}</ReadingHint></p>
+            <p className="mt-0.5 break-words text-muted">{vocab.values[2]}</p>
           )}
           {vocab.values.length > 3 && (
             <dl className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
@@ -74,9 +70,7 @@ export default function ResultCard({ entry, pages, header, showCategory = false,
                 <div key={i} className="flex gap-1.5">
                   <dt className="text-subtle">{vocab.extraHeaders[i]}</dt>
                   <dd className="min-w-0 break-words text-muted">
-                    {columnKind(vocab.extraHeaders[i])
-                      ? <ReadingHint kind={columnKind(vocab.extraHeaders[i])!} context={context}>{value}</ReadingHint>
-                      : value}
+                    {value}
                   </dd>
                 </div>
               ) : null)}
@@ -87,12 +81,11 @@ export default function ResultCard({ entry, pages, header, showCategory = false,
         <dl className="mt-2 grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-1">
           {values.map((value, i) => {
             if (!value.trim()) return null;
-            const kind = cellKind(header, values, i);
             return (
               <Fragment key={i}>
                 <dt className="text-sm text-subtle">{header[i]}</dt>
                 <dd className="min-w-0 break-words">
-                  {kind ? <ReadingHint kind={kind} context={context}>{value}</ReadingHint> : value}
+                  {value}
                 </dd>
               </Fragment>
             );

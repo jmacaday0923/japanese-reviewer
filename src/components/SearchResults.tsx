@@ -10,7 +10,6 @@ import {
   type SearchState,
 } from "@/lib/search";
 import ResultCard from "@/components/ResultCard";
-import { ReadingControls } from "@/components/ReadingPreferences";
 import Icon from "@/components/Icon";
 
 type Props = {
@@ -98,8 +97,6 @@ export default function SearchResults({ state, active, loading, failed, results,
           <p className="mt-1 text-sm text-muted">Try fewer letters, another spelling, or a different filter.</p>
         </div>
       )}
-
-      {count > 0 && <ReadingControls />}
 
       {repeated > 0 && (
         <p className="mt-3 text-xs leading-relaxed text-subtle">

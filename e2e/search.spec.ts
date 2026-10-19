@@ -47,28 +47,29 @@ test.describe("search", () => {
     await expect(s.results.first().locator("summary")).toHaveCount(0);
   });
 
-  test("reading reveals stay independent of collapsed source links on phones", async ({ page }) => {
+  test("phone results show all readings with hidden study choices and expandable sources", async ({ page }) => {
     await page.setViewportSize({width: 375, height: 800});
+    await page.addInitScript(() => {
+      localStorage.setItem("japanese-reviewer:reading-visibility",
+        JSON.stringify({version: 1, show: {romaji: false, english: false, kana: false}}));
+    });
     await page.goto("/?q=gakkou");
     const s = search(page);
-    const englishToggle = page.locator("main:visible").getByRole("checkbox", {name: "Show english", exact: true});
-    await englishToggle.uncheck();
     const first = s.results.first();
-    const hint = first.locator("[data-reading-hint=english]").first();
-    const content = hint.locator(":scope > span[id]");
-    await expect(content).toBeHidden();
-    await hint.getByRole("button").click();
-    await expect(content).toBeVisible();
-    await expect(page).toHaveURL("/?q=gakkou");
+    for (const value of ["学校", "がっこう", "gakkou", "school"]) {
+      await expect(first.getByText(value, {exact: true})).toBeVisible();
+    }
+    await expect(page.locator("#search").getByRole("checkbox")).toHaveCount(0);
+    await expect(first.locator("[data-reading-hint], button")).toHaveCount(0);
     await expect(first.locator("details")).not.toHaveAttribute("open", "");
     await first.locator("summary").click();
     await expect(first.getByRole("link", {name: /Kana 1/})).toBeVisible();
+    await expect(page).toHaveURL("/?q=gakkou");
     await expect(first.locator("a button, a summary, ruby, rt")).toHaveCount(0);
     const box = await first.boundingBox();
     expect(box!.x).toBeGreaterThanOrEqual(0);
     expect(box!.x + box!.width).toBeLessThanOrEqual(375);
   });
-
 
   test("starts idle", async ({ page }) => {
     await page.goto("/");

@@ -55,7 +55,7 @@ export function ReadingControls() {
         </button>
       </div>
       <p className="mt-1 text-xs leading-relaxed text-subtle">
-        Uncheck an aid to practise, then reveal individual hints. Choices apply across study pages and search.
+        Uncheck an aid to practise, then reveal individual hints. Choices apply across study pages.
       </p>
       {snapshot.ready && !snapshot.saved && (
         <p className="mt-1 text-xs text-muted">This browser cannot save these choices; they last for this tab.</p>
