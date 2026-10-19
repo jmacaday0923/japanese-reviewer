@@ -5,7 +5,7 @@ import {
   PAGE_SIZE,
   categoryLabel,
   chapterLabel,
-  type SearchEntry,
+  type SearchResultGroup,
   type SearchPage,
   type SearchState,
 } from "@/lib/search";
@@ -18,7 +18,7 @@ type Props = {
   active: boolean; // false when there's no text and no filter (the idle state)
   loading: boolean; // a search is waiting for the index to arrive
   failed: boolean; // the index couldn't be loaded
-  results: SearchEntry[];
+  results: SearchResultGroup[];
   pages: SearchPage[];
   headers: string[][];
   onReset: () => void;
@@ -46,6 +46,7 @@ export default function SearchResults({ state, active, loading, failed, results,
   const limit = page.key === key ? page.limit : PAGE_SIZE;
 
   const count = results.length;
+  const repeated = results.reduce((total, group) => total + group.occurrences.length - 1, 0);
   const status = !active
     ? ""
     : loading
@@ -100,12 +101,20 @@ export default function SearchResults({ state, active, loading, failed, results,
 
       {count > 0 && <ReadingControls />}
 
+      {repeated > 0 && (
+        <p className="mt-3 text-xs leading-relaxed text-subtle">
+          {repeated.toLocaleString("en-US")} repeated {repeated === 1 ? "match is" : "matches are"} grouped.
+          {" "}Open “Also in” on a result to see its other locations.
+        </p>
+      )}
+
       {count > 0 && (
         <ul className="mt-2 space-y-2">
-          {results.slice(0, limit).map((entry) => (
+          {results.slice(0, limit).map(({ entry, occurrences }) => (
             <ResultCard
-              key={entry.id}
+              key={key + ":" + entry.id}
               entry={entry}
+              occurrences={occurrences}
               pages={pages}
               header={entry.h === null ? undefined : headers[entry.h]}
               showCategory={state.category === "all"}

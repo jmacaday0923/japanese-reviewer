@@ -31,6 +31,12 @@ export type SearchIndex = {
   entries: SearchEntry[];
 };
 
+// One visible card and every matching source entry represented by it.
+export type SearchResultGroup = {
+  entry: SearchEntry;
+  occurrences: SearchEntry[];
+};
+
 export type ChapterOption = { value: string; label: string };
 
 // ---- Filters and URL state ----
@@ -95,18 +101,94 @@ export function searchUrl(location: { pathname: string; search: string; hash: st
 
 // ---- Matching ----
 
-// Nothing until there is text or a filter, then a case-insensitive
-// "contains" on the plain text, in page order.
+// Fold width, case and whitespace, but preserve accents, Japanese script,
+// punctuation and long vowels. Do not guess pronunciations or stem words.
+export function normalizeSearchText(value: string): string {
+  return value.normalize("NFKC").toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+// Matching preserves source order. Ranking and grouping happen afterwards,
+// using the table headers so sentence examples are not mistaken for definitions.
 export function matchEntries<T extends Pick<SearchEntry, "c" | "ch" | "x">>(entries: readonly T[], state: SearchState): T[] {
-  const q = state.q.trim().toLowerCase();
+  const q = normalizeSearchText(state.q);
   const { category, chapter } = state;
   if (!q && category === "all" && chapter === "all") return [];
   return entries.filter(
     (entry) =>
       (category === "all" || entry.c === category) &&
       (chapter === "all" || entry.ch === chapter) &&
-      entry.x.toLowerCase().includes(q)
+      normalizeSearchText(entry.x).includes(q)
   );
+}
+
+// A dictionary-style row has Japanese spellings, then Romaji and English.
+// Script pages contain these rows too; ordinary kana examples do not qualify.
+function isVocabularyRow(entry: SearchEntry, header: readonly string[]): boolean {
+  if (entry.c !== "vocab" && entry.c !== "script") return false;
+  const japanese = ["kana", "japanese", "word", "kanji"];
+  const labels = header.map(normalizeSearchText);
+  if (!japanese.includes(labels[0])) return false;
+  const spellings = japanese.includes(labels[1]) ? 2 : 1;
+  return labels[spellings] === "romaji" && labels[spellings + 1] === "english";
+}
+
+function containsWholeWord(text: string, query: string): boolean {
+  const wordCharacter = /[\p{L}\p{N}_]/u;
+  let start = text.indexOf(query);
+  while (start !== -1) {
+    // Array.from keeps supplementary-plane characters intact at the boundary.
+    const before = Array.from(text.slice(0, start)).at(-1) ?? "";
+    const after = Array.from(text.slice(start + query.length))[0] ?? "";
+    if (!wordCharacter.test(before) && !wordCharacter.test(after)) return true;
+    start = text.indexOf(query, start + 1);
+  }
+  return false;
+}
+
+function relevance(query: string, values: readonly string[], vocabulary: boolean): number {
+  if (!query) return 0; // Browsing by filter retains source order.
+  if (vocabulary) {
+    // Only spellings, Romaji and English define a word; supplemental notes
+    // (Break, Exit, etc.) remain searchable without outranking its definition.
+    if (values.some((value) => value === query)) return 0;
+    if (values.some((value) => value.startsWith(query))) return 1;
+    if (values.some((value) => containsWholeWord(value, query))) return 2;
+  }
+  if (values.some((value) => value === query)) return 3;
+  if (values.some((value) => containsWholeWord(value, query))) return 4;
+  return vocabulary ? 5 : 6;
+}
+
+// Filter first, rank without mutating the index, then group repeated content.
+// All occurrences survive, including links to different chapters or script pages.
+// Definitions may group across Vocabulary and Kana & Kanji; other categories
+// stay separate so an exercise is never merged with its answer.
+export function searchGroups(index: SearchIndex, state: SearchState): SearchResultGroup[] {
+  const query = normalizeSearchText(state.q);
+  const ranked = matchEntries(index.entries, state).map((entry, order) => {
+    const header = entry.h === null ? [] : index.headers[entry.h] ?? [];
+    const values = (entry.h === null ? [entry.x] : entry.x.split(" | ")).map(normalizeSearchText);
+    const vocabulary = isVocabularyRow(entry, header);
+    const labels = header.map(normalizeSearchText);
+    const englishColumn = labels.indexOf("english");
+    const fields = vocabulary ? values.slice(0, englishColumn + 1) : values;
+    // Include every column, including notes, in the identity. Different
+    // meanings, readings, examples or explanatory notes remain separate.
+    const key = JSON.stringify([
+      vocabulary ? "definition" : entry.c,
+      entry.h === null ? null : labels,
+      values,
+    ]);
+    return { entry, order, key, score: relevance(query, fields, vocabulary) };
+  });
+  ranked.sort((a, b) => a.score - b.score || a.order - b.order);
+  const groups = new Map<string, SearchResultGroup>();
+  for (const { entry, key } of ranked) {
+    const group = groups.get(key);
+    if (group) group.occurrences.push(entry);
+    else groups.set(key, { entry, occurrences: [entry] });
+  }
+  return [...groups.values()];
 }
 
 // ---- Labels and links ----

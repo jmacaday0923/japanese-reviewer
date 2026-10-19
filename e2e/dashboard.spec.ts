@@ -1,5 +1,5 @@
 import { test, expect, index, library, search, visibleMain, type Page } from "./fixtures";
-import { categoryLabel, matchEntries } from "../src/lib/search";
+import { categoryLabel, searchGroups } from "../src/lib/search";
 
 // The dashboard's layout and the parts added with the blue redesign: the
 // grouped navigation and toolbar, stats from the data, the Practice section,
@@ -127,8 +127,8 @@ test("Ctrl+K and Cmd+K focus the search, and the hint shows only once that works
 test("search results show category tags only when not filtered to one", async ({ page }) => {
   await page.goto("/?q=gakkou");
   const s = search(page);
-  // the first match is in a Chapter 1 lesson
-  const first = categoryLabel(matchEntries(index.entries, { q: "gakkou", category: "all", chapter: "all" })[0].c);
+  // Exact vocabulary definitions lead the ranked groups.
+  const first = categoryLabel(searchGroups(index, { q: "gakkou", category: "all", chapter: "all" })[0].entry.c);
   await expect(s.results.first().locator("span.rounded-full")).toHaveText(first);
   await s.chip(first).click();
   await expect(s.chip(first)).toHaveAttribute("aria-pressed", "true");

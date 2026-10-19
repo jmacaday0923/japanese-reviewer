@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation";
 import {
   DEFAULT_STATE,
   isDefaultState,
-  matchEntries,
+  searchGroups,
   parseSearchState,
   searchUrl,
   type CategoryFilter,
@@ -101,7 +101,7 @@ export default function Search({ chapters }: Props) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  const results = useMemo(() => (index ? matchEntries(index.entries, state) : []), [index, state]);
+  const results = useMemo(() => (index ? searchGroups(index, state) : []), [index, state]);
 
   // The URL as it is right now. useSearchParams catches up a moment after
   // each history write, so two quick changes in a row (a category, then a

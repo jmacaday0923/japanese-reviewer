@@ -5,7 +5,7 @@ import { columnKind, cellKind, rowLabel } from "@/lib/reading-content";
 import { ReadingHint } from "@/components/ReadingPreferences";
 import CategoryTag from "@/components/CategoryTag";
 
-type Props = { entry: SearchEntry; pages: SearchPage[]; header?: string[]; showCategory?: boolean };
+type Props = { entry: SearchEntry; pages: SearchPage[]; header?: string[]; showCategory?: boolean; occurrences?: SearchEntry[] };
 const JAPANESE = ["Kana", "Japanese", "Word", "Kanji"];
 
 function vocabularyColumns(entry: SearchEntry, header: string[] | undefined) {
@@ -20,14 +20,22 @@ function vocabularyColumns(entry: SearchEntry, header: string[] | undefined) {
   return { values: [word, ...values.slice(spellings)], japanese, extraHeaders: header.slice(spellings + 2) };
 }
 
-export default function ResultCard({ entry, pages, header, showCategory = false }: Props) {
+export default function ResultCard({ entry, pages, header, showCategory = false, occurrences = [] }: Props) {
   const where = [pages[entry.p].name, entry.b].filter(Boolean).join(" › ");
   const vocab = vocabularyColumns(entry, header);
   const values = entry.x.split(" | ");
   const context = rowLabel(header ?? [], values, where);
+  const primaryHref = resultHref(entry, pages);
+  const seen = new Set([primaryHref]);
+  const otherLocations = occurrences.filter((other) => {
+    const href = resultHref(other, pages);
+    if (seen.has(href)) return false;
+    seen.add(href);
+    return true;
+  });
 
   return (
-    <li className="relative rounded-card border border-border bg-background px-4 py-3.5 transition-colors hover:border-border-strong hover:bg-surface-raised has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-accent-text">
+    <li data-search-result="" className="relative rounded-card border border-border bg-background px-4 py-3.5 transition-colors hover:border-border-strong hover:bg-surface-raised has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-accent-text">
       {/* One stretched link; reveal buttons are siblings, never nested inside it. */}
       <div className="flex items-start justify-between gap-3">
         <Link href={resultHref(entry, pages)} aria-label={vocab ? context + " — " + where : undefined}
@@ -91,6 +99,22 @@ export default function ResultCard({ entry, pages, header, showCategory = false 
           })}
         </dl>
       ) : <p className="mt-1.5 break-words leading-relaxed">{entry.x}</p>}
+
+      {otherLocations.length > 0 && (
+        <details className="relative z-10 mt-3 border-t border-border pt-2">
+          <summary className="min-h-11 cursor-pointer rounded-control px-1 py-3 text-sm font-medium text-accent-text focus-visible:outline-2 focus-visible:outline-accent-text">
+            Also in {otherLocations.length} other {otherLocations.length === 1 ? "location" : "locations"}
+          </summary>
+          <div className="flex flex-col gap-1 pb-1">
+            {otherLocations.map((other) => (
+              <Link key={resultHref(other, pages)} href={resultHref(other, pages)} prefetch={false}
+                className="min-h-11 rounded-control px-3 py-2.5 text-sm leading-relaxed text-muted hover:bg-surface-raised hover:text-foreground focus-visible:outline-2 focus-visible:outline-accent-text">
+                {[pages[other.p].name, other.b].filter(Boolean).join(" › ")}
+              </Link>
+            ))}
+          </div>
+        </details>
+      )}
     </li>
   );
 }

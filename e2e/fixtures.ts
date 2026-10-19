@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { test as base, expect, type Page } from "@playwright/test";
-import { buildSearchIndex, matchEntries, type CategoryFilter } from "../src/lib/search";
+import { buildSearchIndex, searchGroups, type CategoryFilter } from "../src/lib/search";
 import type { Chapter } from "../src/types/lesson";
 
 // Every test fails if the page logs an error, throws, or an app request fails.
@@ -58,7 +58,7 @@ export const index = buildSearchIndex([
 ]);
 
 export function expectedCount(q: string, category = "all", chapter = "all") {
-  return matchEntries(index.entries, { q, category: category as CategoryFilter, chapter }).length;
+  return searchGroups(index, { q, category: category as CategoryFilter, chapter }).length;
 }
 
 export function statusText(count: number, shown = 50) {
