@@ -138,6 +138,11 @@ test("kana character cards reveal a reading and use romaji as their reverse prom
   await expect(review(page).getByText("Reading (romaji)",{exact:true})).toBeVisible();
   await expect(review(page).locator("[data-flashcard-answer]")).toContainText(character.romaji);
   await visibleMain(page).getByRole("button",{name:"English → Japanese",exact:true}).click();
-  await expect(review(page).getByRole("heading",{name:character.romaji,exact:true})).toBeVisible();
+  const reverse = review(page).getByRole("heading", {level: 2});
+  const reading = reverse.locator("[data-reading-hint=romaji] > span[id]");
+  await expect(reading).toBeHidden();
+  await reverse.getByRole("button", {name: /^Reveal Romaji/}).click();
+  await expect(reading).toBeVisible();
+  await expect(reading).toHaveText(character.romaji);
   await expect(review(page).getByText("Romaji → kana",{exact:false})).toBeVisible();
 });

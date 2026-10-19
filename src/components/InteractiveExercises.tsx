@@ -2,6 +2,7 @@
 
 import { useId, useRef, useState, type KeyboardEvent } from "react";
 import type { ChapterExercises, ExerciseSet } from "@/types/exercise";
+import StudyText from "@/components/StudyText";
 import CategoryTag from "@/components/CategoryTag";
 import ParticleExercise from "@/components/ParticleExercise";
 import VocabularyMatching from "@/components/VocabularyMatching";
@@ -94,7 +95,7 @@ export default function InteractiveExercises({ exercises }: { exercises: Chapter
         >
           <div className="mb-3 flex flex-wrap items-center gap-2 border-b border-border pb-3">
             <CategoryTag category={LABELS[set.type].category} />
-            <p className="text-sm font-medium text-foreground">{set.title}</p>
+            <p className="text-sm font-medium text-foreground"><StudyText display={set.displayTitle ?? { primary: set.title }} /></p>
             <p className="w-full text-xs text-subtle">
               From{" "}
               <a href={`#${sourceOf(set).exercise}`} className="text-accent-text underline-offset-2 hover:underline">

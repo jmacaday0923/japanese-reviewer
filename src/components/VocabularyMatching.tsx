@@ -14,6 +14,8 @@ import {
   vocabularyRounds,
   type Grade,
 } from "@/lib/exercises";
+import StudyText from "@/components/StudyText";
+import { ReadingHint } from "@/components/ReadingPreferences";
 import Icon from "@/components/Icon";
 import { Explanation, PRIMARY_BUTTON, PracticeSummary, Verdict } from "@/components/PracticeParts";
 
@@ -164,15 +166,16 @@ function PairRow({ pair, options, value, status, selectRef, onChoose }: RowProps
       }
     >
       <div className="grid gap-2 sm:grid-cols-[minmax(0,13rem)_minmax(0,1fr)] sm:items-center sm:gap-4">
-        <label htmlFor={selectId} className="min-w-0 break-words">
+        <div className="min-w-0 break-words"><label htmlFor={selectId}>
           <span className="sr-only">Meaning of </span>
-          <span className="font-medium text-foreground">{pair.japanese}</span>
-          {pair.kana && (
+          <span className="font-medium text-foreground">{pair.display?.japanese?.primary ?? pair.kana ?? pair.japanese}</span>
+          {pair.kana && pair.kana !== pair.display?.japanese?.primary && (
             <span lang="ja" className="ml-2 inline-block text-muted [word-break:keep-all]">
               {pair.kana}
             </span>
           )}
         </label>
+        <p className="mt-1 text-sm"><ReadingHint kind="romaji" context={"this vocabulary word"} compact>{pair.japanese}</ReadingHint></p></div>
         {status === "correct" ? (
           // Matched: shown as text, so it stays put through retries
           <p id={selectId} className="flex min-h-11 items-center gap-2 text-foreground">
@@ -219,7 +222,7 @@ function PairRow({ pair, options, value, status, selectRef, onChoose }: RowProps
             <Explanation>
               <p>
                 <span className="text-subtle">Why: </span>
-                {pair.why}
+                <StudyText display={pair.display?.why ?? { primary: pair.why }} context="this vocabulary explanation" />
               </p>
             </Explanation>
           </div>

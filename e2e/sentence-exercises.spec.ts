@@ -1,3 +1,5 @@
+import catalog from "../src/data/japanese-display.json";
+import { studyDisplay } from "../src/lib/study-markup";
 import type { Locator, Page } from "@playwright/test";
 import { test, expect, visibleMain } from "./fixtures";
 import bank from "../src/data/sentence-exercises.json";
@@ -61,7 +63,7 @@ test("tiles support keyboard selection, removal, undo, clear, blank checks and s
   await select(item, correctOrder(q.tokens).reverse());
   await check(item).click();
   await expect(feedback(item)).toContainText("Incorrect");
-  await expect(feedback(item)).toContainText(q.why);
+  await expect(feedback(item)).toContainText(studyDisplay(catalog, q.why).primary);
   await expect(feedback(item)).toBeFocused();
   await expect(feedback(item).getByRole("link")).toHaveAttribute("href", "#" + q.example.source.heading);
   await item.getByRole("button", { name: "Clear sentence", exact: true }).click();
@@ -128,7 +130,7 @@ test("typed negative forms handle blank answers and IME Enter; equivalent source
   await input.press("Enter");
   await expect(input).toHaveAttribute("aria-invalid", "true");
   await expect(feedback(item)).toContainText("Incorrect");
-  await expect(feedback(item)).toContainText(q.why);
+  await expect(feedback(item)).toContainText(studyDisplay(catalog, q.why).primary);
   await input.fill("WATASHI WA NIHONJIN JA ARIMASEN.");
   await input.dispatchEvent("keydown", { key: "Enter", code: "Enter", isComposing: true });
   await expect(feedback(item)).toBeEmpty();
@@ -143,7 +145,7 @@ test("typed negative forms handle blank answers and IME Enter; equivalent source
   await exceptionItem.getByRole("textbox").fill(exception.answer.japanese);
   await check(exceptionItem).click();
   await expect(feedback(exceptionItem)).toContainText("Correct");
-  await expect(feedback(exceptionItem)).toContainText(exception.why);
+  await expect(feedback(exceptionItem)).toContainText(studyDisplay(catalog, exception.why).primary);
 });
 
 test("casual transformations accept the printed optional particle and preserve past tense", async ({ page }) => {
@@ -181,13 +183,13 @@ test("answer hints follow reading preferences; the task cue and Japanese model r
   const answer = feedback(item);
   await expect(answer.locator('[lang="ja"]')).toHaveText(q.example.japanese);
   for (const kind of ["romaji", "english"]) {
-    const hint = answer.locator('[data-reading-hint="' + kind + '"]');
+    const hint = answer.locator('[data-reading-hint="' + kind + '"]').first();
     await expect(hint.locator(":scope > span[id]")).toBeHidden();
     await hint.getByRole("button").click();
     await expect(hint.locator(":scope > span[id]")).toBeVisible();
   }
   await visibleMain(page).getByRole("button", { name: "Hide revealed hints", exact: true }).click();
-  await expect(answer.locator('[data-reading-hint="romaji"] > span[id]')).toBeHidden();
+  for (const hint of await answer.locator('[data-reading-hint="romaji"] > span[id]').all()) await expect(hint).toBeHidden();
   await expect(answer.locator("ruby, rt")).toHaveCount(0);
 });
 

@@ -55,7 +55,7 @@ export function ReadingControls() {
         </button>
       </div>
       <p className="mt-1 text-xs leading-relaxed text-subtle">
-        Uncheck an aid to practise, then reveal individual hints. Choices apply across study pages.
+        Romaji starts hidden throughout study pages. Show it here or reveal one hint at a time. Optional reading and workbook panels have their own reveal.
       </p>
       {snapshot.ready && !snapshot.saved && (
         <p className="mt-1 text-xs text-muted">This browser cannot save these choices; they last for this tab.</p>
@@ -66,18 +66,18 @@ export function ReadingControls() {
 
 const REVEAL_BUTTON = "z-10 inline-flex min-h-9 items-center rounded-control border border-border-strong text-xs font-medium text-accent-text hover:bg-accent-soft";
 
-export function ReadingHint({ kind, context, children }: { kind: HintKind; context: string; children: ReactNode }) {
+export function ReadingHint({ kind, context, children, compact = false }: { kind: HintKind; context: string; children: ReactNode; compact?: boolean }) {
   const { ready, hiddenByPreference, visible, toggle } = useReveal(kind);
   const id = useId();
   const label = kind === "kana" ? "kana reading" : LABELS[kind];
   return (
-    <span data-reading-hint={kind} className="relative inline-block min-h-9 min-w-28 max-w-full align-middle">
+    <span data-reading-hint={kind} className={compact ? "reading-compact relative inline-block max-w-full align-middle" : "relative inline-block min-h-9 min-w-28 max-w-full align-middle"}>
       {!ready && <span className="sr-only">Loading reading preferences</span>}
-      <span id={id} aria-hidden={!visible} style={{ visibility: visible ? "visible" : "hidden" }}>{children}</span>
-      {ready && hiddenByPreference && (
-        <button type="button" onClick={toggle} aria-expanded={visible} aria-controls={id}
+      <span id={id} aria-hidden={!visible} hidden={compact && !visible} style={compact ? undefined : { visibility: visible ? "visible" : "hidden" }}>{children}</span>
+      {(ready || compact) && hiddenByPreference && (
+        <button type="button" disabled={!ready} onClick={toggle} aria-expanded={visible} aria-controls={id}
           aria-label={(visible ? "Hide " : "Reveal ") + label + " for " + context}
-          className={REVEAL_BUTTON + " px-2.5" + (visible ? " relative mt-1" : " absolute left-0 top-0")}>
+          className={REVEAL_BUTTON + " px-2.5" + (compact || visible ? " relative mt-1" : " absolute left-0 top-0")}>
           {visible ? "Hide " : "Reveal "}{label}
         </button>
       )}

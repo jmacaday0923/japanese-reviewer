@@ -1,11 +1,12 @@
 import { cellText, cellKind, isExampleTable, isJapaneseColumn, rowLabel, type ReadingTableData } from "@/lib/reading-content";
 import type { FlashcardDraft } from "@/lib/flashcards";
+import StudyHtml from "@/components/StudyHtml";
 import AddAllFlashcards from "@/components/AddAllFlashcards";
 import AddFlashcard from "@/components/AddFlashcard";
 import { ReadingHint } from "@/components/ReadingPreferences";
 
 // One table at every width keeps per-item reveals and flashcard controls intact.
-export default function ReadingTable({ table, flashcards = [] }: { table: ReadingTableData; flashcards?: (FlashcardDraft | null)[] }) {
+export default function ReadingTable({ table, flashcards = [], scope = "" }: { table: ReadingTableData; flashcards?: (FlashcardDraft | null)[]; scope?: string }) {
   const hasFlashcards = flashcards.some(Boolean);
   const examples = isExampleTable(table);
   return (
@@ -16,7 +17,7 @@ export default function ReadingTable({ table, flashcards = [] }: { table: Readin
         <thead role={examples ? "rowgroup" : undefined}>
           <tr role={examples ? "row" : undefined}>
             {table.headers.map((header, c) => (
-              <th key={c} role={examples ? "columnheader" : undefined} scope="col" className="reading-column-heading" dangerouslySetInnerHTML={{ __html: header }} />
+              <th key={c} role={examples ? "columnheader" : undefined} scope="col" className="reading-column-heading" ><StudyHtml html={header} scope={scope} /></th>
             ))}
             {hasFlashcards && (
               <th role={examples ? "columnheader" : undefined} scope="col" className="reading-actions">
@@ -35,7 +36,7 @@ export default function ReadingTable({ table, flashcards = [] }: { table: Readin
                   const japanese = isJapaneseColumn(table.headers[c]);
                   const value = <span lang={japanese || kind === "kana" ? "ja" : kind === "english" ? "en" : undefined}
                     className={kind === "kana" ? "reading-kana" : japanese ? "reading-japanese" : kind ? "reading-supporting" : undefined}
-                    dangerouslySetInnerHTML={{ __html: html }} />;
+                    ><StudyHtml html={html} scope={scope} literal={kind === "romaji"} english={kind === "english"} /></span>;
                   return (
                     <td key={c} role={examples ? "cell" : undefined}>
                       {examples && <span aria-hidden="true" className="reading-cell-label">{cellText(table.headers[c])}</span>}

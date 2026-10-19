@@ -1,3 +1,7 @@
+import catalog from "@/data/japanese-display.json";
+import { studyDisplay } from "@/lib/study-markup";
+import StudyText from "@/components/StudyText";
+import type { TocNode } from "@/lib/toc";
 import Link from "next/link";
 import type { Chapter } from "@/types/lesson";
 import { studyOutline } from "@/lib/toc";
@@ -35,14 +39,18 @@ export default function ChapterView({ chapter, label, basePath, prev, next, exer
     { label: `${label} ${chapter.ch}` },
   ];
 
+  const labels = (nodes: TocNode[]): TocNode[] => nodes.map(node => ({ ...node,
+    label: studyDisplay(catalog, node.label, `${KINDS[basePath]}/${chapter.ch}/exercises`).primary,
+    children: labels(node.children),
+  }));
   return (
     <ReaderLayout
       page={{ kind: KINDS[basePath], id: chapter.ch }}
       breadcrumbs={breadcrumbs}
       eyebrow={`${label} ${chapter.ch}`}
       title={chapter.title}
-      intro={chapter.intro}
-      outline={studyOutline(chapter.sections, chapter.toc)}
+      intro={<StudyText display={studyDisplay(catalog, chapter.intro ?? "")} />}
+      outline={labels(studyOutline(chapter.sections, chapter.toc))}
       footer={
         // Previous and next page in the same section
         <nav aria-label={`${label} pages`} className="mt-16 grid gap-3 border-t border-border pt-6 text-sm sm:grid-cols-2">

@@ -1,3 +1,4 @@
+import type { StudyDisplay } from "@/lib/study-markup";
 export type SentenceSource = {
   heading: string;
   table: number; // One-based table and row within this lesson heading.
@@ -15,6 +16,7 @@ export type WordOrderQuestion = {
   type: "order";
   example: SentenceExample;
   tokens: string[]; // Words or phrases; repeated text is allowed.
+  displayWhy?: StudyDisplay;
   why: string;
   whyParagraph: number; // One-based explanatory paragraph under the answer/source heading.
 };
@@ -24,6 +26,7 @@ export type TransformationQuestion = {
   change: "negative" | "casual";
   original: SentenceExample;
   answer: SentenceExample;
+  displayWhy?: StudyDisplay;
   why: string;
   whyParagraph: number; // One-based explanatory paragraph under the answer/source heading.
 };

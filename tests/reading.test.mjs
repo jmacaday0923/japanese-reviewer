@@ -31,6 +31,7 @@ test("reading store: independent choices persist, stable snapshots, reveals rese
   const stop = store.subscribe(() => notices++);
   const first = store.getSnapshot();
   assert.equal(first, store.getSnapshot());
+  store.setShown("romaji", true);
   store.setShown("romaji", false);
   assert.deepEqual(store.getSnapshot().show, { romaji: false, english: true, kana: true });
   const rev = store.getSnapshot().revision;
@@ -39,7 +40,7 @@ test("reading store: independent choices persist, stable snapshots, reveals rese
   assert.deepEqual(store.getSnapshot().show, { romaji: false, english: true, kana: true });
   store.setShown("english", false);
   store.setShown("kana", false);
-  assert.equal(notices, 4);
+  assert.equal(notices, 5);
   assert.ok(storage.writes.every((key) => key === READING_KEY));
   assert.deepEqual(createReadingStore({ getStorage: () => storage }).getSnapshot().show, { romaji: false, english: false, kana: false });
   stop();
@@ -61,8 +62,8 @@ test("reading store: blocked storage, failed writes, and later failed reads reta
   const full = fakeStorage();
   const failed = createReadingStore({ getStorage: () => full });
   full.failWrite = true;
-  failed.setShown("romaji", false);
-  assert.equal(failed.getSnapshot().show.romaji, false);
+  failed.setShown("romaji", true);
+  assert.equal(failed.getSnapshot().show.romaji, true);
   assert.equal(failed.getSnapshot().saved, false);
 });
 
@@ -119,7 +120,7 @@ test("reading preferences: retain both prior formats and prefer an explicit kana
   const store = createReadingStore({ getStorage: () => storage });
   assert.deepEqual(store.getSnapshot().show, { ...two, kana: false });
   store.setShown("english", true);
-  assert.deepEqual(JSON.parse(storage.raw), { version: 1, show: { romaji: false, english: true, kana: false } });
+  assert.deepEqual(JSON.parse(storage.raw), { version: 2, show: { romaji: false, english: true, kana: false } });
 });
 
 test("reading-only tables become controllable without changing kanji or kana text", () => {

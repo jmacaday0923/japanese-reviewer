@@ -1,3 +1,4 @@
+import type { StudyDisplay } from "@/lib/study-markup";
 // The interactive exercise bank (src/data/exercises.json). Every question is
 // copied from an exercise table in chapters.json and its row in the Answer
 // key, and records where it came from, so the bank can be checked against
@@ -19,6 +20,7 @@ export type ParticleQuestion = {
   answer: string;     // the Answer cell, word for word: "wa (は)"
   accepted: string[]; // every answer that counts as correct, already normalized
   why: string;        // the Why cell, word for word
+  display?: { prompt?: StudyDisplay; japanese?: StudyDisplay; answer: StudyDisplay; why: StudyDisplay };
   source: ExerciseSource;
 };
 
@@ -33,12 +35,14 @@ export type VocabularyPair = {
   kana: string | null;  // only when the answer key gives it
   english: string;      // the meaning, as the source writes it
   why: string;          // the Why cell, word for word
+  display?: { prompt?: StudyDisplay; japanese?: StudyDisplay; answer: StudyDisplay; why: StudyDisplay };
   source: ExerciseSource;
 };
 
 export type ParticleSet = {
   id: string;           // "c1-particles"
   type: "particles";
+  displayTitle?: StudyDisplay;
   title: string;        // the exercise part's heading
   questions: ParticleQuestion[];
 };
@@ -46,6 +50,7 @@ export type ParticleSet = {
 export type VocabularySet = {
   id: string;           // "c1-vocabulary"
   type: "vocabulary";
+  displayTitle?: StudyDisplay;
   title: string;
   pairs: VocabularyPair[];
 };

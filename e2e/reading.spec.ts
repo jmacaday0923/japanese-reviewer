@@ -9,7 +9,8 @@ test.use({ viewport: { width: 1440, height: 900 } });
 
 test("three independent toggles; reveal one hint; re-hide; refresh persistence", async ({ page }) => {
   await page.goto("/chapters/1");
-  await expect(aid(page, "romaji")).toBeChecked();
+  await expect(aid(page, "romaji")).not.toBeChecked();
+  await aid(page, "romaji").check();
   const romaji = hints(page, "romaji");
   const english = hints(page, "english");
   await expect(content(romaji.first())).toBeVisible();
@@ -56,9 +57,12 @@ test("kana readings toggle independently while kanji stays plain, with per-item 
   await expect(word).toBeVisible();
   await expect(word).toHaveText(wordBefore!);
   await expect(content(kana)).toBeHidden();
-  const otherReading = visibleMain(page).locator(".lesson table").filter({
-    has: page.getByRole("columnheader", { name: "On'yomi", exact: true }),
-  }).first().locator("[data-reading-hint=kana]").first();
+  const readingsTable = visibleMain(page).locator(".lesson table").filter({
+    has: page.getByRole("columnheader", { name: /^音読み/ }),
+  }).first();
+  await expect(readingsTable).toBeVisible();
+  const otherReading = readingsTable.locator("[data-reading-hint=kana]").first();
+  await expect(otherReading).toHaveCount(1);
   await expect(content(otherReading)).toBeHidden();
   await expect(kana.getByRole("button")).toHaveAttribute("aria-label", /Reveal kana reading for/);
   expect(await kana.getByRole("button").getAttribute("aria-label")).not.toContain(kanaBefore!.trim());
@@ -153,7 +157,7 @@ test("phone controls wrap without clipping", async ({ page }) => {
   const hint = hints(page, "romaji").first();
   await hint.getByRole("button").click();
   await expect(content(hint)).toBeVisible();
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem("japanese-reviewer:reading-visibility")!).version)).toBe(1);
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem("japanese-reviewer:reading-visibility")!).version)).toBe(2);
 });
 
 test("original furigana preference migrates to kana readings without ruby", async ({ page }) => {

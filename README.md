@@ -114,6 +114,22 @@ Model answers, readings, meanings, explanations and source links appear after ch
 
 `src/data/sentence-exercises.json` holds the starter bank, with exact heading/table/row references to `chapters.json`. Only the current chapter's questions cross the server/client boundary. `tests/sentence-exercises.test.mjs` verifies every sentence, reading, translation and explanation against its source, plus grading and retries. `e2e/sentence-exercises.spec.ts` covers browser interactions and narrow screens. To extend the bank, use a verified original/target example pair for each transformation and add deliberate accepted alternatives through the grading helper; run all checks before publishing.
 
+## Reading comprehension and workbook romaji
+
+The 12 reading-comprehension passages in Chapters 5–10 start with Japanese text and Japanese questions/choices. **Romaji support (optional)** and **English translation (optional)** are separate, closed disclosures for each passage. Open either when needed; they start closed on a full reload and work without JavaScript. These local reading supports are independent of the global aids used by lesson tables. Search still includes their content and always shows matching readings and meanings.
+
+Vocabulary notes sit below a passage only when an expression has not been taught in that chapter's or an earlier chapter's Lessons/Vocabulary sections. Repeated “Words” lists are removed. The current audit finds one untaught expression: **これから**, in Chapter 9's second book-reading question. It is explained below that passage. Other words, including the Chapter 8 cafeteria vocabulary and Chapter 10 cherry-blossom phrase, already appear in the study material.
+
+The content remains in `src/data/chapters.json`; `migration/reading-exercise-audit.json` records the 12 passages, 58 question revisions, original content, translations and 247 references to taught vocabulary. This is a manual content review, not an automatic Japanese tokenizer. Native disclosure styles live in `src/app/globals.css`. `tests/reading-exercises.test.mjs` checks scope, Japanese prompts, source references and search; `e2e/reading-exercises.spec.ts` checks default visibility, independent reveals, keyboard use, notes and narrow screens.
+
+### Workbook exercises in every chapter
+
+Workbook prompts in Chapters 1–10 now show Japanese first. Each activity has one closed **Romaji support (optional)** panel containing its question readings, passage transcription and original example wording. Instructions and English-to-Japanese translation prompts stay available. The existing global lesson-table reading aids do not automatically open workbook support.
+
+This covers 78 workbook activities in addition to the six previously updated book-reading panels. There are 68 new support panels, 510 Japanese question/choice prompts, and 16 passage paragraphs with optional transcriptions. Chapters 1–3 receive Japanese versions for their previously romaji-only material; later chapters reuse their existing printed Japanese. Cloze blanks, numbered choices, adjective word banks and English picture descriptions are retained. The previously added Chapter 5–10 reading translations and vocabulary notes keep their existing controls.
+
+The content is stored in `src/data/chapters.json`, with review history in `migration/workbook-romaji-audit.json`. No runtime transliteration is used. A fresh load starts support closed; opening it affects that activity, and reloading closes it. `tests/workbook-romaji.test.mjs` and `e2e/workbook-romaji.spec.ts` cover source preservation, search, all ten chapters, independent reveals and phone layout.
+
 ## Bookmarks and Continue studying
 
 Reader pages have a **Bookmark page** button, and a **Bookmark section** button after you jump to a section from On this page. The dashboard shows your bookmarks and the last study page you opened.
@@ -172,3 +188,20 @@ On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected de
 The shared content bank ships with the app. Your saved cards and per-direction schedules use the existing browser storage; there is no database or account setup. Importing again adds newly available content without resetting existing progress. Removed cards return if you deliberately import their deck again. Clearing browser site data removes saved cards/progress; the app still provides the pre-made bank.
 
 Reviews use a seeded shuffle that stays stable while revealing answers or changing display toggles. Due cards come first; new cards are sampled from the entire selected pool before applying the daily limit. **Shuffle review order** starts a new random order without resetting schedules or the daily allowance. Again can repeat a card after its scheduled ten-minute wait. No immediate repeats occur after rating a card. Use the saved-page filters below the pre-made picker to switch between already imported chapters.
+
+## Japanese-first study content
+
+Romaji starts hidden on every chapter, Kana, Kanji and practice page. Use **Show romaji** in Reading aids to show it across study content, or **Reveal Romaji** beside a particular item. **Hide revealed hints** closes temporary reveals. Existing reading and workbook support panels keep their own closed-by-default disclosures. English and kana-reading preferences remain independent; no ruby text is added above kanji.
+
+Exercises, explanations, answer keys, grammar headings and the interactive activities use reviewed Japanese display text from **src/data/japanese-display.json**. The source datasets and answer banks remain the reference for search, flashcard IDs and grading. Search continues to show all readings and meanings. Kana writing drills use English meaning cues, and look-alike drills use the opposite script, so the prompt does not print the answer.
+
+Reading preferences now use version 2 of the same browser-storage key. Version 1 migrates to romaji hidden while preserving English and kana choices; an explicit Show romaji choice in version 2 persists. Flashcards, bookmarks and exercise grading are unaffected. Reverse Kana flashcards keep their original task but require revealing the romaji prompt when romaji is hidden.
+
+When editing course content, add or review its exact Japanese display string before regenerating the audit:
+
+```sh
+node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/audit-japanese-display.mjs
+npm test
+```
+
+The audit records every study page and source-file fingerprints. It prevents a source-content edit from silently bypassing the display review. The display layer uses exact strings; it does not transliterate or guess Japanese at runtime.

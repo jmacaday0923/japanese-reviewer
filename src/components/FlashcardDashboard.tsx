@@ -1,4 +1,7 @@
 "use client";
+import englishCatalog from "@/data/english-display.json";
+import { studyDisplay } from "@/lib/study-markup";
+import StudyText from "@/components/StudyText";
 import Link from "next/link";
 import FlashcardDeckPicker from "@/components/FlashcardDeckPicker";
 import { newFlashcardSeed, useFlashcardShuffleSeed } from "@/components/use-flashcard-shuffle";
@@ -38,7 +41,7 @@ export function ReviewCard({ card, direction, now, onRate }: {
     <article data-flashcard-review="" className="mt-5 min-w-0 rounded-card border border-border bg-surface p-5 sm:p-8">
       <p className="text-xs font-semibold uppercase tracking-wider text-subtle">{card.kind} · {card.kind === "kana" ? (direction === "recognition" ? "Kana → reading" : "Romaji → kana") : DIRECTION_LABELS[direction]}</p>
       <h2 className="mt-5 break-words text-3xl font-semibold leading-relaxed text-foreground sm:text-4xl" lang={direction === "recognition" ? "ja" : "en"}>
-        {direction === "recognition" ? card.japanese : card.meaning}
+        {direction === "recognition" ? card.japanese : card.kind === "kana" ? <ReadingHint kind="romaji" context="this reverse kana card" compact>{card.meaning}</ReadingHint> : <StudyText display={studyDisplay(englishCatalog, card.meaning)} />}
       </h2>
       <p className="mt-3 text-sm text-muted">Recall the answer, then reveal it and rate how well you remembered.</p>
       {!revealed ? (
@@ -51,14 +54,14 @@ export function ReviewCard({ card, direction, now, onRate }: {
           <dl className="mt-3 space-y-3">
             {card.kana && <div><dt className="text-xs text-subtle">Kana readings</dt><dd lang="ja" className="mt-1 break-words text-lg"><ReadingHint kind="kana" context={card.japanese}>{card.kana}</ReadingHint></dd></div>}
             {card.romaji && (card.kind !== "kana" || direction === "recall") && <div><dt className="text-xs text-subtle">Romaji</dt><dd className="mt-1 break-words text-accent-text"><ReadingHint kind="romaji" context={card.japanese}>{card.romaji}</ReadingHint></dd></div>}
-            {direction === "recognition" && <div><dt className="text-xs text-subtle">{card.kind === "kana" ? "Reading (romaji)" : "Meaning"}</dt><dd className="mt-1 break-words text-lg"><ReadingHint kind={card.kind === "kana" ? "romaji" : "english"} context={card.japanese}>{card.meaning}</ReadingHint></dd></div>}
+            {direction === "recognition" && <div><dt className="text-xs text-subtle">{card.kind === "kana" ? "Reading (romaji)" : "Meaning"}</dt><dd className="mt-1 break-words text-lg"><ReadingHint kind={card.kind === "kana" ? "romaji" : "english"} context={card.japanese}><StudyText display={studyDisplay(englishCatalog, card.meaning)} /></ReadingHint></dd></div>}
           </dl>
           {card.examples.length > 0 && (
             <div className="mt-6 rounded-control border border-border bg-background p-4">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-subtle">Source example</h3>
               <p lang="ja" className="mt-2 break-words text-lg leading-relaxed">{card.examples[0].japanese}</p>
               {card.examples[0].romaji && <p className="mt-2 break-words text-sm text-accent-text"><ReadingHint kind="romaji" context="the source example">{card.examples[0].romaji}</ReadingHint></p>}
-              <p className="mt-2 break-words text-sm text-muted"><ReadingHint kind="english" context="the source example">{card.examples[0].english}</ReadingHint></p>
+              <p className="mt-2 break-words text-sm text-muted"><ReadingHint kind="english" context="the source example"><StudyText display={studyDisplay(englishCatalog, card.examples[0].english)} /></ReadingHint></p>
               <Link href={card.examples[0].href} className="mt-3 inline-flex min-h-11 items-center text-sm text-accent-text hover:underline">Open example in lesson →</Link>
             </div>
           )}
@@ -201,7 +204,7 @@ export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo
         <summary className="min-h-11 cursor-pointer py-2 text-sm font-semibold">Manage saved cards ({filtered.length})</summary>
         <ul className="mt-2 divide-y divide-border">
           {filtered.slice(0, manageLimit).map((card) => <li key={card.id} className="flex flex-wrap items-center justify-between gap-2 py-3">
-            <div className="min-w-0 flex-1"><p lang="ja" className="break-words font-medium">{card.japanese}</p><p className="break-words text-sm text-muted">{card.meaning}</p></div>
+            <div className="min-w-0 flex-1"><p lang="ja" className="break-words font-medium">{card.japanese}</p><p className="break-words text-sm text-muted">{card.kind === "kana" ? <ReadingHint kind="romaji" context="this saved kana card" compact>{card.meaning}</ReadingHint> : <StudyText display={studyDisplay(englishCatalog, card.meaning)} />}</p></div>
             <button type="button" aria-label={"Remove " + card.japanese + " from flashcards"} className={BUTTON + " text-muted"}
               onClick={() => { flashcardStore.update((data) => removeFlashcard(data, card.id)); setRemoved(card); }}>Remove</button>
           </li>)}

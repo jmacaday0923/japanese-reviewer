@@ -1,3 +1,5 @@
+import catalog from "../src/data/japanese-display.json";
+import { studyDisplay } from "../src/lib/study-markup";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { test, expect, visibleMain, type Page } from "./fixtures";
@@ -18,7 +20,7 @@ const panel = (page: Page) => visibleMain(page).getByRole("region", { name: "Int
 const answerBox = (page: Page, n: number) => panel(page).getByLabel(`Your answer for question ${n}`, { exact: true });
 const checkButton = (page: Page, n: number) => panel(page).getByRole("button", { name: `Check answer ${n}`, exact: true });
 const feedback = (page: Page, id: string) => panel(page).locator(`[id="${id}-feedback"]`);
-const meaning = (page: Page, japanese: string) => panel(page).getByLabel(new RegExp(`^Meaning of ${japanese}\\b`));
+const meaning = (page: Page, japanese: string) => panel(page).getByLabel("Meaning of " + studyDisplay(catalog, japanese).primary, { exact: true });
 
 async function answerAll(page: Page, answers: string[]) {
   for (const [i, value] of answers.entries()) {
@@ -57,15 +59,15 @@ test("particles: romaji and kana, feedback with the source explanation, blanks a
   await answerBox(page, 1).fill("WA");
   await checkButton(page, 1).click();
   await expect(feedback(page, q1.id)).toContainText("Correct");
-  await expect(feedback(page, q1.id)).toContainText(`Answer: ${q1.answer}`);
-  await expect(feedback(page, q1.id)).toContainText(q1.why);
+  await expect(feedback(page, q1.id)).toContainText(`Answer: ${studyDisplay(catalog, q1.answer).primary}`);
+  await expect(feedback(page, q1.id)).toContainText(studyDisplay(catalog, q1.why).primary);
   await expect(answerBox(page, 1)).toHaveAttribute("readonly", "");
 
   await answerBox(page, 2).fill("は"); // wa in kana, but the answer is no
   await checkButton(page, 2).click();
   await expect(feedback(page, q2.id)).toContainText("Incorrect");
   await expect(feedback(page, q2.id)).toContainText("You wrote “は”");
-  await expect(feedback(page, q2.id)).toContainText(`Answer: ${q2.answer}`);
+  await expect(feedback(page, q2.id)).toContainText(`Answer: ${studyDisplay(catalog, q2.answer).primary}`);
   await expect(answerBox(page, 2)).toHaveAttribute("aria-invalid", "true");
 
   // Editing a checked answer hides the old grade until it's checked again
@@ -93,7 +95,8 @@ test("particles: わ isn't wa, and chapter 2 question 7 accepts ni wa", async ({
   await answerBox(page, 7).fill("ni  wa");
   await checkButton(page, 7).click();
   await expect(feedback(page, "c2-particles-7")).toContainText("Correct");
-  await expect(feedback(page, "c2-particles-7")).toContainText("You may also say ryou ni wa for emphasis.");
+  await expect(panel(page).locator('[id="c2-particles-7-prompt"]')).toContainText("には");
+  await expect(feedback(page, "c2-particles-7")).toContainText("You may also say りょう に は for emphasis.");
 });
 
 test("particles: Enter checks, but not while an IME is composing", async ({ page }) => {
@@ -191,9 +194,9 @@ test("vocabulary: keyboard tabs, matching by menu, retries keep every choice ava
   await vocab.getByRole("button", { name: "Check answers" }).click();
   await expect(vocab).toContainText("5 words still need a meaning.");
   await expect(feedback(page, ps[0].id)).toContainText("Incorrect");
-  await expect(feedback(page, ps[0].id)).toContainText(ps[0].why);
+  await expect(feedback(page, ps[0].id)).toContainText(studyDisplay(catalog, ps[0].why).primary);
   await expect(feedback(page, ps[2].id)).toContainText("Correct");
-  await expect(feedback(page, ps[2].id)).toContainText(ps[2].why);
+  await expect(feedback(page, ps[2].id)).toContainText(studyDisplay(catalog, ps[2].why).primary);
   await expect(vocab.getByRole("button", { name: "Retry incorrect (2)" })).toBeDisabled();
 
   // Round 2: all right, so the whole set is checked
@@ -236,7 +239,7 @@ test("each chapter keeps its own answers", async ({ page }) => {
   await expect(answerBox(page, 1)).toHaveValue("");
   await expect(feedback(page, "c2-particles-1")).toBeEmpty();
   await expect(panel(page).locator('[id^="c1-"]')).toHaveCount(0);
-  await expect(panel(page).locator('[id="c2-particles-1-prompt"]')).toContainText(particles("2")[0].prompt.split("____")[0].trim());
+  await expect(panel(page).locator('[id="c2-particles-1-prompt"]')).toContainText(studyDisplay(catalog, particles("2")[0].prompt).primary.split("____")[0].trim());
 });
 
 test("phone: the practice fits and stays usable", async ({ page }) => {

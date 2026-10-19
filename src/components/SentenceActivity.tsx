@@ -5,6 +5,7 @@ import type { SentenceQuestion, WordOrderQuestion } from "@/types/sentence-exerc
 import { applyGrades, createActivity, editAnswer, restartActivity, retryIncorrect, stableShuffle, summarize } from "@/lib/exercises";
 import { gradeTransformation, gradeWordOrder, modelSentence, tokenOrder } from "@/lib/sentence-exercises";
 import { Explanation, PracticeSummary, PRIMARY_BUTTON, SECONDARY_BUTTON, Verdict } from "@/components/PracticeParts";
+import StudyText from "@/components/StudyText";
 import { ReadingHint } from "@/components/ReadingPreferences";
 
 export default function SentenceActivity({ questions }: { questions: SentenceQuestion[] }) {
@@ -110,7 +111,7 @@ export default function SentenceActivity({ questions }: { questions: SentenceQue
                     <p lang="ja" className="reading-japanese break-words">{modelSentence(answer.japanese)}</p>
                     <p><ReadingHint kind="romaji" context={"the answer to question " + (index + 1)}>{modelSentence(answer.romaji)}</ReadingHint></p>
                     <p><ReadingHint kind="english" context={"the answer to question " + (index + 1)}>{answer.english}</ReadingHint></p>
-                    <p className="break-words"><span className="font-medium text-foreground">Why: </span>{question.why}</p>
+                    <p className="break-words"><span className="font-medium text-foreground">Why: </span><StudyText display={question.displayWhy ?? { primary: question.why }} context={"the explanation for sentence " + (index + 1)} /></p>
                     {question.type === "transform" && /[（(]/u.test(question.answer.japanese) && <p>The lesson also permits omitting the particle shown in brackets.</p>}
                     <a href={"#" + answer.source.heading} className="inline-flex min-h-11 items-center text-accent-text hover:underline">Review the lesson explanation →</a>
                   </Explanation>

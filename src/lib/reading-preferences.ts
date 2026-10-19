@@ -3,22 +3,23 @@ export const READING_KEY = "japanese-reviewer:reading-visibility";
 export const HINT_KINDS = ["romaji", "english", "kana"] as const;
 export type HintKind = (typeof HINT_KINDS)[number];
 export type ReadingVisibility = Record<HintKind, boolean>;
-export const DEFAULT_VISIBILITY: ReadingVisibility = { romaji: true, english: true, kana: true };
+export const DEFAULT_VISIBILITY: ReadingVisibility = { romaji: false, english: true, kana: true };
 
 export function parseReadingVisibility(raw: string | null): ReadingVisibility {
   try {
     const value = raw === null ? null : JSON.parse(raw);
-    if (value?.version === 1 && ["romaji", "english"].every((kind) => typeof value.show?.[kind] === "boolean")) {
+    if ([1, 2].includes(value?.version) && ["romaji", "english"].every((kind) => typeof value.show?.[kind] === "boolean")) {
       // Keep choices from both older formats: the original furigana setting
       // controlled kana readings; the short-lived two-toggle format omitted it.
       return {
-        romaji: value.show.romaji,
+        // Reset the previous always-visible default once; version 2 keeps an explicit reveal choice.
+        romaji: value.version === 2 ? value.show.romaji : false,
         english: value.show.english,
         kana: typeof value.show.kana === "boolean" ? value.show.kana
           : typeof value.show.furigana === "boolean" ? value.show.furigana : true,
       };
     }
-  } catch { /* An invalid saved preference starts with all aids shown. */ }
+  } catch { /* An invalid saved preference starts with romaji hidden. */ }
   return { ...DEFAULT_VISIBILITY };
 }
 
@@ -70,7 +71,7 @@ export function createReadingStore(options: Options) {
   function setShown(kind: HintKind, shown: boolean) {
     const current = getSnapshot();
     if (current.show[kind] === shown) return;
-    memory = JSON.stringify({ version: 1, show: { ...current.show, [kind]: shown } });
+    memory = JSON.stringify({ version: 2, show: { ...current.show, [kind]: shown } });
     if (storage) {
       try { storage.setItem(READING_KEY, memory); } catch { storage = null; }
     }

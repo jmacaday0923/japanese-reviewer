@@ -1,0 +1,3928 @@
+{
+  "version": 1,
+  "scope": "Reading-comprehension exercises in Chapters 5 to 10",
+  "reviewMethod": "Manual review of content vocabulary against current and earlier chapter Lessons and Vocabulary, including inflections and supplemental phrases. Productive counters, particles and proper names are not treated as new headwords. This is not automatic Japanese morphological analysis.",
+  "passages": [
+    {
+      "chapter": "5",
+      "heading": "c5-part-v-read-and-answer",
+      "title": "Part V: Read and answer",
+      "level": 3,
+      "originalHtml": "<h3 id=\"c5-part-v-read-and-answer\">Part V: Read and answer</h3><p>Read the passage, then answer each question in Japanese.</p><p>アナさんの にほんごの クラスは しがつから じゅうにがつまでです。 クラスは いっしゅうかんに にかいです。 いちにち さんじかんです。 いえから がっこうまで バスで さんじゅっぷんかかります。 バスは にひゃくえん かかります。</p><p>ana san no nihongo no kurasu wa shigatsu kara juunigatsu made desu. kurasu wa isshuukan ni nikai desu. ichinichi sanjikan desu. ie kara gakkou made basu de sanjuppun kakarimasu. basu wa ni hyaku en kakarimasu.</p><p>Words: ana san (Ana), nihongo (Japanese language), gakkou (school).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>ana san no kurasu wa nangatsu kara nangatsu made desu ka.</td><td></td></tr><tr><td>2</td><td>kurasu wa isshuukan ni nankai desu ka.</td><td></td></tr><tr><td>3</td><td>kurasu wa ichinichi nanjikan desu ka.</td><td></td></tr><tr><td>4</td><td>ie kara gakkou made basu de donogurai kakarimasu ka.</td><td></td></tr><tr><td>5</td><td>basu de ikura kakarimasu ka.</td><td></td></tr><tr><td>6</td><td>kurasu wa isshuukan ni nanjikan desu ka.</td><td></td></tr><tr><td>7</td><td>basu no oufuku wa ikura kakarimasu ka.</td><td></td></tr><tr><td>8</td><td>ie kara gakkou made oufuku wa donogurai kakarimasu ka.</td><td></td></tr></tbody></table></div>",
+      "japanese": "アナさんの にほんごの クラスは しがつから じゅうにがつまでです。 クラスは いっしゅうかんに にかいです。 いちにち さんじかんです。 いえから がっこうまで バスで さんじゅっぷんかかります。 バスは にひゃくえん かかります。",
+      "romaji": "ana san no nihongo no kurasu wa shigatsu kara juunigatsu made desu. kurasu wa isshuukan ni nikai desu. ichinichi sanjikan desu. ie kara gakkou made basu de sanjuppun kakarimasu. basu wa ni hyaku en kakarimasu.",
+      "english": "Ana's Japanese class runs from April through December. The class meets twice a week, for three hours a day. It takes thirty minutes by bus from home to school. The bus costs two hundred yen.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "ana san no kurasu wa nangatsu kara nangatsu made desu ka.",
+          "japanese": "アナさんの クラスは なんがつから なんがつまでですか。"
+        },
+        {
+          "number": 2,
+          "original": "kurasu wa isshuukan ni nankai desu ka.",
+          "japanese": "クラスは いっしゅうかんに なんかいですか。"
+        },
+        {
+          "number": 3,
+          "original": "kurasu wa ichinichi nanjikan desu ka.",
+          "japanese": "クラスは いちにち なんじかんですか。"
+        },
+        {
+          "number": 4,
+          "original": "ie kara gakkou made basu de donogurai kakarimasu ka.",
+          "japanese": "いえから がっこうまで バスで どのぐらい かかりますか。"
+        },
+        {
+          "number": 5,
+          "original": "basu de ikura kakarimasu ka.",
+          "japanese": "バスで いくら かかりますか。"
+        },
+        {
+          "number": 6,
+          "original": "kurasu wa isshuukan ni nanjikan desu ka.",
+          "japanese": "クラスは いっしゅうかんに なんじかんですか。"
+        },
+        {
+          "number": 7,
+          "original": "basu no oufuku wa ikura kakarimasu ka.",
+          "japanese": "バスの おうふくは いくら かかりますか。"
+        },
+        {
+          "number": 8,
+          "original": "ie kara gakkou made oufuku wa donogurai kakarimasu ka.",
+          "japanese": "いえから がっこうまで おうふくは どのぐらい かかりますか。"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "にほんご",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "にほんご",
+            "日本語",
+            "nihongo",
+            "Japanese language"
+          ]
+        },
+        {
+          "term": "クラス",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-things-and-furniture"
+          },
+          "evidence": [
+            "クラス",
+            "",
+            "kurasu",
+            "class"
+          ]
+        },
+        {
+          "term": "いえ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "うち / いえ",
+            "家",
+            "uchi / ie",
+            "house"
+          ]
+        },
+        {
+          "term": "がっこう",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "がっこう",
+            "学校",
+            "gakkou",
+            "school"
+          ]
+        },
+        {
+          "term": "バス",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-vehicles-and-travel"
+          },
+          "evidence": [
+            "バス",
+            "",
+            "basu",
+            "bus"
+          ]
+        },
+        {
+          "term": "かかります",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-time-and-length-words"
+          },
+          "evidence": [
+            "かかります",
+            "",
+            "kakarimasu",
+            "it takes (time), it costs (money)"
+          ]
+        },
+        {
+          "term": "おうふく",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-vehicles-and-travel"
+          },
+          "evidence": [
+            "おうふく",
+            "往復",
+            "oufuku",
+            "roundtrip"
+          ]
+        },
+        {
+          "term": "どのぐらい",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-question-words-for-span-of-time"
+          },
+          "evidence": [
+            "どのぐらい",
+            "",
+            "donogurai",
+            "how long"
+          ]
+        },
+        {
+          "term": "いくら",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-question-words-for-span-of-time"
+          },
+          "evidence": [
+            "いくら",
+            "",
+            "ikura",
+            "how much"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "5",
+      "heading": "c5-reading-comprehension-page-84",
+      "title": "Reading comprehension (page 84)",
+      "level": 4,
+      "originalHtml": "<h4 id=\"c5-reading-comprehension-page-84\">Reading comprehension (page 84)</h4><p>Read the passage \"Kaisha no nihongo no tore-ningu\" (the Japanese training at a company), then answer the questions.</p><p>かいしゃに にほんごの トレーニングが あります。 N3 と N4 と N5 です。 N3 の クラスは ろっかげつです。 ごがつから じゅういちがつまで です。 N4 の クラスは さんがつから くがつまで です。 N3 と N4 の クラスは ぜんぶで ひゃくにじゅうじかんです。 N3 と N4 の しけんは じゅうにがつ です。 N5 の クラスは ひゃくじかんです。 いちがつとおかから ろくがつとおかまで です。 N5 の しけんは しちがつです。</p><p>kaisha ni nihongo no tore-ningu ga arimasu. N3 to N4 to N5 desu. N3 no kurasu wa rokkagetsu desu. gogatsu kara juuichigatsu made desu. N4 no kurasu wa sangatsu kara kugatsu made desu. N3 to N4 no kurasu wa zenbu de hyaku nijuujikan desu. N3 to N4 no shiken wa juunigatsu desu. N5 no kurasu wa hyakujikan desu. ichigatsu tooka kara rokugatsu tooka made desu. N5 no shiken wa shichigatsu desu.</p><p>Words: zenbu de (in total), shiken (exam).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>N4 no kurasu wa nanjikan desu ka. (1 san jikan, 2 nana jikan, 3 hyaku jikan, 4 hyaku nijuujikan) [N4 の クラスは なんじかんですか。 (1 さん じかん, 2 なな じかん, 3 ひゃく じかん, 4 ひゃく にじゅうじかん)]</td><td></td></tr><tr><td>2</td><td>N5 no kurasu wa nankagetsu desu ka. (1 sankagetsu, 2 gokagetsu, 3 rokkagetsu, 4 nanakagetsu) [N5 の クラスは なんかげつですか。 (1 さんかげつ, 2 ごかげつ, 3 ろっかげつ, 4 ななかげつ)]</td><td></td></tr></tbody></table></div>",
+      "japanese": "かいしゃに にほんごの トレーニングが あります。 N3 と N4 と N5 です。 N3 の クラスは ろっかげつです。 ごがつから じゅういちがつまで です。 N4 の クラスは さんがつから くがつまで です。 N3 と N4 の クラスは ぜんぶで ひゃくにじゅうじかんです。 N3 と N4 の しけんは じゅうにがつ です。 N5 の クラスは ひゃくじかんです。 いちがつとおかから ろくがつとおかまで です。 N5 の しけんは しちがつです。",
+      "romaji": "kaisha ni nihongo no tore-ningu ga arimasu. N3 to N4 to N5 desu. N3 no kurasu wa rokkagetsu desu. gogatsu kara juuichigatsu made desu. N4 no kurasu wa sangatsu kara kugatsu made desu. N3 to N4 no kurasu wa zenbu de hyaku nijuujikan desu. N3 to N4 no shiken wa juunigatsu desu. N5 no kurasu wa hyakujikan desu. ichigatsu tooka kara rokugatsu tooka made desu. N5 no shiken wa shichigatsu desu.",
+      "english": "There is Japanese-language training at the company, with N3, N4 and N5 classes. The N3 class lasts six months, from May to November. The N4 class runs from March to September. The N3 and N4 classes total one hundred and twenty hours. The N3 and N4 exams are in December. The N5 class is one hundred hours, from January 10 to June 10. The N5 exam is in July.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "N4 no kurasu wa nanjikan desu ka. (1 san jikan, 2 nana jikan, 3 hyaku jikan, 4 hyaku nijuujikan) [N4 の クラスは なんじかんですか。 (1 さん じかん, 2 なな じかん, 3 ひゃく じかん, 4 ひゃく にじゅうじかん)]",
+          "japanese": "N4 の クラスは なんじかんですか。 (1 さん じかん, 2 なな じかん, 3 ひゃく じかん, 4 ひゃく にじゅうじかん)"
+        },
+        {
+          "number": 2,
+          "original": "N5 no kurasu wa nankagetsu desu ka. (1 sankagetsu, 2 gokagetsu, 3 rokkagetsu, 4 nanakagetsu) [N5 の クラスは なんかげつですか。 (1 さんかげつ, 2 ごかげつ, 3 ろっかげつ, 4 ななかげつ)]",
+          "japanese": "N5 の クラスは なんかげつですか。 (1 さんかげつ, 2 ごかげつ, 3 ろっかげつ, 4 ななかげつ)"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "かいしゃ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "かいしゃ",
+            "会社",
+            "kaisha",
+            "company"
+          ]
+        },
+        {
+          "term": "にほんご",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "にほんご",
+            "日本語",
+            "nihongo",
+            "Japanese language"
+          ]
+        },
+        {
+          "term": "トレーニング",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-school-and-work-words"
+          },
+          "evidence": [
+            "トレーニング",
+            "",
+            "tore-ningu",
+            "training"
+          ]
+        },
+        {
+          "term": "クラス",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-things-and-furniture"
+          },
+          "evidence": [
+            "クラス",
+            "",
+            "kurasu",
+            "class"
+          ]
+        },
+        {
+          "term": "ぜんぶ",
+          "source": {
+            "chapter": "3",
+            "section": "vocab",
+            "heading": "c3-money-and-prices"
+          },
+          "evidence": [
+            "ぜんぶ",
+            "全部",
+            "zenbu",
+            "all, total"
+          ]
+        },
+        {
+          "term": "しけん",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-work-school-and-events"
+          },
+          "evidence": [
+            "しけん",
+            "試験",
+            "shiken",
+            "examination"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "6",
+      "heading": "c6-part-u-read-and-answer",
+      "title": "Part U: Read and answer",
+      "level": 3,
+      "originalHtml": "<h3 id=\"c6-part-u-read-and-answer\">Part U: Read and answer</h3><p>Read the passage \"Ana san no apa-to\" (Ana's apartment), then answer each question in Japanese.</p><p>アナさんの アパートは えきから ちかいです。 ふるくて ちいさい アパートです。 だいどころは せまいです。 トイレは きれいです。 アパートの となりに おおきくて しずかな こうえんが あります。 きのうは にちようびでした。 こうえんは にぎやかでした。</p><p>ana san no apa-to wa eki kara chikai desu. furukute chiisai apa-to desu. daidokoro wa semai desu. toire wa kirei desu. apa-to no tonari ni ookikute shizuka na kouen ga arimasu. kinou wa nichiyoubi deshita. kouen wa nigiyaka deshita.</p><p>Words: ana san (Ana), tonari (next to), nichiyoubi (Sunday).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>ana san no apa-to wa eki kara chikai desu ka.</td><td></td></tr><tr><td>2</td><td>apa-to wa atarashii desu ka.</td><td></td></tr><tr><td>3</td><td>daidokoro wa hiroi desu ka.</td><td></td></tr><tr><td>4</td><td>toire wa kitanai desu ka.</td><td></td></tr><tr><td>5</td><td>apa-to no tonari ni donna kouen ga arimasu ka.</td><td></td></tr><tr><td>6</td><td>kinou no kouen wa dou deshita ka.</td><td></td></tr></tbody></table></div>",
+      "japanese": "アナさんの アパートは えきから ちかいです。 ふるくて ちいさい アパートです。 だいどころは せまいです。 トイレは きれいです。 アパートの となりに おおきくて しずかな こうえんが あります。 きのうは にちようびでした。 こうえんは にぎやかでした。",
+      "romaji": "ana san no apa-to wa eki kara chikai desu. furukute chiisai apa-to desu. daidokoro wa semai desu. toire wa kirei desu. apa-to no tonari ni ookikute shizuka na kouen ga arimasu. kinou wa nichiyoubi deshita. kouen wa nigiyaka deshita.",
+      "english": "Ana's apartment is near the station. It is an old, small apartment. The kitchen is small. The toilet is clean. Next to the apartment there is a large, quiet park. Yesterday was Sunday. The park was lively.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "ana san no apa-to wa eki kara chikai desu ka.",
+          "japanese": "アナさんの アパートは えきから ちかいですか。"
+        },
+        {
+          "number": 2,
+          "original": "apa-to wa atarashii desu ka.",
+          "japanese": "アパートは あたらしいですか。"
+        },
+        {
+          "number": 3,
+          "original": "daidokoro wa hiroi desu ka.",
+          "japanese": "だいどころは ひろいですか。"
+        },
+        {
+          "number": 4,
+          "original": "toire wa kitanai desu ka.",
+          "japanese": "トイレは きたないですか。"
+        },
+        {
+          "number": 5,
+          "original": "apa-to no tonari ni donna kouen ga arimasu ka.",
+          "japanese": "アパートの となりに どんな こうえんが ありますか。"
+        },
+        {
+          "number": 6,
+          "original": "kinou no kouen wa dou deshita ka.",
+          "japanese": "きのうの こうえんは どうでしたか。"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "アパート",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-places"
+          },
+          "evidence": [
+            "アパート",
+            "",
+            "apa-to",
+            "apartment"
+          ]
+        },
+        {
+          "term": "えき",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-places"
+          },
+          "evidence": [
+            "えき",
+            "駅",
+            "eki",
+            "train station"
+          ]
+        },
+        {
+          "term": "ちかい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-size-distance-and-streng"
+          },
+          "evidence": [
+            "ちかい",
+            "近い",
+            "chikai",
+            "near (i-adjective)"
+          ]
+        },
+        {
+          "term": "ふるい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-looks-and-surroundings"
+          },
+          "evidence": [
+            "ふるい",
+            "古い",
+            "furui",
+            "old (i-adjective)"
+          ]
+        },
+        {
+          "term": "ちいさい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-size-distance-and-streng"
+          },
+          "evidence": [
+            "ちいさい",
+            "小さい",
+            "chiisai",
+            "small (i-adjective)"
+          ]
+        },
+        {
+          "term": "だいどころ",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-home-and-food"
+          },
+          "evidence": [
+            "だいどころ",
+            "台所",
+            "daidokoro",
+            "kitchen"
+          ]
+        },
+        {
+          "term": "せまい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-size-distance-and-streng"
+          },
+          "evidence": [
+            "せまい",
+            "狭い",
+            "semai",
+            "narrow (i-adjective)"
+          ]
+        },
+        {
+          "term": "トイレ",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-home-and-food"
+          },
+          "evidence": [
+            "トイレ",
+            "",
+            "toire",
+            "toilet"
+          ]
+        },
+        {
+          "term": "きれい",
+          "source": {
+            "chapter": "6",
+            "section": "lessons",
+            "heading": "c6-6-2-two-types-of-adjectives-i-and-na-bun"
+          },
+          "evidence": [
+            "きれいな へや",
+            "kirei na heya",
+            "a clean room (kirei is a na-adjective)"
+          ]
+        },
+        {
+          "term": "となり",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-locatives-position-words"
+          },
+          "evidence": [
+            "となり",
+            "隣",
+            "tonari",
+            "beside"
+          ]
+        },
+        {
+          "term": "おおきい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-size-distance-and-streng"
+          },
+          "evidence": [
+            "おおきい",
+            "大きい",
+            "ookii",
+            "big (i-adjective)"
+          ]
+        },
+        {
+          "term": "しずか",
+          "source": {
+            "chapter": "6",
+            "section": "lessons",
+            "heading": "c6-6-3-basic-adjective-pairs-bunkei-6-1"
+          },
+          "evidence": [
+            "しずか(な) / にぎやか(な)",
+            "shizuka(na) / nigiyaka(na)",
+            "quiet / lively (na + na)"
+          ]
+        },
+        {
+          "term": "こうえん",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-places"
+          },
+          "evidence": [
+            "こうえん",
+            "公園",
+            "kouen",
+            "park"
+          ]
+        },
+        {
+          "term": "きのう",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-yesterday-today-and-tomorrow"
+          },
+          "evidence": [
+            "きのう",
+            "昨日",
+            "kinou",
+            "yesterday"
+          ]
+        },
+        {
+          "term": "にちようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "にちようび",
+            "日曜日",
+            "nichiyoubi",
+            "Sunday"
+          ]
+        },
+        {
+          "term": "にぎやか",
+          "source": {
+            "chapter": "6",
+            "section": "lessons",
+            "heading": "c6-6-3-basic-adjective-pairs-bunkei-6-1"
+          },
+          "evidence": [
+            "しずか(な) / にぎやか(な)",
+            "shizuka(na) / nigiyaka(na)",
+            "quiet / lively (na + na)"
+          ]
+        },
+        {
+          "term": "あたらしい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-looks-and-surroundings"
+          },
+          "evidence": [
+            "あたらしい",
+            "新しい",
+            "atarashii",
+            "new (i-adjective)"
+          ]
+        },
+        {
+          "term": "ひろい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-size-distance-and-streng"
+          },
+          "evidence": [
+            "ひろい",
+            "広い",
+            "hiroi",
+            "wide (i-adjective)"
+          ]
+        },
+        {
+          "term": "きたない",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-looks-and-surroundings"
+          },
+          "evidence": [
+            "きたない",
+            "汚い",
+            "kitanai",
+            "dirty (i-adjective)"
+          ]
+        },
+        {
+          "term": "どんな",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-question-words-for-adjectives"
+          },
+          "evidence": [
+            "どんな",
+            "",
+            "donna",
+            "what kind of (always followed by a noun)"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "6",
+      "heading": "c6-reading-comprehension-page-99",
+      "title": "Reading comprehension (page 99)",
+      "level": 4,
+      "originalHtml": "<h4 id=\"c6-reading-comprehension-page-99\">Reading comprehension (page 99)</h4><p>Read the passage \"Nihon no kisetsu\" (The seasons of Japan), then answer the questions.</p><p>わたしは いちねんぐらい にほんに います。 きょねんの ろくがつから ことしの ごがつまでです。 にほんの きせつは はると なつと あきと ふゆです。 はるは さんがつからです。 はるは はなみの きせつです。 はなみは とても きれいです。 なつは ろくがつから はちがつまでです。 まいにち たいへん あついです。 なつは はなびの きせつです。 にほんの いろいろな ところで はなびたいかいが あります。 あきは くがつからです。 あきは すずしいです。 ふゆは じゅうにがつからです。 ふゆは とても さむいです。</p><p>watashi wa ichinen gurai nihon ni imasu. kyonen no rokugatsu kara kotoshi no gogatsu made desu. nihon no kisetsu wa haru to natsu to aki to fuyu desu. haru wa sangatsu kara desu. haru wa hanami no kisetsu desu. hanami wa totemo kirei desu. natsu wa rokugatsu kara hachigatsu made desu. mainichi taihen atsui desu. natsu wa hanabi no kisetsu desu. nihon no iroiro na tokoro de hanabi taikai ga arimasu. aki wa kugatsu kara desu. aki wa suzushii desu. fuyu wa juunigatsu kara desu. fuyu wa totemo samui desu.</p><p>Words: hanabi (fireworks), hanabi taikai (fireworks display), hanami (flower viewing), suzushii (cool).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>tadashii mono wa dore desu ka. (1 hanami wa ichinenjuu desu, 2 kono hito wa ima nihon ni imasen, 3 nihon no kisetsu wa yottsu desu, 4 nihon wa mainichi suzushii desu) [ただしいものは どれですか。 (1 はなみは いちねんじゅうです, 2 このひとは いま にほんに いません, 3 にほんの きせつは よっつです, 4 にほんは まいにち すずしいです)]</td><td></td></tr><tr><td>2</td><td>nihon no natsu wa donna kisetsu desu ka. (1 mainichi nigiyaka desu, 2 mainichi atsui desu, 3 mainichi hanabi desu, 4 mainichi suzushii desu) [にほんの なつは どんな きせつですか。 (1 まいにち にぎやかです, 2 まいにち あついです, 3 まいにち はなびです, 4 まいにち すずしいです)]</td><td></td></tr></tbody></table></div>",
+      "japanese": "わたしは いちねんぐらい にほんに います。 きょねんの ろくがつから ことしの ごがつまでです。 にほんの きせつは はると なつと あきと ふゆです。 はるは さんがつからです。 はるは はなみの きせつです。 はなみは とても きれいです。 なつは ろくがつから はちがつまでです。 まいにち たいへん あついです。 なつは はなびの きせつです。 にほんの いろいろな ところで はなびたいかいが あります。 あきは くがつからです。 あきは すずしいです。 ふゆは じゅうにがつからです。 ふゆは とても さむいです。",
+      "romaji": "watashi wa ichinen gurai nihon ni imasu. kyonen no rokugatsu kara kotoshi no gogatsu made desu. nihon no kisetsu wa haru to natsu to aki to fuyu desu. haru wa sangatsu kara desu. haru wa hanami no kisetsu desu. hanami wa totemo kirei desu. natsu wa rokugatsu kara hachigatsu made desu. mainichi taihen atsui desu. natsu wa hanabi no kisetsu desu. nihon no iroiro na tokoro de hanabi taikai ga arimasu. aki wa kugatsu kara desu. aki wa suzushii desu. fuyu wa juunigatsu kara desu. fuyu wa totemo samui desu.",
+      "english": "I am staying in Japan for about a year, from June last year to May this year. Japan's seasons are spring, summer, autumn and winter. Spring starts in March. Spring is the season for flower viewing. The flower viewing is very beautiful. Summer runs from June to August. It is very hot every day. Summer is the season for fireworks. There are fireworks displays in various places in Japan. Autumn starts in September. Autumn is cool. Winter starts in December. Winter is very cold.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "tadashii mono wa dore desu ka. (1 hanami wa ichinenjuu desu, 2 kono hito wa ima nihon ni imasen, 3 nihon no kisetsu wa yottsu desu, 4 nihon wa mainichi suzushii desu) [ただしいものは どれですか。 (1 はなみは いちねんじゅうです, 2 このひとは いま にほんに いません, 3 にほんの きせつは よっつです, 4 にほんは まいにち すずしいです)]",
+          "japanese": "ただしいものは どれですか。 (1 はなみは いちねんじゅうです, 2 このひとは いま にほんに いません, 3 にほんの きせつは よっつです, 4 にほんは まいにち すずしいです)"
+        },
+        {
+          "number": 2,
+          "original": "nihon no natsu wa donna kisetsu desu ka. (1 mainichi nigiyaka desu, 2 mainichi atsui desu, 3 mainichi hanabi desu, 4 mainichi suzushii desu) [にほんの なつは どんな きせつですか。 (1 まいにち にぎやかです, 2 まいにち あついです, 3 まいにち はなびです, 4 まいにち すずしいです)]",
+          "japanese": "にほんの なつは どんな きせつですか。 (1 まいにち にぎやかです, 2 まいにち あついです, 3 まいにち はなびです, 4 まいにち すずしいです)"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "にほん",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "にほん",
+            "日本",
+            "nihon",
+            "Japan"
+          ]
+        },
+        {
+          "term": "きょねん",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-last-this-and-next-years"
+          },
+          "evidence": [
+            "きょねん",
+            "去年",
+            "kyonen",
+            "last year"
+          ]
+        },
+        {
+          "term": "ことし",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-last-this-and-next-years"
+          },
+          "evidence": [
+            "ことし",
+            "今年",
+            "kotoshi",
+            "this year"
+          ]
+        },
+        {
+          "term": "きせつ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-seasons-and-holidays"
+          },
+          "evidence": [
+            "きせつ",
+            "季節",
+            "kisetsu",
+            "season"
+          ]
+        },
+        {
+          "term": "はる",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-seasons-and-holidays"
+          },
+          "evidence": [
+            "はる",
+            "春",
+            "haru",
+            "spring (March to May)"
+          ]
+        },
+        {
+          "term": "なつ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-seasons-and-holidays"
+          },
+          "evidence": [
+            "なつ",
+            "夏",
+            "natsu",
+            "summer (June to August)"
+          ]
+        },
+        {
+          "term": "あき",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-seasons-and-holidays"
+          },
+          "evidence": [
+            "あき",
+            "秋",
+            "aki",
+            "autumn, fall (September to November)"
+          ]
+        },
+        {
+          "term": "ふゆ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-seasons-and-holidays"
+          },
+          "evidence": [
+            "ふゆ",
+            "冬",
+            "fuyu",
+            "winter (December to February)"
+          ]
+        },
+        {
+          "term": "はなみ",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "はなみ",
+            "花見",
+            "hanami",
+            "flower viewing"
+          ]
+        },
+        {
+          "term": "とても",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adverbs-for-adjectives"
+          },
+          "evidence": [
+            "とても",
+            "",
+            "totemo",
+            "very"
+          ]
+        },
+        {
+          "term": "きれい",
+          "source": {
+            "chapter": "6",
+            "section": "lessons",
+            "heading": "c6-6-2-two-types-of-adjectives-i-and-na-bun"
+          },
+          "evidence": [
+            "きれいな へや",
+            "kirei na heya",
+            "a clean room (kirei is a na-adjective)"
+          ]
+        },
+        {
+          "term": "まいにち",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-yesterday-today-and-tomorrow"
+          },
+          "evidence": [
+            "まいにち",
+            "毎日",
+            "mainichi",
+            "every day"
+          ]
+        },
+        {
+          "term": "たいへん",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adverbs-for-adjectives"
+          },
+          "evidence": [
+            "たいへん",
+            "大変",
+            "taihen",
+            "very"
+          ]
+        },
+        {
+          "term": "あつい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-size-distance-and-streng"
+          },
+          "evidence": [
+            "あつい",
+            "厚い",
+            "atsui",
+            "thick (i-adjective)"
+          ]
+        },
+        {
+          "term": "はなび",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "はなび",
+            "花火",
+            "hanabi",
+            "fireworks"
+          ]
+        },
+        {
+          "term": "いろいろ",
+          "source": {
+            "chapter": "6",
+            "section": "lessons",
+            "heading": "c6-6-2-two-types-of-adjectives-i-and-na-bun"
+          },
+          "evidence": [
+            "いろいろ(な)",
+            "iroiro(na)",
+            "various (na-adjective)"
+          ]
+        },
+        {
+          "term": "ところ",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-places"
+          },
+          "evidence": [
+            "ところ / ばしょ",
+            "所 / 場所",
+            "tokoro / basho",
+            "place"
+          ]
+        },
+        {
+          "term": "はなびたいかい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "はなびたいかい",
+            "花火大会",
+            "hanabi taikai",
+            "fireworks display"
+          ]
+        },
+        {
+          "term": "すずしい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "すずしい",
+            "涼しい",
+            "suzushii",
+            "cool (i-adjective)"
+          ]
+        },
+        {
+          "term": "さむい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-price-and-temperature"
+          },
+          "evidence": [
+            "さむい",
+            "寒い",
+            "samui",
+            "cold, for weather (i-adjective)"
+          ]
+        },
+        {
+          "term": "ただしい もの",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-words-from-the-workbook-examples"
+          },
+          "evidence": [
+            "ただしい もの",
+            "正しい もの",
+            "tadashii mono",
+            "correct item"
+          ]
+        },
+        {
+          "term": "どれ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "どれ",
+            "",
+            "dore",
+            "which one"
+          ]
+        },
+        {
+          "term": "いちねんじゅう",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "いちねんじゅう",
+            "一年中",
+            "ichinenjuu",
+            "all year round"
+          ]
+        },
+        {
+          "term": "ひと",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-people-and-jobs"
+          },
+          "evidence": [
+            "ひと",
+            "人",
+            "hito",
+            "person (informal)"
+          ]
+        },
+        {
+          "term": "いま",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-words-from-the-workbook-examples"
+          },
+          "evidence": [
+            "いま",
+            "今",
+            "ima",
+            "now"
+          ]
+        },
+        {
+          "term": "よっつ",
+          "source": {
+            "chapter": "3",
+            "section": "vocab",
+            "heading": "c3-counter-tsu-anything"
+          },
+          "evidence": [
+            "よっつ",
+            "四つ",
+            "yottsu",
+            "4 things"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "7",
+      "heading": "c7-part-v-read-and-answer",
+      "title": "Part V: Read and answer",
+      "level": 3,
+      "originalHtml": "<h3 id=\"c7-part-v-read-and-answer\">Part V: Read and answer</h3><p>Read the passage \"Jon san no ichinichi\" (John's day), then answer each question in Japanese.</p><p>ジョンさんの かいしゃは マニラに あります。 ジョンさんは まいあさ ろくじはんに おきます。 はちじから ごご ごじまで はたらきます。 ひるやすみは いちじかんです。 げつようびから きんようびまで いそがしいです。 ときどき ざんぎょうします。 きのうは ぜんぜん ざんぎょうしませんでした。 まいばん じゅうじごろ ねます。 にちようびは いつも おそく おきます。</p><p>jon san no kaisha wa manira ni arimasu. jon san wa maiasa rokuji han ni okimasu. hachiji kara gogo goji made hatarakimasu. hiruyasumi wa ichijikan desu. getsuyoubi kara kinyoubi made isogashii desu. tokidoki zangyoushimasu. kinou wa zenzen zangyoushimasen deshita. maiban juuji goro nemasu. nichiyoubi wa itsumo osoku okimasu.</p><p>Words: jon san (John), manira (Manila).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>jon san wa maiasa nanji ni okimasu ka.</td><td></td></tr><tr><td>2</td><td>jon san wa nanji kara nanji made hatarakimasu ka.</td><td></td></tr><tr><td>3</td><td>hiruyasumi wa nanjikan desu ka.</td><td></td></tr><tr><td>4</td><td>jon san wa tokidoki zangyoushimasu ka.</td><td></td></tr><tr><td>5</td><td>kinou jon san wa zangyoushimashita ka.</td><td></td></tr><tr><td>6</td><td>jon san wa maiban nanji goro nemasu ka.</td><td></td></tr><tr><td>7</td><td>jon san wa nichiyoubi ni hayaku okimasu ka.</td><td></td></tr><tr><td>8</td><td>jon san no kaisha wa doko ni arimasu ka.</td><td></td></tr></tbody></table></div>",
+      "japanese": "ジョンさんの かいしゃは マニラに あります。 ジョンさんは まいあさ ろくじはんに おきます。 はちじから ごご ごじまで はたらきます。 ひるやすみは いちじかんです。 げつようびから きんようびまで いそがしいです。 ときどき ざんぎょうします。 きのうは ぜんぜん ざんぎょうしませんでした。 まいばん じゅうじごろ ねます。 にちようびは いつも おそく おきます。",
+      "romaji": "jon san no kaisha wa manira ni arimasu. jon san wa maiasa rokuji han ni okimasu. hachiji kara gogo goji made hatarakimasu. hiruyasumi wa ichijikan desu. getsuyoubi kara kinyoubi made isogashii desu. tokidoki zangyoushimasu. kinou wa zenzen zangyoushimasen deshita. maiban juuji goro nemasu. nichiyoubi wa itsumo osoku okimasu.",
+      "english": "Jon's company is in Manila. Jon gets up at half past six every morning. He works from eight o'clock until five in the afternoon. His lunch break is one hour. He is busy from Monday to Friday. He sometimes works overtime. Yesterday he did not work any overtime. He goes to bed around ten every night. On Sundays he always gets up late.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "jon san wa maiasa nanji ni okimasu ka.",
+          "japanese": "ジョンさんは まいあさ なんじに おきますか。"
+        },
+        {
+          "number": 2,
+          "original": "jon san wa nanji kara nanji made hatarakimasu ka.",
+          "japanese": "ジョンさんは なんじから なんじまで はたらきますか。"
+        },
+        {
+          "number": 3,
+          "original": "hiruyasumi wa nanjikan desu ka.",
+          "japanese": "ひるやすみは なんじかんですか。"
+        },
+        {
+          "number": 4,
+          "original": "jon san wa tokidoki zangyoushimasu ka.",
+          "japanese": "ジョンさんは ときどき ざんぎょうしますか。"
+        },
+        {
+          "number": 5,
+          "original": "kinou jon san wa zangyoushimashita ka.",
+          "japanese": "きのう ジョンさんは ざんぎょうしましたか。"
+        },
+        {
+          "number": 6,
+          "original": "jon san wa maiban nanji goro nemasu ka.",
+          "japanese": "ジョンさんは まいばん なんじごろ ねますか。"
+        },
+        {
+          "number": 7,
+          "original": "jon san wa nichiyoubi ni hayaku okimasu ka.",
+          "japanese": "ジョンさんは にちようびに はやく おきますか。"
+        },
+        {
+          "number": 8,
+          "original": "jon san no kaisha wa doko ni arimasu ka.",
+          "japanese": "ジョンさんの かいしゃは どこに ありますか。"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "かいしゃ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "かいしゃ",
+            "会社",
+            "kaisha",
+            "company"
+          ]
+        },
+        {
+          "term": "まいあさ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-mornings"
+          },
+          "evidence": [
+            "まいあさ",
+            "毎朝",
+            "maiasa",
+            "every morning"
+          ]
+        },
+        {
+          "term": "おきます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "おきます",
+            "起きます",
+            "okimasu",
+            "wake up"
+          ]
+        },
+        {
+          "term": "はたらきます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "はたらきます",
+            "働きます",
+            "hatarakimasu",
+            "work"
+          ]
+        },
+        {
+          "term": "ひるやすみ",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-extra-words-from-the-lessons-and-exercis"
+          },
+          "evidence": [
+            "ひるやすみ",
+            "昼休み",
+            "hiruyasumi",
+            "lunch break"
+          ]
+        },
+        {
+          "term": "げつようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "げつようび",
+            "月曜日",
+            "getsuyoubi",
+            "Monday"
+          ]
+        },
+        {
+          "term": "きんようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "きんようび",
+            "金曜日",
+            "kinyoubi",
+            "Friday"
+          ]
+        },
+        {
+          "term": "いそがしい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-quality-and-feeling"
+          },
+          "evidence": [
+            "いそがしい",
+            "忙しい",
+            "isogashii",
+            "busy (i-adjective)"
+          ]
+        },
+        {
+          "term": "ときどき",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-how-often"
+          },
+          "evidence": [
+            "ときどき",
+            "時々",
+            "tokidoki",
+            "sometimes"
+          ]
+        },
+        {
+          "term": "ざんぎょう",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-school-and-work-words"
+          },
+          "evidence": [
+            "ざんぎょう",
+            "残業",
+            "zangyou",
+            "overtime"
+          ]
+        },
+        {
+          "term": "きのう",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-yesterday-today-and-tomorrow"
+          },
+          "evidence": [
+            "きのう",
+            "昨日",
+            "kinou",
+            "yesterday"
+          ]
+        },
+        {
+          "term": "ぜんぜん",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-how-often"
+          },
+          "evidence": [
+            "ぜんぜん",
+            "全然",
+            "zenzen",
+            "never, not at all (always used with a negative ending)"
+          ]
+        },
+        {
+          "term": "まいばん",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-nights"
+          },
+          "evidence": [
+            "まいばん",
+            "毎晩",
+            "maiban",
+            "every night"
+          ]
+        },
+        {
+          "term": "ねます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "ねます",
+            "寝ます",
+            "nemasu",
+            "sleep"
+          ]
+        },
+        {
+          "term": "にちようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "にちようび",
+            "日曜日",
+            "nichiyoubi",
+            "Sunday"
+          ]
+        },
+        {
+          "term": "いつも",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-how-often"
+          },
+          "evidence": [
+            "いつも",
+            "",
+            "itsumo",
+            "always"
+          ]
+        },
+        {
+          "term": "おそく",
+          "source": {
+            "chapter": "7",
+            "section": "lessons",
+            "heading": "c7-7-7-i-adjective-as-an-adverb-bunkei-7-6"
+          },
+          "evidence": [
+            "おそく",
+            "osoku",
+            "late (from osoi)"
+          ]
+        },
+        {
+          "term": "はやく",
+          "source": {
+            "chapter": "7",
+            "section": "lessons",
+            "heading": "c7-7-7-i-adjective-as-an-adverb-bunkei-7-6"
+          },
+          "evidence": [
+            "はやく",
+            "hayaku",
+            "early (from hayai)"
+          ]
+        },
+        {
+          "term": "どこ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "どこ",
+            "",
+            "doko",
+            "where"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "7",
+      "heading": "c7-reading-comprehension-page-114",
+      "title": "Reading comprehension (page 114)",
+      "level": 4,
+      "originalHtml": "<h4 id=\"c7-reading-comprehension-page-114\">Reading comprehension (page 114)</h4><p>Read the passage \"Nihon no ryuugakusei\" (An international student in Japan), then answer the questions.</p><p>わたしは にほんに います。 フィリピンから にほんまで ひこうきで よじかんぐらい かかります。 りょうは とうきょうに あります。 くうこうから りょうまで でんしゃで いちじかんはん ぐらい かかります。 りょうは とてもきれいで へやも ひろいです。 りょうから だいがくまで あるいて じゅうごふんぐらい かかります。 クラスは はちじに はじまります。 ごご さんじに おわります。</p><p>watashi wa nihon ni imasu. firipin kara nihon made hikouki de yojikan gurai kakarimasu. ryou wa toukyou ni arimasu. kuukou kara ryou made densha de ichijikan han gurai kakarimasu. ryou wa totemo kirei de heya mo hiroi desu. ryou kara daigaku made aruite juugofun gurai kakarimasu. kurasu wa hachiji ni hajimarimasu. gogo sanji ni owarimasu.</p><p>Words: ryuugakusei (international student), ryou (dormitory), daigaku (university), densha (train).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>firipin kara nihon made donogurai kakarimasu ka. (1 ichijikan kakarimasu, 2 ichijikan han kakarimasu, 3 yojikan gurai kakarimasu, 4 yojikan han kakarimasu) [フィリピンから にほんまで どのぐらい かかりますか。 (1 いちじかん かかります, 2 いちじかんはん かかります, 3 よじかんぐらい かかります, 4 よじかんはん かかります)]</td><td></td></tr><tr><td>2</td><td>kurasu wa nanji kara nanji made desu ka. (1 yoji kara sanji made desu, 2 hachiji kara sanji made desu, 3 yoji kara hachiji made desu, 4 ichiji kara sanji made desu) [クラスは なんじから なんじまで ですか。 (1 よじから さんじまでです, 2 はちじから さんじまでです, 3 よじから はちじまでです, 4 いちじから さんじまでです)]</td><td></td></tr></tbody></table></div>",
+      "japanese": "わたしは にほんに います。 フィリピンから にほんまで ひこうきで よじかんぐらい かかります。 りょうは とうきょうに あります。 くうこうから りょうまで でんしゃで いちじかんはん ぐらい かかります。 りょうは とてもきれいで へやも ひろいです。 りょうから だいがくまで あるいて じゅうごふんぐらい かかります。 クラスは はちじに はじまります。 ごご さんじに おわります。",
+      "romaji": "watashi wa nihon ni imasu. firipin kara nihon made hikouki de yojikan gurai kakarimasu. ryou wa toukyou ni arimasu. kuukou kara ryou made densha de ichijikan han gurai kakarimasu. ryou wa totemo kirei de heya mo hiroi desu. ryou kara daigaku made aruite juugofun gurai kakarimasu. kurasu wa hachiji ni hajimarimasu. gogo sanji ni owarimasu.",
+      "english": "I am in Japan. It takes about four hours by plane from the Philippines to Japan. The dormitory is in Tokyo. It takes about an hour and a half by train from the airport to the dormitory. The dormitory is very clean, and the rooms are spacious. It takes about fifteen minutes to walk from the dormitory to the university. Class starts at eight o'clock. It finishes at three in the afternoon.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "firipin kara nihon made donogurai kakarimasu ka. (1 ichijikan kakarimasu, 2 ichijikan han kakarimasu, 3 yojikan gurai kakarimasu, 4 yojikan han kakarimasu) [フィリピンから にほんまで どのぐらい かかりますか。 (1 いちじかん かかります, 2 いちじかんはん かかります, 3 よじかんぐらい かかります, 4 よじかんはん かかります)]",
+          "japanese": "フィリピンから にほんまで どのぐらい かかりますか。 (1 いちじかん かかります, 2 いちじかんはん かかります, 3 よじかんぐらい かかります, 4 よじかんはん かかります)"
+        },
+        {
+          "number": 2,
+          "original": "kurasu wa nanji kara nanji made desu ka. (1 yoji kara sanji made desu, 2 hachiji kara sanji made desu, 3 yoji kara hachiji made desu, 4 ichiji kara sanji made desu) [クラスは なんじから なんじまで ですか。 (1 よじから さんじまでです, 2 はちじから さんじまでです, 3 よじから はちじまでです, 4 いちじから さんじまでです)]",
+          "japanese": "クラスは なんじから なんじまで ですか。 (1 よじから さんじまでです, 2 はちじから さんじまでです, 3 よじから はちじまでです, 4 いちじから さんじまでです)"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "フィリピン",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "フィリピン",
+            "",
+            "firipin",
+            "Philippines"
+          ]
+        },
+        {
+          "term": "にほん",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "にほん",
+            "日本",
+            "nihon",
+            "Japan"
+          ]
+        },
+        {
+          "term": "ひこうき",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-vehicles-and-travel"
+          },
+          "evidence": [
+            "ひこうき",
+            "飛行機",
+            "hikouki",
+            "airplane"
+          ]
+        },
+        {
+          "term": "かかります",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-time-and-length-words"
+          },
+          "evidence": [
+            "かかります",
+            "",
+            "kakarimasu",
+            "it takes (time), it costs (money)"
+          ]
+        },
+        {
+          "term": "りょう",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-places"
+          },
+          "evidence": [
+            "りょう",
+            "寮",
+            "ryou",
+            "dormitory"
+          ]
+        },
+        {
+          "term": "とうきょう",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "とうきょう",
+            "東京",
+            "toukyou",
+            "Tokyo"
+          ]
+        },
+        {
+          "term": "くうこう",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-places"
+          },
+          "evidence": [
+            "くうこう",
+            "空港",
+            "kuukou",
+            "airport"
+          ]
+        },
+        {
+          "term": "でんしゃ",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-vehicles-and-travel"
+          },
+          "evidence": [
+            "でんしゃ",
+            "電車",
+            "densha",
+            "train"
+          ]
+        },
+        {
+          "term": "とても",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adverbs-for-adjectives"
+          },
+          "evidence": [
+            "とても",
+            "",
+            "totemo",
+            "very"
+          ]
+        },
+        {
+          "term": "きれい",
+          "source": {
+            "chapter": "6",
+            "section": "lessons",
+            "heading": "c6-6-2-two-types-of-adjectives-i-and-na-bun"
+          },
+          "evidence": [
+            "きれいな へや",
+            "kirei na heya",
+            "a clean room (kirei is a na-adjective)"
+          ]
+        },
+        {
+          "term": "へや",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "へや",
+            "部屋",
+            "heya",
+            "room"
+          ]
+        },
+        {
+          "term": "ひろい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-size-distance-and-streng"
+          },
+          "evidence": [
+            "ひろい",
+            "広い",
+            "hiroi",
+            "wide (i-adjective)"
+          ]
+        },
+        {
+          "term": "だいがく",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "だいがく",
+            "大学",
+            "daigaku",
+            "university"
+          ]
+        },
+        {
+          "term": "あるいて",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-vehicles-and-travel"
+          },
+          "evidence": [
+            "あるいて",
+            "歩いて",
+            "aruite",
+            "on foot, by walking"
+          ]
+        },
+        {
+          "term": "クラス",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-things-and-furniture"
+          },
+          "evidence": [
+            "クラス",
+            "",
+            "kurasu",
+            "class"
+          ]
+        },
+        {
+          "term": "はじまります",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "はじまります",
+            "始まります",
+            "hajimarimasu",
+            "start (it starts)"
+          ]
+        },
+        {
+          "term": "おわります",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "おわります",
+            "終わります",
+            "owarimasu",
+            "finish (it finishes)"
+          ]
+        },
+        {
+          "term": "どのぐらい",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-question-words-for-span-of-time"
+          },
+          "evidence": [
+            "どのぐらい",
+            "",
+            "donogurai",
+            "how long"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "8",
+      "heading": "c8-part-v-read-and-answer",
+      "title": "Part V: Read and answer",
+      "level": 3,
+      "originalHtml": "<h3 id=\"c8-part-v-read-and-answer\">Part V: Read and answer</h3><p>Read the passage \"Ben san no ichinichi\" (Ben's day), then answer each question in Japanese.</p><p>ベンさんは まいにち ろくじはんに おきます。 あさごはんは パンと コーヒーです。 ベンさんは かいしゃで はたらきます。 じゅうにじから いちじまで しょくどうで ひるごはんを たべます。 ときどき ともだちと たべます。 よる はちじごろ へやで ばんごはんを たべます。 まいばん じゅうじごろ ニュースを みます。 にちようびに ともだちと きっさてんで コーヒーを のみます。</p><p>ben san wa mainichi rokuji han ni okimasu. asagohan wa pan to ko-hi- desu. ben san wa kaisha de hatarakimasu. juuniji kara ichiji made shokudou de hirugohan o tabemasu. tokidoki tomodachi to tabemasu. yoru hachiji goro heya de bangohan o tabemasu. maiban juuji goro nyu-su o mimasu. nichiyoubi ni tomodachi to kissaten de ko-hi- o nomimasu.</p><p>Words: ben san (Ben), kaisha (company), shokudou (cafeteria), heya (room).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>ben san wa mainichi nanji ni okimasu ka.</td><td></td></tr><tr><td>2</td><td>asagohan wa nan desu ka.</td><td></td></tr><tr><td>3</td><td>ben san wa doko de hatarakimasu ka.</td><td></td></tr><tr><td>4</td><td>ben san wa doko de hirugohan o tabemasu ka.</td><td></td></tr><tr><td>5</td><td>ben san wa tokidoki dare to hirugohan o tabemasu ka.</td><td></td></tr><tr><td>6</td><td>ben san wa bangohan o nanji goro tabemasu ka.</td><td></td></tr><tr><td>7</td><td>ben san wa maiban nani o mimasu ka.</td><td></td></tr><tr><td>8</td><td>ben san wa nichiyoubi ni dare to ko-hi- o nomimasu ka.</td><td></td></tr></tbody></table></div>",
+      "japanese": "ベンさんは まいにち ろくじはんに おきます。 あさごはんは パンと コーヒーです。 ベンさんは かいしゃで はたらきます。 じゅうにじから いちじまで しょくどうで ひるごはんを たべます。 ときどき ともだちと たべます。 よる はちじごろ へやで ばんごはんを たべます。 まいばん じゅうじごろ ニュースを みます。 にちようびに ともだちと きっさてんで コーヒーを のみます。",
+      "romaji": "ben san wa mainichi rokuji han ni okimasu. asagohan wa pan to ko-hi- desu. ben san wa kaisha de hatarakimasu. juuniji kara ichiji made shokudou de hirugohan o tabemasu. tokidoki tomodachi to tabemasu. yoru hachiji goro heya de bangohan o tabemasu. maiban juuji goro nyu-su o mimasu. nichiyoubi ni tomodachi to kissaten de ko-hi- o nomimasu.",
+      "english": "Ben gets up at half past six every day. He has bread and coffee for breakfast. Ben works at a company. He eats lunch in the cafeteria from twelve to one. He sometimes eats with a friend. He eats dinner in his room around eight in the evening. He watches the news around ten every night. On Sundays he drinks coffee with a friend at a cafe.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "ben san wa mainichi nanji ni okimasu ka.",
+          "japanese": "ベンさんは まいにち なんじに おきますか。"
+        },
+        {
+          "number": 2,
+          "original": "asagohan wa nan desu ka.",
+          "japanese": "あさごはんは なんですか。"
+        },
+        {
+          "number": 3,
+          "original": "ben san wa doko de hatarakimasu ka.",
+          "japanese": "ベンさんは どこで はたらきますか。"
+        },
+        {
+          "number": 4,
+          "original": "ben san wa doko de hirugohan o tabemasu ka.",
+          "japanese": "ベンさんは どこで ひるごはんを たべますか。"
+        },
+        {
+          "number": 5,
+          "original": "ben san wa tokidoki dare to hirugohan o tabemasu ka.",
+          "japanese": "ベンさんは ときどき だれと ひるごはんを たべますか。"
+        },
+        {
+          "number": 6,
+          "original": "ben san wa bangohan o nanji goro tabemasu ka.",
+          "japanese": "ベンさんは ばんごはんを なんじごろ たべますか。"
+        },
+        {
+          "number": 7,
+          "original": "ben san wa maiban nani o mimasu ka.",
+          "japanese": "ベンさんは まいばん なにを みますか。"
+        },
+        {
+          "number": 8,
+          "original": "ben san wa nichiyoubi ni dare to ko-hi- o nomimasu ka.",
+          "japanese": "ベンさんは にちようびに だれと コーヒーを のみますか。"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "まいにち",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-yesterday-today-and-tomorrow"
+          },
+          "evidence": [
+            "まいにち",
+            "毎日",
+            "mainichi",
+            "every day"
+          ]
+        },
+        {
+          "term": "おきます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "おきます",
+            "起きます",
+            "okimasu",
+            "wake up"
+          ]
+        },
+        {
+          "term": "あさごはん",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-food-tabemono"
+          },
+          "evidence": [
+            "あさごはん",
+            "朝ご飯",
+            "asagohan",
+            "breakfast"
+          ]
+        },
+        {
+          "term": "パン",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-food-tabemono"
+          },
+          "evidence": [
+            "パン",
+            "",
+            "pan",
+            "bread"
+          ]
+        },
+        {
+          "term": "コーヒー",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "コーヒー",
+            "",
+            "ko-hi-",
+            "coffee"
+          ]
+        },
+        {
+          "term": "かいしゃ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "かいしゃ",
+            "会社",
+            "kaisha",
+            "company"
+          ]
+        },
+        {
+          "term": "はたらきます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "はたらきます",
+            "働きます",
+            "hatarakimasu",
+            "work"
+          ]
+        },
+        {
+          "term": "しょくどう",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-other-nouns"
+          },
+          "evidence": [
+            "しょくどう",
+            "食堂",
+            "shokudou",
+            "cafeteria"
+          ]
+        },
+        {
+          "term": "ひるごはん",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-food-tabemono"
+          },
+          "evidence": [
+            "ひるごはん",
+            "昼ご飯",
+            "hirugohan",
+            "lunch"
+          ]
+        },
+        {
+          "term": "たべます",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-verbs"
+          },
+          "evidence": [
+            "たべます",
+            "食べます",
+            "tabemasu",
+            "eat"
+          ]
+        },
+        {
+          "term": "ときどき",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-how-often"
+          },
+          "evidence": [
+            "ときどき",
+            "時々",
+            "tokidoki",
+            "sometimes"
+          ]
+        },
+        {
+          "term": "ともだち",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-people-and-jobs"
+          },
+          "evidence": [
+            "ともだち",
+            "友達",
+            "tomodachi",
+            "friend"
+          ]
+        },
+        {
+          "term": "よる",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-times-of-day-and-sequence"
+          },
+          "evidence": [
+            "よる / ばん",
+            "夜 / 晩",
+            "yoru / ban",
+            "night"
+          ]
+        },
+        {
+          "term": "へや",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "へや",
+            "部屋",
+            "heya",
+            "room"
+          ]
+        },
+        {
+          "term": "ばんごはん",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-food-tabemono"
+          },
+          "evidence": [
+            "ばんごはん",
+            "晩ご飯",
+            "bangohan",
+            "dinner"
+          ]
+        },
+        {
+          "term": "まいばん",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-nights"
+          },
+          "evidence": [
+            "まいばん",
+            "毎晩",
+            "maiban",
+            "every night"
+          ]
+        },
+        {
+          "term": "ニュース",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-other-nouns"
+          },
+          "evidence": [
+            "ニュース",
+            "",
+            "nyu-su",
+            "news"
+          ]
+        },
+        {
+          "term": "みます",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-verbs"
+          },
+          "evidence": [
+            "みます",
+            "見ます",
+            "mimasu",
+            "watch, look, see"
+          ]
+        },
+        {
+          "term": "にちようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "にちようび",
+            "日曜日",
+            "nichiyoubi",
+            "Sunday"
+          ]
+        },
+        {
+          "term": "きっさてん",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-places"
+          },
+          "evidence": [
+            "きっさてん / カフェ",
+            "喫茶店",
+            "kissaten / kafe",
+            "coffee shop, cafe"
+          ]
+        },
+        {
+          "term": "のみます",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-verbs"
+          },
+          "evidence": [
+            "のみます",
+            "飲みます",
+            "nomimasu",
+            "drink"
+          ]
+        },
+        {
+          "term": "どこ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "どこ",
+            "",
+            "doko",
+            "where"
+          ]
+        },
+        {
+          "term": "だれ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "だれ",
+            "誰",
+            "dare",
+            "who (informal)"
+          ]
+        },
+        {
+          "term": "なに",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "なん / なに",
+            "何",
+            "nan / nani",
+            "what"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "8",
+      "heading": "c8-read-and-answer-page-128",
+      "title": "Read and answer (page 128)",
+      "level": 4,
+      "originalHtml": "<h4 id=\"c8-read-and-answer-page-128\">Read and answer (page 128)</h4><p>Read Tanaka san's daily schedule (\"Tanaka san no ichinichi no yotei\"), then choose the answers. The times are shown in 24-hour style, so 13:00 is 1 p.m. and 21:00 is 9 p.m.</p><p>6:00 おきます。 6:30 あさごはん。 9:00 かいしゃに います。 10:30 to 10:40 コーヒーブレイク。 12:00 to 13:00 ひるごはん。 16:00 かいぎ。 20:30 ばんごはん。 21:00 えいがを みます。 22:00 ねます。</p><p>6:00 okimasu. 6:30 asagohan. 9:00 kaisha ni imasu. 10:30 to 10:40 ko-hi- bureiku. 12:00 to 13:00 hirugohan. 16:00 kaigi. 20:30 bangohan. 21:00 eiga o mimasu. 22:00 nemasu.</p><p>Words: kaigi (meeting), ko-hi- bureiku (coffee break).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>tanaka san wa nanji ni ko-hi- o nomimasu ka. (1 rokuji, 2 rokuji han, 3 kuji, 4 juuji han) [たなかさんは なんじに コーヒーを のみますか。 (1 ろくじ, 2 ろくじはん, 3 くじ, 4 じゅうじはん)]</td><td></td></tr><tr><td>2</td><td>tanaka san wa nanji kara nanji made eiga o mimasu ka. (1 gozen rokuji han kara kuji made, 2 gozen kuji kara juuji han made, 3 gogo hachiji han kara kuji made, 4 gogo kuji kara juuji made) [たなかさんは なんじから なんじまで えいがを みますか。 (1 ごぜん ろくじはんから くじまで, 2 ごぜん くじから じゅうじはんまで, 3 ごご はちじはんから くじまで, 4 ごご くじから じゅうじまで)]</td><td></td></tr></tbody></table></div>",
+      "japanese": "6:00 おきます。 6:30 あさごはん。 9:00 かいしゃに います。 10:30から10:40まで コーヒーブレイク。 12:00から13:00まで ひるごはん。 16:00 かいぎ。 20:30 ばんごはん。 21:00 えいがを みます。 22:00 ねます。",
+      "romaji": "6:00 okimasu. 6:30 asagohan. 9:00 kaisha ni imasu. 10:30 to 10:40 ko-hi- bureiku. 12:00 to 13:00 hirugohan. 16:00 kaigi. 20:30 bangohan. 21:00 eiga o mimasu. 22:00 nemasu.",
+      "english": "6:00: get up. 6:30: breakfast. 9:00: at the company. 10:30 to 10:40: coffee break. 12:00 to 13:00: lunch. 16:00: meeting. 20:30: dinner. 21:00: watch a movie. 22:00: go to bed.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "tanaka san wa nanji ni ko-hi- o nomimasu ka. (1 rokuji, 2 rokuji han, 3 kuji, 4 juuji han) [たなかさんは なんじに コーヒーを のみますか。 (1 ろくじ, 2 ろくじはん, 3 くじ, 4 じゅうじはん)]",
+          "japanese": "たなかさんは なんじに コーヒーを のみますか。 (1 ろくじ, 2 ろくじはん, 3 くじ, 4 じゅうじはん)"
+        },
+        {
+          "number": 2,
+          "original": "tanaka san wa nanji kara nanji made eiga o mimasu ka. (1 gozen rokuji han kara kuji made, 2 gozen kuji kara juuji han made, 3 gogo hachiji han kara kuji made, 4 gogo kuji kara juuji made) [たなかさんは なんじから なんじまで えいがを みますか。 (1 ごぜん ろくじはんから くじまで, 2 ごぜん くじから じゅうじはんまで, 3 ごご はちじはんから くじまで, 4 ごご くじから じゅうじまで)]",
+          "japanese": "たなかさんは なんじから なんじまで えいがを みますか。 (1 ごぜん ろくじはんから くじまで, 2 ごぜん くじから じゅうじはんまで, 3 ごご はちじはんから くじまで, 4 ごご くじから じゅうじまで)"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "おきます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "おきます",
+            "起きます",
+            "okimasu",
+            "wake up"
+          ]
+        },
+        {
+          "term": "あさごはん",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-food-tabemono"
+          },
+          "evidence": [
+            "あさごはん",
+            "朝ご飯",
+            "asagohan",
+            "breakfast"
+          ]
+        },
+        {
+          "term": "かいしゃ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "かいしゃ",
+            "会社",
+            "kaisha",
+            "company"
+          ]
+        },
+        {
+          "term": "います",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-verbs-of-existence"
+          },
+          "evidence": [
+            "います",
+            "",
+            "imasu",
+            "there is, to be (people, animals)"
+          ]
+        },
+        {
+          "term": "コーヒーブレイク",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-other-words-from-the-reading-passages"
+          },
+          "evidence": [
+            "コーヒーブレイク",
+            "",
+            "ko-hi- bureiku",
+            "coffee break"
+          ]
+        },
+        {
+          "term": "ひるごはん",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-food-tabemono"
+          },
+          "evidence": [
+            "ひるごはん",
+            "昼ご飯",
+            "hirugohan",
+            "lunch"
+          ]
+        },
+        {
+          "term": "かいぎ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-work-school-and-events"
+          },
+          "evidence": [
+            "かいぎ / ミーティング",
+            "会議",
+            "kaigi / mi-tingu",
+            "meeting"
+          ]
+        },
+        {
+          "term": "ばんごはん",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-food-tabemono"
+          },
+          "evidence": [
+            "ばんごはん",
+            "晩ご飯",
+            "bangohan",
+            "dinner"
+          ]
+        },
+        {
+          "term": "えいが",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "えいが",
+            "映画",
+            "eiga",
+            "movie"
+          ]
+        },
+        {
+          "term": "みます",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-verbs"
+          },
+          "evidence": [
+            "みます",
+            "見ます",
+            "mimasu",
+            "watch, look, see"
+          ]
+        },
+        {
+          "term": "ねます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "ねます",
+            "寝ます",
+            "nemasu",
+            "sleep"
+          ]
+        },
+        {
+          "term": "コーヒー",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "コーヒー",
+            "",
+            "ko-hi-",
+            "coffee"
+          ]
+        },
+        {
+          "term": "のみます",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-verbs"
+          },
+          "evidence": [
+            "のみます",
+            "飲みます",
+            "nomimasu",
+            "drink"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "9",
+      "heading": "c9-part-x-read-and-answer",
+      "title": "Part X: Read and answer",
+      "level": 3,
+      "originalHtml": "<h3 id=\"c9-part-x-read-and-answer\">Part X: Read and answer</h3><p>Read the passage \"Jon san no ryokou\" (Jon's trip), then answer each question in Japanese.</p><p>ジョンさんは なつやすみに にほんへ いきました。 ともだちと ふたりで いきました。 ひこうきで よじかんぐらい かかりました。 くうこうから ちかてつで まちへ いきました。 にちようびに おてらへ いきました。 どようびに おんせんで あそびました。 かようびに ジョンさんは にほんから かえりました。 くうこうから いえへ タクシーで かえりました。</p><p>jon san wa natsuyasumi ni nihon e ikimashita. tomodachi to futari de ikimashita. hikouki de yojikan gurai kakarimashita. kuukou kara chikatetsu de machi e ikimashita. nichiyoubi ni otera e ikimashita. doyoubi ni onsen de asobimashita. kayoubi ni jon san wa nihon kara kaerimashita. kuukou kara ie e takushi- de kaerimashita.</p><p>Words: jon san (Jon), kakarimasu (take, for time), nanjikan (how many hours).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>jon san wa doko e ikimashita ka.</td><td></td></tr><tr><td>2</td><td>jon san wa dare to ikimashita ka.</td><td></td></tr><tr><td>3</td><td>nannin de ikimashita ka.</td><td></td></tr><tr><td>4</td><td>nanjikan gurai kakarimashita ka.</td><td></td></tr><tr><td>5</td><td>kuukou kara machi e douyatte ikimashita ka.</td><td></td></tr><tr><td>6</td><td>nichiyoubi ni doko e ikimashita ka.</td><td></td></tr><tr><td>7</td><td>doyoubi ni doko de asobimashita ka.</td><td></td></tr><tr><td>8</td><td>jon san wa kuukou kara ie e nani de kaerimashita ka.</td><td></td></tr></tbody></table></div>",
+      "japanese": "ジョンさんは なつやすみに にほんへ いきました。 ともだちと ふたりで いきました。 ひこうきで よじかんぐらい かかりました。 くうこうから ちかてつで まちへ いきました。 にちようびに おてらへ いきました。 どようびに おんせんで あそびました。 かようびに ジョンさんは にほんから かえりました。 くうこうから いえへ タクシーで かえりました。",
+      "romaji": "jon san wa natsuyasumi ni nihon e ikimashita. tomodachi to futari de ikimashita. hikouki de yojikan gurai kakarimashita. kuukou kara chikatetsu de machi e ikimashita. nichiyoubi ni otera e ikimashita. doyoubi ni onsen de asobimashita. kayoubi ni jon san wa nihon kara kaerimashita. kuukou kara ie e takushi- de kaerimashita.",
+      "english": "Jon went to Japan during the summer holidays. He went with a friend; there were two of them. It took about four hours by plane. He went from the airport to town by subway. On Sunday he went to a temple. On Saturday he spent time at a hot spring. On Tuesday Jon returned from Japan. He went home from the airport by taxi.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "jon san wa doko e ikimashita ka.",
+          "japanese": "ジョンさんは どこへ いきましたか。"
+        },
+        {
+          "number": 2,
+          "original": "jon san wa dare to ikimashita ka.",
+          "japanese": "ジョンさんは だれと いきましたか。"
+        },
+        {
+          "number": 3,
+          "original": "nannin de ikimashita ka.",
+          "japanese": "なんにんで いきましたか。"
+        },
+        {
+          "number": 4,
+          "original": "nanjikan gurai kakarimashita ka.",
+          "japanese": "なんじかんぐらい かかりましたか。"
+        },
+        {
+          "number": 5,
+          "original": "kuukou kara machi e douyatte ikimashita ka.",
+          "japanese": "くうこうから まちへ どうやって いきましたか。"
+        },
+        {
+          "number": 6,
+          "original": "nichiyoubi ni doko e ikimashita ka.",
+          "japanese": "にちようびに どこへ いきましたか。"
+        },
+        {
+          "number": 7,
+          "original": "doyoubi ni doko de asobimashita ka.",
+          "japanese": "どようびに どこで あそびましたか。"
+        },
+        {
+          "number": 8,
+          "original": "jon san wa kuukou kara ie e nani de kaerimashita ka.",
+          "japanese": "ジョンさんは くうこうから いえへ なにで かえりましたか。"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "なつやすみ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-seasons-and-holidays"
+          },
+          "evidence": [
+            "なつやすみ",
+            "夏休み",
+            "natsuyasumi",
+            "summer vacation"
+          ]
+        },
+        {
+          "term": "にほん",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "にほん",
+            "日本",
+            "nihon",
+            "Japan"
+          ]
+        },
+        {
+          "term": "いきます",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-verbs-of-going-and-doing"
+          },
+          "evidence": [
+            "いきます",
+            "行きます",
+            "ikimasu",
+            "go"
+          ]
+        },
+        {
+          "term": "ともだち",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-people-and-jobs"
+          },
+          "evidence": [
+            "ともだち",
+            "友達",
+            "tomodachi",
+            "friend"
+          ]
+        },
+        {
+          "term": "ふたり",
+          "source": {
+            "chapter": "3",
+            "section": "vocab",
+            "heading": "c3-counter-nin-people"
+          },
+          "evidence": [
+            "ふたり",
+            "二人",
+            "futari",
+            "2 people"
+          ]
+        },
+        {
+          "term": "ひこうき",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-vehicles-and-travel"
+          },
+          "evidence": [
+            "ひこうき",
+            "飛行機",
+            "hikouki",
+            "airplane"
+          ]
+        },
+        {
+          "term": "かかります",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-time-and-length-words"
+          },
+          "evidence": [
+            "かかります",
+            "",
+            "kakarimasu",
+            "it takes (time), it costs (money)"
+          ]
+        },
+        {
+          "term": "くうこう",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-places"
+          },
+          "evidence": [
+            "くうこう",
+            "空港",
+            "kuukou",
+            "airport"
+          ]
+        },
+        {
+          "term": "ちかてつ",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-vehicles-and-travel"
+          },
+          "evidence": [
+            "ちかてつ",
+            "地下鉄",
+            "chikatetsu",
+            "subway"
+          ]
+        },
+        {
+          "term": "まち",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "まち",
+            "町",
+            "machi",
+            "town, city"
+          ]
+        },
+        {
+          "term": "にちようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "にちようび",
+            "日曜日",
+            "nichiyoubi",
+            "Sunday"
+          ]
+        },
+        {
+          "term": "おてら",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-towns-and-places-to-visit"
+          },
+          "evidence": [
+            "おてら",
+            "お寺",
+            "otera",
+            "temple"
+          ]
+        },
+        {
+          "term": "どようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "どようび",
+            "土曜日",
+            "doyoubi",
+            "Saturday"
+          ]
+        },
+        {
+          "term": "おんせん",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-towns-and-places-to-visit"
+          },
+          "evidence": [
+            "おんせん",
+            "温泉",
+            "onsen",
+            "hot spring"
+          ]
+        },
+        {
+          "term": "あそびます",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-verbs-of-going-and-doing"
+          },
+          "evidence": [
+            "あそびます",
+            "遊びます",
+            "asobimasu",
+            "enjoy, play"
+          ]
+        },
+        {
+          "term": "かようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "かようび",
+            "火曜日",
+            "kayoubi",
+            "Tuesday"
+          ]
+        },
+        {
+          "term": "かえります",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-verbs-of-going-and-doing"
+          },
+          "evidence": [
+            "かえります",
+            "帰ります",
+            "kaerimasu",
+            "go home, return"
+          ]
+        },
+        {
+          "term": "いえ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "うち / いえ",
+            "家",
+            "uchi / ie",
+            "house"
+          ]
+        },
+        {
+          "term": "タクシー",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-vehicles-and-travel"
+          },
+          "evidence": [
+            "タクシー",
+            "",
+            "takushi-",
+            "taxi"
+          ]
+        },
+        {
+          "term": "だれ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "だれ",
+            "誰",
+            "dare",
+            "who (informal)"
+          ]
+        },
+        {
+          "term": "なんにん",
+          "source": {
+            "chapter": "3",
+            "section": "vocab",
+            "heading": "c3-counter-question-words"
+          },
+          "evidence": [
+            "なんにん",
+            "何人",
+            "nannin",
+            "how many (people)"
+          ]
+        },
+        {
+          "term": "どうやって",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-question-words-and-small-words"
+          },
+          "evidence": [
+            "どうやって",
+            "",
+            "douyatte",
+            "how, in what way"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "9",
+      "heading": "c9-read-and-answer-page-144",
+      "title": "Read and answer (page 144)",
+      "level": 4,
+      "originalHtml": "<h4 id=\"c9-read-and-answer-page-144\">Read and answer (page 144)</h4><p>Read the letter from Jon to Ana, then answer the questions.</p><p>アナさんへ おげんきですか。 しごとは どうですか。 いまごろ にほんは はるですね。 はなみに いきましたか。 フィリピンは ちょっと すずしいです。 せんしゅうの どようびに かぞくと りょこうを しました。 ゆうめいな リゾートに いきました。 いちにちじゅう いろいろな スポーツを しました。 やまは とても きれいでした。 りょうりも おいしかったです。 とても たのしかったです。 こんげつ フィリピンに かえりますか。 へんじを まちます。 ジョン</p><p>ana san e ogenki desu ka. shigoto wa dou desu ka. imagoro nihon wa haru desu ne. hanami ni ikimashita ka. firipin wa chotto suzushii desu. senshuu no doyoubi ni kazoku to ryokou o shimashita. yuumei na rizo-to ni ikimashita. ichinichijuu iroiro na supo-tsu o shimashita. yama wa totemo kirei deshita. ryouri mo oishikatta desu. totemo tanoshikatta desu. kongetsu firipin ni kaerimasu ka. henji o machimasu. jon</p><p>Words: imagoro (at this time), hanami (flower viewing), suzushii (cool), tanoshii (fun), henji o matsu (wait for a reply).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>tadashii mono wa dore desu ka. (1 ana san wa firipin ni imasu, 2 ana san wa rizo-to ni ikimashita, 3 ana san wa nihon de shigotoshimasu, 4 ana san wa hanami ni ikimashita) [ただしいものは どれですか。 (1 アナさんは フィリピンに います, 2 アナさんは リゾートに いきました, 3 アナさんは にほんで しごとします, 4 アナさんは はなみに いきました)]</td><td></td></tr><tr><td>2</td><td>kore kara jon san wa nani o shimasu ka. (1 nihon ni ikimasu, 2 hanami o mimasu, 3 henji o machimasu, 4 firipin e kaerimasu) [これから ジョンさんは なにを しますか。 (1 にほんに いきます, 2 はなみを みます, 3 へんじを まちます, 4 フィリピンへ かえります)]</td><td></td></tr></tbody></table></div>",
+      "japanese": "アナさんへ おげんきですか。 しごとは どうですか。 いまごろ にほんは はるですね。 はなみに いきましたか。 フィリピンは ちょっと すずしいです。 せんしゅうの どようびに かぞくと りょこうを しました。 ゆうめいな リゾートに いきました。 いちにちじゅう いろいろな スポーツを しました。 やまは とても きれいでした。 りょうりも おいしかったです。 とても たのしかったです。 こんげつ フィリピンに かえりますか。 へんじを まちます。 ジョン",
+      "romaji": "ana san e ogenki desu ka. shigoto wa dou desu ka. imagoro nihon wa haru desu ne. hanami ni ikimashita ka. firipin wa chotto suzushii desu. senshuu no doyoubi ni kazoku to ryokou o shimashita. yuumei na rizo-to ni ikimashita. ichinichijuu iroiro na supo-tsu o shimashita. yama wa totemo kirei deshita. ryouri mo oishikatta desu. totemo tanoshikatta desu. kongetsu firipin ni kaerimasu ka. henji o machimasu. jon",
+      "english": "Dear Ana, how are you? How is work? It must be spring in Japan around now. Did you go flower viewing? It is a little cool in the Philippines. Last Saturday I went on a trip with my family. We went to a famous resort. We played various sports all day. The mountain scenery was very beautiful. The food was delicious too. It was a lot of fun. Are you returning to the Philippines this month? I will wait for your reply. Jon.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "tadashii mono wa dore desu ka. (1 ana san wa firipin ni imasu, 2 ana san wa rizo-to ni ikimashita, 3 ana san wa nihon de shigotoshimasu, 4 ana san wa hanami ni ikimashita) [ただしいものは どれですか。 (1 アナさんは フィリピンに います, 2 アナさんは リゾートに いきました, 3 アナさんは にほんで しごとします, 4 アナさんは はなみに いきました)]",
+          "japanese": "ただしいものは どれですか。 (1 アナさんは フィリピンに います, 2 アナさんは リゾートに いきました, 3 アナさんは にほんで しごとします, 4 アナさんは はなみに いきました)"
+        },
+        {
+          "number": 2,
+          "original": "kore kara jon san wa nani o shimasu ka. (1 nihon ni ikimasu, 2 hanami o mimasu, 3 henji o machimasu, 4 firipin e kaerimasu) [これから ジョンさんは なにを しますか。 (1 にほんに いきます, 2 はなみを みます, 3 へんじを まちます, 4 フィリピンへ かえります)]",
+          "japanese": "これから ジョンさんは なにを しますか。 (1 にほんに いきます, 2 はなみを みます, 3 へんじを まちます, 4 フィリピンへ かえります)"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "おげんきですか",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-small-words-and-phrases"
+          },
+          "evidence": [
+            "おげんきですか",
+            "お元気ですか",
+            "ogenki desu ka",
+            "how are you?"
+          ]
+        },
+        {
+          "term": "しごと",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-work-school-and-events"
+          },
+          "evidence": [
+            "しごと",
+            "仕事",
+            "shigoto",
+            "work"
+          ]
+        },
+        {
+          "term": "どう",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-question-words-for-adjectives"
+          },
+          "evidence": [
+            "どう",
+            "",
+            "dou",
+            "how"
+          ]
+        },
+        {
+          "term": "いまごろ",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-time-words"
+          },
+          "evidence": [
+            "いまごろ",
+            "今頃",
+            "imagoro",
+            "at this time, around now"
+          ]
+        },
+        {
+          "term": "にほん",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "にほん",
+            "日本",
+            "nihon",
+            "Japan"
+          ]
+        },
+        {
+          "term": "はる",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-seasons-and-holidays"
+          },
+          "evidence": [
+            "はる",
+            "春",
+            "haru",
+            "spring (March to May)"
+          ]
+        },
+        {
+          "term": "はなみ",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "はなみ",
+            "花見",
+            "hanami",
+            "flower viewing"
+          ]
+        },
+        {
+          "term": "いきます",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-verbs-of-going-and-doing"
+          },
+          "evidence": [
+            "いきます",
+            "行きます",
+            "ikimasu",
+            "go"
+          ]
+        },
+        {
+          "term": "フィリピン",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "フィリピン",
+            "",
+            "firipin",
+            "Philippines"
+          ]
+        },
+        {
+          "term": "ちょっと",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adverbs-for-adjectives"
+          },
+          "evidence": [
+            "ちょっと",
+            "",
+            "chotto",
+            "a little"
+          ]
+        },
+        {
+          "term": "すずしい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "すずしい",
+            "涼しい",
+            "suzushii",
+            "cool (i-adjective)"
+          ]
+        },
+        {
+          "term": "せんしゅう",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-last-this-and-next-weeks"
+          },
+          "evidence": [
+            "せんしゅう",
+            "先週",
+            "senshuu",
+            "last week"
+          ]
+        },
+        {
+          "term": "どようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "どようび",
+            "土曜日",
+            "doyoubi",
+            "Saturday"
+          ]
+        },
+        {
+          "term": "かぞく",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-family"
+          },
+          "evidence": [
+            "かぞく",
+            "家族",
+            "kazoku",
+            "my family"
+          ]
+        },
+        {
+          "term": "りょこう",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-extra-words-from-the-lessons-and-exercis"
+          },
+          "evidence": [
+            "りょこう",
+            "旅行",
+            "ryokou",
+            "trip"
+          ]
+        },
+        {
+          "term": "ゆうめい",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-describing-words"
+          },
+          "evidence": [
+            "ゆうめい",
+            "有名",
+            "yuumei",
+            "famous (na-adjective)"
+          ]
+        },
+        {
+          "term": "リゾート",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-towns-and-places-to-visit"
+          },
+          "evidence": [
+            "リゾート",
+            "",
+            "rizo-to",
+            "resort"
+          ]
+        },
+        {
+          "term": "いちにちじゅう",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-time-words"
+          },
+          "evidence": [
+            "いちにちじゅう",
+            "一日中",
+            "ichinichijuu",
+            "all day"
+          ]
+        },
+        {
+          "term": "いろいろ",
+          "source": {
+            "chapter": "6",
+            "section": "lessons",
+            "heading": "c6-6-2-two-types-of-adjectives-i-and-na-bun"
+          },
+          "evidence": [
+            "いろいろ(な)",
+            "iroiro(na)",
+            "various (na-adjective)"
+          ]
+        },
+        {
+          "term": "スポーツ",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-things-and-ideas"
+          },
+          "evidence": [
+            "スポーツ",
+            "",
+            "supo-tsu",
+            "sports"
+          ]
+        },
+        {
+          "term": "やま",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-nature-and-scenery"
+          },
+          "evidence": [
+            "やま",
+            "山",
+            "yama",
+            "mountain"
+          ]
+        },
+        {
+          "term": "とても",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adverbs-for-adjectives"
+          },
+          "evidence": [
+            "とても",
+            "",
+            "totemo",
+            "very"
+          ]
+        },
+        {
+          "term": "きれい",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-describing-words"
+          },
+          "evidence": [
+            "きれい",
+            "綺麗",
+            "kirei",
+            "beautiful, clean (na-adjective)"
+          ]
+        },
+        {
+          "term": "りょうり",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-home-and-food"
+          },
+          "evidence": [
+            "りょうり",
+            "料理",
+            "ryouri",
+            "dish, cooking"
+          ]
+        },
+        {
+          "term": "おいしい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-quality-and-feeling"
+          },
+          "evidence": [
+            "おいしい",
+            "美味しい",
+            "oishii",
+            "delicious (i-adjective)"
+          ]
+        },
+        {
+          "term": "たのしい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-more-adjectives-from-the-grammar-page"
+          },
+          "evidence": [
+            "たのしい",
+            "楽しい",
+            "tanoshii",
+            "enjoyable (i-adjective)"
+          ]
+        },
+        {
+          "term": "こんげつ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-last-this-and-next-months"
+          },
+          "evidence": [
+            "こんげつ",
+            "今月",
+            "kongetsu",
+            "this month"
+          ]
+        },
+        {
+          "term": "かえります",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-verbs-of-going-and-doing"
+          },
+          "evidence": [
+            "かえります",
+            "帰ります",
+            "kaerimasu",
+            "go home, return"
+          ]
+        },
+        {
+          "term": "へんじ",
+          "source": {
+            "chapter": "9",
+            "section": "lessons",
+            "heading": "c9-9-15-phrases-from-the-readings-extra-les"
+          },
+          "evidence": [
+            "へんじを まちます。",
+            "henji o machimasu.",
+            "I will wait for your reply."
+          ]
+        },
+        {
+          "term": "まちます",
+          "source": {
+            "chapter": "9",
+            "section": "lessons",
+            "heading": "c9-9-10-from-masu-form-to-dictionary-form-p"
+          },
+          "evidence": [
+            "まちます、まち、まつ",
+            "machimasu, machi, matsu",
+            "wait. Irregular: chi changes to tsu."
+          ]
+        },
+        {
+          "term": "ただしい もの",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-words-from-the-workbook-examples"
+          },
+          "evidence": [
+            "ただしい もの",
+            "正しい もの",
+            "tadashii mono",
+            "correct item"
+          ]
+        },
+        {
+          "term": "どれ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "どれ",
+            "",
+            "dore",
+            "which one"
+          ]
+        },
+        {
+          "term": "ひと",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-people-and-jobs"
+          },
+          "evidence": [
+            "ひと",
+            "人",
+            "hito",
+            "person (informal)"
+          ]
+        },
+        {
+          "term": "いま",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-words-from-the-workbook-examples"
+          },
+          "evidence": [
+            "いま",
+            "今",
+            "ima",
+            "now"
+          ]
+        },
+        {
+          "term": "なに",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "なん / なに",
+            "何",
+            "nan / nani",
+            "what"
+          ]
+        }
+      ],
+      "notes": [
+        {
+          "japanese": "これから",
+          "meaning": "after this; from now on",
+          "context": "Question 2",
+          "reference": "https://marugoto.jpf.go.jp/assets/docs/download/elementary2_a/MarugotoElementary2ActivitiesVocabularyIndex_EN.pdf"
+        }
+      ]
+    },
+    {
+      "chapter": "10",
+      "heading": "c10-part-x-read-and-answer",
+      "title": "Part X: Read and answer",
+      "level": 3,
+      "originalHtml": "<h3 id=\"c10-part-x-read-and-answer\">Part X: Read and answer</h3><p>Read the diary and then answer the questions in a casual sentence.</p><p>きのうは にちようびだった。 あさ ろくじに おきた。 ともだちと こうえんで テニスした。 さんじに えいがを みた。 ばんごはんは ははと つくった。 よる ちちに でんわした。 じゅうじに ねた。</p><p>kinou wa nichiyoubi datta. asa rokuji ni okita. tomodachi to kouen de tenisushita. sanji ni eiga o mita. bangohan wa haha to tsukutta. yoru chichi ni denwashita. juuji ni neta.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>nanji ni okita no? [なんじに おきたの？]</td><td></td></tr><tr><td>2</td><td>dare to tenisushita no? [だれと テニスしたの？]</td><td></td></tr><tr><td>3</td><td>doko de tenisushita no? [どこで テニスしたの？]</td><td></td></tr><tr><td>4</td><td>nanji ni eiga o mita no? [なんじに えいがを みたの？]</td><td></td></tr><tr><td>5</td><td>nani o mita no? [なにを みたの？]</td><td></td></tr><tr><td>6</td><td>bangohan wa dare to tsukutta no? [ばんごはんは だれと つくったの？]</td><td></td></tr><tr><td>7</td><td>dare ni denwashita no? [だれに でんわしたの？]</td><td></td></tr><tr><td>8</td><td>nanji ni neta no? [なんじに ねたの？]</td><td></td></tr></tbody></table></div>",
+      "japanese": "きのうは にちようびだった。 あさ ろくじに おきた。 ともだちと こうえんで テニスした。 さんじに えいがを みた。 ばんごはんは ははと つくった。 よる ちちに でんわした。 じゅうじに ねた。",
+      "romaji": "kinou wa nichiyoubi datta. asa rokuji ni okita. tomodachi to kouen de tenisushita. sanji ni eiga o mita. bangohan wa haha to tsukutta. yoru chichi ni denwashita. juuji ni neta.",
+      "english": "Yesterday was Sunday. I got up at six in the morning. I played tennis with a friend at the park. I watched a movie at three. I made dinner with my mother. At night I called my father. I went to bed at ten.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "nanji ni okita no? [なんじに おきたの？]",
+          "japanese": "なんじに おきたの？"
+        },
+        {
+          "number": 2,
+          "original": "dare to tenisushita no? [だれと テニスしたの？]",
+          "japanese": "だれと テニスしたの？"
+        },
+        {
+          "number": 3,
+          "original": "doko de tenisushita no? [どこで テニスしたの？]",
+          "japanese": "どこで テニスしたの？"
+        },
+        {
+          "number": 4,
+          "original": "nanji ni eiga o mita no? [なんじに えいがを みたの？]",
+          "japanese": "なんじに えいがを みたの？"
+        },
+        {
+          "number": 5,
+          "original": "nani o mita no? [なにを みたの？]",
+          "japanese": "なにを みたの？"
+        },
+        {
+          "number": 6,
+          "original": "bangohan wa dare to tsukutta no? [ばんごはんは だれと つくったの？]",
+          "japanese": "ばんごはんは だれと つくったの？"
+        },
+        {
+          "number": 7,
+          "original": "dare ni denwashita no? [だれに でんわしたの？]",
+          "japanese": "だれに でんわしたの？"
+        },
+        {
+          "number": 8,
+          "original": "nanji ni neta no? [なんじに ねたの？]",
+          "japanese": "なんじに ねたの？"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "きのう",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-yesterday-today-and-tomorrow"
+          },
+          "evidence": [
+            "きのう",
+            "昨日",
+            "kinou",
+            "yesterday"
+          ]
+        },
+        {
+          "term": "にちようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "にちようび",
+            "日曜日",
+            "nichiyoubi",
+            "Sunday"
+          ]
+        },
+        {
+          "term": "あさ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-times-of-day-and-sequence"
+          },
+          "evidence": [
+            "あさ",
+            "朝",
+            "asa",
+            "morning"
+          ]
+        },
+        {
+          "term": "おきます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "おきます",
+            "起きます",
+            "okimasu",
+            "wake up"
+          ]
+        },
+        {
+          "term": "ともだち",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-people-and-jobs"
+          },
+          "evidence": [
+            "ともだち",
+            "友達",
+            "tomodachi",
+            "friend"
+          ]
+        },
+        {
+          "term": "こうえん",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-places"
+          },
+          "evidence": [
+            "こうえん",
+            "公園",
+            "kouen",
+            "park"
+          ]
+        },
+        {
+          "term": "テニス",
+          "source": {
+            "chapter": "10",
+            "section": "vocab",
+            "heading": "c10-sports-and-games"
+          },
+          "evidence": [
+            "テニス",
+            "",
+            "tenisu",
+            "tennis"
+          ]
+        },
+        {
+          "term": "えいが",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "えいが",
+            "映画",
+            "eiga",
+            "movie"
+          ]
+        },
+        {
+          "term": "みます",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-verbs"
+          },
+          "evidence": [
+            "みます",
+            "見ます",
+            "mimasu",
+            "watch, look, see"
+          ]
+        },
+        {
+          "term": "ばんごはん",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-food-tabemono"
+          },
+          "evidence": [
+            "ばんごはん",
+            "晩ご飯",
+            "bangohan",
+            "dinner"
+          ]
+        },
+        {
+          "term": "はは",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-family"
+          },
+          "evidence": [
+            "はは",
+            "母",
+            "haha",
+            "my mother"
+          ]
+        },
+        {
+          "term": "つくります",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-things-and-ideas"
+          },
+          "evidence": [
+            "つくります",
+            "作ります",
+            "tsukurimasu",
+            "make"
+          ]
+        },
+        {
+          "term": "よる",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-times-of-day-and-sequence"
+          },
+          "evidence": [
+            "よる / ばん",
+            "夜 / 晩",
+            "yoru / ban",
+            "night"
+          ]
+        },
+        {
+          "term": "ちち",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-family"
+          },
+          "evidence": [
+            "ちち",
+            "父",
+            "chichi",
+            "my father"
+          ]
+        },
+        {
+          "term": "でんわします",
+          "source": {
+            "chapter": "10",
+            "section": "lessons",
+            "heading": "c10-10-1-noun-suru-bunkei-10-1-page-148"
+          },
+          "evidence": [
+            "でんわします、でんわする",
+            "denwashimasu, denwasuru",
+            "call"
+          ]
+        },
+        {
+          "term": "ねます",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-verbs"
+          },
+          "evidence": [
+            "ねます",
+            "寝ます",
+            "nemasu",
+            "sleep"
+          ]
+        },
+        {
+          "term": "だれ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "だれ",
+            "誰",
+            "dare",
+            "who (informal)"
+          ]
+        },
+        {
+          "term": "どこ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "どこ",
+            "",
+            "doko",
+            "where"
+          ]
+        },
+        {
+          "term": "なに",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "なん / なに",
+            "何",
+            "nan / nani",
+            "what"
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "chapter": "10",
+      "heading": "c10-read-and-answer-page-160",
+      "title": "Read and answer (page 160)",
+      "level": 4,
+      "originalHtml": "<h4 id=\"c10-read-and-answer-page-160\">Read and answer (page 160)</h4><p>Read the letter from Ana to Jon, then answer the questions.</p><p>ジョンさんへ おげんきですか。 わたしは げんきです。 にほんは ちょっと さむいです。 にほんは いま はるです。 せんしゅうの にちようびに かいしゃのともだちと こうえんで はなみを みました。 さくらは とても きれいでした。 ジョンさんは かぞくと りょこうを しましたね。 よかったですね。 しごとは まいにち いそがしいです。 ときどき はちじまで ざんぎょうします。 ゆうべ くじごろ りょうに かえりました。 しごとのやすみは らいげつです。 じゅうごにちに フィリピンへ かえります。 それでは。 アナ</p><p>jon san e ogenki desu ka. watashi wa genki desu. nihon wa chotto samui desu. nihon wa ima haru desu. senshuu no nichiyoubi ni kaisha no tomodachi to kouen de hanami o mimashita. sakura wa totemo kirei deshita. jon san wa kazoku to ryokou o shimashita ne. yokatta desu ne. shigoto wa mainichi isogashii desu. tokidoki hachiji made zangyoushimasu. yuube kuji goro ryou ni kaerimashita. shigoto no yasumi wa raigetsu desu. juugonichi ni firipin e kaerimasu. soredewa. ana</p><p>Words: soredewa (well then), zangyou (overtime), ryou (dormitory).</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>ana san wa senshuu no nichiyoubi ni doko e ikimashita ka. (1 kouen, 2 kaisha, 3 tomodachi no ryou, 4 firipin) [アナさんは せんしゅうの にちようびに どこへ いきましたか。 (1 こうえん, 2 かいしゃ, 3 ともだちのりょう, 4 フィリピン)]</td><td></td></tr><tr><td>2</td><td>ana san wa dare to firipin e kaerimasu ka. (1 jon san to kaerimasu, 2 kaisha no tomodachi to kaerimasu, 3 kazoku to kaerimasu, 4 hitori de kaerimasu) [アナさんは だれと フィリピンへ かえりますか。 (1 ジョンさんと かえります, 2 かいしゃのともだちと かえります, 3 かぞくと かえります, 4 ひとりで かえります)]</td><td></td></tr></tbody></table></div>",
+      "japanese": "ジョンさんへ おげんきですか。 わたしは げんきです。 にほんは ちょっと さむいです。 にほんは いま はるです。 せんしゅうの にちようびに かいしゃのともだちと こうえんで はなみを みました。 さくらは とても きれいでした。 ジョンさんは かぞくと りょこうを しましたね。 よかったですね。 しごとは まいにち いそがしいです。 ときどき はちじまで ざんぎょうします。 ゆうべ くじごろ りょうに かえりました。 しごとのやすみは らいげつです。 じゅうごにちに フィリピンへ かえります。 それでは。 アナ",
+      "romaji": "jon san e ogenki desu ka. watashi wa genki desu. nihon wa chotto samui desu. nihon wa ima haru desu. senshuu no nichiyoubi ni kaisha no tomodachi to kouen de hanami o mimashita. sakura wa totemo kirei deshita. jon san wa kazoku to ryokou o shimashita ne. yokatta desu ne. shigoto wa mainichi isogashii desu. tokidoki hachiji made zangyoushimasu. yuube kuji goro ryou ni kaerimashita. shigoto no yasumi wa raigetsu desu. juugonichi ni firipin e kaerimasu. soredewa. ana",
+      "english": "Dear Jon, how are you? I am well. It is a little cold in Japan. It is spring in Japan now. Last Sunday I saw the cherry blossoms at the park with a friend from work. The cherry blossoms were very beautiful. You went on a trip with your family, didn't you? That sounds nice. Work is busy every day. Sometimes I work overtime until eight. Last night I returned to the dormitory around nine. My time off from work is next month. I will return to the Philippines on the fifteenth. Well then. Ana.",
+      "questions": [
+        {
+          "number": 1,
+          "original": "ana san wa senshuu no nichiyoubi ni doko e ikimashita ka. (1 kouen, 2 kaisha, 3 tomodachi no ryou, 4 firipin) [アナさんは せんしゅうの にちようびに どこへ いきましたか。 (1 こうえん, 2 かいしゃ, 3 ともだちのりょう, 4 フィリピン)]",
+          "japanese": "アナさんは せんしゅうの にちようびに どこへ いきましたか。 (1 こうえん, 2 かいしゃ, 3 ともだちのりょう, 4 フィリピン)"
+        },
+        {
+          "number": 2,
+          "original": "ana san wa dare to firipin e kaerimasu ka. (1 jon san to kaerimasu, 2 kaisha no tomodachi to kaerimasu, 3 kazoku to kaerimasu, 4 hitori de kaerimasu) [アナさんは だれと フィリピンへ かえりますか。 (1 ジョンさんと かえります, 2 かいしゃのともだちと かえります, 3 かぞくと かえります, 4 ひとりで かえります)]",
+          "japanese": "アナさんは だれと フィリピンへ かえりますか。 (1 ジョンさんと かえります, 2 かいしゃのともだちと かえります, 3 かぞくと かえります, 4 ひとりで かえります)"
+        }
+      ],
+      "knownVocabulary": [
+        {
+          "term": "おげんきですか",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-small-words-and-phrases"
+          },
+          "evidence": [
+            "おげんきですか",
+            "お元気ですか",
+            "ogenki desu ka",
+            "how are you?"
+          ]
+        },
+        {
+          "term": "わたし",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-people-and-jobs"
+          },
+          "evidence": [
+            "わたし",
+            "私",
+            "watashi",
+            "I"
+          ]
+        },
+        {
+          "term": "げんき",
+          "source": {
+            "chapter": "7",
+            "section": "lessons",
+            "heading": "c7-7-8-na-adjective-as-an-adverb-bunkei-7-7"
+          },
+          "evidence": [
+            "げんきに",
+            "genki ni",
+            "in good health, well (from genki na)"
+          ]
+        },
+        {
+          "term": "にほん",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "にほん",
+            "日本",
+            "nihon",
+            "Japan"
+          ]
+        },
+        {
+          "term": "ちょっと",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adverbs-for-adjectives"
+          },
+          "evidence": [
+            "ちょっと",
+            "",
+            "chotto",
+            "a little"
+          ]
+        },
+        {
+          "term": "さむい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-price-and-temperature"
+          },
+          "evidence": [
+            "さむい",
+            "寒い",
+            "samui",
+            "cold, for weather (i-adjective)"
+          ]
+        },
+        {
+          "term": "いま",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-words-from-the-workbook-examples"
+          },
+          "evidence": [
+            "いま",
+            "今",
+            "ima",
+            "now"
+          ]
+        },
+        {
+          "term": "はる",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-seasons-and-holidays"
+          },
+          "evidence": [
+            "はる",
+            "春",
+            "haru",
+            "spring (March to May)"
+          ]
+        },
+        {
+          "term": "せんしゅう",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-last-this-and-next-weeks"
+          },
+          "evidence": [
+            "せんしゅう",
+            "先週",
+            "senshuu",
+            "last week"
+          ]
+        },
+        {
+          "term": "にちようび",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-days-of-the-week"
+          },
+          "evidence": [
+            "にちようび",
+            "日曜日",
+            "nichiyoubi",
+            "Sunday"
+          ]
+        },
+        {
+          "term": "かいしゃ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-places"
+          },
+          "evidence": [
+            "かいしゃ",
+            "会社",
+            "kaisha",
+            "company"
+          ]
+        },
+        {
+          "term": "ともだち",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-people-and-jobs"
+          },
+          "evidence": [
+            "ともだち",
+            "友達",
+            "tomodachi",
+            "friend"
+          ]
+        },
+        {
+          "term": "こうえん",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-places"
+          },
+          "evidence": [
+            "こうえん",
+            "公園",
+            "kouen",
+            "park"
+          ]
+        },
+        {
+          "term": "はなみ",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-words-from-the-lessons-and-exercises"
+          },
+          "evidence": [
+            "はなみ",
+            "花見",
+            "hanami",
+            "flower viewing"
+          ]
+        },
+        {
+          "term": "みます",
+          "source": {
+            "chapter": "8",
+            "section": "vocab",
+            "heading": "c8-verbs"
+          },
+          "evidence": [
+            "みます",
+            "見ます",
+            "mimasu",
+            "watch, look, see"
+          ]
+        },
+        {
+          "term": "さくら",
+          "source": {
+            "chapter": "10",
+            "section": "lessons",
+            "heading": "c10-10-23-phrases-from-the-readings-extra-le"
+          },
+          "evidence": [
+            "さくらは とてもきれいでした。",
+            "sakura wa totemo kirei deshita.",
+            "The cherry blossoms were very beautiful."
+          ]
+        },
+        {
+          "term": "とても",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adverbs-for-adjectives"
+          },
+          "evidence": [
+            "とても",
+            "",
+            "totemo",
+            "very"
+          ]
+        },
+        {
+          "term": "きれい",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-describing-words"
+          },
+          "evidence": [
+            "きれい",
+            "綺麗",
+            "kirei",
+            "beautiful, clean (na-adjective)"
+          ]
+        },
+        {
+          "term": "かぞく",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-family"
+          },
+          "evidence": [
+            "かぞく",
+            "家族",
+            "kazoku",
+            "my family"
+          ]
+        },
+        {
+          "term": "りょこう",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-extra-words-from-the-lessons-and-exercis"
+          },
+          "evidence": [
+            "りょこう",
+            "旅行",
+            "ryokou",
+            "trip"
+          ]
+        },
+        {
+          "term": "いい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-quality-and-feeling"
+          },
+          "evidence": [
+            "いい / よい",
+            "良い",
+            "ii / yoi",
+            "good (i-adjective, conjugates as yoi)"
+          ]
+        },
+        {
+          "term": "しごと",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-work-school-and-events"
+          },
+          "evidence": [
+            "しごと",
+            "仕事",
+            "shigoto",
+            "work"
+          ]
+        },
+        {
+          "term": "まいにち",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-yesterday-today-and-tomorrow"
+          },
+          "evidence": [
+            "まいにち",
+            "毎日",
+            "mainichi",
+            "every day"
+          ]
+        },
+        {
+          "term": "いそがしい",
+          "source": {
+            "chapter": "6",
+            "section": "vocab",
+            "heading": "c6-adjective-pairs-quality-and-feeling"
+          },
+          "evidence": [
+            "いそがしい",
+            "忙しい",
+            "isogashii",
+            "busy (i-adjective)"
+          ]
+        },
+        {
+          "term": "ときどき",
+          "source": {
+            "chapter": "7",
+            "section": "vocab",
+            "heading": "c7-how-often"
+          },
+          "evidence": [
+            "ときどき",
+            "時々",
+            "tokidoki",
+            "sometimes"
+          ]
+        },
+        {
+          "term": "ざんぎょう",
+          "source": {
+            "chapter": "5",
+            "section": "vocab",
+            "heading": "c5-school-and-work-words"
+          },
+          "evidence": [
+            "ざんぎょう",
+            "残業",
+            "zangyou",
+            "overtime"
+          ]
+        },
+        {
+          "term": "ゆうべ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-nights"
+          },
+          "evidence": [
+            "ゆうべ / きのうの よる",
+            "夕べ / 昨日の夜",
+            "yuube / kinou no yoru",
+            "last night"
+          ]
+        },
+        {
+          "term": "りょう",
+          "source": {
+            "chapter": "2",
+            "section": "vocab",
+            "heading": "c2-places"
+          },
+          "evidence": [
+            "りょう",
+            "寮",
+            "ryou",
+            "dormitory"
+          ]
+        },
+        {
+          "term": "かえります",
+          "source": {
+            "chapter": "9",
+            "section": "vocab",
+            "heading": "c9-verbs-of-going-and-doing"
+          },
+          "evidence": [
+            "かえります",
+            "帰ります",
+            "kaerimasu",
+            "go home, return"
+          ]
+        },
+        {
+          "term": "やすみ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-work-school-and-events"
+          },
+          "evidence": [
+            "やすみ",
+            "休み",
+            "yasumi",
+            "vacation, holiday"
+          ]
+        },
+        {
+          "term": "らいげつ",
+          "source": {
+            "chapter": "4",
+            "section": "vocab",
+            "heading": "c4-last-this-and-next-months"
+          },
+          "evidence": [
+            "らいげつ",
+            "来月",
+            "raigetsu",
+            "next month"
+          ]
+        },
+        {
+          "term": "フィリピン",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-countries-people-and-languages"
+          },
+          "evidence": [
+            "フィリピン",
+            "",
+            "firipin",
+            "Philippines"
+          ]
+        },
+        {
+          "term": "それでは",
+          "source": {
+            "chapter": "10",
+            "section": "vocab",
+            "heading": "c10-casual-talk"
+          },
+          "evidence": [
+            "それでは",
+            "",
+            "soredewa",
+            "well then"
+          ]
+        },
+        {
+          "term": "どこ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "どこ",
+            "",
+            "doko",
+            "where"
+          ]
+        },
+        {
+          "term": "だれ",
+          "source": {
+            "chapter": "1",
+            "section": "vocab",
+            "heading": "c1-question-words-do"
+          },
+          "evidence": [
+            "だれ",
+            "誰",
+            "dare",
+            "who (informal)"
+          ]
+        },
+        {
+          "term": "ひとりで",
+          "source": {
+            "chapter": "10",
+            "section": "vocab",
+            "heading": "c10-words-from-the-exercises"
+          },
+          "evidence": [
+            "ひとりで",
+            "一人で",
+            "hitori de",
+            "alone, by oneself"
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ]
+}

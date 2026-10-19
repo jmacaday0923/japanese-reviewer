@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import StudyText from "@/components/StudyText";
+import { ReadingHint } from "@/components/ReadingPreferences";
 import type { ParticleQuestion, ParticleSet } from "@/types/exercise";
 import {
   applyGrades,
   createActivity,
   editAnswer,
   gradeParticle,
+  normalizeAnswer,
   restartActivity,
   retryIncorrect,
   summarize,
@@ -50,7 +53,7 @@ export default function ParticleExercise({ set }: { set: ParticleSet }) {
     setState(next);
     const done = summarize(next);
     announce(
-      `Question ${number}: ${grade === "correct" ? "correct" : "incorrect"}. The answer is ${question.answer}.` +
+      `Question ${number}: ${grade === "correct" ? "correct" : "incorrect"}. The answer is ${question.display?.answer.primary ?? question.answer}.` +
         (done.checked ? ` All checked: ${done.correct} of ${done.total} correct.` : "")
     );
   }
@@ -79,8 +82,7 @@ export default function ParticleExercise({ set }: { set: ParticleSet }) {
   return (
     <div>
       <p className="text-sm text-muted">
-        Type the missing particle in romaji or in kana, for example <span className="text-foreground">wa</span> or{" "}
-        <span lang="ja" className="text-foreground">は</span>, then check it. Enter checks too.
+        Type the missing particle in kana, for example <span lang="ja" className="text-foreground">は</span>, then check it. Romaji is also accepted. Enter checks too.
       </p>
       <ol className="mt-4 space-y-3">
         {set.questions.map((q) => (
@@ -118,7 +120,10 @@ type QuestionProps = {
 function Question({ question, number, state, showBlank, inputRef, onEdit, onCheck }: QuestionProps) {
   const { value, status } = state.progress[question.id];
   const id = question.id;
-  const [before, after] = splitPrompt(question.prompt);
+  const acceptedIndex = question.accepted.indexOf(normalizeAnswer(value));
+  const writtenAnswer = /[ぁ-ん]/u.test(value) ? value.trim()
+    : question.accepted[acceptedIndex + 1] ?? question.accepted.find(answer => /[ぁ-ん]/u.test(answer)) ?? value.trim();
+  const [before, after] = splitPrompt(question.display?.prompt?.primary ?? question.prompt);
 
   function onKeyDown(e: KeyboardEvent<HTMLInputElement>) {
     if (e.key !== "Enter") return;
@@ -145,7 +150,7 @@ function Question({ question, number, state, showBlank, inputRef, onEdit, onChec
           }
         >
           {status === "correct" ? (
-            value.trim()
+            writtenAnswer
           ) : (
             <>
               <span className="sr-only">blank</span>
@@ -156,6 +161,7 @@ function Question({ question, number, state, showBlank, inputRef, onEdit, onChec
         {after}
       </p>
 
+      {question.display?.prompt?.romaji && <p className="mt-2 text-sm text-muted"><ReadingHint kind="romaji" context={"question " + number} compact>{question.display.prompt.romaji}</ReadingHint></p>}
       <div className="mt-3 flex flex-wrap items-end gap-2">
         <div className="min-w-0 flex-1 sm:max-w-48">
           <label htmlFor={`${id}-input`} className="block text-xs font-medium text-muted">
@@ -191,7 +197,7 @@ function Question({ question, number, state, showBlank, inputRef, onEdit, onChec
       <div id={`${id}-feedback`} className="mt-3 empty:hidden">
         {showBlank && (
           <p className="text-sm font-medium text-amber-300">
-            Type a particle first, such as wa or <span lang="ja">は</span>, then check.
+            Type a particle first, such as <span lang="ja">は</span>, then check.
           </p>
         )}
         {status !== "unanswered" && (
@@ -203,11 +209,11 @@ function Question({ question, number, state, showBlank, inputRef, onEdit, onChec
             <Explanation>
               <p>
                 <span className="text-subtle">Answer: </span>
-                <span className="font-medium text-foreground">{question.answer}</span>
+                <span className="font-medium text-foreground"><StudyText display={question.display?.answer ?? { primary: question.answer }} context={"the answer to question " + number} /></span>
               </p>
               <p>
                 <span className="text-subtle">Why: </span>
-                {question.why}
+                <StudyText display={question.display?.why ?? { primary: question.why }} context={"the explanation for question " + number} />
               </p>
             </Explanation>
           </>
