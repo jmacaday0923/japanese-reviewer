@@ -1,0 +1,1032 @@
+{
+  "version": 1,
+  "chapters": [
+    {
+      "chapter": "1",
+      "order": [
+        {
+          "id": "sb-c1-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "わたしは がくせいです。",
+            "romaji": "watashi wa gakusei desu.",
+            "english": "I am a student.",
+            "source": {
+              "heading": "c1-1-1-a-wa-b-desu",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "わたし",
+            "は",
+            "がくせい",
+            "です。"
+          ],
+          "why": "This is the most basic sentence in Japanese. It means \"A is B\", and the same pattern also covers \"I am\" and \"they are\". A and B are nouns or noun phrases. The marker wa connects A and B and marks A as the topic, like \"as for A\". The ending desu is the positive, polite copula, and it never changes for I, you, he, she or they. The particle wa is written は but pronounced \"wa\".",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c1-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "わたしは にほんじんでは ありません。",
+            "romaji": "watashi wa nihonjin dewa arimasen.",
+            "english": "I am not Japanese.",
+            "source": {
+              "heading": "c1-1-2-a-wa-b-dewa-arimasen-ja-arimasen",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "わたしは",
+            "にほんじんでは",
+            "ありません。"
+          ],
+          "why": "To say \"A is not B\", change desu to dewa arimasen. Another way is ja arimasen, where ja is the contracted form of dewa. Both are polite and mean the same thing. The word dewa is written では, and the は is read \"wa\".",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c1-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "この くるまは アナさんのです。",
+            "romaji": "kono kuruma wa ana san no desu.",
+            "english": "This car is Ana's.",
+            "source": {
+              "heading": "c1-1-7-a-no-b",
+              "table": 1,
+              "row": 8
+            }
+          },
+          "tokens": [
+            "この",
+            "くるまは",
+            "アナさんのです。"
+          ],
+          "why": "A noun phrase is built by joining two or more nouns with a marker: noun no noun means \"noun of noun\" or \"noun's noun\", noun to noun means \"noun and noun\", and noun ka noun means \"noun or noun\". The marker no is a modifier or possessive marker. It covers belonging (my office), relationship (the president of ADZ) and description (a Japanese language student). The main noun comes last, and you can stack more than one no in a row. A sentence can also end with no to mean \"A's one\", as in kono kuruma wa ana san no desu.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": [
+        {
+          "id": "sb-c1-transform-1",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "わたしは にほんじんです。",
+            "romaji": "watashi wa nihonjin desu.",
+            "english": "I am Japanese.",
+            "source": {
+              "heading": "c1-1-1-a-wa-b-desu",
+              "table": 1,
+              "row": 3
+            }
+          },
+          "answer": {
+            "japanese": "わたしは にほんじんでは ありません。",
+            "romaji": "watashi wa nihonjin dewa arimasen.",
+            "english": "I am not Japanese.",
+            "source": {
+              "heading": "c1-1-2-a-wa-b-dewa-arimasen-ja-arimasen",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "why": "To say \"A is not B\", change desu to dewa arimasen. Another way is ja arimasen, where ja is the contracted form of dewa. Both are polite and mean the same thing. The word dewa is written では, and the は is read \"wa\".",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c1-transform-2",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "すずきさんは せんせいです。",
+            "romaji": "suzuki san wa sensei desu.",
+            "english": "Suzuki is a teacher.",
+            "source": {
+              "heading": "c1-1-10-c-mo-b-desu",
+              "table": 1,
+              "row": 5
+            }
+          },
+          "answer": {
+            "japanese": "すずきさんは せんせいじゃ ありません。",
+            "romaji": "suzuki san wa sensei ja arimasen.",
+            "english": "Suzuki is not a teacher.",
+            "source": {
+              "heading": "c1-1-2-a-wa-b-dewa-arimasen-ja-arimasen",
+              "table": 1,
+              "row": 10
+            }
+          },
+          "why": "To say \"A is not B\", change desu to dewa arimasen. Another way is ja arimasen, where ja is the contracted form of dewa. Both are polite and mean the same thing. The word dewa is written では, and the は is read \"wa\".",
+          "whyParagraph": 1
+        }
+      ]
+    },
+    {
+      "chapter": "2",
+      "order": [
+        {
+          "id": "sb-c2-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "ぎんこうは あそこに あります。",
+            "romaji": "ginkou wa asoko ni arimasu.",
+            "english": "The bank is over there.",
+            "source": {
+              "heading": "c2-2-1-a-wa-location-ni-arimasu",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "ぎんこうは",
+            "あそこに",
+            "あります。"
+          ],
+          "why": "This pattern says that a thing is in a place. The thing (A) is the topic, so it takes wa. The marker ni points to the place where it is, and arimasu means \"is\" or \"exists\" for non-living things. The focus of the sentence is where A is, and the listener usually already knows what A is. Place words can be a name (shinjuku), a word like heya (room), or a pointing word like asoko (over there).",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c2-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "びょういんは あそこに ありません。",
+            "romaji": "byouin wa asoko ni arimasen.",
+            "english": "The hospital is not over there.",
+            "source": {
+              "heading": "c2-2-2-a-wa-location-ni-arimasen",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "びょういんは",
+            "あそこに",
+            "ありません。"
+          ],
+          "why": "To say a thing is not in a place, change arimasu to arimasen. Everything else stays the same, including wa and ni.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c2-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "あなたの オフィスは しんじゅくに ありますか。",
+            "romaji": "anata no ofisu wa shinjuku ni arimasu ka.",
+            "english": "Is your office in Shinjuku?",
+            "source": {
+              "heading": "c2-2-3-a-wa-location-ni-arimasu-ka",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "あなたの",
+            "オフィスは",
+            "しんじゅくに",
+            "ありますか。"
+          ],
+          "why": "To ask whether a thing is in a place, add ka at the end of the sentence. To ask where something is, put doko (where) in the place slot: doko ni arimasu ka. The short reply sou desu ka means \"Oh, I see\" when you are told something new. It is different from hai, sou desu (\"Yes, that's right\") from Chapter 1.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "chapter": "3",
+      "order": [
+        {
+          "id": "sb-c3-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "この ペンは にひゃくえんですか。",
+            "romaji": "kono pen wa ni hyaku en desu ka.",
+            "english": "Is this pen 200 yen?",
+            "source": {
+              "heading": "c3-3-5-prices-ikura-desu-ka",
+              "table": 1,
+              "row": 9
+            }
+          },
+          "tokens": [
+            "この",
+            "ペンは",
+            "にひゃくえんですか。"
+          ],
+          "why": "To ask a price, use ikura (how much): A wa ikura desu ka. To ask for a rough price, add gurai (about): A wa ikura gurai desu ka. To answer, say the number and then the currency: en (yen), doru (dollars) or peso (pesos). So 180 yen is hyaku hachi juu en.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c3-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "おとこの しゃいんは ななにんです。",
+            "romaji": "otoko no shain wa nananin desu.",
+            "english": "There are 7 male employees.",
+            "source": {
+              "heading": "c3-3-8-counters-in-sentences",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "tokens": [
+            "おとこの",
+            "しゃいんは",
+            "ななにんです。"
+          ],
+          "why": "Counters fit into the sentences you already know. With desu, the sentence says what the count is: A wa counter desu, as in otouto wa hatachi desu (my younger brother is 20). With imasu or arimasu, it says how many there are in a place: Location ni A ga counter imasu (or arimasu), as in kyoushitsu ni gakusei ga juugonin imasu.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c3-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "あなたの オフィスは なんがいですか。",
+            "romaji": "anata no ofisu wa nangai desu ka.",
+            "english": "What floor is your office?",
+            "source": {
+              "heading": "c3-3-9-question-words-for-counters",
+              "table": 1,
+              "row": 3
+            }
+          },
+          "tokens": [
+            "あなたの",
+            "オフィスは",
+            "なんがいですか。"
+          ],
+          "why": "To ask how many, put nan in front of the counter: nannin (how many people), nanbon (long things), nansatsu (books), nanbiki (small animals), nandai (machines and vehicles), nanmai (flat things), nanko (small things), nankai (how many times), nangai (what floor) and nanbanme (which number in a family or line). For things counted with tsu, and for age, use ikutsu (how many things) and oikutsu (how old, polite). The word nansai also asks for age.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "chapter": "4",
+      "order": [
+        {
+          "id": "sb-c4-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "きょうは なんがつ なんにちですか。",
+            "romaji": "kyou wa nangatsu nannichi desu ka.",
+            "english": "What is the date today?",
+            "source": {
+              "heading": "c4-4-4-days-of-the-month-nichi",
+              "table": 1,
+              "row": 33
+            }
+          },
+          "tokens": [
+            "きょうは",
+            "なんがつ",
+            "なんにちですか。"
+          ],
+          "why": "A day of the month is the number plus nichi, but the first ten days have their own words: tsuitachi (1st), futsuka (2nd), mikka (3rd), yokka (4th), itsuka (5th), muika (6th), nanoka (7th), youka (8th), kokonoka (9th) and tooka (10th). From the 11th on you just add nichi to the number, as in juuichinichi (11th), juugonichi (15th) and sanjuunichi (30th).",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c4-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "こんばんは にほんごの クラスが あります。",
+            "romaji": "konban wa nihongo no kurasu ga arimasu.",
+            "english": "There is a Japanese class tonight.",
+            "source": {
+              "heading": "c4-4-6-yesterday-today-and-tomorrow-days-mo",
+              "table": 1,
+              "row": 20
+            }
+          },
+          "tokens": [
+            "こんばんは",
+            "にほんごの",
+            "クラスが",
+            "あります。"
+          ],
+          "why": "The words for days are irregular, so learn them as a set: ototoi (the day before yesterday), kinou (yesterday), kyou (today), ashita (tomorrow), asatte (the day after tomorrow) and mainichi (every day).",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c4-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "にほんごの クラスは すいようびです。",
+            "romaji": "nihongo no kurasu wa suiyoubi desu.",
+            "english": "The Japanese class is on Wednesday.",
+            "source": {
+              "heading": "c4-4-8-a-wa-time-expression-desu",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "にほんごの",
+            "クラスは",
+            "すいようびです。"
+          ],
+          "why": "A time expression can sit in a desu sentence just like a noun. A wa Time Expression desu says that A is at, on or in that time, and you can turn it around: Time Expression wa A desu means the time is A. English needs a little word like at, on or in, but here Japanese needs no marker at all. You just put the time before desu. This is bunkei 4.1 in your workbook.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "chapter": "5",
+      "order": [
+        {
+          "id": "sb-c5-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "にほんの ふゆは さんかげつです。",
+            "romaji": "nihon no fuyu wa sankagetsu desu.",
+            "english": "Japan's winter is 3 months.",
+            "source": {
+              "heading": "c5-5-5-a-wa-span-of-time-desu-bunkei-5-1",
+              "table": 1,
+              "row": 3
+            }
+          },
+          "tokens": [
+            "にほんの",
+            "ふゆは",
+            "さんかげつです。"
+          ],
+          "why": "A length of time is a noun, so it can end a copula sentence just like the ones from Chapter 1. The pattern is A wa Span of Time desu, and it says that A lasts that long. A is the thing you are measuring, such as a class, a meeting, a trip or a holiday. Put wa after A and desu after the length of time. No other particle goes in between.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c5-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "クラスは いっしゅうかんに にかいです。",
+            "romaji": "kurasu wa isshuukan ni nikai desu.",
+            "english": "The class is twice a week.",
+            "source": {
+              "heading": "c5-5-6-span-of-time-ni-frequency-bunkei-5-2",
+              "table": 1,
+              "row": 12
+            }
+          },
+          "tokens": [
+            "クラスは",
+            "いっしゅうかんに",
+            "にかいです。"
+          ],
+          "why": "To say how often something happens within a length of time, put ni right after the length of time and then say the number of times with kai. Isshuukan ni gokai is five times a week. Read ni here as per or in each: in one week, five times. The length is usually one unit (ichinichi, isshuukan, ikkagetsu, ichinen), but it can be any length, such as yojikan ni nikai (twice in four hours).",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c5-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "かいぎは いちじかん ぐらいです。",
+            "romaji": "kaigi wa ichijikan gurai desu.",
+            "english": "The meeting is about 1 hour.",
+            "source": {
+              "heading": "c5-5-7-span-of-time-gurai-bunkei-5-3",
+              "table": 1,
+              "row": 10
+            }
+          },
+          "tokens": [
+            "かいぎは",
+            "いちじかん",
+            "ぐらいです。"
+          ],
+          "why": "Add gurai after a length of time to say about or around: ichijikan gurai is about 1 hour. Gurai goes right after the length, and it works with the kan form or the short form, so sanjuppun gurai and sanjuppunkan gurai are both fine. Gurai also goes with amounts of money, which is why it appears in ikuragurai later in this chapter.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "chapter": "6",
+      "order": [
+        {
+          "id": "sb-c6-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "ほんの ねだんは せんごひゃくえんです。",
+            "romaji": "hon no nedan wa sen go hyaku en desu.",
+            "english": "The price of the book is 1,500 yen.",
+            "source": {
+              "heading": "c6-6-1-nouns-in-the-past-tense-noun-conjuga",
+              "table": 1,
+              "row": 5
+            }
+          },
+          "tokens": [
+            "ほんの",
+            "ねだんは",
+            "せんごひゃくえんです。"
+          ],
+          "why": "Chapter 6 opens with a quick review of nouns, because the adjective endings you are about to learn borrow them. A noun sentence (A wa B desu) can be present or past, and positive or negative, which gives four forms. The book shows them with shain (employee): desu, dewa arimasen or ja arimasen, deshita, and dewa arimasen deshita or ja arimasen deshita.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c6-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "これは たかい じてんしゃです。",
+            "romaji": "kore wa takai jitensha desu.",
+            "english": "This is an expensive bicycle.",
+            "source": {
+              "heading": "c6-6-4-adjective-noun-bunkei-6-2",
+              "table": 1,
+              "row": 17
+            }
+          },
+          "tokens": [
+            "これは",
+            "たかい",
+            "じてんしゃです。"
+          ],
+          "why": "The main job of an adjective is to describe a noun, and it goes right in front of the noun. With an i-adjective nothing changes: yasashii sensei (a kind teacher), takai jitensha (an expensive bicycle). With a na-adjective you add na between the adjective and the noun: kirei na heya (a clean room), kantan na shiken (an easy exam). The book calls this Adjective + Noun / Noun Phrase, which tells you that the thing being described can also be a longer phrase, like takai tatemono (a tall building).",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c6-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "このへやは あかるくて ひろいです。",
+            "romaji": "kono heya wa akarukute hiroi desu.",
+            "english": "This room is bright and wide.",
+            "source": {
+              "heading": "c6-6-5-adjective-adjective-kute-and-de-bunk",
+              "table": 1,
+              "row": 7
+            }
+          },
+          "tokens": [
+            "このへやは",
+            "あかるくて",
+            "ひろいです。"
+          ],
+          "why": "The second job of an adjective is to connect to another adjective, as in big and heavy. The first adjective changes shape, and the last one keeps its normal form.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": [
+        {
+          "id": "sb-c6-transform-1",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "つよいです。",
+            "romaji": "tsuyoi desu.",
+            "english": "is strong (present positive)",
+            "source": {
+              "heading": "c6-6-6-i-adjectives-present-past-and-negati",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "answer": {
+            "japanese": "つよくないです。",
+            "romaji": "tsuyokunai desu.",
+            "english": "is not strong (present negative)",
+            "source": {
+              "heading": "c6-6-6-i-adjectives-present-past-and-negati",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "why": "With i-adjectives, the adjective itself changes for negative and past, and desu stays as the polite ending. Take the final i off and add kunai for the negative, katta for the past, and kunakatta for the past negative. So takai (expensive) gives takakunai (not expensive), takakatta (was expensive) and takakunakatta (was not expensive).",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c6-transform-2",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "いいです。",
+            "romaji": "ii desu.",
+            "english": "is good (present positive)",
+            "source": {
+              "heading": "c6-6-6-i-adjectives-present-past-and-negati",
+              "table": 1,
+              "row": 5,
+              "variant": 0
+            }
+          },
+          "answer": {
+            "japanese": "よくないです。",
+            "romaji": "yokunai desu.",
+            "english": "is not good (present negative)",
+            "source": {
+              "heading": "c6-6-6-i-adjectives-present-past-and-negati",
+              "table": 1,
+              "row": 6
+            }
+          },
+          "why": "Ii (good) is the only irregular adjective. It cannot be conjugated, so its other form yoi takes over: yokunai (not good), yokatta (was good) and yokunakatta (was not good). Never say iikunai or iikatta. Also watch tsumaranai (boring). It ends in nai, but it is a normal i-adjective, so its negative is tsumaranakunai (not boring), and its past is tsumaranakatta.",
+          "whyParagraph": 3
+        },
+        {
+          "id": "sb-c6-transform-3",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "ぎんこうは ちかいです。",
+            "romaji": "ginkou wa chikai desu.",
+            "english": "The bank is near.",
+            "source": {
+              "heading": "c6-6-6-i-adjectives-present-past-and-negati",
+              "table": 1,
+              "row": 17
+            }
+          },
+          "answer": {
+            "japanese": "ぎんこうは ちかくないです。",
+            "romaji": "ginkou wa chikakunai desu.",
+            "english": "The bank is not near.",
+            "source": {
+              "heading": "c6-6-6-i-adjectives-present-past-and-negati",
+              "table": 1,
+              "row": 18
+            }
+          },
+          "why": "With i-adjectives, the adjective itself changes for negative and past, and desu stays as the polite ending. Take the final i off and add kunai for the negative, katta for the past, and kunakatta for the past negative. So takai (expensive) gives takakunai (not expensive), takakatta (was expensive) and takakunakatta (was not expensive).",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c6-transform-4",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "きれいです。",
+            "romaji": "kirei desu.",
+            "english": "is clean (present positive)",
+            "source": {
+              "heading": "c6-6-7-na-adjectives-present-past-and-negat",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "answer": {
+            "japanese": "きれいではありません。 / きれいじゃありません。",
+            "romaji": "kirei dewa arimasen. / kirei ja arimasen.",
+            "english": "is not clean (present negative)",
+            "source": {
+              "heading": "c6-6-7-na-adjectives-present-past-and-negat",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "why": "A na-adjective does not change at all. It is conjugated like a noun, so only the ending after it changes: kirei desu (is clean), kirei ja arimasen (is not clean), kirei deshita (was clean) and kirei ja arimasen deshita (was not clean). You can swap ja for dewa in the negative forms, as the book does in its hima examples.",
+          "whyParagraph": 1
+        }
+      ]
+    },
+    {
+      "chapter": "7",
+      "order": [
+        {
+          "id": "sb-c7-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "わたしは ごがつに うまれました。",
+            "romaji": "watashi wa gogatsu ni umaremashita.",
+            "english": "I was born in May.",
+            "source": {
+              "heading": "c7-7-1-verbs-in-the-formal-form-masu-masen-",
+              "table": 1,
+              "row": 15
+            }
+          },
+          "tokens": [
+            "わたしは",
+            "ごがつに",
+            "うまれました。"
+          ],
+          "why": "This is the first chapter with verbs, which are the action words: wake up, sleep, work, study. The book uses the formal (polite) form for now. It is built from a verb stem plus an ending. The stem is what is left when you take masu (ます) off: ne for nemasu, oki for okimasu and hajimari for hajimarimasu.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c7-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "くじから じゅうじまで きゅうけいします。",
+            "romaji": "kuji kara juuji made kyuukeishimasu.",
+            "english": "take a break from 9 o'clock until 10 o'clock",
+            "source": {
+              "heading": "c7-7-3-time-expression-kara-verb-bunkei-7-2",
+              "table": 1,
+              "row": 6
+            }
+          },
+          "tokens": [
+            "くじから",
+            "じゅうじまで",
+            "きゅうけいします。"
+          ],
+          "why": "Kara means from, and it marks the time when something starts. You met kara in Chapter 4 in sentences like kuji kara desu. Now it goes in front of a verb: sanji kara kyuukeishimasu means take a break from 3 o'clock.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c7-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "ことしの さんがつまで やすみます。",
+            "romaji": "kotoshi no sangatsu made yasumimasu.",
+            "english": "will rest until March this year",
+            "source": {
+              "heading": "c7-7-4-time-expression-made-verb-bunkei-7-3",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "ことしの",
+            "さんがつまで",
+            "やすみます。"
+          ],
+          "why": "Made means until, and it marks the time when something stops. Like kara, it goes straight after the time word with no ni: kuji han made kyuukeishimashita is took a break until 9:30.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "chapter": "8",
+      "order": [
+        {
+          "id": "sb-c8-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "アナさんは とけいを かいます。",
+            "romaji": "ana san wa tokei o kaimasu.",
+            "english": "Ana will buy a watch.",
+            "source": {
+              "heading": "c8-8-2-a-wa-object-o-transitive-verb-bunkei",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "アナさんは",
+            "とけいを",
+            "かいます。"
+          ],
+          "why": "The basic pattern is A wa object o verb. Wa marks the topic, who does the action. O marks the object, the thing the action is done to. The verb comes last and shows the tense and whether it is positive or negative. So ana san wa tokei o kaimasu is Ana will buy a watch. In kana the object marker is written を, but you say it just like the vowel o. A good habit is to ask what the action is done to, and then put o straight after that word.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c8-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "まいあさ あさごはんを たべます。",
+            "romaji": "maiasa asagohan o tabemasu.",
+            "english": "I eat breakfast every morning.",
+            "source": {
+              "heading": "c8-8-3-time-expression-ni-kara-made-or-goro",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "まいあさ",
+            "あさごはんを",
+            "たべます。"
+          ],
+          "why": "The time words from Chapter 7 slot in before the object, so the pattern is time + object o + verb. The markers are the ones you already know: ni (at), kara (from), made (until) and goro (around). Maiasa asagohan o tabemasu is I eat breakfast every morning, and itou sensei wa sanji kara oshiemasu is Mr. Ito teaches from 3 o'clock.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c8-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "きっさてんで コーヒーを のみます。",
+            "romaji": "kissaten de ko-hi- o nomimasu.",
+            "english": "I drink coffee at the coffee shop.",
+            "source": {
+              "heading": "c8-8-4-place-of-action-de-bunkei-8-3",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "きっさてんで",
+            "コーヒーを",
+            "のみます。"
+          ],
+          "why": "De marks the place where an action happens or will happen, in English at or in. The pattern is place + de + (object o) + verb. Kissaten de ko-hi- o nomimasu is I drink coffee at the coffee shop. The question word is doko de, which means where.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "chapter": "9",
+      "order": [
+        {
+          "id": "sb-c9-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "わたしは にほんへ いきます。",
+            "romaji": "watashi wa nihon e ikimasu.",
+            "english": "I will go to Japan.",
+            "source": {
+              "heading": "c9-9-1-destination-e-or-ni-and-origin-kara-",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "わたしは",
+            "にほんへ",
+            "いきます。"
+          ],
+          "why": "Chapter 9 is about moving from one place to another. The first pattern says where someone goes. It is A wa destination e or ni, followed by a motion verb. The four motion verbs are ikimasu (go), kimasu (come), kaerimasu (go home or return) and modorimasu (go back).",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c9-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "まいにち あるいて かえります。",
+            "romaji": "mainichi aruite kaerimasu.",
+            "english": "I walk home every day.",
+            "source": {
+              "heading": "c9-9-2-mode-of-transportation-de-bunkei-9-2",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "まいにち",
+            "あるいて",
+            "かえります。"
+          ],
+          "why": "Put de after a vehicle to say how you travel. Jitensha de is by bicycle, basu de is by bus and densha de is by train. The pattern is vehicle + de + motion verb. The one exception is aruite, which means on foot or by walking. It already carries the meaning of by, so it takes no de.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c9-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "ゆうべ じゅういちじごろ かえりました。",
+            "romaji": "yuube juuichiji goro kaerimashita.",
+            "english": "I went home around 11 o'clock last night.",
+            "source": {
+              "heading": "c9-9-3-time-words-ni-kara-made-and-goro-bun",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "ゆうべ",
+            "じゅういちじごろ",
+            "かえりました。"
+          ],
+          "why": "The time markers you met in Chapters 7 and 8 work the same way with motion verbs. Ni marks one exact time, such as a clock time, a day of the week or a date. Kara means from and made means until, so kuji kara goji made is from 9 until 5. Goro means around, and it goes straight after the time with no ni.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "chapter": "10",
+      "order": [
+        {
+          "id": "sb-c10-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "にほんで にほんごを べんきょうしました。",
+            "romaji": "nihon de nihongo o benkyoushimashita.",
+            "english": "I studied Japanese in Japan.",
+            "source": {
+              "heading": "c10-10-1-noun-suru-bunkei-10-1-page-148",
+              "table": 1,
+              "row": 15
+            }
+          },
+          "tokens": [
+            "にほんで",
+            "にほんごを",
+            "べんきょうしました。"
+          ],
+          "why": "Many actions in Japanese are said with a noun plus suru. The noun names the action, and suru does the job of the verb, much like the English word do. The noun benkyou means study, and benkyoushimasu is the verb to study. The formal form is shimasu, and the casual form, which you meet later in this chapter, is suru.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c10-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "かいぎは さんじに おわります。",
+            "romaji": "kaigi wa sanji ni owarimasu.",
+            "english": "The meeting ends at three. (formal)",
+            "source": {
+              "heading": "c10-10-2-informal-verbs-the-four-forms-page-",
+              "table": 1,
+              "row": 9
+            }
+          },
+          "tokens": [
+            "かいぎは",
+            "さんじに",
+            "おわります。"
+          ],
+          "why": "In Chapter 7 you learned four formal verb endings: masu, masen, mashita and masen deshita. Every verb also has four informal forms. They mean the same thing, but they sound more casual, and you use them with family, close friends and people your own age or younger. With a teacher, a boss or someone you have just met, keep using the formal forms.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c10-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "みっかから むいかまで やすんだ。",
+            "romaji": "mikka kara muika made yasunda.",
+            "english": "I took a holiday from the 3rd to the 6th.",
+            "source": {
+              "heading": "c10-10-3-group-1-verbs-that-end-in-bu-mu-or-",
+              "table": 1,
+              "row": 9
+            }
+          },
+          "tokens": [
+            "みっかから",
+            "むいかまで",
+            "やすんだ。"
+          ],
+          "why": "Group 1 has the verbs whose dictionary form ends in bu, mu or nu. To make the nai form, change the last u sound to the a sound and add nai: bu becomes ba, mu becomes ma, and nu becomes na. So asobu becomes asobanai, nomu becomes nomanai, and shinu becomes shinanai.",
+          "whyParagraph": 1
+        }
+      ],
+      "transformations": [
+        {
+          "id": "sb-c10-transform-1",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "ジュースを のむ。",
+            "romaji": "ju-su o nomu.",
+            "english": "I drink juice.",
+            "source": {
+              "heading": "c10-10-15-positive-and-negative-page-153",
+              "table": 1,
+              "row": 1,
+              "variant": 0
+            }
+          },
+          "answer": {
+            "japanese": "ジュースを のまない。",
+            "romaji": "ju-su o nomanai.",
+            "english": "I do not drink juice.",
+            "source": {
+              "heading": "c10-10-15-positive-and-negative-page-153",
+              "table": 1,
+              "row": 1,
+              "variant": 1
+            }
+          },
+          "why": "The second set changes a positive sentence into a negative one. Use the nai form for a present sentence and the nakatta form for a past sentence. The tense does not change. For example, henjishita (past) becomes henjishinakatta (past), and nomu (present) becomes nomanai (present). Each row below shows the positive sentence first and the negative sentence after the slash.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c10-transform-2",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "たなかさんに へんじした。",
+            "romaji": "tanaka san ni henjishita.",
+            "english": "I replied to Mr. Tanaka.",
+            "source": {
+              "heading": "c10-10-15-positive-and-negative-page-153",
+              "table": 1,
+              "row": 2,
+              "variant": 0
+            }
+          },
+          "answer": {
+            "japanese": "たなかさんに へんじしなかった。",
+            "romaji": "tanaka san ni henjishinakatta.",
+            "english": "I did not reply to Mr. Tanaka.",
+            "source": {
+              "heading": "c10-10-15-positive-and-negative-page-153",
+              "table": 1,
+              "row": 2,
+              "variant": 1
+            }
+          },
+          "why": "The second set changes a positive sentence into a negative one. Use the nai form for a present sentence and the nakatta form for a past sentence. The tense does not change. For example, henjishita (past) becomes henjishinakatta (past), and nomu (present) becomes nomanai (present). Each row below shows the positive sentence first and the negative sentence after the slash.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c10-transform-3",
+          "type": "transform",
+          "change": "negative",
+          "original": {
+            "japanese": "えいごで せつめいする。",
+            "romaji": "eigo de setsumeisuru.",
+            "english": "I explain in English.",
+            "source": {
+              "heading": "c10-10-15-positive-and-negative-page-153",
+              "table": 1,
+              "row": 4,
+              "variant": 0
+            }
+          },
+          "answer": {
+            "japanese": "えいごで せつめいしない。",
+            "romaji": "eigo de setsumeishinai.",
+            "english": "I do not explain in English.",
+            "source": {
+              "heading": "c10-10-15-positive-and-negative-page-153",
+              "table": 1,
+              "row": 4,
+              "variant": 1
+            }
+          },
+          "why": "The second set changes a positive sentence into a negative one. Use the nai form for a present sentence and the nakatta form for a past sentence. The tense does not change. For example, henjishita (past) becomes henjishinakatta (past), and nomu (present) becomes nomanai (present). Each row below shows the positive sentence first and the negative sentence after the slash.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c10-transform-4",
+          "type": "transform",
+          "change": "casual",
+          "original": {
+            "japanese": "あした おかあさんと かいものします。",
+            "romaji": "ashita okaasan to kaimonoshimasu.",
+            "english": "I will go shopping with my mother tomorrow. (formal)",
+            "source": {
+              "heading": "c10-10-10-masu-form-to-the-dictionary-form-p",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "answer": {
+            "japanese": "あした おかあさんと かいものする。",
+            "romaji": "ashita okaasan to kaimonosuru.",
+            "english": "I will go shopping with my mother tomorrow. (informal)",
+            "source": {
+              "heading": "c10-10-10-masu-form-to-the-dictionary-form-p",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "why": "The first conversion is from masu to the dictionary form, the informal present positive. You already know how to do this from Chapter 9. Remove masu to get the stem, and then follow the rules for the verb type. For example, kaimonoshimasu becomes kaimonosuru, tabemasu becomes taberu, yomimasu becomes yomu, and yasumimasu becomes yasumu.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c10-transform-5",
+          "type": "transform",
+          "change": "casual",
+          "original": {
+            "japanese": "にほんの りょうりを たべます。",
+            "romaji": "nihon no ryouri o tabemasu.",
+            "english": "I eat Japanese food. (formal)",
+            "source": {
+              "heading": "c10-10-10-masu-form-to-the-dictionary-form-p",
+              "table": 1,
+              "row": 5
+            }
+          },
+          "answer": {
+            "japanese": "にほんの りょうり(を) たべる。",
+            "romaji": "nihon no ryouri (o) taberu.",
+            "english": "I eat Japanese food. (informal)",
+            "source": {
+              "heading": "c10-10-10-masu-form-to-the-dictionary-form-p",
+              "table": 1,
+              "row": 6
+            }
+          },
+          "why": "The first conversion is from masu to the dictionary form, the informal present positive. You already know how to do this from Chapter 9. Remove masu to get the stem, and then follow the rules for the verb type. For example, kaimonoshimasu becomes kaimonosuru, tabemasu becomes taberu, yomimasu becomes yomu, and yasumimasu becomes yasumu.",
+          "whyParagraph": 1
+        },
+        {
+          "id": "sb-c10-transform-6",
+          "type": "transform",
+          "change": "casual",
+          "original": {
+            "japanese": "まいあさ にほんごの しんぶんを よみます。",
+            "romaji": "maiasa nihongo no shinbun o yomimasu.",
+            "english": "I read the Japanese newspaper every morning. (formal)",
+            "source": {
+              "heading": "c10-10-10-masu-form-to-the-dictionary-form-p",
+              "table": 1,
+              "row": 7
+            }
+          },
+          "answer": {
+            "japanese": "まいあさ にほんごの しんぶん(を) よむ。",
+            "romaji": "maiasa nihongo no shinbun (o) yomu.",
+            "english": "I read the Japanese newspaper every morning. (informal)",
+            "source": {
+              "heading": "c10-10-10-masu-form-to-the-dictionary-form-p",
+              "table": 1,
+              "row": 8
+            }
+          },
+          "why": "The first conversion is from masu to the dictionary form, the informal present positive. You already know how to do this from Chapter 9. Remove masu to get the stem, and then follow the rules for the verb type. For example, kaimonoshimasu becomes kaimonosuru, tabemasu becomes taberu, yomimasu becomes yomu, and yasumimasu becomes yasumu.",
+          "whyParagraph": 1
+        }
+      ]
+    }
+  ]
+}

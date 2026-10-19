@@ -104,6 +104,16 @@ The questions live in `src/data/exercises.json`, copied from `chapters.json` wor
 
 To add another chapter: add an entry to `src/data/exercises.json` like the existing ones (set ids `c<chapter>-particles` and `c<chapter>-vocabulary`, question ids `<set id>-<number>`), fill in `accepted` deliberately (romaji and kana, plus any alternative the answer key itself allows), then extend the expected chapter list in the first test. Run `npm test`: it fails on any word that doesn't match the source.
 
+## Sentence building
+
+Every chapter has a **Sentence building** panel in its Exercises section, below existing interactive practice where present. Arrange word and phrase tiles to reconstruct three lesson examples per chapter (30 puzzles total). Select a chosen tile to remove it, use **Undo last tile** or **Clear sentence**, then **Check answer**. Tiles work with touch, mouse and keyboard; dragging is not required. This activity checks the source sentence's order; other natural Japanese orders may be possible.
+
+Chapters 1, 6 and 10 also offer **Transformations**: 12 curated positive-to-negative and polite-to-casual questions. Type kana or romaji from the lesson. Grading ignores whitespace, case, character width and final full stops; it preserves particles, long vowels, meaning and tense. Only source-printed alternatives, optional particles and the documented negative copulas are accepted. There is no automatic conjugator or open-ended grammar checker.
+
+Model answers, readings, meanings, explanations and source links appear after checking. Answer romaji and English follow reading-aid preferences with individual reveal controls. Essential task cues stay visible. **Retry incorrect** keeps correct answers and the first score; **Restart practice** clears the current activity. Switching activities keeps progress; a full reload starts fresh. No practice answers are stored or sent to a server.
+
+`src/data/sentence-exercises.json` holds the starter bank, with exact heading/table/row references to `chapters.json`. Only the current chapter's questions cross the server/client boundary. `tests/sentence-exercises.test.mjs` verifies every sentence, reading, translation and explanation against its source, plus grading and retries. `e2e/sentence-exercises.spec.ts` covers browser interactions and narrow screens. To extend the bank, use a verified original/target example pair for each transformation and add deliberate accepted alternatives through the grading helper; run all checks before publishing.
+
 ## Bookmarks and Continue studying
 
 Reader pages have a **Bookmark page** button, and a **Bookmark section** button after you jump to a section from On this page. The dashboard shows your bookmarks and the last study page you opened.

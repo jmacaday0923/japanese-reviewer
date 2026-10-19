@@ -8,6 +8,8 @@ import LessonContent from "@/components/LessonContent";
 import type { StudyPageKind } from "@/lib/study";
 import type { ChapterExercises } from "@/types/exercise";
 import { collectFlashcardExamples } from "@/lib/flashcard-content";
+import SentencePractice from "@/components/SentencePractice";
+import { chapterSentenceExercises } from "@/lib/sentence-bank";
 import InteractiveExercises from "@/components/InteractiveExercises";
 
 const KINDS = { "/chapters": "chapter", "/kana": "kana", "/kanji": "kanji", "/practice": "practice" } as const satisfies Record<string, StudyPageKind>;
@@ -23,6 +25,7 @@ type Props = {
 };
 
 export default function ChapterView({ chapter, label, basePath, prev, next, exercises }: Props) {
+  const sentencePractice = basePath === "/chapters" ? chapterSentenceExercises(chapter.ch) : null;
   const examples = collectFlashcardExamples(chapter.sections, { kind: KINDS[basePath], id: chapter.ch });
   // The group's section on the home page: "/chapters" goes back to "/#chapters"
   const group = NAV_ITEMS.find((item) => item.href === `/#${basePath.slice(1)}`);
@@ -66,6 +69,9 @@ export default function ChapterView({ chapter, label, basePath, prev, next, exer
               Keyed by chapter, so answers never carry over to another chapter. */}
           {s.id === "exercises" && exercises && exercises.sets.length > 0 && (
             <InteractiveExercises key={exercises.chapter} exercises={exercises} />
+          )}
+          {s.id === "exercises" && sentencePractice && (
+            <SentencePractice key={chapter.ch} exercises={sentencePractice} />
           )}
           <LessonContent html={s.html} className="mt-6"
             source={{ kind: KINDS[basePath], id: chapter.ch, sectionId: s.id, sectionTitle: s.title }} examples={examples} />
