@@ -32,21 +32,22 @@ test("save vocabulary, kanji and sentences from lessons; duplicates retain every
   await visibleMain(page).getByRole("button",{name:"Add to flashcards: わたしは がくせいです。",exact:true}).first().click();
   expect((await data(page)).cards.map(card=>card.kind).sort()).toEqual(["kanji","sentence","vocabulary"]);
   await page.goto("/flashcards");
-  await expect(review(page).getByRole("heading",{name:"学生",exact:true})).toBeVisible();
+  await expect(review(page).getByRole("heading")).toBeVisible();
+  const prompt=await review(page).getByRole("heading").innerText();
+  const current=(await data(page)).cards.find(card=>card.japanese===prompt)!;
   await expect(review(page).locator("[data-flashcard-answer]")).toHaveCount(0);
   await expect(review(page).getByRole("group",{name:"Rate your recall"})).toHaveCount(0);
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
   await expect(review(page).locator("[data-flashcard-answer]")).toBeFocused();
-  await expect(review(page).getByText("student",{exact:true})).toBeVisible();
-  await expect(review(page).getByText("がくせい",{exact:true})).toBeVisible();
-  await expect(review(page).getByText("わたしは がくせいです。",{exact:true})).toBeVisible();
+  await expect(review(page).getByText(current.meaning,{exact:true})).toBeVisible();
+  if(current.kana) await expect(review(page).getByText(current.kana,{exact:true})).toBeVisible();
   await review(page).getByRole("button",{name:/^Good/}).click();
   await expect(review(page).getByRole("button",{name:"Reveal answer",exact:true})).toBeFocused();
   await page.reload();
   await expect(visibleMain(page).getByRole("heading",{name:"Flashcards",exact:true})).toBeVisible();
   const saved=await data(page);
   expect(saved.cards).toHaveLength(3);
-  expect(saved.cards.find(card=>card.japanese==="学生")!.progress.recognition.reviews).toBe(1);
+  expect(saved.cards.find(card=>card.id===current.id)!.progress.recognition.reviews).toBe(1);
 });
 
 test("review directions hide answers until revealed and keep independent ratings and schedules",async({page})=>{
@@ -99,7 +100,8 @@ test("chapter filters share the daily new-card cap and switching direction has i
   await expect(review(page)).toHaveCount(0);
   await expect(visibleMain(page).getByText("Your new-card allowance is used.",{exact:false})).toBeVisible();
   await visibleMain(page).getByRole("button",{name:"English → Japanese",exact:true}).click();
-  await expect(review(page).getByRole("heading",{name:"student",exact:true})).toBeVisible();
+  await expect(review(page).getByRole("heading")).toBeVisible();
+  expect(["student","tea"]).toContain(await review(page).getByRole("heading").innerText());
 });
 
 test("setting zero new cards still allows due reviews, and Again waits ten minutes",async({page})=>{

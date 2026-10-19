@@ -152,3 +152,13 @@ Use **Add to flashcards** beside a structured vocabulary row, an individual kanj
 - Manage saved cards supports removal and undo. Removing a card removes its schedules; undo restores them. Today's introduction allowance is retained.
 
 **src/lib/flashcard-content.ts** extracts source-backed cards on the server; **src/lib/flashcards.ts** contains pure scheduling, queue and storage helpers. No dependency or lesson-data changes are needed. **tests/flashcards.test.mjs**, **tests/flashcard-content.test.mjs** and **e2e/flashcards.spec.ts** cover the feature.
+
+### Pre-made decks and bulk saving
+
+Each eligible lesson table has **Add all N to flashcards** in its header. It saves all supported rows in one transaction, merges duplicates and retains both review histories. Kana sound charts save their paired hiragana/katakana and romaji reading. Kana word-example tables save the whole word with its meaning, rather than giving a sound fragment the word’s translation. Kanji comparisons retain their paired characters and readings. Exercise answer sheets and unpaired content are not converted.
+
+On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There are 13 decks: 10 chapters, Kana 1 and Kanji 1–2. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
+
+The shared content bank ships with the app. Your saved cards and per-direction schedules use the existing browser storage; there is no database or account setup. Importing again adds newly available content without resetting existing progress. Removed cards return if you deliberately import their deck again. Clearing browser site data removes saved cards/progress; the app still provides the pre-made bank.
+
+Reviews use a seeded shuffle that stays stable while revealing answers or changing display toggles. Due cards come first; new cards are sampled from the entire selected pool before applying the daily limit. **Shuffle review order** starts a new random order without resetting schedules or the daily allowance. Again can repeat a card after its scheduled ten-minute wait. No immediate repeats occur after rating a card. Use the saved-page filters below the pre-made picker to switch between already imported chapters.

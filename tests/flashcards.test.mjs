@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import {
   FLASHCARD_KEY, FLASHCARD_SERVER_SNAPSHOT, EMPTY_FLASHCARDS, DEFAULT_NEW_LIMIT, MAX_CARDS,
-  flashcardId, parseFlashcardData, addFlashcard, removeFlashcard, restoreFlashcard, setNewLimit,
+  flashcardId, parseFlashcardData, addFlashcards, parseFlashcardDeck, shuffledFlashcardIds, addFlashcard, removeFlashcard, restoreFlashcard, setNewLimit,
   scheduleReview, reviewFlashcard, reviewQueue, sourceOptions, performance, localDay, createFlashcardStore,
 } from "../src/lib/flashcards.ts";
 
@@ -215,4 +215,84 @@ test("scheduler: day reviews follow local midnight through daylight-saving trans
     +'assert.equal(next.dueAt-now,hours*3600000);assert.equal(new Date(next.dueAt).getHours(),0); }';
   execFileSync(process.execPath,["--experimental-strip-types","--disable-warning=MODULE_TYPELESS_PACKAGE_JSON","--input-type=module","-e",script],
     {env:{...process.env,TZ:"America/New_York"},stdio:"pipe"});
+});
+
+
+test("bulk save: one write merges all sources, deduplicates rows and preserves both histories", () => {
+  const original = rate(rate(deck("学生")), "recall", "easy");
+  const before = JSON.stringify(original), disk = storage(before), store = createFlashcardStore({getStorage:()=>disk});
+  const other = draft("学生", {source:{key:"kana:1",label:"Kana 1",href:"/kana/1#people"}});
+  let result;
+  store.update(data => {result=addFlashcards(data,[draft(),other,other,draft("先生"),draft("先生")],now+1); return result.data;});
+  assert.equal(result.added,1); assert.equal(result.existing,1); assert.equal(result.skipped,0);
+  assert.equal(disk.writes.length,1); assert.equal(result.data.cards.length,2);
+  assert.equal(result.data.cards[0].sources.length,2);
+  assert.deepEqual(result.data.cards[0].progress,original.cards[0].progress);
+  assert.deepEqual(result.data.daily,original.daily);
+  assert.equal(JSON.stringify(original),before);
+  const repeat=addFlashcards(result.data,[draft(),other,draft("先生")],now+2);
+  assert.equal(repeat.data,result.data);assert.equal(repeat.added,0);assert.equal(repeat.existing,2);
+  assert.deepEqual(parseFlashcardData(JSON.stringify(result.data)),result.data);
+});
+test("bulk save: capacity skips new identities, still merges existing sources and counts duplicates once", () => {
+  const cards=Array.from({length:MAX_CARDS-1},(_,i)=>({...deck("word"+i).cards[0]}));
+  const data={...EMPTY_FLASHCARDS,cards};
+  const result=addFlashcards(data,[draft("new"),draft("overflow"),draft("overflow"),
+    draft("word0",{source:{key:"kana:1",label:"Kana 1",href:"/kana/1#people"}})],now);
+  assert.equal(result.added,1);assert.equal(result.existing,1);assert.equal(result.skipped,1);
+  assert.equal(result.data.cards.length,MAX_CARDS);assert.equal(result.data.cards[0].sources.length,2);
+  assert.equal(data.cards[0].sources.length,1);
+});
+test("bulk save: invalid rows are skipped and blocked storage retains the complete batch in memory", () => {
+  const store=createFlashcardStore({getStorage:()=>{throw Error("blocked");}});
+  store.update(data=>addFlashcards(data,[draft(),draft("先生"),draft("bad",{meaning:""})],now).data);
+  assert.equal(store.getSnapshot().saved,false);assert.equal(store.getSnapshot().data.cards.length,2);
+  const invalid=addFlashcards(EMPTY_FLASHCARDS,[draft()],-1);
+  assert.equal(invalid.data,EMPTY_FLASHCARDS);assert.equal(invalid.skipped,1);
+});
+test("deck payload: validates version, selected source key and every row before importing", () => {
+  const value={version:1,key:"chapter:1",drafts:[draft()]};
+  assert.deepEqual(parseFlashcardDeck(value,"chapter:1"),[draft()]);
+  for(const invalid of [null,{}, {...value,version:2}, {...value,key:"kana:1"},
+    {...value,drafts:[draft(),draft("bad",{meaning:""})]},
+    {...value,drafts:[draft("bad",{source:{key:"chapter:1",label:"bad",href:"https://example.com"}})]},
+    {...value,drafts:[draft("bad",{example:{href:"javascript:bad"}})]}]) {
+    assert.throws(()=>parseFlashcardDeck(invalid,"chapter:1"));
+  }
+});
+test("shuffle: stable permutation for a seed, different seeds vary the order, no mutation or duplicates", () => {
+  const data=deck(...Array.from({length:40},(_,i)=>"word"+i)), before=JSON.stringify(data);
+  const first=shuffledFlashcardIds(data.cards,12345);
+  assert.deepEqual(first,shuffledFlashcardIds(data.cards,12345));
+  assert.deepEqual([...first].sort(),data.cards.map(card=>card.id).sort());
+  assert.notDeepEqual(first,shuffledFlashcardIds(data.cards,98765));
+  assert.equal(JSON.stringify(data),before);
+  assert.deepEqual(shuffledFlashcardIds([],123),[]);
+});
+test("random queue: samples the whole selected pool before the daily cap and advances without repeats", () => {
+  let data=setNewLimit(deck(...Array.from({length:30},(_,i)=>"word"+i)),5);
+  const order=shuffledFlashcardIds(data.cards,12345);
+  const first=reviewQueue(data,"recognition",["chapter:1"],now,order);
+  assert.deepEqual(first.cards.map(card=>card.id),order.slice(0,5));
+  assert.notDeepEqual(first.cards.map(card=>card.id),data.cards.slice(0,5).map(card=>card.id));
+  const seen=[];
+  for(let i=0;i<5;i++) {
+    const current=reviewQueue(data,"recognition",[],now,shuffledFlashcardIds(data.cards,12345)).cards[0];
+    seen.push(current.id);
+    data=reviewFlashcard(data,current.id,"recognition","good",now,0);
+  }
+  assert.deepEqual(seen,order.slice(0,5));assert.equal(new Set(seen).size,5);
+  assert.equal(reviewQueue(data,"recognition",[],now,order).cards.length,0);
+  assert.equal(reviewQueue(data,"recognition",[],now,shuffledFlashcardIds(data.cards,54321)).cards.length,0);
+  assert.equal(reviewQueue(data,"recall",[],now,order).newCount,5);
+});
+test("random queue: due cards stay ahead of new cards; future reviews and unrelated chapters stay out", () => {
+  let data=rate(deck("学生","先生"),"recognition","again");
+  data=addFlashcard(data,draft("お茶",{source:{key:"chapter:2",label:"Chapter 2",href:"/chapters/2#words"}}),now);
+  const order=data.cards.slice().reverse().map(card=>card.id);
+  const before=reviewQueue(data,"recognition",["chapter:1"],now,order);
+  assert.deepEqual(before.cards.map(card=>card.japanese),["先生"]);
+  const after=reviewQueue(data,"recognition",["chapter:1"],now+600000,order);
+  assert.deepEqual(after.cards.map(card=>card.japanese),["学生","先生"]);
+  assert.equal(reviewQueue(setNewLimit(data,0),"recognition",[],now+600000,order).cards.length,1);
 });

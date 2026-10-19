@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
+import FlashcardDeckPicker from "@/components/FlashcardDeckPicker";
+import { newFlashcardSeed, useFlashcardShuffleSeed } from "@/components/use-flashcard-shuffle";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { ReadingControls, ReadingHint } from "@/components/ReadingPreferences";
 import { flashcardStore, useFlashcards } from "@/components/use-flashcards";
 import {
-  DIRECTIONS, RATINGS, inSources, performance, removeFlashcard, restoreFlashcard, reviewFlashcard,
+  DIRECTIONS, RATINGS, addFlashcards, bulkAddMessage, shuffledFlashcardIds, inSources, performance, removeFlashcard, restoreFlashcard, reviewFlashcard,
   reviewQueue, scheduleReview, setNewLimit, sourceOptions,
-  type Direction, type Rating, type SavedFlashcard,
+  type Direction, type Rating, type SavedFlashcard, type FlashcardDraft, type FlashcardDeckInfo,
 } from "@/lib/flashcards";
 
 const BUTTON = "min-h-11 rounded-control border border-border-strong px-4 py-2 text-sm font-medium transition-colors hover:bg-surface-raised disabled:opacity-50";
@@ -34,7 +36,7 @@ export function ReviewCard({ card, direction, now, onRate }: {
   useEffect(() => { if (revealed) answer.current?.focus(); }, [revealed]);
   return (
     <article data-flashcard-review="" className="mt-5 min-w-0 rounded-card border border-border bg-surface p-5 sm:p-8">
-      <p className="text-xs font-semibold uppercase tracking-wider text-subtle">{card.kind} · {DIRECTION_LABELS[direction]}</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-subtle">{card.kind} · {card.kind === "kana" ? (direction === "recognition" ? "Kana → reading" : "Romaji → kana") : DIRECTION_LABELS[direction]}</p>
       <h2 className="mt-5 break-words text-3xl font-semibold leading-relaxed text-foreground sm:text-4xl" lang={direction === "recognition" ? "ja" : "en"}>
         {direction === "recognition" ? card.japanese : card.meaning}
       </h2>
@@ -48,8 +50,8 @@ export function ReviewCard({ card, direction, now, onRate }: {
           {direction === "recall" && <p lang="ja" className="break-words text-3xl font-semibold leading-relaxed">{card.japanese}</p>}
           <dl className="mt-3 space-y-3">
             {card.kana && <div><dt className="text-xs text-subtle">Kana readings</dt><dd lang="ja" className="mt-1 break-words text-lg"><ReadingHint kind="kana" context={card.japanese}>{card.kana}</ReadingHint></dd></div>}
-            {card.romaji && <div><dt className="text-xs text-subtle">Romaji</dt><dd className="mt-1 break-words text-accent-text"><ReadingHint kind="romaji" context={card.japanese}>{card.romaji}</ReadingHint></dd></div>}
-            {direction === "recognition" && <div><dt className="text-xs text-subtle">Meaning</dt><dd className="mt-1 break-words text-lg"><ReadingHint kind="english" context={card.japanese}>{card.meaning}</ReadingHint></dd></div>}
+            {card.romaji && (card.kind !== "kana" || direction === "recall") && <div><dt className="text-xs text-subtle">Romaji</dt><dd className="mt-1 break-words text-accent-text"><ReadingHint kind="romaji" context={card.japanese}>{card.romaji}</ReadingHint></dd></div>}
+            {direction === "recognition" && <div><dt className="text-xs text-subtle">{card.kind === "kana" ? "Reading (romaji)" : "Meaning"}</dt><dd className="mt-1 break-words text-lg"><ReadingHint kind={card.kind === "kana" ? "romaji" : "english"} context={card.japanese}>{card.meaning}</ReadingHint></dd></div>}
           </dl>
           {card.examples.length > 0 && (
             <div className="mt-6 rounded-control border border-border bg-background p-4">
@@ -80,8 +82,10 @@ export function ReviewCard({ card, direction, now, onRate }: {
   );
 }
 
-export default function FlashcardDashboard() {
+export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo[] }) {
   const { ready, saved, data } = useFlashcards();
+  const initialSeed = useFlashcardShuffleSeed();
+  const [seed, setSeed] = useState<number | null>(null);
   const now = useSyncExternalStore(subscribeClock, readClock, serverClock);
   const [direction, setDirection] = useState<Direction>("recognition");
   const [selected, setSelected] = useState<string[]>([]);
@@ -92,7 +96,7 @@ export default function FlashcardDashboard() {
   useEffect(() => {
     if (reviewed > 0) container.current?.querySelector<HTMLElement>("[data-flashcard-review] button, [data-queue-complete]")?.focus();
   }, [reviewed]);
-  const queue = reviewQueue(data, direction, selected, now);
+  const queue = reviewQueue(data, direction, selected, now, shuffledFlashcardIds(data.cards, seed ?? initialSeed));
   const current = queue.cards[0];
   const options = sourceOptions(data.cards);
   const filtered = data.cards.filter((card) => inSources(card, selected));
@@ -104,10 +108,21 @@ export default function FlashcardDashboard() {
   function choose(key: string) {
     setSelected((keys) => keys.includes(key) ? keys.filter((item) => item !== key) : [...keys, key]);
   }
-  if (!ready || now === 0) return <p className="mt-8 text-muted" role="status">Loading your flashcards…</p>;
+  function startDecks(drafts: FlashcardDraft[], keys: string[]) {
+    let message = "";
+    flashcardStore.update((data) => {
+      const result = addFlashcards(data, drafts, Date.now());
+      message = bulkAddMessage(result);
+      return result.data;
+    });
+    setSelected(keys); setSeed(newFlashcardSeed()); setReviewed((count) => count + 1);
+    return message;
+  }
+  if (!ready || now === 0 || initialSeed === 0) return <p className="mt-8 text-muted" role="status">Loading your flashcards…</p>;
   return (
     <div ref={container}>
       {!saved && <p role="status" className="mt-5 rounded-card border border-border p-3 text-sm text-muted">This browser cannot save flashcards. Unsaved changes are lost when you reload or close this tab.</p>}
+      <FlashcardDeckPicker decks={decks} onStart={startDecks} />
       <section aria-label="Review settings" className="mt-6 rounded-card border border-border bg-surface p-4 sm:p-5">
         <fieldset>
           <legend className="text-sm font-semibold">Review direction</legend>
@@ -141,16 +156,20 @@ export default function FlashcardDashboard() {
         ))}
       </dl>
       <p role="status" className="mt-3 text-sm text-muted">{queue.introducedToday} of {data.newLimit} new cards reviewed today in this direction.</p>
+      <div className="mt-4 flex flex-wrap items-center gap-3">
+        <button type="button" className={BUTTON} disabled={queue.cards.length < 2} onClick={() => setSeed(newFlashcardSeed())}>Shuffle review order</button>
+        <p className="text-xs text-muted">Due cards come first. New cards are drawn randomly within your daily limit. Kana character cards use a romaji prompt in the reverse direction.</p>
+      </div>
       <ReadingControls />
 
       {data.cards.length === 0 ? (
         <div className="mt-6 rounded-card border border-dashed border-border-strong p-8 text-center">
           <h2 className="text-xl font-semibold">Save your first flashcard</h2>
-          <p className="mt-2 text-muted">Use Add to flashcards beside vocabulary, kanji, or a lesson sentence.</p>
+          <p className="mt-2 text-muted">Choose a pre-made deck above, or use Add to flashcards beside vocabulary, kanji, or a lesson sentence.</p>
           <Link href="/#chapters" className={BUTTON + " mt-5 inline-flex items-center text-accent-text"}>Browse lessons →</Link>
         </div>
       ) : current ? (
-        <ReviewCard key={direction + ":" + current.id + ":" + current.progress[direction].reviews + ":" + selected.slice().sort().join(",")}
+        <ReviewCard key={(seed ?? initialSeed) + ":" + direction + ":" + current.id + ":" + current.progress[direction].reviews + ":" + selected.slice().sort().join(",")}
           card={current} direction={direction} now={now} onRate={rate} />
       ) : (
         <section data-queue-complete="" tabIndex={-1} className="mt-6 rounded-card border border-border bg-surface p-6 focus-visible:outline-2 focus-visible:outline-accent-text" aria-label="Queue complete">

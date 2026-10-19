@@ -1,9 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { collectFlashcardExamples, lastFlashcardHeading, tableFlashcards } from "../src/lib/flashcard-content.ts";
+import { collectFlashcardExamples, sectionFlashcards, lastFlashcardHeading, tableFlashcards } from "../src/lib/flashcard-content.ts";
 import { splitReadingContent } from "../src/lib/reading-content.ts";
-import { EMPTY_FLASHCARDS, addFlashcard, parseFlashcardData } from "../src/lib/flashcards.ts";
+import { EMPTY_FLASHCARDS, addFlashcards, flashcardId, parseFlashcardDeck, addFlashcard, parseFlashcardData } from "../src/lib/flashcards.ts";
 const load=(file)=>JSON.parse(readFileSync(new URL("../src/data/"+file+".json",import.meta.url),"utf8"));
 const groups=[["chapter","chapters"],["kana","kana"],["kanji","kanji"],["practice","practice"]];
 const all=[];
@@ -24,7 +24,7 @@ for(const [kind,file] of groups) for(const page of load(file)){
   }
 }
 test("flashcard content: all 60 individual kanji, structured vocabulary and sentences are supported",()=>{
-  assert.equal(all.filter(item=>item.draft.kind==="kanji").length,60);
+  assert.equal(all.filter(item=>item.draft.kind==="kanji" && /^\p{Script=Han}$/u.test(item.draft.japanese)).length,60);
   assert.ok(all.filter(item=>item.draft.kind==="vocabulary").length>1900);
   assert.ok(all.filter(item=>item.draft.kind==="sentence").length>1800);
   assert.ok(all.some(item=>item.context.kind==="chapter"));
@@ -94,4 +94,61 @@ test("flashcard content: a missing kanji spelling falls back to a kana-only word
   const card=tableFlashcards({headers:["Kana","Kanji","Romaji","English"],rows:[["はい","-","hai","yes"]]},
     {kind:"chapter",id:"1",sectionId:"vocab",sectionTitle:"Vocabulary"},{id:"word",title:"Word"})[0];
   assert.equal(card.japanese,"はい");assert.equal(card.kana,"");assert.equal(card.meaning,"yes");
+});
+
+
+test("pre-made bank: the shared section converter exactly matches every eligible lesson row",()=>{
+  const drafts=[];
+  for(const [kind,file] of groups)for(const page of load(file)) {
+    const examples=collectFlashcardExamples(page.sections,{kind,id:page.ch});
+    for(const section of page.sections) {
+      const blocks=splitReadingContent(section.html);
+      const converted=sectionFlashcards(blocks,{kind,id:page.ch,sectionId:section.id,sectionTitle:section.title},examples);
+      assert.deepEqual(converted.map(item=>item.block),blocks);
+      drafts.push(...converted.flatMap(item=>(item.flashcards??[]).filter(Boolean)));
+    }
+  }
+  assert.deepEqual(drafts,all.map(item=>item.draft));
+});
+test("pre-made bank: all 13 page decks validate and fit together without dropping cards",()=>{
+  const drafts=[],counts=[];
+  for(const [kind,file] of groups.filter(([kind])=>kind!=="practice"))for(const page of load(file)) {
+    const pageDrafts=all.filter(item=>item.context.kind===kind&&item.context.id===page.ch).map(item=>item.draft);
+    const validated=parseFlashcardDeck({version:1,key:kind+":"+page.ch,drafts:pageDrafts},kind+":"+page.ch);
+    assert.deepEqual(validated,pageDrafts);
+    const result=addFlashcards(EMPTY_FLASHCARDS,validated,1000);
+    assert.equal(result.skipped,0);assert.equal(result.added,new Set(validated.map(flashcardId)).size);
+    counts.push(result.added);drafts.push(...validated);
+  }
+  assert.equal(counts.length,13);assert.ok(counts.every(count=>count>0));
+  const result=addFlashcards(EMPTY_FLASHCARDS,drafts,1000);
+  assert.equal(result.skipped,0);assert.equal(result.added,new Set(drafts.map(flashcardId)).size);
+  assert.deepEqual(parseFlashcardData(JSON.stringify(result.data)),result.data);
+});
+
+test("kana sound charts become reading cards, with both scripts and no invented meaning",()=>{
+  const table={headers:["Romaji","Hiragana","Katakana","Hiragana example","Katakana example"],rows:[["ga","が","ガ","がくせい (gakusei), student","ガス (gasu), gas"]]};
+  const [draft]=tableFlashcards(table,{kind:"kana",id:"1",sectionId:"lessons",sectionTitle:"Lessons"},{id:"sounds",title:"Sounds"});
+  assert.equal(draft.kind,"kana");assert.equal(draft.japanese,"が / ガ");assert.equal(draft.meaning,"ga");assert.equal(draft.romaji,"ga");assert.equal(draft.example,undefined);
+});
+test("kana word-example meanings stay attached to the whole word, not the kana fragment",()=>{
+  const [draft]=tableFlashcards({headers:["Kana","Romaji","Example word","Meaning"],rows:[["っこ","kko","がっこう (gakkou)","school"]]},
+    {kind:"kana",id:"1",sectionId:"lessons",sectionTitle:"Lessons"},{id:"double",title:"Double sounds"});
+  assert.equal(draft.japanese,"がっこう");assert.equal(draft.romaji,"gakkou");assert.equal(draft.meaning,"school");
+});
+test("kanji comparison cards keep both characters, readings and the pair's meaning",()=>{
+  const [draft]=tableFlashcards({headers:["Pair","Kanji","Readings"],rows:[["up and down","上 / 下","うえ / した"]]},
+    {kind:"kanji",id:"1",sectionId:"mixups",sectionTitle:"Common mix-ups"},{id:"pairs",title:"Pairs"});
+  assert.equal(draft.kind,"kanji");assert.equal(draft.japanese,"上 / 下");assert.equal(draft.kana,"うえ / した");assert.equal(draft.meaning,"up and down");
+});
+
+test("table coverage: every current lesson, vocabulary and comparison table is included",()=>{
+  for(const [kind,file] of groups.filter(([kind])=>kind!=="practice"))for(const page of load(file)) {
+    for(const section of page.sections.filter(section=>["lessons","vocab","mixups"].includes(section.id))) {
+      for(const item of sectionFlashcards(splitReadingContent(section.html),{kind,id:page.ch,sectionId:section.id,sectionTitle:section.title})) {
+        if(item.block.type!=="table")continue;
+        assert.ok(item.flashcards.some(Boolean),kind+":"+page.ch+" "+JSON.stringify(item.block.table.headers));
+      }
+    }
+  }
 });

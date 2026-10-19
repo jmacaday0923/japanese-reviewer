@@ -6,7 +6,7 @@ export const RATINGS: readonly Rating[] = ["again", "hard", "good", "easy"];
 export type FlashcardSource = { key: string; label: string; href: string };
 export type FlashcardExample = { japanese: string; romaji: string; english: string; href: string };
 export type FlashcardDraft = {
-  kind: "vocabulary" | "kanji" | "sentence";
+  kind: "vocabulary" | "kanji" | "sentence" | "kana";
   japanese: string; kana: string; romaji: string; meaning: string;
   source: FlashcardSource; example?: FlashcardExample;
 };
@@ -51,7 +51,7 @@ function example(value: unknown): FlashcardExample | null {
   return { japanese: value.japanese, romaji: value.romaji, english: value.english, href: value.href };
 }
 function core(value: unknown): Pick<FlashcardDraft, "kind" | "japanese" | "kana" | "romaji" | "meaning"> | null {
-  if (!record(value) || typeof value.kind !== "string" || !["vocabulary", "kanji", "sentence"].includes(value.kind) ||
+  if (!record(value) || typeof value.kind !== "string" || !["vocabulary", "kanji", "sentence", "kana"].includes(value.kind) ||
       !text(value.japanese) || !value.japanese.trim() || !text(value.kana) || !text(value.romaji) ||
       !text(value.meaning) || !value.meaning.trim()) return null;
   return { kind: value.kind as FlashcardDraft["kind"], japanese: value.japanese, kana: value.kana, romaji: value.romaji, meaning: value.meaning };
@@ -86,21 +86,70 @@ export function parseFlashcardData(raw: string | null): FlashcardData {
         recognition: ids(daily.recognition), recall: ids(daily.recall) } };
   } catch { return EMPTY_FLASHCARDS; }
 }
-export function addFlashcard(data: FlashcardData, draft: FlashcardDraft, now: number): FlashcardData {
-  const fields = core(draft), origin = source(draft.source);
-  if (!fields || !origin || !time(now)) return data;
-  const id = flashcardId(fields), existing = data.cards.find((card) => card.id === id);
-  const extra = example(draft.example);
-  if (existing) {
-    const sources = existing.sources.some((s) => s.href === origin.href) ? existing.sources : [...existing.sources, origin].slice(0, 100);
-    const examples = extra && !existing.examples.some((e) => e.href === extra.href && e.japanese === extra.japanese)
-      ? [...existing.examples, extra].slice(0, 3) : existing.examples;
-    if (sources === existing.sources && examples === existing.examples) return data;
-    return { ...data, cards: data.cards.map((card) => card.id === id ? { ...card, sources, examples } : card) };
+export type BulkAddResult = { data: FlashcardData; added: number; existing: number; skipped: number };
+// Merge the whole batch before the store serializes it: one write, shared identities and histories.
+export function addFlashcards(data: FlashcardData, drafts: readonly FlashcardDraft[], now: number): BulkAddResult {
+  const cards = new Map(data.cards.map((card) => [card.id, card]));
+  const original = new Set(cards.keys()), seen = new Set<string>();
+  let changed = false, added = 0, existing = 0, skipped = 0;
+  for (const draft of drafts) {
+    const fields = core(draft), origin = source(draft.source);
+    if (!fields || !origin || !time(now)) { skipped++; continue; }
+    const id = flashcardId(fields), previous = cards.get(id), extra = example(draft.example);
+    if (!seen.has(id)) {
+      if (original.has(id)) existing++;
+      else if (cards.size < MAX_CARDS) added++;
+      else skipped++;
+      seen.add(id);
+    }
+    if (previous) {
+      const sources = previous.sources.length < 100 && !previous.sources.some((s) => s.href === origin.href)
+        ? [...previous.sources, origin] : previous.sources;
+      const examples = extra && previous.examples.length < 3 && !previous.examples.some((e) => e.href === extra.href && e.japanese === extra.japanese)
+        ? [...previous.examples, extra] : previous.examples;
+      if (sources !== previous.sources || examples !== previous.examples) {
+        cards.set(id, { ...previous, sources, examples }); changed = true;
+      }
+    } else if (cards.size < MAX_CARDS) {
+      cards.set(id, { ...fields, id, addedAt: now, sources: [origin], examples: extra ? [extra] : [],
+        progress: { recognition: initialReview(), recall: initialReview() } });
+      changed = true;
+    }
   }
-  if (data.cards.length >= MAX_CARDS) return data;
-  return { ...data, cards: [...data.cards, { ...fields, id, addedAt: now, sources: [origin], examples: extra ? [extra] : [],
-    progress: { recognition: initialReview(), recall: initialReview() } }] };
+  return { data: changed ? { ...data, cards: [...cards.values()] } : data, added, existing, skipped };
+}
+export function addFlashcard(data: FlashcardData, draft: FlashcardDraft, now: number): FlashcardData {
+  return addFlashcards(data, [draft], now).data;
+}
+export function bulkAddMessage(result: Omit<BulkAddResult, "data">): string {
+  return result.added + " added · " + result.existing + " already saved" +
+    (result.skipped ? " · " + result.skipped + " could not be added (deck full or invalid content)." : ".");
+}
+export type FlashcardDeckInfo = { key: string; slug: string; label: string; title: string; count: number };
+export type FlashcardDeck = { version: 1; key: string; drafts: FlashcardDraft[] };
+// Validate fetched decks atomically. A failed request or malformed deck imports nothing.
+export function parseFlashcardDeck(value: unknown, key: string): FlashcardDraft[] {
+  if (!record(value) || value.version !== 1 || value.key !== key || !Array.isArray(value.drafts) || value.drafts.length > 10000) throw new Error("Invalid flashcard deck");
+  return value.drafts.map((item) => {
+    const fields = core(item), origin = record(item) ? source(item.source) : null;
+    if (!fields || !origin || origin.key !== key || !record(item)) throw new Error("Invalid flashcard row");
+    const extra = example(item.example);
+    if (item.example !== undefined && !extra) throw new Error("Invalid flashcard example");
+    return { ...fields, source: origin, ...(extra ? { example: extra } : {}) };
+  });
+}
+// Seeded Fisher–Yates: create a fresh seed on a user action, never while rendering a card.
+export function shuffledFlashcardIds(cards: readonly SavedFlashcard[], seed: number): string[] {
+  const ids = cards.map((card) => card.id);
+  let state = seed >>> 0;
+  for (let i = ids.length - 1; i > 0; i--) {
+    state += 0x6D2B79F5;
+    let value = Math.imul(state ^ (state >>> 15), 1 | state);
+    value ^= value + Math.imul(value ^ (value >>> 7), 61 | value);
+    const j = Math.floor((((value ^ (value >>> 14)) >>> 0) / 4294967296) * (i + 1));
+    [ids[i], ids[j]] = [ids[j], ids[i]];
+  }
+  return ids;
 }
 export function removeFlashcard(data: FlashcardData, id: string): FlashcardData {
   return data.cards.some((card) => card.id === id) ? { ...data, cards: data.cards.filter((card) => card.id !== id) } : data;
@@ -142,14 +191,16 @@ export function reviewFlashcard(data: FlashcardData, id: string, direction: Dire
 export function inSources(card: SavedFlashcard, selected: readonly string[]): boolean {
   return selected.length === 0 || card.sources.some((source) => selected.includes(source.key));
 }
-export function reviewQueue(data: FlashcardData, direction: Direction, selected: readonly string[], now: number) {
+export function reviewQueue(data: FlashcardData, direction: Direction, selected: readonly string[], now: number, order?: readonly string[]) {
+  const ranks = order ? new Map(order.map((id, rank) => [id, rank])) : null;
+  const randomOrder = (a: SavedFlashcard, b: SavedFlashcard) => (ranks?.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (ranks?.get(b.id) ?? Number.MAX_SAFE_INTEGER);
   const filtered = data.cards.filter((card) => inSources(card, selected));
   const introduced = data.daily.day === localDay(now) ? data.daily[direction] : [];
   const remaining = Math.max(0, data.newLimit - introduced.length);
   const due = filtered.filter((card) => card.progress[direction].reviews > 0 && card.progress[direction].dueAt <= now)
-    .sort((a, b) => a.progress[direction].dueAt - b.progress[direction].dueAt || a.addedAt - b.addedAt);
+    .sort((a, b) => randomOrder(a, b) || a.progress[direction].dueAt - b.progress[direction].dueAt || a.addedAt - b.addedAt);
   const fresh = filtered.filter((card) => card.progress[direction].reviews === 0)
-    .sort((a, b) => a.addedAt - b.addedAt);
+    .sort((a, b) => randomOrder(a, b) || a.addedAt - b.addedAt);
   // A removed then re-added card cannot bypass today's allowance or be stranded by it.
   const newCards = [...fresh.filter((card) => introduced.includes(card.id)), ...fresh.filter((card) => !introduced.includes(card.id)).slice(0, remaining)];
   const future = filtered.map((card) => card.progress[direction]).filter((state) => state.reviews > 0 && state.dueAt > now);

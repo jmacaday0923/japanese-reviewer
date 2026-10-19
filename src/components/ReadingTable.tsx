@@ -1,5 +1,6 @@
 import { cellText, cellKind, rowLabel, type ReadingTableData } from "@/lib/reading-content";
 import type { FlashcardDraft } from "@/lib/flashcards";
+import AddAllFlashcards from "@/components/AddAllFlashcards";
 import AddFlashcard from "@/components/AddFlashcard";
 import { ReadingHint } from "@/components/ReadingPreferences";
 
@@ -10,7 +11,7 @@ export default function ReadingTable({ table, flashcards = [] }: { table: Readin
   return (
     <div className="tw">
       <table>
-        <thead><tr>{table.headers.map((header, c) => <th key={c} scope="col" dangerouslySetInnerHTML={{ __html: header }} />)}{hasFlashcards && <th scope="col"><span className="sr-only">Flashcards</span></th>}</tr></thead>
+        <thead><tr>{table.headers.map((header, c) => <th key={c} scope="col" dangerouslySetInnerHTML={{ __html: header }} />)}{hasFlashcards && <th scope="col"><AddAllFlashcards drafts={flashcards.filter((draft): draft is FlashcardDraft => draft !== null)} /></th>}</tr></thead>
         <tbody>
           {table.rows.map((row, r) => {
             const context = rowLabel(table.headers, row, "row " + (r + 1));

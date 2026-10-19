@@ -1,5 +1,5 @@
-// Extract only verified, structured lesson rows. No page data reaches the client.
-import type { ReadingTableData } from "./reading-content";
+// Extract verified, structured rows; raw lesson HTML stays on the server.
+import type { ReadingBlock, ReadingTableData } from "./reading-content";
 import type { FlashcardDraft, FlashcardExample } from "./flashcards";
 export type FlashcardContext = {
   kind: "chapter" | "kana" | "kanji" | "practice"; id: string; sectionId: string; sectionTitle: string;
@@ -62,7 +62,17 @@ export function tableFlashcards(table: ReadingTableData, context: FlashcardConte
   return table.rows.map((row) => {
     const values = row.map(text), get = (label: string) => values[headers.indexOf(label)] ?? "";
     let kind: FlashcardDraft["kind"], japanese = "", kana = "", romaji = get("romaji"), meaning = get("english");
-    if (headers.includes("japanese") && meaning) {
+    if (headers.includes("hiragana") && headers.includes("katakana") && romaji) {
+      kind = "kana";
+      japanese = [get("hiragana"), get("katakana")].filter((value) => /[\p{Script=Hiragana}\p{Script=Katakana}]/u.test(value)).join(" / ");
+      meaning = romaji; // A character has a pronunciation, not an invented English meaning.
+    } else if (headers.includes("example word") && headers.includes("meaning")) {
+      const word = get("example word").match(/^(.+?)\s*[(（]([^)）]+)[)）]\s*$/u);
+      if (!word) return null;
+      kind = "vocabulary"; japanese = word[1].trim(); romaji = word[2].trim(); meaning = get("meaning");
+    } else if (headers.includes("pair") && headers.includes("kanji") && headers.includes("readings")) {
+      kind = "kanji"; japanese = get("kanji"); kana = get("readings"); meaning = get("pair"); romaji = "";
+    } else if (headers.includes("japanese") && meaning) {
       kind = "sentence"; japanese = get("japanese");
     } else if (headers.includes("meaning") && headers.includes("on'yomi") && headers.includes("kun'yomi")) {
       kind = "kanji"; japanese = heading.title.match(/^([\p{Script=Han}々]+)\s*[(（]/u)?.[1] ?? "";
@@ -73,9 +83,20 @@ export function tableFlashcards(table: ReadingTableData, context: FlashcardConte
     } else return null;
     if (!japanese || !meaning || !/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(japanese)) return null;
     // Attach only a real source sentence. No generated translations or guessed readings.
-    const example = kind === "sentence" ? undefined : examples.find((item) => kind === "kanji"
+    const example = kind === "sentence" || kind === "kana" ? undefined : examples.find((item) => kind === "kanji"
       ? item.japanese.includes(japanese)
       : wordInSentence(item.romaji, romaji) && (item.japanese.includes(japanese) || (!!kana && item.japanese.includes(kana))));
     return { kind, japanese, kana: kana === japanese ? "" : kana, romaji, meaning, source, ...(example ? { example } : {}) };
   });
+}
+
+// Both the lesson renderer and pre-made bank use this exact section conversion.
+export function sectionFlashcards(blocks: readonly ReadingBlock[], context?: FlashcardContext, examples: readonly FlashcardExample[] = []) {
+  let heading = { id: context?.sectionId ?? "", title: context?.sectionTitle ?? "" };
+  const result: { block: ReadingBlock; flashcards?: (FlashcardDraft | null)[] }[] = [];
+  for (const block of blocks) {
+    if (block.type === "html") heading = lastFlashcardHeading(block.html, heading);
+    result.push({ block, flashcards: block.type === "table" && context ? tableFlashcards(block.table, context, heading, examples) : undefined });
+  }
+  return result;
 }
