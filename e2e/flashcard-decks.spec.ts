@@ -69,21 +69,37 @@ test("an empty browser can select multiple decks; only selected decks load and s
   await page.reload();await expect(review(page)).toBeVisible();expect((await readData(page)).cards).toHaveLength(count);
 });
 
-test("shuffled reviews remain stable when revealing and rating advances to a different card",async({page})=>{
+test("shuffled reviews remain stable when revealing and rating advances to a different card",async({page,request})=>{
+  // Every possible first card has a source-example heading. Keep this regression independent of shuffle luck.
+  const response=await request.get("/flashcard-decks/chapter-3");
+  expect(response.ok()).toBeTruthy();
+  const chapter=parseFlashcardDeck(await response.json(),"chapter:3");
+  const seen=new Set<string>();
+  const drafts=chapter.filter(draft=>{
+    if(!draft.example||seen.has(draft.japanese))return false;
+    seen.add(draft.japanese);return true;
+  }).slice(0,3);
+  expect(drafts).toHaveLength(3);
+  await page.route("**/flashcard-decks/chapter-3",route=>route.fulfill({json:{version:1,key:"chapter:3",drafts}}));
   await page.goto("/flashcards");
   const picker=visibleMain(page).getByRole("region",{name:"Pre-made decks",exact:true});
   await picker.getByRole("checkbox",{name:/^Chapter 3 —/}).check();
   await picker.getByRole("button",{name:"Add selected decks and review",exact:true}).click();
-  await expect(review(page)).toBeVisible();const prompt=await review(page).getByRole("heading").innerText();
+  await expect(review(page)).toBeVisible();
+  const question=review(page).getByRole("heading",{level:2});
+  const prompt=await question.innerText();
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
-  await expect(review(page).getByRole("heading")).toHaveText(prompt);
+  await expect(review(page).getByRole("heading",{name:"Source example",level:3,exact:true})).toBeVisible();
+  await expect(question).toHaveText(prompt);
   await visibleMain(page).getByRole("checkbox",{name:"Show romaji",exact:true}).uncheck();
-  await expect(review(page).getByRole("heading")).toHaveText(prompt);
+  await expect(question).toHaveText(prompt);
   await review(page).getByRole("button",{name:/^Good/}).click();
-  if ((await readData(page)).cards.filter(card=>card.japanese===prompt).length === 1) await expect(review(page).getByRole("heading")).not.toHaveText(prompt);
+  await expect(question).not.toHaveText(prompt);
   await expect(review(page).locator("[data-flashcard-answer]")).toHaveCount(0);
   expect((await readData(page)).daily.recognition).toHaveLength(1);
   await visibleMain(page).getByRole("button",{name:"Shuffle review order",exact:true}).click();
+  await expect(question).toHaveCount(1);
+  await expect(review(page).locator("[data-flashcard-answer]")).toHaveCount(0);
   expect((await readData(page)).daily.recognition).toHaveLength(1);
 });
 

@@ -47,14 +47,25 @@ async function readSaved(page: Page) {
   return page.evaluate((key) => JSON.parse(localStorage.getItem(key) ?? "null"), KEY);
 }
 
-test("a first visit shows empty states and an unpressed button", async ({ page }) => {
+test("a first visit offers working empty-state actions and an unpressed bookmark button", async ({ page }) => {
   await page.goto("/");
   const s = shelf(page);
   await expect(s.resume).toContainText("Open any chapter, kana, kanji or practice page");
   await expect(s.bookmarks).toContainText("No bookmarks yet");
   await expect(s.items).toHaveCount(0);
 
-  await page.goto("/chapters/1");
+  const start = s.resume.getByRole("link", { name: "Start Chapter 1", exact: true });
+  const explore = s.bookmarks.getByRole("link", { name: "Explore lessons", exact: true });
+  await expect(start).toHaveAttribute("href", "/chapters/1");
+  await expect(explore).toHaveAttribute("href", "/#chapters");
+  await explore.click();
+  await expect(page).toHaveURL("/#chapters");
+  await expect(visibleMain(page).locator("#chapters")).toBeInViewport();
+
+  await start.focus();
+  await page.keyboard.press("Enter");
+  await expect(page).toHaveURL("/chapters/1");
+  await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText(chapters[0].title);
   const r = reader(page);
   await expect(r.bookmarkPage).toBeEnabled();
   await expect(r.bookmarkPage).toHaveAttribute("aria-pressed", "false");
@@ -80,6 +91,8 @@ test("bookmark a page: it stays after a reload, shows on the dashboard, opens, a
   const s = shelf(page);
   await expect(s.items).toHaveCount(1);
   await expect(s.bookmarksHeading).toHaveText("Bookmarks (1)");
+  await expect(s.bookmarks.getByRole("link", { name: "Explore lessons", exact: true })).toHaveCount(0);
+  await expect(s.resume.getByRole("link", { name: "Start Chapter 1", exact: true })).toHaveCount(0);
   const link = s.items.first().getByRole("link");
   await expect(link).toHaveAttribute("href", "/chapters/3");
   await expect(link).toContainText("Chapter 3");
@@ -94,6 +107,7 @@ test("bookmark a page: it stays after a reload, shows on the dashboard, opens, a
   await expect(s.items).toHaveCount(0);
   await expect(s.bookmarks).toContainText("No bookmarks yet");
   await expect(s.bookmarksHeading).toBeFocused();
+  await expect(s.bookmarks.getByRole("link", { name: "Explore lessons", exact: true })).toBeVisible();
   expect((await readSaved(page)).bookmarks).toEqual([]);
 
   // pressing again on the reader removes it there too

@@ -50,9 +50,18 @@ export default function StudyShelf({ pages }: Props) {
           ) : lastVisit ? (
             <ResumeLink place={lastVisit} />
           ) : (
-            <p className="mt-2 text-sm leading-relaxed text-muted">
-              Open any chapter, kana, kanji or practice page to pick up from here later.
-            </p>
+            <>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                Open any chapter, kana, kanji or practice page to pick up from here later.
+              </p>
+              <Link
+                href="/chapters/1"
+                className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-control bg-accent px-5 py-2 text-[0.9375rem] font-medium text-accent-foreground transition-colors hover:bg-accent-hover"
+              >
+                Start Chapter 1
+                <Icon name="arrow" className="size-4" />
+              </Link>
+            </>
           )}
         </div>
 
@@ -91,9 +100,18 @@ export default function StudyShelf({ pages }: Props) {
               })}
             </ul>
           ) : (
-            <p className="mt-2 text-sm leading-relaxed text-muted">
-              No bookmarks yet. Use Bookmark page on any study page, or Bookmark section after jumping to one.
-            </p>
+            <>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
+                No bookmarks yet. Use Bookmark page on any study page, or Bookmark section after jumping to one.
+              </p>
+              <Link
+                href="/#chapters"
+                className="mt-4 inline-flex min-h-11 items-center gap-2 self-start rounded-control border border-border-strong px-4 py-2 text-sm font-medium text-accent-text transition-colors hover:bg-surface-raised"
+              >
+                Explore lessons
+                <Icon name="arrow" className="size-4" />
+              </Link>
+            </>
           )}
         </div>
       </div>
