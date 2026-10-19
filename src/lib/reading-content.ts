@@ -17,33 +17,32 @@ export function columnKind(header: string): HintKind | null {
   const label = cellText(header).toLowerCase();
   if (label === "romaji") return "romaji";
   if (label === "english" || label === "meaning") return "english";
-  if (["on'yomi", "kun'yomi", "reading", "readings", "exit reading", "japanese reading", "chinese reading"].includes(label)) return "furigana";
+  if (["on'yomi", "kun'yomi", "reading", "readings", "exit reading", "japanese reading", "chinese reading"].includes(label)) return "kana";
   return null;
 }
 
-// A Kana column paired with a kanji word is a reading aid, even when alternatives
-// make the pair unsuitable for automatic ruby markup. Basic kana prompts stay visible.
+// Only hide a Kana cell when it supplies the reading for a kanji word.
+// Kana prompts and kana-only vocabulary remain visible.
 export function cellKind(headers: readonly string[], cells: readonly string[], column: number): HintKind | null {
   const kind = columnKind(headers[column] ?? "");
   if (kind) return kind;
   const labels = headers.map((h) => cellText(h).toLowerCase());
   if (labels[column] !== "kana") return null;
   const wordColumn = labels.includes("kanji") ? labels.indexOf("kanji") : labels.indexOf("word");
-  return wordColumn >= 0 && /\p{Script=Han}/u.test(cellText(cells[wordColumn] ?? "")) ? "furigana" : null;
+  return wordColumn >= 0 && /\p{Script=Han}/u.test(cellText(cells[wordColumn] ?? "")) ? "kana" : null;
 }
 
-export function furiganaPair(headers: readonly string[], cells: readonly string[]): { column: number; kanaColumn: number; word: string; reading: string } | null {
+// Reveal buttons and search links must not announce the hidden reading.
+export function rowLabel(headers: readonly string[], cells: readonly string[], fallback: string): string {
   const labels = headers.map((h) => cellText(h).toLowerCase());
-  const kanaColumn = labels.indexOf("kana");
-  const column = labels.includes("kanji") ? labels.indexOf("kanji") : labels.indexOf("word");
-  if (kanaColumn < 0 || column < 0 || column === kanaColumn) return null;
-  const word = cellText(cells[column] ?? "");
-  const reading = cellText(cells[kanaColumn] ?? "");
-  // Skip alternatives, notes, multiple words, and unknown readings.
-  if (!/^[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ー々]+$/u.test(word) ||
-      !/\p{Script=Han}/u.test(word) ||
-      !/^[\p{Script=Hiragana}\p{Script=Katakana}ー]+$/u.test(reading)) return null;
-  return { column, kanaColumn, word, reading };
+  for (const label of ["kanji", "word", "japanese", "kana"]) {
+    const column = labels.indexOf(label);
+    if (column >= 0 && !cellKind(headers, cells, column)) {
+      const value = cellText(cells[column] ?? "");
+      if (value) return value;
+    }
+  }
+  return fallback;
 }
 
 export function splitReadingContent(html: string): ReadingBlock[] {
@@ -57,7 +56,7 @@ export function splitReadingContent(html: string): ReadingBlock[] {
       .map((row) => [...row[1].matchAll(/<td>([\s\S]*?)<\/td>/g)].map((m) => m[1]))
       .filter((row) => row.length > 0);
     const supported = headers.some((h) => columnKind(h) !== null) ||
-      rows.some((row) => furiganaPair(headers, row) !== null);
+      rows.some((row) => row.some((_, column) => cellKind(headers, row, column) !== null));
     // Leave unknown or irregular tables byte-for-byte intact.
     if (!supported || rows.length === 0 || rows.some((row) => row.length !== headers.length)) continue;
     if (match.index! > start) result.push({ type: "html", html: html.slice(start, match.index) });

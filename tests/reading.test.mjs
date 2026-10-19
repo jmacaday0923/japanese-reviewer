@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import {
   DEFAULT_VISIBILITY, READING_KEY, READING_SERVER_SNAPSHOT, createReadingStore, parseReadingVisibility,
 } from "../src/lib/reading-preferences.ts";
-import { cellKind, cellText, columnKind, furiganaPair, splitReadingContent } from "../src/lib/reading-content.ts";
+import { cellText, columnKind, cellKind, rowLabel, splitReadingContent } from "../src/lib/reading-content.ts";
 
 const save = (show) => JSON.stringify({ version: 1, show });
 function fakeStorage(raw = null) {
@@ -19,7 +19,7 @@ test("reading preferences: defaults, valid values, invalid data and versions", (
   for (const raw of [null, "{", "null", "[]", '{"version":2}', '{"version":1,"show":{"romaji":false}}']) {
     assert.deepEqual(parseReadingVisibility(raw), DEFAULT_VISIBILITY);
   }
-  const show = { romaji: false, english: true, furigana: false };
+  const show = { romaji: false, english: true, kana: true };
   assert.deepEqual(parseReadingVisibility(save(show)), show);
   assert.equal(READING_SERVER_SNAPSHOT.ready, false);
 });
@@ -32,16 +32,16 @@ test("reading store: independent choices persist, stable snapshots, reveals rese
   const first = store.getSnapshot();
   assert.equal(first, store.getSnapshot());
   store.setShown("romaji", false);
-  assert.deepEqual(store.getSnapshot().show, { romaji: false, english: true, furigana: true });
+  assert.deepEqual(store.getSnapshot().show, { romaji: false, english: true, kana: true });
   const rev = store.getSnapshot().revision;
   store.hideRevealed();
   assert.equal(store.getSnapshot().revision, rev + 1);
-  assert.deepEqual(store.getSnapshot().show, { romaji: false, english: true, furigana: true });
+  assert.deepEqual(store.getSnapshot().show, { romaji: false, english: true, kana: true });
   store.setShown("english", false);
-  store.setShown("furigana", false);
+  store.setShown("kana", false);
   assert.equal(notices, 4);
   assert.ok(storage.writes.every((key) => key === READING_KEY));
-  assert.deepEqual(createReadingStore({ getStorage: () => storage }).getSnapshot().show, { romaji: false, english: false, furigana: false });
+  assert.deepEqual(createReadingStore({ getStorage: () => storage }).getSnapshot().show, { romaji: false, english: false, kana: false });
   stop();
 });
 
@@ -50,7 +50,7 @@ test("reading store: blocked storage, failed writes, and later failed reads reta
   blocked.setShown("english", false);
   assert.equal(blocked.getSnapshot().saved, false);
   assert.equal(blocked.getSnapshot().show.english, false);
-  const storage = fakeStorage(save({ romaji: false, english: true, furigana: false }));
+  const storage = fakeStorage(save({ romaji: false, english: true }));
   const store = createReadingStore({ getStorage: () => storage });
   assert.equal(store.getSnapshot().show.romaji, false);
   storage.failRead = true;
@@ -74,7 +74,7 @@ test("reading store: cross-tab changes and clearing; other keys and cleanup", ()
   const stop = store.subscribe(() => calls++);
   store.getSnapshot();
   const send = (key) => { const event = new Event("storage"); Object.defineProperty(event, "key", { value: key }); events.dispatchEvent(event); };
-  storage.raw = save({ romaji: false, english: true, furigana: true });
+  storage.raw = save({ romaji: false, english: true });
   send(READING_KEY);
   assert.equal(calls, 1);
   assert.equal(store.getSnapshot().show.romaji, false);
@@ -87,26 +87,55 @@ test("reading store: cross-tab changes and clearing; other keys and cleanup", ()
   assert.equal(calls, 2);
 });
 
-test("hint classification: translations and readings, preserving Japanese prompts", () => {
+test("hint classification: independent romaji, English and kana readings; visible kanji and prompts", () => {
   assert.equal(columnKind("Romaji"), "romaji");
   assert.equal(columnKind("English"), "english");
   assert.equal(columnKind("Meaning"), "english");
-  assert.equal(columnKind("On'yomi"), "furigana");
-  assert.equal(columnKind("Question"), null);
-  assert.equal(columnKind("Your answer"), null);
-  assert.equal(cellKind(["Kana", "Kanji"], ["がっこう", "学校"], 0), "furigana");
-  assert.equal(cellKind(["Kana", "Kanji"], ["ところ / ばしょ", "所 / 場所"], 0), "furigana");
+  for (const header of ["On'yomi", "Kun'yomi", "Reading", "Readings", "Exit reading", "Japanese reading", "Chinese reading"]) {
+    assert.equal(columnKind(header), "kana", header);
+  }
+  for (const header of ["Kana", "Kanji", "Word", "Hiragana", "Katakana", "Question", "Your answer"]) {
+    assert.equal(columnKind(header), null, header);
+  }
+  assert.equal(cellKind(["Kana", "Kanji"], ["がっこう", "学校"], 0), "kana");
+  assert.equal(cellKind(["Kana", "Kanji"], ["ところ / ばしょ", "所 / 場所"], 0), "kana");
+  assert.equal(cellKind(["Word", "Kana"], ["学校", "がっこう"], 1), "kana");
   assert.equal(cellKind(["Kana", "Kanji"], ["トイレ", ""], 0), null);
+  assert.equal(cellKind(["Word", "Kana"], ["トイレ", "トイレ"], 1), null);
   assert.equal(cellKind(["Kana", "Romaji"], ["ガ", "ga"], 0), null);
+  assert.equal(cellKind(["Word", "Kana"], ["学校", "がっこう"], 0), null);
+  assert.equal(cellText("A &amp; B &#x5B66;"), "A & B 学");
 });
 
-test("furigana: verified pairs only; preserve small kana, voiced marks and long sounds", () => {
-  assert.deepEqual(furiganaPair(["Word", "Kana"], ["学校", "がっこう"]), { column: 0, kanaColumn: 1, word: "学校", reading: "がっこう" });
-  assert.equal(furiganaPair(["Kana", "Kanji"], ["ところ / ばしょ", "所 / 場所"]), null);
-  assert.equal(furiganaPair(["Word", "Kana"], ["学校", "unknown"]), null);
-  assert.equal(furiganaPair(["Word", "Kana"], ["ガ", "が"]), null);
-  assert.equal(furiganaPair(["Kana", "Kanji"], ["がっこう", "学校"]).reading, "がっこう");
-  assert.equal(cellText("A &amp; B &#x5B66;"), "A & B 学");
+test("reading preferences: retain both prior formats and prefer an explicit kana choice", () => {
+  const two = { romaji: false, english: false };
+  assert.deepEqual(parseReadingVisibility(save(two)), { ...two, kana: true });
+  for (const furigana of [true, false]) {
+    assert.deepEqual(parseReadingVisibility(save({ ...two, furigana })), { ...two, kana: furigana });
+  }
+  assert.deepEqual(parseReadingVisibility(save({ ...two, furigana: "obsolete" })), { ...two, kana: true });
+  assert.deepEqual(parseReadingVisibility(save({ ...two, furigana: true, kana: false })), { ...two, kana: false });
+  const storage = fakeStorage(save({ ...two, furigana: false }));
+  const store = createReadingStore({ getStorage: () => storage });
+  assert.deepEqual(store.getSnapshot().show, { ...two, kana: false });
+  store.setShown("english", true);
+  assert.deepEqual(JSON.parse(storage.raw), { version: 1, show: { romaji: false, english: true, kana: false } });
+});
+
+test("reading-only tables become controllable without changing kanji or kana text", () => {
+  const html = '<div class="tw"><table><thead><tr><th>Word</th><th>Kana</th></tr></thead><tbody><tr><td>学校</td><td>がっこう</td></tr></tbody></table></div>';
+  assert.deepEqual(splitReadingContent(html), [{
+    type: "table", table: { headers: ["Word", "Kana"], rows: [["学校", "がっこう"]] },
+  }]);
+  const kanaOnly = html.replace("学校", "トイレ").replace("がっこう", "トイレ");
+  assert.deepEqual(splitReadingContent(kanaOnly), [{ type: "html", html: kanaOnly }]);
+});
+
+test("row labels use visible words and do not disclose hidden kana readings or meanings", () => {
+  assert.equal(rowLabel(["Kana", "Kanji", "Romaji", "English"], ["がっこう", "学校", "gakkou", "school"], "row 1"), "学校");
+  assert.equal(rowLabel(["Word", "Kana", "Romaji", "English"], ["一つ", "ひとつ", "hitotsu", "one piece"], "row 2"), "一つ");
+  assert.equal(rowLabel(["Meaning", "On'yomi", "Kun'yomi"], ["one", "イチ", "ひと"], "row 3"), "row 3");
+  assert.equal(rowLabel(["Kana", "Romaji"], ["ガ", "ga"], "row 4"), "ガ");
 });
 
 test("reading parser: source anchors, cell markup, ordinary tables and unknown layouts survive", () => {
@@ -124,7 +153,7 @@ test("reading parser: source anchors, cell markup, ordinary tables and unknown l
 });
 
 test("all real study content: row counts, header/cell text and anchors are preserved", () => {
-  let processed = 0, rubyPairs = 0;
+  let processed = 0;
   for (const file of ["chapters.json", "kana.json", "kanji.json", "practice.json"]) {
     const pages = JSON.parse(readFileSync(new URL("../src/data/" + file, import.meta.url), "utf8"));
     for (const page of pages) for (const section of page.sections) {
@@ -139,10 +168,8 @@ test("all real study content: row counts, header/cell text and anchors are prese
       assert.deepEqual(reconstructedCells, sourceCells);
       for (const b of blocks) if (b.type === "table") {
         processed++;
-        for (const row of b.table.rows) if (furiganaPair(b.table.headers, row)) rubyPairs++;
       }
     }
   }
   assert.ok(processed > 400, "handles the actual reading/translation tables");
-  assert.ok(rubyPairs > 500, "existing readings provide actual furigana without guessing");
 });

@@ -1,7 +1,8 @@
-import { cellText, cellKind, furiganaPair, type ReadingTableData } from "@/lib/reading-content";
-import { ReadingFurigana, ReadingHint } from "@/components/ReadingPreferences";
+import { cellText, cellKind, rowLabel, type ReadingTableData } from "@/lib/reading-content";
+import { ReadingHint } from "@/components/ReadingPreferences";
 
-// Server-rendered table; only individual hints and ruby readings are interactive.
+// Render Japanese spellings as plain text, with independent reading hints.
+// No readings are generated above kanji.
 export default function ReadingTable({ table }: { table: ReadingTableData }) {
   return (
     <div className="tw">
@@ -9,8 +10,7 @@ export default function ReadingTable({ table }: { table: ReadingTableData }) {
         <thead><tr>{table.headers.map((header, c) => <th key={c} scope="col" dangerouslySetInnerHTML={{ __html: header }} />)}</tr></thead>
         <tbody>
           {table.rows.map((row, r) => {
-            const pair = furiganaPair(table.headers, row);
-            const context = cellText(row[0] ?? "") || "row " + (r + 1);
+            const context = rowLabel(table.headers, row, "row " + (r + 1));
             return (
               <tr key={r}>
                 {row.map((html, c) => {
@@ -18,8 +18,7 @@ export default function ReadingTable({ table }: { table: ReadingTableData }) {
                   const value = <span dangerouslySetInnerHTML={{ __html: html }} />;
                   return (
                     <td key={c}>
-                      {pair?.column === c ? <ReadingFurigana word={pair.word} reading={pair.reading} />
-                        : kind && cellText(html) ? <ReadingHint kind={kind} context={context}>{value}</ReadingHint>
+                      {kind && cellText(html) ? <ReadingHint kind={kind} context={context}>{value}</ReadingHint>
                         : value}
                     </td>
                   );

@@ -1,15 +1,22 @@
 // Reading aids are separate from bookmarks. This module has no React or browser globals.
 export const READING_KEY = "japanese-reviewer:reading-visibility";
-export const HINT_KINDS = ["romaji", "english", "furigana"] as const;
+export const HINT_KINDS = ["romaji", "english", "kana"] as const;
 export type HintKind = (typeof HINT_KINDS)[number];
 export type ReadingVisibility = Record<HintKind, boolean>;
-export const DEFAULT_VISIBILITY: ReadingVisibility = { romaji: true, english: true, furigana: true };
+export const DEFAULT_VISIBILITY: ReadingVisibility = { romaji: true, english: true, kana: true };
 
 export function parseReadingVisibility(raw: string | null): ReadingVisibility {
   try {
     const value = raw === null ? null : JSON.parse(raw);
-    if (value?.version === 1 && HINT_KINDS.every((kind) => typeof value.show?.[kind] === "boolean")) {
-      return { romaji: value.show.romaji, english: value.show.english, furigana: value.show.furigana };
+    if (value?.version === 1 && ["romaji", "english"].every((kind) => typeof value.show?.[kind] === "boolean")) {
+      // Keep choices from both older formats: the original furigana setting
+      // controlled kana readings; the short-lived two-toggle format omitted it.
+      return {
+        romaji: value.show.romaji,
+        english: value.show.english,
+        kana: typeof value.show.kana === "boolean" ? value.show.kana
+          : typeof value.show.furigana === "boolean" ? value.show.furigana : true,
+      };
     }
   } catch { /* An invalid saved preference starts with all aids shown. */ }
   return { ...DEFAULT_VISIBILITY };

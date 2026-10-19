@@ -9,7 +9,7 @@ import {
 const store = createReadingStore({ getStorage: () => window.localStorage, getEvents: () => window });
 const serverSnapshot = () => READING_SERVER_SNAPSHOT;
 const ReadingContext = createContext<ReadingSnapshot | null>(null);
-const LABELS: Record<HintKind, string> = { romaji: "Romaji", english: "English", furigana: "Furigana / readings" };
+const LABELS: Record<HintKind, string> = { romaji: "Romaji", english: "English", kana: "Kana readings" };
 
 export function ReadingProvider({ children }: { children: ReactNode }) {
   const snapshot = useSyncExternalStore(store.subscribe, store.getSnapshot, serverSnapshot);
@@ -42,7 +42,7 @@ export function ReadingControls() {
           <label key={kind} className="inline-flex min-h-11 cursor-pointer items-center gap-2 text-sm text-foreground">
             <input
               type="checkbox"
-              aria-label={"Show " + kind}
+              aria-label={"Show " + (kind === "kana" ? "kana readings" : kind)}
               checked={snapshot.show[kind]}
               onChange={(event) => store.setShown(kind, event.target.checked)}
               className="size-4 shrink-0 accent-accent"
@@ -69,7 +69,7 @@ const REVEAL_BUTTON = "z-10 inline-flex min-h-9 items-center rounded-control bor
 export function ReadingHint({ kind, context, children }: { kind: HintKind; context: string; children: ReactNode }) {
   const { ready, hiddenByPreference, visible, toggle } = useReveal(kind);
   const id = useId();
-  const label = kind === "furigana" ? "reading" : LABELS[kind];
+  const label = kind === "kana" ? "kana reading" : LABELS[kind];
   return (
     <span data-reading-hint={kind} className="relative inline-block min-h-9 min-w-28 max-w-full align-middle">
       {!ready && <span className="sr-only">Loading reading preferences</span>}
@@ -79,27 +79,6 @@ export function ReadingHint({ kind, context, children }: { kind: HintKind; conte
           aria-label={(visible ? "Hide " : "Reveal ") + label + " for " + context}
           className={REVEAL_BUTTON + " px-2.5" + (visible ? " relative mt-1" : " absolute left-0 top-0")}>
           {visible ? "Hide " : "Reveal "}{label}
-        </button>
-      )}
-    </span>
-  );
-}
-
-// Readings come from a verified word/kana pair, never from guessed pronunciation.
-export function ReadingFurigana({ word, reading }: { word: string; reading: string }) {
-  const { ready, hiddenByPreference, visible, toggle } = useReveal("furigana");
-  const id = useId();
-  return (
-    <span data-reading-word="" className="relative inline-block min-h-9 pr-10 align-middle">
-      <ruby lang="ja" className="reading-ruby">
-        {word}<rt id={id} aria-hidden={!visible} style={{ visibility: visible ? "visible" : "hidden" }}>{reading}</rt>
-      </ruby>
-      {ready && hiddenByPreference && (
-        <button type="button" onClick={toggle} aria-expanded={visible} aria-controls={id}
-          aria-label={(visible ? "Hide reading for " : "Reveal reading for ") + word}
-          title={(visible ? "Hide reading for " : "Reveal reading for ") + word}
-          className={REVEAL_BUTTON + " absolute right-0 top-0 min-w-9 justify-center px-1"}>
-          <span aria-hidden="true">{visible ? "−" : "あ"}</span>
         </button>
       )}
     </span>
