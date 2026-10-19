@@ -96,9 +96,8 @@
   }
 }
 
-/* Lesson and chapter content comes from the data files as HTML. Only the
-   look changes here: the HTML, its heading ids and the .tw table wrappers
-   stay exactly as they are. */
+/* Lesson content uses the existing source HTML and heading IDs.
+   ReadingTable adds language styling and responsive example rows. */
 .lesson {
   min-width: 0;
   overflow-wrap: anywhere;
@@ -152,3 +151,91 @@
 /* Raw HTML chunks retain their original block layout around React tables. */
 .reading-html { display: contents; }
 .lesson > .reading-html:first-child > :first-child { margin-top: 0; }
+
+/* Japanese spellings lead; readings and English provide quieter support.
+   The shared Japanese class also styles sentence rows in search results. */
+.reading-japanese {
+  color: var(--foreground);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.9;
+}
+.reading-kana {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.reading-supporting {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+.reading-examples .reading-japanese {
+  font-size: 1.375rem;
+}
+.lesson .reading-examples td {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.reading-cell-label { display: none; }
+
+@media (min-width: 640px) {
+  .reading-examples .reading-japanese { font-size: 1.5rem; }
+}
+
+/* One row becomes one stacked example on phones. The same DOM and reading
+   hints remain mounted, so resizing never creates a second set of controls. */
+@media (max-width: 639px) {
+  .lesson .tw.reading-examples { overflow-x: visible; }
+  .lesson .reading-examples table,
+  .lesson .reading-examples thead,
+  .lesson .reading-examples tbody,
+  .lesson .reading-examples tr,
+  .lesson .reading-examples td {
+    display: block;
+    min-width: 0;
+  }
+  .lesson .reading-examples thead tr { position: relative; }
+  /* Keep column headers available to assistive technology. */
+  .lesson .reading-examples .reading-column-heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .lesson .reading-examples .reading-actions {
+    display: block;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+  }
+  .lesson .reading-examples tbody tr {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .lesson .reading-examples tbody tr:last-child { border-bottom: 0; }
+  .lesson .reading-examples tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--foreground) 2.5%, transparent);
+  }
+  .lesson .reading-examples td {
+    padding: 0;
+    border: 0;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .lesson .reading-examples td + td { margin-top: 0.75rem; }
+  .lesson .reading-examples tbody tr:nth-child(even) td { background: transparent; }
+  .lesson .reading-examples .reading-cell-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--subtle);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+}

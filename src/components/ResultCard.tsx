@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { resultHref, type SearchEntry, type SearchPage } from "@/lib/search";
-import { rowLabel } from "@/lib/reading-content";
+import { isJapaneseColumn, rowLabel } from "@/lib/reading-content";
 import CategoryTag from "@/components/CategoryTag";
 
 type Props = { entry: SearchEntry; pages: SearchPage[]; header?: string[]; showCategory?: boolean; occurrences?: SearchEntry[] };
@@ -81,10 +81,11 @@ export default function ResultCard({ entry, pages, header, showCategory = false,
         <dl className="mt-2 grid grid-cols-[auto_minmax(0,1fr)] gap-x-4 gap-y-1">
           {values.map((value, i) => {
             if (!value.trim()) return null;
+            const japanese = isJapaneseColumn(header[i] ?? "");
             return (
               <Fragment key={i}>
                 <dt className="text-sm text-subtle">{header[i]}</dt>
-                <dd className="min-w-0 break-words">
+                <dd lang={japanese ? "ja" : undefined} className={"min-w-0 break-words " + (japanese ? "reading-japanese" : "text-sm text-muted")}>
                   {value}
                 </dd>
               </Fragment>

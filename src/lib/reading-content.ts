@@ -13,6 +13,18 @@ export function cellText(html: string): string {
     .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&").trim();
 }
 
+// Only known language columns receive the larger Japanese typography.
+export function isJapaneseColumn(header: string): boolean {
+  return ["japanese", "word", "kanji", "kana", "hiragana", "katakana", "example word"].includes(cellText(header).toLowerCase());
+}
+
+// Reference charts keep their column relationships; sentence examples can stack.
+export function isExampleTable(table: ReadingTableData): boolean {
+  const labels = table.headers.map((header) => cellText(header).toLowerCase());
+  return JSON.stringify(labels) === '["japanese","romaji","english"]' ||
+    JSON.stringify(labels) === '["speaker","japanese","romaji","english"]';
+}
+
 export function columnKind(header: string): HintKind | null {
   const label = cellText(header).toLowerCase();
   if (label === "romaji") return "romaji";

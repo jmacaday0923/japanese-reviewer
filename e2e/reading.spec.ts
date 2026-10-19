@@ -194,3 +194,78 @@ test("kanji search readings stay visible when the study kana toggle is off", asy
   await expect(page.locator("#search").getByRole("checkbox")).toHaveCount(0);
   expect(await page.evaluate((storageKey) => localStorage.getItem(storageKey), key)).toBe(before);
 });
+
+test("Japanese examples lead supporting English in lessons and search", async ({ page }) => {
+  await page.goto("/chapters/1");
+  const table = visibleMain(page).getByRole("table", { name: "Japanese examples", exact: true }).first();
+  const row = table.locator("tbody tr").first();
+  const japanese = row.locator(".reading-japanese");
+  const english = row.locator("[data-reading-hint=english] .reading-supporting");
+  await expect(english).toBeVisible();
+  await expect(japanese).toHaveAttribute("lang", "ja");
+  expect(await japanese.evaluate(el => parseFloat(getComputedStyle(el).fontSize)))
+    .toBeGreaterThan(await english.evaluate(el => parseFloat(getComputedStyle(el).fontSize)));
+  expect(await table.evaluate(el => getComputedStyle(el).display)).toBe("table");
+  const japaneseCell = await row.locator("td").nth(0).boundingBox();
+  const englishCell = await row.locator("td").nth(2).boundingBox();
+  expect(japaneseCell!.y).toBe(englishCell!.y);
+
+  await page.goto("/?q=watashi%20wa%20gakusei%20desu");
+  const result = search(page).results.filter({ has: page.locator(".reading-japanese") }).first();
+  await expect(result).toBeVisible();
+  const resultJapanese = result.locator(".reading-japanese").first();
+  expect(await resultJapanese.evaluate(el => parseFloat(getComputedStyle(el).fontSize)))
+    .toBeGreaterThan(await result.locator("dd").last().evaluate(el => parseFloat(getComputedStyle(el).fontSize)));
+  await expect(result.locator("[data-reading-hint]")).toHaveCount(0);
+});
+
+for (const width of [320, 375]) {
+  test(width + "px: stacked examples keep hints and flashcard actions through a resize", async ({ page }, testInfo) => {
+    await page.setViewportSize({ width, height: 800 });
+    await page.goto("/chapters/1");
+    const frame = visibleMain(page).locator(".reading-examples").first();
+    const table = frame.getByRole("table", { name: "Japanese examples", exact: true });
+    const row = table.locator("tbody tr").first();
+    const japanese = row.locator(".reading-japanese");
+    const englishHint = row.locator("[data-reading-hint=english]");
+    const english = content(englishHint);
+    await expect(english).toBeVisible();
+    expect(await frame.evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);
+    expect(await row.evaluate(el => getComputedStyle(el).display)).toBe("block");
+    const japaneseCell = await row.locator("td").nth(0).boundingBox();
+    const englishCell = await row.locator("td").nth(2).boundingBox();
+    expect(englishCell!.y).toBeGreaterThanOrEqual(japaneseCell!.y + japaneseCell!.height);
+    expect(await japanese.evaluate(el => parseFloat(getComputedStyle(el).fontSize)))
+      .toBeGreaterThan(await row.locator(".reading-supporting").last().evaluate(el => parseFloat(getComputedStyle(el).fontSize)));
+    await expect(table.getByRole("columnheader", { name: "Japanese", exact: true })).toHaveCount(1);
+    await row.screenshot({ path: testInfo.outputPath("stacked-example.png") });
+
+    await aid(page, "english").uncheck();
+    await expect(english).toBeHidden();
+    const reveal = englishHint.getByRole("button");
+    await reveal.focus();
+    await page.keyboard.press("Enter");
+    await expect(english).toBeVisible();
+    await row.getByRole("button", { name: /^Add to flashcards:/ }).click();
+    await expect(row.getByRole("button", { name: /^Saved to flashcards:/ })).toBeDisabled();
+    await table.locator("thead").getByRole("button", { name: /^Add all/ }).click();
+    await expect(table.locator("thead").getByRole("button", { name: /^All \d+ saved$/ })).toBeDisabled();
+
+    await page.setViewportSize({ width: 1440, height: 900 });
+    expect(await table.evaluate(el => getComputedStyle(el).display)).toBe("table");
+    await expect(english).toBeVisible();
+    await expect(row.getByRole("button", { name: /^Saved to flashcards:/ })).toBeDisabled();
+    await expect(table.locator("[data-reading-hint=english]")).toHaveCount(await table.locator("tbody tr").count());
+
+    await page.setViewportSize({ width, height: 800 });
+    await page.goto("/chapters/3");
+    const dialogue = visibleMain(page).locator(".reading-examples table").filter({
+      has: page.getByRole("columnheader", { name: "Speaker", exact: true }),
+    }).first();
+    const dialogueRow = dialogue.locator("tbody tr").first();
+    await expect(dialogueRow.locator(".reading-cell-label").first()).toHaveText("Speaker");
+    await expect(dialogueRow.locator(".reading-cell-label").first()).toBeVisible();
+    await expect(dialogueRow.locator(".reading-japanese")).toBeVisible();
+    expect(await dialogue.evaluate(el => el.scrollWidth <= el.clientWidth + 1)).toBe(true);
+  });
+}
