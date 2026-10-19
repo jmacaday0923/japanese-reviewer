@@ -3,6 +3,7 @@ import { countLinks, type TocNode } from "@/lib/toc";
 import Breadcrumbs, { type Crumb } from "@/components/Breadcrumbs";
 import TableOfContents from "@/components/TableOfContents";
 import BookmarkControls from "@/components/BookmarkControls";
+import { ReadingControls } from "@/components/ReadingPreferences";
 import type { StudyPageKind } from "@/lib/study";
 
 // The shared frame for every reader page (chapters, kana, kanji, practice):
@@ -43,6 +44,7 @@ export default function ReaderLayout({ page, breadcrumbs, eyebrow, title, meta, 
         {meta && <p className="mt-2 text-sm text-subtle">{meta}</p>}
         {intro && <p className="mt-4 text-[1.0625rem] leading-relaxed text-muted">{intro}</p>}
         <BookmarkControls kind={page.kind} id={page.id} outline={outline} />
+        <ReadingControls />
 
         {hasOutline && (
           // Phones, tablets and narrow desktops: a compact outline you open when needed

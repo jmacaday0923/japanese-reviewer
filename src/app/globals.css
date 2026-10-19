@@ -148,3 +148,9 @@
   white-space: nowrap;
   border-bottom-color: var(--border);
 }
+
+/* Raw HTML chunks retain their original block layout around React tables. */
+.reading-html { display: contents; }
+.reading-ruby { ruby-position: over; ruby-align: center; }
+.reading-ruby rt { font-size: 0.65em; font-weight: 400; color: var(--muted); }
+.lesson > .reading-html:first-child > :first-child { margin-top: 0; }
