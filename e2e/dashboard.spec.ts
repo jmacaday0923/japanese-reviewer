@@ -23,7 +23,7 @@ const top = (page: Page, selector: string) =>
 
 test("dashboard sections come in order", async ({ page }) => {
   await page.goto("/");
-  const order = ["h1", "#overview-heading + dl", "#bookmarks", "#search", "#chapters", "#kana-kanji", "#practice"];
+  const order = ["h1", "#overview-heading + dl", "#bookmarks", "#search", "#chapters", "#kana-kanji", "#practice", "#listening"];
   const tops = [];
   for (const selector of order) tops.push(await top(page, selector));
   expect(tops).toEqual([...tops].sort((a, b) => a - b));
@@ -73,7 +73,7 @@ test("sidebar: grouped links, current section, and a working Bookmarks link", as
   const sidebar = page.locator("aside").first();
   await expect(sidebar.getByRole("link", { name: "Japanese Lesson Reviewer" })).toHaveAttribute("href", "/");
   const study = sidebar.getByRole("list", { name: "Study" });
-  await expect(study.getByRole("link")).toHaveText(["Home", "Chapters", "Kana", "Kanji", "Practice"]);
+  await expect(study.getByRole("link")).toHaveText(["Home", "Chapters", "Kana", "Kanji", "Practice", "Listening"]);
   await expect(study.getByRole("link", { name: "Chapters" })).toHaveAttribute("aria-current", "true");
   await expect(page.locator("body > header")).toContainText("Chapters");
 

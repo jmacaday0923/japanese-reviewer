@@ -1,0 +1,739 @@
+[
+  {
+    "id": "jlpt-n5-2025-07",
+    "revision": 1,
+    "title": "N5 listening · July 2025",
+    "description": "24 listening questions in four parts, using your supplied July 2025 recordings.",
+    "level": "N5",
+    "answerKeyNotice": "Generated practice answer key derived from the supplied recordings and question images. This is not an official JLPT answer key or scaled score.",
+    "sourceUrl": "https://drive.google.com/file/d/1r5a99ZoWErhzzn9UrNDAapR1XOFX-MTg/view",
+    "sections": [
+      {
+        "id": "task-based-comprehension",
+        "number": 1,
+        "title": "Task-based comprehension",
+        "titleJa": "課題理解",
+        "instructionsJa": "はじめに質問を聞いてください。それから話を聞いて、１から４の中からいちばんよいものを一つ選んでください。",
+        "audioSrc": "/audio/listening/jlpt-n5-2025-07/task-based-comprehension.mp3",
+        "audioDurationSeconds": 657.502041,
+        "questions": [
+          {
+            "id": "task-based-comprehension-1",
+            "number": 1,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              },
+              {
+                "id": "4",
+                "text": "4"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「大きいの」「鳥の絵の」と言っています。大きくて鳥の絵があるカップは１です。",
+            "explanationEn": "The request specifies a large cup with a bird picture. Option 1 has both features.",
+            "evidenceJa": "大きいのです。あ、鳥の絵のです。",
+            "evidenceStartSeconds": 237,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/task-1.png",
+              "alt": "Four numbered cups: 1 large with a bird, 2 large with a car, 3 small with a bird, 4 small with a car.",
+              "width": 1390,
+              "height": 1080
+            }
+          },
+          {
+            "id": "task-based-comprehension-2",
+            "number": 2,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              },
+              {
+                "id": "4",
+                "text": "4"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "丸いケーキの上に、いちごを２個置きます。丸い形と２個のいちごがあるのは４です。",
+            "explanationEn": "Choose the round cake with two strawberries, rather than a triangular slice or a cake with one strawberry.",
+            "evidenceJa": "ケーキの上にいちごを２個置いてください。丸いケーキです。",
+            "evidenceStartSeconds": 286,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/task-2.png",
+              "alt": "Four cakes: 1 triangular with one strawberry, 2 triangular with two, 3 round with one, 4 round with two.",
+              "width": 1400,
+              "height": 1090
+            }
+          },
+          {
+            "id": "task-based-comprehension-3",
+            "number": 3,
+            "choices": [
+              {
+                "id": "1",
+                "text": "ア・イ"
+              },
+              {
+                "id": "2",
+                "text": "ア・ウ"
+              },
+              {
+                "id": "3",
+                "text": "イ・ウ"
+              },
+              {
+                "id": "4",
+                "text": "ア・イ・ウ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "エアコンと電気をつけます。お茶はいりません。アとイの組み合わせは１です。",
+            "explanationEn": "She should turn on the lights and air conditioner. Tea is explicitly unnecessary, so choose ア and イ.",
+            "evidenceJa": "隣の部屋のエアコンをつけてください。それから電気もお願いします。",
+            "evidenceStartSeconds": 340,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/task-3.png",
+              "alt": "Three actions: ア switches on a ceiling light, イ operates an air conditioner, ウ serves tea.",
+              "width": 1375,
+              "height": 1950
+            }
+          },
+          {
+            "id": "task-based-comprehension-4",
+            "number": 4,
+            "choices": [
+              {
+                "id": "1",
+                "text": "9:00　ひがしぐち"
+              },
+              {
+                "id": "2",
+                "text": "9:00　にしぐち"
+              },
+              {
+                "id": "3",
+                "text": "9:30　ひがしぐち"
+              },
+              {
+                "id": "4",
+                "text": "9:30　にしぐち"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "時間は９時半のままで、場所が東口から西口に変わります。",
+            "explanationEn": "The meeting time remains 9:30. The entrance changes from east to west because that is where the bus stop is.",
+            "evidenceJa": "すみません、西口に来てください。じゃあ明日９時半に会いましょう。",
+            "evidenceStartSeconds": 407
+          },
+          {
+            "id": "task-based-comprehension-5",
+            "number": 5,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              },
+              {
+                "id": "4",
+                "text": "4"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "男の人は野菜を切ります。野菜はもう洗ってあります。卵は女の人が準備します。",
+            "explanationEn": "The man should cut the vegetables. They have already been washed, and the woman will handle the eggs.",
+            "evidenceJa": "野菜を切ってください。卵は私がやりますね。",
+            "evidenceStartSeconds": 480,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/task-5.webp",
+              "alt": "Four cooking actions: 1 adding salt to a pot of eggs, 2 taking a tomato from the refrigerator, 3 cutting a tomato, 4 washing a tomato.",
+              "width": 1448,
+              "height": 1086
+            }
+          },
+          {
+            "id": "task-based-comprehension-6",
+            "number": 6,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              },
+              {
+                "id": "4",
+                "text": "4"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "郵便局は、ほんやの左にあるレストランと、ぎんこうの間です。地図では２です。",
+            "explanationEn": "The post office is between the bank and the restaurant to the left of the bookshop. That gap is location 2.",
+            "evidenceJa": "レストランと銀行の間です。",
+            "evidenceStartSeconds": 548,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/task-6.svg",
+              "alt": "A street map, left to right: location 1, bank, location 2, restaurant, bookshop, location 3, restaurant, location 4.",
+              "width": 1400,
+              "height": 900
+            }
+          },
+          {
+            "id": "task-based-comprehension-7",
+            "number": 7,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              },
+              {
+                "id": "4",
+                "text": "4"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "朝夕は寒いので上着が必要です。飲み物も持って行きます。昼ごはんのおにぎりは山で買います。",
+            "explanationEn": "She needs a jacket and a drink. Lunch will be bought at the rice-ball shop on the mountain, so she does not bring rice balls.",
+            "evidenceJa": "上着を忘れないでくださいね。自分で持って行ってください。",
+            "evidenceStartSeconds": 612,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/task-7.webp",
+              "alt": "Four packing choices: 1 jacket and drink bottle, 2 jacket and rice balls, 3 drink bottle and rice balls, 4 jacket, drink bottle and rice balls.",
+              "width": 1536,
+              "height": 1024
+            }
+          }
+        ]
+      },
+      {
+        "id": "comprehension-of-key-points",
+        "number": 2,
+        "title": "Comprehension of key points",
+        "titleJa": "ポイント理解",
+        "instructionsJa": "はじめに質問を聞いてください。それから話を聞いて、１から４の中からいちばんよいものを一つ選んでください。",
+        "audioSrc": "/audio/listening/jlpt-n5-2025-07/comprehension-of-key-points.mp3",
+        "audioDurationSeconds": 567.405714,
+        "questions": [
+          {
+            "id": "comprehension-of-key-points-1",
+            "number": 1,
+            "choices": [
+              {
+                "id": "1",
+                "text": "おとうさん"
+              },
+              {
+                "id": "2",
+                "text": "おかあさん"
+              },
+              {
+                "id": "3",
+                "text": "おとうと"
+              },
+              {
+                "id": "4",
+                "text": "いもうと"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "女の人は、去年の誕生日に弟から手袋をもらいました。",
+            "explanationEn": "Her younger brother made the gloves and gave them to her for her birthday. Her parents own gloves he made too, but they were not the givers.",
+            "evidenceJa": "去年の誕生日に弟にもらいました。",
+            "evidenceStartSeconds": 158
+          },
+          {
+            "id": "comprehension-of-key-points-2",
+            "number": 2,
+            "choices": [
+              {
+                "id": "1",
+                "text": "ピザ"
+              },
+              {
+                "id": "2",
+                "text": "スパゲティ"
+              },
+              {
+                "id": "3",
+                "text": "ラーメン"
+              },
+              {
+                "id": "4",
+                "text": "カレー"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "ピザは昼に食べたので、夜はカレーの店へ行くことにします。",
+            "explanationEn": "They decide on curry. Pizza was already eaten at lunch; spaghetti and ramen are mentioned but not chosen.",
+            "evidenceJa": "近くにおいしいカレーの店がありますよ。辛いもの大好きです。行きましょう。",
+            "evidenceStartSeconds": 239
+          },
+          {
+            "id": "comprehension-of-key-points-3",
+            "number": 3,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              },
+              {
+                "id": "4",
+                "text": "4"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "妹は髪が短くて、めがねをかけていません。この２つの特徴に合うのは１です。",
+            "explanationEn": "His younger sister has short hair and does not wear glasses. Girl 1 matches both details.",
+            "evidenceJa": "髪が短いです。いえ、かけていません。",
+            "evidenceStartSeconds": 300,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/key-points-3.webp",
+              "alt": "Four numbered students: 1 short hair without glasses, 2 long hair with glasses, 3 long hair without glasses, 4 short hair with glasses.",
+              "width": 1448,
+              "height": 1086
+            }
+          },
+          {
+            "id": "comprehension-of-key-points-4",
+            "number": 4,
+            "choices": [
+              {
+                "id": "1",
+                "text": "きのう"
+              },
+              {
+                "id": "2",
+                "text": "おととい"
+              },
+              {
+                "id": "3",
+                "text": "いっかげつまえ"
+              },
+              {
+                "id": "4",
+                "text": "いちねんまえ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "学校に入ったのは昨日ですが、日本に来たのはおとといです。",
+            "explanationEn": "He joined the school yesterday, but arrived in Japan the day before yesterday. The question asks about arrival in Japan.",
+            "evidenceJa": "おととい初めて日本に来ました。",
+            "evidenceStartSeconds": 354
+          },
+          {
+            "id": "comprehension-of-key-points-5",
+            "number": 5,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              },
+              {
+                "id": "4",
+                "text": "4"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "土曜日の午後、２人は海を見に行きます。バスケットボールは午前中の予定です。",
+            "explanationEn": "They agree to go to the sea together on Saturday afternoon. Basketball is earlier that day; studying is on Sunday, and the cinema suggestion is replaced.",
+            "evidenceJa": "私は海を見に行きたい。あ、いいね。僕も行きたい。",
+            "evidenceStartSeconds": 429,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/key-points-5.webp",
+              "alt": "Four shared activities: 1 studying, 2 playing basketball, 3 watching a film in a cinema, 4 walking by the sea.",
+              "width": 1448,
+              "height": 1086
+            }
+          },
+          {
+            "id": "comprehension-of-key-points-6",
+            "number": 6,
+            "choices": [
+              {
+                "id": "1",
+                "text": "げつようび"
+              },
+              {
+                "id": "2",
+                "text": "かようび"
+              },
+              {
+                "id": "3",
+                "text": "すいようび"
+              },
+              {
+                "id": "4",
+                "text": "もくようび"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "最初は火曜日の言葉のテストです。水曜日は作文、木曜日は漢字です。",
+            "explanationEn": "The next test is the vocabulary test on Tuesday. Composition follows on Wednesday and kanji on Thursday; Monday is a proposed study day.",
+            "evidenceJa": "来週の火曜日に言葉のテストがありますよ。",
+            "evidenceStartSeconds": 488
+          }
+        ]
+      },
+      {
+        "id": "verbal-expressions",
+        "number": 3,
+        "title": "Verbal expressions",
+        "titleJa": "発話表現",
+        "instructionsJa": "絵を見ながら質問を聞いてください。矢印の人は何と言いますか。１から３の中から一つ選んでください。",
+        "audioSrc": "/audio/listening/jlpt-n5-2025-07/verbal-expressions.mp3",
+        "audioDurationSeconds": 285.570612,
+        "questions": [
+          {
+            "id": "verbal-expressions-1",
+            "number": 1,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "外で仕事をして戻った人に、会社にいる人が「お帰りなさい」と言います。",
+            "explanationEn": "The arrow points to the worker welcoming a colleague back from outside work. She says お帰りなさい. ただいま is spoken by the returning person.",
+            "evidenceJa": "会社の人が外で仕事をして会社に帰りました。",
+            "evidenceStartSeconds": 108,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/verbal-1.webp",
+              "alt": "An arrow points to a seated office worker welcoming a colleague who is returning through the doorway with a briefcase.",
+              "width": 1448,
+              "height": 1086
+            }
+          },
+          {
+            "id": "verbal-expressions-2",
+            "number": 2,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "先生の部屋に入るときは「失礼します」と言います。",
+            "explanationEn": "失礼します is the polite expression used when entering a teacher’s room.",
+            "evidenceJa": "先生の部屋に入ります。",
+            "evidenceStartSeconds": 140,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/verbal-2.webp",
+              "alt": "An arrow points to a student with a backpack at the doorway of a teacher’s office.",
+              "width": 1448,
+              "height": 1086
+            }
+          },
+          {
+            "id": "verbal-expressions-3",
+            "number": 3,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "風が強いので、窓を開けないでほしいと伝えます。「開けないでください」が合います。",
+            "explanationEn": "The wind is strong, so she asks her friend not to open the window. Option 2 offers to open it, and option 3 asks not to close it.",
+            "evidenceJa": "風が強いです。あ、窓を開けないでください。",
+            "evidenceStartSeconds": 179,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/verbal-3.webp",
+              "alt": "An arrow points to a seated student whose papers are blowing about while a classmate opens a window.",
+              "width": 1448,
+              "height": 1086
+            }
+          },
+          {
+            "id": "verbal-expressions-4",
+            "number": 4,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "映画館で席に座ってもよいか聞くときは「ここ、いいですか」と言います。",
+            "explanationEn": "He wants permission to sit in an empty cinema seat. ここ、いいですか asks whether the seat is available; ここ、どうぞ offers someone else a seat.",
+            "evidenceJa": "映画館の中です。座りたいです。",
+            "evidenceStartSeconds": 218,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/verbal-4.webp",
+              "alt": "An arrow points to a man in a cinema asking two seated women about an empty seat beside them.",
+              "width": 1448,
+              "height": 1086
+            }
+          },
+          {
+            "id": "verbal-expressions-5",
+            "number": 5,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "写真を撮る人が、撮る前に「はい、撮ります」と声をかけます。",
+            "explanationEn": "The photographer announces that she is about to take the picture. 写真を撮ってください asks someone else to take one; 写真を見ましょう suggests looking at pictures.",
+            "evidenceJa": "撮る前に何と言いますか。はい、撮ります。",
+            "evidenceStartSeconds": 259,
+            "image": {
+              "src": "/images/listening/jlpt-n5-2025-07/verbal-5.webp",
+              "alt": "An arrow points to a woman holding a camera, ready to photograph five friends outdoors.",
+              "width": 1448,
+              "height": 1086
+            }
+          }
+        ]
+      },
+      {
+        "id": "quick-response",
+        "number": 4,
+        "title": "Quick response",
+        "titleJa": "即時応答",
+        "instructionsJa": "文を聞いて、１から３の中からいちばんよいものを一つ選んでください。",
+        "audioSrc": "/audio/listening/jlpt-n5-2025-07/quick-response.mp3",
+        "audioDurationSeconds": 286.093061,
+        "questions": [
+          {
+            "id": "quick-response-1",
+            "number": 1,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「何で来ますか」は交通手段を聞いています。「自転車で来ます」が答えです。",
+            "explanationEn": "The question asks how the person gets to school. Option 3 gives a means of transport; the other options give company and arrival time.",
+            "evidenceJa": "学校まで何で来ますか。自転車で来ます。",
+            "evidenceStartSeconds": 88
+          },
+          {
+            "id": "quick-response-2",
+            "number": 2,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "宿題がもう終わったか聞いています。「まだ」と答える２が合います。",
+            "explanationEn": "The question asks whether the composition homework is finished. Option 2 says it is not finished yet; the other options do not answer that question.",
+            "evidenceJa": "作文の宿題はもう終わった。まだ。",
+            "evidenceStartSeconds": 115
+          },
+          {
+            "id": "quick-response-3",
+            "number": 3,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "暇なときにすることを聞いています。本や雑誌を読むという答えが合います。",
+            "explanationEn": "The question asks what Kimura does in free time. Reading books and magazines answers the activity question; the other replies describe availability or days.",
+            "evidenceJa": "暇なとき何をしている。本や雑誌を読んでいるよ。",
+            "evidenceStartSeconds": 145
+          },
+          {
+            "id": "quick-response-4",
+            "number": 4,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "日本で旅行した場所を聞いています。「先週京都へ行ったよ」が答えです。",
+            "explanationEn": "The question asks about a trip already taken in Japan. Option 1 identifies a past trip to Kyoto.",
+            "evidenceJa": "日本でどこか旅行した。先週京都へ行ったよ。",
+            "evidenceStartSeconds": 175
+          },
+          {
+            "id": "quick-response-5",
+            "number": 5,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「何年ぐらい」は勉強した期間を聞いています。「４年間習いました」が合います。",
+            "explanationEn": "The question asks how many years the listener has studied Japanese. Option 2 supplies the four-year duration.",
+            "evidenceJa": "何年ぐらい日本語を勉強しましたか。学校で４年間習いました。",
+            "evidenceStartSeconds": 205
+          },
+          {
+            "id": "quick-response-6",
+            "number": 6,
+            "choices": [
+              {
+                "id": "1",
+                "text": "1"
+              },
+              {
+                "id": "2",
+                "text": "2"
+              },
+              {
+                "id": "3",
+                "text": "3"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "普段の昼ごはんをどう用意するか聞いています。自分で作って持って来るという答えが合います。",
+            "explanationEn": "The question asks what the person usually does for lunch. Preparing food and bringing it answers that routine; today’s menu and the cafeteria’s location do not.",
+            "evidenceJa": "昼ごはんはいつもどうしていますか。自分で作って持って来ています。",
+            "evidenceStartSeconds": 248
+          }
+        ]
+      }
+    ]
+  }
+]

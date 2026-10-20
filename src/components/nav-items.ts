@@ -18,6 +18,7 @@ export const NAV_GROUPS: { label: string; items: NavItem[] }[] = [
       { href: "/#kana", label: "Kana", icon: "kana", segment: "kana" },
       { href: "/#kanji", label: "Kanji", icon: "kanji", segment: "kanji" },
       { href: "/#practice", label: "Practice", icon: "practice", segment: "practice" },
+      { href: "/listening", label: "Listening", icon: "headphones", segment: "listening" },
     ],
   },
   {

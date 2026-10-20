@@ -1,0 +1,214 @@
+{
+  "examId": "jlpt-n5-2025-07",
+  "questionCounts": [
+    7,
+    6,
+    5,
+    6
+  ],
+  "questionCount": 24,
+  "answerKeyType": "generated-practice-key",
+  "answerKeyBasis": "Local speech-to-text transcripts of the user-supplied audio, interpreted and compared with the supplied choices and pictures. No official answer key was supplied.",
+  "answerKey": [
+    {
+      "part": 1,
+      "answers": [
+        "1",
+        "4",
+        "1",
+        "4",
+        "3",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "part": 2,
+      "answers": [
+        "3",
+        "4",
+        "1",
+        "2",
+        "4",
+        "2"
+      ]
+    },
+    {
+      "part": 3,
+      "answers": [
+        "2",
+        "3",
+        "1",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "part": 4,
+      "answers": [
+        "3",
+        "2",
+        "1",
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  ],
+  "screenshot": {
+    "url": "https://drive.google.com/file/d/1r5a99ZoWErhzzn9UrNDAapR1XOFX-MTg/view",
+    "sha256": "d3fe4575f2e0462c83cd81a863a08ac76196c6d3d8cae7bae79dcd796a7fde53",
+    "width": 3420,
+    "height": 33760
+  },
+  "audio": [
+    {
+      "sectionId": "task-based-comprehension",
+      "sourceFilename": "audio-jlpt-n5-past-test-july-2025-real-exam-task-based-comprehension.mp3",
+      "path": "public/audio/listening/jlpt-n5-2025-07/task-based-comprehension.mp3",
+      "durationSeconds": 657.502041,
+      "bytes": 6410902,
+      "sha256": "97df40647a9c4d594863d5e1fd289d1fd26666a6c9a5b59233b4ecd6ad64e60b"
+    },
+    {
+      "sectionId": "comprehension-of-key-points",
+      "sourceFilename": "audio-jlpt-n5-past-test-july-2025-real-exam-comprehension-of-key-points.mp3",
+      "path": "public/audio/listening/jlpt-n5-2025-07/comprehension-of-key-points.mp3",
+      "durationSeconds": 567.405714,
+      "bytes": 5974736,
+      "sha256": "beb35f9e80165fe0854b8c47a251d558a4eee5aa092c5d06db2552af11c5ab8c"
+    },
+    {
+      "sectionId": "verbal-expressions",
+      "sourceFilename": "audio-jlpt-n5-past-test-july-2025-real-exam-verbal-expressions.mp3",
+      "path": "public/audio/listening/jlpt-n5-2025-07/verbal-expressions.mp3",
+      "durationSeconds": 285.570612,
+      "bytes": 2369818,
+      "sha256": "a07fbbdbd347183b1c26687f9d2be7d9afb5bcf24c03111214561f6caad49553"
+    },
+    {
+      "sectionId": "quick-response",
+      "sourceFilename": "audio-jlpt-n5-past-test-july-2025-real-exam-quick-response.mp3",
+      "path": "public/audio/listening/jlpt-n5-2025-07/quick-response.mp3",
+      "durationSeconds": 286.093061,
+      "bytes": 2399333,
+      "sha256": "dea3326e660e598b7e84cb590083210d4c9ae21e5df8a2ca11052e58f0c09885"
+    }
+  ],
+  "illustrations": [
+    {
+      "questionId": "task-based-comprehension-1",
+      "path": "public/images/listening/jlpt-n5-2025-07/task-1.png",
+      "method": "source-image-extraction",
+      "sha256": "57057141b0d3a92f5a1ffe8bbaf6f53c56b32032234888f3c3059fbd3b5c47ac",
+      "description": "Four numbered cups: 1 large with a bird, 2 large with a car, 3 small with a bird, 4 small with a car.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "task-based-comprehension-2",
+      "path": "public/images/listening/jlpt-n5-2025-07/task-2.png",
+      "method": "source-image-extraction",
+      "sha256": "c319b08b276792878344fab8625d13df88a3d0c00ab3ceb74663caa8cc330aac",
+      "description": "Four cakes: 1 triangular with one strawberry, 2 triangular with two, 3 round with one, 4 round with two.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "task-based-comprehension-3",
+      "path": "public/images/listening/jlpt-n5-2025-07/task-3.png",
+      "method": "source-image-extraction",
+      "sha256": "03f3056ce2fa905d778c94afb09dfbae9084ee3f414e5b23a928dfb0e6408fea",
+      "description": "Three actions: ア switches on a ceiling light, イ operates an air conditioner, ウ serves tea.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "task-based-comprehension-5",
+      "path": "public/images/listening/jlpt-n5-2025-07/task-5.webp",
+      "method": "built-in-imagegen",
+      "sha256": "12fcf0fc38656de09f0446bd46f7ae97ff639a1cff4462308cd8da71d6299f7c",
+      "description": "Four cooking actions: 1 adding salt to a pot of eggs, 2 taking a tomato from the refrigerator, 3 cutting a tomato, 4 washing a tomato.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "task-based-comprehension-6",
+      "path": "public/images/listening/jlpt-n5-2025-07/task-6.svg",
+      "method": "code-drawn-diagram",
+      "sha256": "228b454e830304ca7f67c70d03bdb1293d1edc77dc8c611b8b9f874532081538",
+      "description": "A street map, left to right: location 1, bank, location 2, restaurant, bookshop, location 3, restaurant, location 4.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "task-based-comprehension-7",
+      "path": "public/images/listening/jlpt-n5-2025-07/task-7.webp",
+      "method": "built-in-imagegen",
+      "sha256": "724900e24c6de112a8242ffa56ca4c1223365ff26f504d3ecf676f3e631b873f",
+      "description": "Four packing choices: 1 jacket and drink bottle, 2 jacket and rice balls, 3 drink bottle and rice balls, 4 jacket, drink bottle and rice balls.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "comprehension-of-key-points-3",
+      "path": "public/images/listening/jlpt-n5-2025-07/key-points-3.webp",
+      "method": "built-in-imagegen",
+      "sha256": "7f5ed5a95201fda624c5f7624d53657aca9b5d53262a982de5500c384e357608",
+      "description": "Four numbered students: 1 short hair without glasses, 2 long hair with glasses, 3 long hair without glasses, 4 short hair with glasses.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "comprehension-of-key-points-5",
+      "path": "public/images/listening/jlpt-n5-2025-07/key-points-5.webp",
+      "method": "built-in-imagegen",
+      "sha256": "80002571e006bc574b6dead9ac219610faa572d8999afe69ce8f00be861ee075",
+      "description": "Four shared activities: 1 studying, 2 playing basketball, 3 watching a film in a cinema, 4 walking by the sea.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "verbal-expressions-1",
+      "path": "public/images/listening/jlpt-n5-2025-07/verbal-1.webp",
+      "method": "built-in-imagegen",
+      "sha256": "28bb43eaaac270142ae1800293d0ae3ab10fa709ac95fd6f172662f79f1c2633",
+      "description": "An arrow points to a seated office worker welcoming a colleague who is returning through the doorway with a briefcase.",
+      "reviewedForQuestionMeaning": true,
+      "reviewedForPerspective": true,
+      "perspectiveCorrection": "Coherent desk and chair placement; returning colleague holds a handle mounted on the open door panel, with hinges attached to the opposite edge at the right jamb. Arrow remains on the seated woman."
+    },
+    {
+      "questionId": "verbal-expressions-2",
+      "path": "public/images/listening/jlpt-n5-2025-07/verbal-2.webp",
+      "method": "built-in-imagegen",
+      "sha256": "4b468d9980704f55ac75c3ae0e40aa8a16041ede11a4b6b558e32df1ea0a45e3",
+      "description": "An arrow points to a student with a backpack at the doorway of a teacher’s office.",
+      "reviewedForQuestionMeaning": true,
+      "reviewedForPerspective": true,
+      "perspectiveCorrection": "Boy waits outside holding his backpack strap. Door hinges are on its left edge and its knob is on the opposite right free edge. Teacher chair and desk align naturally. Arrow remains on the boy."
+    },
+    {
+      "questionId": "verbal-expressions-3",
+      "path": "public/images/listening/jlpt-n5-2025-07/verbal-3.webp",
+      "method": "built-in-imagegen",
+      "sha256": "e746209a39f4ee7272dc0db95b0fbb71d3580eaa369a8fefa4cf47d8b451836a",
+      "description": "An arrow points to a seated student whose papers are blowing about while a classmate opens a window.",
+      "reviewedForQuestionMeaning": true
+    },
+    {
+      "questionId": "verbal-expressions-4",
+      "path": "public/images/listening/jlpt-n5-2025-07/verbal-4.webp",
+      "method": "built-in-imagegen",
+      "sha256": "8a630f266f5dd4706549d1b03cd3bc8fb5f391b9f30065bcf7603e7cbf803bbf",
+      "description": "An arrow points to a man in a cinema asking two seated women about an empty seat beside them.",
+      "reviewedForQuestionMeaning": true,
+      "reviewedForPerspective": true,
+      "perspectiveCorrection": "View from near the screen looking back into the audience. All seats face toward the camera and screen, which is out of frame. The empty seat is immediately beside the women; the arrow remains on the standing man."
+    },
+    {
+      "questionId": "verbal-expressions-5",
+      "path": "public/images/listening/jlpt-n5-2025-07/verbal-5.webp",
+      "method": "built-in-imagegen",
+      "sha256": "753b17ce1c4952c7ca3c4ef3a0785abbcddd760699d0392ab85d6896507f9f13",
+      "description": "An arrow points to a woman holding a camera, ready to photograph five friends outdoors.",
+      "reviewedForQuestionMeaning": true
+    }
+  ],
+  "newIllustrations": 10,
+  "generatedRasterIllustrations": 9,
+  "redrawnDiagrams": 1,
+  "sourceExtractions": 3
+}

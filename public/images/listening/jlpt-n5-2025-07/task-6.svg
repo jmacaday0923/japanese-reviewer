@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+<title id="title">Street map with four numbered locations</title><desc id="desc">From left to right: location 1, bank, location 2, restaurant, bookshop, location 3, restaurant, location 4.</desc>
+<rect width="1400" height="900" fill="white"/><g stroke="#222" stroke-width="4" fill="none">
+<path d="M70 310H1330V590H70Z M70 680H1330 M70 590V820 M1330 590V820"/>
+<path d="M225 310V590 M380 310V590 M535 310V590 M690 310V590 M845 310V590 M1000 310V590 M1155 310V590"/>
+<path d="M250 390H355V510H250Z M268 410v80 M292 410v80 M316 410v80 M340 410v80"/>
+<path d="M580 365V525H645V365 M605 365V525 M577 410H648 M555 455H672"/>
+<path d="M730 390q50-40 75 0v120q-40-35-75 0Z M740 410l50-8 M740 435l50-8 M740 460l50-8"/>
+<path d="M1055 365V525H1120V365 M1080 365V525 M1052 410H1123 M1030 455H1147"/>
+</g>
+<g fill="#111" font-family="sans-serif" text-anchor="middle">
+<text x="147" y="480" font-size="70">1</text><text x="457" y="480" font-size="70">2</text><text x="922" y="480" font-size="70">3</text><text x="1232" y="480" font-size="70">4</text>
+<text x="302" y="280" font-size="32">ぎんこう</text><text x="612" y="280" font-size="32">レストラン</text><text x="767" y="280" font-size="32">ほんや</text><text x="1077" y="280" font-size="32">レストラン</text>
+<text x="700" y="785" font-size="30">みち</text></g></svg>

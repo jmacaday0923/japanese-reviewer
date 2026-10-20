@@ -6,6 +6,7 @@ import Search, { SearchFallback } from "@/components/Search";
 import OverviewStats from "@/components/OverviewStats";
 import StudySection from "@/components/StudySection";
 import StudyShelf from "@/components/StudyShelf";
+import ListeningShelf from "@/components/ListeningShelf";
 
 export default function Home() {
   // Only the filter options go into the page; the search loads its index
@@ -79,6 +80,7 @@ export default function Home() {
         meta={`${practice.length} ${practice.length === 1 ? "exam" : "exams"}`}
         groups={[{ kind: "practice", label: "Practice", marker: "試", basePath: "/practice", pages: practice }]}
       />
+      <ListeningShelf />
     </main>
   );
 }

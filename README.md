@@ -205,3 +205,22 @@ npm test
 ```
 
 The audit records every study page and source-file fingerprints. It prevents a source-content edit from silently bypassing the display review. The display layer uses exact strings; it does not transliterate or guess Japanese at runtime.
+
+
+## Listening exams
+
+`/listening` lists the listening practice sets. `/listening/jlpt-n5-2025-07` contains 24 questions in four parts, using the supplied section recordings. Listening is also available from the desktop sidebar, mobile menu and home dashboard.
+
+- One audio player is active at a time; audio starts on a user action and supports native pause and seeking.
+- Answers, selected part, submitted result and first-attempt score are saved in this browser, under a separate versioned key per exam. Audio positions are remembered while switching parts in the open exam; they reset after a page reload.
+- Submit the complete exam to see generated answers, Japanese explanations, optional English support and replayable audio clues. Incomplete submissions require confirmation.
+- Retry incorrect keeps correct answers and the first score. Restart requires confirmation and starts a new attempt.
+- The answer key was generated from the supplied recordings and question images. It is a practice key, not an official JLPT key or scaled score. Source and artwork details are recorded in `migration/listening-audit.json`.
+
+Exam content lives in `src/data/listening-exams.json`; audio and illustrations are local files under `public/audio/listening` and `public/images/listening`. Add another exam object with a unique ID, stable question/choice IDs, matching assets and an answer key. Increment its revision if existing questions or answers change incompatibly, so saved attempts do not silently refer to different content. No runtime speech service or image-generation dependency is required.
+
+After `npm run build`, run the focused browser checks with:
+
+```bash
+CI=1 E2E_BASE_URL= E2E_PORT=3132 npx playwright test e2e/listening.spec.ts --workers=4 --retries=0 --reporter=list
+```
