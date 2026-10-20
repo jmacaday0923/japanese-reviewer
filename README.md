@@ -224,3 +224,26 @@ After `npm run build`, run the focused browser checks with:
 ```bash
 CI=1 E2E_BASE_URL= E2E_PORT=3132 npx playwright test e2e/listening.spec.ts --workers=4 --retries=0 --reporter=list
 ```
+
+
+## Vocabulary and grammar checkpoints
+
+After Chapter 10, open `/checkpoints` for one vocabulary exam and one grammar exam.
+Each contains 40 original four-choice questions: 28 focus on Chapters 6–10 and
+12 cover Chapters 1–5. The home page, sidebar, phone menu and Chapter 10 link to them.
+
+- Vocabulary: kanji readings, written forms, words in context and similar meanings.
+- Grammar: form choices, starred sentence composition and short text grammar.
+- Questions and choices use Japanese without romaji or answer-revealing translation hints.
+- Submit for raw marks, first-submission chapter/type breakdowns, explanations and lesson links.
+- Retry mistakes while retaining correct answers and the original assessment.
+- Start a fresh attempt to record a new first-submission score; the latest ten stay in browser history.
+- These are fixed course practice forms inspired by JLPT formats, not official papers or scaled JLPT scores.
+
+The curated bank is `src/data/checkpoint-exams.json`. Every question includes its
+source chapter/heading, four distinct choices, a key, and Japanese/English rationale.
+`migration/checkpoint-audit.json` records coverage, keys and source checksums.
+When changing an exam's questions or key, increment that exam's `revision` so old
+browser attempts are not scored against new content. Attempts are per browser and
+exam; no server account or new service is required. Avoid adding the keyed question
+bank to search results, which would expose the answers while taking an exam.

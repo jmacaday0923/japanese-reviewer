@@ -1,0 +1,2844 @@
+[
+  {
+    "id": "vocabulary",
+    "revision": 1,
+    "title": "Vocabulary checkpoint",
+    "description": "A cumulative vocabulary assessment after Chapter 10.",
+    "parts": [
+      {
+        "id": "reading",
+        "title": "Kanji readings",
+        "titleJa": "漢字の読み方",
+        "instructionsJa": "【　】の ことばは、どう よみますか。一つ えらんでください。",
+        "questions": [
+          {
+            "id": "vocabulary-1",
+            "number": 1,
+            "chapter": "1",
+            "prompt": "【学生】の よみかたは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "がっこう"
+              },
+              {
+                "id": "2",
+                "text": "がっせい"
+              },
+              {
+                "id": "3",
+                "text": "がくさい"
+              },
+              {
+                "id": "4",
+                "text": "がくせい"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「学生」は「がくせい」と よみます。",
+            "explanationEn": "学生 is がくせい, student. Keep the く sound; it is not a small っ.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-people-and-jobs",
+              "title": "People and jobs",
+              "evidence": "がくせい · 学生"
+            },
+            "target": "学生"
+          },
+          {
+            "id": "vocabulary-2",
+            "number": 2,
+            "chapter": "2",
+            "prompt": "【図書館】の よみかたは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "としょかん"
+              },
+              {
+                "id": "2",
+                "text": "としょうかん"
+              },
+              {
+                "id": "3",
+                "text": "としょがん"
+              },
+              {
+                "id": "4",
+                "text": "とうしょかん"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「図書館」は「としょかん」と よみます。",
+            "explanationEn": "図書館 is としょかん, library. しょ has a small ょ and no long vowel.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-places",
+              "title": "Places",
+              "evidence": "としょかん · 図書館"
+            },
+            "target": "図書館"
+          },
+          {
+            "id": "vocabulary-3",
+            "number": 3,
+            "chapter": "3",
+            "prompt": "【二十歳】の よみかたは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "じゅっさい"
+              },
+              {
+                "id": "2",
+                "text": "はたち"
+              },
+              {
+                "id": "3",
+                "text": "はちじゅっさい"
+              },
+              {
+                "id": "4",
+                "text": "はっさい"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「二十歳」は「はたち」と よみます。",
+            "explanationEn": "二十歳 has the special reading はたち: twenty years old.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-counting-words-and-numbers",
+              "title": "Counting words and numbers",
+              "evidence": "はたち · 二十歳"
+            },
+            "target": "二十歳"
+          },
+          {
+            "id": "vocabulary-4",
+            "number": 4,
+            "chapter": "4",
+            "prompt": "【火曜日】の よみかたは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "かようび"
+              },
+              {
+                "id": "2",
+                "text": "もくようび"
+              },
+              {
+                "id": "3",
+                "text": "きんようび"
+              },
+              {
+                "id": "4",
+                "text": "げつようび"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「火曜日」は「かようび」と よみます。",
+            "explanationEn": "火曜日 is かようび, Tuesday. The other choices name different weekdays.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-days-of-the-week",
+              "title": "Days of the week",
+              "evidence": "かようび · 火曜日"
+            },
+            "target": "火曜日"
+          },
+          {
+            "id": "vocabulary-5",
+            "number": 5,
+            "chapter": "5",
+            "prompt": "【一週間】の よみかたは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "いしゅうかん"
+              },
+              {
+                "id": "2",
+                "text": "いちしゅうかん"
+              },
+              {
+                "id": "3",
+                "text": "いっしゅうかん"
+              },
+              {
+                "id": "4",
+                "text": "いっしょうかん"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「一週間」は「いっしゅうかん」と よみます。",
+            "explanationEn": "一週間 is いっしゅうかん, one week, with both a small っ and a long しゅう.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-how-long-weeks",
+              "title": "How long: weeks",
+              "evidence": "いっしゅうかん · 一週間"
+            },
+            "target": "一週間"
+          },
+          {
+            "id": "vocabulary-6",
+            "number": 6,
+            "chapter": "6",
+            "prompt": "【大きい】の よみかたは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "おきい"
+              },
+              {
+                "id": "2",
+                "text": "おうきい"
+              },
+              {
+                "id": "3",
+                "text": "だいきい"
+              },
+              {
+                "id": "4",
+                "text": "おおきい"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「大きい」は「おおきい」と よみます。",
+            "explanationEn": "大きい is おおきい, big. The first long vowel is written おお.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-adjective-pairs-size-distance-and-streng",
+              "title": "Adjective pairs: size, distance and strength",
+              "evidence": "おおきい · 大きい"
+            },
+            "target": "大きい"
+          },
+          {
+            "id": "vocabulary-7",
+            "number": 7,
+            "chapter": "7",
+            "prompt": "【起きます】の よみかたは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "おきます"
+              },
+              {
+                "id": "2",
+                "text": "うきます"
+              },
+              {
+                "id": "3",
+                "text": "いきます"
+              },
+              {
+                "id": "4",
+                "text": "あきます"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「起きます」は「おきます」と よみます。",
+            "explanationEn": "起きます is おきます, to wake up or get up.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-verbs",
+              "title": "Verbs",
+              "evidence": "おきます · 起きます"
+            },
+            "target": "起きます"
+          },
+          {
+            "id": "vocabulary-8",
+            "number": 8,
+            "chapter": "8",
+            "prompt": "【牛乳】の よみかたは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ぎゅうにゅう"
+              },
+              {
+                "id": "2",
+                "text": "ぎゅにゅう"
+              },
+              {
+                "id": "3",
+                "text": "ぎゅうにょう"
+              },
+              {
+                "id": "4",
+                "text": "ぎょうにゅう"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「牛乳」は「ぎゅうにゅう」と よみます。",
+            "explanationEn": "牛乳 is ぎゅうにゅう, milk. Both contracted syllables have long vowels.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-drinks-nomimono",
+              "title": "Drinks (nomimono)",
+              "evidence": "ぎゅうにゅう · 牛乳"
+            },
+            "target": "牛乳"
+          }
+        ]
+      },
+      {
+        "id": "spelling",
+        "title": "Written forms",
+        "titleJa": "文字の書き方",
+        "instructionsJa": "【　】を ただしく かいた ものを 一つ えらんでください。",
+        "questions": [
+          {
+            "id": "vocabulary-9",
+            "number": 9,
+            "chapter": "4",
+            "prompt": "【あした】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "昨日"
+              },
+              {
+                "id": "2",
+                "text": "今日"
+              },
+              {
+                "id": "3",
+                "text": "毎日"
+              },
+              {
+                "id": "4",
+                "text": "明日"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「あした」は「明日」と かきます。",
+            "explanationEn": "明日 means tomorrow; 昨日 is yesterday, 毎日 every day, and 今日 today.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-yesterday-today-and-tomorrow",
+              "title": "Yesterday, today and tomorrow",
+              "evidence": "あした · 明日"
+            },
+            "target": "あした"
+          },
+          {
+            "id": "vocabulary-10",
+            "number": 10,
+            "chapter": "5",
+            "prompt": "【じてんしゃ】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "自動車"
+              },
+              {
+                "id": "2",
+                "text": "会社"
+              },
+              {
+                "id": "3",
+                "text": "自転車"
+              },
+              {
+                "id": "4",
+                "text": "電車"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「じてんしゃ」は「自転車」と かきます。",
+            "explanationEn": "自転車 is a bicycle; 自動車 is a car and 電車 a train.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-vehicles-and-travel",
+              "title": "Vehicles and travel",
+              "evidence": "じてんしゃ · 自転車"
+            },
+            "target": "じてんしゃ"
+          },
+          {
+            "id": "vocabulary-11",
+            "number": 11,
+            "chapter": "6",
+            "prompt": "【しずか】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "便利"
+              },
+              {
+                "id": "2",
+                "text": "元気"
+              },
+              {
+                "id": "3",
+                "text": "有名"
+              },
+              {
+                "id": "4",
+                "text": "静か"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「しずか」は「静か」と かきます。",
+            "explanationEn": "しずか is written 静か, quiet. It is a な-adjective.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-adjective-pairs-looks-and-surroundings",
+              "title": "Adjective pairs: looks and surroundings",
+              "evidence": "しずか(な) · 静か"
+            },
+            "target": "しずか"
+          },
+          {
+            "id": "vocabulary-12",
+            "number": 12,
+            "chapter": "7",
+            "prompt": "【はたらきます】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "休みます"
+              },
+              {
+                "id": "2",
+                "text": "終わります"
+              },
+              {
+                "id": "3",
+                "text": "働きます"
+              },
+              {
+                "id": "4",
+                "text": "始まります"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「はたらきます」は「働きます」と かきます。",
+            "explanationEn": "働きます means work; the others mean rest, start, and finish.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-verbs",
+              "title": "Verbs",
+              "evidence": "はたらきます · 働きます"
+            },
+            "target": "はたらきます"
+          },
+          {
+            "id": "vocabulary-13",
+            "number": 13,
+            "chapter": "8",
+            "prompt": "【しんぶん】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "写真"
+              },
+              {
+                "id": "2",
+                "text": "小説"
+              },
+              {
+                "id": "3",
+                "text": "雑誌"
+              },
+              {
+                "id": "4",
+                "text": "新聞"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「しんぶん」は「新聞」と かきます。",
+            "explanationEn": "新聞 is a newspaper; 雑誌 is a magazine, 小説 a novel, and 写真 a photograph.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-reading-materials-yomimono",
+              "title": "Reading materials (yomimono)",
+              "evidence": "しんぶん · 新聞"
+            },
+            "target": "しんぶん"
+          },
+          {
+            "id": "vocabulary-14",
+            "number": 14,
+            "chapter": "9",
+            "prompt": "【やま】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "川"
+              },
+              {
+                "id": "2",
+                "text": "山"
+              },
+              {
+                "id": "3",
+                "text": "池"
+              },
+              {
+                "id": "4",
+                "text": "海"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「やま」は「山」と かきます。",
+            "explanationEn": "山 means mountain; the others mean river, sea, and pond.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-nature-and-scenery",
+              "title": "Nature and scenery",
+              "evidence": "やま · 山"
+            },
+            "target": "やま"
+          },
+          {
+            "id": "vocabulary-15",
+            "number": 15,
+            "chapter": "9",
+            "prompt": "【うみ】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "川"
+              },
+              {
+                "id": "2",
+                "text": "池"
+              },
+              {
+                "id": "3",
+                "text": "山"
+              },
+              {
+                "id": "4",
+                "text": "海"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「うみ」は「海」と かきます。",
+            "explanationEn": "海 is sea. 川 is river and 池 pond.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-nature-and-scenery",
+              "title": "Nature and scenery",
+              "evidence": "うみ · 海"
+            },
+            "target": "うみ"
+          },
+          {
+            "id": "vocabulary-16",
+            "number": 16,
+            "chapter": "10",
+            "prompt": "【よやく】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "返事"
+              },
+              {
+                "id": "2",
+                "text": "紹介"
+              },
+              {
+                "id": "3",
+                "text": "相談"
+              },
+              {
+                "id": "4",
+                "text": "予約"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「よやく」は「予約」と かきます。",
+            "explanationEn": "予約 is a reservation. 返事 is a reply, 相談 consultation, and 紹介 an introduction.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-nouns-that-go-with-suru",
+              "title": "Nouns that go with suru",
+              "evidence": "よやく(する) · 予約"
+            },
+            "target": "よやく"
+          }
+        ]
+      },
+      {
+        "id": "context",
+        "title": "Words in context",
+        "titleJa": "文の中のことば",
+        "instructionsJa": "（　）に 入る いちばん よい ことばを 一つ えらんでください。",
+        "questions": [
+          {
+            "id": "vocabulary-17",
+            "number": 17,
+            "chapter": "1",
+            "prompt": "わたしは にほんごの（　）です。がっこうで にほんごを おしえます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "せんせい"
+              },
+              {
+                "id": "2",
+                "text": "おかね"
+              },
+              {
+                "id": "3",
+                "text": "ほん"
+              },
+              {
+                "id": "4",
+                "text": "いす"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「せんせい」は がっこうで おしえる ひとです。",
+            "explanationEn": "せんせい means teacher. This person teaches Japanese at school.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-people-and-jobs",
+              "title": "People and jobs",
+              "evidence": "せんせい · 先生"
+            },
+            "target": "せんせい"
+          },
+          {
+            "id": "vocabulary-18",
+            "number": 18,
+            "chapter": "2",
+            "prompt": "びょうきの ときに いきます。いしゃが いる ところは（　）です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "えき"
+              },
+              {
+                "id": "2",
+                "text": "びょういん"
+              },
+              {
+                "id": "3",
+                "text": "えいがかん"
+              },
+              {
+                "id": "4",
+                "text": "ぎんこう"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "びょうきの ときに いしゃに あう ところは「びょういん」です。",
+            "explanationEn": "びょういん is a hospital, where you see a doctor when ill.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-places",
+              "title": "Places",
+              "evidence": "びょういん · 病院"
+            },
+            "target": "びょういん"
+          },
+          {
+            "id": "vocabulary-19",
+            "number": 19,
+            "chapter": "3",
+            "prompt": "「この ほんは（　）ですか。」「500えんです。」",
+            "choices": [
+              {
+                "id": "1",
+                "text": "だれ"
+              },
+              {
+                "id": "2",
+                "text": "いくら"
+              },
+              {
+                "id": "3",
+                "text": "いつ"
+              },
+              {
+                "id": "4",
+                "text": "どこ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "ねだんを きく ときは「いくら」です。",
+            "explanationEn": "いくら asks a price; the reply 500えん provides the clue.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-money-and-prices",
+              "title": "Money and prices",
+              "evidence": "(お)いくら · "
+            },
+            "target": "いくら"
+          },
+          {
+            "id": "vocabulary-20",
+            "number": 20,
+            "chapter": "4",
+            "prompt": "にほんでは、3がつ、4がつ、5がつは（　）です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "はる"
+              },
+              {
+                "id": "2",
+                "text": "なつ"
+              },
+              {
+                "id": "3",
+                "text": "あき"
+              },
+              {
+                "id": "4",
+                "text": "ふゆ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "にほんの 3がつから 5がつは「はる」です。",
+            "explanationEn": "In the chapter season table, March through May are spring in Japan.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-seasons-and-holidays",
+              "title": "Seasons and holidays",
+              "evidence": "はる · 春"
+            },
+            "target": "はる"
+          },
+          {
+            "id": "vocabulary-21",
+            "number": 21,
+            "chapter": "5",
+            "prompt": "がっこうで もらった（　）を、うちで します。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "しゅうかん"
+              },
+              {
+                "id": "2",
+                "text": "じてんしゃ"
+              },
+              {
+                "id": "3",
+                "text": "えん"
+              },
+              {
+                "id": "4",
+                "text": "しゅくだい"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「しゅくだい」は うちで する がっこうの べんきょうです。",
+            "explanationEn": "しゅくだい is homework, school work done at home.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-school-and-work-words",
+              "title": "School and work words",
+              "evidence": "しゅくだい · 宿題"
+            },
+            "target": "しゅくだい"
+          },
+          {
+            "id": "vocabulary-22",
+            "number": 22,
+            "chapter": "6",
+            "prompt": "この へやは 10にんでも せまく ありません。とても（　）です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "あまい"
+              },
+              {
+                "id": "2",
+                "text": "ひろい"
+              },
+              {
+                "id": "3",
+                "text": "かるい"
+              },
+              {
+                "id": "4",
+                "text": "つめたい"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「ひろい」は ばしょに じゅうぶんな スペースが ある ことです。",
+            "explanationEn": "ひろい describes a spacious place. The room has room for ten people.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-adjective-pairs-size-distance-and-streng",
+              "title": "Adjective pairs: size, distance and strength",
+              "evidence": "ひろい · 広い"
+            },
+            "target": "ひろい"
+          },
+          {
+            "id": "vocabulary-23",
+            "number": 23,
+            "chapter": "6",
+            "prompt": "「おもい」の はんたいは（　）です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "げんき"
+              },
+              {
+                "id": "2",
+                "text": "じょうず"
+              },
+              {
+                "id": "3",
+                "text": "かるい"
+              },
+              {
+                "id": "4",
+                "text": "ひろい"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「おもい」の はんたいは「かるい」です。",
+            "explanationEn": "かるい means light in weight, the opposite of おもい.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-adjective-pairs-size-distance-and-streng",
+              "title": "Adjective pairs: size, distance and strength",
+              "evidence": "かるい · 軽い"
+            },
+            "target": "かるい"
+          },
+          {
+            "id": "vocabulary-24",
+            "number": 24,
+            "chapter": "7",
+            "prompt": "まいあさ 6じに（　）。それから あさごはんを たべます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "おわります"
+              },
+              {
+                "id": "2",
+                "text": "うります"
+              },
+              {
+                "id": "3",
+                "text": "おきます"
+              },
+              {
+                "id": "4",
+                "text": "ねます"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "あさごはんの まえに「おきます」。",
+            "explanationEn": "おきます means get up. Breakfast follows in this routine.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-verbs",
+              "title": "Verbs",
+              "evidence": "おきます · 起きます"
+            },
+            "target": "おきます"
+          },
+          {
+            "id": "vocabulary-25",
+            "number": 25,
+            "chapter": "8",
+            "prompt": "カップに コーヒーを いれて（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "のみます"
+              },
+              {
+                "id": "2",
+                "text": "かきます"
+              },
+              {
+                "id": "3",
+                "text": "よみます"
+              },
+              {
+                "id": "4",
+                "text": "ききます"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "コーヒーは のみものです。「のみます」を つかいます。",
+            "explanationEn": "のみます means drink. Reading, writing and listening do not fit coffee.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-verbs",
+              "title": "Verbs",
+              "evidence": "のみます · 飲みます"
+            },
+            "target": "のみます"
+          },
+          {
+            "id": "vocabulary-26",
+            "number": 26,
+            "chapter": "8",
+            "prompt": "（　）で ごはんを たべます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "うた"
+              },
+              {
+                "id": "2",
+                "text": "はし"
+              },
+              {
+                "id": "3",
+                "text": "ぎゅうにゅう"
+              },
+              {
+                "id": "4",
+                "text": "しんぶん"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「はし」は ごはんを たべる ときに つかいます。",
+            "explanationEn": "はし means chopsticks, a tool for eating.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-other-nouns",
+              "title": "Other nouns",
+              "evidence": "はし · 箸"
+            },
+            "target": "はし"
+          },
+          {
+            "id": "vocabulary-27",
+            "number": 27,
+            "chapter": "9",
+            "prompt": "なつに うみで（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "おしえます"
+              },
+              {
+                "id": "2",
+                "text": "かきます"
+              },
+              {
+                "id": "3",
+                "text": "およぎます"
+              },
+              {
+                "id": "4",
+                "text": "うります"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "うみで する スポーツは「およぎます」です。",
+            "explanationEn": "およぎます means swim, the natural activity in the sea.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-verbs-of-going-and-doing",
+              "title": "Verbs of going and doing",
+              "evidence": "およぎます · 泳ぎます"
+            },
+            "target": "およぎます"
+          },
+          {
+            "id": "vocabulary-28",
+            "number": 28,
+            "chapter": "9",
+            "prompt": "にほんから アメリカまで（　）で いきます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "オートバイ"
+              },
+              {
+                "id": "2",
+                "text": "ちかてつ"
+              },
+              {
+                "id": "3",
+                "text": "ひこうき"
+              },
+              {
+                "id": "4",
+                "text": "じてんしゃ"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "にほんから アメリカへの たびには「ひこうき」を つかいます。",
+            "explanationEn": "ひこうき is an airplane. The other vehicles cannot make this ocean crossing.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-ways-to-travel",
+              "title": "Ways to travel",
+              "evidence": "ひこうき · 飛行機"
+            },
+            "target": "ひこうき"
+          },
+          {
+            "id": "vocabulary-29",
+            "number": 29,
+            "chapter": "10",
+            "prompt": "せんせいに ともだちを（　）します。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "せんたく"
+              },
+              {
+                "id": "2",
+                "text": "しょうかい"
+              },
+              {
+                "id": "3",
+                "text": "うんてん"
+              },
+              {
+                "id": "4",
+                "text": "そうじ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "ひとを べつの ひとに あわせる ときは「しょうかいします」です。",
+            "explanationEn": "しょうかいします means introduce someone to another person.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-nouns-that-go-with-suru",
+              "title": "Nouns that go with suru",
+              "evidence": "しょうかい(する) · 紹介"
+            },
+            "target": "しょうかい"
+          },
+          {
+            "id": "vocabulary-30",
+            "number": 30,
+            "chapter": "10",
+            "prompt": "へやが きたないです。きょうは へやを（　）します。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "よやく"
+              },
+              {
+                "id": "2",
+                "text": "そうじ"
+              },
+              {
+                "id": "3",
+                "text": "せつめい"
+              },
+              {
+                "id": "4",
+                "text": "うんてん"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "きたない へやを きれいに する ことは「そうじ」です。",
+            "explanationEn": "そうじ is cleaning: making the dirty room clean.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-nouns-that-go-with-suru",
+              "title": "Nouns that go with suru",
+              "evidence": "そうじ(する) · 掃除"
+            },
+            "target": "そうじ"
+          },
+          {
+            "id": "vocabulary-31",
+            "number": 31,
+            "chapter": "10",
+            "prompt": "ふくが きたないです。（　）します。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "せんたく"
+              },
+              {
+                "id": "2",
+                "text": "しょうかい"
+              },
+              {
+                "id": "3",
+                "text": "そうだん"
+              },
+              {
+                "id": "4",
+                "text": "でんわ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "ふくを あらう ことは「せんたく」です。",
+            "explanationEn": "せんたく means doing laundry, washing clothes.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-nouns-that-go-with-suru",
+              "title": "Nouns that go with suru",
+              "evidence": "せんたく(する) · 洗濯"
+            },
+            "target": "せんたく"
+          },
+          {
+            "id": "vocabulary-32",
+            "number": 32,
+            "chapter": "10",
+            "prompt": "ホテルに でんわを して、あしたの へやを（　）しました。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "れんしゅう"
+              },
+              {
+                "id": "2",
+                "text": "べんきょう"
+              },
+              {
+                "id": "3",
+                "text": "よやく"
+              },
+              {
+                "id": "4",
+                "text": "うんてん"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "ホテルの へやを まえもって きめる ことは「よやく」です。",
+            "explanationEn": "よやく is a reservation, arranging the room for tomorrow.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-nouns-that-go-with-suru",
+              "title": "Nouns that go with suru",
+              "evidence": "よやく(する) · 予約"
+            },
+            "target": "よやく"
+          }
+        ]
+      },
+      {
+        "id": "paraphrase",
+        "title": "Similar meanings",
+        "titleJa": "同じ意味の文",
+        "instructionsJa": "はじめの 文と いちばん ちかい いみの 文を 一つ えらんでください。",
+        "questions": [
+          {
+            "id": "vocabulary-33",
+            "number": 33,
+            "chapter": "6",
+            "prompt": "この テストは やさしいです。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "この テストは ながいです。"
+              },
+              {
+                "id": "2",
+                "text": "この テストは むずかしいです。"
+              },
+              {
+                "id": "3",
+                "text": "この テストは あたらしいです。"
+              },
+              {
+                "id": "4",
+                "text": "この テストは かんたんです。"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "テストの「やさしい」は「かんたん」と おなじ いみです。",
+            "explanationEn": "For a test, やさしい means easy, the same as かんたん.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-adjective-pairs-quality-and-feeling",
+              "title": "Adjective pairs: quality and feeling",
+              "evidence": "かんたん(な) · 簡単"
+            },
+            "target": "かんたん"
+          },
+          {
+            "id": "vocabulary-34",
+            "number": 34,
+            "chapter": "7",
+            "prompt": "わたしは いつも 7じに おきます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "わたしは まいあさ 7じに おきます。"
+              },
+              {
+                "id": "2",
+                "text": "わたしは 7じには ぜんぜん おきません。"
+              },
+              {
+                "id": "3",
+                "text": "わたしは ときどき 7じに おきます。"
+              },
+              {
+                "id": "4",
+                "text": "わたしは きのうだけ 7じに おきました。"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「いつも」は まいかい おなじ ことを する ことです。",
+            "explanationEn": "In this morning routine, いつも means every morning, not sometimes or only yesterday.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-how-often",
+              "title": "How often",
+              "evidence": "いつも · "
+            },
+            "target": "いつも"
+          },
+          {
+            "id": "vocabulary-35",
+            "number": 35,
+            "chapter": "7",
+            "prompt": "しごとが 9じに はじまります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "しごとが 9じに おわります。"
+              },
+              {
+                "id": "2",
+                "text": "しごとは 9じまでです。"
+              },
+              {
+                "id": "3",
+                "text": "9じには しごとが ありません。"
+              },
+              {
+                "id": "4",
+                "text": "しごとは 9じからです。"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「9じに はじまります」は「9じからです」と おなじ いみです。",
+            "explanationEn": "Starting at nine is equivalent to being from nine. まで and おわります refer to an ending.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-verbs",
+              "title": "Verbs",
+              "evidence": "はじまります · 始まります"
+            },
+            "target": "はじまります"
+          },
+          {
+            "id": "vocabulary-36",
+            "number": 36,
+            "chapter": "8",
+            "prompt": "この ひとは がっこうで にほんごを おしえます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "この ひとは にほんごが わかりません。"
+              },
+              {
+                "id": "2",
+                "text": "この ひとは にほんごの せんせいです。"
+              },
+              {
+                "id": "3",
+                "text": "この ひとは にほんごの がくせいです。"
+              },
+              {
+                "id": "4",
+                "text": "この ひとは がっこうに いません。"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "がっこうで にほんごを おしえる ひとは「にほんごの せんせい」です。",
+            "explanationEn": "A person teaching Japanese at school is a Japanese teacher.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-verbs",
+              "title": "Verbs",
+              "evidence": "おしえます · 教えます"
+            },
+            "target": "おしえます"
+          },
+          {
+            "id": "vocabulary-37",
+            "number": 37,
+            "chapter": "8",
+            "prompt": "ここで ひるごはんを たべます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ここで あさの ごはんを たべます。"
+              },
+              {
+                "id": "2",
+                "text": "ここでは ごはんを たべません。"
+              },
+              {
+                "id": "3",
+                "text": "ここで ひるの ごはんを たべます。"
+              },
+              {
+                "id": "4",
+                "text": "ここで よるの ごはんを たべます。"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「ひるごはん」は ひるに たべる ごはんです。",
+            "explanationEn": "ひるごはん is lunch, the midday meal.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-food-tabemono",
+              "title": "Food (tabemono)",
+              "evidence": "ひるごはん · 昼ご飯"
+            },
+            "target": "ひるごはん"
+          },
+          {
+            "id": "vocabulary-38",
+            "number": 38,
+            "chapter": "9",
+            "prompt": "ともだちと ふたりで いきます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "わたしだけ いきます。"
+              },
+              {
+                "id": "2",
+                "text": "わたしと ともだちが いきます。ぜんぶで 2にんです。"
+              },
+              {
+                "id": "3",
+                "text": "わたしと ともだち2にんが いきます。ぜんぶで 3にんです。"
+              },
+              {
+                "id": "4",
+                "text": "ともだちは いきません。"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「ともだちと ふたり」は わたしを いれて 2にんです。",
+            "explanationEn": "ふたり counts two in total, including the speaker.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-counting-people",
+              "title": "Counting people",
+              "evidence": "ふたり · 二人"
+            },
+            "target": "ふたり"
+          },
+          {
+            "id": "vocabulary-39",
+            "number": 39,
+            "chapter": "9",
+            "prompt": "がっこうから うちに かえります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "がっこうから うちに もどります。"
+              },
+              {
+                "id": "2",
+                "text": "うちには かえりません。"
+              },
+              {
+                "id": "3",
+                "text": "うちから がっこうに いきます。"
+              },
+              {
+                "id": "4",
+                "text": "がっこうで べんきょうします。"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "うちに「かえります」は うちに「もどります」という いみです。",
+            "explanationEn": "かえります means return home. The direction must remain school to home.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-verbs-of-going-and-doing",
+              "title": "Verbs of going and doing",
+              "evidence": "かえります · 帰ります"
+            },
+            "target": "かえります"
+          },
+          {
+            "id": "vocabulary-40",
+            "number": 40,
+            "chapter": "10",
+            "prompt": "きのう かいものを した。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "きのう おみせで ものを かわなかった。"
+              },
+              {
+                "id": "2",
+                "text": "きょう おみせで ものを かう。"
+              },
+              {
+                "id": "3",
+                "text": "きのう おみせで ものを かった。"
+              },
+              {
+                "id": "4",
+                "text": "きのう おみせで ものを うった。"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「かいもの」は おみせで ものを かう ことです。「した」と「かった」は かこの かたちです。",
+            "explanationEn": "Shopping means buying things. Both した and かった describe the completed event yesterday.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-nouns-that-go-with-suru",
+              "title": "Nouns that go with suru",
+              "evidence": "かいもの(する) · 買い物"
+            },
+            "target": "かいもの"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grammar",
+    "revision": 1,
+    "title": "Grammar checkpoint",
+    "description": "A cumulative grammar assessment after Chapter 10.",
+    "parts": [
+      {
+        "id": "forms",
+        "title": "Grammar choices",
+        "titleJa": "文法の形",
+        "instructionsJa": "（　）に 入る いちばん よい ことばを 一つ えらんでください。",
+        "questions": [
+          {
+            "id": "grammar-1",
+            "number": 1,
+            "chapter": "1",
+            "prompt": "わたしは せんせいです。がくせい（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "をしません"
+              },
+              {
+                "id": "2",
+                "text": "にいません"
+              },
+              {
+                "id": "3",
+                "text": "がありません"
+              },
+              {
+                "id": "4",
+                "text": "ではありません"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "めいしを ひていする ときは「ではありません」です。",
+            "explanationEn": "Use ではありません to negate a noun predicate. ありません alone describes nonexistence.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-1-2-a-wa-b-dewa-arimasen-ja-arimasen",
+              "title": "1.2 A wa B dewa arimasen / ja arimasen"
+            }
+          },
+          {
+            "id": "grammar-2",
+            "number": 2,
+            "chapter": "1",
+            "prompt": "これは わたし（　）ほんです。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "が"
+              },
+              {
+                "id": "2",
+                "text": "に"
+              },
+              {
+                "id": "3",
+                "text": "の"
+              },
+              {
+                "id": "4",
+                "text": "を"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「わたしの ほん」は わたしが もっている ほんです。",
+            "explanationEn": "の links the owner to the thing owned: my book.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-1-7-a-no-b",
+              "title": "1.7 A no B"
+            }
+          },
+          {
+            "id": "grammar-3",
+            "number": 3,
+            "chapter": "2",
+            "prompt": "いすの うえに ねこが（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "います"
+              },
+              {
+                "id": "2",
+                "text": "です"
+              },
+              {
+                "id": "3",
+                "text": "します"
+              },
+              {
+                "id": "4",
+                "text": "あります"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "ねこは どうぶつなので「います」を つかいます。",
+            "explanationEn": "Use います for an animal; あります is for things.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-2-4-a-wa-location-ni-imasu",
+              "title": "2.4 A wa Location ni imasu"
+            }
+          },
+          {
+            "id": "grammar-4",
+            "number": 4,
+            "chapter": "2",
+            "prompt": "つくえの うえ（　）ほんが あります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "で"
+              },
+              {
+                "id": "2",
+                "text": "に"
+              },
+              {
+                "id": "3",
+                "text": "と"
+              },
+              {
+                "id": "4",
+                "text": "を"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "ものが ある ばしょには「に」を つかいます。",
+            "explanationEn": "に marks a location of existence; で marks where an action happens.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-2-8-location-ni-a-ga-arimasu",
+              "title": "2.8 Location ni A ga arimasu"
+            }
+          },
+          {
+            "id": "grammar-5",
+            "number": 5,
+            "chapter": "3",
+            "prompt": "かみが 3（　）あります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ほん"
+              },
+              {
+                "id": "2",
+                "text": "にん"
+              },
+              {
+                "id": "3",
+                "text": "まい"
+              },
+              {
+                "id": "4",
+                "text": "だい"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "かみの ように うすくて ひらたい ものは「まい」で かぞえます。",
+            "explanationEn": "Use 枚 / まい for thin flat objects such as paper.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-7-counters",
+              "title": "3.7 Counters"
+            }
+          },
+          {
+            "id": "grammar-6",
+            "number": 6,
+            "chapter": "3",
+            "prompt": "えんぴつが 1ぽん、2ほん、3（　）あります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "まい"
+              },
+              {
+                "id": "2",
+                "text": "ぼん"
+              },
+              {
+                "id": "3",
+                "text": "ほん"
+              },
+              {
+                "id": "4",
+                "text": "ぽん"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「ほん」は すうじで おとが かわります。3ぼんです。",
+            "explanationEn": "The long-object counter changes sound: いっぽん, にほん, さんぼん.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-7-counters",
+              "title": "3.7 Counters"
+            }
+          },
+          {
+            "id": "grammar-7",
+            "number": 7,
+            "chapter": "4",
+            "prompt": "じゅぎょうは 9じ（　）12じまでです。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "から"
+              },
+              {
+                "id": "2",
+                "text": "の"
+              },
+              {
+                "id": "3",
+                "text": "に"
+              },
+              {
+                "id": "4",
+                "text": "ごろ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "はじまりには「から」、おわりには「まで」です。",
+            "explanationEn": "から marks the starting time; まで marks the ending time.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-9-time-expression-kara",
+              "title": "4.9 Time Expression kara"
+            }
+          },
+          {
+            "id": "grammar-8",
+            "number": 8,
+            "chapter": "4",
+            "prompt": "しごとは 5じ（　）です。5じに おわります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "の"
+              },
+              {
+                "id": "2",
+                "text": "に"
+              },
+              {
+                "id": "3",
+                "text": "から"
+              },
+              {
+                "id": "4",
+                "text": "まで"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "5じに おわるので「5じまで」です。",
+            "explanationEn": "Work ends at five, so use まで. から would mark the starting point.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-10-time-expression-made",
+              "title": "4.10 Time Expression made"
+            }
+          },
+          {
+            "id": "grammar-9",
+            "number": 9,
+            "chapter": "5",
+            "prompt": "うち（　）えきまで 10ぷん かかります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "と"
+              },
+              {
+                "id": "2",
+                "text": "から"
+              },
+              {
+                "id": "3",
+                "text": "に"
+              },
+              {
+                "id": "4",
+                "text": "を"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「うちから えきまで」は はじまりと おわりの ばしょです。",
+            "explanationEn": "から marks the origin of the measured trip, paired with まで for the destination.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-8-location-kara-and-location-made-bunk",
+              "title": "5.8 Location kara and Location made (bunkei 5.4)"
+            }
+          },
+          {
+            "id": "grammar-10",
+            "number": 10,
+            "chapter": "5",
+            "prompt": "バス（　）がっこうまで 30ぷん かかります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "に"
+              },
+              {
+                "id": "2",
+                "text": "を"
+              },
+              {
+                "id": "3",
+                "text": "と"
+              },
+              {
+                "id": "4",
+                "text": "で"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "のりものの あとには「で」を つかいます。",
+            "explanationEn": "で marks transportation; 30ぷん gives the duration.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-10-mode-of-transportation-de-bunkei-5-",
+              "title": "5.10 Mode of transportation de (bunkei 5.6)"
+            }
+          },
+          {
+            "id": "grammar-11",
+            "number": 11,
+            "chapter": "6",
+            "prompt": "きのうは あつ（　）です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "い"
+              },
+              {
+                "id": "2",
+                "text": "く"
+              },
+              {
+                "id": "3",
+                "text": "かった"
+              },
+              {
+                "id": "4",
+                "text": "くない"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「あつい」の かこは「あつかった」です。",
+            "explanationEn": "Replace い with かった for the past affirmative of an い-adjective.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-6-6-i-adjectives-present-past-and-negati",
+              "title": "6.6 I-adjectives: present, past and negative (adjective conjugation)"
+            }
+          },
+          {
+            "id": "grammar-12",
+            "number": 12,
+            "chapter": "6",
+            "prompt": "この まちは しずか（　）べんりです。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "な"
+              },
+              {
+                "id": "2",
+                "text": "くて"
+              },
+              {
+                "id": "3",
+                "text": "で"
+              },
+              {
+                "id": "4",
+                "text": "に"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "なけいようしを つなぐ ときは「で」です。",
+            "explanationEn": "Connect な-adjectives with で; な modifies a noun and に forms an adverb.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-6-5-adjective-adjective-kute-and-de-bunk",
+              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)"
+            }
+          },
+          {
+            "id": "grammar-13",
+            "number": 13,
+            "chapter": "6",
+            "prompt": "この ほんは あまり たか（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "いです"
+              },
+              {
+                "id": "2",
+                "text": "くないです"
+              },
+              {
+                "id": "3",
+                "text": "かったです"
+              },
+              {
+                "id": "4",
+                "text": "くです"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「あまり」は ひていと いっしょに つかいます。",
+            "explanationEn": "あまり takes a negative ending: not very expensive.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-6-10-a-little-and-not-very-chotto-and-am",
+              "title": "6.10 A little and not very: chotto and amari (bunkei 6.6)"
+            }
+          },
+          {
+            "id": "grammar-14",
+            "number": 14,
+            "chapter": "7",
+            "prompt": "まいあさ 6じ（　）おきます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "で"
+              },
+              {
+                "id": "2",
+                "text": "を"
+              },
+              {
+                "id": "3",
+                "text": "と"
+              },
+              {
+                "id": "4",
+                "text": "に"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "6じの ような じかんの あとには「に」です。",
+            "explanationEn": "に marks the specific clock time of getting up.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-7-2-time-expression-ni-verb-bunkei-7-1",
+              "title": "7.2 Time expression + ni + verb (bunkei 7.1)"
+            }
+          },
+          {
+            "id": "grammar-15",
+            "number": 15,
+            "chapter": "7",
+            "prompt": "きのうは べんきょうし（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ました"
+              },
+              {
+                "id": "2",
+                "text": "てます"
+              },
+              {
+                "id": "3",
+                "text": "ます"
+              },
+              {
+                "id": "4",
+                "text": "ません"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "きのうの ことなので、ていねいな かこの「ました」です。",
+            "explanationEn": "Yesterday calls for the polite past ending ました.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-7-1-verbs-in-the-formal-form-masu-masen-",
+              "title": "7.1 Verbs in the formal form (masu, masen, mashita, masen deshita)"
+            }
+          },
+          {
+            "id": "grammar-16",
+            "number": 16,
+            "chapter": "7",
+            "prompt": "しずか（　）はなします。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "な"
+              },
+              {
+                "id": "2",
+                "text": "を"
+              },
+              {
+                "id": "3",
+                "text": "で"
+              },
+              {
+                "id": "4",
+                "text": "に"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "なけいようしに「に」を つけると、どう するかを いえます。",
+            "explanationEn": "Use に to turn a な-adjective into an adverb: speak quietly.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-7-8-na-adjective-as-an-adverb-bunkei-7-7",
+              "title": "7.8 Na-adjective as an adverb (bunkei 7.7)"
+            }
+          },
+          {
+            "id": "grammar-17",
+            "number": 17,
+            "chapter": "8",
+            "prompt": "しょくどう（　）ひるごはんを たべます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "に"
+              },
+              {
+                "id": "2",
+                "text": "で"
+              },
+              {
+                "id": "3",
+                "text": "を"
+              },
+              {
+                "id": "4",
+                "text": "と"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "たべる ばしょには「で」です。",
+            "explanationEn": "で marks the place where eating happens.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-8-4-place-of-action-de-bunkei-8-3",
+              "title": "8.4 Place of action de (bunkei 8.3)"
+            }
+          },
+          {
+            "id": "grammar-18",
+            "number": 18,
+            "chapter": "8",
+            "prompt": "せんせい（　）てがみを かきました。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "に"
+              },
+              {
+                "id": "2",
+                "text": "が"
+              },
+              {
+                "id": "3",
+                "text": "で"
+              },
+              {
+                "id": "4",
+                "text": "を"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "てがみを うけとる ひとには「に」です。",
+            "explanationEn": "に marks the recipient of the letter; the letter itself takes を.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-8-5-recipient-of-action-ni-bunkei-8-4",
+              "title": "8.5 Recipient of action ni (bunkei 8.4)"
+            }
+          },
+          {
+            "id": "grammar-19",
+            "number": 19,
+            "chapter": "8",
+            "prompt": "はし（　）ごはんを たべます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "が"
+              },
+              {
+                "id": "2",
+                "text": "に"
+              },
+              {
+                "id": "3",
+                "text": "で"
+              },
+              {
+                "id": "4",
+                "text": "を"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "つかう どうぐには「で」です。",
+            "explanationEn": "で marks the tool used: eating with chopsticks.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-8-8-tool-of-action-de-bunkei-8-7",
+              "title": "8.8 Tool of action de (bunkei 8.7)"
+            }
+          },
+          {
+            "id": "grammar-20",
+            "number": 20,
+            "chapter": "9",
+            "prompt": "ここは マニラです。わたしは にほん（　）きました。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "から"
+              },
+              {
+                "id": "2",
+                "text": "で"
+              },
+              {
+                "id": "3",
+                "text": "を"
+              },
+              {
+                "id": "4",
+                "text": "と"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "きた ばしょには「から」です。",
+            "explanationEn": "から marks the place the speaker came from.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-9-1-destination-e-or-ni-and-origin-kara-",
+              "title": "9.1 Destination e or ni, and origin kara kimashita (bunkei 9.1)"
+            }
+          },
+          {
+            "id": "grammar-21",
+            "number": 21,
+            "chapter": "9",
+            "prompt": "ともだちと 3にん（　）いきます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "が"
+              },
+              {
+                "id": "2",
+                "text": "を"
+              },
+              {
+                "id": "3",
+                "text": "で"
+              },
+              {
+                "id": "4",
+                "text": "に"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "いっしょに いく にんずうには「で」です。",
+            "explanationEn": "Use で after the number of people doing the action together.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-9-5-counter-for-people-de-bunkei-9-5",
+              "title": "9.5 Counter for people de (bunkei 9.5)"
+            }
+          },
+          {
+            "id": "grammar-22",
+            "number": 22,
+            "chapter": "9",
+            "prompt": "「よみます」の じしょけいは（　）です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "よまる"
+              },
+              {
+                "id": "2",
+                "text": "よむ"
+              },
+              {
+                "id": "3",
+                "text": "よんだ"
+              },
+              {
+                "id": "4",
+                "text": "よみる"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「よみます」の じしょけいは「よむ」です。",
+            "explanationEn": "The dictionary form is よむ; よんだ is past.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-9-10-from-masu-form-to-dictionary-form-p",
+              "title": "9.10 From masu form to dictionary form (page 137)"
+            }
+          },
+          {
+            "id": "grammar-23",
+            "number": 23,
+            "chapter": "10",
+            "prompt": "「あそびました」を ふつうの いいかたに します。（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "あそばった"
+              },
+              {
+                "id": "2",
+                "text": "あそった"
+              },
+              {
+                "id": "3",
+                "text": "あそびた"
+              },
+              {
+                "id": "4",
+                "text": "あそんだ"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「ぶ」で おわる どうしの かこは「んだ」です。",
+            "explanationEn": "Verbs ending in ぶ take んだ in the plain past: あそんだ.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-10-3-group-1-verbs-that-end-in-bu-mu-or-",
+              "title": "10.3 Group 1: verbs that end in bu, mu or nu (page 149)"
+            }
+          },
+          {
+            "id": "grammar-24",
+            "number": 24,
+            "chapter": "10",
+            "prompt": "「きませんでした」を ふつうの いいかたに します。（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "こなかった"
+              },
+              {
+                "id": "2",
+                "text": "きなかった"
+              },
+              {
+                "id": "3",
+                "text": "くなかった"
+              },
+              {
+                "id": "4",
+                "text": "きなかた"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「くる」の ひていは「こない」、かこの ひていは「こなかった」です。",
+            "explanationEn": "くる is irregular: こない becomes こなかった in the past negative.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-10-13-masen-deshita-to-the-nakatta-form-",
+              "title": "10.13 Masen deshita to the nakatta form: past negative (page 152)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "order",
+        "title": "Sentence composition",
+        "titleJa": "文の組み立て",
+        "instructionsJa": "四つの ことばを ならべます。★の ところに 入る ことばを 一つ えらんでください。",
+        "questions": [
+          {
+            "id": "grammar-25",
+            "number": 25,
+            "chapter": "5",
+            "prompt": "★に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "1しゅうかん"
+              },
+              {
+                "id": "2",
+                "text": "2かい"
+              },
+              {
+                "id": "3",
+                "text": "です"
+              },
+              {
+                "id": "4",
+                "text": "に"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「アルバイトは 1しゅうかん に 2かい です。」です。★は「2かい」です。",
+            "explanationEn": "The workdays show two sessions per week. Use 1しゅうかんに2かいです, so the star takes 2かい.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-6-span-of-time-ni-frequency-bunkei-5-2",
+              "title": "5.6 Span of Time ni Frequency (bunkei 5.2)"
+            },
+            "composition": {
+              "before": "アルバイトは",
+              "after": "。",
+              "orderedParts": [
+                "1しゅうかん",
+                "に",
+                "2かい",
+                "です"
+              ],
+              "starIndex": 2
+            },
+            "completedSentence": "アルバイトは 1しゅうかん に 2かい です。",
+            "context": "アルバイト：まいしゅう げつようびと きんようび"
+          },
+          {
+            "id": "grammar-26",
+            "number": 26,
+            "chapter": "6",
+            "prompt": "★に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "しずか"
+              },
+              {
+                "id": "2",
+                "text": "で"
+              },
+              {
+                "id": "3",
+                "text": "まちです"
+              },
+              {
+                "id": "4",
+                "text": "べんりな"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「ここは しずか で べんりな まちです。」です。★は「べんりな」です。",
+            "explanationEn": "Connect しずか with で and attach べんりな to まち. The star takes べんりな.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-6-5-adjective-adjective-kute-and-de-bunk",
+              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)"
+            },
+            "composition": {
+              "before": "ここは",
+              "after": "。",
+              "orderedParts": [
+                "しずか",
+                "で",
+                "べんりな",
+                "まちです"
+              ],
+              "starIndex": 2
+            },
+            "completedSentence": "ここは しずか で べんりな まちです。"
+          },
+          {
+            "id": "grammar-27",
+            "number": 27,
+            "chapter": "7",
+            "prompt": "★に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "はやく"
+              },
+              {
+                "id": "2",
+                "text": "6じに"
+              },
+              {
+                "id": "3",
+                "text": "おきます"
+              },
+              {
+                "id": "4",
+                "text": "まいあさ"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「わたしは まいあさ 6じに はやく おきます。」です。★は「おきます」です。",
+            "explanationEn": "The verb finishes the sentence. Time and adverb phrases can move, but おきます stays in the starred final slot.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-7-2-time-expression-ni-verb-bunkei-7-1",
+              "title": "7.2 Time expression + ni + verb (bunkei 7.1)"
+            },
+            "composition": {
+              "before": "わたしは",
+              "after": "。",
+              "orderedParts": [
+                "まいあさ",
+                "6じに",
+                "はやく",
+                "おきます"
+              ],
+              "starIndex": 3
+            },
+            "completedSentence": "わたしは まいあさ 6じに はやく おきます。"
+          },
+          {
+            "id": "grammar-28",
+            "number": 28,
+            "chapter": "8",
+            "prompt": "★に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "を"
+              },
+              {
+                "id": "2",
+                "text": "に"
+              },
+              {
+                "id": "3",
+                "text": "おしえます"
+              },
+              {
+                "id": "4",
+                "text": "にほんご"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「せんせいは わたし に にほんご を おしえます。」です。★は「を」です。",
+            "explanationEn": "わたし takes に as recipient and にほんご takes を as object. The star takes を.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-8-5-recipient-of-action-ni-bunkei-8-4",
+              "title": "8.5 Recipient of action ni (bunkei 8.4)"
+            },
+            "composition": {
+              "before": "せんせいは わたし",
+              "after": "。",
+              "orderedParts": [
+                "に",
+                "にほんご",
+                "を",
+                "おしえます"
+              ],
+              "starIndex": 2
+            },
+            "completedSentence": "せんせいは わたし に にほんご を おしえます。"
+          },
+          {
+            "id": "grammar-29",
+            "number": 29,
+            "chapter": "8",
+            "prompt": "★に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "を"
+              },
+              {
+                "id": "2",
+                "text": "よみます"
+              },
+              {
+                "id": "3",
+                "text": "の"
+              },
+              {
+                "id": "4",
+                "text": "ほん"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「わたしは にほんご の ほん を よみます。」です。★は「を」です。",
+            "explanationEn": "の links にほんご to ほん. The resulting noun phrase takes を as the object of よみます. The star takes を.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-8-2-a-wa-object-o-transitive-verb-bunkei",
+              "title": "8.2 A wa object o transitive verb (bunkei 8.1)"
+            },
+            "composition": {
+              "before": "わたしは にほんご",
+              "after": "。",
+              "orderedParts": [
+                "の",
+                "ほん",
+                "を",
+                "よみます"
+              ],
+              "starIndex": 2
+            },
+            "completedSentence": "わたしは にほんご の ほん を よみます。"
+          },
+          {
+            "id": "grammar-30",
+            "number": 30,
+            "chapter": "9",
+            "prompt": "★に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "と"
+              },
+              {
+                "id": "2",
+                "text": "いきました"
+              },
+              {
+                "id": "3",
+                "text": "きょうとへ"
+              },
+              {
+                "id": "4",
+                "text": "ともだち"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「わたしは きのう ともだち と きょうとへ いきました。」です。★は「いきました」です。",
+            "explanationEn": "と marks the companion and へ the destination. Phrase order can vary, but いきました must occupy the starred final slot.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-9-4-companion-to-or-issho-ni-bunkei-9-4",
+              "title": "9.4 Companion to or issho ni (bunkei 9.4)"
+            },
+            "composition": {
+              "before": "わたしは きのう",
+              "after": "。",
+              "orderedParts": [
+                "ともだち",
+                "と",
+                "きょうとへ",
+                "いきました"
+              ],
+              "starIndex": 3
+            },
+            "completedSentence": "わたしは きのう ともだち と きょうとへ いきました。"
+          },
+          {
+            "id": "grammar-31",
+            "number": 31,
+            "chapter": "9",
+            "prompt": "★に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "いきます"
+              },
+              {
+                "id": "2",
+                "text": "がっこう"
+              },
+              {
+                "id": "3",
+                "text": "から"
+              },
+              {
+                "id": "4",
+                "text": "まで"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「この バスは えき から がっこう まで いきます。」です。★は「がっこう」です。",
+            "explanationEn": "The arrow fixes the route: station → school. Use えきから がっこうまで. The star takes がっこう.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-9-1-destination-e-or-ni-and-origin-kara-",
+              "title": "9.1 Destination e or ni, and origin kara kimashita (bunkei 9.1)"
+            },
+            "composition": {
+              "before": "この バスは えき",
+              "after": "。",
+              "orderedParts": [
+                "から",
+                "がっこう",
+                "まで",
+                "いきます"
+              ],
+              "starIndex": 1
+            },
+            "completedSentence": "この バスは えき から がっこう まで いきます。",
+            "context": "えき → がっこう"
+          },
+          {
+            "id": "grammar-32",
+            "number": 32,
+            "chapter": "10",
+            "prompt": "★に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "した"
+              },
+              {
+                "id": "2",
+                "text": "にほんごの"
+              },
+              {
+                "id": "3",
+                "text": "べんきょうを"
+              },
+              {
+                "id": "4",
+                "text": "の"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「きのうは にほんごの べんきょうを した の？」です。★は「した」です。",
+            "explanationEn": "A casual question can end with の after a plain form. した describes the completed study yesterday.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-10-18-casual-questions-with-no-bunkei-10",
+              "title": "10.18 Casual questions with no (bunkei 10.2, page 155)"
+            },
+            "composition": {
+              "before": "きのうは",
+              "after": "？",
+              "orderedParts": [
+                "にほんごの",
+                "べんきょうを",
+                "した",
+                "の"
+              ],
+              "starIndex": 2
+            },
+            "completedSentence": "きのうは にほんごの べんきょうを した の？"
+          }
+        ]
+      },
+      {
+        "id": "text",
+        "title": "Grammar in context",
+        "titleJa": "文章の文法",
+        "instructionsJa": "ぶんしょうを よんで、〔　〕に 入る ことばを 一つ えらんでください。",
+        "questions": [
+          {
+            "id": "grammar-33",
+            "number": 33,
+            "chapter": "4",
+            "prompt": "〔1〕に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "と"
+              },
+              {
+                "id": "2",
+                "text": "で"
+              },
+              {
+                "id": "3",
+                "text": "に"
+              },
+              {
+                "id": "4",
+                "text": "を"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "9じの ような じかんには「に」です。",
+            "explanationEn": "The first gap marks a clock time, so use に.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-16-time-ni-a-ga-arimasu-the-marker-ni",
+              "title": "4.16 Time ni A ga arimasu (the marker ni)"
+            },
+            "passage": {
+              "id": "outing",
+              "text": "きのうは にちようびでした。あさ9じ〔1〕ともだちと こうえんへ いきました。うちから こうえんまでは バスで 10ぷんです。バス〔2〕いきました。"
+            }
+          },
+          {
+            "id": "grammar-34",
+            "number": 34,
+            "chapter": "9",
+            "prompt": "〔2〕に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "が"
+              },
+              {
+                "id": "2",
+                "text": "で"
+              },
+              {
+                "id": "3",
+                "text": "に"
+              },
+              {
+                "id": "4",
+                "text": "を"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "バスは のりものなので「で」です。",
+            "explanationEn": "The second gap marks transportation, so use で rather than the time marker に.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-9-2-mode-of-transportation-de-bunkei-9-2",
+              "title": "9.2 Mode of transportation de (bunkei 9.2)"
+            },
+            "passage": {
+              "id": "outing",
+              "text": "きのうは にちようびでした。あさ9じ〔1〕ともだちと こうえんへ いきました。うちから こうえんまでは バスで 10ぷんです。バス〔2〕いきました。"
+            }
+          },
+          {
+            "id": "grammar-35",
+            "number": 35,
+            "chapter": "7",
+            "prompt": "〔1〕に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ねます"
+              },
+              {
+                "id": "2",
+                "text": "うります"
+              },
+              {
+                "id": "3",
+                "text": "おわります"
+              },
+              {
+                "id": "4",
+                "text": "おきます"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "まいあさの しゅうかんなので「おきます」です。",
+            "explanationEn": "The passage gives a morning routine: get up, eat breakfast, drink coffee.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-7-1-verbs-in-the-formal-form-masu-masen-",
+              "title": "7.1 Verbs in the formal form (masu, masen, mashita, masen deshita)"
+            },
+            "passage": {
+              "id": "morning",
+              "text": "わたしは まいあさ 6じに〔1〕。あさごはんは パンです。コーヒー〔2〕のみます。しごとは 8じからです。"
+            }
+          },
+          {
+            "id": "grammar-36",
+            "number": 36,
+            "chapter": "8",
+            "prompt": "〔2〕に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "を"
+              },
+              {
+                "id": "2",
+                "text": "に"
+              },
+              {
+                "id": "3",
+                "text": "で"
+              },
+              {
+                "id": "4",
+                "text": "が"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "コーヒーは のむ ものなので「を」です。",
+            "explanationEn": "Coffee is the direct object of のみます, so use を.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-8-2-a-wa-object-o-transitive-verb-bunkei",
+              "title": "8.2 A wa object o transitive verb (bunkei 8.1)"
+            },
+            "passage": {
+              "id": "morning",
+              "text": "わたしは まいあさ 6じに〔1〕。あさごはんは パンです。コーヒー〔2〕のみます。しごとは 8じからです。"
+            }
+          },
+          {
+            "id": "grammar-37",
+            "number": 37,
+            "chapter": "6",
+            "prompt": "〔1〕に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "に"
+              },
+              {
+                "id": "2",
+                "text": "な"
+              },
+              {
+                "id": "3",
+                "text": "で"
+              },
+              {
+                "id": "4",
+                "text": "く"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「しずか」は なけいようしです。つなぐ ときは「で」です。",
+            "explanationEn": "Use で to connect しずか to ひろかった.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-6-5-adjective-adjective-kute-and-de-bunk",
+              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)"
+            },
+            "passage": {
+              "id": "hotel",
+              "text": "アナ「きのうの ホテルは どうだった？」\nベン「へやは しずか〔1〕、ひろかった。ねだんは たかく〔2〕。やすかったよ。」"
+            }
+          },
+          {
+            "id": "grammar-38",
+            "number": 38,
+            "chapter": "10",
+            "prompt": "〔2〕に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "なくない"
+              },
+              {
+                "id": "2",
+                "text": "なかた"
+              },
+              {
+                "id": "3",
+                "text": "なかった"
+              },
+              {
+                "id": "4",
+                "text": "なくた"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "やすかったので「たかくなかった」です。ふつうの いいかたの かこの ひていです。",
+            "explanationEn": "It was cheap, so it was not expensive. たかくなかった is the plain past negative.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-10-21-informal-desu-and-informal-adjecti",
+              "title": "10.21 Informal desu and informal adjectives (extra lesson)"
+            },
+            "passage": {
+              "id": "hotel",
+              "text": "アナ「きのうの ホテルは どうだった？」\nベン「へやは しずか〔1〕、ひろかった。ねだんは たかく〔2〕。やすかったよ。」"
+            }
+          },
+          {
+            "id": "grammar-39",
+            "number": 39,
+            "chapter": "10",
+            "prompt": "〔1〕に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "いくの"
+              },
+              {
+                "id": "2",
+                "text": "いかないの"
+              },
+              {
+                "id": "3",
+                "text": "いきますか"
+              },
+              {
+                "id": "4",
+                "text": "いったの"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "きのうの ことを きくので「いったの？」です。",
+            "explanationEn": "きのう establishes the past; a casual past question uses いったの？.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-10-18-casual-questions-with-no-bunkei-10",
+              "title": "10.18 Casual questions with no (bunkei 10.2, page 155)"
+            },
+            "passage": {
+              "id": "yesterday",
+              "text": "アナ「きのう、パーティーに〔1〕？」\nベン「ううん、いかなかった。うちで べんきょう〔2〕。」\nアナ「わたしも、うちで べんきょうしたよ。」"
+            }
+          },
+          {
+            "id": "grammar-40",
+            "number": 40,
+            "chapter": "10",
+            "prompt": "〔2〕に 入る ことばは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "しなかった"
+              },
+              {
+                "id": "2",
+                "text": "しない"
+              },
+              {
+                "id": "3",
+                "text": "する"
+              },
+              {
+                "id": "4",
+                "text": "した"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "きのう べんきょうした ことを いいます。「べんきょうする」の かこは「べんきょうした」です。",
+            "explanationEn": "The exchange describes completed study yesterday. Use した with べんきょう.",
+            "source": {
+              "chapter": "10",
+              "heading": "c10-10-1-noun-suru-bunkei-10-1-page-148",
+              "title": "10.1 Noun + suru (bunkei 10.1, page 148)"
+            },
+            "passage": {
+              "id": "yesterday",
+              "text": "アナ「きのう、パーティーに〔1〕？」\nベン「ううん、いかなかった。うちで べんきょう〔2〕。」\nアナ「わたしも、うちで べんきょうしたよ。」"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
