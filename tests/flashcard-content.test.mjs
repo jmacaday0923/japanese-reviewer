@@ -110,7 +110,7 @@ test("pre-made bank: the shared section converter exactly matches every eligible
   }
   assert.deepEqual(drafts,all.map(item=>item.draft));
 });
-test("pre-made bank: all 13 page decks validate and fit together without dropping cards",()=>{
+test("pre-made bank: every page deck validate and fit together without dropping cards",()=>{
   const drafts=[],counts=[];
   for(const [kind,file] of groups.filter(([kind])=>kind!=="practice"))for(const page of load(file)) {
     const pageDrafts=all.filter(item=>item.context.kind===kind&&item.context.id===page.ch).map(item=>item.draft);
@@ -120,7 +120,7 @@ test("pre-made bank: all 13 page decks validate and fit together without droppin
     assert.equal(result.skipped,0);assert.equal(result.added,new Set(validated.map(flashcardId)).size);
     counts.push(result.added);drafts.push(...validated);
   }
-  assert.equal(counts.length,13);assert.ok(counts.every(count=>count>0));
+  assert.equal(counts.length,groups.filter(([kind])=>kind!=="practice").reduce((n,[,file])=>n+load(file).length,0));assert.ok(counts.every(count=>count>0));
   const result=addFlashcards(EMPTY_FLASHCARDS,drafts,1000);
   assert.equal(result.skipped,0);assert.equal(result.added,new Set(drafts.map(flashcardId)).size);
   assert.deepEqual(parseFlashcardData(JSON.stringify(result.data)),result.data);

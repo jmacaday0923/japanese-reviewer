@@ -258,3 +258,18 @@ Each question is worth one raw mark. Both parts contribute to the score out of 5
 The dashboard and navigation group all three exams under **Checkpoints**, with a link after Chapter 5. The Chapter 10 exams keep their question IDs, revisions and storage keys. `/practice/1` is a compatibility address for the same Chapter 5 exam, with the same answers and history. Old exercise, answer and passage fragments select their corresponding questions; an old answer-key link never submits an exam or exposes a key. Existing search and bookmark records remain usable. The unchanged `practice.json` remains the source archive for provenance, search and bookmark resolution, so old search snippets can still contain source answer explanations.
 
 `migration/chapter-5-checkpoint-audit.json` maps every question and key back to that archive, including original reading numbers and native display text. `tests/chapter-5-checkpoint.test.mjs` verifies all 54 mappings and the three passages; `e2e/chapter-5-checkpoint.spec.ts` covers completion, persistence, retries, legacy fragments and narrow screens.
+
+
+## Chapter 11
+
+`/chapters/11` adds **Set Phrases, Changes and Potential Forms**, adapted from the supplied scanned Chapter11.pdf (printed pages 7–22): 42 vocabulary entries, 86 bilingual lesson examples, the 14-row potential-form chart, two reading passages and all 90 workbook questions.
+
+The chapter uses the existing lesson/vocabulary/mix-up/exercise/model-answer layout, search index, bookmarks, flashcard buttons and pre-made decks. Three additional lesson-based sentence puzzles follow the existing sentence bank. Japanese leads and romaji starts hidden. Reading romaji and English are in independent closed disclosures. New reading-vocabulary notes follow each passage; previously taught 本社 and 支店 are not repeated as new words.
+
+`src/data/workbook-exercises.json` stores 12 source-labelled activities. `StudyHtml` replaces each `data-workbook-set` reference block with the reusable `WorkbookExercises` component. Of the 90 questions, 68 use explicit checked answers (including word tiles); 22 open cloze, personal and translation questions use model comparison and self-check. All inputs are interactive. Correct answers stay locked during retries and the first score is preserved for checked activities. Self-check results are labelled separately. Like existing chapter practice, progress lasts in the open page; a full reload starts fresh.
+
+All 12 activities show a smaller English instruction directly below the Japanese instruction. These task directions stay visible even when English reading aids are hidden. The translations are stored in each activity's optional `instructionsEn` field.
+
+No answer key was supplied. All keys and explanations are **added model answers**, not official textbook answers. Typed exercises request kana and accept reviewed printed variants; this is not an unrestricted Japanese sentence evaluator. Text-grammar question 3 accepts both が and を with 書けます. Other transformation drills explicitly request the textbook's が pattern. The potential chart uses 五段／一段／special labels to clarify the PDF's terminology.
+
+`migration/chapter-11-audit.json` records source checksums, printed-page coverage, keys, adaptations, reading notes and hashes proving Chapters 1–10 are unchanged. Existing Chapter 5/10 checkpoints keep their scope, revisions and storage keys. Future chapters can append workbook sets and source reference markup without changing the grading component.

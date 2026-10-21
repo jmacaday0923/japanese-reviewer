@@ -43,7 +43,7 @@ const pagesByHref = new Map(
 
 test("the index covers every study page and nothing else", () => {
   assert.deepEqual(index.pages.map((p) => p.href), [...pagesByHref.keys()]);
-  assert.equal(index.pages.length, 14);
+  assert.equal(index.pages.length, sources.reduce((n, s) => n + s.pages.length, 0));
   assert.equal(index.pages.find((p) => p.href === "/kanji/2").name, "Kanji 2: Time, Seasons and Directions");
   assert.equal(index.pages.find((p) => p.href === "/practice/1").name, "Practice 1: N5 Practice Exam, Chapters 1 to 5");
   // every page has entries
@@ -136,7 +136,7 @@ test("plain text from the page HTML", () => {
 });
 
 test("chapter options come from the data, numbers first", () => {
-  assert.deepEqual(chapters.map((o) => o.value), ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "kana", "kanji", "practice"]);
+  assert.deepEqual(chapters.map((o) => o.value), ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "kana", "kanji", "practice"]);
   assert.deepEqual(chapters.at(-1), { value: "practice", label: "N5 practice" });
   assert.deepEqual(buildChapterOptions(["10", "2", "zeta", "kanji", "practice", "2", "1", "alpha", "kana"]).map((o) => o.value), [
     "1", "2", "10", "kana", "kanji", "practice", "alpha", "zeta",

@@ -14,8 +14,8 @@ const studyPages = [
 ];
 
 test("study outlines: the page sections on top, every toc entry under the section that holds it", () => {
-  // 10 chapters, the kana page, Kanji 1 and 2, and the N5 practice exam
-  assert.equal(studyPages.length, 14);
+  // Every chapter, the kana page, Kanji 1 and 2, and the N5 practice archive
+  assert.equal(studyPages.length, load("chapters.json").length + load("kana.json").length + load("kanji.json").length + load("practice.json").length);
   for (const [group, page] of studyPages) {
     const name = `${group} ${page.ch}`;
     const outline = studyOutline(page.sections, page.toc);

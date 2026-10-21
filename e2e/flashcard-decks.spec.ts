@@ -1,4 +1,4 @@
-import { test, expect, visibleMain } from "./fixtures";
+import { test, expect, visibleMain, library } from "./fixtures";
 import { FLASHCARD_KEY, EMPTY_FLASHCARDS, addFlashcard, flashcardId, parseFlashcardDeck, reviewFlashcard, type FlashcardData } from "../src/lib/flashcards";
 const student={kind:"vocabulary" as const,japanese:"学生",kana:"がくせい",romaji:"gakusei",meaning:"student",
   source:{key:"chapter:1",label:"Chapter 1 › People",href:"/chapters/1#c1-people-and-jobs"}};
@@ -31,8 +31,8 @@ test("table header saves the whole table once and preserves an already reviewed 
   expect(await readData(page)).toEqual(saved);
 });
 
-test("all thirteen pre-made endpoints return valid source-backed cards and unknown decks return 404",async({request})=>{
-  const slugs=[...Array.from({length:10},(_,i)=>"chapter-"+(i+1)),"kana-1","kanji-1","kanji-2"];
+test("all pre-made endpoints return valid source-backed cards and unknown decks return 404",async({request})=>{
+  const slugs=[...library.chapters.map(c=>"chapter-"+c.ch),...library.kana.map(c=>"kana-"+c.ch),...library.kanji.map(c=>"kanji-"+c.ch)];
   for(const slug of slugs){
     const response=await request.get("/flashcard-decks/"+slug);
     expect(response.ok()).toBeTruthy();
@@ -47,7 +47,7 @@ test("an empty browser can select multiple decks; only selected decks load and s
   const requests:string[]=[];page.on("request",request=>{if(new URL(request.url()).pathname.startsWith("/flashcard-decks/"))requests.push(new URL(request.url()).pathname);});
   await page.goto("/flashcards");
   const picker=visibleMain(page).getByRole("region",{name:"Pre-made decks",exact:true});
-  await expect(picker.getByRole("checkbox")).toHaveCount(13);
+  await expect(picker.getByRole("checkbox")).toHaveCount(library.chapters.length+library.kana.length+library.kanji.length);
   await expect(picker.getByRole("button",{name:"Add selected decks and review",exact:true})).toBeDisabled();
   expect(requests).toEqual([]);
   await picker.getByRole("checkbox",{name:/^Kana 1 —/}).check();

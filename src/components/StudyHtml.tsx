@@ -1,4 +1,6 @@
 import "server-only";
+import WorkbookExercises from "@/components/WorkbookExercises";
+import { workbookSet } from "@/lib/workbook-bank";
 import { createElement, type ReactNode } from "react";
 import englishCatalog from "@/data/english-display.json";
 import catalog from "@/data/japanese-display.json";
@@ -11,6 +13,11 @@ export default function StudyHtml({ html, scope = "", literal = false, english =
       if (optional) return node.text;
       const display = studyDisplay(english ? englishCatalog : catalog, node.text, scope);
       return display.romaji ? <StudyText key={index} display={display} /> : display.primary;
+    }
+    if (node.tag === "div" && node.attrs["data-workbook-set"]) {
+      const set = workbookSet(node.attrs["data-workbook-set"]);
+      if (!set) throw new Error("Unknown workbook exercise set: " + node.attrs["data-workbook-set"]);
+      return <WorkbookExercises key={index} set={set} />;
     }
     // Previously added native support panels keep their own explicit reveal.
     const skip = optional || node.tag === "details";

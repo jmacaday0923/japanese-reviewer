@@ -23,7 +23,7 @@ test("reading exercises: all twelve Chapter 5-10 passages and 58 questions are c
   assert.equal(audit.passages.length, 12);
   assert.equal(audit.passages.reduce((sum, passage) => sum + passage.questions.length, 0), 58);
   assert.equal(new Set(audit.passages.map(passage => passage.heading)).size, 12);
-  for (const page of pages) {
+  for (const page of pages.filter(page => Number(page.ch) <= 10)) {
     const count = (exerciseHtml(page.ch).match(/data-reading-exercise=/g) ?? []).length;
     assert.equal(count, Number(page.ch) >= 5 ? 2 : 0);
     if (Number(page.ch) < 5) continue;

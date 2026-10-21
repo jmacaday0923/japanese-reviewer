@@ -1,14 +1,15 @@
 {
   "version": 1,
-  "scope": "All 14 study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.",
+  "scope": "All 15 study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.",
   "method": "Exact reviewed display strings. Original source text remains available as a romaji hint; native reading/workbook disclosures stay closed until opened.",
   "sourceHashes": {
-    "src/data/chapters.json": "f76397ef01127a5a21da5cc9ab0390e7462c2a9faf65181d244561fc177eac75",
+    "src/data/chapters.json": "45c9acc5692d9cc681ce2a2f4f3b1593b7fc8972bb544d0b50101db1386b885d",
     "src/data/kana.json": "677dc9d1a4f2ace6908a1bc02f3f17ebc6905524dd24fc33dff7a3ae84e98435",
     "src/data/kanji.json": "2cceecfbcb9d4087d304757aa156161f2f6c53dd9aa7891fc09a47f92ec39234",
     "src/data/practice.json": "5a23e3eb45afff8f5bb6c48eca77e39c756c57b49b5ed7b8dccfddcd461af8aa",
     "src/data/exercises.json": "1147c19bd967c53a386f8dc7972846ab3dcc4cafd66cb6a6c6ff2d73e99b1f71",
-    "src/data/sentence-exercises.json": "4acf90c2b948a7b2cda8479755b632c3218bba5e0539d29f9f81f522740ca3e9"
+    "src/data/sentence-exercises.json": "598fcf17a92adeb1b39fd9f3357b7ed9fb7b85d578bdf071d55e5cfe594095e4",
+    "src/data/workbook-exercises.json": "7daa11fd5b93dc0e2989bf4cf7fd114de6324a5fb7b65f036a70411689224af2"
   },
   "displayHashes": {
     "src/data/japanese-display.json": "ca788915141b5f05f1f56804551fbbda7f3e0598d5366ada31c51eab14a0471e",
@@ -17,93 +18,114 @@
   "catalogEntries": 8941,
   "scopedEntries": 148,
   "englishReferenceEntries": 148,
-  "nativePanels": 92,
+  "nativePanels": 108,
   "pages": [
     {
       "page": "chapter/1",
       "sections": 5,
       "textNodes": 1569,
-      "japaneseDisplays": 343
+      "japaneseDisplays": 343,
+      "nativeJapaneseNodes": 779
     },
     {
       "page": "chapter/2",
       "sections": 5,
       "textNodes": 1268,
-      "japaneseDisplays": 321
+      "japaneseDisplays": 321,
+      "nativeJapaneseNodes": 611
     },
     {
       "page": "chapter/3",
       "sections": 5,
       "textNodes": 2378,
-      "japaneseDisplays": 544
+      "japaneseDisplays": 544,
+      "nativeJapaneseNodes": 1168
     },
     {
       "page": "chapter/4",
       "sections": 5,
       "textNodes": 2776,
-      "japaneseDisplays": 679
+      "japaneseDisplays": 679,
+      "nativeJapaneseNodes": 1290
     },
     {
       "page": "chapter/5",
       "sections": 5,
       "textNodes": 2841,
-      "japaneseDisplays": 764
+      "japaneseDisplays": 764,
+      "nativeJapaneseNodes": 1327
     },
     {
       "page": "chapter/6",
       "sections": 5,
       "textNodes": 3027,
-      "japaneseDisplays": 1135
+      "japaneseDisplays": 1135,
+      "nativeJapaneseNodes": 1574
     },
     {
       "page": "chapter/7",
       "sections": 5,
       "textNodes": 2856,
-      "japaneseDisplays": 1120
+      "japaneseDisplays": 1120,
+      "nativeJapaneseNodes": 1469
     },
     {
       "page": "chapter/8",
       "sections": 5,
       "textNodes": 3131,
-      "japaneseDisplays": 1106
+      "japaneseDisplays": 1106,
+      "nativeJapaneseNodes": 1522
     },
     {
       "page": "chapter/9",
       "sections": 5,
       "textNodes": 3776,
-      "japaneseDisplays": 1379
+      "japaneseDisplays": 1379,
+      "nativeJapaneseNodes": 1922
     },
     {
       "page": "chapter/10",
       "sections": 5,
       "textNodes": 4342,
-      "japaneseDisplays": 1707
+      "japaneseDisplays": 1707,
+      "nativeJapaneseNodes": 2279
+    },
+    {
+      "page": "chapter/11",
+      "sections": 5,
+      "textNodes": 615,
+      "japaneseDisplays": 0,
+      "nativeJapaneseNodes": 426
     },
     {
       "page": "kana/1",
       "sections": 5,
       "textNodes": 3962,
-      "japaneseDisplays": 1083
+      "japaneseDisplays": 1083,
+      "nativeJapaneseNodes": 2323
     },
     {
       "page": "kanji/1",
       "sections": 5,
       "textNodes": 2725,
-      "japaneseDisplays": 82
+      "japaneseDisplays": 82,
+      "nativeJapaneseNodes": 1564
     },
     {
       "page": "kanji/2",
       "sections": 5,
       "textNodes": 2170,
-      "japaneseDisplays": 73
+      "japaneseDisplays": 73,
+      "nativeJapaneseNodes": 1196
     },
     {
       "page": "practice/1",
       "sections": 2,
       "textNodes": 356,
-      "japaneseDisplays": 127
+      "japaneseDisplays": 127,
+      "nativeJapaneseNodes": 175
     }
   ],
-  "reviewedSourceNodes": 37177,
+  "reviewedSourceNodes": 37792,
   "changedSourceNodes": 10463
 }

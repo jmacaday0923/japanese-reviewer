@@ -1027,6 +1027,76 @@
           "whyParagraph": 1
         }
       ]
+    },
+    {
+      "chapter": "11",
+      "order": [
+        {
+          "id": "sb-c11-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "わたしは イタリアの りょうりが すきです。",
+            "romaji": "watashi wa itaria no ryouri ga suki desu.",
+            "english": "I like Italian food.",
+            "source": {
+              "heading": "c11-11-1-wa-ga-adjectives",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "わたしは",
+            "イタリアの",
+            "りょうりが",
+            "すきです。"
+          ],
+          "why": "Use は for the person or topic and が for the thing liked, disliked, wanted, or the skill being described. 好き・きらい・上手・へた behave as な-adjectives; ほしい is an い-adjective.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c11-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "へやは きれいに なりました。",
+            "romaji": "heya wa kirei ni narimashita.",
+            "english": "The room became clean.",
+            "source": {
+              "heading": "c11-11-2-naru",
+              "table": 1,
+              "row": 11
+            }
+          },
+          "tokens": [
+            "へやは",
+            "きれいに",
+            "なりました。"
+          ],
+          "why": "なる describes a change of state. A noun or な-adjective takes に before なります. An い-adjective loses its final い and takes く before なります.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c11-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "ギターが ひけます。",
+            "romaji": "gita- ga hikemasu.",
+            "english": "I can play the guitar.",
+            "source": {
+              "heading": "c11-11-4-potential",
+              "table": 1,
+              "row": 8
+            }
+          },
+          "tokens": [
+            "ギター",
+            "が",
+            "ひけます。"
+          ],
+          "why": "The potential form expresses ability or the possibility of doing an action. In this textbook drill, change an action’s を-marked object to が. Keep other markers such as で, に and と.",
+          "whyParagraph": 2
+        }
+      ],
+      "transformations": []
     }
   ]
 }

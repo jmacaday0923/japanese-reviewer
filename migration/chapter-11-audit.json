@@ -1,0 +1,801 @@
+{
+  "version": 1,
+  "chapter": "11",
+  "sourceFile": "Chapter11.pdf",
+  "sourceSha256": "88f80cec88807a5952111f22f83d6dafdc5da552fcdff09824997235957d4e24",
+  "pdfPageCount": 1,
+  "printedPages": [
+    7,
+    22
+  ],
+  "sourceIsScan": true,
+  "textReview": "All 13 embedded image strips visually reviewed, including printed Chapter 11 pages 7–22. Cover, preface, guide and contents are not chapter study material.",
+  "patterns": [
+    "11.1 は／が with adjectives and verbs",
+    "11.2 なる",
+    "11.3 する",
+    "11.4 potential verbs",
+    "11.5 見える／聞こえる"
+  ],
+  "vocabularyCount": 42,
+  "bilingualExampleCount": 86,
+  "conjugationReferenceRows": 14,
+  "workbookQuestionCount": 90,
+  "automaticQuestions": 68,
+  "selfCheckQuestions": 22,
+  "modelAnswersAreGenerated": true,
+  "adaptations": [
+    "No supplied answer key; all keys and explanations are added model answers. Open cloze, personal and translation answers use self-check.",
+    "PDF page 15 labels are clarified as 五段／一段／special rather than treating all 五段 verbs as irregular.",
+    "The ADZ company name is written エーディーゼット in Japanese to avoid Latin text in the primary sentence.",
+    "Source page 9 ambiguously glosses パソコン as laptop; its meaning is computer. Its sentence remains unchanged.",
+    "Source p.16 says object を changes to が; that is the explicit instruction for these drills, not a claim that every potential construction universally forbids を.",
+    "Source p.17 アナさんが聞こえますか is retained with a note explaining the implied voice.",
+    "Parenthetical/ruby readings above kanji are not reproduced; separate readings remain optional.",
+    "Reading passages retain the source wording, with romaji and English supplied in closed disclosures.",
+    "Head office 本社 and branch 支店 were already taught in Chapters 1 and 3; they are not repeated as new-reading notes.",
+    "PDF p.16 asks for potential form and meaning; users type the polite potential and compare the English meaning after checking.",
+    "No new checkpoint is added; the Chapter 5 and 10 checkpoint scopes and keys remain unchanged.",
+    "Text-grammar p.20 question 3 accepts both が and を with 書けます; the model retains the textbook が pattern without rejecting a valid object-marker variant."
+  ],
+  "readingNotes": [
+    {
+      "passage": "c11-engineer-passage",
+      "words": [
+        "システム工学"
+      ]
+    },
+    {
+      "passage": "c11-friends-passage",
+      "words": [
+        "バンドのメンバー",
+        "選手",
+        "スポーツキャンプ",
+        "いい思い出"
+      ]
+    }
+  ],
+  "previousChapterHashes": {
+    "1": "fcb7cc4577bcd889e0c5691ad2ccb32db590916db6be859680f79210f815ea2f",
+    "2": "6f86cf68c36ec2de4fc7d50e98d64cc90dbc373e9f2e264f1a60c9f4c89eadb5",
+    "3": "f0068f578f8bebaf8db2e600ecb60fd8dede8df79507d6a54f3b6814a0424205",
+    "4": "71258037cbc1b33450d1d31f72256a1428933d1a6131b310ab870deac072b0e5",
+    "5": "fe04d1e80ea6aabe8fd19c0f52b2f742ec983bc524d124444ea6bf4d3603b044",
+    "6": "fcf66703797c342f46ffb4d267add642c32aafd3170c048f5767d669a9a29fca",
+    "7": "edc9c1c055016c78e9e81c0367c904a86bc34aefa91ed95c09a20c5707e60782",
+    "8": "37c43fb29be4ea196b0a484115cc7123fab2240cf003b7bf776a4e91f9a11809",
+    "9": "3894cb096eeab009e8077bd3b8f7d665270eb86cf762c1d223d9e5070f025841",
+    "10": "b8b460a8d09146229ba4e170ba0c982e457edab318b7a0502da624b674ec8dd9"
+  },
+  "sets": [
+    {
+      "id": "c11-negative-practice",
+      "heading": "c11-negative-practice",
+      "printedPage": 11,
+      "questions": [
+        {
+          "id": "c11-negative-practice-1",
+          "number": 1,
+          "mode": "text",
+          "model": "スポーツが じょうずではありません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-negative-practice-2",
+          "number": 2,
+          "mode": "text",
+          "model": "いすと つくえが いりません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-negative-practice-3",
+          "number": 3,
+          "mode": "text",
+          "model": "ぶどうが すきではありません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-negative-practice-4",
+          "number": 4,
+          "mode": "text",
+          "model": "カメラが ほしくないです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-negative-practice-5",
+          "number": 5,
+          "mode": "text",
+          "model": "サッカーが へたではありません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-negative-practice-6",
+          "number": 6,
+          "mode": "text",
+          "model": "きょう、クラスが ありません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-negative-practice-7",
+          "number": 7,
+          "mode": "text",
+          "model": "ドイツ語が わかりません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-negative-practice-8",
+          "number": 8,
+          "mode": "text",
+          "model": "じしょが いりません。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c11-expression-practice",
+      "heading": "c11-expression-practice",
+      "printedPage": 11,
+      "questions": [
+        {
+          "id": "c11-expression-practice-1",
+          "number": 1,
+          "mode": "self",
+          "model": "わかります",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-expression-practice-2",
+          "number": 2,
+          "mode": "self",
+          "model": "ほしい",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-expression-practice-3",
+          "number": 3,
+          "mode": "self",
+          "model": "すき",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-expression-practice-4",
+          "number": 4,
+          "mode": "self",
+          "model": "じょうず",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-expression-practice-5",
+          "number": 5,
+          "mode": "self",
+          "model": "いります",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-expression-practice-6",
+          "number": 6,
+          "mode": "self",
+          "model": "できます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-expression-practice-7",
+          "number": 7,
+          "mode": "self",
+          "model": "あります",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-expression-practice-8",
+          "number": 8,
+          "mode": "self",
+          "model": "すき",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-expression-practice-9",
+          "number": 9,
+          "mode": "self",
+          "model": "じょうず",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c11-change-choices",
+      "heading": "c11-change-choices",
+      "printedPage": 14,
+      "questions": [
+        {
+          "id": "c11-change-choices-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "きれいに",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c11-change-choices-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "に",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c11-change-choices-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "に",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c11-change-choices-4",
+          "number": 4,
+          "mode": "choice",
+          "model": "さむく",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c11-change-choices-5",
+          "number": 5,
+          "mode": "choice",
+          "model": "あたらしい",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c11-change-choices-6",
+          "number": 6,
+          "mode": "choice",
+          "model": "じょうずに",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c11-change-choices-7",
+          "number": 7,
+          "mode": "choice",
+          "model": "たかく",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c11-change-choices-8",
+          "number": 8,
+          "mode": "choice",
+          "model": "に",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c11-change-choices-9",
+          "number": 9,
+          "mode": "choice",
+          "model": "な",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c11-change-choices-10",
+          "number": 10,
+          "mode": "choice",
+          "model": "おおきく",
+          "correctChoiceId": "1"
+        }
+      ]
+    },
+    {
+      "id": "c11-potential-forms",
+      "heading": "c11-potential-forms",
+      "printedPage": 16,
+      "questions": [
+        {
+          "id": "c11-potential-forms-1",
+          "number": 1,
+          "mode": "text",
+          "model": "きけます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-2",
+          "number": 2,
+          "mode": "text",
+          "model": "そうじできます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-3",
+          "number": 3,
+          "mode": "text",
+          "model": "おぼえられます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-4",
+          "number": 4,
+          "mode": "text",
+          "model": "もてます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-5",
+          "number": 5,
+          "mode": "text",
+          "model": "はたらけます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-6",
+          "number": 6,
+          "mode": "text",
+          "model": "おわれます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-7",
+          "number": 7,
+          "mode": "text",
+          "model": "よめます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-8",
+          "number": 8,
+          "mode": "text",
+          "model": "すえます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-9",
+          "number": 9,
+          "mode": "text",
+          "model": "もどれます",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-forms-10",
+          "number": 10,
+          "mode": "text",
+          "model": "しつもんできます",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c11-potential-sentences",
+      "heading": "c11-potential-sentences",
+      "printedPage": 16,
+      "questions": [
+        {
+          "id": "c11-potential-sentences-1",
+          "number": 1,
+          "mode": "text",
+          "model": "おさけが 飲めます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-sentences-2",
+          "number": 2,
+          "mode": "text",
+          "model": "うたが うたえます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-sentences-3",
+          "number": 3,
+          "mode": "text",
+          "model": "漢字が 書けます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-sentences-4",
+          "number": 4,
+          "mode": "text",
+          "model": "ギターが ひけます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-sentences-5",
+          "number": 5,
+          "mode": "text",
+          "model": "からいりょうりが 食べられます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-sentences-6",
+          "number": 6,
+          "mode": "text",
+          "model": "来週の 花火が 見られます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-sentences-7",
+          "number": 7,
+          "mode": "text",
+          "model": "やまださんと あえます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-sentences-8",
+          "number": 8,
+          "mode": "text",
+          "model": "日本の 新聞が 読めます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-sentences-9",
+          "number": 9,
+          "mode": "text",
+          "model": "一人で 帰れます。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c11-potential-drill",
+      "heading": "c11-potential-drill",
+      "printedPage": 17,
+      "questions": [
+        {
+          "id": "c11-potential-drill-1",
+          "number": 1,
+          "mode": "text",
+          "model": "漢字が 読めます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-2",
+          "number": 2,
+          "mode": "text",
+          "model": "明日 8時に 来られます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-3",
+          "number": 3,
+          "mode": "text",
+          "model": "うんてんが できます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-4",
+          "number": 4,
+          "mode": "text",
+          "model": "えいごで 書けます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-5",
+          "number": 5,
+          "mode": "text",
+          "model": "すうがくが 教えられます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-6",
+          "number": 6,
+          "mode": "text",
+          "model": "そとで まてます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-7",
+          "number": 7,
+          "mode": "text",
+          "model": "りょうりが できます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-8",
+          "number": 8,
+          "mode": "text",
+          "model": "千円のきっぷが 買えます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-9",
+          "number": 9,
+          "mode": "text",
+          "model": "かんこく語で 話せます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-potential-drill-10",
+          "number": 10,
+          "mode": "text",
+          "model": "じてんしゃで 帰れます。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c11-grammar-choices",
+      "heading": "c11-grammar-choices",
+      "printedPage": 18,
+      "questions": [
+        {
+          "id": "c11-grammar-choices-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "聞こえません",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c11-grammar-choices-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "なりました",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c11-grammar-choices-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "いそがしい",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c11-grammar-choices-4",
+          "number": 4,
+          "mode": "choice",
+          "model": "あまり",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c11-grammar-choices-5",
+          "number": 5,
+          "mode": "choice",
+          "model": "します",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c11-grammar-choices-6",
+          "number": 6,
+          "mode": "choice",
+          "model": "わかりますか",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c11-grammar-choices-7",
+          "number": 7,
+          "mode": "choice",
+          "model": "へた",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c11-grammar-choices-8",
+          "number": 8,
+          "mode": "choice",
+          "model": "いります",
+          "correctChoiceId": "3"
+        }
+      ]
+    },
+    {
+      "id": "c11-word-order",
+      "heading": "c11-word-order",
+      "printedPage": 19,
+      "questions": [
+        {
+          "id": "c11-word-order-1",
+          "number": 1,
+          "mode": "order",
+          "model": "四月から 五月まで あつく なる。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-word-order-2",
+          "number": 2,
+          "mode": "order",
+          "model": "スミスさんは 日本語と 中国語が ちょっと できます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-word-order-3",
+          "number": 3,
+          "mode": "order",
+          "model": "ばんごはんは なにに しますか。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-word-order-4",
+          "number": 4,
+          "mode": "order",
+          "model": "レポートが 来週の 火よう日に だせますか。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-word-order-5",
+          "number": 5,
+          "mode": "order",
+          "model": "わたしの へやから となりの ビルが 見えません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-word-order-6",
+          "number": 6,
+          "mode": "order",
+          "model": "おとうとは サッカーが とても じょうずです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-word-order-7",
+          "number": 7,
+          "mode": "order",
+          "model": "今週の 日よう日は 時間が ありますか。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-word-order-8",
+          "number": 8,
+          "mode": "order",
+          "model": "となりの へやから こえが 聞こえます。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c11-text-grammar",
+      "heading": "c11-text-grammar",
+      "printedPage": 20,
+      "questions": [
+        {
+          "id": "c11-text-grammar-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "あります",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c11-text-grammar-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "わかります",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c11-text-grammar-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "が",
+          "correctChoiceId": "4"
+        }
+      ]
+    },
+    {
+      "id": "c11-reading-comprehension",
+      "heading": "c11-reading-comprehension",
+      "printedPage": 21,
+      "questions": [
+        {
+          "id": "c11-reading-comprehension-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "友だちとの おもいで",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c11-reading-comprehension-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "バスケットボールの せんしゅ",
+          "correctChoiceId": "4"
+        }
+      ]
+    },
+    {
+      "id": "c11-personal-answers",
+      "heading": "c11-personal-answers",
+      "printedPage": 22,
+      "questions": [
+        {
+          "id": "c11-personal-answers-1",
+          "number": 1,
+          "mode": "self",
+          "model": "はい、からいりょうりが 食べられます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-2",
+          "number": 2,
+          "mode": "self",
+          "model": "いいえ、中国語が わかりません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-3",
+          "number": 3,
+          "mode": "self",
+          "model": "はい、車のうんてんが できます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-4",
+          "number": 4,
+          "mode": "self",
+          "model": "クリスマスに 新しいけいたいが ほしいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-5",
+          "number": 5,
+          "mode": "self",
+          "model": "ひらがなと カタカナが 書けます。漢字は すこし 書けます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-6",
+          "number": 6,
+          "mode": "self",
+          "model": "日本の りょうりが すきです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-7",
+          "number": 7,
+          "mode": "self",
+          "model": "はい、土よう日に 日本語のクラスが あります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-8",
+          "number": 8,
+          "mode": "self",
+          "model": "にがい 食べものが きらいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-9",
+          "number": 9,
+          "mode": "self",
+          "model": "はい、日本のうたが うたえます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-personal-answers-10",
+          "number": 10,
+          "mode": "self",
+          "model": "まだ あまり じょうずに できません。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c11-translation-practice",
+      "heading": "c11-translation-practice",
+      "printedPage": 22,
+      "questions": [
+        {
+          "id": "c11-translation-practice-1",
+          "number": 1,
+          "mode": "self",
+          "model": "ア：すみません、英語が わかりますか。\nイ：はい、すこし わかります。\nア：英語を べんきょうしましたか。\nイ：はい、アメリカで べんきょうしました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-translation-practice-2",
+          "number": 2,
+          "mode": "self",
+          "model": "ア：日本のりょうりが すきですか。\nイ：はい、日本のりょうりが 大すきです。\nア：さしみと すしが 食べられますか。\nイ：はい、さしみと すしは おいしいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c11-translation-practice-3",
+          "number": 3,
+          "mode": "self",
+          "model": "ア：これは 友だちのジェーンさんの しゃしんです。きょねん いしゃに なりました。\nイ：そうですか。大学の友だちですか。\nア：はい、大学の クラスメートでした。",
+          "correctChoiceId": null
+        }
+      ]
+    }
+  ],
+  "grammarReviewReferences": [
+    {
+      "url": "https://www.irodori.jpf.go.jp/assets/data/elementary01/pdf/Y_L03.pdf",
+      "purpose": "Noun/な-adjective に and い-adjective く before なる."
+    },
+    {
+      "url": "https://www.irodori.jpf.go.jp/assets/data/Grammar_all.pdf",
+      "purpose": "Potential conjugation forms and choosing with にします."
+    },
+    {
+      "url": "https://www.kyozai.jpf.go.jp/kyozai/material/BTS00063/ja/render.do",
+      "purpose": "Standard potential-form groups and the separate verbs 見える／聞こえる."
+    }
+  ],
+  "questionDataSha256": "7daa11fd5b93dc0e2989bf4cf7fd114de6324a5fb7b65f036a70411689224af2"
+}

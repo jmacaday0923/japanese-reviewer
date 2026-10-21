@@ -16,9 +16,10 @@ async function select(question: Locator, ids: number[]) {
 }
 const correctOrder = (tokens: string[]) => tokens.map((_, index) => index);
 
+// Give each route its own test budget instead of sharing 30 seconds across the course.
 // Keep the old Particles/Vocabulary region independent: these assertions use the new region only.
-test("all chapters offer source-backed puzzles; transformation links and study-page boundaries", async ({ page }) => {
-  for (const entry of bank.chapters) {
+for (const entry of bank.chapters) {
+  test("Chapter " + entry.chapter + ": source-backed puzzles and transformation links", async ({ page }) => {
     await page.goto("/chapters/" + entry.chapter + "#exercises");
     await expect(practice(page)).toBeVisible();
     await expect(practice(page).getByRole("tab", { name: "Word order (3)", exact: true })).toHaveAttribute("aria-selected", "true");
@@ -27,12 +28,14 @@ test("all chapters offer source-backed puzzles; transformation links and study-p
     if (!entry.transformations.length) {
       await expect(practice(page).getByRole("link", { name: "Chapter 10", exact: true })).toHaveAttribute("href", "/chapters/10#exercises");
     }
-  }
-  for (const path of ["/kana/1", "/kanji/1", "/practice/1"]) {
+  });
+}
+for (const path of ["/kana/1", "/kanji/1", "/practice/1"]) {
+  test(path + ": sentence building stays on chapter pages", async ({ page }) => {
     await page.goto(path);
     await expect(practice(page)).toHaveCount(0);
-  }
-});
+  });
+}
 
 test("tiles support keyboard selection, removal, undo, clear, blank checks and source feedback", async ({ page }) => {
   await page.goto("/chapters/1#exercises");
@@ -193,7 +196,7 @@ test("answer hints follow reading preferences; the task cue and Japanese model r
   await expect(answer.locator("ruby, rt")).toHaveCount(0);
 });
 
-test("phone: tiles, model answers and transformation fields fit the panel", async ({ page }, testInfo) => {
+test("phone: tiles, model answers and transformation fields fit the panel", async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto("/chapters/10#exercises");
   const q = chapter("10").order[0];
@@ -206,14 +209,13 @@ test("phone: tiles, model answers and transformation fields fit the panel", asyn
   for (const button of await buttons.all()) {
     expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(44);
   }
-  await item.screenshot({ path: testInfo.outputPath("sentence-building-order-phone.png") });
+  // Keep screenshots out of the functional test budget; failure traces retain visual diagnostics.
   await practice(page).getByRole("tab", { name: /^Transformations/ }).click();
   const transform = row(page, chapter("10").transformations[0].id);
   await transform.getByRole("textbox").fill(chapter("10").transformations[0].answer.japanese);
   await check(transform).click();
   await expect(feedback(transform)).toContainText("Correct");
   expect(await practice(page).evaluate(element => element.scrollWidth > element.clientWidth)).toBe(false);
-  await transform.screenshot({ path: testInfo.outputPath("sentence-building-phone.png") });
   await page.setViewportSize({ width: 320, height: 750 });
   expect(await practice(page).evaluate(element => element.scrollWidth > element.clientWidth)).toBe(false);
 });

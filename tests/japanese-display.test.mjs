@@ -16,10 +16,10 @@ const source = scripts.flatMap(file => load(`src/data/${file}.json`));
 // Source integrity protects flashcard IDs, search, answer acceptance and the
 // sentence bank's source references while the UI gains Japanese prompts.
 test('Japanese display audit includes every current study page and source bank', () => {
-  assert.equal(audit.pages.length, 14);
-  assert.equal(audit.pages.reduce((n, p) => n + p.sections, 0), 67);
+  assert.equal(audit.pages.length, source.length);
+  assert.equal(audit.pages.reduce((n, p) => n + p.sections, 0), source.reduce((n, p) => n + p.sections.length, 0));
   assert.ok(audit.changedSourceNodes > 7000);
-  assert.ok(audit.pages.every(page => page.japaneseDisplays > 0));
+  assert.ok(audit.pages.every(page => page.nativeJapaneseNodes > 0));
   for (const [path, hash] of Object.entries(audit.sourceHashes)) {
     assert.equal(createHash('sha256').update(readFileSync(new URL('../' + path, import.meta.url))).digest('hex'), hash, path + ' needs a content review');
   }

@@ -19,9 +19,9 @@ const rows = html => [...html.matchAll(/<tr>([\s\S]*?)<\/tr>/g)]
   .map(match => [...match[1].matchAll(/<td>([\s\S]*?)<\/td>/g)].map(cell => cell[1])).filter(row => row.length);
 const support = activity => block(activity).match(/<details[^>]*>([\s\S]*?)<\/details>/)?.[1] ?? "";
 
-test("workbook coverage: every chapter, all 78 updated activities and all 610 existing rows survive", () => {
+test("workbook coverage: original Chapters 1-10, all 78 updated activities and all 610 existing rows survive", () => {
   assert.equal(audit.version, 1);
-  assert.deepEqual([...new Set(audit.activities.map(a => a.chapter))], pages.map(page => page.ch));
+  assert.deepEqual([...new Set(audit.activities.map(a => a.chapter))], pages.filter(page => Number(page.ch) <= 10).map(page => page.ch));
   assert.equal(audit.activities.length, 78);
   assert.equal(audit.activities.filter(a => a.hasSupport).length, 68);
   assert.equal(audit.activities.reduce((sum, a) => sum + a.questions.length, 0), 510);

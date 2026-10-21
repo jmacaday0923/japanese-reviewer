@@ -1,0 +1,2111 @@
+{
+  "version": 1,
+  "chapters": [
+    {
+      "chapter": "11",
+      "sets": [
+        {
+          "id": "c11-negative-practice",
+          "chapter": "11",
+          "title": "文を否定にする（p.11）",
+          "sourcePage": 11,
+          "instructionsJa": "文ぜんたいを、ていねいな否定の形に かえてください。かなで 書けます。",
+          "instructionsEn": "Rewrite each whole sentence in the polite negative form. You can write in kana.",
+          "questions": [
+            {
+              "id": "c11-negative-practice-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "スポーツが じょうずです。",
+              "model": "スポーツが じょうずではありません。",
+              "whyJa": "がは そのままです。形容詞か 動詞の 終わりを 否定に かえます。",
+              "whyEn": "Keep が and make the ending negative. な-adjectives take ではありません or じゃありません; ほしい changes to ほしくないです; verbs use their negative polite forms.",
+              "source": {
+                "printedPage": 11,
+                "number": 1
+              },
+              "accepted": [
+                "スポーツがじょうずではありません",
+                "スポーツがじょうずじゃありません",
+                "スポーツがじょうずじゃないです"
+              ],
+              "romaji": "supo-tsu ga jouzu desu."
+            },
+            {
+              "id": "c11-negative-practice-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "いすと つくえが いります。",
+              "model": "いすと つくえが いりません。",
+              "whyJa": "がは そのままです。形容詞か 動詞の 終わりを 否定に かえます。",
+              "whyEn": "Keep が and make the ending negative. な-adjectives take ではありません or じゃありません; ほしい changes to ほしくないです; verbs use their negative polite forms.",
+              "source": {
+                "printedPage": 11,
+                "number": 2
+              },
+              "accepted": [
+                "いすとつくえがいりません"
+              ],
+              "romaji": "isu to tsukue ga irimasu."
+            },
+            {
+              "id": "c11-negative-practice-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "ぶどうが すきです。",
+              "model": "ぶどうが すきではありません。",
+              "whyJa": "がは そのままです。形容詞か 動詞の 終わりを 否定に かえます。",
+              "whyEn": "Keep が and make the ending negative. な-adjectives take ではありません or じゃありません; ほしい changes to ほしくないです; verbs use their negative polite forms.",
+              "source": {
+                "printedPage": 11,
+                "number": 3
+              },
+              "accepted": [
+                "ぶどうがすきではありません",
+                "ぶどうがすきじゃありません",
+                "ぶどうがすきじゃないです"
+              ],
+              "romaji": "budou ga suki desu."
+            },
+            {
+              "id": "c11-negative-practice-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "カメラが ほしいです。",
+              "model": "カメラが ほしくないです。",
+              "whyJa": "がは そのままです。形容詞か 動詞の 終わりを 否定に かえます。",
+              "whyEn": "Keep が and make the ending negative. な-adjectives take ではありません or じゃありません; ほしい changes to ほしくないです; verbs use their negative polite forms.",
+              "source": {
+                "printedPage": 11,
+                "number": 4
+              },
+              "accepted": [
+                "カメラがほしくないです",
+                "カメラがほしくありません"
+              ],
+              "romaji": "kamera ga hoshii desu."
+            },
+            {
+              "id": "c11-negative-practice-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "サッカーが へたです。",
+              "model": "サッカーが へたではありません。",
+              "whyJa": "がは そのままです。形容詞か 動詞の 終わりを 否定に かえます。",
+              "whyEn": "Keep が and make the ending negative. な-adjectives take ではありません or じゃありません; ほしい changes to ほしくないです; verbs use their negative polite forms.",
+              "source": {
+                "printedPage": 11,
+                "number": 5
+              },
+              "accepted": [
+                "サッカーがへたではありません",
+                "サッカーがへたじゃありません",
+                "サッカーがへたじゃないです"
+              ],
+              "romaji": "sakka- ga heta desu."
+            },
+            {
+              "id": "c11-negative-practice-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "きょう、クラスが あります。",
+              "model": "きょう、クラスが ありません。",
+              "whyJa": "がは そのままです。形容詞か 動詞の 終わりを 否定に かえます。",
+              "whyEn": "Keep が and make the ending negative. な-adjectives take ではありません or じゃありません; ほしい changes to ほしくないです; verbs use their negative polite forms.",
+              "source": {
+                "printedPage": 11,
+                "number": 6
+              },
+              "accepted": [
+                "きょうクラスがありません"
+              ],
+              "romaji": "kyou, kurasu ga arimasu."
+            },
+            {
+              "id": "c11-negative-practice-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "ドイツ語が わかります。",
+              "model": "ドイツ語が わかりません。",
+              "whyJa": "がは そのままです。形容詞か 動詞の 終わりを 否定に かえます。",
+              "whyEn": "Keep が and make the ending negative. な-adjectives take ではありません or じゃありません; ほしい changes to ほしくないです; verbs use their negative polite forms.",
+              "source": {
+                "printedPage": 11,
+                "number": 7
+              },
+              "accepted": [
+                "ドイツ語がわかりません",
+                "ドイツごがわかりません"
+              ],
+              "romaji": "doitsugo ga wakarimasu."
+            },
+            {
+              "id": "c11-negative-practice-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "じしょが いります。",
+              "model": "じしょが いりません。",
+              "whyJa": "がは そのままです。形容詞か 動詞の 終わりを 否定に かえます。",
+              "whyEn": "Keep が and make the ending negative. な-adjectives take ではありません or じゃありません; ほしい changes to ほしくないです; verbs use their negative polite forms.",
+              "source": {
+                "printedPage": 11,
+                "number": 8
+              },
+              "accepted": [
+                "じしょがいりません"
+              ],
+              "romaji": "jisho ga irimasu."
+            }
+          ],
+          "heading": "c11-negative-practice"
+        },
+        {
+          "id": "c11-expression-practice",
+          "chapter": "11",
+          "title": "ことばを選ぶ（p.11）",
+          "sourcePage": 11,
+          "instructionsJa": "ことばを 入れてください。文によって 答えが いくつか あります。自分の答えを 書いてから 例と くらべましょう。",
+          "instructionsEn": "Fill in the missing word or expression. Some sentences allow more than one answer. Write your answer, then compare it with the example.",
+          "questions": [
+            {
+              "id": "c11-expression-practice-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "すみません、えいごが（　）か。",
+              "model": "わかります",
+              "whyJa": "「わかります」か「できます」で、英語を 理解できるか・使えるかを たずねられます。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 1
+              },
+              "romaji": "sumimasen, eigo ga ____ ka."
+            },
+            {
+              "id": "c11-expression-practice-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "あたらしいパソコンが（　）ですか。",
+              "model": "ほしい",
+              "whyJa": "「ほしい」なら パソコンが ほしいかを たずねます。「すき」なども 文として 成り立つので、意味を くらべましょう。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 2
+              },
+              "romaji": "atarashii pasokon ga ____ desu ka."
+            },
+            {
+              "id": "c11-expression-practice-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "からいりょうりが（　）じゃありません。",
+              "model": "すき",
+              "whyJa": "「すき」「きらい」「じょうず」「へた」などは 形として 入ります。自分が 言いたい 意味と 文の 終わりを たしかめましょう。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 3
+              },
+              "romaji": "karai ryouri ga ____ ja arimasen."
+            },
+            {
+              "id": "c11-expression-practice-4",
+              "number": 4,
+              "mode": "self",
+              "prompt": "バドミントンが（　）です。",
+              "model": "じょうず",
+              "whyJa": "好きか、得意か、苦手かで 答えが 変わります。この例は 得意という 意味です。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 4
+              },
+              "romaji": "badominton ga ____ desu."
+            },
+            {
+              "id": "c11-expression-practice-5",
+              "number": 5,
+              "mode": "self",
+              "prompt": "いくらぐらい（　）か。",
+              "model": "いります",
+              "whyJa": "どのくらい お金が 必要かを たずねる 例です。文脈によって ほかの 答えも 考えられます。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 5
+              },
+              "romaji": "ikura gurai ____ ka."
+            },
+            {
+              "id": "c11-expression-practice-6",
+              "number": 6,
+              "mode": "self",
+              "prompt": "イタリアのりょうりが（　）。",
+              "model": "できます",
+              "whyJa": "イタリア料理を 作れるという 例です。「わかります」「いります」などは 別の 意味に なるので、文脈を 考えます。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 6
+              },
+              "romaji": "itaria no ryouri ga ____."
+            },
+            {
+              "id": "c11-expression-practice-7",
+              "number": 7,
+              "mode": "self",
+              "prompt": "来週の 火よう日に かいぎが（　）か。",
+              "model": "あります",
+              "whyJa": "会議が 予定されているかを たずねます。「いります」なら 会議が 必要かという 別の 意味です。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 7
+              },
+              "romaji": "raishuu no kayoubi ni kaigi ga ____ ka."
+            },
+            {
+              "id": "c11-expression-practice-8",
+              "number": 8,
+              "mode": "self",
+              "prompt": "どんな 仕事が（　）ですか。",
+              "model": "すき",
+              "whyJa": "好きな 仕事を たずねる 例です。「じょうず」「へた」なら 得意・不得意を たずねる 文です。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 8
+              },
+              "romaji": "donna shigoto ga ____ desu ka."
+            },
+            {
+              "id": "c11-expression-practice-9",
+              "number": 9,
+              "mode": "self",
+              "prompt": "おねえさんは ピアノが（　）です。",
+              "model": "じょうず",
+              "whyJa": "「じょうず」は 技能、「すき」は 好みです。どちらも 文として 成り立ちます。",
+              "whyEn": "Several answers can fit this open gap. Compare the meaning you intended and the ending printed after the gap; the model is one example, not the only valid response.",
+              "source": {
+                "printedPage": 11,
+                "number": 9
+              },
+              "romaji": "oneesan wa piano ga ____ desu."
+            }
+          ],
+          "wordBank": [
+            "すき",
+            "きらい",
+            "へた",
+            "じょうず",
+            "ほしい",
+            "いります",
+            "できます",
+            "あります",
+            "わかります"
+          ],
+          "heading": "c11-expression-practice"
+        },
+        {
+          "id": "c11-change-choices",
+          "chapter": "11",
+          "title": "なる・するの形を選ぶ（p.14）",
+          "sourcePage": 14,
+          "instructionsJa": "（　）に 入る いちばん いい ものを、ひとつ 選んでください。",
+          "instructionsEn": "Choose the best option to fill in the blank.",
+          "questions": [
+            {
+              "id": "c11-change-choices-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "わたしと いもうとは へやを（　）しました。",
+              "model": "きれいに",
+              "whyJa": "きれいは な形容詞です。にを つけて しますを 続けます。",
+              "whyEn": "きれい is a な-adjective, so use に before します to describe making the room clean.",
+              "source": {
+                "printedPage": 14,
+                "number": 1
+              },
+              "romaji": "watashi to imouto wa heya o ____ shimashita.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "きれいな"
+                },
+                {
+                  "id": "2",
+                  "text": "きれいで"
+                },
+                {
+                  "id": "3",
+                  "text": "きれいに"
+                },
+                {
+                  "id": "4",
+                  "text": "きれいの"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c11-change-choices-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "アナさんは 大学の 先生（　）なりました。",
+              "model": "に",
+              "whyJa": "名詞の 先生には にを つけて なりましたを 続けます。",
+              "whyEn": "A profession is a noun. Use noun + に + なりました for becoming something.",
+              "source": {
+                "printedPage": 14,
+                "number": 2
+              },
+              "romaji": "ana san wa daigaku no sensei ____ narimashita.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "に"
+                },
+                {
+                  "id": "2",
+                  "text": "の"
+                },
+                {
+                  "id": "3",
+                  "text": "な"
+                },
+                {
+                  "id": "4",
+                  "text": "で"
+                }
+              ],
+              "correctChoiceId": "1"
+            },
+            {
+              "id": "c11-change-choices-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "ア：なにを つくりますか。\nイ：このりんごを ジュース（　）しますよ。",
+              "model": "に",
+              "whyJa": "りんごを ジュースに 変えるので、ジュースに しますです。",
+              "whyEn": "Use にします for turning the apples into juice.",
+              "source": {
+                "printedPage": 14,
+                "number": 3
+              },
+              "romaji": "A: nani o tsukurimasu ka. B: kono ringo o ju-su ____ shimasu yo.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "の"
+                },
+                {
+                  "id": "2",
+                  "text": "に"
+                },
+                {
+                  "id": "3",
+                  "text": "で"
+                },
+                {
+                  "id": "4",
+                  "text": "な"
+                }
+              ],
+              "correctChoiceId": "2"
+            },
+            {
+              "id": "c11-change-choices-4",
+              "number": 4,
+              "mode": "choice",
+              "prompt": "ゆうべ すこし（　）なりました。",
+              "model": "さむく",
+              "whyJa": "さむいの 最後の いを くに かえて、なりますを 続けます。",
+              "whyEn": "Change the final い of さむい to く before なりました.",
+              "source": {
+                "printedPage": 14,
+                "number": 4
+              },
+              "romaji": "yuube sukoshi ____ narimashita.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "さむい"
+                },
+                {
+                  "id": "2",
+                  "text": "さむいな"
+                },
+                {
+                  "id": "3",
+                  "text": "さむく"
+                },
+                {
+                  "id": "4",
+                  "text": "さむいに"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c11-change-choices-5",
+              "number": 5,
+              "mode": "choice",
+              "prompt": "（　）先生は しけんを むずかしく しました。",
+              "model": "あたらしい",
+              "whyJa": "先生という 名詞を 説明するので、い形容詞の あたらしいを 使います。",
+              "whyEn": "This adjective directly describes the noun 先生, so keep its い ending.",
+              "source": {
+                "printedPage": 14,
+                "number": 5
+              },
+              "romaji": "____ sensei wa shiken o muzukashiku shimashita.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "あたらしい"
+                },
+                {
+                  "id": "2",
+                  "text": "あたらしく"
+                },
+                {
+                  "id": "3",
+                  "text": "あたらしくて"
+                },
+                {
+                  "id": "4",
+                  "text": "あたらしいに"
+                }
+              ],
+              "correctChoiceId": "1"
+            },
+            {
+              "id": "c11-change-choices-6",
+              "number": 6,
+              "mode": "choice",
+              "prompt": "ジョンさんは かんじが（　）なりました。",
+              "model": "じょうずに",
+              "whyJa": "じょうずは な形容詞です。に なりましたで 技能の 変化を 表します。",
+              "whyEn": "じょうず is a な-adjective. に なりました describes a change in skill.",
+              "source": {
+                "printedPage": 14,
+                "number": 6
+              },
+              "romaji": "jon san wa kanji ga ____ narimashita.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "じょうず"
+                },
+                {
+                  "id": "2",
+                  "text": "じょうずで"
+                },
+                {
+                  "id": "3",
+                  "text": "じょうずな"
+                },
+                {
+                  "id": "4",
+                  "text": "じょうずに"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c11-change-choices-7",
+              "number": 7,
+              "mode": "choice",
+              "prompt": "でんしゃの きっぷは せんしゅう（　）なりました。",
+              "model": "たかく",
+              "whyJa": "たかいの 最後の いを くに かえます。",
+              "whyEn": "Change the final い of たかい to く before なりました.",
+              "source": {
+                "printedPage": 14,
+                "number": 7
+              },
+              "romaji": "densha no kippu wa senshuu ____ narimashita.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "たかい"
+                },
+                {
+                  "id": "2",
+                  "text": "たかく"
+                },
+                {
+                  "id": "3",
+                  "text": "たかくて"
+                },
+                {
+                  "id": "4",
+                  "text": "たかいに"
+                }
+              ],
+              "correctChoiceId": "2"
+            },
+            {
+              "id": "c11-change-choices-8",
+              "number": 8,
+              "mode": "choice",
+              "prompt": "わたしは エンジニア（　）なりました。",
+              "model": "に",
+              "whyJa": "職業を 表す 名詞には に なりましたを 使います。",
+              "whyEn": "Use に before なりました with the profession エンジニア.",
+              "source": {
+                "printedPage": 14,
+                "number": 8
+              },
+              "romaji": "watashi wa enjinia ____ narimashita.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "が"
+                },
+                {
+                  "id": "2",
+                  "text": "に"
+                },
+                {
+                  "id": "3",
+                  "text": "を"
+                },
+                {
+                  "id": "4",
+                  "text": "で"
+                }
+              ],
+              "correctChoiceId": "2"
+            },
+            {
+              "id": "c11-change-choices-9",
+              "number": 9,
+              "mode": "choice",
+              "prompt": "ピアノが じょうず（　）ひとが すきに なります。",
+              "model": "な",
+              "whyJa": "じょうずで ひとを 説明するので、じょうずな ひとです。",
+              "whyEn": "A な-adjective takes な when it directly modifies the noun ひと.",
+              "source": {
+                "printedPage": 14,
+                "number": 9
+              },
+              "romaji": "piano ga jouzu ____ hito ga suki ni narimasu.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "な"
+                },
+                {
+                  "id": "2",
+                  "text": "に"
+                },
+                {
+                  "id": "3",
+                  "text": "を"
+                },
+                {
+                  "id": "4",
+                  "text": "で"
+                }
+              ],
+              "correctChoiceId": "1"
+            },
+            {
+              "id": "c11-change-choices-10",
+              "number": 10,
+              "mode": "choice",
+              "prompt": "じを（　）します。",
+              "model": "おおきく",
+              "whyJa": "おおきいを おおきくに かえて、文字の 大きさを 変えることを 表します。",
+              "whyEn": "Change おおきい to おおきく before します to make the writing larger.",
+              "source": {
+                "printedPage": 14,
+                "number": 10
+              },
+              "romaji": "ji o ____ shimasu.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "おおきく"
+                },
+                {
+                  "id": "2",
+                  "text": "おおきくて"
+                },
+                {
+                  "id": "3",
+                  "text": "おおきくない"
+                },
+                {
+                  "id": "4",
+                  "text": "おおきいに"
+                }
+              ],
+              "correctChoiceId": "1"
+            }
+          ],
+          "heading": "c11-change-choices"
+        },
+        {
+          "id": "c11-potential-forms",
+          "chapter": "11",
+          "title": "可能形の表を完成する（p.16）",
+          "sourcePage": 16,
+          "instructionsJa": "辞書形を ていねいな可能形に かえてください。意味は 答えを見たあとに くらべましょう。",
+          "instructionsEn": "Change the dictionary form to the polite potential form. After checking your answer, review the meaning as well.",
+          "questions": [
+            {
+              "id": "c11-potential-forms-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "きく",
+              "model": "きけます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can listen. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 1
+              },
+              "accepted": [
+                "きけます"
+              ],
+              "romaji": "kiku"
+            },
+            {
+              "id": "c11-potential-forms-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "そうじする",
+              "model": "そうじできます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can clean. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 2
+              },
+              "accepted": [
+                "そうじできます"
+              ],
+              "romaji": "souji suru"
+            },
+            {
+              "id": "c11-potential-forms-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "おぼえる",
+              "model": "おぼえられます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can memorize. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 3
+              },
+              "accepted": [
+                "おぼえられます"
+              ],
+              "romaji": "oboeru"
+            },
+            {
+              "id": "c11-potential-forms-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "もつ",
+              "model": "もてます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can hold; can carry. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 4
+              },
+              "accepted": [
+                "もてます"
+              ],
+              "romaji": "motsu"
+            },
+            {
+              "id": "c11-potential-forms-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "はたらく",
+              "model": "はたらけます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can work. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 5
+              },
+              "accepted": [
+                "はたらけます"
+              ],
+              "romaji": "hataraku"
+            },
+            {
+              "id": "c11-potential-forms-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "おわる",
+              "model": "おわれます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can finish. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 6
+              },
+              "accepted": [
+                "おわれます"
+              ],
+              "romaji": "owaru"
+            },
+            {
+              "id": "c11-potential-forms-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "よむ",
+              "model": "よめます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can read. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 7
+              },
+              "accepted": [
+                "よめます"
+              ],
+              "romaji": "yomu"
+            },
+            {
+              "id": "c11-potential-forms-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "すう",
+              "model": "すえます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can smoke; can inhale. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 8
+              },
+              "accepted": [
+                "すえます"
+              ],
+              "romaji": "suu"
+            },
+            {
+              "id": "c11-potential-forms-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "もどる",
+              "model": "もどれます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can return. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 9
+              },
+              "accepted": [
+                "もどれます"
+              ],
+              "romaji": "modoru"
+            },
+            {
+              "id": "c11-potential-forms-10",
+              "number": 10,
+              "mode": "text",
+              "prompt": "しつもんする",
+              "model": "しつもんできます",
+              "whyJa": "五段は う段を え段に かえて ますを つけます。一段は るを られますに、するは できますに かえます。",
+              "whyEn": "can ask a question. Write the polite potential form; compare this meaning after checking.",
+              "source": {
+                "printedPage": 16,
+                "number": 10
+              },
+              "accepted": [
+                "しつもんできます"
+              ],
+              "romaji": "shitsumon suru"
+            }
+          ],
+          "heading": "c11-potential-forms"
+        },
+        {
+          "id": "c11-potential-sentences",
+          "chapter": "11",
+          "title": "文を可能形にする（p.16）",
+          "sourcePage": 16,
+          "instructionsJa": "文ぜんたいを、ていねいな可能形に かえてください。この練習では 目的語の「を」を「が」にします。ほかの助詞は そのままです。",
+          "instructionsEn": "Rewrite each whole sentence in the polite potential form. In this exercise, change the object particle を to が and keep the other particles as they are.",
+          "questions": [
+            {
+              "id": "c11-potential-sentences-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "おさけを 飲みます。",
+              "model": "おさけが 飲めます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 1
+              },
+              "accepted": [
+                "おさけがのめます",
+                "おさけが 飲めます。"
+              ],
+              "romaji": "osake o nomimasu."
+            },
+            {
+              "id": "c11-potential-sentences-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "うたを うたいます。",
+              "model": "うたが うたえます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 2
+              },
+              "accepted": [
+                "うたがうたえます",
+                "うたが うたえます。"
+              ],
+              "romaji": "uta o utaimasu."
+            },
+            {
+              "id": "c11-potential-sentences-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "漢字を 書きます。",
+              "model": "漢字が 書けます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 3
+              },
+              "accepted": [
+                "かんじがかけます",
+                "漢字が 書けます。"
+              ],
+              "romaji": "kanji o kakimasu."
+            },
+            {
+              "id": "c11-potential-sentences-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "ギターを ひきます。",
+              "model": "ギターが ひけます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 4
+              },
+              "accepted": [
+                "ギターがひけます",
+                "ギターが ひけます。"
+              ],
+              "romaji": "gita- o hikimasu."
+            },
+            {
+              "id": "c11-potential-sentences-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "からいりょうりを 食べます。",
+              "model": "からいりょうりが 食べられます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 5
+              },
+              "accepted": [
+                "からいりょうりがたべられます",
+                "からいりょうりが 食べられます。"
+              ],
+              "romaji": "karai ryouri o tabemasu."
+            },
+            {
+              "id": "c11-potential-sentences-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "来週の 花火を 見ます。",
+              "model": "来週の 花火が 見られます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 6
+              },
+              "accepted": [
+                "らいしゅうのはなびがみられます",
+                "来週の 花火が 見られます。"
+              ],
+              "romaji": "raishuu no hanabi o mimasu."
+            },
+            {
+              "id": "c11-potential-sentences-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "やまださんと あいます。",
+              "model": "やまださんと あえます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 7
+              },
+              "accepted": [
+                "やまださんとあえます",
+                "やまださんと あえます。"
+              ],
+              "romaji": "yamada san to aimasu."
+            },
+            {
+              "id": "c11-potential-sentences-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "日本の 新聞を 読みます。",
+              "model": "日本の 新聞が 読めます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 8
+              },
+              "accepted": [
+                "にほんのしんぶんがよめます",
+                "日本の 新聞が 読めます。"
+              ],
+              "romaji": "nihon no shinbun o yomimasu."
+            },
+            {
+              "id": "c11-potential-sentences-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "一人で 帰ります。",
+              "model": "一人で 帰れます。",
+              "whyJa": "動詞を 可能形に かえます。この練習では 目的語を がで 表し、ほかの助詞を 残します。",
+              "whyEn": "Change the verb to the polite potential. This drill asks for が in place of the action object’s を; retain other particles such as と and で.",
+              "source": {
+                "printedPage": 16,
+                "number": 9
+              },
+              "accepted": [
+                "ひとりでかえれます",
+                "一人で 帰れます。"
+              ],
+              "romaji": "hitori de kaerimasu."
+            }
+          ],
+          "heading": "c11-potential-sentences"
+        },
+        {
+          "id": "c11-potential-drill",
+          "chapter": "11",
+          "title": "動詞を可能形にする（p.17）",
+          "sourcePage": 17,
+          "instructionsJa": "文ぜんたいを、ていねいな可能形に かえてください。目的語の「を」は「が」にします。",
+          "instructionsEn": "Rewrite each whole sentence in the polite potential form. Change the object particle を to が.",
+          "questions": [
+            {
+              "id": "c11-potential-drill-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "漢字を 読む。",
+              "model": "漢字が 読めます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 1
+              },
+              "accepted": [
+                "かんじがよめます",
+                "漢字が 読めます。"
+              ],
+              "romaji": "kanji o yomu."
+            },
+            {
+              "id": "c11-potential-drill-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "明日 8時に 来る。",
+              "model": "明日 8時に 来られます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 2
+              },
+              "accepted": [
+                "あした8じにこられます",
+                "あしたはちじにこられます",
+                "明日 8時に 来られます。"
+              ],
+              "romaji": "ashita hachiji ni kuru."
+            },
+            {
+              "id": "c11-potential-drill-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "うんてんを する。",
+              "model": "うんてんが できます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 3
+              },
+              "accepted": [
+                "うんてんができます",
+                "うんてんが できます。"
+              ],
+              "romaji": "unten o suru."
+            },
+            {
+              "id": "c11-potential-drill-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "えいごで 書く。",
+              "model": "えいごで 書けます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 4
+              },
+              "accepted": [
+                "えいごでかけます",
+                "えいごで 書けます。"
+              ],
+              "romaji": "eigo de kaku."
+            },
+            {
+              "id": "c11-potential-drill-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "すうがくを 教える。",
+              "model": "すうがくが 教えられます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 5
+              },
+              "accepted": [
+                "すうがくがおしえられます",
+                "すうがくが 教えられます。"
+              ],
+              "romaji": "suugaku o oshieru."
+            },
+            {
+              "id": "c11-potential-drill-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "そとで まつ。",
+              "model": "そとで まてます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 6
+              },
+              "accepted": [
+                "そとでまてます",
+                "そとで まてます。"
+              ],
+              "romaji": "soto de matsu."
+            },
+            {
+              "id": "c11-potential-drill-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "りょうりを する。",
+              "model": "りょうりが できます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 7
+              },
+              "accepted": [
+                "りょうりができます",
+                "りょうりが できます。"
+              ],
+              "romaji": "ryouri o suru."
+            },
+            {
+              "id": "c11-potential-drill-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "千円のきっぷを 買う。",
+              "model": "千円のきっぷが 買えます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 8
+              },
+              "accepted": [
+                "せんえんのきっぷがかえます",
+                "1000えんのきっぷがかえます",
+                "1000円のきっぷが買えます",
+                "千円のきっぷが 買えます。"
+              ],
+              "romaji": "sen en no kippu o kau."
+            },
+            {
+              "id": "c11-potential-drill-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "かんこく語で 話す。",
+              "model": "かんこく語で 話せます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 9
+              },
+              "accepted": [
+                "かんこくごではなせます",
+                "かんこく語で 話せます。"
+              ],
+              "romaji": "kankokugo de hanasu."
+            },
+            {
+              "id": "c11-potential-drill-10",
+              "number": 10,
+              "mode": "text",
+              "prompt": "じてんしゃで 帰る。",
+              "model": "じてんしゃで 帰れます。",
+              "whyJa": "可能形でも、場所や 手段を 表す でと 時間の にを 残します。するは できる、くるは こられるです。",
+              "whyEn": "Use the polite potential while retaining the time, location and means. する becomes できます; 来る becomes 来られます. This drill explicitly requests が for an action object.",
+              "source": {
+                "printedPage": 17,
+                "number": 10
+              },
+              "accepted": [
+                "じてんしゃでかえれます",
+                "じてんしゃで 帰れます。"
+              ],
+              "romaji": "jitensha de kaeru."
+            }
+          ],
+          "heading": "c11-potential-drill"
+        },
+        {
+          "id": "c11-grammar-choices",
+          "chapter": "11",
+          "title": "Ⅰ．文法の形を選ぶ（p.18）",
+          "sourcePage": 18,
+          "instructionsJa": "（　）に 入る いちばん いい ものを、ひとつ 選んでください。",
+          "instructionsEn": "Choose the best option to fill in the blank.",
+          "questions": [
+            {
+              "id": "c11-grammar-choices-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "ア：家から うみが ちかいですか。\nイ：いいえ、家から うみのおとが（　）よ。",
+              "model": "聞こえません",
+              "whyJa": "音が 自然に 耳に 入らないので、聞こえませんです。",
+              "whyEn": "The sea’s sound is not audible from the house, so choose 聞こえません.",
+              "source": {
+                "printedPage": 18,
+                "number": 1
+              },
+              "romaji": "A: ie kara umi ga chikai desu ka. B: iie, ie kara umi no oto ga ____ yo.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "見ません"
+                },
+                {
+                  "id": "2",
+                  "text": "見えません"
+                },
+                {
+                  "id": "3",
+                  "text": "聞きません"
+                },
+                {
+                  "id": "4",
+                  "text": "聞こえません"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c11-grammar-choices-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "山田さんは いしゃに（　）。",
+              "model": "なりました",
+              "whyJa": "人の 職業が 変わったので、いしゃに なりましたです。",
+              "whyEn": "Yamada became a doctor, so use なりました after the profession + に.",
+              "source": {
+                "printedPage": 18,
+                "number": 2
+              },
+              "romaji": "yamada san wa isha ni ____.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "しました"
+                },
+                {
+                  "id": "2",
+                  "text": "なりました"
+                },
+                {
+                  "id": "3",
+                  "text": "できました"
+                },
+                {
+                  "id": "4",
+                  "text": "ありました"
+                }
+              ],
+              "correctChoiceId": "2"
+            },
+            {
+              "id": "c11-grammar-choices-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "まいにち（　）です。ひまな時間が ありません。",
+              "model": "いそがしい",
+              "whyJa": "ひまな時間が ないので、いそがしいです。",
+              "whyEn": "Having no free time means being busy: いそがしい.",
+              "source": {
+                "printedPage": 18,
+                "number": 3
+              },
+              "romaji": "mainichi ____ desu. hima na jikan ga arimasen.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "やさしい"
+                },
+                {
+                  "id": "2",
+                  "text": "ゆうめい"
+                },
+                {
+                  "id": "3",
+                  "text": "いそがしい"
+                },
+                {
+                  "id": "4",
+                  "text": "すっぱい"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c11-grammar-choices-4",
+              "number": 4,
+              "mode": "choice",
+              "prompt": "ア：からいりょうりが すきですか。\nイ：いいえ、（　）すきではありません。",
+              "model": "あまり",
+              "whyJa": "あまりは 否定と いっしょに 使い、それほどではない ことを 表します。",
+              "whyEn": "あまり combines with a negative ending to mean not very much.",
+              "source": {
+                "printedPage": 18,
+                "number": 4
+              },
+              "romaji": "A: karai ryouri ga suki desu ka. B: iie, ____ suki dewa arimasen.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "とても"
+                },
+                {
+                  "id": "2",
+                  "text": "ちょうど"
+                },
+                {
+                  "id": "3",
+                  "text": "たいへん"
+                },
+                {
+                  "id": "4",
+                  "text": "あまり"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c11-grammar-choices-5",
+              "number": 5,
+              "mode": "choice",
+              "prompt": "この くだものを ジャムに（　）。",
+              "model": "します",
+              "whyJa": "くだものを ジャムに 変えるので、に しますを 使います。",
+              "whyEn": "にします expresses deliberately turning this fruit into jam.",
+              "source": {
+                "printedPage": 18,
+                "number": 5
+              },
+              "romaji": "kono kudamono o jamu ni ____.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "します"
+                },
+                {
+                  "id": "2",
+                  "text": "いります"
+                },
+                {
+                  "id": "3",
+                  "text": "わかります"
+                },
+                {
+                  "id": "4",
+                  "text": "あります"
+                }
+              ],
+              "correctChoiceId": "1"
+            },
+            {
+              "id": "c11-grammar-choices-6",
+              "number": 6,
+              "mode": "choice",
+              "prompt": "ア：すみません、えいごが（　）。\nイ：はい、できます。",
+              "model": "わかりますか",
+              "whyJa": "英語を 理解できるかを たずねる 文です。返事は 英語が 使える ことを 伝えています。",
+              "whyEn": "わかりますか asks whether the other person understands English. The reply says they can use English.",
+              "source": {
+                "printedPage": 18,
+                "number": 6
+              },
+              "romaji": "A: sumimasen, eigo ga ____. B: hai, dekimasu.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "いりますか"
+                },
+                {
+                  "id": "2",
+                  "text": "しますか"
+                },
+                {
+                  "id": "3",
+                  "text": "わかりますか"
+                },
+                {
+                  "id": "4",
+                  "text": "ありますか"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c11-grammar-choices-7",
+              "number": 7,
+              "mode": "choice",
+              "prompt": "ア：かんじが じょうずですか。\nイ：いいえ、（　）です。",
+              "model": "へた",
+              "whyJa": "じょうずではない ことを 表す 答えは へたです。",
+              "whyEn": "へた means poor at a skill and contrasts with じょうず.",
+              "source": {
+                "printedPage": 18,
+                "number": 7
+              },
+              "romaji": "A: kanji ga jouzu desu ka. B: iie, ____ desu.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "すき"
+                },
+                {
+                  "id": "2",
+                  "text": "ほしい"
+                },
+                {
+                  "id": "3",
+                  "text": "へた"
+                },
+                {
+                  "id": "4",
+                  "text": "かんたん"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c11-grammar-choices-8",
+              "number": 8,
+              "mode": "choice",
+              "prompt": "あたらしいパソコンが（　）。あした デパートで かいます。",
+              "model": "いります",
+              "whyJa": "必要なので あした 買います。いりますは 必要という 意味です。",
+              "whyEn": "いります means need. The next sentence explains that the speaker will buy the computer.",
+              "source": {
+                "printedPage": 18,
+                "number": 8
+              },
+              "romaji": "atarashii pasokon ga ____. ashita depa-to de kaimasu.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "わかります"
+                },
+                {
+                  "id": "2",
+                  "text": "あります"
+                },
+                {
+                  "id": "3",
+                  "text": "いります"
+                },
+                {
+                  "id": "4",
+                  "text": "できます"
+                }
+              ],
+              "correctChoiceId": "3"
+            }
+          ],
+          "heading": "c11-grammar-choices"
+        },
+        {
+          "id": "c11-word-order",
+          "chapter": "11",
+          "title": "Ⅱ．文を組み立てる（p.19）",
+          "sourcePage": 19,
+          "instructionsJa": "ことばを すべて使って、文を 完成してください。ことばを押すと 選べます。選んだことばを押すと 戻せます。",
+          "instructionsEn": "Use all the word tiles to complete the sentence. Select a tile to add it; select a chosen tile to put it back.",
+          "questions": [
+            {
+              "id": "c11-word-order-1",
+              "number": 1,
+              "mode": "order",
+              "prompt": "四月から ＿＿ ＿＿ ＿＿ ＿＿ 。",
+              "model": "四月から 五月まで あつく なる。",
+              "whyJa": "四月から 五月までが 期間です。あついを あつくに かえて なるを 続けます。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 19,
+                "number": 1
+              },
+              "tokens": [
+                "なる",
+                "まで",
+                "五月",
+                "あつく"
+              ],
+              "acceptedOrders": [
+                [
+                  2,
+                  1,
+                  3,
+                  0
+                ]
+              ],
+              "before": "四月から",
+              "after": "。"
+            },
+            {
+              "id": "c11-word-order-2",
+              "number": 2,
+              "mode": "order",
+              "prompt": "スミスさんは 日本語 ＿＿ ＿＿ ＿＿ ＿＿ できます。",
+              "model": "スミスさんは 日本語と 中国語が ちょっと できます。",
+              "whyJa": "ふたつの 言語を とで つなぎ、できるものを がで 表します。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 19,
+                "number": 2
+              },
+              "tokens": [
+                "が",
+                "ちょっと",
+                "中国語",
+                "と"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  2,
+                  0,
+                  1
+                ]
+              ],
+              "before": "スミスさんは 日本語",
+              "after": "できます。"
+            },
+            {
+              "id": "c11-word-order-3",
+              "number": 3,
+              "mode": "order",
+              "prompt": "＿＿ ＿＿ ＿＿ ＿＿ しますか。",
+              "model": "ばんごはんは なにに しますか。",
+              "whyJa": "話題を はで 示し、何を 選ぶかを なにに しますかで たずねます。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 19,
+                "number": 3
+              },
+              "tokens": [
+                "に",
+                "なに",
+                "は",
+                "ばんごはん"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  2,
+                  1,
+                  0
+                ]
+              ],
+              "before": "",
+              "after": "しますか。"
+            },
+            {
+              "id": "c11-word-order-4",
+              "number": 4,
+              "mode": "order",
+              "prompt": "レポートが ＿＿ ＿＿ ＿＿ ＿＿ だせますか。",
+              "model": "レポートが 来週の 火よう日に だせますか。",
+              "whyJa": "来週の 火よう日で 時を 指し、その 時を にで 示します。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 19,
+                "number": 4
+              },
+              "tokens": [
+                "の",
+                "来週",
+                "火よう日",
+                "に"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  0,
+                  2,
+                  3
+                ]
+              ],
+              "before": "レポートが",
+              "after": "だせますか。"
+            },
+            {
+              "id": "c11-word-order-5",
+              "number": 5,
+              "mode": "order",
+              "prompt": "わたしの へやから ＿＿ ＿＿ ＿＿ ＿＿ 見えません。",
+              "model": "わたしの へやから となりの ビルが 見えません。",
+              "whyJa": "となりの ビルが 見える・見えない ものです。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 19,
+                "number": 5
+              },
+              "tokens": [
+                "の",
+                "ビル",
+                "が",
+                "となり"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  0,
+                  1,
+                  2
+                ]
+              ],
+              "before": "わたしの へやから",
+              "after": "見えません。"
+            },
+            {
+              "id": "c11-word-order-6",
+              "number": 6,
+              "mode": "order",
+              "prompt": "おとうとは ＿＿ ＿＿ ＿＿ ＿＿ です。",
+              "model": "おとうとは サッカーが とても じょうずです。",
+              "whyJa": "サッカーを がで 示し、とてもで じょうずの 程度を 表します。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 19,
+                "number": 6
+              },
+              "tokens": [
+                "サッカー",
+                "じょうず",
+                "とても",
+                "が"
+              ],
+              "acceptedOrders": [
+                [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              ],
+              "before": "おとうとは",
+              "after": "です。"
+            },
+            {
+              "id": "c11-word-order-7",
+              "number": 7,
+              "mode": "order",
+              "prompt": "今週の ＿＿ ＿＿ ＿＿ ＿＿ ありますか。",
+              "model": "今週の 日よう日は 時間が ありますか。",
+              "whyJa": "今週の 日よう日を 話題にして、時間が あるかを たずねます。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 19,
+                "number": 7
+              },
+              "tokens": [
+                "は",
+                "が",
+                "時間",
+                "日よう日"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  0,
+                  2,
+                  1
+                ]
+              ],
+              "before": "今週の",
+              "after": "ありますか。"
+            },
+            {
+              "id": "c11-word-order-8",
+              "number": 8,
+              "mode": "order",
+              "prompt": "＿＿ ＿＿ ＿＿ ＿＿ が 聞こえます。",
+              "model": "となりの へやから こえが 聞こえます。",
+              "whyJa": "音が 来る 場所を からで、聞こえる ものを がで 表します。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 19,
+                "number": 8
+              },
+              "tokens": [
+                "こえ",
+                "となりの",
+                "から",
+                "へや"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              ],
+              "before": "",
+              "after": "が 聞こえます。"
+            }
+          ],
+          "heading": "c11-word-order"
+        },
+        {
+          "id": "c11-text-grammar",
+          "chapter": "11",
+          "title": "Ⅲ．文章の文法：会社のエンジニア（p.20）",
+          "sourcePage": 20,
+          "instructionsJa": "上の文章を 読んで、（1）から（3）に 入る ものを 選んでください。",
+          "instructionsEn": "Read the passage above and choose the expressions for blanks (1)–(3).",
+          "questions": [
+            {
+              "id": "c11-text-grammar-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "文章の（1）に 入る ものは どれですか。",
+              "model": "あります",
+              "whyJa": "本社は 場所に ある 建物・組織なので、ありますを 使います。",
+              "whyEn": "The head office is located in Japan. Use あります for a thing or organization being in a place.",
+              "source": {
+                "printedPage": 20,
+                "number": 1
+              },
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "できます"
+                },
+                {
+                  "id": "2",
+                  "text": "みえます"
+                },
+                {
+                  "id": "3",
+                  "text": "あります"
+                },
+                {
+                  "id": "4",
+                  "text": "いきます"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c11-text-grammar-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "文章の（2）に 入る ものは どれですか。",
+              "model": "わかります",
+              "whyJa": "日本語がに 続き、理解を 表す わかりますが 入ります。話しますは この練習の がの形に 合いません。",
+              "whyEn": "日本語が combines with わかります to express understanding Japanese.",
+              "source": {
+                "printedPage": 20,
+                "number": 2
+              },
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "なります"
+                },
+                {
+                  "id": "2",
+                  "text": "します"
+                },
+                {
+                  "id": "3",
+                  "text": "はなします"
+                },
+                {
+                  "id": "4",
+                  "text": "わかります"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c11-text-grammar-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "文章の（3）に 入る ものは どれですか。",
+              "model": "が",
+              "whyJa": "この教材の例は がです。ただし、可能形の 目的語に をを 使う 言い方も あるので、この問題では どちらも 正解として 扱います。",
+              "whyEn": "The textbook models が. を can also mark the potential verb’s object, so both choices are accepted here.",
+              "source": {
+                "printedPage": 20,
+                "number": 3
+              },
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "を"
+                },
+                {
+                  "id": "2",
+                  "text": "と"
+                },
+                {
+                  "id": "3",
+                  "text": "に"
+                },
+                {
+                  "id": "4",
+                  "text": "が"
+                }
+              ],
+              "correctChoiceId": "4",
+              "acceptedChoiceIds": [
+                "1",
+                "4"
+              ]
+            }
+          ],
+          "passageId": "c11-engineer-passage",
+          "heading": "c11-text-grammar"
+        },
+        {
+          "id": "c11-reading-comprehension",
+          "chapter": "11",
+          "title": "Ⅳ．読解：大学の友だち（p.21）",
+          "sourcePage": 21,
+          "instructionsJa": "上の文章を 読んで、いちばん いい 答えを ひとつ 選んでください。",
+          "instructionsEn": "Read the passage above and choose the best answer.",
+          "questions": [
+            {
+              "id": "c11-reading-comprehension-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "この文章を 書いた人は どんな話を していますか。",
+              "model": "友だちとの おもいで",
+              "whyJa": "写真の 友だちと 大学での できごと、今の様子を 話しています。",
+              "whyEn": "The passage describes university friends, their activities and a birthday photograph: memories with friends.",
+              "source": {
+                "printedPage": 21,
+                "number": 1
+              },
+              "romaji": "kono bunshou o kaita hito wa donna hanashi o shiteimasu ka.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "友だちのすきな 音楽"
+                },
+                {
+                  "id": "2",
+                  "text": "おいしい イタリアの りょうり"
+                },
+                {
+                  "id": "3",
+                  "text": "大学の スポーツキャンプ"
+                },
+                {
+                  "id": "4",
+                  "text": "友だちとの おもいで"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c11-reading-comprehension-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "ジョンさんは 今 どんな人ですか。",
+              "model": "バスケットボールの せんしゅ",
+              "whyJa": "文章に「今 バスケットボールの せんしゅに なりました」と あります。",
+              "whyEn": "The passage explicitly says John is now a basketball player.",
+              "source": {
+                "printedPage": 21,
+                "number": 2
+              },
+              "romaji": "jon san wa ima donna hito desu ka.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "バスケットボールの 先生"
+                },
+                {
+                  "id": "2",
+                  "text": "有名なレストランの 社員"
+                },
+                {
+                  "id": "3",
+                  "text": "バレーボールチームの メンバー"
+                },
+                {
+                  "id": "4",
+                  "text": "バスケットボールの せんしゅ"
+                }
+              ],
+              "correctChoiceId": "4"
+            }
+          ],
+          "passageId": "c11-friends-passage",
+          "heading": "c11-reading-comprehension"
+        },
+        {
+          "id": "c11-personal-answers",
+          "chapter": "11",
+          "title": "Ⅴ．自分のことを答える（p.22）",
+          "sourcePage": 22,
+          "instructionsJa": "自分のことを 日本語の文で 書いてください。例は ひとつの答えです。内容や表現が 違っても、文法と意味が 合えば かまいません。",
+          "instructionsEn": "Write full Japanese sentences about yourself. The model is only one example; other answers are fine if the grammar and meaning are correct.",
+          "questions": [
+            {
+              "id": "c11-personal-answers-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "からい りょうりが 食べられますか。",
+              "model": "はい、からいりょうりが 食べられます。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 1
+              },
+              "romaji": "karai ryouri ga taberaremasu ka."
+            },
+            {
+              "id": "c11-personal-answers-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "中国語が わかりますか。",
+              "model": "いいえ、中国語が わかりません。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 2
+              },
+              "romaji": "chuugokugo ga wakarimasu ka."
+            },
+            {
+              "id": "c11-personal-answers-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "車の うんてんが できますか。",
+              "model": "はい、車のうんてんが できます。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 3
+              },
+              "romaji": "kuruma no unten ga dekimasu ka."
+            },
+            {
+              "id": "c11-personal-answers-4",
+              "number": 4,
+              "mode": "self",
+              "prompt": "クリスマスに なにが ほしいですか。",
+              "model": "クリスマスに 新しいけいたいが ほしいです。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 4
+              },
+              "romaji": "kurisumasu ni nani ga hoshii desu ka."
+            },
+            {
+              "id": "c11-personal-answers-5",
+              "number": 5,
+              "mode": "self",
+              "prompt": "ひらがなと カタカナが 書けますか。かんじは どうですか。",
+              "model": "ひらがなと カタカナが 書けます。漢字は すこし 書けます。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 5
+              },
+              "romaji": "hiragana to katakana ga kakemasu ka. kanji wa dou desu ka."
+            },
+            {
+              "id": "c11-personal-answers-6",
+              "number": 6,
+              "mode": "self",
+              "prompt": "どんな りょうりが すきですか。",
+              "model": "日本の りょうりが すきです。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 6
+              },
+              "romaji": "donna ryouri ga suki desu ka."
+            },
+            {
+              "id": "c11-personal-answers-7",
+              "number": 7,
+              "mode": "self",
+              "prompt": "どようびに 日本語のクラスが ありますか。",
+              "model": "はい、土よう日に 日本語のクラスが あります。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 7
+              },
+              "romaji": "doyoubi ni nihongo no kurasu ga arimasu ka."
+            },
+            {
+              "id": "c11-personal-answers-8",
+              "number": 8,
+              "mode": "self",
+              "prompt": "どんな 食べものが きらいですか。",
+              "model": "にがい 食べものが きらいです。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 8
+              },
+              "romaji": "donna tabemono ga kirai desu ka."
+            },
+            {
+              "id": "c11-personal-answers-9",
+              "number": 9,
+              "mode": "self",
+              "prompt": "日本のうたが うたえますか。",
+              "model": "はい、日本のうたが うたえます。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 9
+              },
+              "romaji": "nihon no uta ga utaemasu ka."
+            },
+            {
+              "id": "c11-personal-answers-10",
+              "number": 10,
+              "mode": "self",
+              "prompt": "日本語で かいわが じょうずに できますか。",
+              "model": "まだ あまり じょうずに できません。",
+              "whyJa": "自分の答えなので、内容が 例と 違っても かまいません。質問に 合う 助詞と 文の形を 使っているか たしかめます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 22,
+                "number": 10
+              },
+              "romaji": "nihongo de kaiwa ga jouzu ni dekimasu ka."
+            }
+          ],
+          "heading": "c11-personal-answers"
+        },
+        {
+          "id": "c11-translation-practice",
+          "chapter": "11",
+          "title": "Ⅵ．日本語に訳す（p.22）",
+          "sourcePage": 22,
+          "instructionsJa": "会話を 日本語に してください。意味を 残して 自然な文を 書き、例と くらべてください。",
+          "instructionsEn": "Translate the dialogue into natural Japanese, keeping its meaning, then compare your answer with the example.",
+          "questions": [
+            {
+              "id": "c11-translation-practice-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "A: Excuse me, can you understand English?\nB: Yes, I understand a little.\nA: Did you study English?\nB: Yes, I studied in America.",
+              "model": "ア：すみません、英語が わかりますか。\nイ：はい、すこし わかります。\nア：英語を べんきょうしましたか。\nイ：はい、アメリカで べんきょうしました。",
+              "whyJa": "会話の意味・時制・助詞を くらべます。自然な別の表現も 答えに なります。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 22,
+                "number": 1
+              }
+            },
+            {
+              "id": "c11-translation-practice-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "A: Do you like Japanese food?\nB: Yes, I love Japanese food.\nA: Can you eat sashimi and sushi?\nB: Yes, sashimi and sushi are delicious.",
+              "model": "ア：日本のりょうりが すきですか。\nイ：はい、日本のりょうりが 大すきです。\nア：さしみと すしが 食べられますか。\nイ：はい、さしみと すしは おいしいです。",
+              "whyJa": "会話の意味・時制・助詞を くらべます。自然な別の表現も 答えに なります。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 22,
+                "number": 2
+              }
+            },
+            {
+              "id": "c11-translation-practice-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "A: This is the picture of my friend Jane. She became a doctor last year.\nB: Oh, really? She is your friend in the university?\nA: Yes, she was my classmate at the university.",
+              "model": "ア：これは 友だちのジェーンさんの しゃしんです。きょねん いしゃに なりました。\nイ：そうですか。大学の友だちですか。\nア：はい、大学の クラスメートでした。",
+              "whyJa": "会話の意味・時制・助詞を くらべます。自然な別の表現も 答えに なります。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 22,
+                "number": 3
+              }
+            }
+          ],
+          "heading": "c11-translation-practice"
+        }
+      ]
+    }
+  ]
+}

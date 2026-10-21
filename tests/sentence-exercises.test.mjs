@@ -39,7 +39,7 @@ test("sentence bank: three puzzles per chapter and twelve source-backed transfor
   assert.equal(bank.version, 1);
   assert.deepEqual(bank.chapters.map(chapter => chapter.chapter), chapters.map(chapter => chapter.ch));
   assert.ok(bank.chapters.every(chapter => chapter.order.length === 3));
-  assert.equal(all.length, 42);
+  assert.equal(all.length, chapters.length * 3 + 12);
   assert.deepEqual(bank.chapters.filter(chapter => chapter.transformations.length).map(chapter => [chapter.chapter, chapter.transformations.length]), [["1", 2], ["6", 4], ["10", 6]]);
   assert.ok(transforms.some(item => item.question.change === "negative"));
   assert.ok(transforms.some(item => item.question.change === "casual"));

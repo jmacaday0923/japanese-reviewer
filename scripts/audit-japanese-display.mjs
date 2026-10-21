@@ -7,6 +7,7 @@ const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8'
 const load = path => JSON.parse(read(path));
 const catalog = load('src/data/japanese-display.json');
 const englishCatalog = load('src/data/english-display.json');
+const workbookSets = new Map(load('src/data/workbook-exercises.json').chapters.flatMap(c => c.sets.map(s => [s.id, s])));
 const files = { chapter: 'chapters', kana: 'kana', kanji: 'kanji', practice: 'practice' };
 const rows = [];
 const pages = [];
@@ -15,6 +16,13 @@ function text(node) { return 'text' in node ? node.text : node.children.map(text
 function visit(node, scope, optional = false, header = '') {
   if ('text' in node) {
     if (!optional && header !== 'romaji') rows.push({ scope, source: node.text, display: studyDisplay(['english', 'meaning'].includes(header) ? englishCatalog : catalog, node.text, scope) });
+    return;
+  }
+  if (node.tag === 'div' && node.attrs['data-workbook-set']) {
+    const set = workbookSets.get(node.attrs['data-workbook-set']);
+    if (!set) throw Error('Unknown workbook set in audit');
+    for (const q of set.questions) for (const value of [q.prompt, ...(q.choices ?? []).map(c => c.text)])
+      rows.push({ scope, source: value, display: { primary: value } });
     return;
   }
   if (node.tag === 'details') { nativePanels++; return; }
@@ -40,14 +48,14 @@ for (const [kind, file] of Object.entries(files)) for (const page of load(`src/d
   if (page.intro) rows.push({ scope: scope + '/intro', source: page.intro, display: studyDisplay(catalog, page.intro) });
   for (const section of page.sections) for (const node of parseStudyMarkup(section.html)) visit(node, `${scope}/${section.id}`);
   const own = rows.slice(before);
-  pages.push({ page: scope, sections: page.sections.length, textNodes: own.length, japaneseDisplays: own.filter(row => row.display.romaji).length });
+  pages.push({ page: scope, sections: page.sections.length, textNodes: own.length, japaneseDisplays: own.filter(row => row.display.romaji).length, nativeJapaneseNodes: own.filter(row => /[ぁ-んァ-ン一-龯]/u.test(row.display.primary)).length });
 }
-const sourceHashes = Object.fromEntries([...Object.values(files), 'exercises', 'sentence-exercises'].map(file => [
+const sourceHashes = Object.fromEntries([...Object.values(files), 'exercises', 'sentence-exercises', 'workbook-exercises'].map(file => [
   `src/data/${file}.json`, createHash('sha256').update(read(`src/data/${file}.json`)).digest('hex'),
 ]));
 const audit = {
   version: 1,
-  scope: 'All 14 study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.',
+  scope: 'All ' + pages.length + ' study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.',
   method: 'Exact reviewed display strings. Original source text remains available as a romaji hint; native reading/workbook disclosures stay closed until opened.',
   sourceHashes,
   displayHashes: Object.fromEntries(['japanese-display', 'english-display'].map(file => [`src/data/${file}.json`, createHash('sha256').update(read(`src/data/${file}.json`)).digest('hex')])),

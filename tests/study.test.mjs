@@ -326,7 +326,6 @@ test("study pages: one entry per real page, with unique keys and the labels the 
   const pages = studyPages(LIBRARY);
   const [chapters, kana, kanji, practice] = LIBRARY.map((g) => g.pages);
   assert.equal(pages.length, chapters.length + kana.length + kanji.length + practice.length);
-  assert.equal(pages.length, 14);
   assert.equal(new Set(pages.map((p) => p.key)).size, pages.length);
   assert.deepEqual(pages[0], {
     key: "chapter:1",
