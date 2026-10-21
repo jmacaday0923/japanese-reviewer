@@ -232,7 +232,7 @@ After Chapter 10, open `/checkpoints` for one vocabulary exam and one grammar ex
 Each contains 40 original four-choice questions: 28 focus on Chapters 6–10 and
 12 cover Chapters 1–5. The home page, sidebar, phone menu and Chapter 10 link to them.
 
-- Vocabulary: kanji readings, written forms, words in context and similar meanings.
+- Vocabulary: 4 Kanji 1 readings, 4 Kanji 1 written forms, 24 kana vocabulary-in-context questions and 8 similar-meaning questions.
 - Grammar: form choices, starred sentence composition and short text grammar.
 - Questions and choices use Japanese without romaji or answer-revealing translation hints.
 - Submit for raw marks, first-submission chapter/type breakdowns, explanations and lesson links.
@@ -255,7 +255,11 @@ Both Chapter 10 exams show English directions below Japanese directions. Every k
 
 Within each question, familiar kanji stay bare; other kanji receive furigana on their first occurrence only. The count spans its passage/context, prompt, choices and review feedback and resets for the next question. A tested kanji reading or meaning stays unannotated throughout that item. Written-form choices also remain unannotated so their readings cannot reveal the correct choice. Instruction readings are separate from each item's count.
 
-`src/data/chapter-10-checkpoint-display.json` holds the reviewed reading segments, English directions and written-form exemptions. `src/lib/chapter-10-checkpoint.ts` prepares immutable display parts on the server, with one local first-use set per item; rendering never mutates annotation state. New unsupported kanji require a reviewed reading. Original question text, choices, keys, Chapter 6–10 weighting, revisions and v1 browser history are unchanged. Chapter 5 keeps its separate kana-first display and permanent readings.
+`src/data/chapter-10-checkpoint-display.json` holds the reviewed reading segments, English directions and written-form exemptions. `src/lib/chapter-10-checkpoint.ts` prepares immutable display parts on the server, with one local first-use set per item; rendering never mutates annotation state. New unsupported kanji require a reviewed reading. Revision 2 replaces the 16 former kanji-heavy vocabulary questions with eight verified Kanji 1 items and eight kana context questions. After submission, each kanji item links directly to its Kanji 1 teaching heading as well as the chapter. Targets and written distractors must match an actual Kanji 1 word/reading table row and use only its 30 core characters; appearing incidentally in a chapter vocabulary table does not make an unfamiliar kanji an assessment target. Supporting wording such as カップに…いれて is simplified so a vocabulary question does not add an untaught prerequisite. The grammar exam now samples an i-adjective adverb, ichidan present negative and する past negative alongside its existing past forms, casual questions and adjectives. Both exams retain 40 questions and the original chapter quotas, including 28 questions from Chapters 6–10.
+
+Both revised Chapter 10 exams use revision 2 and new browser keys (`japanese-reviewer:checkpoint:vocabulary:v2` and `japanese-reviewer:checkpoint:grammar:v2`). Version 1 data stays untouched in its existing keys; it is never imported or rescored against changed questions. The UI explains the separation. The prior banks are retained in `migration/checkpoint-v1-archive.json` for provenance; they are not shipped to the exam client. Chapter 5 remains revision 1 with its existing answers, presentation and history.
+
+`migration/checkpoint-curriculum-audit.json` records all 80 reviewed questions, exact lesson table rows/rule quotations, Kanji 1 word-and-reading pairs, and reviewed content fingerprints. Tests re-read the source rows and check all written alternatives, reading keys, chapter quotas and revision separation. This is a curated content audit, not a Japanese tokenizer: future content changes require another review rather than blindly refreshing fingerprints.
 
 
 ## Chapter 5 checkpoint
@@ -266,7 +270,7 @@ Chapter 5 uses kana-first display text from `src/data/chapter-5-checkpoint-displ
 
 Each question is worth one raw mark. Both parts contribute to the score out of 54; submission asks for confirmation if anything is blank. Saved answers, the active part, first submission, retries and the latest ten full-attempt results use `japanese-reviewer:checkpoint:chapter-5:v1`. Retrying retains correct answers and the original score. There is no time limit or official pass prediction.
 
-The dashboard and navigation group all three exams under **Checkpoints**, with a link after Chapter 5. The Chapter 10 exams keep their question IDs, revisions and storage keys. `/practice/1` is a compatibility address for the same Chapter 5 exam, with the same answers and history. Old exercise, answer and passage fragments select their corresponding questions; an old answer-key link never submits an exam or exposes a key. Existing search and bookmark records remain usable. The unchanged `practice.json` remains the source archive for provenance, search and bookmark resolution, so old search snippets can still contain source answer explanations.
+The dashboard and navigation group all three exams under **Checkpoints**, with a link after Chapter 5. The Chapter 10 exams keep their routes and question IDs; their revised banks use separate v2 storage as described above. `/practice/1` is a compatibility address for the same Chapter 5 exam, with the same answers and history. Old exercise, answer and passage fragments select their corresponding questions; an old answer-key link never submits an exam or exposes a key. Existing search and bookmark records remain usable. The unchanged `practice.json` remains the source archive for provenance, search and bookmark resolution, so old search snippets can still contain source answer explanations.
 
 `migration/chapter-5-checkpoint-audit.json` maps every question and key back to that archive, including original reading numbers and native display text. `tests/chapter-5-checkpoint.test.mjs` verifies all 54 mappings and the three passages; `e2e/chapter-5-checkpoint.spec.ts` covers completion, persistence, retries, legacy fragments and narrow screens.
 
@@ -283,7 +287,7 @@ All 12 activities show a smaller English instruction directly below the Japanese
 
 No answer key was supplied. All keys and explanations are **added model answers**, not official textbook answers. Typed exercises request kana and accept reviewed printed variants; this is not an unrestricted Japanese sentence evaluator. Text-grammar question 3 accepts both が and を with 書けます. Other transformation drills explicitly request the textbook's が pattern. The potential chart uses 五段／一段／special labels to clarify the PDF's terminology.
 
-`migration/chapter-11-audit.json` records source checksums, printed-page coverage, keys, adaptations, reading notes and hashes proving Chapters 1–10 are unchanged. Existing Chapter 5/10 checkpoints keep their scope, revisions and storage keys. Future chapters can append workbook sets and source reference markup without changing the grading component.
+`migration/chapter-11-audit.json` records source checksums, printed-page coverage, keys, adaptations, reading notes and hashes proving Chapters 1–10 are unchanged. Adding Chapter 11 did not extend the existing Chapter 5/10 checkpoint scope. The later Chapter 10 curriculum revision uses separate v2 storage as described above. Future chapters can append workbook sets and source reference markup without changing the grading component.
 
 ## Older chapter practice and study plans
 

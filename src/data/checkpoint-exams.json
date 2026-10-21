@@ -1,9 +1,9 @@
 [
   {
     "id": "vocabulary",
-    "revision": 1,
+    "revision": 2,
     "title": "Vocabulary checkpoint",
-    "description": "A cumulative vocabulary assessment after Chapter 10.",
+    "description": "A cumulative vocabulary assessment using taught words and Kanji 1 reading pairs.",
     "parts": [
       {
         "id": "reading",
@@ -15,117 +15,120 @@
             "id": "vocabulary-1",
             "number": 1,
             "chapter": "1",
-            "prompt": "【学生】の よみかたは どれですか。",
+            "prompt": "【日本】の よみかたは どれですか。",
             "choices": [
               {
                 "id": "1",
-                "text": "がっこう"
+                "text": "にほんご"
               },
               {
                 "id": "2",
-                "text": "がっせい"
+                "text": "にほんじん"
               },
               {
                 "id": "3",
-                "text": "がくさい"
+                "text": "ほん"
               },
               {
                 "id": "4",
-                "text": "がくせい"
+                "text": "にほん"
               }
             ],
             "correctChoiceId": "4",
-            "explanationJa": "「学生」は「がくせい」と よみます。",
-            "explanationEn": "学生 is がくせい, student. Keep the く sound; it is not a small っ.",
+            "explanationJa": "「日本」は「にほん」と よみます。",
+            "explanationEn": "日本 is にほん (Japan). にほんご is the language; にほんじん is a Japanese person. Kanji 1 also teaches にっぽん, which is deliberately not another option.",
             "source": {
               "chapter": "1",
-              "heading": "c1-people-and-jobs",
-              "title": "People and jobs",
-              "evidence": "がくせい · 学生"
+              "heading": "c1-countries-people-and-languages",
+              "title": "Countries, people and languages",
+              "evidence": "にほん · 日本",
+              "kanjiHeading": "c1-sun-day"
             },
-            "target": "学生"
+            "target": "日本"
           },
           {
             "id": "vocabulary-2",
             "number": 2,
             "chapter": "2",
-            "prompt": "【図書館】の よみかたは どれですか。",
+            "prompt": "【母】の よみかたは どれですか。",
             "choices": [
               {
                 "id": "1",
-                "text": "としょかん"
+                "text": "ちち"
               },
               {
                 "id": "2",
-                "text": "としょうかん"
+                "text": "ひと"
               },
               {
                 "id": "3",
-                "text": "としょがん"
+                "text": "はは"
               },
               {
                 "id": "4",
-                "text": "とうしょかん"
+                "text": "ほん"
               }
             ],
-            "correctChoiceId": "1",
-            "explanationJa": "「図書館」は「としょかん」と よみます。",
-            "explanationEn": "図書館 is としょかん, library. しょ has a small ょ and no long vowel.",
+            "correctChoiceId": "3",
+            "explanationJa": "「母」は「はは」と よみます。",
+            "explanationEn": "母 is はは, my mother. The Chapter 2 example places はは at the coffee shop; Kanji 1 teaches the written form.",
             "source": {
               "chapter": "2",
-              "heading": "c2-places",
-              "title": "Places",
-              "evidence": "としょかん · 図書館"
+              "heading": "c2-2-4-a-wa-location-ni-imasu",
+              "title": "2.4 A wa Location ni imasu",
+              "evidence": "ははは きっさてんに います。",
+              "kanjiHeading": "c1-mother"
             },
-            "target": "図書館"
+            "target": "母"
           },
           {
             "id": "vocabulary-3",
             "number": 3,
             "chapter": "3",
-            "prompt": "【二十歳】の よみかたは どれですか。",
+            "prompt": "【三百】の よみかたは どれですか。",
             "choices": [
               {
                 "id": "1",
-                "text": "じゅっさい"
+                "text": "さんびゃく"
               },
               {
                 "id": "2",
-                "text": "はたち"
+                "text": "ろっぴゃく"
               },
               {
                 "id": "3",
-                "text": "はちじゅっさい"
+                "text": "はっぴゃく"
               },
               {
                 "id": "4",
-                "text": "はっさい"
+                "text": "ひゃく"
               }
             ],
-            "correctChoiceId": "2",
-            "explanationJa": "「二十歳」は「はたち」と よみます。",
-            "explanationEn": "二十歳 has the special reading はたち: twenty years old.",
+            "correctChoiceId": "1",
+            "explanationJa": "「三百」は「さんびゃく」と よみます。",
+            "explanationEn": "三百 is さんびゃく (300). The other choices are the taught readings for 600, 800 and 100.",
             "source": {
               "chapter": "3",
-              "heading": "c3-counting-words-and-numbers",
-              "title": "Counting words and numbers",
-              "evidence": "はたち · 二十歳"
+              "heading": "c3-hundreds",
+              "title": "Hundreds",
+              "evidence": "さんびゃく · 三百",
+              "kanjiHeading": "c1-hundred"
             },
-            "target": "二十歳"
+            "target": "三百"
           },
           {
             "id": "vocabulary-4",
             "number": 4,
             "chapter": "4",
-            "prompt": "【火曜日】の よみかたは どれですか。",
+            "prompt": "【火よう日】の よみかたは どれですか。",
             "choices": [
               {
                 "id": "1",
-                "text": "かようび"
+                "text": "げつようび"
               },
               {
                 "id": "2",
-                "text": "もくようび"
+                "text": "かようび"
               },
               {
                 "id": "3",
@@ -133,155 +136,20 @@
               },
               {
                 "id": "4",
-                "text": "げつようび"
+                "text": "もくようび"
               }
             ],
-            "correctChoiceId": "1",
-            "explanationJa": "「火曜日」は「かようび」と よみます。",
-            "explanationEn": "火曜日 is かようび, Tuesday. The other choices name different weekdays.",
+            "correctChoiceId": "2",
+            "explanationJa": "「火よう日」は「かようび」と よみます。",
+            "explanationEn": "火よう日 is Tuesday, かようび. This is the mixed kanji/kana spelling actually taught in Kanji 1.",
             "source": {
               "chapter": "4",
               "heading": "c4-days-of-the-week",
               "title": "Days of the week",
-              "evidence": "かようび · 火曜日"
+              "evidence": "かようび · 火曜日",
+              "kanjiHeading": "c1-fire"
             },
-            "target": "火曜日"
-          },
-          {
-            "id": "vocabulary-5",
-            "number": 5,
-            "chapter": "5",
-            "prompt": "【一週間】の よみかたは どれですか。",
-            "choices": [
-              {
-                "id": "1",
-                "text": "いしゅうかん"
-              },
-              {
-                "id": "2",
-                "text": "いちしゅうかん"
-              },
-              {
-                "id": "3",
-                "text": "いっしゅうかん"
-              },
-              {
-                "id": "4",
-                "text": "いっしょうかん"
-              }
-            ],
-            "correctChoiceId": "3",
-            "explanationJa": "「一週間」は「いっしゅうかん」と よみます。",
-            "explanationEn": "一週間 is いっしゅうかん, one week, with both a small っ and a long しゅう.",
-            "source": {
-              "chapter": "5",
-              "heading": "c5-how-long-weeks",
-              "title": "How long: weeks",
-              "evidence": "いっしゅうかん · 一週間"
-            },
-            "target": "一週間"
-          },
-          {
-            "id": "vocabulary-6",
-            "number": 6,
-            "chapter": "6",
-            "prompt": "【大きい】の よみかたは どれですか。",
-            "choices": [
-              {
-                "id": "1",
-                "text": "おきい"
-              },
-              {
-                "id": "2",
-                "text": "おうきい"
-              },
-              {
-                "id": "3",
-                "text": "だいきい"
-              },
-              {
-                "id": "4",
-                "text": "おおきい"
-              }
-            ],
-            "correctChoiceId": "4",
-            "explanationJa": "「大きい」は「おおきい」と よみます。",
-            "explanationEn": "大きい is おおきい, big. The first long vowel is written おお.",
-            "source": {
-              "chapter": "6",
-              "heading": "c6-adjective-pairs-size-distance-and-streng",
-              "title": "Adjective pairs: size, distance and strength",
-              "evidence": "おおきい · 大きい"
-            },
-            "target": "大きい"
-          },
-          {
-            "id": "vocabulary-7",
-            "number": 7,
-            "chapter": "7",
-            "prompt": "【起きます】の よみかたは どれですか。",
-            "choices": [
-              {
-                "id": "1",
-                "text": "おきます"
-              },
-              {
-                "id": "2",
-                "text": "うきます"
-              },
-              {
-                "id": "3",
-                "text": "いきます"
-              },
-              {
-                "id": "4",
-                "text": "あきます"
-              }
-            ],
-            "correctChoiceId": "1",
-            "explanationJa": "「起きます」は「おきます」と よみます。",
-            "explanationEn": "起きます is おきます, to wake up or get up.",
-            "source": {
-              "chapter": "7",
-              "heading": "c7-verbs",
-              "title": "Verbs",
-              "evidence": "おきます · 起きます"
-            },
-            "target": "起きます"
-          },
-          {
-            "id": "vocabulary-8",
-            "number": 8,
-            "chapter": "8",
-            "prompt": "【牛乳】の よみかたは どれですか。",
-            "choices": [
-              {
-                "id": "1",
-                "text": "ぎゅうにゅう"
-              },
-              {
-                "id": "2",
-                "text": "ぎゅにゅう"
-              },
-              {
-                "id": "3",
-                "text": "ぎゅうにょう"
-              },
-              {
-                "id": "4",
-                "text": "ぎょうにゅう"
-              }
-            ],
-            "correctChoiceId": "1",
-            "explanationJa": "「牛乳」は「ぎゅうにゅう」と よみます。",
-            "explanationEn": "牛乳 is ぎゅうにゅう, milk. Both contracted syllables have long vowels.",
-            "source": {
-              "chapter": "8",
-              "heading": "c8-drinks-nomimono",
-              "title": "Drinks (nomimono)",
-              "evidence": "ぎゅうにゅう · 牛乳"
-            },
-            "target": "牛乳"
+            "target": "火よう日"
           }
         ]
       },
@@ -292,99 +160,213 @@
         "instructionsJa": "【　】を ただしく かいた ものを 一つ えらんでください。",
         "questions": [
           {
-            "id": "vocabulary-9",
-            "number": 9,
+            "id": "vocabulary-5",
+            "number": 5,
             "chapter": "4",
-            "prompt": "【あした】を ただしく かいた ものは どれですか。",
+            "prompt": "【げつようび】を ただしく かいた ものは どれですか。",
             "choices": [
               {
                 "id": "1",
-                "text": "昨日"
+                "text": "火よう日"
               },
               {
                 "id": "2",
-                "text": "今日"
+                "text": "月よう日"
               },
               {
                 "id": "3",
-                "text": "毎日"
+                "text": "水よう日"
               },
               {
                 "id": "4",
-                "text": "明日"
+                "text": "金よう日"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「げつようび」は「月よう日」と かきます。",
+            "explanationEn": "Monday is 月よう日. All four written choices use Kanji 1 word-and-reading pairs.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-days-of-the-week",
+              "title": "Days of the week",
+              "evidence": "げつようび · 月曜日",
+              "kanjiHeading": "c1-moon-month"
+            },
+            "target": "げつようび"
+          },
+          {
+            "id": "vocabulary-6",
+            "number": 6,
+            "chapter": "5",
+            "prompt": "【さんかげつ】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "二か月"
+              },
+              {
+                "id": "2",
+                "text": "一か月"
+              },
+              {
+                "id": "3",
+                "text": "三か月"
+              },
+              {
+                "id": "4",
+                "text": "四か月"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「さんかげつ」は「三か月」と かきます。",
+            "explanationEn": "Three months is 三か月. Chapter 5 teaches the duration さんかげつ(かん); the shorter mixed spelling comes from Kanji 1.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-how-long-months",
+              "title": "How long: months",
+              "evidence": "さんかげつ(かん) · 三ヶ月(間)",
+              "kanjiHeading": "c1-moon-month"
+            },
+            "target": "さんかげつ"
+          },
+          {
+            "id": "vocabulary-7",
+            "number": 7,
+            "chapter": "9",
+            "prompt": "【ふたり】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "二日"
+              },
+              {
+                "id": "2",
+                "text": "二人"
+              },
+              {
+                "id": "3",
+                "text": "二月"
+              },
+              {
+                "id": "4",
+                "text": "二つ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「ふたり」は「二人」と かきます。",
+            "explanationEn": "Two people is 二人, ふたり. The other choices are two days/the second day, February, and two things.",
+            "source": {
+              "chapter": "9",
+              "heading": "c9-counting-people",
+              "title": "Counting people",
+              "evidence": "ふたり · 二人",
+              "kanjiHeading": "c1-two"
+            },
+            "target": "ふたり"
+          },
+          {
+            "id": "vocabulary-8",
+            "number": 8,
+            "chapter": "9",
+            "prompt": "【さんにん】を ただしく かいた ものは どれですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "三月"
+              },
+              {
+                "id": "2",
+                "text": "三つ"
+              },
+              {
+                "id": "3",
+                "text": "三日"
+              },
+              {
+                "id": "4",
+                "text": "三人"
               }
             ],
             "correctChoiceId": "4",
-            "explanationJa": "「あした」は「明日」と かきます。",
-            "explanationEn": "明日 means tomorrow; 昨日 is yesterday, 毎日 every day, and 今日 today.",
+            "explanationJa": "「さんにん」は「三人」と かきます。",
+            "explanationEn": "Three people is 三人, さんにん. Each alternative is also a word taught in Kanji 1.",
             "source": {
-              "chapter": "4",
-              "heading": "c4-yesterday-today-and-tomorrow",
-              "title": "Yesterday, today and tomorrow",
-              "evidence": "あした · 明日"
+              "chapter": "9",
+              "heading": "c9-counting-people",
+              "title": "Counting people",
+              "evidence": "さんにん · 三人",
+              "kanjiHeading": "c1-three"
             },
-            "target": "あした"
+            "target": "さんにん"
+          }
+        ]
+      },
+      {
+        "id": "context",
+        "title": "Words in context",
+        "titleJa": "文の中のことば",
+        "instructionsJa": "（　）に 入る いちばん よい ことばを 一つ えらんでください。",
+        "questions": [
+          {
+            "id": "vocabulary-9",
+            "number": 9,
+            "chapter": "5",
+            "prompt": "げつようびから にちようびまで、7にちかんです。（　）です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "いちねん"
+              },
+              {
+                "id": "2",
+                "text": "いっかげつ"
+              },
+              {
+                "id": "3",
+                "text": "いっしゅうかん"
+              },
+              {
+                "id": "4",
+                "text": "いちじかん"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "7にちかんは、いっしゅうかんです。",
+            "explanationEn": "Seven days make one week, いっしゅうかん. This checks the taught duration word without requiring unfamiliar kanji.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-how-long-weeks",
+              "title": "How long: weeks",
+              "evidence": "いっしゅうかん · 一週間"
+            },
+            "target": "いっしゅうかん"
           },
           {
             "id": "vocabulary-10",
             "number": 10,
-            "chapter": "5",
-            "prompt": "【じてんしゃ】を ただしく かいた ものは どれですか。",
+            "chapter": "6",
+            "prompt": "この へやは うるさく ありません。とても（　）です。",
             "choices": [
               {
                 "id": "1",
-                "text": "自動車"
+                "text": "にぎやか"
               },
               {
                 "id": "2",
-                "text": "会社"
+                "text": "おもい"
               },
               {
                 "id": "3",
-                "text": "自転車"
+                "text": "しずか"
               },
               {
                 "id": "4",
-                "text": "電車"
+                "text": "おいしい"
               }
             ],
             "correctChoiceId": "3",
-            "explanationJa": "「じてんしゃ」は「自転車」と かきます。",
-            "explanationEn": "自転車 is a bicycle; 自動車 is a car and 電車 a train.",
-            "source": {
-              "chapter": "5",
-              "heading": "c5-vehicles-and-travel",
-              "title": "Vehicles and travel",
-              "evidence": "じてんしゃ · 自転車"
-            },
-            "target": "じてんしゃ"
-          },
-          {
-            "id": "vocabulary-11",
-            "number": 11,
-            "chapter": "6",
-            "prompt": "【しずか】を ただしく かいた ものは どれですか。",
-            "choices": [
-              {
-                "id": "1",
-                "text": "便利"
-              },
-              {
-                "id": "2",
-                "text": "元気"
-              },
-              {
-                "id": "3",
-                "text": "有名"
-              },
-              {
-                "id": "4",
-                "text": "静か"
-              }
-            ],
-            "correctChoiceId": "4",
-            "explanationJa": "「しずか」は「静か」と かきます。",
-            "explanationEn": "しずか is written 静か, quiet. It is a な-adjective.",
+            "explanationJa": "うるさく ありません。しずかです。",
+            "explanationEn": "しずか means quiet, the opposite of うるさい. The room is not noisy.",
             "source": {
               "chapter": "6",
               "heading": "c6-adjective-pairs-looks-and-surroundings",
@@ -394,31 +376,65 @@
             "target": "しずか"
           },
           {
-            "id": "vocabulary-12",
-            "number": 12,
-            "chapter": "7",
-            "prompt": "【はたらきます】を ただしく かいた ものは どれですか。",
+            "id": "vocabulary-11",
+            "number": 11,
+            "chapter": "6",
+            "prompt": "「ちいさい」の はんたいは（　）です。",
             "choices": [
               {
                 "id": "1",
-                "text": "休みます"
+                "text": "やすい"
               },
               {
                 "id": "2",
-                "text": "終わります"
+                "text": "おおきい"
               },
               {
                 "id": "3",
-                "text": "働きます"
+                "text": "しずか"
               },
               {
                 "id": "4",
-                "text": "始まります"
+                "text": "げんき"
               }
             ],
-            "correctChoiceId": "3",
-            "explanationJa": "「はたらきます」は「働きます」と かきます。",
-            "explanationEn": "働きます means work; the others mean rest, start, and finish.",
+            "correctChoiceId": "2",
+            "explanationJa": "「ちいさい」の はんたいは「おおきい」です。",
+            "explanationEn": "おおきい (big) is the opposite of ちいさい (small). No recognition of unfamiliar kanji is required.",
+            "source": {
+              "chapter": "6",
+              "heading": "c6-adjective-pairs-size-distance-and-streng",
+              "title": "Adjective pairs: size, distance and strength",
+              "evidence": "おおきい · 大きい"
+            },
+            "target": "おおきい"
+          },
+          {
+            "id": "vocabulary-12",
+            "number": 12,
+            "chapter": "7",
+            "prompt": "まいにち かいしゃで しごとを します。かいしゃで（　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "おわります"
+              },
+              {
+                "id": "2",
+                "text": "はじまります"
+              },
+              {
+                "id": "3",
+                "text": "ねます"
+              },
+              {
+                "id": "4",
+                "text": "はたらきます"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "かいしゃで しごとを します。はたらきます。",
+            "explanationEn": "はたらきます means work. It matches doing a job at a company.",
             "source": {
               "chapter": "7",
               "heading": "c7-verbs",
@@ -430,29 +446,97 @@
           {
             "id": "vocabulary-13",
             "number": 13,
-            "chapter": "8",
-            "prompt": "【しんぶん】を ただしく かいた ものは どれですか。",
+            "chapter": "7",
+            "prompt": "にちようびです。きょうは しごとを しません。しごとを（　）。",
             "choices": [
               {
                 "id": "1",
-                "text": "写真"
+                "text": "おきます"
               },
               {
                 "id": "2",
-                "text": "小説"
+                "text": "やすみます"
               },
               {
                 "id": "3",
-                "text": "雑誌"
+                "text": "はじまります"
               },
               {
                 "id": "4",
-                "text": "新聞"
+                "text": "うまれます"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "きょうは しごとを しません。しごとを やすみます。",
+            "explanationEn": "やすみます means rest or take time off. しごとを やすみます means take time off work.",
+            "source": {
+              "chapter": "7",
+              "heading": "c7-verbs",
+              "title": "Verbs",
+              "evidence": "やすみます · 休みます"
+            },
+            "target": "やすみます"
+          },
+          {
+            "id": "vocabulary-14",
+            "number": 14,
+            "chapter": "8",
+            "prompt": "しろい のみものです。これは（　）です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "コーヒー"
+              },
+              {
+                "id": "2",
+                "text": "こうちゃ"
+              },
+              {
+                "id": "3",
+                "text": "おちゃ"
+              },
+              {
+                "id": "4",
+                "text": "ぎゅうにゅう"
               }
             ],
             "correctChoiceId": "4",
-            "explanationJa": "「しんぶん」は「新聞」と かきます。",
-            "explanationEn": "新聞 is a newspaper; 雑誌 is a magazine, 小説 a novel, and 写真 a photograph.",
+            "explanationJa": "ぎゅうにゅうは、しろい のみものです。",
+            "explanationEn": "ぎゅうにゅう is milk, the white drink among these choices. This tests the word rather than its kanji spelling.",
+            "source": {
+              "chapter": "8",
+              "heading": "c8-drinks-nomimono",
+              "title": "Drinks (nomimono)",
+              "evidence": "ぎゅうにゅう · 牛乳"
+            },
+            "target": "ぎゅうにゅう"
+          },
+          {
+            "id": "vocabulary-15",
+            "number": 15,
+            "chapter": "8",
+            "prompt": "あさ、（　）を よみます。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "はし"
+              },
+              {
+                "id": "2",
+                "text": "しんぶん"
+              },
+              {
+                "id": "3",
+                "text": "ぎゅうにゅう"
+              },
+              {
+                "id": "4",
+                "text": "おちゃ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "しんぶんを よみます。",
+            "explanationEn": "しんぶん is a newspaper, the reading material among these choices.",
             "source": {
               "chapter": "8",
               "heading": "c8-reading-materials-yomimono",
@@ -462,115 +546,39 @@
             "target": "しんぶん"
           },
           {
-            "id": "vocabulary-14",
-            "number": 14,
-            "chapter": "9",
-            "prompt": "【やま】を ただしく かいた ものは どれですか。",
-            "choices": [
-              {
-                "id": "1",
-                "text": "川"
-              },
-              {
-                "id": "2",
-                "text": "山"
-              },
-              {
-                "id": "3",
-                "text": "池"
-              },
-              {
-                "id": "4",
-                "text": "海"
-              }
-            ],
-            "correctChoiceId": "2",
-            "explanationJa": "「やま」は「山」と かきます。",
-            "explanationEn": "山 means mountain; the others mean river, sea, and pond.",
-            "source": {
-              "chapter": "9",
-              "heading": "c9-nature-and-scenery",
-              "title": "Nature and scenery",
-              "evidence": "やま · 山"
-            },
-            "target": "やま"
-          },
-          {
-            "id": "vocabulary-15",
-            "number": 15,
-            "chapter": "9",
-            "prompt": "【うみ】を ただしく かいた ものは どれですか。",
-            "choices": [
-              {
-                "id": "1",
-                "text": "川"
-              },
-              {
-                "id": "2",
-                "text": "池"
-              },
-              {
-                "id": "3",
-                "text": "山"
-              },
-              {
-                "id": "4",
-                "text": "海"
-              }
-            ],
-            "correctChoiceId": "4",
-            "explanationJa": "「うみ」は「海」と かきます。",
-            "explanationEn": "海 is sea. 川 is river and 池 pond.",
-            "source": {
-              "chapter": "9",
-              "heading": "c9-nature-and-scenery",
-              "title": "Nature and scenery",
-              "evidence": "うみ · 海"
-            },
-            "target": "うみ"
-          },
-          {
             "id": "vocabulary-16",
             "number": 16,
             "chapter": "10",
-            "prompt": "【よやく】を ただしく かいた ものは どれですか。",
+            "prompt": "せんせいは にほんごの ことばの いみを（　）します。",
             "choices": [
               {
                 "id": "1",
-                "text": "返事"
+                "text": "うんてん"
               },
               {
                 "id": "2",
-                "text": "紹介"
+                "text": "よやく"
               },
               {
                 "id": "3",
-                "text": "相談"
+                "text": "せつめい"
               },
               {
                 "id": "4",
-                "text": "予約"
+                "text": "せんたく"
               }
             ],
-            "correctChoiceId": "4",
-            "explanationJa": "「よやく」は「予約」と かきます。",
-            "explanationEn": "予約 is a reservation. 返事 is a reply, 相談 consultation, and 紹介 an introduction.",
+            "correctChoiceId": "3",
+            "explanationJa": "ことばの いみを せつめいします。",
+            "explanationEn": "せつめいします means explain. The teacher explains the meaning of a Japanese word. The noun and する pattern are taught in Chapter 10.",
             "source": {
               "chapter": "10",
               "heading": "c10-nouns-that-go-with-suru",
               "title": "Nouns that go with suru",
-              "evidence": "よやく(する) · 予約"
+              "evidence": "せつめい(する) · 説明"
             },
-            "target": "よやく"
-          }
-        ]
-      },
-      {
-        "id": "context",
-        "title": "Words in context",
-        "titleJa": "文の中のことば",
-        "instructionsJa": "（　）に 入る いちばん よい ことばを 一つ えらんでください。",
-        "questions": [
+            "target": "せつめい"
+          },
           {
             "id": "vocabulary-17",
             "number": 17,
@@ -609,7 +617,7 @@
             "id": "vocabulary-18",
             "number": 18,
             "chapter": "2",
-            "prompt": "びょうきの ときに いきます。いしゃが いる ところは（　）です。",
+            "prompt": "いしゃが いる ところは（　）です。",
             "choices": [
               {
                 "id": "1",
@@ -629,8 +637,8 @@
               }
             ],
             "correctChoiceId": "2",
-            "explanationJa": "びょうきの ときに いしゃに あう ところは「びょういん」です。",
-            "explanationEn": "びょういん is a hospital, where you see a doctor when ill.",
+            "explanationJa": "いしゃは、びょういんで はたらきます。",
+            "explanationEn": "A doctor works at a hospital, びょういん. The other choices are a station, cinema and bank.",
             "source": {
               "chapter": "2",
               "heading": "c2-places",
@@ -711,11 +719,11 @@
             "id": "vocabulary-21",
             "number": 21,
             "chapter": "5",
-            "prompt": "がっこうで もらった（　）を、うちで します。",
+            "prompt": "うちで にほんごの（　）を します。",
             "choices": [
               {
                 "id": "1",
-                "text": "しゅうかん"
+                "text": "いっしゅうかん"
               },
               {
                 "id": "2",
@@ -745,11 +753,11 @@
             "id": "vocabulary-22",
             "number": 22,
             "chapter": "6",
-            "prompt": "この へやは 10にんでも せまく ありません。とても（　）です。",
+            "prompt": "この へやは せまく ありません。とても（　）です。",
             "choices": [
               {
                 "id": "1",
-                "text": "あまい"
+                "text": "つよい"
               },
               {
                 "id": "2",
@@ -813,7 +821,7 @@
             "id": "vocabulary-24",
             "number": 24,
             "chapter": "7",
-            "prompt": "まいあさ 6じに（　）。それから あさごはんを たべます。",
+            "prompt": "まいあさ 6じに（　）。7じに あさごはんを たべます。",
             "choices": [
               {
                 "id": "1",
@@ -847,7 +855,7 @@
             "id": "vocabulary-25",
             "number": 25,
             "chapter": "8",
-            "prompt": "カップに コーヒーを いれて（　）。",
+            "prompt": "まいあさ コーヒーを（　）。",
             "choices": [
               {
                 "id": "1",
@@ -867,8 +875,8 @@
               }
             ],
             "correctChoiceId": "1",
-            "explanationJa": "コーヒーは のみものです。「のみます」を つかいます。",
-            "explanationEn": "のみます means drink. Reading, writing and listening do not fit coffee.",
+            "explanationJa": "コーヒーを のみます。",
+            "explanationEn": "のみます means drink. You drink coffee with breakfast.",
             "source": {
               "chapter": "8",
               "heading": "c8-verbs",
@@ -1177,7 +1185,7 @@
               },
               {
                 "id": "4",
-                "text": "わたしは きのうだけ 7じに おきました。"
+                "text": "わたしは きのう 7じに おきませんでした。"
               }
             ],
             "correctChoiceId": "1",
@@ -1301,7 +1309,7 @@
             "choices": [
               {
                 "id": "1",
-                "text": "わたしだけ いきます。"
+                "text": "わたしは ひとりで いきます。"
               },
               {
                 "id": "2",
@@ -1369,19 +1377,19 @@
             "choices": [
               {
                 "id": "1",
-                "text": "きのう おみせで ものを かわなかった。"
+                "text": "きのう みせで ものを かわなかった。"
               },
               {
                 "id": "2",
-                "text": "きょう おみせで ものを かう。"
+                "text": "きょう みせで ものを かう。"
               },
               {
                 "id": "3",
-                "text": "きのう おみせで ものを かった。"
+                "text": "きのう みせで ものを かった。"
               },
               {
                 "id": "4",
-                "text": "きのう おみせで ものを うった。"
+                "text": "きのう みせで ものを うった。"
               }
             ],
             "correctChoiceId": "3",
@@ -1403,7 +1411,7 @@
   },
   {
     "id": "grammar",
-    "revision": 1,
+    "revision": 2,
     "title": "Grammar checkpoint",
     "description": "A cumulative grammar assessment after Chapter 10.",
     "parts": [
@@ -1442,7 +1450,8 @@
             "source": {
               "chapter": "1",
               "heading": "c1-1-2-a-wa-b-dewa-arimasen-ja-arimasen",
-              "title": "1.2 A wa B dewa arimasen / ja arimasen"
+              "title": "1.2 A wa B dewa arimasen / ja arimasen",
+              "evidence": "To say \"A is not B\", change desu to dewa arimasen. Another way is ja arimasen, where ja is the contracted form of dewa. Both are polite and mean the same thing. The word dewa is written では, and the は is read \"wa\"."
             }
           },
           {
@@ -1474,7 +1483,8 @@
             "source": {
               "chapter": "1",
               "heading": "c1-1-7-a-no-b",
-              "title": "1.7 A no B"
+              "title": "1.7 A no B",
+              "evidence": "A noun phrase is built by joining two or more nouns with a marker: noun no noun means \"noun of noun\" or \"noun's noun\", noun to noun means \"noun and noun\", and noun ka noun means \"noun or noun\". The marker no is a modifier or possessive marker. It covers belonging (my office), relationship (the president of ADZ) and description (a Japanese language student). The main noun comes last, and you can stack more than one no in a row. A sentence can also end with no to mean \"A's one\", as in kono kuruma wa ana san no desu."
             }
           },
           {
@@ -1506,7 +1516,8 @@
             "source": {
               "chapter": "2",
               "heading": "c2-2-4-a-wa-location-ni-imasu",
-              "title": "2.4 A wa Location ni imasu"
+              "title": "2.4 A wa Location ni imasu",
+              "evidence": "This is the same shape as 2.1, but for people and animals. The verb imasu is the verb of existence for living things that move, and it is used even when you only talk about where someone is. The focus is the location of A."
             }
           },
           {
@@ -1538,7 +1549,8 @@
             "source": {
               "chapter": "2",
               "heading": "c2-2-8-location-ni-a-ga-arimasu",
-              "title": "2.8 Location ni A ga arimasu"
+              "title": "2.8 Location ni A ga arimasu",
+              "evidence": "This is the second sentence shape, and it has a different job. Instead of saying where a known thing is, it says that something exists in a place, so the place comes first. The marker ga points at the thing that exists. Use arimasu for non-living things. The focus is the existence of A in that place, and A is usually new information for the listener."
             }
           },
           {
@@ -1570,7 +1582,8 @@
             "source": {
               "chapter": "3",
               "heading": "c3-3-7-counters",
-              "title": "3.7 Counters"
+              "title": "3.7 Counters",
+              "evidence": "In Japanese you do not just say \"three apples\". You add a counter, which is a short ending that depends on what you are counting. This chapter teaches tsu (anything), sai (age), nin (people), mai (thin, flat things), hon (long, thin things), satsu (books and notebooks), kai (times), kai (floors of a building), ko (small things), hiki (small animals), dai (machines and vehicles) and ban or banme (order, such as which child you are). Pages use the counter pe-ji. The number and the counter join into one word: san plus ko is sanko."
             }
           },
           {
@@ -1602,7 +1615,8 @@
             "source": {
               "chapter": "3",
               "heading": "c3-3-7-counters",
-              "title": "3.7 Counters"
+              "title": "3.7 Counters",
+              "evidence": "In Japanese you do not just say \"three apples\". You add a counter, which is a short ending that depends on what you are counting. This chapter teaches tsu (anything), sai (age), nin (people), mai (thin, flat things), hon (long, thin things), satsu (books and notebooks), kai (times), kai (floors of a building), ko (small things), hiki (small animals), dai (machines and vehicles) and ban or banme (order, such as which child you are). Pages use the counter pe-ji. The number and the counter join into one word: san plus ko is sanko."
             }
           },
           {
@@ -1634,7 +1648,8 @@
             "source": {
               "chapter": "4",
               "heading": "c4-4-9-time-expression-kara",
-              "title": "4.9 Time Expression kara"
+              "title": "4.9 Time Expression kara",
+              "evidence": "Add kara right after a time to say from that time. The word kara marks the starting point: kuji juugofun kara is from 9:15. It works with any time word, whether it is a clock time, a day, a month or a year. This is bunkei 4.2 in your workbook."
             }
           },
           {
@@ -1666,7 +1681,8 @@
             "source": {
               "chapter": "4",
               "heading": "c4-4-10-time-expression-made",
-              "title": "4.10 Time Expression made"
+              "title": "4.10 Time Expression made",
+              "evidence": "Add made right after a time to say until or up to that time. The words kara and made often work as a pair, with Time kara Time made meaning from one time to another: gogo niji kara goji made is from 2 p.m. to 5 p.m. When you say from and until together, each marker sits right after its own time. This is bunkei 4.3 in your workbook."
             }
           },
           {
@@ -1698,7 +1714,8 @@
             "source": {
               "chapter": "5",
               "heading": "c5-5-8-location-kara-and-location-made-bunk",
-              "title": "5.8 Location kara and Location made (bunkei 5.4)"
+              "title": "5.8 Location kara and Location made (bunkei 5.4)",
+              "evidence": "You already know kara (from) and made (until, up to) after times. They also go after places: koujou kara is from the factory and ginkou made is up to the bank. Kara marks the starting point and made marks the end point."
             }
           },
           {
@@ -1730,7 +1747,8 @@
             "source": {
               "chapter": "5",
               "heading": "c5-5-10-mode-of-transportation-de-bunkei-5-",
-              "title": "5.10 Mode of transportation de (bunkei 5.6)"
+              "title": "5.10 Mode of transportation de (bunkei 5.6)",
+              "evidence": "Put de after a vehicle to say how you go: basu de is by bus and hikouki de is by airplane. The table lists the vehicles. The one exception is aruite (on foot, by walking). It already means by walking, so it takes no de: aruite gofun desu is 5 minutes on foot."
             }
           },
           {
@@ -1762,7 +1780,8 @@
             "source": {
               "chapter": "6",
               "heading": "c6-6-6-i-adjectives-present-past-and-negati",
-              "title": "6.6 I-adjectives: present, past and negative (adjective conjugation)"
+              "title": "6.6 I-adjectives: present, past and negative (adjective conjugation)",
+              "evidence": "With i-adjectives, the adjective itself changes for negative and past, and desu stays as the polite ending. Take the final i off and add kunai for the negative, katta for the past, and kunakatta for the past negative. So takai (expensive) gives takakunai (not expensive), takakatta (was expensive) and takakunakatta (was not expensive)."
             }
           },
           {
@@ -1794,7 +1813,8 @@
             "source": {
               "chapter": "6",
               "heading": "c6-6-5-adjective-adjective-kute-and-de-bunk",
-              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)"
+              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)",
+              "evidence": "The second job of an adjective is to connect to another adjective, as in big and heavy. The first adjective changes shape, and the last one keeps its normal form."
             }
           },
           {
@@ -1826,7 +1846,8 @@
             "source": {
               "chapter": "6",
               "heading": "c6-6-10-a-little-and-not-very-chotto-and-am",
-              "title": "6.10 A little and not very: chotto and amari (bunkei 6.6)"
+              "title": "6.10 A little and not very: chotto and amari (bunkei 6.6)",
+              "evidence": "Chotto means a little. Put it in front of an adjective, and the adjective keeps its normal form: chotto semai desu (it is a little small). Chotto also makes a refusal sound soft. Sumimasen, ima chotto isogashii desu is a polite way to say you cannot do something now."
             }
           },
           {
@@ -1858,7 +1879,8 @@
             "source": {
               "chapter": "7",
               "heading": "c7-7-2-time-expression-ni-verb-bunkei-7-1",
-              "title": "7.2 Time expression + ni + verb (bunkei 7.1)"
+              "title": "7.2 Time expression + ni + verb (bunkei 7.1)",
+              "evidence": "The marker ni goes after a specific time and tells you when the action happens: at 5:30, on Saturday, in December. The pattern is time + ni + verb, and it works with all four verb forms."
             }
           },
           {
@@ -1890,7 +1912,8 @@
             "source": {
               "chapter": "7",
               "heading": "c7-7-1-verbs-in-the-formal-form-masu-masen-",
-              "title": "7.1 Verbs in the formal form (masu, masen, mashita, masen deshita)"
+              "title": "7.1 Verbs in the formal form (masu, masen, mashita, masen deshita)",
+              "evidence": "This is the first chapter with verbs, which are the action words: wake up, sleep, work, study. The book uses the formal (polite) form for now. It is built from a verb stem plus an ending. The stem is what is left when you take masu (ます) off: ne for nemasu, oki for okimasu and hajimari for hajimarimasu."
             }
           },
           {
@@ -1922,7 +1945,8 @@
             "source": {
               "chapter": "7",
               "heading": "c7-7-8-na-adjective-as-an-adverb-bunkei-7-7",
-              "title": "7.8 Na-adjective as an adverb (bunkei 7.7)"
+              "title": "7.8 Na-adjective as an adverb (bunkei 7.7)",
+              "evidence": "A na-adjective can also describe an action, but it changes in a different way. Drop the na and add ni, then put it in front of the verb. Shizuka na becomes shizuka ni, so shizuka ni kyuukeishimasu is take a break quietly. Majime na becomes majime ni, so majime ni benkyoushimashita is studied seriously."
             }
           },
           {
@@ -1954,7 +1978,8 @@
             "source": {
               "chapter": "8",
               "heading": "c8-8-4-place-of-action-de-bunkei-8-3",
-              "title": "8.4 Place of action de (bunkei 8.3)"
+              "title": "8.4 Place of action de (bunkei 8.3)",
+              "evidence": "De marks the place where an action happens or will happen, in English at or in. The pattern is place + de + (object o) + verb. Kissaten de ko-hi- o nomimasu is I drink coffee at the coffee shop. The question word is doko de, which means where."
             }
           },
           {
@@ -1986,7 +2011,8 @@
             "source": {
               "chapter": "8",
               "heading": "c8-8-5-recipient-of-action-ni-bunkei-8-4",
-              "title": "8.5 Recipient of action ni (bunkei 8.4)"
+              "title": "8.5 Recipient of action ni (bunkei 8.4)",
+              "evidence": "Ni marks the person who receives the action, in English to or for. The pattern is person + ni + (object o) + verb. Ana san ni denwa o kakemasu is I will call Ana. The English word changes with the verb. You call to Ana, write to Mr. Tanaka and buy something for your brother, but Japanese uses the same ni each time. English also drops the little word in ask the teacher, and Japanese still says sensei ni kikimashita."
             }
           },
           {
@@ -2018,7 +2044,8 @@
             "source": {
               "chapter": "8",
               "heading": "c8-8-8-tool-of-action-de-bunkei-8-7",
-              "title": "8.8 Tool of action de (bunkei 8.7)"
+              "title": "8.8 Tool of action de (bunkei 8.7)",
+              "evidence": "When de marks a tool, it is the thing you use to do the action, in English with or using. Hashi de ra-men o tabemasu is I eat ramen with chopsticks. The tool comes before the object, and the object keeps its o."
             }
           },
           {
@@ -2050,7 +2077,8 @@
             "source": {
               "chapter": "9",
               "heading": "c9-9-1-destination-e-or-ni-and-origin-kara-",
-              "title": "9.1 Destination e or ni, and origin kara kimashita (bunkei 9.1)"
+              "title": "9.1 Destination e or ni, and origin kara kimashita (bunkei 9.1)",
+              "evidence": "Chapter 9 is about moving from one place to another. The first pattern says where someone goes. It is A wa destination e or ni, followed by a motion verb. The four motion verbs are ikimasu (go), kimasu (come), kaerimasu (go home or return) and modorimasu (go back)."
             }
           },
           {
@@ -2082,7 +2110,8 @@
             "source": {
               "chapter": "9",
               "heading": "c9-9-5-counter-for-people-de-bunkei-9-5",
-              "title": "9.5 Counter for people de (bunkei 9.5)"
+              "title": "9.5 Counter for people de (bunkei 9.5)",
+              "evidence": "The pattern is number of people + de + verb. It says how many of you do something together. The count includes you, so futari de means two people in all, you and one other person. Hitori de means alone, by yourself."
             }
           },
           {
@@ -2114,7 +2143,8 @@
             "source": {
               "chapter": "9",
               "heading": "c9-9-10-from-masu-form-to-dictionary-form-p",
-              "title": "9.10 From masu form to dictionary form (page 137)"
+              "title": "9.10 From masu form to dictionary form (page 137)",
+              "evidence": "To go from the masu form to the dictionary form, you first remove masu to get the stem. What you do next depends on the type."
             }
           },
           {
@@ -2146,7 +2176,8 @@
             "source": {
               "chapter": "10",
               "heading": "c10-10-3-group-1-verbs-that-end-in-bu-mu-or-",
-              "title": "10.3 Group 1: verbs that end in bu, mu or nu (page 149)"
+              "title": "10.3 Group 1: verbs that end in bu, mu or nu (page 149)",
+              "evidence": "Group 1 has the verbs whose dictionary form ends in bu, mu or nu. To make the nai form, change the last u sound to the a sound and add nai: bu becomes ba, mu becomes ma, and nu becomes na. So asobu becomes asobanai, nomu becomes nomanai, and shinu becomes shinanai."
             }
           },
           {
@@ -2178,7 +2209,8 @@
             "source": {
               "chapter": "10",
               "heading": "c10-10-13-masen-deshita-to-the-nakatta-form-",
-              "title": "10.13 Masen deshita to the nakatta form: past negative (page 152)"
+              "title": "10.13 Masen deshita to the nakatta form: past negative (page 152)",
+              "evidence": "The nakatta form is the informal past negative. To make it, take the nai form and replace the final i with katta. So yomanai becomes yomanakatta, tabenai becomes tabenakatta, and konai becomes konakatta."
             }
           }
         ]
@@ -2218,7 +2250,8 @@
             "source": {
               "chapter": "5",
               "heading": "c5-5-6-span-of-time-ni-frequency-bunkei-5-2",
-              "title": "5.6 Span of Time ni Frequency (bunkei 5.2)"
+              "title": "5.6 Span of Time ni Frequency (bunkei 5.2)",
+              "evidence": "To say how often something happens within a length of time, put ni right after the length of time and then say the number of times with kai. Isshuukan ni gokai is five times a week. Read ni here as per or in each: in one week, five times. The length is usually one unit (ichinichi, isshuukan, ikkagetsu, ichinen), but it can be any length, such as yojikan ni nikai (twice in four hours)."
             },
             "composition": {
               "before": "アルバイトは",
@@ -2263,7 +2296,8 @@
             "source": {
               "chapter": "6",
               "heading": "c6-6-5-adjective-adjective-kute-and-de-bunk",
-              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)"
+              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)",
+              "evidence": "The second job of an adjective is to connect to another adjective, as in big and heavy. The first adjective changes shape, and the last one keeps its normal form."
             },
             "composition": {
               "before": "ここは",
@@ -2307,7 +2341,8 @@
             "source": {
               "chapter": "7",
               "heading": "c7-7-2-time-expression-ni-verb-bunkei-7-1",
-              "title": "7.2 Time expression + ni + verb (bunkei 7.1)"
+              "title": "7.2 Time expression + ni + verb (bunkei 7.1)",
+              "evidence": "The marker ni goes after a specific time and tells you when the action happens: at 5:30, on Saturday, in December. The pattern is time + ni + verb, and it works with all four verb forms."
             },
             "composition": {
               "before": "わたしは",
@@ -2351,7 +2386,8 @@
             "source": {
               "chapter": "8",
               "heading": "c8-8-5-recipient-of-action-ni-bunkei-8-4",
-              "title": "8.5 Recipient of action ni (bunkei 8.4)"
+              "title": "8.5 Recipient of action ni (bunkei 8.4)",
+              "evidence": "Ni marks the person who receives the action, in English to or for. The pattern is person + ni + (object o) + verb. Ana san ni denwa o kakemasu is I will call Ana. The English word changes with the verb. You call to Ana, write to Mr. Tanaka and buy something for your brother, but Japanese uses the same ni each time. English also drops the little word in ask the teacher, and Japanese still says sensei ni kikimashita."
             },
             "composition": {
               "before": "せんせいは わたし",
@@ -2395,7 +2431,8 @@
             "source": {
               "chapter": "8",
               "heading": "c8-8-2-a-wa-object-o-transitive-verb-bunkei",
-              "title": "8.2 A wa object o transitive verb (bunkei 8.1)"
+              "title": "8.2 A wa object o transitive verb (bunkei 8.1)",
+              "evidence": "The basic pattern is A wa object o verb. Wa marks the topic, who does the action. O marks the object, the thing the action is done to. The verb comes last and shows the tense and whether it is positive or negative. So ana san wa tokei o kaimasu is Ana will buy a watch. In kana the object marker is written を, but you say it just like the vowel o. A good habit is to ask what the action is done to, and then put o straight after that word."
             },
             "composition": {
               "before": "わたしは にほんご",
@@ -2439,7 +2476,8 @@
             "source": {
               "chapter": "9",
               "heading": "c9-9-4-companion-to-or-issho-ni-bunkei-9-4",
-              "title": "9.4 Companion to or issho ni (bunkei 9.4)"
+              "title": "9.4 Companion to or issho ni (bunkei 9.4)",
+              "evidence": "The pattern is person + to (or to issho ni) + verb. It names the person who goes, comes or returns together with you. Issho ni only stresses the word together, so tomodachi to ikimasu and tomodachi to issho ni ikimasu mean the same thing."
             },
             "composition": {
               "before": "わたしは きのう",
@@ -2483,7 +2521,8 @@
             "source": {
               "chapter": "9",
               "heading": "c9-9-1-destination-e-or-ni-and-origin-kara-",
-              "title": "9.1 Destination e or ni, and origin kara kimashita (bunkei 9.1)"
+              "title": "9.1 Destination e or ni, and origin kara kimashita (bunkei 9.1)",
+              "evidence": "Chapter 9 is about moving from one place to another. The first pattern says where someone goes. It is A wa destination e or ni, followed by a motion verb. The four motion verbs are ikimasu (go), kimasu (come), kaerimasu (go home or return) and modorimasu (go back)."
             },
             "composition": {
               "before": "この バスは えき",
@@ -2528,7 +2567,8 @@
             "source": {
               "chapter": "10",
               "heading": "c10-10-18-casual-questions-with-no-bunkei-10",
-              "title": "10.18 Casual questions with no (bunkei 10.2, page 155)"
+              "title": "10.18 Casual questions with no (bunkei 10.2, page 155)",
+              "evidence": "In casual speech, the question marker ka is replaced by no. The question ikimasu ka becomes iku no, and owarimashita ka becomes owatta no. The verb is in the informal form, and your voice goes up at the end of the sentence. In writing, a question mark shows that it is a question."
             },
             "composition": {
               "before": "きのうは",
@@ -2580,7 +2620,8 @@
             "source": {
               "chapter": "4",
               "heading": "c4-4-16-time-ni-a-ga-arimasu-the-marker-ni",
-              "title": "4.16 Time ni A ga arimasu (the marker ni)"
+              "title": "4.16 Time ni A ga arimasu (the marker ni)",
+              "evidence": "This extra lesson fills a gap. Exercise V question 10 in the workbook asks a question with a marker that the Chapter 4 patterns do not teach: ni. The marker ni shows the time when something is held or exists, like on Sunday or at 3 p.m. The sentence uses the shape from Chapter 2, Place ni A ga arimasu, with a time in the ni slot: Time ni A ga arimasu."
             },
             "passage": {
               "id": "outing",
@@ -2616,7 +2657,8 @@
             "source": {
               "chapter": "9",
               "heading": "c9-9-2-mode-of-transportation-de-bunkei-9-2",
-              "title": "9.2 Mode of transportation de (bunkei 9.2)"
+              "title": "9.2 Mode of transportation de (bunkei 9.2)",
+              "evidence": "Put de after a vehicle to say how you travel. Jitensha de is by bicycle, basu de is by bus and densha de is by train. The pattern is vehicle + de + motion verb. The one exception is aruite, which means on foot or by walking. It already carries the meaning of by, so it takes no de."
             },
             "passage": {
               "id": "outing",
@@ -2631,32 +2673,33 @@
             "choices": [
               {
                 "id": "1",
-                "text": "ねます"
+                "text": "はやい"
               },
               {
                 "id": "2",
-                "text": "うります"
+                "text": "はやな"
               },
               {
                 "id": "3",
-                "text": "おわります"
+                "text": "はやく"
               },
               {
                 "id": "4",
-                "text": "おきます"
+                "text": "はやいに"
               }
             ],
-            "correctChoiceId": "4",
-            "explanationJa": "まいあさの しゅうかんなので「おきます」です。",
-            "explanationEn": "The passage gives a morning routine: get up, eat breakfast, drink coffee.",
+            "correctChoiceId": "3",
+            "explanationJa": "「はやい」の「い」を「く」に して、「はやく おきます」と いいます。",
+            "explanationEn": "Before an action verb, the i-adjective はやい becomes the adverb はやく: wake up early. This is the Chapter 7 i-adjective adverb pattern.",
             "source": {
               "chapter": "7",
-              "heading": "c7-7-1-verbs-in-the-formal-form-masu-masen-",
-              "title": "7.1 Verbs in the formal form (masu, masen, mashita, masen deshita)"
+              "heading": "c7-7-7-i-adjective-as-an-adverb-bunkei-7-6",
+              "title": "7.7 I-adjective as an adverb (bunkei 7.6)",
+              "evidence": "An adjective can describe how an action is done. To use an i-adjective this way, drop the final i and add ku, then put it right before the verb. Hayai (early) becomes hayaku, so hayaku okimasu is wake up early. Osoi (late) becomes osoku, so osoku nemashita is slept late."
             },
             "passage": {
               "id": "morning",
-              "text": "わたしは まいあさ 6じに〔1〕。あさごはんは パンです。コーヒー〔2〕のみます。しごとは 8じからです。"
+              "text": "わたしは まいあさ 6じに〔1〕おきます。あさごはんを たべます。コーヒー〔2〕のみます。しごとは 8じからです。"
             }
           },
           {
@@ -2688,11 +2731,12 @@
             "source": {
               "chapter": "8",
               "heading": "c8-8-2-a-wa-object-o-transitive-verb-bunkei",
-              "title": "8.2 A wa object o transitive verb (bunkei 8.1)"
+              "title": "8.2 A wa object o transitive verb (bunkei 8.1)",
+              "evidence": "The basic pattern is A wa object o verb. Wa marks the topic, who does the action. O marks the object, the thing the action is done to. The verb comes last and shows the tense and whether it is positive or negative. So ana san wa tokei o kaimasu is Ana will buy a watch. In kana the object marker is written を, but you say it just like the vowel o. A good habit is to ask what the action is done to, and then put o straight after that word."
             },
             "passage": {
               "id": "morning",
-              "text": "わたしは まいあさ 6じに〔1〕。あさごはんは パンです。コーヒー〔2〕のみます。しごとは 8じからです。"
+              "text": "わたしは まいあさ 6じに〔1〕おきます。あさごはんを たべます。コーヒー〔2〕のみます。しごとは 8じからです。"
             }
           },
           {
@@ -2724,7 +2768,8 @@
             "source": {
               "chapter": "6",
               "heading": "c6-6-5-adjective-adjective-kute-and-de-bunk",
-              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)"
+              "title": "6.5 Adjective + adjective: kute and de (bunkei 6.3)",
+              "evidence": "The second job of an adjective is to connect to another adjective, as in big and heavy. The first adjective changes shape, and the last one keeps its normal form."
             },
             "passage": {
               "id": "hotel",
@@ -2760,7 +2805,8 @@
             "source": {
               "chapter": "10",
               "heading": "c10-10-21-informal-desu-and-informal-adjecti",
-              "title": "10.21 Informal desu and informal adjectives (extra lesson)"
+              "title": "10.21 Informal desu and informal adjectives (extra lesson)",
+              "evidence": "This extra lesson fills a gap in the chapter. The book uses informal desu and informal adjectives in its examples (kirei da wa, oishikatta wa), but it never gives you the full set."
             },
             "passage": {
               "id": "hotel",
@@ -2771,43 +2817,44 @@
             "id": "grammar-39",
             "number": 39,
             "chapter": "10",
-            "prompt": "〔1〕に 入る ことばは どれですか。",
+            "prompt": "〔1〕に 入る ことばは どれですか。「たべません」と おなじ いみの ふつうの いいかたを えらんでください。",
             "choices": [
               {
                 "id": "1",
-                "text": "いくの"
+                "text": "たべなかった"
               },
               {
                 "id": "2",
-                "text": "いかないの"
+                "text": "たべた"
               },
               {
                 "id": "3",
-                "text": "いきますか"
+                "text": "たべない"
               },
               {
                 "id": "4",
-                "text": "いったの"
+                "text": "たべる"
               }
             ],
-            "correctChoiceId": "4",
-            "explanationJa": "きのうの ことを きくので「いったの？」です。",
-            "explanationEn": "きのう establishes the past; a casual past question uses いったの？.",
+            "correctChoiceId": "3",
+            "explanationJa": "「たべません」は、ふつうの いいかたで「たべない」です。",
+            "explanationEn": "たべません becomes たべない in the plain present negative. たべる is an ichidan verb: replace る with ない. The task explicitly requests the same meaning and plain style.",
             "source": {
               "chapter": "10",
-              "heading": "c10-10-18-casual-questions-with-no-bunkei-10",
-              "title": "10.18 Casual questions with no (bunkei 10.2, page 155)"
+              "heading": "c10-10-11-masen-to-the-nai-form-present-nega",
+              "title": "10.11 Masen to the nai form: present negative (page 151)",
+              "evidence": "To make the informal present negative, change the verb to its nai form. The rule depends on the group. For Group 1 to Group 5, the final u sound changes to the a sound and nai is added (nomu becomes nomanai, kau becomes kawanai). For Regular verbs, drop ru and add nai (taberu becomes tabenai). For Special verbs, suru becomes shinai and kuru becomes konai."
             },
             "passage": {
               "id": "yesterday",
-              "text": "アナ「きのう、パーティーに〔1〕？」\nベン「ううん、いかなかった。うちで べんきょう〔2〕。」\nアナ「わたしも、うちで べんきょうしたよ。」"
+              "text": "アナ「まいあさ、パンを たべるの？」\nベン「パンは〔1〕。コーヒーを のむよ。」\nアナ「きのう、へやを そうじしたの？」\nベン「〔2〕。きょう するよ。」"
             }
           },
           {
             "id": "grammar-40",
             "number": 40,
             "chapter": "10",
-            "prompt": "〔2〕に 入る ことばは どれですか。",
+            "prompt": "〔2〕に 入る ことばは どれですか。「しませんでした」と おなじ いみの ふつうの いいかたを えらんでください。",
             "choices": [
               {
                 "id": "1",
@@ -2826,17 +2873,18 @@
                 "text": "した"
               }
             ],
-            "correctChoiceId": "4",
-            "explanationJa": "きのう べんきょうした ことを いいます。「べんきょうする」の かこは「べんきょうした」です。",
-            "explanationEn": "The exchange describes completed study yesterday. Use した with べんきょう.",
+            "correctChoiceId": "1",
+            "explanationJa": "「しませんでした」は、ふつうの いいかたで「しなかった」です。",
+            "explanationEn": "The plain past negative of する is しなかった. The speaker did not clean yesterday and will do it today. しない is present negative; した is past positive.",
             "source": {
               "chapter": "10",
-              "heading": "c10-10-1-noun-suru-bunkei-10-1-page-148",
-              "title": "10.1 Noun + suru (bunkei 10.1, page 148)"
+              "heading": "c10-10-13-masen-deshita-to-the-nakatta-form-",
+              "title": "10.13 Masen deshita to the nakatta form: past negative (page 152)",
+              "evidence": "The nakatta form is the informal past negative. To make it, take the nai form and replace the final i with katta. So yomanai becomes yomanakatta, tabenai becomes tabenakatta, and konai becomes konakatta."
             },
             "passage": {
               "id": "yesterday",
-              "text": "アナ「きのう、パーティーに〔1〕？」\nベン「ううん、いかなかった。うちで べんきょう〔2〕。」\nアナ「わたしも、うちで べんきょうしたよ。」"
+              "text": "アナ「まいあさ、パンを たべるの？」\nベン「パンは〔1〕。コーヒーを のむよ。」\nアナ「きのう、へやを そうじしたの？」\nベン「〔2〕。きょう するよ。」"
             }
           }
         ]

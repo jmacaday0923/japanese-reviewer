@@ -87,7 +87,7 @@ test("a tested character stays bare in reading/meaning items, including feedback
   assert.ok([...d.prompt,...d.explanationJa,...d.explanationEn].every(p=>!p.reading));
 });
 
-test("all eight written-form items suppress readings on every choice to avoid revealing the key", () => {
+test("all four written-form items suppress readings on every choice to avoid revealing the key", () => {
   const e=bank.find(e=>e.id==="vocabulary"),d=buildChapter10Presentation(e,policy,known);
   for (const q of e.parts.find(p=>p.id==="spelling").questions) {
     const item=d.prepared.questions[q.id];

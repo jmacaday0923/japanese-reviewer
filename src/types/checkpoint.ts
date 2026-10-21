@@ -2,7 +2,7 @@ export type CheckpointQuestion = {
   id: string; number: number; chapter: string; prompt: string;
   choices: { id: string; text: string }[]; correctChoiceId: string;
   explanationJa: string; explanationEn: string;
-  source: { chapter: string; heading: string; title: string; evidence?: string };
+  source: { chapter: string; heading: string; title: string; evidence?: string; kanjiHeading?: string };
   target?: string; context?: string;
   composition?: { before: string; after: string; orderedParts: string[]; starIndex: number };
   completedSentence?: string;

@@ -43,12 +43,13 @@ test("all checkpoint questions have four distinct Japanese choices, valid keys a
     const chapter = chapters.find(c => c.ch === q.chapter);
     assert.ok(chapter.sections.some(s => s.html.includes('id="' + q.source.heading + '"')), q.id);
     assert.doesNotMatch([q.prompt, q.context ?? "", q.passage?.text ?? "", ...q.choices.map(c => c.text)].join(""), /[A-Za-z]|<ruby|<rt>/);
-    if (q.target) assert.ok(q.source.evidence.includes(q.target), q.id);
+    // Revision 2 prerequisites are checked against actual lesson/Kanji 1 rows in checkpoint-curriculum.test.mjs.
+    if (q.target && e.revision === 1) assert.ok(q.source.evidence.includes(q.target), q.id);
   }
   assert.equal(ids.size, 134);
 });
 test("the bank includes all intended formats, consistent starred keys and four paired text passages", () => {
-  assert.deepEqual(exams[0].parts.map(p => p.questions.length), [8, 8, 16, 8]);
+  assert.deepEqual(exams[0].parts.map(p => p.questions.length), [4, 4, 24, 8]);
   assert.deepEqual(exams[1].parts.map(p => p.questions.length), [24, 8, 8]);
   for (const q of exams[1].parts[1].questions) {
     const c = q.composition;
@@ -78,7 +79,7 @@ test("scores distinguish blanks and mistakes; chapter and question-type totals r
   assert.deepEqual(checkpointScore(exam, answers), { correct: 1, total: 40, unanswered: 38 });
   const chapters = checkpointByChapter(exam, answers);
   for (const key of ["correct", "total", "unanswered"]) assert.equal(chapters.reduce((sum, s) => sum + s[key], 0), checkpointScore(exam, answers)[key]);
-  assert.deepEqual(questionScore(exam.parts[0].questions, answers), { correct: 1, total: 8, unanswered: 6 });
+  assert.deepEqual(questionScore(exam.parts[0].questions, answers), { correct: 1, total: 4, unanswered: 2 });
 });
 test("invalid answers and part IDs cannot change an attempt", () => {
   const state = newCheckpointAttempt(exam);

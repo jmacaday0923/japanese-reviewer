@@ -74,6 +74,9 @@ export default function CheckpointExam({ exam, presentation }: { exam: Exam; pre
       </div>
       <progress className="mt-3 h-2 w-full accent-accent" aria-label="Questions answered" value={answered} max={score.total} />
       <p className="mt-3 text-sm leading-relaxed text-muted">{score.total} questions · {checkpointCoverage(exam).label} · {exam.focus} Work at your own pace, then submit to review.</p>
+      {exam.revision > 1 && <p className="mt-2 text-xs leading-relaxed text-muted" data-checkpoint-revision>
+        Revised checkpoint · Version {exam.revision}. Earlier versions stay saved separately in this browser; this version has its own answers and scores.
+      </p>}
       <p role={snapshot.saved ? undefined : "status"} className="mt-2 text-xs leading-relaxed text-subtle">
         {snapshot.saved ? "Your answers and up to 10 full-attempt scores are saved in this browser." : "This browser cannot save your answers. Keep this tab open to retain this attempt."}
       </p>
@@ -164,6 +167,7 @@ export default function CheckpointExam({ exam, presentation }: { exam: Exam; pre
               <p lang="ja" className="mt-3 text-lg leading-relaxed">{text(q.explanationJa, prepared?.explanationJa)}</p>
               <div className="mt-2 text-sm leading-relaxed text-muted"><ReadingHint kind="english" context={exam.title + " question " + q.number} compact>{text(q.explanationEn, prepared?.explanationEn)}</ReadingHint></div>
               <Link href={"/chapters/" + q.source.chapter + "#" + q.source.heading} className="mt-3 inline-flex min-h-11 items-center text-sm text-accent-text underline-offset-2 hover:underline">Review Chapter {q.chapter}: {q.source.title}</Link>
+              {q.source.kanjiHeading && <div><Link href={"/kanji/1#" + q.source.kanjiHeading} className="inline-flex min-h-11 items-center text-sm text-accent-text underline-offset-2 hover:underline">Review Kanji 1</Link></div>}
             </div>}
           </li>;
         })}

@@ -1,7 +1,7 @@
 import { test, expect, visibleMain, type Page } from "./fixtures";
 import exams from "../src/data/checkpoint-exams.json";
 const path = (id: string) => "/checkpoints/" + id;
-const key = (id: string) => "japanese-reviewer:checkpoint:" + id + ":v1";
+const key = (id: string) => "japanese-reviewer:checkpoint:" + id + ":v" + exams.find(exam => exam.id === id)!.revision;
 const q = (page: Page, id: string) => visibleMain(page).locator('[data-checkpoint-question="' + id + '"]');
 const choosePart = (page: Page, title: string) => visibleMain(page).getByRole("navigation", { name: "Checkpoint parts" }).getByRole("button", { name: new RegExp("^" + title) }).click();
 async function answerAll(page: Page, exam: typeof exams[number], firstWrong = false) {

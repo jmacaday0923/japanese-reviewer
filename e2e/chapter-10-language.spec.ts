@@ -7,7 +7,7 @@ import { newCheckpointAttempt, submitCheckpointAttempt } from "../src/lib/checkp
 
 const chapter10 = exams.filter(exam => exam.id !== "chapter-5");
 const path = (id: string) => "/checkpoints/" + id;
-const key = (id: string) => "japanese-reviewer:checkpoint:" + id + ":v1";
+const key = (id: string) => "japanese-reviewer:checkpoint:" + id + ":v" + exams.find(exam => exam.id === id)!.revision;
 const known = kanji1Characters(kanji[0]);
 const hiddenAids = JSON.stringify({ version: 2, show: { kana: false, romaji: false, english: false } });
 test.beforeEach(async ({ page }) => {
@@ -64,7 +64,7 @@ for (const exam of chapter10) {
     }
   });
 
-  test(exam.id + ": existing v1 first scores and history survive the presentation update", async ({ page }) => {
+  test(exam.id + ": current-version first scores and history survive reloads", async ({ page }) => {
     const first = exam.parts[0].questions[0];
     const state = submitCheckpointAttempt(exam, { ...newCheckpointAttempt(exam), answers: { [first.id]: first.correctChoiceId } }, "2026-10-21T12:00:00Z");
     await page.addInitScript(({ key, value }) => localStorage.setItem(key, value), { key: key(exam.id), value: JSON.stringify(state) });
@@ -75,21 +75,21 @@ for (const exam of chapter10) {
   });
 }
 
-test("all eight tested kanji reading targets stay bare before submission and throughout review", async ({ page }) => {
+test("all four tested Kanji 1 reading targets stay bare before submission and throughout review", async ({ page }) => {
   await page.goto(path("vocabulary"));
-  await expect(visibleMain(page).locator("[data-checkpoint-question]")).toHaveCount(8);
+  await expect(visibleMain(page).locator("[data-checkpoint-question]")).toHaveCount(4);
   await expect(visibleMain(page).locator("[data-checkpoint-question] ruby")).toHaveCount(0);
   await visibleMain(page).getByRole("button", { name: "Submit exam", exact: true }).click();
   await visibleMain(page).getByRole("button", { name: "Submit with unanswered questions", exact: true }).click();
-  await expect(visibleMain(page).locator("[data-checkpoint-feedback]")).toHaveCount(8);
+  await expect(visibleMain(page).locator("[data-checkpoint-feedback]")).toHaveCount(4);
   await expect(visibleMain(page).locator("[data-checkpoint-question] ruby")).toHaveCount(0);
 });
 
 test("written-form choices never get answer-revealing furigana", async ({ page }) => {
   await page.goto(path("vocabulary"));
   await visibleMain(page).getByRole("button", { name: /^Written forms/ }).click();
-  await expect(visibleMain(page).locator("[data-checkpoint-question]")).toHaveCount(8);
-  await expect(visibleMain(page).locator("[data-checkpoint-question] label")).toHaveCount(32);
+  await expect(visibleMain(page).locator("[data-checkpoint-question]")).toHaveCount(4);
+  await expect(visibleMain(page).locator("[data-checkpoint-question] label")).toHaveCount(16);
   await expect(visibleMain(page).locator("[data-checkpoint-question] ruby")).toHaveCount(0);
 });
 

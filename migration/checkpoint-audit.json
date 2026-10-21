@@ -33,110 +33,110 @@
         "10": 6
       },
       "formats": {
-        "reading": 8,
-        "spelling": 8,
-        "context": 16,
+        "reading": 4,
+        "spelling": 4,
+        "context": 24,
         "paraphrase": 8
       },
       "questions": [
         {
           "id": "vocabulary-1",
           "chapter": "1",
-          "sourceHeading": "c1-people-and-jobs",
-          "sourceTitle": "People and jobs",
-          "target": "学生",
+          "sourceHeading": "c1-countries-people-and-languages",
+          "sourceTitle": "Countries, people and languages",
+          "target": "日本",
           "correctChoiceId": "4",
-          "correctText": "がくせい"
+          "correctText": "にほん"
         },
         {
           "id": "vocabulary-2",
           "chapter": "2",
-          "sourceHeading": "c2-places",
-          "sourceTitle": "Places",
-          "target": "図書館",
-          "correctChoiceId": "1",
-          "correctText": "としょかん"
+          "sourceHeading": "c2-2-4-a-wa-location-ni-imasu",
+          "sourceTitle": "2.4 A wa Location ni imasu",
+          "target": "母",
+          "correctChoiceId": "3",
+          "correctText": "はは"
         },
         {
           "id": "vocabulary-3",
           "chapter": "3",
-          "sourceHeading": "c3-counting-words-and-numbers",
-          "sourceTitle": "Counting words and numbers",
-          "target": "二十歳",
-          "correctChoiceId": "2",
-          "correctText": "はたち"
+          "sourceHeading": "c3-hundreds",
+          "sourceTitle": "Hundreds",
+          "target": "三百",
+          "correctChoiceId": "1",
+          "correctText": "さんびゃく"
         },
         {
           "id": "vocabulary-4",
           "chapter": "4",
           "sourceHeading": "c4-days-of-the-week",
           "sourceTitle": "Days of the week",
-          "target": "火曜日",
-          "correctChoiceId": "1",
+          "target": "火よう日",
+          "correctChoiceId": "2",
           "correctText": "かようび"
         },
         {
           "id": "vocabulary-5",
+          "chapter": "4",
+          "sourceHeading": "c4-days-of-the-week",
+          "sourceTitle": "Days of the week",
+          "target": "げつようび",
+          "correctChoiceId": "2",
+          "correctText": "月よう日"
+        },
+        {
+          "id": "vocabulary-6",
+          "chapter": "5",
+          "sourceHeading": "c5-how-long-months",
+          "sourceTitle": "How long: months",
+          "target": "さんかげつ",
+          "correctChoiceId": "3",
+          "correctText": "三か月"
+        },
+        {
+          "id": "vocabulary-7",
+          "chapter": "9",
+          "sourceHeading": "c9-counting-people",
+          "sourceTitle": "Counting people",
+          "target": "ふたり",
+          "correctChoiceId": "2",
+          "correctText": "二人"
+        },
+        {
+          "id": "vocabulary-8",
+          "chapter": "9",
+          "sourceHeading": "c9-counting-people",
+          "sourceTitle": "Counting people",
+          "target": "さんにん",
+          "correctChoiceId": "4",
+          "correctText": "三人"
+        },
+        {
+          "id": "vocabulary-9",
           "chapter": "5",
           "sourceHeading": "c5-how-long-weeks",
           "sourceTitle": "How long: weeks",
-          "target": "一週間",
+          "target": "いっしゅうかん",
           "correctChoiceId": "3",
           "correctText": "いっしゅうかん"
         },
         {
-          "id": "vocabulary-6",
-          "chapter": "6",
-          "sourceHeading": "c6-adjective-pairs-size-distance-and-streng",
-          "sourceTitle": "Adjective pairs: size, distance and strength",
-          "target": "大きい",
-          "correctChoiceId": "4",
-          "correctText": "おおきい"
-        },
-        {
-          "id": "vocabulary-7",
-          "chapter": "7",
-          "sourceHeading": "c7-verbs",
-          "sourceTitle": "Verbs",
-          "target": "起きます",
-          "correctChoiceId": "1",
-          "correctText": "おきます"
-        },
-        {
-          "id": "vocabulary-8",
-          "chapter": "8",
-          "sourceHeading": "c8-drinks-nomimono",
-          "sourceTitle": "Drinks (nomimono)",
-          "target": "牛乳",
-          "correctChoiceId": "1",
-          "correctText": "ぎゅうにゅう"
-        },
-        {
-          "id": "vocabulary-9",
-          "chapter": "4",
-          "sourceHeading": "c4-yesterday-today-and-tomorrow",
-          "sourceTitle": "Yesterday, today and tomorrow",
-          "target": "あした",
-          "correctChoiceId": "4",
-          "correctText": "明日"
-        },
-        {
           "id": "vocabulary-10",
-          "chapter": "5",
-          "sourceHeading": "c5-vehicles-and-travel",
-          "sourceTitle": "Vehicles and travel",
-          "target": "じてんしゃ",
-          "correctChoiceId": "3",
-          "correctText": "自転車"
-        },
-        {
-          "id": "vocabulary-11",
           "chapter": "6",
           "sourceHeading": "c6-adjective-pairs-looks-and-surroundings",
           "sourceTitle": "Adjective pairs: looks and surroundings",
           "target": "しずか",
-          "correctChoiceId": "4",
-          "correctText": "静か"
+          "correctChoiceId": "3",
+          "correctText": "しずか"
+        },
+        {
+          "id": "vocabulary-11",
+          "chapter": "6",
+          "sourceHeading": "c6-adjective-pairs-size-distance-and-streng",
+          "sourceTitle": "Adjective pairs: size, distance and strength",
+          "target": "おおきい",
+          "correctChoiceId": "2",
+          "correctText": "おおきい"
         },
         {
           "id": "vocabulary-12",
@@ -144,44 +144,44 @@
           "sourceHeading": "c7-verbs",
           "sourceTitle": "Verbs",
           "target": "はたらきます",
-          "correctChoiceId": "3",
-          "correctText": "働きます"
+          "correctChoiceId": "4",
+          "correctText": "はたらきます"
         },
         {
           "id": "vocabulary-13",
+          "chapter": "7",
+          "sourceHeading": "c7-verbs",
+          "sourceTitle": "Verbs",
+          "target": "やすみます",
+          "correctChoiceId": "2",
+          "correctText": "やすみます"
+        },
+        {
+          "id": "vocabulary-14",
+          "chapter": "8",
+          "sourceHeading": "c8-drinks-nomimono",
+          "sourceTitle": "Drinks (nomimono)",
+          "target": "ぎゅうにゅう",
+          "correctChoiceId": "4",
+          "correctText": "ぎゅうにゅう"
+        },
+        {
+          "id": "vocabulary-15",
           "chapter": "8",
           "sourceHeading": "c8-reading-materials-yomimono",
           "sourceTitle": "Reading materials (yomimono)",
           "target": "しんぶん",
-          "correctChoiceId": "4",
-          "correctText": "新聞"
-        },
-        {
-          "id": "vocabulary-14",
-          "chapter": "9",
-          "sourceHeading": "c9-nature-and-scenery",
-          "sourceTitle": "Nature and scenery",
-          "target": "やま",
           "correctChoiceId": "2",
-          "correctText": "山"
-        },
-        {
-          "id": "vocabulary-15",
-          "chapter": "9",
-          "sourceHeading": "c9-nature-and-scenery",
-          "sourceTitle": "Nature and scenery",
-          "target": "うみ",
-          "correctChoiceId": "4",
-          "correctText": "海"
+          "correctText": "しんぶん"
         },
         {
           "id": "vocabulary-16",
           "chapter": "10",
           "sourceHeading": "c10-nouns-that-go-with-suru",
           "sourceTitle": "Nouns that go with suru",
-          "target": "よやく",
-          "correctChoiceId": "4",
-          "correctText": "予約"
+          "target": "せつめい",
+          "correctChoiceId": "3",
+          "correctText": "せつめい"
         },
         {
           "id": "vocabulary-17",
@@ -397,9 +397,10 @@
           "sourceTitle": "Nouns that go with suru",
           "target": "かいもの",
           "correctChoiceId": "3",
-          "correctText": "きのう おみせで ものを かった。"
+          "correctText": "きのう みせで ものを かった。"
         }
-      ]
+      ],
+      "revision": 2
     },
     {
       "id": "grammar",
@@ -731,11 +732,11 @@
         {
           "id": "grammar-35",
           "chapter": "7",
-          "sourceHeading": "c7-7-1-verbs-in-the-formal-form-masu-masen-",
-          "sourceTitle": "7.1 Verbs in the formal form (masu, masen, mashita, masen deshita)",
+          "sourceHeading": "c7-7-7-i-adjective-as-an-adverb-bunkei-7-6",
+          "sourceTitle": "7.7 I-adjective as an adverb (bunkei 7.6)",
           "target": null,
-          "correctChoiceId": "4",
-          "correctText": "おきます"
+          "correctChoiceId": "3",
+          "correctText": "はやく"
         },
         {
           "id": "grammar-36",
@@ -767,22 +768,23 @@
         {
           "id": "grammar-39",
           "chapter": "10",
-          "sourceHeading": "c10-10-18-casual-questions-with-no-bunkei-10",
-          "sourceTitle": "10.18 Casual questions with no (bunkei 10.2, page 155)",
+          "sourceHeading": "c10-10-11-masen-to-the-nai-form-present-nega",
+          "sourceTitle": "10.11 Masen to the nai form: present negative (page 151)",
           "target": null,
-          "correctChoiceId": "4",
-          "correctText": "いったの"
+          "correctChoiceId": "3",
+          "correctText": "たべない"
         },
         {
           "id": "grammar-40",
           "chapter": "10",
-          "sourceHeading": "c10-10-1-noun-suru-bunkei-10-1-page-148",
-          "sourceTitle": "10.1 Noun + suru (bunkei 10.1, page 148)",
+          "sourceHeading": "c10-10-13-masen-deshita-to-the-nakatta-form-",
+          "sourceTitle": "10.13 Masen deshita to the nakatta form: past negative (page 152)",
           "target": null,
-          "correctChoiceId": "4",
-          "correctText": "した"
+          "correctChoiceId": "1",
+          "correctText": "しなかった"
         }
-      ]
+      ],
+      "revision": 2
     },
     {
       "id": "chapter-5",
@@ -804,382 +806,438 @@
           "chapter": "1",
           "sourceHeading": "c1-greetings-and-self-introduction",
           "correctChoiceId": "1",
-          "correctText": "どうぞ"
+          "correctText": "どうぞ",
+          "sourceTitle": "Greetings and self-introduction"
         },
         {
           "id": "chapter-5-vocabulary-2",
           "chapter": "1",
           "sourceHeading": "c1-1-7-a-no-b",
           "correctChoiceId": "2",
-          "correctText": "の"
+          "correctText": "の",
+          "sourceTitle": "1.7 A no B"
         },
         {
           "id": "chapter-5-vocabulary-3",
           "chapter": "1",
           "sourceHeading": "c1-question-words-do",
           "correctChoiceId": "3",
-          "correctText": "どこ"
+          "correctText": "どこ",
+          "sourceTitle": "Question words (do)"
         },
         {
           "id": "chapter-5-vocabulary-4",
           "chapter": "1",
           "sourceHeading": "c1-countries-people-and-languages",
           "correctChoiceId": "4",
-          "correctText": "ちゅうごくご"
+          "correctText": "ちゅうごくご",
+          "sourceTitle": "Countries, people and languages"
         },
         {
           "id": "chapter-5-vocabulary-5",
           "chapter": "1",
           "sourceHeading": "c1-family",
           "correctChoiceId": "1",
-          "correctText": "あに"
+          "correctText": "あに",
+          "sourceTitle": "Family"
         },
         {
           "id": "chapter-5-vocabulary-6",
           "chapter": "1",
           "sourceHeading": "c1-this-that-and-over-there-ko-so-a",
           "correctChoiceId": "2",
-          "correctText": "これ"
+          "correctText": "これ",
+          "sourceTitle": "This, that and over there (ko, so, a)"
         },
         {
           "id": "chapter-5-vocabulary-7",
           "chapter": "1",
           "sourceHeading": "c1-people-and-jobs",
           "correctChoiceId": "3",
-          "correctText": "かた"
+          "correctText": "かた",
+          "sourceTitle": "People and jobs"
         },
         {
           "id": "chapter-5-vocabulary-8",
           "chapter": "1",
           "sourceHeading": "c1-classroom-phrases",
           "correctChoiceId": "4",
-          "correctText": "もういちど"
+          "correctText": "もういちど",
+          "sourceTitle": "Classroom phrases"
         },
         {
           "id": "chapter-5-vocabulary-9",
           "chapter": "2",
           "sourceHeading": "c2-locatives-position-words",
           "correctChoiceId": "1",
-          "correctText": "みぎ"
+          "correctText": "みぎ",
+          "sourceTitle": "Locatives (position words)"
         },
         {
           "id": "chapter-5-vocabulary-10",
           "chapter": "2",
           "sourceHeading": "c2-locatives-position-words",
           "correctChoiceId": "2",
-          "correctText": "にし"
+          "correctText": "にし",
+          "sourceTitle": "Locatives (position words)"
         },
         {
           "id": "chapter-5-vocabulary-11",
           "chapter": "2",
           "sourceHeading": "c2-2-11-location-ni-a-ga-imasu",
           "correctChoiceId": "3",
-          "correctText": "います"
+          "correctText": "います",
+          "sourceTitle": "2.11 Location ni A ga imasu"
         },
         {
           "id": "chapter-5-vocabulary-12",
           "chapter": "2",
           "sourceHeading": "c2-2-8-location-ni-a-ga-arimasu",
           "correctChoiceId": "4",
-          "correctText": "あります"
+          "correctText": "あります",
+          "sourceTitle": "2.8 Location ni A ga arimasu"
         },
         {
           "id": "chapter-5-vocabulary-13",
           "chapter": "2",
           "sourceHeading": "c2-places",
           "correctChoiceId": "1",
-          "correctText": "カフェ"
+          "correctText": "カフェ",
+          "sourceTitle": "Places"
         },
         {
           "id": "chapter-5-vocabulary-14",
           "chapter": "2",
           "sourceHeading": "c2-places",
           "correctChoiceId": "2",
-          "correctText": "りょう"
+          "correctText": "りょう",
+          "sourceTitle": "Places"
         },
         {
           "id": "chapter-5-vocabulary-15",
           "chapter": "2",
           "sourceHeading": "c2-locatives-position-words",
           "correctChoiceId": "3",
-          "correctText": "となり"
+          "correctText": "となり",
+          "sourceTitle": "Locatives (position words)"
         },
         {
           "id": "chapter-5-vocabulary-16",
           "chapter": "2",
           "sourceHeading": "c2-2-7-location-no-locative",
           "correctChoiceId": "4",
-          "correctText": "あいだ"
+          "correctText": "あいだ",
+          "sourceTitle": "2.7 Location no locative"
         },
         {
           "id": "chapter-5-vocabulary-17",
           "chapter": "3",
           "sourceHeading": "c3-3-2-hundreds",
           "correctChoiceId": "1",
-          "correctText": "はっぴゃく えん"
+          "correctText": "はっぴゃく えん",
+          "sourceTitle": "3.2 Hundreds"
         },
         {
           "id": "chapter-5-vocabulary-18",
           "chapter": "3",
           "sourceHeading": "c3-3-7-counters",
           "correctChoiceId": "2",
-          "correctText": "よんさつ"
+          "correctText": "よんさつ",
+          "sourceTitle": "3.7 Counters"
         },
         {
           "id": "chapter-5-vocabulary-19",
           "chapter": "3",
           "sourceHeading": "c3-3-7-counters",
           "correctChoiceId": "3",
-          "correctText": "ふたり"
+          "correctText": "ふたり",
+          "sourceTitle": "3.7 Counters"
         },
         {
           "id": "chapter-5-vocabulary-20",
           "chapter": "3",
           "sourceHeading": "c3-3-7-counters",
           "correctChoiceId": "4",
-          "correctText": "はっさい"
+          "correctText": "はっさい",
+          "sourceTitle": "3.7 Counters"
         },
         {
           "id": "chapter-5-vocabulary-21",
           "chapter": "3",
           "sourceHeading": "c3-3-5-prices-ikura-desu-ka",
           "correctChoiceId": "1",
-          "correctText": "ねだん"
+          "correctText": "ねだん",
+          "sourceTitle": "3.5 Prices: ikura desu ka"
         },
         {
           "id": "chapter-5-vocabulary-22",
           "chapter": "3",
           "sourceHeading": "c3-3-3-thousands",
           "correctChoiceId": "2",
-          "correctText": "さんぜん えん"
+          "correctText": "さんぜん えん",
+          "sourceTitle": "3.3 Thousands"
         },
         {
           "id": "chapter-5-vocabulary-23",
           "chapter": "3",
           "sourceHeading": "c3-3-4-ten-thousands-and-bigger",
           "correctChoiceId": "3",
-          "correctText": "じゅうにまん えん"
+          "correctText": "じゅうにまん えん",
+          "sourceTitle": "3.4 Ten thousands and bigger"
         },
         {
           "id": "chapter-5-vocabulary-24",
           "chapter": "3",
           "sourceHeading": "c3-3-5-prices-ikura-desu-ka",
           "correctChoiceId": "4",
-          "correctText": "ぜんぶ"
+          "correctText": "ぜんぶ",
+          "sourceTitle": "3.5 Prices: ikura desu ka"
         },
         {
           "id": "chapter-5-vocabulary-25",
           "chapter": "4",
           "sourceHeading": "c4-4-2-days-of-the-week",
           "correctChoiceId": "1",
-          "correctText": "もくようび"
+          "correctText": "もくようび",
+          "sourceTitle": "4.2 Days of the week"
         },
         {
           "id": "chapter-5-vocabulary-26",
           "chapter": "4",
           "sourceHeading": "c4-4-3-months-gatsu",
           "correctChoiceId": "2",
-          "correctText": "くがつ"
+          "correctText": "くがつ",
+          "sourceTitle": "4.3 Months: gatsu"
         },
         {
           "id": "chapter-5-vocabulary-27",
           "chapter": "4",
           "sourceHeading": "c4-4-4-days-of-the-month-nichi",
           "correctChoiceId": "3",
-          "correctText": "はつか"
+          "correctText": "はつか",
+          "sourceTitle": "4.4 Days of the month: nichi"
         },
         {
           "id": "chapter-5-vocabulary-28",
           "chapter": "4",
           "sourceHeading": "c4-4-1-telling-the-time-o-clock-and-minutes",
           "correctChoiceId": "4",
-          "correctText": "よじ"
+          "correctText": "よじ",
+          "sourceTitle": "4.1 Telling the time: o'clock and minutes"
         },
         {
           "id": "chapter-5-vocabulary-29",
           "chapter": "4",
           "sourceHeading": "c4-4-12-time-expression-goro",
           "correctChoiceId": "1",
-          "correctText": "ごろ"
+          "correctText": "ごろ",
+          "sourceTitle": "4.12 Time Expression goro"
         },
         {
           "id": "chapter-5-vocabulary-30",
           "chapter": "4",
           "sourceHeading": "c4-4-10-time-expression-made",
           "correctChoiceId": "2",
-          "correctText": "まで"
+          "correctText": "まで",
+          "sourceTitle": "4.10 Time Expression made"
         },
         {
           "id": "chapter-5-vocabulary-31",
           "chapter": "4",
           "sourceHeading": "c4-4-7-last-this-and-next-weeks-months-and-",
           "correctChoiceId": "3",
-          "correctText": "らいげつ"
+          "correctText": "らいげつ",
+          "sourceTitle": "4.7 Last, this and next: weeks, months and years"
         },
         {
           "id": "chapter-5-vocabulary-32",
           "chapter": "4",
           "sourceHeading": "c4-4-6-yesterday-today-and-tomorrow-days-mo",
           "correctChoiceId": "4",
-          "correctText": "きのう"
+          "correctText": "きのう",
+          "sourceTitle": "4.6 Yesterday, today and tomorrow: days, mornings and nights"
         },
         {
           "id": "chapter-5-vocabulary-33",
           "chapter": "5",
           "sourceHeading": "c5-5-10-mode-of-transportation-de-bunkei-5-",
           "correctChoiceId": "1",
-          "correctText": "バス"
+          "correctText": "バス",
+          "sourceTitle": "5.10 Mode of transportation de (bunkei 5.6)"
         },
         {
           "id": "chapter-5-vocabulary-34",
           "chapter": "5",
           "sourceHeading": "c5-5-2-how-long-minutes-and-hours",
           "correctChoiceId": "2",
-          "correctText": "にじかん"
+          "correctText": "にじかん",
+          "sourceTitle": "5.2 How long: minutes and hours"
         },
         {
           "id": "chapter-5-vocabulary-35",
           "chapter": "5",
           "sourceHeading": "c5-5-9-span-of-time-mae-and-sugi-bunkei-5-5",
           "correctChoiceId": "3",
-          "correctText": "まえ"
+          "correctText": "まえ",
+          "sourceTitle": "5.9 Span of Time mae and sugi (bunkei 5.5)"
         },
         {
           "id": "chapter-5-vocabulary-36",
           "chapter": "5",
           "sourceHeading": "c5-5-7-span-of-time-gurai-bunkei-5-3",
           "correctChoiceId": "4",
-          "correctText": "ぐらい"
+          "correctText": "ぐらい",
+          "sourceTitle": "5.7 Span of Time gurai (bunkei 5.3)"
         },
         {
           "id": "chapter-5-vocabulary-37",
           "chapter": "5",
           "sourceHeading": "c5-vehicles-and-travel",
           "correctChoiceId": "1",
-          "correctText": "おうふく"
+          "correctText": "おうふく",
+          "sourceTitle": "Vehicles and travel"
         },
         {
           "id": "chapter-5-vocabulary-38",
           "chapter": "5",
           "sourceHeading": "c5-5-4-how-long-months-and-years",
           "correctChoiceId": "2",
-          "correctText": "はんとし"
+          "correctText": "はんとし",
+          "sourceTitle": "5.4 How long: months and years"
         },
         {
           "id": "chapter-5-vocabulary-39",
           "chapter": "5",
           "sourceHeading": "c5-vehicles-and-travel",
           "correctChoiceId": "3",
-          "correctText": "ざんぎょう"
+          "correctText": "ざんぎょう",
+          "sourceTitle": "Vehicles and travel"
         },
         {
           "id": "chapter-5-vocabulary-40",
           "chapter": "5",
           "sourceHeading": "c5-5-10-mode-of-transportation-de-bunkei-5-",
           "correctChoiceId": "4",
-          "correctText": "ひこうき"
+          "correctText": "ひこうき",
+          "sourceTitle": "5.10 Mode of transportation de (bunkei 5.6)"
         },
         {
           "id": "chapter-5-reading-1",
           "chapter": "1",
           "sourceHeading": "c1-countries-people-and-languages",
           "correctChoiceId": "1",
-          "correctText": "フィリピンじん"
+          "correctText": "フィリピンじん",
+          "sourceTitle": "Countries, people and languages"
         },
         {
           "id": "chapter-5-reading-2",
           "chapter": "1",
           "sourceHeading": "c1-people-and-jobs",
           "correctChoiceId": "2",
-          "correctText": "エンジニア"
+          "correctText": "エンジニア",
+          "sourceTitle": "People and jobs"
         },
         {
           "id": "chapter-5-reading-3",
           "chapter": "2",
           "sourceHeading": "c2-2-1-a-wa-location-ni-arimasu",
           "correctChoiceId": "3",
-          "correctText": "だいがくの りょう"
+          "correctText": "だいがくの りょう",
+          "sourceTitle": "2.1 A wa Location ni arimasu"
         },
         {
           "id": "chapter-5-reading-4",
           "chapter": "2",
           "sourceHeading": "c2-2-7-location-no-locative",
           "correctChoiceId": "4",
-          "correctText": "つくえの した"
+          "correctText": "つくえの した",
+          "sourceTitle": "2.7 Location no locative"
         },
         {
           "id": "chapter-5-reading-5",
           "chapter": "2",
           "sourceHeading": "c2-2-8-location-ni-a-ga-arimasu",
           "correctChoiceId": "1",
-          "correctText": "パソコン"
+          "correctText": "パソコン",
+          "sourceTitle": "2.8 Location ni A ga arimasu"
         },
         {
           "id": "chapter-5-reading-6",
           "chapter": "3",
           "sourceHeading": "c3-3-5-prices-ikura-desu-ka",
           "correctChoiceId": "2",
-          "correctText": "120えん"
+          "correctText": "120えん",
+          "sourceTitle": "3.5 Prices: ikura desu ka"
         },
         {
           "id": "chapter-5-reading-7",
           "chapter": "3",
           "sourceHeading": "c3-3-7-counters",
           "correctChoiceId": "3",
-          "correctText": "50えん"
+          "correctText": "50えん",
+          "sourceTitle": "3.7 Counters"
         },
         {
           "id": "chapter-5-reading-8",
           "chapter": "3",
           "sourceHeading": "c3-3-5-prices-ikura-desu-ka",
           "correctChoiceId": "4",
-          "correctText": "220えん"
+          "correctText": "220えん",
+          "sourceTitle": "3.5 Prices: ikura desu ka"
         },
         {
           "id": "chapter-5-reading-9",
           "chapter": "4",
           "sourceHeading": "c4-4-10-time-expression-made",
           "correctChoiceId": "1",
-          "correctText": "ごご 7じ"
+          "correctText": "ごご 7じ",
+          "sourceTitle": "4.10 Time Expression made"
         },
         {
           "id": "chapter-5-reading-10",
           "chapter": "4",
           "sourceHeading": "c4-4-2-days-of-the-week",
           "correctChoiceId": "2",
-          "correctText": "にちようび"
+          "correctText": "にちようび",
+          "sourceTitle": "4.2 Days of the week"
         },
         {
           "id": "chapter-5-reading-11",
           "chapter": "5",
           "sourceHeading": "c5-5-12-span-of-time-kakarimasu-and-cost-ka",
           "correctChoiceId": "3",
-          "correctText": "40ぷん"
+          "correctText": "40ぷん",
+          "sourceTitle": "5.12 Span of Time kakarimasu and Cost kakarimasu (bunkei 5.8)"
         },
         {
           "id": "chapter-5-reading-12",
           "chapter": "4",
           "sourceHeading": "c4-4-9-time-expression-kara",
           "correctChoiceId": "4",
-          "correctText": "ごぜん 8じはん"
+          "correctText": "ごぜん 8じはん",
+          "sourceTitle": "4.9 Time Expression kara"
         },
         {
           "id": "chapter-5-reading-13",
           "chapter": "4",
           "sourceHeading": "c4-4-2-days-of-the-week",
           "correctChoiceId": "1",
-          "correctText": "まいしゅう げつようびの ごご 2じ"
+          "correctText": "まいしゅう げつようびの ごご 2じ",
+          "sourceTitle": "4.2 Days of the week"
         },
         {
           "id": "chapter-5-reading-14",
           "chapter": "4",
           "sourceHeading": "c4-4-7-last-this-and-next-weeks-months-and-",
           "correctChoiceId": "2",
-          "correctText": "きんようび"
+          "correctText": "きんようび",
+          "sourceTitle": "4.7 Last, this and next: weeks, months and years"
         }
-      ]
+      ],
+      "revision": 1
     }
   ],
-  "dataSha256": "1df0cbd721a5bee84598aec73c65a72739a63ec5e19c34e32f6b44f527bba78d",
-  "chapterDataSha256": "45c9acc5692d9cc681ce2a2f4f3b1593b7fc8972bb544d0b50101db1386b885d"
+  "dataSha256": "a9147e563b944288b66427334d0bbcd23fc5f1aa23b19a83bdcb87a015c34b33",
+  "chapterDataSha256": "45c9acc5692d9cc681ce2a2f4f3b1593b7fc8972bb544d0b50101db1386b885d",
+  "curriculumReview": "Chapter 10 revision 2 uses 4 Kanji 1 reading items, 4 Kanji 1 written-form items, 24 kana context items and 8 paraphrases. Prerequisites: checkpoint-curriculum-audit.json; superseded banks: checkpoint-v1-archive.json."
 }

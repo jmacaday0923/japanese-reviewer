@@ -84,10 +84,13 @@ test("every old section, exercise, key and translation anchor resolves without s
   assert.equal(checkpointAnchor(exam, "#unknown"), null);
   assert.equal(checkpointAnchor(exam, "#" + qs[45].id).partId, "reading");
 });
-test("the existing Chapter 10 question sets, revisions and storage keys are unchanged", () => {
-  for (const e of bank.filter(e => e.id !== "chapter-5")) {
-    assert.equal(e.revision, 1);
-    assert.equal(hash(JSON.stringify(e.parts)), audit.previousExamPartsSha256[e.id]);
-    assert.equal(checkpointKey(e), "japanese-reviewer:checkpoint:" + e.id + ":v1");
+test("the historical Chapter 10 v1 banks remain archived while current exams use separate revisions", () => {
+  const archived = read("migration/checkpoint-v1-archive.json").exams;
+  for (const previous of archived) {
+    assert.equal(previous.revision, 1);
+    assert.equal(hash(JSON.stringify(previous.parts)), audit.previousExamPartsSha256[previous.id]);
+    const current = bank.find(e => e.id === previous.id);
+    assert.equal(current.revision, 2);
+    assert.notEqual(checkpointKey(current), checkpointKey(previous));
   }
 });
