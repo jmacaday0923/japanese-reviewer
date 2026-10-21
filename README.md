@@ -1,6 +1,6 @@
 # Japanese Lesson Reviewer
 
-A personal study site for Japanese lessons. You can search vocabulary, grammar, kana and kanji across all documents, read each chapter from its lessons through to the answer key, and open the original reviewer documents.
+A personal study site for Japanese lessons. Search vocabulary, grammar, kana and kanji across the study pages, review Chapters 1–11, practise with flashcards and exercises, and assess progress with checkpoints and listening exams.
 
 Built with Next.js 16.4 (App Router, Cache Components), React 19.3, TypeScript and Tailwind CSS 4. Deployed on Vercel.
 
@@ -60,7 +60,7 @@ npm run test:e2e
 
 ### Smoke tests against a deployed site
 
-`e2e/smoke.spec.ts` is a short check that a live site works: the home page and search, one chapter, Kana, Kanji and document page, a section anchor opened directly, and no page errors, console errors or failed requests. It doesn't compare counts with your local data, so it passes even when the deployed data differs from your checkout.
+`e2e/smoke.spec.ts` is a short check that a live site works: the home page and search, one chapter, Kana, Kanji and a legacy document link, a section anchor opened directly, and no page errors, console errors or failed requests. It doesn't compare counts with your local data, so it passes even when the deployed data differs from your checkout.
 
 Set `E2E_BASE_URL` to the site's address. Playwright then tests that site and starts no local server, so you don't need a build:
 
@@ -85,20 +85,20 @@ The search lives in the URL of the home page, so a search can be bookmarked or s
 | --- | --- | --- |
 | `q` | Any text, matched case-insensitively against kana, romaji and English | empty |
 | `category` | `vocab`, `grammar`, `script` (Kana & Kanji), `practice`, `answers` | all |
-| `chapter` | `1` to `10`, `gen` (General), `kana`, `kanji` | all |
+| `chapter` | `1` to `11`, `kana`, `kanji`, `practice` (derived from the current study pages) | all |
 
 - Example: `/?q=gakkou&category=vocab&chapter=1`
 - Unknown values fall back to the default. Other parameters and the `#hash` are kept.
 - Typing replaces the current history entry. Filters, Clear and Reset add one, so Back undoes them.
 - On the home page, Ctrl+K (⌘K on a Mac) puts the cursor in the search box.
 
-## Document tags
+## Study organization
 
-Each row in the home page's Documents list shows what's inside the document: Grammar, Vocabulary, Kana & Kanji, Practice and Answers. They come from the search entries in `lesson-data.json` (every entry whose `d` matches the document's `n`, using its `c` category), worked out when the page is built (`src/lib/documents.ts`). Titles and the document's `kind` aren't used for this; `kind` (Reviewer, Answer key, ...) is shown separately under the title.
+Documents are consolidated into Chapters, Kana and Kanji. Search results use content categories such as Grammar, Vocabulary, Kana & Kanji, Practice and Answers. Old `/lessons` addresses resolve through the preserved migration map; there is no separate Documents reader or `lesson-data.json`.
 
 ## Interactive exercises
 
-Chapters 1 and 2 have an **Interactive practice** panel at the top of their Exercises section: **Particles** (fill in the marker) and **Vocabulary** (match each Japanese word to its meaning). The original exercise tables and answer keys stay below it. Answers are checked in the browser and not saved: reloading starts fresh, and the bookmark storage isn't touched.
+Chapters 1 and 2 retain a quick **Interactive practice** panel at the top of their Exercises section: **Particles** (fill in the marker) and **Vocabulary** (match each Japanese word to its meaning). The source exercise activities and answer keys stay below it; older chapter tables now also have inline answer controls. Answers are checked in the browser and not saved: reloading starts fresh, and the bookmark storage isn't touched.
 
 The questions live in `src/data/exercises.json`, copied from `chapters.json` word for word (the Question, Answer and Why cells), with each question's source part, answer key part and number. `tests/exercises.test.mjs` checks every question against the original tables.
 
@@ -106,7 +106,7 @@ To add another chapter: add an entry to `src/data/exercises.json` like the exist
 
 ## Sentence building
 
-Every chapter has a **Sentence building** panel in its Exercises section, below existing interactive practice where present. Arrange word and phrase tiles to reconstruct three lesson examples per chapter (30 puzzles total). Select a chosen tile to remove it, use **Undo last tile** or **Clear sentence**, then **Check answer**. Tiles work with touch, mouse and keyboard; dragging is not required. This activity checks the source sentence's order; other natural Japanese orders may be possible.
+Every chapter has a **Sentence building** panel in its Exercises section, below existing interactive practice where present. Arrange word and phrase tiles to reconstruct three lesson examples per chapter (33 puzzles across the current 11 chapters). Select a chosen tile to remove it, use **Undo last tile** or **Clear sentence**, then **Check answer**. Tiles work with touch, mouse and keyboard; dragging is not required. This activity checks the source sentence's order; other natural Japanese orders may be possible.
 
 Chapters 1, 6 and 10 also offer **Transformations**: 12 curated positive-to-negative and polite-to-casual questions. Type kana or romaji from the lesson. Grading ignores whitespace, case, character width and final full stops; it preserves particles, long vowels, meaning and tense. Only source-printed alternatives, optional particles and the documented negative copulas are accepted. There is no automatic conjugator or open-ended grammar checker.
 
@@ -143,10 +143,10 @@ Reader pages have a **Bookmark page** button, and a **Bookmark section** button 
 
 | Path | What it is |
 | --- | --- |
-| `src/data/` | The four JSON datasets: lesson-data (documents and search entries), chapters, kana, kanji |
-| `src/app/` | Routes: `/`, `/chapters/[ch]`, `/kana/[ch]`, `/kanji/[ch]`, `/lessons/[n]` |
+| `src/data/` | Study pages, Japanese/English display catalogs, exercise banks, chapter study guides, checkpoint/listening exams and legacy links |
+| `src/app/` | Dashboard, chapter/Kana/Kanji readers, flashcards, checkpoints, listening, search/deck endpoints and compatibility routes |
 | `src/components/` | Shell, dashboard cards, search, the shared reader (ReaderLayout, TableOfContents, LessonContent), and the bookmark parts (BookmarkControls, StudyShelf, use-study) |
-| `src/lib/` | Search helpers, the server-only search payload, outline builders, bookmark storage (`study.ts`), document tags (`documents.ts`), exercise grading (`exercises.ts`) and the server-only exercise bank (`exercise-bank.ts`) |
+| `src/lib/` | Search helpers, the server-only search payload, outline builders, bookmark storage (`study.ts`), exercise grading (`exercises.ts`), source table adaptation (`legacy-exercises.ts`) and server-only exercise banks |
 | `tests/` | Node tests (`*.test.mjs`) |
 | `e2e/` | Browser tests (`*.spec.ts`), including the hosted smoke tests (`smoke.spec.ts`) |
 | `.github/workflows/` | The CI workflow (`ci.yml`) |
@@ -183,7 +183,7 @@ Use **Add to flashcards** beside a structured vocabulary row, an individual kanj
 
 Each eligible lesson table has **Add all N to flashcards** in its header. It saves all supported rows in one transaction, merges duplicates and retains both review histories. Kana sound charts save their paired hiragana/katakana and romaji reading. Kana word-example tables save the whole word with its meaning, rather than giving a sound fragment the word’s translation. Kanji comparisons retain their paired characters and readings. Exercise answer sheets and unpaired content are not converted.
 
-On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There are 13 decks: 10 chapters, Kana 1 and Kanji 1–2. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
+On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There are 14 decks: 11 chapters, Kana 1 and Kanji 1–2. Deck metadata follows the current library. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
 
 The shared content bank ships with the app. Your saved cards and per-direction schedules use the existing browser storage; there is no database or account setup. Importing again adds newly available content without resetting existing progress. Removed cards return if you deliberately import their deck again. Clearing browser site data removes saved cards/progress; the app still provides the pre-made bank.
 
@@ -273,3 +273,27 @@ All 12 activities show a smaller English instruction directly below the Japanese
 No answer key was supplied. All keys and explanations are **added model answers**, not official textbook answers. Typed exercises request kana and accept reviewed printed variants; this is not an unrestricted Japanese sentence evaluator. Text-grammar question 3 accepts both が and を with 書けます. Other transformation drills explicitly request the textbook's が pattern. The potential chart uses 五段／一段／special labels to clarify the PDF's terminology.
 
 `migration/chapter-11-audit.json` records source checksums, printed-page coverage, keys, adaptations, reading notes and hashes proving Chapters 1–10 are unchanged. Existing Chapter 5/10 checkpoints keep their scope, revisions and storage keys. Future chapters can append workbook sets and source reference markup without changing the grading component.
+
+## Older chapter practice and study plans
+
+Every chapter has three learning goals and links through its study sections. Chapter 10 explains how the older book's numbered verb groups relate to 五段, 一段 and irregular verbs. The goals live in `src/data/chapter-guides.json`.
+
+Chapters 1–10 have **291 interactive source tables covering all 3,166 existing questions**. Select **Answer** below a question to open its input. Japanese directions precede English directions; essential directions stay visible with English hints hidden. The Japanese prompt has the full row width, with controls below it on desktop and phone.
+
+- 168 numbered-choice questions and 84 particle questions use explicit source keys.
+- 436 fixed-form questions check the printed kana form; the source's printed romaji is also accepted. The directions state this constrained task.
+- 2,478 open responses use model comparison and self-check. Translation, multiple-form conjugation and other valid Japanese expressions are not graded by string equality.
+- Check an answer or reveal a model after writing. Explanations follow English reading-aid preferences; romaji keeps its own reveal controls. **Retry incorrect** or **Retry needs review** keeps completed answers. Self-check counts are labelled separately from automatic scores.
+- Closing a row keeps its answer while the page is open. A reload starts fresh. No exercise answers are saved to localStorage or sent to a server.
+
+`buildLegacyActivities` pairs each existing question table with its source answer table on the server. The chapter datasets and anchors remain unchanged, preserving search, bookmarks, lesson examples, flashcard identifiers and the existing migration audits. Only the current page's prepared content reaches the browser; the full display catalogs remain server-side. Chapter 11 retains its curated workbook bank and existing interactions. Kana/Kanji exercise tables and assessment banks keep their current behavior.
+
+`migration/older-chapter-audit.json` records all 291 mappings, question fingerprints, accepted finite answers and source hashes. After reviewing a source or grading-policy change, regenerate it with:
+
+```bash
+node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/audit-older-chapters.mjs
+```
+
+`tests/legacy-exercises.test.mjs` verifies source coverage, conservative grading and actual reader bindings; `e2e/older-chapters.spec.ts` checks all ten chapters, bilingual directions, model comparison, retries, keyboard/IME input and phone layout.
+
+Fourteen additional workbook passages (16 paragraphs) now have optional English translation panels, including the early-chapter readings and later cloze passages. They start closed, work with a keyboard and without JavaScript, and remain independent of romaji and global reading preferences. Existing Japanese text and every cloze blank remain intact. The added translations live in `src/data/chapter-reading-support.json` and are covered by the older-chapter audit.

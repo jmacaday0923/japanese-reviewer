@@ -71,7 +71,7 @@ export default function InteractiveExercises({ exercises }: { exercises: Chapter
               onClick={() => setSelected(i)}
               onKeyDown={(e) => onKeyDown(e, i)}
               className={
-                "min-h-10 rounded-full border px-4 text-sm transition-colors " +
+                "min-h-11 rounded-full border px-4 text-sm transition-colors " +
                 (active
                   ? "border-accent bg-accent font-medium text-accent-foreground"
                   : "border-border text-muted hover:border-border-strong hover:bg-surface-raised hover:text-foreground")

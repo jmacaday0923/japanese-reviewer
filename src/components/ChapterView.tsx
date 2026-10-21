@@ -15,6 +15,11 @@ import { collectFlashcardExamples } from "@/lib/flashcard-content";
 import SentencePractice from "@/components/SentencePractice";
 import { chapterSentenceExercises } from "@/lib/sentence-bank";
 import InteractiveExercises from "@/components/InteractiveExercises";
+import { buildLegacyActivities } from "@/lib/legacy-exercises";
+import { parseStudyMarkup } from "@/lib/study-markup";
+import ChapterStudyPlan from "@/components/ChapterStudyPlan";
+import workbookBank from "@/data/workbook-exercises.json";
+import readingSupport from "@/data/chapter-reading-support.json";
 
 const KINDS = { "/chapters": "chapter", "/kana": "kana", "/kanji": "kanji", "/practice": "practice" } as const satisfies Record<string, StudyPageKind>;
 
@@ -29,6 +34,9 @@ type Props = {
 };
 
 export default function ChapterView({ chapter, label, basePath, prev, next, exercises }: Props) {
+  const legacyActivities = basePath === "/chapters" ? buildLegacyActivities(chapter, parseStudyMarkup).map(a => ({
+    ...a, readingSupport: readingSupport.activities.find(s => s.heading === a.heading),
+  })) : [];
   const sentencePractice = basePath === "/chapters" ? chapterSentenceExercises(chapter.ch) : null;
   const examples = collectFlashcardExamples(chapter.sections, { kind: KINDS[basePath], id: chapter.ch });
   // The group's section on the home page: "/chapters" goes back to "/#chapters"
@@ -69,19 +77,23 @@ export default function ChapterView({ chapter, label, basePath, prev, next, exer
         </nav>
       }
     >
+      {basePath === "/chapters" && <ChapterStudyPlan chapter={chapter.ch} questions={legacyActivities.length
+        ? legacyActivities.reduce((sum, activity) => sum + activity.questions.length, 0)
+        : workbookBank.chapters.find(c => c.chapter === chapter.ch)?.sets.reduce((sum, set) => sum + set.questions.length, 0) ?? 0} />}
       {/* Lessons, Vocabulary, Easy to mix up, Exercises, then Answer key, in that order */}
       {chapter.sections.map((s, i) => (
         <section key={s.id} id={s.id} className={i === 0 ? "mt-12" : "mt-16"}>
           <h2 className="border-b border-border pb-3 text-[1.625rem] font-semibold tracking-tight">{s.title}</h2>
           {/* Practice first, then the original exercise tables as reference.
-              Keyed by chapter, so answers never carry over to another chapter. */}
+              Include the practice type and chapter in sibling keys, so each
+              panel keeps its identity and resets for a different chapter. */}
           {s.id === "exercises" && exercises && exercises.sets.length > 0 && (
-            <InteractiveExercises key={exercises.chapter} exercises={exercises} />
+            <InteractiveExercises key={`interactive-${exercises.chapter}`} exercises={exercises} />
           )}
           {s.id === "exercises" && sentencePractice && (
-            <SentencePractice key={chapter.ch} exercises={sentencePractice} />
+            <SentencePractice key={`sentence-${chapter.ch}`} exercises={sentencePractice} />
           )}
-          <LessonContent html={s.html} className="mt-6"
+          <LessonContent html={s.html} className="mt-6" activities={s.id === "exercises" ? legacyActivities : []}
             source={{ kind: KINDS[basePath], id: chapter.ch, sectionId: s.id, sectionTitle: s.title }} examples={examples} />
         </section>
       ))}

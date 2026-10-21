@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "translationNote": "Added study translations. Exercise blanks are retained; some wording follows the Japanese structure.",
+  "activities": [
+    {
+      "heading": "c1-grammar-usage-page-22",
+      "japanese": [
+        "わたし は かいしゃいん です。 かいしゃ の なまえ は ADZ です。 ADZ は にほん の かいしゃ です。 しゃちょう は にほん の かた です。 しゃちょう の (1) ____ は やまだ しゃちょう です。 ほんしゃ は とうきょう です。 わたし の ぶ は ソフトウェア かいはつ (2) ____ です。 ぶちょう の なまえ は スミス ぶちょう です。 ぶちょう は (3) ____ です。"
+      ],
+      "english": [
+        "I am a company employee. My company is called ADZ. ADZ is a Japanese company. The company president is Japanese. The president's (1) ____ is President Yamada. The head office is in Tokyo. My department is software development (2) ____. The department manager's name is Manager Smith. The department manager is (3) ____."
+      ]
+    },
+    {
+      "heading": "c1-reading-comprehension-page-23",
+      "japanese": [
+        "サントス: みなさん, こんにちは。 はじめまして。 わたし は ADZ の サントス です。 わたし は ソフトウェア エンジニア です。 よろしく おねがいします。",
+        "キム: はじめまして。 わたし は かんこく の キム です。 わたし は にほん の かいしゃ の しゃいん です。 よろしく おねがいします。",
+        "スミス: こんにちは。 はじめまして。 わたし は スミス です。 アメリカじん です。 アメリカ の かいしゃ の しゃいん です。 どうぞ よろしく おねがいします。"
+      ],
+      "english": [
+        "Santos: Hello, everyone. Nice to meet you. I am Santos from ADZ. I am a software engineer. I look forward to getting to know you.",
+        "Kim: Nice to meet you. I am Kim from Korea. I am an employee of a Japanese company. I look forward to getting to know you.",
+        "Smith: Hello. Nice to meet you. I am Smith. I am American. I work for an American company. I look forward to getting to know you."
+      ]
+    },
+    {
+      "heading": "c2-grammar-usage-page-37",
+      "japanese": [
+        "わたし は にほんご の がくせい です。 わたし の がっこう の (1) ____ は さくら にほんご がっこう です。 さくら にほんご がっこう は しぶや に (2) ____。 がっこう は しぶや えき の ちかく です。 がっこう の まえ に カフェ と ほんや が あります。 がっこう の ビル の なか に レストラン が あります。 がっこう には ドイツじん と アメリカじん の (3) ____ が います。"
+      ],
+      "english": [
+        "I am a Japanese-language student. My school's (1) ____ is Sakura Japanese Language School. Sakura Japanese Language School (2) ____ in Shibuya. The school is near Shibuya Station. There are a cafe and a bookstore in front of the school. There is a restaurant inside the school building. There are German and American (3) ____ at the school."
+      ]
+    },
+    {
+      "heading": "c2-reading-comprehension-page-38",
+      "japanese": [
+        "サントス さん の アパート は オフィス の ちかく に あります。 アパート の ビル の なまえ は \"スカイ ビル\" です。 スカイ ビル の なか に ぎんこう と カフェ が あります。 ビル の となり に ちゅうしゃじょう が あります。 アパート に ほんや が ありません。"
+      ],
+      "english": [
+        "Santos's apartment is near the office. The apartment building is called Sky Building. There are a bank and a cafe inside Sky Building. There is a parking lot next to the building. There is no bookstore in the apartment building."
+      ]
+    },
+    {
+      "heading": "c3-grammar-usage-page-52",
+      "japanese": [
+        "ADZ フィリピン は にほん の かいしゃ です。 ADZ は ソフトウェア と ハードウェア の かいしゃ です。 ほんしゃ は とうきょう (1) ____ あります。 しゃいん は ぜんぶ で (2) ____ います。 にほんじん の しゃいん は じゅうはちにん います。 フィリピンじん の しゃいん は に ひゃく ななじゅうにん います。 インドじん は はちにん います。 ちゅうごくじん は (3) ____ います。"
+      ],
+      "english": [
+        "ADZ Philippines is a Japanese company. ADZ is a software and hardware company. The head office is (1) ____ Tokyo. There are (2) ____ employees in total. There are 18 Japanese employees. There are 270 Filipino employees. There are eight Indian employees. There are (3) ____ Chinese employees."
+      ]
+    },
+    {
+      "heading": "c3-reading-comprehension-page-53",
+      "japanese": [
+        "ADZ フィリピン は にほん の かいしゃ の してん です。 フィリピン の してん は マニラ に あります。 わたし は ADZ フィリピン の ソフトウェア ぶ の しゃいん です。 わたし は ソフトウェア エンジニア です。 ソフトウェア ぶ に は しゃいん が ぜんぶ で さんじゅうにん います。 にほんじん の ぶちょう が ひとり います。 インドじん の ソフトウェア エンジニア が ごにん います。"
+      ],
+      "english": [
+        "ADZ Philippines is a branch of a Japanese company. The Philippine branch is in Manila. I work in the software department of ADZ Philippines. I am a software engineer. There are 30 employees in the software department in total. There is one Japanese department manager. There are five Indian software engineers."
+      ]
+    },
+    {
+      "heading": "c4-grammar-usage-page-68",
+      "japanese": [
+        "かいしゃに にほんごの クラスが あります。 にほんご (1) ____ クラスは N3 と N4 と N5 の クラスです。 N3 の クラスは いちがつから です。 N4 と N5 の クラスは しがつから です。 ぜんぶの クラスは じゅういちがつ (2) ____ です。 N3 の クラスは げつようびと すいようびです。 じかんは ごご ごじはんから しちじはんまでです。 せんせいの なまえは やまだせんせいです。 N4 の クラスは かようびと もくようびです。 じかんは ごご よじから ろくじまでです。 N5 の クラスは かようびと きんようびです。 じかんは ごぜん はちじ (3) ____ じゅうじはんまで です。 N4 と N5 の クラスの せんせいの なまえは サントスせんせいです。"
+      ],
+      "english": [
+        "There are Japanese classes at the company. The Japanese (1) ____ classes are N3, N4 and N5 classes. The N3 class starts in January. The N4 and N5 classes start in April. All classes run (2) ____ November. The N3 class is on Mondays and Wednesdays, from 5:30 p.m. to 7:30 p.m. The teacher's name is Yamada. The N4 class is on Tuesdays and Thursdays, from 4 p.m. to 6 p.m. The N5 class is on Tuesdays and Fridays, from 8 a.m. (3) ____ 10:30 a.m. The teacher for the N4 and N5 classes is Santos."
+      ]
+    },
+    {
+      "heading": "c4-reading-comprehension-page-69",
+      "japanese": [
+        "わたしの にほんごの クラスは N5 の クラスです。 クラスは まいしゅう かようびと きんようびです。 ごぜん はちじから じゅうじはんまでです。 この クラスには がくせいが じゅうにん います。 おとこは さんにんです。 ひとりの にほんごの せんせいは アメリカじんです。 にほんごの きょうかしょは よんさつです。 しけんは まいしゅう きんようびです。 にほんごの がっこうの やすみは どようびです。"
+      ],
+      "english": [
+        "My Japanese class is an N5 class. Classes are every Tuesday and Friday, from 8 a.m. to 10:30 a.m. There are ten students in this class. Three are men. The one Japanese-language teacher is American. There are four Japanese textbooks. There is a test every Friday. The Japanese school is closed on Saturdays."
+      ]
+    },
+    {
+      "heading": "c5-grammar-usage-page-83",
+      "japanese": [
+        "かいしゃの ミーティングは まいしゅう げつようびです。 えいぎょうグループの ミーティングは かようびの ごぜん くじ (1) ____ くじはんまでです。 ソフトウェアグループの ミーティングは げつようび (2) ____ きんようびの よじごろです。 ソフトウェアグループの ミーティングは いちじかん かかります。 ハードウェアグループの ミーティングは いっしゅうかん (3) ____ いっかいです。 すいようびの ごごさんじです。"
+      ],
+      "english": [
+        "The company meeting is every Monday. The sales group meeting is on Tuesday, from 9 a.m. (1) ____ 9:30 a.m. The software group meeting is around 4 o'clock on Monday (2) ____ Friday. The software group meeting takes one hour. The hardware group meeting is once (3) ____ week, on Wednesday at 3 p.m."
+      ]
+    },
+    {
+      "heading": "c6-grammar-usage-page-98",
+      "japanese": [
+        "これは ジョンさんの アパートの しゃしんです。 オフィスから あるいて ごふんぐらい かかります。 とても (1) ____ です。 へやは ちょっと せまいです。 へやの なかに ベッドと つくえと いすが あります。 トイレと だいどころは (2) ____ です。 アパートの となりに (3) ____ こうえんが あります。"
+      ],
+      "english": [
+        "This is a photo of John's apartment. It takes about five minutes to walk there from the office. It is very (1) ____. The room is a little small. There are a bed, a desk and a chair in the room. The toilet and kitchen are (2) ____. There is a (3) ____ park next to the apartment."
+      ]
+    },
+    {
+      "heading": "c7-grammar-usage-page-113",
+      "japanese": [
+        "こんしゅう とても (1) ____ です。 げつようびから きんようびまで トレーニングです。 まいにち トレーニングは ごぜんくじに はじまります。 ごご よじに (2) ____。 ひるやすみは いちじかんです。 じゅうにじから いちじまでです。 きんようびは トレーニングの しけんです。 きんようびの ごごは レポートです。 どようびと にちようびに (3) ____。"
+      ],
+      "english": [
+        "This week is very (1) ____. There is training from Monday to Friday. Training starts at 9 a.m. every day. At 4 p.m. it (2) ____. The lunch break is one hour, from noon to 1 p.m. The training test is on Friday. Friday afternoon is for a report. On Saturday and Sunday, I (3) ____."
+      ]
+    },
+    {
+      "heading": "c8-fill-in-the-proper-word-or-phrase-page-1",
+      "japanese": [
+        "わたしは にほんの かいしゃの しゃいんです。 しごとは げつようびから きんようびまでです。 はちじから ろくじまでです。 ミーティングは ごぜん くじです。 じゅうじから メールを かきます。 つくえで おちゃを のみます。 じゅういちじから いちじかん かいしゃの レポートを (1) ____。 ひるやすみは じゅうにじからです。 ときどき ともだちといっしょに ちかくの レストラン (2) ____ たべます。 ごご いちじから にじかんぐらい おきゃくさんに でんわを (3) ____。 さんじごろ レポートを かきます。 まいにち とても いそがしいです。"
+      ],
+      "english": [
+        "I work for a Japanese company. I work from Monday to Friday, from 8 o'clock to 6 o'clock. The meeting is at 9 a.m. From 10 o'clock, I write emails. I drink tea at my desk. From 11 o'clock, I (1) ____ company reports for one hour. The lunch break starts at noon. Sometimes I eat with friends (2) ____ a nearby restaurant. From 1 p.m., I (3) ____ telephone calls to customers for about two hours. Around 3 o'clock, I write reports. I am very busy every day."
+      ]
+    },
+    {
+      "heading": "c9-fill-in-the-proper-word-or-phrase-page-1",
+      "japanese": [
+        "ことしの なつやすみ、ともだちといっしょに ごにん (1) ____ シンガポールと マレーシアへ いきます。 しゅっぱつは しがつ とおかです。 シンガポールへ (2) ____ で いきます。 しがつ とおかから じゅうさんにちまで シンガポールに います。 「Marina Bay Sands」を みます。 じゅうよっかに マレーシアへ いきます。 シンガポールから マレーシアまで バスで さんじかん (3) ____。 マレーシアに じゅうろくにちまで います。 じゅうしちにちに くにへ かえります。"
+      ],
+      "english": [
+        "During this year's summer holiday, I am going to Singapore and Malaysia (1) ____ five people, together with friends. We leave on April 10. We travel to Singapore by (2) ____. We stay in Singapore from April 10 to April 13. We see Marina Bay Sands. On April 14, we go to Malaysia. Going from Singapore to Malaysia by bus (3) ____ three hours. We stay in Malaysia until April 16. On April 17, we return to our country."
+      ]
+    },
+    {
+      "heading": "c10-fill-in-the-proper-word-or-phrase-page-1",
+      "japanese": [
+        "きょねんの にがつに かぞくといっしょに にほんへ いきました。 ふゆの (1) ____ は とても さむかったです。 ちちと ははと あねと あにと (2) ____ で いきました。 さっぽろは にほんのきたに あります。 とても きれいで さむいところです。 さっぽろで いろいろなところを みました。 ゆきまつりと おんせんと スキーでした。 とても (3) ____ です。"
+      ],
+      "english": [
+        "Last February, I went to Japan with my family. The winter (1) ____ was very cold. I went with my father, mother, older sister and older brother, (2) ____ people altogether. Sapporo is in the north of Japan. It is a very beautiful and cold place. We saw various places in Sapporo. There were the snow festival, hot springs and skiing. It was very (3) ____."
+      ]
+    }
+  ]
+}

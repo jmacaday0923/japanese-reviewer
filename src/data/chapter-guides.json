@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "chapters": [
+    {
+      "chapter": "1",
+      "goals": [
+        "Build affirmative, negative and question sentences with です.",
+        "Connect nouns and describe possession, nationality and family.",
+        "Point to things and places, and choose an appropriate question word."
+      ]
+    },
+    {
+      "chapter": "2",
+      "goals": [
+        "Choose あります or います for things, people and animals.",
+        "Describe a location and say what exists there.",
+        "Use position words and distinguish topic and subject particles."
+      ]
+    },
+    {
+      "chapter": "3",
+      "goals": [
+        "Read numbers, prices and telephone numbers accurately.",
+        "Choose counters for people, objects, animals and age.",
+        "Ask about quantities and recognise irregular counter readings."
+      ]
+    },
+    {
+      "chapter": "4",
+      "goals": [
+        "Tell the time and distinguish hours from minutes.",
+        "Read weekdays, calendar dates, months and years.",
+        "Use time expressions to say when something happens."
+      ]
+    },
+    {
+      "chapter": "5",
+      "goals": [
+        "Distinguish a point in time from a length of time.",
+        "Describe durations and frequency.",
+        "Express approximate amounts and starting and ending points."
+      ]
+    },
+    {
+      "chapter": "6",
+      "goals": [
+        "Distinguish い-adjectives and な-adjectives.",
+        "Describe nouns and connect descriptions.",
+        "Use affirmative, negative and past adjective forms."
+      ]
+    },
+    {
+      "chapter": "7",
+      "goals": [
+        "Use the four polite verb endings for daily routines.",
+        "Describe when an action begins, ends or takes place.",
+        "Explain routines using time and manner expressions."
+      ]
+    },
+    {
+      "chapter": "8",
+      "goals": [
+        "Describe actions and their objects with を.",
+        "Identify places, tools and recipients with the appropriate particles.",
+        "Ask and answer questions about everyday actions."
+      ]
+    },
+    {
+      "chapter": "9",
+      "goals": [
+        "Describe destinations, origins and means of transport.",
+        "Say who accompanies you and how many people travel.",
+        "Recognise dictionary forms and use motion verbs in context."
+      ]
+    },
+    {
+      "chapter": "10",
+      "goals": [
+        "Build verbs from nouns and する.",
+        "Use dictionary, negative, past and past-negative forms.",
+        "Choose casual or polite language to suit the situation."
+      ],
+      "note": "Verb-group names: the book's numbered Groups 1–5 are 五段 verbs; its ‘Regular’ group is 一段. する and 来る are irregular. Follow the lesson's exception lists when choosing a conjugation."
+    },
+    {
+      "chapter": "11",
+      "goals": [
+        "Use は and が with expressions of preference, ability and need.",
+        "Describe changes with なる and する.",
+        "Form potential verbs and distinguish 見える and 聞こえる."
+      ]
+    }
+  ]
+}

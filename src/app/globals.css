@@ -152,6 +152,30 @@
 .reading-html { display: contents; }
 .lesson > .reading-html:first-child > :first-child { margin-top: 0; }
 
+/* Keep original exercise table semantics and source text, while giving the
+   Japanese prompt its full row and expanding answer controls only on demand. */
+.lesson .legacy-exercise-meta { padding: 0.25rem 1rem; font-size: 0.75rem; color: var(--muted); }
+.lesson .legacy-exercise-table, .lesson .legacy-exercise-table tbody { display: block; width: 100%; }
+.lesson .legacy-exercise-table tbody tr {
+  display: grid; grid-template-columns: 2rem minmax(0, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+.lesson .legacy-exercise-table td { min-width: 0; border: 0; overflow-wrap: anywhere; word-break: normal; }
+.lesson .legacy-question-number { grid-column: 1; grid-row: 1; padding-right: 0; font-size: 0.75rem; color: var(--muted); }
+.lesson .legacy-question-prompt { grid-column: 2; grid-row: 1; font-size: 1.1875rem; line-height: 1.85; }
+.lesson .legacy-question-answer { grid-column: 2; grid-row: 2; padding-top: 0; }
+.lesson .legacy-answer-toggle {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border-strong); border-radius: var(--radius-control);
+  color: var(--accent-text); cursor: pointer; font-size: 0.875rem;
+}
+.lesson .legacy-answer-toggle:hover { background: var(--surface-raised); }
+.lesson .legacy-model { white-space: pre-line; overflow-wrap: anywhere; }
+.lesson .legacy-model [lang="ja"] { font-size: 1.1875rem; }
+.older-reading-support { margin: 1rem 0; border: 1px solid var(--border); border-radius: var(--radius-control); padding: 0 0.875rem; }
+.older-reading-support > summary { min-height: 44px; padding: 0.625rem 0; color: var(--accent-text); cursor: pointer; font-size: 0.875rem; }
+.older-reading-support > div { padding-bottom: 0.5rem; color: var(--muted); font-size: 0.9375rem; line-height: 1.8; }
+
 /* Japanese spellings lead; readings and English provide quieter support.
    The shared Japanese class also styles sentence rows in search results. */
 .reading-japanese {

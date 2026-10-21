@@ -206,9 +206,10 @@ test("phone: tiles, model answers and transformation fields fit the panel", asyn
   await expect(feedback(item)).toContainText("Correct");
   expect(await practice(page).evaluate(element => element.scrollWidth > element.clientWidth)).toBe(false);
   const buttons = item.locator("button");
-  for (const button of await buttons.all()) {
-    expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(44);
-  }
+  const sizes = await buttons.evaluateAll(elements => elements.map(button => ({
+    label: button.textContent, height: button.getBoundingClientRect().height,
+  })));
+  for (const size of sizes) expect(size.height, size.label ?? "exercise button").toBeGreaterThanOrEqual(44);
   // Keep screenshots out of the functional test budget; failure traces retain visual diagnostics.
   await practice(page).getByRole("tab", { name: /^Transformations/ }).click();
   const transform = row(page, chapter("10").transformations[0].id);

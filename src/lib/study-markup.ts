@@ -41,3 +41,21 @@ export function studyDisplay(catalog: DisplayCatalog, text: string, scope = ""):
   const primary = catalog.overrides[scope]?.[text] ?? catalog.texts[text];
   return primary === undefined || primary === text ? { primary: text } : { primary, romaji: text };
 }
+
+export type ExerciseDisplayNode = { text: string } | { display: StudyDisplay } | {
+  tag: string; attrs: Record<string, string>; children: ExerciseDisplayNode[];
+};
+
+// Only this question's reviewed display strings cross the client boundary.
+// Keep hidden models as plain data until requested, rather than serializing
+// thousands of React elements for answers which have not been opened.
+export function prepareExerciseDisplay(nodes: StudyNode[], catalog: DisplayCatalog, scope: string, optional = false): ExerciseDisplayNode[] {
+  return nodes.map(node => {
+    if ("text" in node) {
+      if (optional) return node;
+      const display = studyDisplay(catalog, node.text, scope);
+      return display.romaji ? { display } : { text: display.primary };
+    }
+    return { ...node, children: prepareExerciseDisplay(node.children, catalog, scope, optional || node.tag === "details") };
+  });
+}

@@ -26,7 +26,7 @@ export function Explanation({ children }: { children: ReactNode }) {
 }
 
 const BUTTON =
-  "inline-flex min-h-10 items-center gap-2 rounded-control px-4 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50";
+  "inline-flex min-h-11 items-center gap-2 rounded-control px-4 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50";
 export const PRIMARY_BUTTON = `${BUTTON} bg-accent text-accent-foreground hover:bg-accent-hover disabled:hover:bg-accent`;
 export const SECONDARY_BUTTON = `${BUTTON} border border-border-strong text-foreground hover:bg-surface-raised`;
 

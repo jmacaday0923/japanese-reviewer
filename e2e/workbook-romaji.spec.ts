@@ -13,22 +13,27 @@ for (const chapter of ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]) {
     const expected = audit.activities.filter(item => item.chapter === chapter);
     await page.goto("/chapters/" + chapter + "#c" + chapter + "-workbook-exercises");
     await expect(activities(page)).toHaveCount(expected.length);
-    for (const item of expected) {
-      const region = activity(page, item.heading);
-      await expect(questions(region)).toHaveCount(item.rowCount);
-      await expect(support(region)).toHaveCount(item.hasSupport ? 1 : 0);
-      if (item.hasSupport) {
-        await expect(support(region)).not.toHaveAttribute("open");
-        await expect(body(region)).toBeHidden();
-      }
-      if (item.questions.length) {
-        const first = item.questions[0];
-        await expect(questions(region).nth(first.number - 1).locator('td:nth-child(2) > span[lang="ja"]')).toHaveText(first.japanese);
-        await expect(questions(region).nth(first.number - 1).locator('td:nth-child(2) > span[lang="ja"]')).toBeVisible();
-      }
-      if (item.passages.length) {
-        await expect(region.getByText(item.passages[0].japanese, { exact: true })).toBeVisible();
-      }
+    // Read this large page once rather than spending the test budget on many
+    // browser round trips. Check every native prompt, not just the first row.
+    const snapshot = await activities(page).evaluateAll(elements => elements.map(region => ({
+      heading: region.getAttribute("data-workbook-activity"),
+      rows: [...region.querySelectorAll(".tw tbody tr")].map(row => {
+        const japanese = row.querySelector('td:nth-child(2) > span[lang="ja"]');
+        return japanese ? { text: japanese.textContent ?? "", visible: japanese.checkVisibility() } : null;
+      }),
+      supports: [...region.querySelectorAll("details[data-workbook-romaji]")].map(panel => ({
+        open: panel.hasAttribute("open"),
+        visible: panel.querySelector(".workbook-romaji-body")?.checkVisibility() ?? false,
+      })),
+      paragraphs: [...region.querySelectorAll("p")].filter(p => p.checkVisibility()).map(p => (p.textContent ?? "").replace(/\s+/g, " ").trim()),
+    })));
+    for (const [index, item] of expected.entries()) {
+      const actual = snapshot[index];
+      expect(actual.heading).toBe(item.heading);
+      expect(actual.rows).toHaveLength(item.rowCount);
+      expect(actual.supports).toEqual(item.hasSupport ? [{ open: false, visible: false }] : []);
+      for (const q of item.questions) expect(actual.rows[q.number - 1]).toEqual({ text: q.japanese, visible: true });
+      for (const passage of item.passages) expect(actual.paragraphs).toContain(passage.japanese.replace(/\s+/g, " ").trim());
     }
     const first = activity(page, expected.find(item => item.hasSupport)!.heading);
     await support(first).locator("summary").click();
