@@ -24,4 +24,26 @@ export type CheckpointPresentation = {
   instructionsEn: Record<string, string>;
   kana: Record<string, string>;
   readings: Record<string, string>;
+  prepared?: {
+    titles: Record<string, CheckpointTextPart[]>;
+    instructions: Record<string, CheckpointTextPart[]>;
+    questions: Record<string, CheckpointQuestionText>;
+  };
+};
+
+export type CheckpointTextPart = { text: string; reading?: string };
+export type CheckpointQuestionText = {
+  prompt: CheckpointTextPart[];
+  context?: CheckpointTextPart[];
+  passage?: CheckpointTextPart[];
+  composition?: { before: CheckpointTextPart[]; after: CheckpointTextPart[] };
+  choices: Record<string, CheckpointTextPart[]>;
+  answer: CheckpointTextPart[];
+  completedSentence?: CheckpointTextPart[];
+  explanationJa: CheckpointTextPart[];
+  explanationEn: CheckpointTextPart[];
+};
+export type Chapter10CheckpointPolicy = {
+  lexicon: Record<string, CheckpointTextPart[]>;
+  exams: Record<string, { instructionsEn: Record<string, string>; protectChoiceReadings: string[] }>;
 };

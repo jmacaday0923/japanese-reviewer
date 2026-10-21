@@ -249,11 +249,20 @@ exam; no server account or new service is required. Avoid adding the keyed quest
 bank to search results, which would expose the answers while taking an exam.
 
 
+### Chapter 10 checkpoint reading support
+
+Both Chapter 10 exams show English directions below Japanese directions. Every kanji in the part heading and instructions has always-visible furigana. The familiar list comes from Kanji 1's 30 primary teaching headings, rather than incidental characters in its example vocabulary.
+
+Within each question, familiar kanji stay bare; other kanji receive furigana on their first occurrence only. The count spans its passage/context, prompt, choices and review feedback and resets for the next question. A tested kanji reading or meaning stays unannotated throughout that item. Written-form choices also remain unannotated so their readings cannot reveal the correct choice. Instruction readings are separate from each item's count.
+
+`src/data/chapter-10-checkpoint-display.json` holds the reviewed reading segments, English directions and written-form exemptions. `src/lib/chapter-10-checkpoint.ts` prepares immutable display parts on the server, with one local first-use set per item; rendering never mutates annotation state. New unsupported kanji require a reviewed reading. Original question text, choices, keys, Chapter 6–10 weighting, revisions and v1 browser history are unchanged. Chapter 5 keeps its separate kana-first display and permanent readings.
+
+
 ## Chapter 5 checkpoint
 
 The former **N5 Practice Exam, Chapters 1 to 5** is now one interactive checkpoint at `/checkpoints/chapter-5`: all 40 vocabulary questions, 14 reading questions and three passages are preserved. Reading questions are numbered 41–54 in the combined exam. Questions and choices use Japanese, including translated context clues. Both parts show English instructions directly below their Japanese instructions, even when English reading hints are hidden. Passage translations and English answer explanations remain available after submission and follow the English reading preference.
 
-Chapter 5 uses kana-first display text from `src/data/chapter-5-checkpoint-display.json`. Headings, directions and Japanese feedback use kana. The six retained kanji terms (`円`, `名前`, `日本`, `日曜日`, `月曜日`, `金曜日`) have always-visible native `<ruby>`/`<rt>` readings above them, independent of reading-aid preferences. Number/date clues keep their values: the twentieth is shown as the calendar date `6/20`, rather than revealing `はつか` before checking. This presentation layer preserves the original question bank, all 54 keys, revisions, history and storage keys. Chapter 10 checkpoints and other study pages keep their current reading behavior.
+Chapter 5 uses kana-first display text from `src/data/chapter-5-checkpoint-display.json`. Headings, directions and Japanese feedback use kana. The six retained kanji terms (`円`, `名前`, `日本`, `日曜日`, `月曜日`, `金曜日`) have always-visible native `<ruby>`/`<rt>` readings above them, independent of reading-aid preferences. Number/date clues keep their values: the twentieth is shown as the calendar date `6/20`, rather than revealing `はつか` before checking. This presentation layer preserves the original question bank, all 54 keys, revisions, history and storage keys. Chapter 10 checkpoints use the separate Kanji 1 policy described above; other study pages keep their current reading controls.
 
 Each question is worth one raw mark. Both parts contribute to the score out of 54; submission asks for confirmation if anything is blank. Saved answers, the active part, first submission, retries and the latest ten full-attempt results use `japanese-reviewer:checkpoint:chapter-5:v1`. Retrying retains correct answers and the original score. There is no time limit or official pass prediction.
 

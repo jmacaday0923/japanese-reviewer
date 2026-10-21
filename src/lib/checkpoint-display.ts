@@ -1,6 +1,6 @@
-import type { CheckpointPresentation } from "@/types/checkpoint";
+import type { CheckpointPresentation, CheckpointTextPart } from "@/types/checkpoint";
 
-export type CheckpointTextPart = { text: string; reading?: string };
+export type { CheckpointTextPart } from "@/types/checkpoint";
 
 // Exact, reviewed text overrides and readings. No automatic transliteration,
 // HTML parsing or dependency on the user's reading-aid preferences.

@@ -72,13 +72,14 @@ test("existing submitted v1 attempts and first scores survive the new display", 
   expect(await page.evaluate(key => JSON.parse(localStorage.getItem(key)!), key)).toEqual(state);
 });
 
-test("Chapter 10 checkpoints retain their existing Japanese-only directions and display", async ({ page }) => {
+test("Chapter 5 kana overrides leave Chapter 10 question text intact", async ({ page }) => {
   for (const id of ["vocabulary", "grammar"]) {
     await page.goto("/checkpoints/" + id);
     await expect(visibleMain(page).locator("[data-checkpoint-question]")).not.toHaveCount(0);
-    await expect(visibleMain(page).locator("[data-checkpoint-instructions], ruby")).toHaveCount(0);
+    await expect(visibleMain(page).locator('[data-checkpoint-instructions] [lang="en"]')).toBeVisible();
     const original = exams.find(e => e.id === id)!.parts[0];
-    await expect(visibleMain(page).getByText(original.instructionsJa, { exact: true })).toBeVisible();
+    const instructions = await visibleMain(page).locator('[data-checkpoint-instructions] > p[lang="ja"]').evaluate(el => { const copy = el.cloneNode(true) as HTMLElement; copy.querySelectorAll("rt, rp").forEach(node => node.remove()); return copy.textContent; });
+    expect(instructions).toBe(original.instructionsJa);
     expect(await visibleMain(page).locator("[data-checkpoint-prompt]").allTextContents()).toEqual(original.questions.map(q => q.prompt));
   }
 });

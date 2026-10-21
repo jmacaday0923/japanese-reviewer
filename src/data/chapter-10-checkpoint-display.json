@@ -1,0 +1,177 @@
+{
+  "lexicon": {
+    "漢字": [
+      {
+        "text": "漢",
+        "reading": "かん"
+      },
+      {
+        "text": "字",
+        "reading": "じ"
+      }
+    ],
+    "読み方": [
+      {
+        "text": "読",
+        "reading": "よ"
+      },
+      {
+        "text": "み"
+      },
+      {
+        "text": "方",
+        "reading": "かた"
+      }
+    ],
+    "文字": [
+      {
+        "text": "文",
+        "reading": "も"
+      },
+      {
+        "text": "字",
+        "reading": "じ"
+      }
+    ],
+    "書き方": [
+      {
+        "text": "書",
+        "reading": "か"
+      },
+      {
+        "text": "き"
+      },
+      {
+        "text": "方",
+        "reading": "かた"
+      }
+    ],
+    "文": [
+      {
+        "text": "文",
+        "reading": "ぶん"
+      }
+    ],
+    "中": [
+      {
+        "text": "中",
+        "reading": "なか"
+      }
+    ],
+    "同じ": [
+      {
+        "text": "同",
+        "reading": "おな"
+      },
+      {
+        "text": "じ"
+      }
+    ],
+    "意味": [
+      {
+        "text": "意",
+        "reading": "い"
+      },
+      {
+        "text": "味",
+        "reading": "み"
+      }
+    ],
+    "文法": [
+      {
+        "text": "文",
+        "reading": "ぶん"
+      },
+      {
+        "text": "法",
+        "reading": "ぽう"
+      }
+    ],
+    "形": [
+      {
+        "text": "形",
+        "reading": "かたち"
+      }
+    ],
+    "組み立て": [
+      {
+        "text": "組",
+        "reading": "く"
+      },
+      {
+        "text": "み"
+      },
+      {
+        "text": "立",
+        "reading": "た"
+      },
+      {
+        "text": "て"
+      }
+    ],
+    "文章": [
+      {
+        "text": "文",
+        "reading": "ぶん"
+      },
+      {
+        "text": "章",
+        "reading": "しょう"
+      }
+    ],
+    "入る": [
+      {
+        "text": "入",
+        "reading": "はい"
+      },
+      {
+        "text": "る"
+      }
+    ],
+    "一つ": [
+      {
+        "text": "一",
+        "reading": "ひと"
+      },
+      {
+        "text": "つ"
+      }
+    ],
+    "四つ": [
+      {
+        "text": "四",
+        "reading": "よっ"
+      },
+      {
+        "text": "つ"
+      }
+    ],
+    "枚": [
+      {
+        "text": "枚",
+        "reading": "まい"
+      }
+    ]
+  },
+  "exams": {
+    "vocabulary": {
+      "instructionsEn": {
+        "reading": "How do you read the word in 【 】? Choose one answer.",
+        "spelling": "Choose the correct written form of the word in 【 】.",
+        "context": "Choose the best word to fill in the blank.",
+        "paraphrase": "Choose the sentence closest in meaning to the first sentence."
+      },
+      "protectChoiceReadings": [
+        "spelling"
+      ]
+    },
+    "grammar": {
+      "instructionsEn": {
+        "forms": "Choose the best word or form to fill in the blank.",
+        "order": "Put the four words or phrases in order. Choose the one that belongs in the ★ position.",
+        "text": "Read the passage, then choose the best word or form for each numbered blank."
+      },
+      "protectChoiceReadings": []
+    }
+  }
+}
