@@ -20,8 +20,8 @@ const allCorrect = () => ({ ...newCheckpointAttempt(exam), answers: Object.fromE
 const hash = bytes => createHash("sha256").update(bytes).digest("hex");
 
 test("exactly two cumulative exams cover all ten chapters with 70% on Chapters 6–10", () => {
-  assert.deepEqual(exams.map(e => e.id), ["vocabulary", "grammar"]);
-  for (const e of exams) {
+  assert.deepEqual(exams.filter(e => e.id !== "chapter-5").map(e => e.id), ["vocabulary", "grammar"]);
+  for (const e of exams.filter(e => e.id !== "chapter-5")) {
     const qs = checkpointQuestions(e);
     assert.equal(qs.length, 40);
     assert.equal(qs.filter(q => Number(q.chapter) >= 6).length, 28);
@@ -30,7 +30,7 @@ test("exactly two cumulative exams cover all ten chapters with 70% on Chapters 6
     assert.equal(new Set(qs.map(q => q.id)).size, 40);
   }
 });
-test("all eighty questions have four distinct Japanese choices, valid keys and real lesson anchors", () => {
+test("all checkpoint questions have four distinct Japanese choices, valid keys and real lesson anchors", () => {
   const ids = new Set();
   for (const e of exams) for (const q of checkpointQuestions(e)) {
     assert.equal(ids.has(q.id), false); ids.add(q.id);
@@ -45,7 +45,7 @@ test("all eighty questions have four distinct Japanese choices, valid keys and r
     assert.doesNotMatch([q.prompt, q.context ?? "", q.passage?.text ?? "", ...q.choices.map(c => c.text)].join(""), /[A-Za-z]|<ruby|<rt>/);
     if (q.target) assert.ok(q.source.evidence.includes(q.target), q.id);
   }
-  assert.equal(ids.size, 80);
+  assert.equal(ids.size, 134);
 });
 test("the bank includes all intended formats, consistent starred keys and four paired text passages", () => {
   assert.deepEqual(exams[0].parts.map(p => p.questions.length), [8, 8, 16, 8]);

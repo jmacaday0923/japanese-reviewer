@@ -29,7 +29,7 @@ export default function NavLinks(props: Props) {
 function CurrentNavList(props: Props) {
   // "chapters" on /chapters/3, null on the home page
   const segment = useSelectedLayoutSegment();
-  return <NavList {...props} current={segment} />;
+  return <NavList {...props} current={segment === "practice" ? "checkpoints" : segment} />;
 }
 
 function isCurrent(item: NavItem, current: string | null | undefined) {
@@ -88,7 +88,7 @@ export function NavLocation() {
 
 function CurrentLocation() {
   const segment = useSelectedLayoutSegment();
-  const item = NAV_ITEMS.find((i) => i.segment !== false && i.segment === segment);
+  const item = NAV_ITEMS.find((i) => i.segment !== false && i.segment === (segment === "practice" ? "checkpoints" : segment));
   if (!item) return null;
   return (
     <p className="flex items-center gap-2 text-sm font-medium text-foreground">

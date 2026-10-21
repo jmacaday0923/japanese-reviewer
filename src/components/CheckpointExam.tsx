@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import type { CheckpointExam as Exam } from "@/types/checkpoint";
 import { ReadingHint } from "@/components/ReadingPreferences";
 import {
-  checkpointScore, checkpointByChapter, checkpointKey, questionScore,
+  checkpointScore, checkpointByChapter, checkpointKey, questionScore, checkpointCoverage, checkpointAnchor,
   chooseCheckpointAnswer, selectCheckpointPart, submitCheckpointAttempt,
   retryCheckpointIncorrect, newCheckpointAttempt, createCheckpointStore,
 } from "@/lib/checkpoints";
@@ -26,6 +26,23 @@ export default function CheckpointExam({ exam }: { exam: Exam }) {
   const partIndex = exam.parts.findIndex(p => p.id === state.partId);
   const part = exam.parts[partIndex];
   const firstScore = state.firstAnswers ? checkpointScore(exam, state.firstAnswers) : null;
+  // Read fragments after hydration. Old exercise and key links select the right
+  // part without submitting the exam or exposing an answer.
+  useEffect(() => {
+    if (!snapshot.ready) return;
+    let frame = 0;
+    const navigate = () => {
+      const target = checkpointAnchor(exam, window.location.hash);
+      if (!target) return;
+      store.update(state => selectCheckpointPart(exam, state, target.partId));
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => document.getElementById(target.anchor)?.scrollIntoView({ block: "start" }));
+    };
+    navigate();
+    window.addEventListener("hashchange", navigate);
+    return () => { cancelAnimationFrame(frame); window.removeEventListener("hashchange", navigate); };
+  }, [exam, store, snapshot.ready]);
+
   function select(id: string) {
     setConfirm(null); store.update(state => selectCheckpointPart(exam, state, id));
   }
@@ -54,7 +71,7 @@ export default function CheckpointExam({ exam }: { exam: Exam }) {
         <span className="text-sm text-muted">{state.retryRound ? "Practice retry " + state.retryRound : "Full attempt " + state.attempt}</span>
       </div>
       <progress className="mt-3 h-2 w-full accent-accent" aria-label="Questions answered" value={answered} max={score.total} />
-      <p className="mt-3 text-sm leading-relaxed text-muted">40 questions · Chapters 1–10 · 70% focused on Chapters 6–10. Work at your own pace, then submit to review.</p>
+      <p className="mt-3 text-sm leading-relaxed text-muted">{score.total} questions · {checkpointCoverage(exam).label} · {exam.focus} Work at your own pace, then submit to review.</p>
       <p role={snapshot.saved ? undefined : "status"} className="mt-2 text-xs leading-relaxed text-subtle">
         {snapshot.saved ? "Your answers and up to 10 full-attempt scores are saved in this browser." : "This browser cannot save your answers. Keep this tab open to retain this attempt."}
       </p>
@@ -94,7 +111,7 @@ export default function CheckpointExam({ exam }: { exam: Exam }) {
       </ol>
     </details>}
 
-    <nav aria-label="Checkpoint parts" className={"my-5 grid grid-cols-2 gap-2 " + (exam.parts.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-4")}>
+    <nav aria-label="Checkpoint parts" className={"my-5 grid grid-cols-2 gap-2 " + (exam.parts.length === 2 ? "" : exam.parts.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-4")}>
       {exam.parts.map(p => <button key={p.id} type="button" onClick={() => select(p.id)} aria-controls="checkpoint-active-part" aria-current={p.id === part.id ? "step" : undefined}
         className={"min-h-20 min-w-0 rounded-control border p-3 text-left " + (p.id === part.id ? "border-accent bg-accent-soft text-foreground" : "border-border bg-surface text-muted hover:border-border-strong")}>
         <span className="block text-sm font-semibold">{p.title}</span>
@@ -112,8 +129,11 @@ export default function CheckpointExam({ exam }: { exam: Exam }) {
           const locked = state.locked.includes(q.id);
           const showPassage = q.passage && part.questions[index - 1]?.passage?.id !== q.passage.id;
           const answer = q.choices.find(c => c.id === q.correctChoiceId)!;
-          return <li key={q.id} className="min-w-0 rounded-card border border-border bg-surface p-4 sm:p-5" data-checkpoint-question={q.id}>
+          return <li key={q.id} id={q.id} className="min-w-0 rounded-card border border-border bg-surface p-4 sm:p-5" data-checkpoint-question={q.id}>
+            {Object.entries(exam.legacyAnchors ?? {}).filter(([, target]) => target.questionId === q.id).map(([id]) => <span key={id} id={id} className="block" />)}
+            {q.passage && showPassage && <h3 className="mb-3 text-sm font-semibold text-muted">Passage {part.questions.slice(0, index + 1).filter((item, i, items) => item.passage?.id !== items[i - 1]?.passage?.id).length}</h3>}
             {q.passage && showPassage && <blockquote id={"checkpoint-passage-" + q.passage.id} lang="ja" className="mb-6 whitespace-pre-line rounded-control border border-border bg-background p-4 text-xl leading-loose" data-checkpoint-passage={q.passage.id}>{q.passage.text}</blockquote>}
+            {state.submitted && showPassage && q.passage?.translationEn && <div className="mb-5 text-sm leading-relaxed text-muted"><ReadingHint kind="english" context={exam.title + " passage " + q.passage.id} compact>{q.passage.translationEn}</ReadingHint></div>}
             <fieldset disabled={state.submitted || locked} aria-describedby={"checkpoint-prompt-" + q.id + (q.passage ? " checkpoint-passage-" + q.passage.id : "")}>
               <legend className="mb-3 text-sm font-semibold text-muted">Question {q.number}{locked ? " · Correct answer kept" : ""}</legend>
               {q.context && <p lang="ja" className="mb-3 text-lg font-medium">{q.context}</p>}

@@ -1,35 +1,18 @@
 import { notFound } from "next/navigation";
-import raw from "@/data/practice.json";
-import type { Chapter } from "@/types/lesson";
-import ChapterView from "@/components/ChapterView";
+import type { Metadata } from "next";
+import CheckpointPage from "@/app/checkpoints/[id]/page";
 
-const pages = raw as Chapter[];
-
-// Pre-build a page for every practice set: /practice/1 and so on
-export function generateStaticParams() {
-  return pages.map((c) => ({ id: c.ch }));
-}
-
-// This page is all URL data (which practice set), so it can't come from the
-// shared shell that links prefetch. It's prerendered, so the wait is short;
-// allowing it to block keeps the full content in the first HTML, which is
-// what makes direct #anchor links land reliably.
 export const instant = false;
-
+export const metadata: Metadata = {
+  title: "Chapter 5 checkpoint",
+  alternates: { canonical: "/checkpoints/chapter-5" },
+};
+export function generateStaticParams() { return [{ id: "1" }]; }
 type Props = { params: Promise<{ id: string }> };
 
+// Keep old search results, bookmarks and /lessons/3 links usable.
+// Both addresses load the same exam, answers and history.
 export default async function PracticePage({ params }: Props) {
-  const { id } = await params;
-  const index = pages.findIndex((c) => c.ch === id);
-  if (index === -1) notFound();
-
-  return (
-    <ChapterView
-      chapter={pages[index]}
-      label="Practice"
-      basePath="/practice"
-      prev={pages[index - 1]}
-      next={pages[index + 1]}
-    />
-  );
+  if ((await params).id !== "1") notFound();
+  return <CheckpointPage params={Promise.resolve({ id: "chapter-5" })} />;
 }

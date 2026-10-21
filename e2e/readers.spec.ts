@@ -22,7 +22,6 @@ test.describe("readers", () => {
     { path: "/kana/1", crumbs: ["Home", "Kana", "Kana 1"], title: "Hiragana and Katakana" },
     { path: "/kanji/1", crumbs: ["Home", "Kanji", "Kanji 1"], title: /./ },
     { path: "/kanji/2", crumbs: ["Home", "Kanji", "Kanji 2"], title: library.kanji[1].title },
-    { path: "/practice/1", crumbs: ["Home", "Practice", "Practice 1"], title: library.practice[0].title },
   ]) {
     test(`${path}: one main, one h1, breadcrumbs, outline`, async ({ page }) => {
       await page.goto(path);
@@ -51,17 +50,13 @@ test.describe("readers", () => {
     await expect(lessons.locator("details a").first()).toBeVisible();
   });
 
-  test("/practice/1: both exams under Exercises, their keys under Answer key", async ({ page }) => {
+  test("/practice/1 opens the combined checkpoint without the static answer tables", async ({ page }) => {
     await page.goto("/practice/1");
-    const groups = outline(page).locator(":scope > ul > li");
-    await expect(groups.locator(":scope > a")).toHaveText(["Exercises", "Answer key"]);
-    await expect(groups.nth(0).locator("details a")).toHaveCount(8);
-    await expect(groups.nth(1).locator("details a")).toHaveCount(9);
-    // 40 vocabulary questions and 14 reading questions, each with an answer
-    const exercises = visibleMain(page).locator("#exercises");
-    await expect(exercises.locator("tbody tr")).toHaveCount(54);
-    await expect(visibleMain(page).locator("#answers tbody tr")).toHaveCount(54);
-    await expect(exercises.getByRole("heading", { name: "Exam 2, Passage 2: A shop sign" })).toBeVisible();
+    await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText("Chapter 5 checkpoint");
+    await expect(visibleMain(page)).toContainText("0 / 54 answered");
+    await expect(visibleMain(page).locator("[data-checkpoint-question]")).toHaveCount(40);
+    await expect(visibleMain(page).locator("table, [data-checkpoint-feedback]")).toHaveCount(0);
+    await expect(page.getByRole("navigation", { name: "Breadcrumb" }).getByRole("link", { name: "Checkpoints", exact: true })).toHaveAttribute("href", "/checkpoints");
   });
 
   test("/kanji/2: 30 kanji and the self-test, with model answers", async ({ page }) => {
@@ -90,8 +85,8 @@ test.describe("readers", () => {
     await expect(page.locator("#kanji").getByRole("link")).toHaveAttribute("href", "/kanji/1");
 
     await page.goto("/practice/1");
-    await page.getByRole("navigation", { name: "Breadcrumb" }).getByRole("link", { name: "Practice" }).click();
-    await expect(page).toHaveURL("/#practice");
+    await page.getByRole("navigation", { name: "Breadcrumb" }).getByRole("link", { name: "Checkpoints", exact: true }).click();
+    await expect(page).toHaveURL("/checkpoints");
   });
 
   test("chapter previous and next", async ({ page }) => {
@@ -133,7 +128,7 @@ test.describe("readers", () => {
   // Direct #anchor links rely on the content being in the first HTML, not
   // streamed in after a placeholder
   test("reader pages arrive complete in the first HTML", async ({ request }) => {
-    for (const [path, anchor] of [["/kanji/2", "c2-seasons"], ["/practice/1", "p1-exam-2-passage-2-a-shop-sign"], ["/chapters/2", "vocab"], ["/kana/1", "answers"]]) {
+    for (const [path, anchor] of [["/kanji/2", "c2-seasons"], ["/chapters/2", "vocab"], ["/kana/1", "answers"]]) {
       const html = await (await request.get(path)).text();
       expect(html, path).toContain(`id="${anchor}"`);
       expect(html, path).not.toContain('aria-busy="true"');

@@ -247,3 +247,14 @@ When changing an exam's questions or key, increment that exam's `revision` so ol
 browser attempts are not scored against new content. Attempts are per browser and
 exam; no server account or new service is required. Avoid adding the keyed question
 bank to search results, which would expose the answers while taking an exam.
+
+
+## Chapter 5 checkpoint
+
+The former **N5 Practice Exam, Chapters 1 to 5** is now one interactive checkpoint at `/checkpoints/chapter-5`: all 40 vocabulary questions, 14 reading questions and three passages are preserved. Reading questions are numbered 41–54 in the combined exam. Questions and choices use Japanese, including translated context clues; no romaji or English hint appears before submission. The original English passage translations are available after submission and follow the English reading preference.
+
+Each question is worth one raw mark. Both parts contribute to the score out of 54; submission asks for confirmation if anything is blank. Saved answers, the active part, first submission, retries and the latest ten full-attempt results use `japanese-reviewer:checkpoint:chapter-5:v1`. Retrying retains correct answers and the original score. There is no time limit or official pass prediction.
+
+The dashboard and navigation group all three exams under **Checkpoints**, with a link after Chapter 5. The Chapter 10 exams keep their question IDs, revisions and storage keys. `/practice/1` is a compatibility address for the same Chapter 5 exam, with the same answers and history. Old exercise, answer and passage fragments select their corresponding questions; an old answer-key link never submits an exam or exposes a key. Existing search and bookmark records remain usable. The unchanged `practice.json` remains the source archive for provenance, search and bookmark resolution, so old search snippets can still contain source answer explanations.
+
+`migration/chapter-5-checkpoint-audit.json` maps every question and key back to that archive, including original reading numbers and native display text. `tests/chapter-5-checkpoint.test.mjs` verifies all 54 mappings and the three passages; `e2e/chapter-5-checkpoint.spec.ts` covers completion, persistence, retries, legacy fragments and narrow screens.

@@ -17,10 +17,21 @@ export function questionScore(questions: CheckpointQuestion[], answers: Record<s
 export const checkpointScore = (exam: CheckpointExam, answers: Record<string, string>) => questionScore(checkpointQuestions(exam), answers);
 export function checkpointByChapter(exam: CheckpointExam, answers: Record<string, string>) {
   const questions = checkpointQuestions(exam);
-  return Array.from({ length: 10 }, (_, index) => {
-    const chapter = String(index + 1);
+  return [...new Set(questions.map(q => q.chapter))].sort((a, b) => Number(a) - Number(b)).map(chapter => {
     return { chapter, ...questionScore(questions.filter(q => q.chapter === chapter), answers) };
   });
+}
+// Derive coverage from the bank, so smaller checkpoints never show empty chapters.
+export function checkpointCoverage(exam: CheckpointExam) {
+  const chapters = checkpointByChapter(exam, {}).map(s => s.chapter);
+  return { afterChapter: chapters.at(-1)!, label: chapters.length === 1 ? "Chapter " + chapters[0] : "Chapters " + chapters[0] + "–" + chapters.at(-1) };
+}
+export function checkpointAnchor(exam: CheckpointExam, hash: string) {
+  let id: string;
+  try { id = decodeURIComponent(hash.replace(/^#/, "")); } catch { return null; }
+  const alias = exam.legacyAnchors?.[id];
+  const part = exam.parts.find(p => p.questions.some(q => q.id === (alias?.questionId ?? id)));
+  return part ? { partId: part.id, questionId: alias?.questionId ?? id, anchor: id } : null;
 }
 export function newCheckpointAttempt(exam: CheckpointExam, previous?: CheckpointAttempt): CheckpointAttempt {
   return { version: 1, examId: exam.id, examRevision: exam.revision, partId: exam.parts[0].id,

@@ -15,7 +15,6 @@ const readers = [
   { path: "/kana/1", section: "Kana" },
   { path: "/kanji/1", section: "Kanji" },
   { path: "/kanji/2", section: "Kanji" },
-  { path: "/practice/1", section: "Practice" },
 ];
 
 async function expectReader(page: Page, section: string) {
@@ -32,7 +31,7 @@ test("home page loads with its sections", async ({ page }) => {
   const response = await page.goto("/");
   expect(response?.status()).toBe(200);
   await expect(page.getByRole("heading", { name: "Your study space", level: 1 })).toBeVisible();
-  for (const name of ["Find something to review", "Chapters", "Kana & kanji", "Practice"]) {
+  for (const name of ["Find something to review", "Chapters", "Kana & kanji", "Checkpoints"]) {
     await expect(page.getByRole("heading", { name, level: 2, exact: true })).toBeVisible();
   }
 });
@@ -84,4 +83,12 @@ test("a section anchor from the outline works when opened directly", async ({ pa
 
   await page.goto("/chapters/1" + hash);
   await expect.poll(() => offsetFromAnchorTarget(page, id)).toBeLessThanOrEqual(1);
+});
+
+test("the Chapter 5 checkpoint and its old address load", async ({ page }) => {
+  for (const path of ["/checkpoints/chapter-5", "/practice/1"]) {
+    await page.goto(path);
+    await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText("Chapter 5 checkpoint");
+    await expect(visibleMain(page)).toContainText("0 / 54 answered");
+  }
 });

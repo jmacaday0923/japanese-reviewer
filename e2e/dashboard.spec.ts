@@ -1,11 +1,12 @@
 import { test, expect, index, library, search, visibleMain, type Page } from "./fixtures";
+import checkpoints from "../src/data/checkpoint-exams.json";
 import { categoryLabel, searchGroups } from "../src/lib/search";
 
 // The dashboard's layout and the parts added with the blue redesign: the
 // grouped navigation and toolbar, stats from the data, the Practice section,
 // the search shortcut and the Last opened badge.
 
-const { chapters, kana, kanji, practice } = library;
+const { chapters, kana, kanji } = library;
 
 test.use({ viewport: { width: 1440, height: 900 } });
 
@@ -23,7 +24,7 @@ const top = (page: Page, selector: string) =>
 
 test("dashboard sections come in order", async ({ page }) => {
   await page.goto("/");
-  const order = ["h1", "#overview-heading + dl", "#bookmarks", "#search", "#chapters", "#kana-kanji", "#practice", "#listening"];
+  const order = ["h1", "#overview-heading + dl", "#bookmarks", "#search", "#chapters", "#kana-kanji", "#checkpoints", "#listening"];
   const tops = [];
   for (const selector of order) tops.push(await top(page, selector));
   expect(tops).toEqual([...tops].sort((a, b) => a - b));
@@ -38,9 +39,9 @@ test("stats are counted from the data files", async ({ page }) => {
   const stat = (label: string) => dl.locator("div").filter({ has: page.locator("dt", { hasText: new RegExp(`^${label}$`) }) }).locator("dd");
   await expect(stat("chapters")).toHaveText(String(chapters.length));
   await expect(stat("kana & kanji pages")).toHaveText(String(kana.length + kanji.length));
-  await expect(stat(practice.length === 1 ? "practice exam" : "practice exams")).toHaveText(String(practice.length));
+  await expect(stat("checkpoints")).toHaveText(String(checkpoints.length));
   await expect(stat("searchable entries")).toHaveText(index.entries.length.toLocaleString("en-US"));
-  await expect(dl.locator("dt")).toHaveText(["chapters", "kana & kanji pages", "practice exam", "searchable entries"]);
+  await expect(dl.locator("dt")).toHaveText(["chapters", "kana & kanji pages", "checkpoints", "searchable entries"]);
 });
 
 test("the library has chapters, kana, kanji and practice, and no Documents section", async ({ page }) => {
@@ -50,11 +51,10 @@ test("the library has chapters, kana, kanji and practice, and no Documents secti
   await expect(main.locator("#chapters article")).toHaveCount(chapters.length);
   await expect(main.locator('#kana-kanji article a[href^="/kana/"]')).toHaveCount(kana.length);
   await expect(main.locator('#kana-kanji article a[href^="/kanji/"]')).toHaveCount(kanji.length);
-  const exams = main.locator("#practice article");
-  await expect(exams).toHaveCount(practice.length);
-  await expect(main.getByRole("heading", { name: "Practice", level: 2 })).toBeVisible();
-  await expect(exams.first().getByRole("link")).toHaveText(practice[0].title);
-  await expect(exams.first().getByRole("link")).toHaveAttribute("href", "/practice/1");
+  const exam = main.locator('#checkpoints a[href="/checkpoints/chapter-5"]');
+  await expect(exam).toHaveCount(1);
+  await expect(main.getByRole("heading", { name: "Checkpoints", level: 2 })).toBeVisible();
+  await expect(main.locator('#practice article')).toHaveCount(0);
   // Kanji 2 is listed with Kanji 1
   await expect(main.locator('#kana-kanji article a[href^="/kanji/"]')).toHaveText(kanji.map((k) => k.title));
 
@@ -63,9 +63,9 @@ test("the library has chapters, kana, kanji and practice, and no Documents secti
   await expect(main.getByRole("heading", { name: /Documents/ })).toHaveCount(0);
   await expect(page.locator('a[href^="/lessons"]')).toHaveCount(0);
 
-  await exams.first().getByRole("link").click();
-  await expect(page).toHaveURL("/practice/1");
-  await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText(practice[0].title);
+  await exam.click();
+  await expect(page).toHaveURL("/checkpoints/chapter-5");
+  await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText("Chapter 5 checkpoint");
 });
 
 test("sidebar: grouped links, current section, and a working Bookmarks link", async ({ page }) => {
@@ -73,7 +73,7 @@ test("sidebar: grouped links, current section, and a working Bookmarks link", as
   const sidebar = page.locator("aside").first();
   await expect(sidebar.getByRole("link", { name: "Japanese Lesson Reviewer" })).toHaveAttribute("href", "/");
   const study = sidebar.getByRole("list", { name: "Study" });
-  await expect(study.getByRole("link")).toHaveText(["Home", "Chapters", "Kana", "Kanji", "Practice", "Listening", "Checkpoints"]);
+  await expect(study.getByRole("link")).toHaveText(["Home", "Chapters", "Kana", "Kanji", "Listening", "Checkpoints"]);
   await expect(study.getByRole("link", { name: "Chapters" })).toHaveAttribute("aria-current", "true");
   await expect(page.locator("body > header")).toContainText("Chapters");
 
@@ -84,14 +84,13 @@ test("sidebar: grouped links, current section, and a working Bookmarks link", as
   await expect(sidebar.getByRole("link", { name: "Bookmarks" })).not.toHaveAttribute("aria-current");
 });
 
-test("the Practice link opens the Practice section and is current on the practice page", async ({ page }) => {
+test("the old practice address belongs to Checkpoints in navigation", async ({ page }) => {
   await page.goto("/practice/1");
   const study = page.locator("aside").first().getByRole("list", { name: "Study" });
-  await expect(study.getByRole("link", { name: "Practice" })).toHaveAttribute("aria-current", "true");
-  await expect(study.getByRole("link", { name: "Chapters" })).not.toHaveAttribute("aria-current");
-  await study.getByRole("link", { name: "Practice" }).click();
-  await expect(page).toHaveURL("/#practice");
-  await expect(visibleMain(page).getByRole("heading", { name: "Practice", level: 2 })).toBeInViewport();
+  await expect(study.getByRole("link", { name: "Checkpoints", exact: true })).toHaveAttribute("aria-current", "true");
+  await expect(page.locator("body > header")).toContainText("Checkpoints");
+  await study.getByRole("link", { name: "Checkpoints", exact: true }).click();
+  await expect(page).toHaveURL("/checkpoints");
 });
 
 test("phone menu has the Saved group too", async ({ page }) => {

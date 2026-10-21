@@ -32,7 +32,7 @@ test.describe("responsive layout", () => {
         expect(await clippedElements(page), `${path} at ${width}px`).toEqual([]);
         await expect(visibleMain(page)).toHaveCount(1);
         await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveCount(1);
-        if (path !== "/") {
+        if (path !== "/" && path !== "/practice/1") {
           await expect(sideOutline(page)).toBeVisible({ visible: width >= 1280 });
           await expect(outlineBox(page)).toBeVisible({ visible: width < 1280 });
         }
@@ -120,7 +120,7 @@ test.describe("keyboard and navigation", () => {
 
   test("outline groups open with Enter and Space, with a visible focus ring", async ({ page }) => {
     await page.setViewportSize({ width: 1440, height: 900 });
-    await page.goto("/practice/1");
+    await page.goto("/chapters/5");
     const summary = sideOutline(page).locator("summary").first();
     await summary.focus();
     expect(await summary.evaluate((el) => getComputedStyle(el).outlineStyle)).not.toBe("none");

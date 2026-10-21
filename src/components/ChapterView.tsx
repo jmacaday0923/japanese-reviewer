@@ -85,6 +85,11 @@ export default function ChapterView({ chapter, label, basePath, prev, next, exer
             source={{ kind: KINDS[basePath], id: chapter.ch, sectionId: s.id, sectionTitle: s.title }} examples={examples} />
         </section>
       ))}
+      {basePath === "/chapters" && chapter.ch === "5" && <section aria-labelledby="chapter-5-checkpoint-heading" className="mt-12 rounded-card border border-border bg-surface p-5">
+        <h2 id="chapter-5-checkpoint-heading" className="text-xl font-semibold">Ready for your checkpoint?</h2>
+        <p className="mt-2 text-sm leading-relaxed text-muted">Assess Chapters 1–5 with 40 vocabulary questions and 14 reading questions across three passages.</p>
+        <Link href="/checkpoints/chapter-5" className="mt-4 inline-flex min-h-11 items-center rounded-control bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground hover:bg-accent-hover">Chapter 5 checkpoint</Link>
+      </section>}
       {basePath === "/chapters" && chapter.ch === "10" && <section aria-labelledby="chapter-checkpoint-heading" className="mt-12 rounded-card border border-border bg-surface p-5">
         <h2 id="chapter-checkpoint-heading" className="text-xl font-semibold">Ready for your checkpoint?</h2>
         <p className="mt-2 text-sm leading-relaxed text-muted">Assess Chapters 1–10 with separate vocabulary and grammar exams. Most questions focus on Chapters 6–10.</p>

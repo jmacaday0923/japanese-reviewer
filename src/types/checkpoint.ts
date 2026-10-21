@@ -6,7 +6,7 @@ export type CheckpointQuestion = {
   target?: string; context?: string;
   composition?: { before: string; after: string; orderedParts: string[]; starIndex: number };
   completedSentence?: string;
-  passage?: { id: string; text: string };
+  passage?: { id: string; text: string; translationEn?: string };
 };
 export type CheckpointPart = {
   id: string; title: string; titleJa: string; instructionsJa: string;
@@ -14,4 +14,6 @@ export type CheckpointPart = {
 };
 export type CheckpointExam = {
   id: string; revision: number; title: string; description: string; parts: CheckpointPart[];
+  focus?: string; cardDescription?: string;
+  legacyAnchors?: Record<string, { partId: string; questionId: string }>;
 };

@@ -1397,7 +1397,9 @@
           }
         ]
       }
-    ]
+    ],
+    "focus": "70% focused on Chapters 6–10.",
+    "cardDescription": "Kanji readings, written forms, words in context and similar meanings."
   },
   {
     "id": "grammar",
@@ -2835,6 +2837,1910 @@
             "passage": {
               "id": "yesterday",
               "text": "アナ「きのう、パーティーに〔1〕？」\nベン「ううん、いかなかった。うちで べんきょう〔2〕。」\nアナ「わたしも、うちで べんきょうしたよ。」"
+            }
+          }
+        ]
+      }
+    ],
+    "focus": "70% focused on Chapters 6–10.",
+    "cardDescription": "Grammar choices, sentence composition and short text grammar."
+  },
+  {
+    "id": "chapter-5",
+    "revision": 1,
+    "title": "Chapter 5 checkpoint",
+    "description": "One vocabulary-and-reading assessment covering Chapters 1–5.",
+    "focus": "40 vocabulary questions and 14 reading questions across three passages.",
+    "cardDescription": "The former N5 practice exam: all 40 vocabulary questions and 14 reading questions in one interactive assessment.",
+    "legacyAnchors": {
+      "p1-exam-1-chapter-1-copula-sentences": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-1"
+      },
+      "p1-exam-1-chapter-1-copula-sentences-2": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-1"
+      },
+      "p1-exam-1-chapter-2-existential-sentences": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-9"
+      },
+      "p1-exam-1-chapter-2-existential-sentences-2": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-9"
+      },
+      "p1-exam-1-chapter-3-counting-prices-and-pho": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-17"
+      },
+      "p1-exam-1-chapter-3-counting-prices-and-pho-2": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-17"
+      },
+      "p1-exam-1-chapter-4-time-expressions": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-25"
+      },
+      "p1-exam-1-chapter-4-time-expressions-2": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-25"
+      },
+      "p1-exam-1-chapter-5-span-of-time": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-33"
+      },
+      "p1-exam-1-chapter-5-span-of-time-2": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-33"
+      },
+      "p1-exam-2-passage-1-a-self-introduction": {
+        "partId": "reading",
+        "questionId": "chapter-5-reading-1"
+      },
+      "p1-exam-2-passage-1-a-self-introduction-2": {
+        "partId": "reading",
+        "questionId": "chapter-5-reading-1"
+      },
+      "p1-exam-2-passage-2-a-shop-sign": {
+        "partId": "reading",
+        "questionId": "chapter-5-reading-6"
+      },
+      "p1-exam-2-passage-2-a-shop-sign-2": {
+        "partId": "reading",
+        "questionId": "chapter-5-reading-6"
+      },
+      "p1-exam-2-passage-3-a-work-week": {
+        "partId": "reading",
+        "questionId": "chapter-5-reading-11"
+      },
+      "p1-exam-2-passage-3-a-work-week-2": {
+        "partId": "reading",
+        "questionId": "chapter-5-reading-11"
+      },
+      "exercises": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-1"
+      },
+      "answers": {
+        "partId": "vocabulary",
+        "questionId": "chapter-5-vocabulary-1"
+      },
+      "p1-english-translations-of-the-passages": {
+        "partId": "reading",
+        "questionId": "chapter-5-reading-1"
+      }
+    },
+    "parts": [
+      {
+        "id": "vocabulary",
+        "title": "Vocabulary",
+        "titleJa": "語彙（40問）",
+        "instructionsJa": "（　）に 入る いちばん いい ことばを、1・2・3・4から ひとつ えらんでください。",
+        "questions": [
+          {
+            "id": "chapter-5-vocabulary-1",
+            "number": 1,
+            "chapter": "1",
+            "prompt": "ア： はじめまして。 ジョン です。 イ： はじめまして。 マリア です。 （　） よろしく おねがいします。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "どうぞ"
+              },
+              {
+                "id": "2",
+                "text": "さようなら"
+              },
+              {
+                "id": "3",
+                "text": "こんにちは"
+              },
+              {
+                "id": "4",
+                "text": "おやすみ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "はじめて 会う ときは「どうぞ よろしく おねがいします」と あいさつします。",
+            "explanationEn": "After はじめまして, the set phrase is どうぞ よろしく おねがいします. It is what you say when you meet someone for the first time.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-greetings-and-self-introduction",
+              "title": "Greetings and self-introduction"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-2",
+            "number": 2,
+            "chapter": "1",
+            "prompt": "ア： こちら は どなた です か。 イ： たなか さん です。 さくら かいしゃ （　） しゃちょう です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "は"
+              },
+              {
+                "id": "2",
+                "text": "の"
+              },
+              {
+                "id": "3",
+                "text": "か"
+              },
+              {
+                "id": "4",
+                "text": "も"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「さくら かいしゃ の しゃちょう」の「の」は、ふたつの 名詞を つなぎます。",
+            "explanationEn": "no links two nouns and shows who or what something belongs to. さくら かいしゃ の しゃちょう means the president of さくら company.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-1-7-a-no-b",
+              "title": "1.7 A no B"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-3",
+            "number": 3,
+            "chapter": "1",
+            "prompt": "ア： すみません。 おてあらい は （　） です か。 イ： あちら です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "だれ"
+              },
+              {
+                "id": "2",
+                "text": "どれ"
+              },
+              {
+                "id": "3",
+                "text": "どこ"
+              },
+              {
+                "id": "4",
+                "text": "いつ"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "おてあらいは 場所です。場所を たずねる ときは「どこ」を 使います。",
+            "explanationEn": "どこ asks where. だれ is who, どれ is which one and いつ is when. おてあらい (washroom) is a place, so you ask どこ.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-question-words-do",
+              "title": "Question words (do)"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-4",
+            "number": 4,
+            "chapter": "1",
+            "prompt": "ア： わん さん は ちゅうごくじん です。 イ： ああ, そうですか。 わん さん の ことば は （　） です ね。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "にほんご"
+              },
+              {
+                "id": "2",
+                "text": "えいご"
+              },
+              {
+                "id": "3",
+                "text": "かんこくご"
+              },
+              {
+                "id": "4",
+                "text": "ちゅうごくご"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "中国の ことばは 中国語です。「国の 名前＋語」で ことばの 名前を 表します。",
+            "explanationEn": "Add go to the country name to get the language: ちゅうごく becomes ちゅうごくご. English is the odd one out (えいご).",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-countries-people-and-languages",
+              "title": "Countries, people and languages"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-5",
+            "number": 5,
+            "chapter": "1",
+            "prompt": "ア： マリア さん の ごかぞく は？ イ： わたし の （　） は かいしゃいん です。 （じぶんの おにいさんの ことです。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "あに"
+              },
+              {
+                "id": "2",
+                "text": "おにいさん"
+              },
+              {
+                "id": "3",
+                "text": "あね"
+              },
+              {
+                "id": "4",
+                "text": "おとうと"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "じぶんの 兄について ほかの 人に 話す ときは「あに」を 使います。",
+            "explanationEn": "For your own family use the plain words: あに, あね, ちち, はは. おにいさん is for someone else's older brother, あね is your own older sister and おとうと is your own younger brother.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-family",
+              "title": "Family"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-6",
+            "number": 6,
+            "chapter": "1",
+            "prompt": "ア： それ は なんですか。 イ： （　） は パソコン です。 （イが パソコンを もっています。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "あれ"
+              },
+              {
+                "id": "2",
+                "text": "これ"
+              },
+              {
+                "id": "3",
+                "text": "それ"
+              },
+              {
+                "id": "4",
+                "text": "どれ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "話している 人が 持っている ものは「これ」です。「それ」は 聞いている 人の 近くの ものです。",
+            "explanationEn": "これ is for things near the speaker, and B is the one holding it. それ would be the thing near A, are is far from both, and どれ is the question word.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-this-that-and-over-there-ko-so-a",
+              "title": "This, that and over there (ko, so, a)"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-7",
+            "number": 7,
+            "chapter": "1",
+            "prompt": "ア： あの （　） は どなた です か。 イ： かいしゃ の しゃちょう です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "これ"
+              },
+              {
+                "id": "2",
+                "text": "ここ"
+              },
+              {
+                "id": "3",
+                "text": "かた"
+              },
+              {
+                "id": "4",
+                "text": "どちら"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「かた」は「人」の ていねいな 言い方です。「どなた」と いっしょに 使います。",
+            "explanationEn": "かた is the polite word for person, and どなた is the polite word for who, so they go together. これ, ここ and どちら mean this, here and which way.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-people-and-jobs",
+              "title": "People and jobs"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-8",
+            "number": 8,
+            "chapter": "1",
+            "prompt": "ア： わかりますか。 イ： いいえ、わかりません。 （　） おねがいします。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "はじめましょう"
+              },
+              {
+                "id": "2",
+                "text": "おやすみなさい"
+              },
+              {
+                "id": "3",
+                "text": "さようなら"
+              },
+              {
+                "id": "4",
+                "text": "もういちど"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "わからなかった ときは「もういちど おねがいします」と 言います。",
+            "explanationEn": "もう いちど おねがいします means again, please. It is what you say in class when you did not catch something.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-classroom-phrases",
+              "title": "Classroom phrases"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-9",
+            "number": 9,
+            "chapter": "2",
+            "prompt": "ア： ぎんこう は えき の ひだり です か。 イ： いいえ, えき の （　） です。 （「ひだり」の はんたいです。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "みぎ"
+              },
+              {
+                "id": "2",
+                "text": "まえ"
+              },
+              {
+                "id": "3",
+                "text": "あいだ"
+              },
+              {
+                "id": "4",
+                "text": "うえ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「ひだり」の はんたいは「みぎ」です。",
+            "explanationEn": "みぎ (right) is the opposite of ひだり (left).",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-locatives-position-words",
+              "title": "Locatives (position words)"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-10",
+            "number": 10,
+            "chapter": "2",
+            "prompt": "ア： おおさか は とうきょう の （　） に あります。 （日本の ちずを かんがえてください。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ひがし"
+              },
+              {
+                "id": "2",
+                "text": "にし"
+              },
+              {
+                "id": "3",
+                "text": "きた"
+              },
+              {
+                "id": "4",
+                "text": "みなみ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "大阪は 東京の 西に あります。東・西・南・北の ことばを たしかめましょう。",
+            "explanationEn": "Osaka is to the west of Tokyo, so the word is にし. ひがし is east, きた is north and みなみ is south.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-locatives-position-words",
+              "title": "Locatives (position words)"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-11",
+            "number": 11,
+            "chapter": "2",
+            "prompt": "ア： きょうしつ に だれ が います か。 イ： たなか さん と マリア さん が （　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "あります"
+              },
+              {
+                "id": "2",
+                "text": "いません"
+              },
+              {
+                "id": "3",
+                "text": "います"
+              },
+              {
+                "id": "4",
+                "text": "ありません"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "田中さんと マリアさんは 人なので「います」を 使います。",
+            "explanationEn": "たなか さん and マリア さん are people, and people take います. あります is for things. いません would say that nobody is there, which does not fit since two names were given.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-2-11-location-ni-a-ga-imasu",
+              "title": "2.11 Location ni A ga imasu"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-12",
+            "number": 12,
+            "chapter": "2",
+            "prompt": "ア： つくえの うえ に なに が あります か。 イ： かぎ と めがね が （　）。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "います"
+              },
+              {
+                "id": "2",
+                "text": "ありません"
+              },
+              {
+                "id": "3",
+                "text": "いません"
+              },
+              {
+                "id": "4",
+                "text": "あります"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "かぎと めがねは ものなので「あります」を 使います。",
+            "explanationEn": "A key and eyeglasses are things, so the verb is あります. People and animals use います.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-2-8-location-ni-a-ga-arimasu",
+              "title": "2.8 Location ni A ga arimasu"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-13",
+            "number": 13,
+            "chapter": "2",
+            "prompt": "ア： きっさてん と （　） は おなじ です。 （おなじ いみの ことばを えらんでください。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "カフェ"
+              },
+              {
+                "id": "2",
+                "text": "デパート"
+              },
+              {
+                "id": "3",
+                "text": "ほんや"
+              },
+              {
+                "id": "4",
+                "text": "レストラン"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「きっさてん」と「カフェ」は おなじ ような 店を 表します。",
+            "explanationEn": "きっさてん and カフェ mean the same thing: coffee shop. デパート is a department store, ほんや is a bookstore and レストラン is a restaurant.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-places",
+              "title": "Places"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-14",
+            "number": 14,
+            "chapter": "2",
+            "prompt": "ア： マリア さん は どこ に います か。 イ： だいがく の （　） に います。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "りょうしん"
+              },
+              {
+                "id": "2",
+                "text": "りょう"
+              },
+              {
+                "id": "3",
+                "text": "こども"
+              },
+              {
+                "id": "4",
+                "text": "がいこくじん"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "大学の 学生が 住む 場所は「りょう」です。「りょうしん」は 父と 母です。",
+            "explanationEn": "りょう is a dormitory, a place where someone can be. Do not mix it up with りょうしん, which means parents.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-places",
+              "title": "Places"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-15",
+            "number": 15,
+            "chapter": "2",
+            "prompt": "ア： ほんや は ぎんこう の よこ です か。 イ： はい, ぎんこう の （　） です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "むこう"
+              },
+              {
+                "id": "2",
+                "text": "うしろ"
+              },
+              {
+                "id": "3",
+                "text": "となり"
+              },
+              {
+                "id": "4",
+                "text": "した"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「よこ」と「となり」は、ここでは おなじ 場所を 表します。",
+            "explanationEn": "よこ, となり and そば all mean beside in the book, so B is agreeing with となり. むこう is across, うしろ is behind and した is under.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-locatives-position-words",
+              "title": "Locatives (position words)"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-16",
+            "number": 16,
+            "chapter": "2",
+            "prompt": "ア： ほんや は ぎんこう と カフェ の （　） に あります。 （ほんやは ぎんこうと カフェの まんなかです。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "なか"
+              },
+              {
+                "id": "2",
+                "text": "となり"
+              },
+              {
+                "id": "3",
+                "text": "うえ"
+              },
+              {
+                "id": "4",
+                "text": "あいだ"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「銀行と カフェの あいだ」は、ふたつの 場所の まんなかです。",
+            "explanationEn": "あいだ means between, and it is used with two things: ぎんこう と カフェ の あいだ。",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-2-7-location-no-locative",
+              "title": "2.7 Location no locative"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-17",
+            "number": 17,
+            "chapter": "3",
+            "prompt": "ア： この かさ は いくら です か。 イ： （　） です。 （ねだんは 800円です。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "はっぴゃく えん"
+              },
+              {
+                "id": "2",
+                "text": "はちひゃく えん"
+              },
+              {
+                "id": "3",
+                "text": "はちびゃく えん"
+              },
+              {
+                "id": "4",
+                "text": "はっぱく えん"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "800の 読み方は「はっぴゃく」です。300・600・800は 音が 変わります。",
+            "explanationEn": "800 is はっぴゃく. The hundreds 300, 600 and 800 change their sound: さんびゃく, ろっぴゃく and はっぴゃく。",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-2-hundreds",
+              "title": "3.2 Hundreds"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-18",
+            "number": 18,
+            "chapter": "3",
+            "prompt": "ア： つくえの うえ に ほん が いくつ あります か。 イ： （　） あります。 （本が 4つ あります。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "よんまい"
+              },
+              {
+                "id": "2",
+                "text": "よんさつ"
+              },
+              {
+                "id": "3",
+                "text": "よんほん"
+              },
+              {
+                "id": "4",
+                "text": "よんこ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "本を 数える ときは「さつ」を 使います。4冊は「よんさつ」です。",
+            "explanationEn": "さつ is the counter for books and notebooks. まい is for flat, thin things like paper, ほん is for long things like pencils and こ is for small objects.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-7-counters",
+              "title": "3.7 Counters"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-19",
+            "number": 19,
+            "chapter": "3",
+            "prompt": "ア： きょうだい は なんにん です か。 イ： （　） です。 あに と わたし です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "にまい"
+              },
+              {
+                "id": "2",
+                "text": "にひき"
+              },
+              {
+                "id": "3",
+                "text": "ふたり"
+              },
+              {
+                "id": "4",
+                "text": "にほん"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "兄と わたしで 二人です。二人の 読み方は「ふたり」です。",
+            "explanationEn": "あに and わたし make two people, and two people is ふたり. It is one of the special readings, so learn it as its own word, like ひとり for one person.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-7-counters",
+              "title": "3.7 Counters"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-20",
+            "number": 20,
+            "chapter": "3",
+            "prompt": "ア： こども は なんさい です か。 イ： （　） です。 （こどもは 8さいです。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "はちさい"
+              },
+              {
+                "id": "2",
+                "text": "はっかい"
+              },
+              {
+                "id": "3",
+                "text": "はっぽん"
+              },
+              {
+                "id": "4",
+                "text": "はっさい"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "8歳は「はっさい」と 読みます。「はちさい」では ありません。",
+            "explanationEn": "Eight years old is はっさい. The sound changes, so it is not はちさい.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-7-counters",
+              "title": "3.7 Counters"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-21",
+            "number": 21,
+            "chapter": "3",
+            "prompt": "ア： この カメラ の （　） は いくら です か。 イ： ごせん えん です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ねだん"
+              },
+              {
+                "id": "2",
+                "text": "やちん"
+              },
+              {
+                "id": "3",
+                "text": "きっぷ"
+              },
+              {
+                "id": "4",
+                "text": "おかね"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "ものが いくらかを 表す ことばは「ねだん」です。",
+            "explanationEn": "ねだん means price. やちん is rent for a room or house, きっぷ is a ticket and おかね is money in general.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-5-prices-ikura-desu-ka",
+              "title": "3.5 Prices: ikura desu ka"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-22",
+            "number": 22,
+            "chapter": "3",
+            "prompt": "ア： この きょうかしょ は いくら です か。 イ： （　） です。 （ねだんは 3,000円です。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "さんせん えん"
+              },
+              {
+                "id": "2",
+                "text": "さんぜん えん"
+              },
+              {
+                "id": "3",
+                "text": "さんびゃく えん"
+              },
+              {
+                "id": "4",
+                "text": "さんまん えん"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "3,000円は「さんぜん えん」です。3,000では「せん」が「ぜん」に なります。",
+            "explanationEn": "3,000 is さんぜん. The special thousands are 1,000 (せん or いっせん), 3,000 (さんぜん) and 8,000 (はっせん).",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-3-thousands",
+              "title": "3.3 Thousands"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-23",
+            "number": 23,
+            "chapter": "3",
+            "prompt": "ア： この パソコン は いくら です か。 イ： （　） です。 （ねだんは 120,000円です。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "じゅうにせん えん"
+              },
+              {
+                "id": "2",
+                "text": "ひゃくにまん えん"
+              },
+              {
+                "id": "3",
+                "text": "じゅうにまん えん"
+              },
+              {
+                "id": "4",
+                "text": "せんにひゃく えん"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "120,000は 12万です。12万円は「じゅうにまん えん」と 読みます。",
+            "explanationEn": "Japanese counts in groups of four digits. 120,000 is 12 ten-thousands: じゅうにまん.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-4-ten-thousands-and-bigger",
+              "title": "3.4 Ten thousands and bigger"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-24",
+            "number": 24,
+            "chapter": "3",
+            "prompt": "ア： りんご は 100 えん, みかん は 200 えん です。 イ： じゃあ, （　） で 300 えん です ね。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ぐらい"
+              },
+              {
+                "id": "2",
+                "text": "いくら"
+              },
+              {
+                "id": "3",
+                "text": "おかね"
+              },
+              {
+                "id": "4",
+                "text": "ぜんぶ"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "100円と 200円を 合わせると、ぜんぶで 300円です。",
+            "explanationEn": "ぜんぶ means all or total. The apple and the orange together come to 300 yen in all.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-5-prices-ikura-desu-ka",
+              "title": "3.5 Prices: ikura desu ka"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-25",
+            "number": 25,
+            "chapter": "4",
+            "prompt": "ア： きょう は すいようび です。 イ： じゃあ, あした は （　） です ね。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "もくようび"
+              },
+              {
+                "id": "2",
+                "text": "かようび"
+              },
+              {
+                "id": "3",
+                "text": "きんようび"
+              },
+              {
+                "id": "4",
+                "text": "げつようび"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "水曜日の 次の日は 木曜日です。木曜日は「もくようび」と 読みます。",
+            "explanationEn": "If today is Wednesday (すいようび), tomorrow is Thursday, もくようび.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-2-days-of-the-week",
+              "title": "4.2 Days of the week"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-26",
+            "number": 26,
+            "chapter": "4",
+            "prompt": "ア： しけん は なんがつ です か。 イ： （　） です。 （しけんは 9月です。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "きゅうがつ"
+              },
+              {
+                "id": "2",
+                "text": "くがつ"
+              },
+              {
+                "id": "3",
+                "text": "ここのがつ"
+              },
+              {
+                "id": "4",
+                "text": "くげつ"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "9月は「くがつ」と 読みます。「きゅうがつ」では ありません。",
+            "explanationEn": "September is くがつ. Nine is く in the month names, not きゅう. くげつ would mean nine months.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-3-months-gatsu",
+              "title": "4.3 Months: gatsu"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-27",
+            "number": 27,
+            "chapter": "4",
+            "prompt": "ア： たんじょうび は いつですか。 イ： ろくがつ （　） です。 （20日です。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "にじゅうにち"
+              },
+              {
+                "id": "2",
+                "text": "ふたか"
+              },
+              {
+                "id": "3",
+                "text": "はつか"
+              },
+              {
+                "id": "4",
+                "text": "にじゅうか"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "20日は「はつか」と 読みます。日にちの 特別な 読み方です。",
+            "explanationEn": "The 20th has its own reading, はつか. It does not follow the usual にち pattern.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-4-days-of-the-month-nichi",
+              "title": "4.4 Days of the month: nichi"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-28",
+            "number": 28,
+            "chapter": "4",
+            "prompt": "ア： かいぎ は なんじ です か。 イ： ごご （　） です。 （4時です。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "よんじ"
+              },
+              {
+                "id": "2",
+                "text": "しじ"
+              },
+              {
+                "id": "3",
+                "text": "よにじ"
+              },
+              {
+                "id": "4",
+                "text": "よじ"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "4時は「よじ」と 読みます。「よんじ」でも「しじ」でも ありません。",
+            "explanationEn": "4 o'clock is よじ. The hour four becomes よ, so it is not よんじ or しじ。",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-1-telling-the-time-o-clock-and-minutes",
+              "title": "4.1 Telling the time: o'clock and minutes"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-29",
+            "number": 29,
+            "chapter": "4",
+            "prompt": "ア： らいしゅう の かいぎ は いつですか。 イ： げつようび の ごぜん 10-じ （　） です。 （ちょうど 10時では ありません。10時の まえか あとです。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ごろ"
+              },
+              {
+                "id": "2",
+                "text": "ぐらい"
+              },
+              {
+                "id": "3",
+                "text": "まで"
+              },
+              {
+                "id": "4",
+                "text": "はん"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「ごろ」は 時刻の まえか あとの おおよその 時間を 表します。",
+            "explanationEn": "ごろ goes with a point in time and means around. ぐらい is for amounts, like about 20 minutes. はん would make it 10:30.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-12-time-expression-goro",
+              "title": "4.12 Time Expression goro"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-30",
+            "number": 30,
+            "chapter": "4",
+            "prompt": "ア： しごと の じかん は？ イ： ごぜん 9-じ から ごご 6-じ （　） です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ごろ"
+              },
+              {
+                "id": "2",
+                "text": "まで"
+              },
+              {
+                "id": "3",
+                "text": "はん"
+              },
+              {
+                "id": "4",
+                "text": "ぐらい"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「から」は 始まり、「まで」は 終わりを 表します。午後6時まで 仕事を します。",
+            "explanationEn": "から means from and まで means until. ごぜん 9-じ から ごご 6-じ まで is from 9 a.m. until 6 p.m.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-10-time-expression-made",
+              "title": "4.10 Time Expression made"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-31",
+            "number": 31,
+            "chapter": "4",
+            "prompt": "ア： こんげつ は じゅうがつ です。 イ： じゃあ, （　） は じゅういちがつ です ね。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "せんげつ"
+              },
+              {
+                "id": "2",
+                "text": "こんげつ"
+              },
+              {
+                "id": "3",
+                "text": "らいげつ"
+              },
+              {
+                "id": "4",
+                "text": "まいつき"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "今月が 10月なら、次の 11月は「らいげつ」です。",
+            "explanationEn": "If this month is October, the next month is らいげつ. せんげつ is last month, こんげつ is this month and まいつき is every month.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-7-last-this-and-next-weeks-months-and-",
+              "title": "4.7 Last, this and next: weeks, months and years"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-32",
+            "number": 32,
+            "chapter": "4",
+            "prompt": "ア： きょう は ろくがつ とおか です。 イ： じゃあ, ここのか は （　） です ね。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "おととい"
+              },
+              {
+                "id": "2",
+                "text": "あした"
+              },
+              {
+                "id": "3",
+                "text": "あさって"
+              },
+              {
+                "id": "4",
+                "text": "きのう"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "今日が 6月10日なら、6月9日は「きのう」です。",
+            "explanationEn": "Today is the 10th (とおか), so the 9th (ここのか) was yesterday, きのう. おととい is the day before yesterday.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-6-yesterday-today-and-tomorrow-days-mo",
+              "title": "4.6 Yesterday, today and tomorrow: days, mornings and nights"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-33",
+            "number": 33,
+            "chapter": "5",
+            "prompt": "ア： うち から がっこう まで なんぷん かかります か。 イ： （　） で 20-ぷん かかります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "バス"
+              },
+              {
+                "id": "2",
+                "text": "あるいて"
+              },
+              {
+                "id": "3",
+                "text": "おうふく"
+              },
+              {
+                "id": "4",
+                "text": "かたみち"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "乗り物の あとに「で」を つけます。「バスで」です。「あるいて」に「で」は つけません。",
+            "explanationEn": "で goes after a vehicle: バス で means by bus. あるいて already means on foot, so it never takes で. おうふく and かたみち are about tickets.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-10-mode-of-transportation-de-bunkei-5-",
+              "title": "5.10 Mode of transportation de (bunkei 5.6)"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-34",
+            "number": 34,
+            "chapter": "5",
+            "prompt": "ア： うち から かいしゃ まで なんじかん かかります か。 イ： （　） かかります。 （2時間 かかります。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "にじ"
+              },
+              {
+                "id": "2",
+                "text": "にじかん"
+              },
+              {
+                "id": "3",
+                "text": "にふん"
+              },
+              {
+                "id": "4",
+                "text": "にじゅっぷん"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "時間の 長さには「時間」を 使います。2時間は「にじかん」です。2時は 時刻です。",
+            "explanationEn": "かん marks how long something lasts. にじかん is two hours. にじ would be 2 o'clock, にふん is two minutes and にじゅっぷん is twenty minutes.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-2-how-long-minutes-and-hours",
+              "title": "5.2 How long: minutes and hours"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-35",
+            "number": 35,
+            "chapter": "5",
+            "prompt": "ア： かいぎ は 3-じ です。 イ： いま は 2-じ 55-ふん です。 かいぎ の 5-ふん （　） です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "すぎ"
+              },
+              {
+                "id": "2",
+                "text": "ごろ"
+              },
+              {
+                "id": "3",
+                "text": "まえ"
+              },
+              {
+                "id": "4",
+                "text": "ぐらい"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "2時55分は、3時の 5分前です。まだ 会議は 始まっていません。",
+            "explanationEn": "まえ means before. 2:55 is five minutes before the 3:00 meeting, so 5-fun まえ. すぎ means after.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-9-span-of-time-mae-and-sugi-bunkei-5-5",
+              "title": "5.9 Span of Time mae and sugi (bunkei 5.5)"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-36",
+            "number": 36,
+            "chapter": "5",
+            "prompt": "ア： かいしゃ まで じてんしゃ で なんぷん かかります か。 イ： 15-ふん （　） かかります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ごろ"
+              },
+              {
+                "id": "2",
+                "text": "まで"
+              },
+              {
+                "id": "3",
+                "text": "すぎ"
+              },
+              {
+                "id": "4",
+                "text": "ぐらい"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「ぐらい」は 時間の 長さの おおよその 量を 表します。「ごろ」は 時刻に 使います。",
+            "explanationEn": "ぐらい means about and goes with an amount of time, here about 15 minutes. ごろ goes with a point in time instead.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-7-span-of-time-gurai-bunkei-5-3",
+              "title": "5.7 Span of Time gurai (bunkei 5.3)"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-37",
+            "number": 37,
+            "chapter": "5",
+            "prompt": "ア： きっぷ は いくら です か。 イ： （　） は 2,000 えん です。 かたみち は 1,100 えん です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "おうふく"
+              },
+              {
+                "id": "2",
+                "text": "かたみち"
+              },
+              {
+                "id": "3",
+                "text": "のりもの"
+              },
+              {
+                "id": "4",
+                "text": "ひとつき"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "行きと 帰りの 両方の きっぷは「おうふく」です。「かたみち」は 片方だけです。",
+            "explanationEn": "かたみち (one way) is already named in the next sentence, so the first word is おうふく, round trip. It costs more because you travel both ways.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-vehicles-and-travel",
+              "title": "Vehicles and travel"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-38",
+            "number": 38,
+            "chapter": "5",
+            "prompt": "ア： にほん に なんねん います か。 イ： （　） います。 （6か月です。）",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ひとつき"
+              },
+              {
+                "id": "2",
+                "text": "はんとし"
+              },
+              {
+                "id": "3",
+                "text": "いちねん"
+              },
+              {
+                "id": "4",
+                "text": "いちじかん"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "6か月は 半年です。「はんとし」と 読みます。",
+            "explanationEn": "はんとし is half a year. ひとつき is one month, いちねん is one year and いちじかん is one hour.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-4-how-long-months-and-years",
+              "title": "5.4 How long: months and years"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-39",
+            "number": 39,
+            "chapter": "5",
+            "prompt": "ア： かいしゃ は 5-じ まで です ね。 イ： はい。 でも きょう は 8-じ まで しごと です。 （　） です。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "しゅくだい"
+              },
+              {
+                "id": "2",
+                "text": "アルバイト"
+              },
+              {
+                "id": "3",
+                "text": "ざんぎょう"
+              },
+              {
+                "id": "4",
+                "text": "かいわ"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "いつもの 仕事の 時間が 終わった あとも 働く ことを「ざんぎょう」と 言います。",
+            "explanationEn": "ざんぎょう is overtime. The company closes at 5 but the work goes on until 8. しゅくだい is homework, アルバイト is a part-time job and かいわ is conversation.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-vehicles-and-travel",
+              "title": "Vehicles and travel"
+            }
+          },
+          {
+            "id": "chapter-5-vocabulary-40",
+            "number": 40,
+            "chapter": "5",
+            "prompt": "ア： マニラ から とうきょう まで （　） で 4-じかん ぐらい かかります。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ふね"
+              },
+              {
+                "id": "2",
+                "text": "じてんしゃ"
+              },
+              {
+                "id": "3",
+                "text": "ちかてつ"
+              },
+              {
+                "id": "4",
+                "text": "ひこうき"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "マニラから 東京までは 海を こえます。ここでは 約4時間で 行ける「ひこうき」を 選びます。",
+            "explanationEn": "ひこうき is an airplane. Manila to Tokyo takes about four hours by plane. A ship would take days, and a bicycle or subway cannot cross the sea.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-10-mode-of-transportation-de-bunkei-5-",
+              "title": "5.10 Mode of transportation de (bunkei 5.6)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "reading",
+        "title": "Reading",
+        "titleJa": "読解（14問）",
+        "instructionsJa": "つぎの 文章を 読んで、質問の 答えを 1・2・3・4から ひとつ えらんでください。",
+        "questions": [
+          {
+            "id": "chapter-5-reading-1",
+            "number": 41,
+            "chapter": "1",
+            "prompt": "マリアさんは なにじんですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "フィリピンじん"
+              },
+              {
+                "id": "2",
+                "text": "にほんじん"
+              },
+              {
+                "id": "3",
+                "text": "アメリカじん"
+              },
+              {
+                "id": "4",
+                "text": "ドイツじん"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "文に「フィリピンじんです」と あります。アメリカ人は ジョンさんです。",
+            "explanationEn": "The passage says フィリピンじんです, so Maria is Filipino. アメリカじん is John.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-countries-people-and-languages",
+              "title": "Countries, people and languages"
+            },
+            "passage": {
+              "id": "chapter-5-passage-1",
+              "text": "わたしの名前は マリアです。フィリピンじんです。いま、日本の だいがくの りゅうがくせいです。\nともだちの ジョンさんは アメリカじんです。エンジニアです。\nわたしの へやは だいがくの りょうに あります。へやの なかに つくえと いすが あります。つくえの うえに パソコンが あります。つくえの したに かばんが あります。",
+              "translationEn": "Passage 1. My name is Maria. I am Filipino. Right now I am an international student at a university in Japan. My friend John is American. He is an engineer. My room is in the university dormitory. In the room there is a desk and a chair. On top of the desk there is a computer. Under the desk there is a bag."
+            }
+          },
+          {
+            "id": "chapter-5-reading-2",
+            "number": 42,
+            "chapter": "1",
+            "prompt": "ジョンさんの しごとは なんですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "せんせい"
+              },
+              {
+                "id": "2",
+                "text": "エンジニア"
+              },
+              {
+                "id": "3",
+                "text": "がくせい"
+              },
+              {
+                "id": "4",
+                "text": "しゃちょう"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "ジョンさんの 説明に「エンジニアです」と あります。",
+            "explanationEn": "John is described with エンジニアです, so he is an engineer.",
+            "source": {
+              "chapter": "1",
+              "heading": "c1-people-and-jobs",
+              "title": "People and jobs"
+            },
+            "passage": {
+              "id": "chapter-5-passage-1",
+              "text": "わたしの名前は マリアです。フィリピンじんです。いま、日本の だいがくの りゅうがくせいです。\nともだちの ジョンさんは アメリカじんです。エンジニアです。\nわたしの へやは だいがくの りょうに あります。へやの なかに つくえと いすが あります。つくえの うえに パソコンが あります。つくえの したに かばんが あります。",
+              "translationEn": "Passage 1. My name is Maria. I am Filipino. Right now I am an international student at a university in Japan. My friend John is American. He is an engineer. My room is in the university dormitory. In the room there is a desk and a chair. On top of the desk there is a computer. Under the desk there is a bag."
+            }
+          },
+          {
+            "id": "chapter-5-reading-3",
+            "number": 43,
+            "chapter": "2",
+            "prompt": "マリアさんの へやは どこに ありますか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "かいしゃ"
+              },
+              {
+                "id": "2",
+                "text": "えき"
+              },
+              {
+                "id": "3",
+                "text": "だいがくの りょう"
+              },
+              {
+                "id": "4",
+                "text": "としょかん"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "「へやは だいがくの りょうに あります」と 書いてあります。",
+            "explanationEn": "へやは だいがくの りょうに あります. りょう means dormitory, and the room is in the university dormitory.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-2-1-a-wa-location-ni-arimasu",
+              "title": "2.1 A wa Location ni arimasu"
+            },
+            "passage": {
+              "id": "chapter-5-passage-1",
+              "text": "わたしの名前は マリアです。フィリピンじんです。いま、日本の だいがくの りゅうがくせいです。\nともだちの ジョンさんは アメリカじんです。エンジニアです。\nわたしの へやは だいがくの りょうに あります。へやの なかに つくえと いすが あります。つくえの うえに パソコンが あります。つくえの したに かばんが あります。",
+              "translationEn": "Passage 1. My name is Maria. I am Filipino. Right now I am an international student at a university in Japan. My friend John is American. He is an engineer. My room is in the university dormitory. In the room there is a desk and a chair. On top of the desk there is a computer. Under the desk there is a bag."
+            }
+          },
+          {
+            "id": "chapter-5-reading-4",
+            "number": 44,
+            "chapter": "2",
+            "prompt": "かばんは どこに ありますか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "つくえの うえ"
+              },
+              {
+                "id": "2",
+                "text": "いすの うえ"
+              },
+              {
+                "id": "3",
+                "text": "へやの そと"
+              },
+              {
+                "id": "4",
+                "text": "つくえの した"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "「つくえの したに かばんが あります」と 書いてあります。",
+            "explanationEn": "つくえの したに かばんが あります. した means under, so the bag is under the desk.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-2-7-location-no-locative",
+              "title": "2.7 Location no locative"
+            },
+            "passage": {
+              "id": "chapter-5-passage-1",
+              "text": "わたしの名前は マリアです。フィリピンじんです。いま、日本の だいがくの りゅうがくせいです。\nともだちの ジョンさんは アメリカじんです。エンジニアです。\nわたしの へやは だいがくの りょうに あります。へやの なかに つくえと いすが あります。つくえの うえに パソコンが あります。つくえの したに かばんが あります。",
+              "translationEn": "Passage 1. My name is Maria. I am Filipino. Right now I am an international student at a university in Japan. My friend John is American. He is an engineer. My room is in the university dormitory. In the room there is a desk and a chair. On top of the desk there is a computer. Under the desk there is a bag."
+            }
+          },
+          {
+            "id": "chapter-5-reading-5",
+            "number": 45,
+            "chapter": "2",
+            "prompt": "つくえの うえに なにが ありますか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "パソコン"
+              },
+              {
+                "id": "2",
+                "text": "かばん"
+              },
+              {
+                "id": "3",
+                "text": "いす"
+              },
+              {
+                "id": "4",
+                "text": "テレビ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「つくえの うえに パソコンが あります」と 書いてあります。",
+            "explanationEn": "つくえの うえに パソコンが あります. うえ means on top, so the computer is on the desk.",
+            "source": {
+              "chapter": "2",
+              "heading": "c2-2-8-location-ni-a-ga-arimasu",
+              "title": "2.8 Location ni A ga arimasu"
+            },
+            "passage": {
+              "id": "chapter-5-passage-1",
+              "text": "わたしの名前は マリアです。フィリピンじんです。いま、日本の だいがくの りゅうがくせいです。\nともだちの ジョンさんは アメリカじんです。エンジニアです。\nわたしの へやは だいがくの りょうに あります。へやの なかに つくえと いすが あります。つくえの うえに パソコンが あります。つくえの したに かばんが あります。",
+              "translationEn": "Passage 1. My name is Maria. I am Filipino. Right now I am an international student at a university in Japan. My friend John is American. He is an engineer. My room is in the university dormitory. In the room there is a desk and a chair. On top of the desk there is a computer. Under the desk there is a bag."
+            }
+          },
+          {
+            "id": "chapter-5-reading-6",
+            "number": 46,
+            "chapter": "3",
+            "prompt": "ノートは 1さつ いくらですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "100えん"
+              },
+              {
+                "id": "2",
+                "text": "120えん"
+              },
+              {
+                "id": "3",
+                "text": "150えん"
+              },
+              {
+                "id": "4",
+                "text": "250えん"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "ノートは 1冊120円です。100円は ボールペンの 値段です。",
+            "explanationEn": "ノートは 1さつ 120えんです. The 100 yen is for the ballpen and 250 yen is for five pencils.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-5-prices-ikura-desu-ka",
+              "title": "3.5 Prices: ikura desu ka"
+            },
+            "passage": {
+              "id": "chapter-5-passage-2",
+              "text": "ほんや ミナミ\nノートは 1さつ 120えんです。\nボールペンは 1ぽん 100えんです。\nえんぴつは 5ほんで 250えんです。\nごぜん 9じから ごご 7じまで。\nやすみは 日曜日です。",
+              "translationEn": "Passage 2. Minami Bookstore. Notebooks are 120 yen each. Ballpens are 100 yen each. Pencils are 250 yen for five. Open from 9 a.m. to 7 p.m. Closed on Sundays."
+            }
+          },
+          {
+            "id": "chapter-5-reading-7",
+            "number": 47,
+            "chapter": "3",
+            "prompt": "えんぴつは 1ぽん いくらですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "25えん"
+              },
+              {
+                "id": "2",
+                "text": "100えん"
+              },
+              {
+                "id": "3",
+                "text": "50えん"
+              },
+              {
+                "id": "4",
+                "text": "250えん"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "えんぴつ5本で 250円なので、1本は 250÷5＝50円です。",
+            "explanationEn": "250 yen buys 5 pencils (5ほん). 250 divided by 5 is 50 yen each.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-7-counters",
+              "title": "3.7 Counters"
+            },
+            "passage": {
+              "id": "chapter-5-passage-2",
+              "text": "ほんや ミナミ\nノートは 1さつ 120えんです。\nボールペンは 1ぽん 100えんです。\nえんぴつは 5ほんで 250えんです。\nごぜん 9じから ごご 7じまで。\nやすみは 日曜日です。",
+              "translationEn": "Passage 2. Minami Bookstore. Notebooks are 120 yen each. Ballpens are 100 yen each. Pencils are 250 yen for five. Open from 9 a.m. to 7 p.m. Closed on Sundays."
+            }
+          },
+          {
+            "id": "chapter-5-reading-8",
+            "number": 48,
+            "chapter": "3",
+            "prompt": "ノート 1さつと ボールペン 1ぽんは ぜんぶで いくらですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "120えん"
+              },
+              {
+                "id": "2",
+                "text": "170えん"
+              },
+              {
+                "id": "3",
+                "text": "370えん"
+              },
+              {
+                "id": "4",
+                "text": "220えん"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "ノート120円と ボールペン100円を 合わせると 220円です。",
+            "explanationEn": "The notebook is 120 yen and the ballpen is 100 yen. Together that is 220 yen. ぜんぶで means in total.",
+            "source": {
+              "chapter": "3",
+              "heading": "c3-3-5-prices-ikura-desu-ka",
+              "title": "3.5 Prices: ikura desu ka"
+            },
+            "passage": {
+              "id": "chapter-5-passage-2",
+              "text": "ほんや ミナミ\nノートは 1さつ 120えんです。\nボールペンは 1ぽん 100えんです。\nえんぴつは 5ほんで 250えんです。\nごぜん 9じから ごご 7じまで。\nやすみは 日曜日です。",
+              "translationEn": "Passage 2. Minami Bookstore. Notebooks are 120 yen each. Ballpens are 100 yen each. Pencils are 250 yen for five. Open from 9 a.m. to 7 p.m. Closed on Sundays."
+            }
+          },
+          {
+            "id": "chapter-5-reading-9",
+            "number": 49,
+            "chapter": "4",
+            "prompt": "ほんやは なんじまでですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ごご 7じ"
+              },
+              {
+                "id": "2",
+                "text": "ごぜん 9じ"
+              },
+              {
+                "id": "3",
+                "text": "ごご 9じ"
+              },
+              {
+                "id": "4",
+                "text": "ごぜん 7じ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "「ごご 7じまで」と あるので、店は 午後7時までです。",
+            "explanationEn": "ごご 7じまで means until 7 p.m. ごご is p.m. and まで means until. The 9 is the opening hour.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-10-time-expression-made",
+              "title": "4.10 Time Expression made"
+            },
+            "passage": {
+              "id": "chapter-5-passage-2",
+              "text": "ほんや ミナミ\nノートは 1さつ 120えんです。\nボールペンは 1ぽん 100えんです。\nえんぴつは 5ほんで 250えんです。\nごぜん 9じから ごご 7じまで。\nやすみは 日曜日です。",
+              "translationEn": "Passage 2. Minami Bookstore. Notebooks are 120 yen each. Ballpens are 100 yen each. Pencils are 250 yen for five. Open from 9 a.m. to 7 p.m. Closed on Sundays."
+            }
+          },
+          {
+            "id": "chapter-5-reading-10",
+            "number": 50,
+            "chapter": "4",
+            "prompt": "ほんやの やすみは なんようびですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "げつようび"
+              },
+              {
+                "id": "2",
+                "text": "にちようび"
+              },
+              {
+                "id": "3",
+                "text": "どようび"
+              },
+              {
+                "id": "4",
+                "text": "きんようび"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「やすみは 日曜日です」と 書いてあります。日曜日は「にちようび」です。",
+            "explanationEn": "やすみは にちようびです. The kanji in the sign, 日曜日, is read にちようび, which is Sunday.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-2-days-of-the-week",
+              "title": "4.2 Days of the week"
+            },
+            "passage": {
+              "id": "chapter-5-passage-2",
+              "text": "ほんや ミナミ\nノートは 1さつ 120えんです。\nボールペンは 1ぽん 100えんです。\nえんぴつは 5ほんで 250えんです。\nごぜん 9じから ごご 7じまで。\nやすみは 日曜日です。",
+              "translationEn": "Passage 2. Minami Bookstore. Notebooks are 120 yen each. Ballpens are 100 yen each. Pencils are 250 yen for five. Open from 9 a.m. to 7 p.m. Closed on Sundays."
+            }
+          },
+          {
+            "id": "chapter-5-reading-11",
+            "number": 51,
+            "chapter": "5",
+            "prompt": "うちから かいしゃまで なんぷんぐらい かかりますか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "14ぷん"
+              },
+              {
+                "id": "2",
+                "text": "4じかん"
+              },
+              {
+                "id": "3",
+                "text": "40ぷん"
+              },
+              {
+                "id": "4",
+                "text": "50ぷん"
+              }
+            ],
+            "correctChoiceId": "3",
+            "explanationJa": "家から 会社まで「40ぷんぐらい かかります」と 書いてあります。",
+            "explanationEn": "40ぷんぐらい かかります means it takes about 40 minutes. ぐらい means about, and かかります means it takes.",
+            "source": {
+              "chapter": "5",
+              "heading": "c5-5-12-span-of-time-kakarimasu-and-cost-ka",
+              "title": "5.12 Span of Time kakarimasu and Cost kakarimasu (bunkei 5.8)"
+            },
+            "passage": {
+              "id": "chapter-5-passage-3",
+              "text": "わたしは マニラの かいしゃの かいしゃいんです。うちから かいしゃまで ちかてつで 40ぷんぐらい かかります。\nかいしゃは ごぜん 8じはんから ごご 5じまでです。まいしゅう 月曜日の ごご 2じに かいぎが あります。\nらいしゅうの 金曜日は やすみです。",
+              "translationEn": "Passage 3. I am an employee of a company in Manila. It takes about 40 minutes from my house to the company by subway. The company runs from 8:30 a.m. to 5 p.m. Every week there is a meeting on Monday at 2 p.m. Next week's Friday is a day off."
+            }
+          },
+          {
+            "id": "chapter-5-reading-12",
+            "number": 52,
+            "chapter": "4",
+            "prompt": "かいしゃは なんじからですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "ごぜん 8じ"
+              },
+              {
+                "id": "2",
+                "text": "ごご 8じはん"
+              },
+              {
+                "id": "3",
+                "text": "ごぜん 9じ"
+              },
+              {
+                "id": "4",
+                "text": "ごぜん 8じはん"
+              }
+            ],
+            "correctChoiceId": "4",
+            "explanationJa": "会社は「ごぜん 8じはんから」なので、午前8時30分に 始まります。",
+            "explanationEn": "ごぜん 8じはんから means from 8:30 a.m. はん means half past, so 8じはん is 8:30.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-9-time-expression-kara",
+              "title": "4.9 Time Expression kara"
+            },
+            "passage": {
+              "id": "chapter-5-passage-3",
+              "text": "わたしは マニラの かいしゃの かいしゃいんです。うちから かいしゃまで ちかてつで 40ぷんぐらい かかります。\nかいしゃは ごぜん 8じはんから ごご 5じまでです。まいしゅう 月曜日の ごご 2じに かいぎが あります。\nらいしゅうの 金曜日は やすみです。",
+              "translationEn": "Passage 3. I am an employee of a company in Manila. It takes about 40 minutes from my house to the company by subway. The company runs from 8:30 a.m. to 5 p.m. Every week there is a meeting on Monday at 2 p.m. Next week's Friday is a day off."
+            }
+          },
+          {
+            "id": "chapter-5-reading-13",
+            "number": 53,
+            "chapter": "4",
+            "prompt": "かいぎは いつですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "まいしゅう げつようびの ごご 2じ"
+              },
+              {
+                "id": "2",
+                "text": "まいしゅう かようびの ごご 2じ"
+              },
+              {
+                "id": "3",
+                "text": "まいしゅう げつようびの ごぜん 2じ"
+              },
+              {
+                "id": "4",
+                "text": "らいしゅう げつようびの ごご 2じ"
+              }
+            ],
+            "correctChoiceId": "1",
+            "explanationJa": "会議は「まいしゅう 月曜日の ごご 2じ」です。来週だけでは ありません。",
+            "explanationEn": "まいしゅう げつようびの ごご 2じ means every Monday at 2 p.m. まいしゅう is every week, not next week (らいしゅう).",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-2-days-of-the-week",
+              "title": "4.2 Days of the week"
+            },
+            "passage": {
+              "id": "chapter-5-passage-3",
+              "text": "わたしは マニラの かいしゃの かいしゃいんです。うちから かいしゃまで ちかてつで 40ぷんぐらい かかります。\nかいしゃは ごぜん 8じはんから ごご 5じまでです。まいしゅう 月曜日の ごご 2じに かいぎが あります。\nらいしゅうの 金曜日は やすみです。",
+              "translationEn": "Passage 3. I am an employee of a company in Manila. It takes about 40 minutes from my house to the company by subway. The company runs from 8:30 a.m. to 5 p.m. Every week there is a meeting on Monday at 2 p.m. Next week's Friday is a day off."
+            }
+          },
+          {
+            "id": "chapter-5-reading-14",
+            "number": 54,
+            "chapter": "4",
+            "prompt": "らいしゅうの やすみは なんようびですか。",
+            "choices": [
+              {
+                "id": "1",
+                "text": "げつようび"
+              },
+              {
+                "id": "2",
+                "text": "きんようび"
+              },
+              {
+                "id": "3",
+                "text": "かようび"
+              },
+              {
+                "id": "4",
+                "text": "どようび"
+              }
+            ],
+            "correctChoiceId": "2",
+            "explanationJa": "「らいしゅうの 金曜日は やすみです」と 書いてあります。",
+            "explanationEn": "らいしゅうの きんようびは やすみです. Next week's Friday is a day off. Monday is the meeting day, not the day off.",
+            "source": {
+              "chapter": "4",
+              "heading": "c4-4-7-last-this-and-next-weeks-months-and-",
+              "title": "4.7 Last, this and next: weeks, months and years"
+            },
+            "passage": {
+              "id": "chapter-5-passage-3",
+              "text": "わたしは マニラの かいしゃの かいしゃいんです。うちから かいしゃまで ちかてつで 40ぷんぐらい かかります。\nかいしゃは ごぜん 8じはんから ごご 5じまでです。まいしゅう 月曜日の ごご 2じに かいぎが あります。\nらいしゅうの 金曜日は やすみです。",
+              "translationEn": "Passage 3. I am an employee of a company in Manila. It takes about 40 minutes from my house to the company by subway. The company runs from 8:30 a.m. to 5 p.m. Every week there is a meeting on Monday at 2 p.m. Next week's Friday is a day off."
             }
           }
         ]

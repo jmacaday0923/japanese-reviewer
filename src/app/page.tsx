@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { chapters, kana, kanji, practice, LIBRARY } from "@/lib/library";
+import { chapters, kana, kanji, LIBRARY } from "@/lib/library";
 import { getSearchChapters, getSearchIndex } from "@/lib/search-data";
 import { studyPages } from "@/lib/study";
 import Search, { SearchFallback } from "@/components/Search";
@@ -7,6 +7,7 @@ import OverviewStats from "@/components/OverviewStats";
 import StudySection from "@/components/StudySection";
 import StudyShelf from "@/components/StudyShelf";
 import ListeningShelf from "@/components/ListeningShelf";
+import { checkpointExams } from "@/lib/checkpoint-data";
 import CheckpointShelf from "@/components/CheckpointShelf";
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
   const stats = [
     { label: "chapters", value: chapters.length, icon: "chapters" },
     { label: "kana & kanji pages", value: kana.length + kanji.length, icon: "book" },
-    { label: practice.length === 1 ? "practice exam" : "practice exams", value: practice.length, icon: "practice" },
+    { label: "checkpoints", value: checkpointExams.length, icon: "practice" },
     { label: "searchable entries", value: getSearchIndex().entries.length, icon: "search" },
   ] as const;
 
@@ -73,14 +74,6 @@ export default function Home() {
         ]}
       />
 
-      {/* 7. Practice that mixes several chapters */}
-      <StudySection
-        id="practice"
-        heading="Practice"
-        description="Practice exams that mix questions from several chapters, with an answer key that explains each one."
-        meta={`${practice.length} ${practice.length === 1 ? "exam" : "exams"}`}
-        groups={[{ kind: "practice", label: "Practice", marker: "試", basePath: "/practice", pages: practice }]}
-      />
       <CheckpointShelf />
       <ListeningShelf />
     </main>

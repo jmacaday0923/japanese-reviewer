@@ -13,14 +13,14 @@ async function answerAll(page: Page, exam: typeof exams[number], firstWrong = fa
     }
   }
 }
-test("the home page and navigation offer exactly two cumulative checkpoints", async ({ page }) => {
+test("the home page and navigation offer three checkpoints grouped by course stage", async ({ page }) => {
   await page.goto("/");
   const shelf = visibleMain(page).locator("#checkpoints");
   await expect(shelf.getByRole("link", { name: /^Vocabulary checkpoint/ })).toHaveCount(1);
   await expect(shelf.getByRole("link", { name: /^Grammar checkpoint/ })).toHaveCount(1);
   await page.locator("aside").first().getByRole("link", { name: "Checkpoints", exact: true }).click();
   await expect(page).toHaveURL("/checkpoints");
-  await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText("Vocabulary & grammar checkpoints");
+  await expect(visibleMain(page).getByRole("heading", { level: 1 })).toHaveText("Course checkpoints");
   await expect(visibleMain(page)).toContainText("28 focus on Chapters 6–10");
   await expect(page.locator("aside").first().getByRole("link", { name: "Checkpoints", exact: true })).toHaveAttribute("aria-current", "true");
 });
@@ -49,7 +49,7 @@ test("saved answers and active part survive reload and remain separate between e
   await choosePart(page, exam.parts[0].title);
   await expect(q(page, first.id).locator('input[value="1"]')).toBeChecked();
 });
-for (const exam of exams) {
+for (const exam of exams.filter(exam => exam.id !== "chapter-5")) {
   test(exam.id + ": Japanese questions have no translation hints or feedback before submission", async ({ page }) => {
     await page.addInitScript(() => localStorage.setItem("japanese-reviewer:reading-visibility", JSON.stringify({ version: 2, show: { kana: true, romaji: true, english: true } })));
     await page.goto(path(exam.id));
