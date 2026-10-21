@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import CheckpointExam from "@/components/CheckpointExam";
 import { checkpointCoverage } from "@/lib/checkpoints";
-import { checkpointExams, getCheckpointExam } from "@/lib/checkpoint-data";
+import { checkpointExams, getCheckpointExam, getCheckpointPresentation } from "@/lib/checkpoint-data";
 export const instant = false;
 export function generateStaticParams() { return checkpointExams.map(exam => ({ id: exam.id })); }
 type Props = { params: Promise<{ id: string }> };
@@ -19,6 +19,6 @@ export default async function CheckpointPage({ params }: Props) {
     <p className="mt-8 text-xs font-semibold uppercase tracking-wider text-accent-text">After Chapter {checkpointCoverage(exam).afterChapter} · {checkpointCoverage(exam).label}</p>
     <h1 className="mt-2 text-3xl font-semibold tracking-tight">{exam.title}</h1>
     <p className="mt-3 text-muted">{exam.description} Answers and explanations appear after submission.</p>
-    <CheckpointExam key={exam.id} exam={exam} />
+    <CheckpointExam key={exam.id} exam={exam} presentation={getCheckpointPresentation(exam.id)} />
   </main>;
 }

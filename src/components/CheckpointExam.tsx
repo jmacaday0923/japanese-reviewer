@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import type { CheckpointExam as Exam } from "@/types/checkpoint";
+import type { CheckpointExam as Exam, CheckpointPresentation } from "@/types/checkpoint";
+import CheckpointText from "@/components/CheckpointText";
 import { ReadingHint } from "@/components/ReadingPreferences";
 import {
   checkpointScore, checkpointByChapter, checkpointKey, questionScore, checkpointCoverage, checkpointAnchor,
@@ -14,7 +15,8 @@ const PRIMARY = "inline-flex min-h-11 items-center justify-center rounded-contro
 const SECONDARY = "inline-flex min-h-11 items-center justify-center rounded-control border border-border-strong px-3 py-2 text-sm text-accent-text hover:bg-accent-soft disabled:opacity-50";
 const percent = (correct: number, total: number) => total ? Math.round(correct / total * 100) : 0;
 
-export default function CheckpointExam({ exam }: { exam: Exam }) {
+export default function CheckpointExam({ exam, presentation }: { exam: Exam; presentation?: CheckpointPresentation }) {
+  const text = (value: string) => <CheckpointText text={value} presentation={presentation} />;
   const store = useMemo(() => createCheckpointStore(exam, { getStorage: () => window.localStorage, getEvents: () => window }), [exam]);
   const snapshot = useSyncExternalStore(store.subscribe, store.getSnapshot, store.getServerSnapshot);
   const { state } = snapshot;
@@ -120,8 +122,11 @@ export default function CheckpointExam({ exam }: { exam: Exam }) {
     </nav>
 
     <section id="checkpoint-active-part" aria-labelledby="checkpoint-part-heading">
-      <h2 id="checkpoint-part-heading" lang="ja" className="text-xl font-semibold">{part.titleJa}</h2>
-      <p lang="ja" className="mt-2 text-lg leading-relaxed">{part.instructionsJa}</p>
+      <h2 id="checkpoint-part-heading" lang="ja" className="text-xl font-semibold">{text(part.titleJa)}</h2>
+      {presentation?.instructionsEn[part.id] ? <div data-checkpoint-instructions className="mt-3 rounded-control border border-border bg-surface p-4">
+        <p lang="ja" className="text-lg leading-loose">{text(part.instructionsJa)}</p>
+        <p lang="en" className="mt-2 text-sm leading-relaxed text-muted">{presentation.instructionsEn[part.id]}</p>
+      </div> : <p lang="ja" className="mt-2 text-lg leading-relaxed">{text(part.instructionsJa)}</p>}
       <ol className="mt-5 space-y-5">
         {part.questions.map((q, index) => {
           const choice = state.answers[q.id];
@@ -132,31 +137,31 @@ export default function CheckpointExam({ exam }: { exam: Exam }) {
           return <li key={q.id} id={q.id} className="min-w-0 rounded-card border border-border bg-surface p-4 sm:p-5" data-checkpoint-question={q.id}>
             {Object.entries(exam.legacyAnchors ?? {}).filter(([, target]) => target.questionId === q.id).map(([id]) => <span key={id} id={id} className="block" />)}
             {q.passage && showPassage && <h3 className="mb-3 text-sm font-semibold text-muted">Passage {part.questions.slice(0, index + 1).filter((item, i, items) => item.passage?.id !== items[i - 1]?.passage?.id).length}</h3>}
-            {q.passage && showPassage && <blockquote id={"checkpoint-passage-" + q.passage.id} lang="ja" className="mb-6 whitespace-pre-line rounded-control border border-border bg-background p-4 text-xl leading-loose" data-checkpoint-passage={q.passage.id}>{q.passage.text}</blockquote>}
+            {q.passage && showPassage && <blockquote id={"checkpoint-passage-" + q.passage.id} lang="ja" className="mb-6 whitespace-pre-line rounded-control border border-border bg-background p-4 text-xl leading-loose" data-checkpoint-passage={q.passage.id}>{text(q.passage.text)}</blockquote>}
             {state.submitted && showPassage && q.passage?.translationEn && <div className="mb-5 text-sm leading-relaxed text-muted"><ReadingHint kind="english" context={exam.title + " passage " + q.passage.id} compact>{q.passage.translationEn}</ReadingHint></div>}
             <fieldset disabled={state.submitted || locked} aria-describedby={"checkpoint-prompt-" + q.id + (q.passage ? " checkpoint-passage-" + q.passage.id : "")}>
               <legend className="mb-3 text-sm font-semibold text-muted">Question {q.number}{locked ? " · Correct answer kept" : ""}</legend>
-              {q.context && <p lang="ja" className="mb-3 text-lg font-medium">{q.context}</p>}
-              <p id={"checkpoint-prompt-" + q.id} lang="ja" className="whitespace-pre-line text-xl leading-loose sm:text-2xl" data-checkpoint-prompt>{q.prompt}</p>
+              {q.context && <p lang="ja" className="mb-3 text-lg font-medium">{text(q.context)}</p>}
+              <p id={"checkpoint-prompt-" + q.id} lang="ja" className="whitespace-pre-line text-xl leading-loose sm:text-2xl" data-checkpoint-prompt>{text(q.prompt)}</p>
               {q.composition && <div role="group" lang="ja" aria-label="Sentence to arrange" className="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-2 text-xl leading-loose">
-                <span>{q.composition.before}</span>
+                <span>{text(q.composition.before)}</span>
                 {q.composition.orderedParts.map((_, i) => <span key={i} className={"min-w-12 border-b-2 text-center " + (i === q.composition!.starIndex ? "border-accent text-accent-text" : "border-border-strong")}>{i === q.composition!.starIndex ? "★" : "＿＿"}</span>)}
-                {q.composition.after && <span>{q.composition.after}</span>}
+                {q.composition.after && <span>{text(q.composition.after)}</span>}
               </div>}
               <div className="mt-4 grid gap-2 sm:grid-cols-2">
                 {q.choices.map(option => <label key={option.id} className={"flex min-h-12 min-w-0 cursor-pointer items-start gap-3 rounded-control border p-3 " + (choice === option.id ? "border-accent bg-accent-soft" : "border-border bg-background/40 hover:border-border-strong")}>
                   <input type="radio" name={q.id} value={option.id} checked={choice === option.id}
                     onChange={() => { setConfirm(null); store.update(state => chooseCheckpointAnswer(exam, state, q.id, option.id)); }}
                     className="mt-1.5 size-4 shrink-0 accent-accent" />
-                  <span lang="ja" className="min-w-0 break-words text-lg leading-relaxed"><span className="mr-2 text-sm text-muted">{option.id}.</span>{option.text}</span>
+                  <span lang="ja" className="min-w-0 break-words text-lg leading-relaxed"><span className="mr-2 text-sm text-muted">{option.id}.</span>{text(option.text)}</span>
                 </label>)}
               </div>
             </fieldset>
             {state.submitted && <div className="mt-4 border-t border-border pt-4" data-checkpoint-feedback>
-              <p className={"text-sm font-semibold " + (correct ? "text-green-300" : "text-rose-300")}>{correct ? "Correct" : choice ? "Incorrect" : "Unanswered"} · Answer {answer.id}: <span lang="ja">{answer.text}</span></p>
-              {q.completedSentence && <p lang="ja" className="mt-3 text-xl leading-loose">{q.completedSentence}</p>}
-              <p lang="ja" className="mt-3 text-lg leading-relaxed">{q.explanationJa}</p>
-              <div className="mt-2 text-sm leading-relaxed text-muted"><ReadingHint kind="english" context={exam.title + " question " + q.number} compact>{q.explanationEn}</ReadingHint></div>
+              <p className={"text-sm font-semibold " + (correct ? "text-green-300" : "text-rose-300")}>{correct ? "Correct" : choice ? "Incorrect" : "Unanswered"} · Answer {answer.id}: <span lang="ja">{text(answer.text)}</span></p>
+              {q.completedSentence && <p lang="ja" className="mt-3 text-xl leading-loose">{text(q.completedSentence)}</p>}
+              <p lang="ja" className="mt-3 text-lg leading-relaxed">{text(q.explanationJa)}</p>
+              <div className="mt-2 text-sm leading-relaxed text-muted"><ReadingHint kind="english" context={exam.title + " question " + q.number} compact>{text(q.explanationEn)}</ReadingHint></div>
               <Link href={"/chapters/" + q.source.chapter + "#" + q.source.heading} className="mt-3 inline-flex min-h-11 items-center text-sm text-accent-text underline-offset-2 hover:underline">Review Chapter {q.chapter}: {q.source.title}</Link>
             </div>}
           </li>;

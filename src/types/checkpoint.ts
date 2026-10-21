@@ -17,3 +17,11 @@ export type CheckpointExam = {
   focus?: string; cardDescription?: string;
   legacyAnchors?: Record<string, { partId: string; questionId: string }>;
 };
+
+// Presentation only: it never changes question IDs, keys or saved attempts.
+export type CheckpointPresentation = {
+  examId: string;
+  instructionsEn: Record<string, string>;
+  kana: Record<string, string>;
+  readings: Record<string, string>;
+};
