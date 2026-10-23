@@ -73,7 +73,7 @@ test("sidebar: grouped links, current section, and a working Bookmarks link", as
   const sidebar = page.locator("aside").first();
   await expect(sidebar.getByRole("link", { name: "Japanese Lesson Reviewer" })).toHaveAttribute("href", "/");
   const study = sidebar.getByRole("list", { name: "Study" });
-  await expect(study.getByRole("link")).toHaveText(["Home", "Chapters", "Kana", "Kanji", "Listening", "Checkpoints"]);
+  await expect(study.getByRole("link")).toHaveText(["Home", "Chapters", "Kana", "Kanji", "Listening", "Checkpoints", "Cheat sheets"]);
   await expect(study.getByRole("link", { name: "Chapters" })).toHaveAttribute("aria-current", "true");
   await expect(page.locator("body > header")).toContainText("Chapters");
 

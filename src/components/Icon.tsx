@@ -21,6 +21,7 @@ const PATHS = {
   check: "M4.5 10.5 8 14l7.5-8",
   retry: "M4.5 10a5.5 5.5 0 1 0 1.6-3.9M4.5 3.75v2.5H7",
   menu: "M3.5 6h13M3.5 10h13M3.5 14h13",
+  sheet: "M5.75 3h8.5a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-8.5a.75.75 0 0 1-.75-.75V3.75A.75.75 0 0 1 5.75 3ZM7.5 6.5h5M7.5 10h5M7.5 13.5h3",
 } as const;
 
 export type IconName = keyof typeof PATHS;
