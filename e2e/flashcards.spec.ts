@@ -34,13 +34,15 @@ test("save vocabulary, kanji and sentences from lessons; duplicates retain every
   await page.goto("/flashcards");
   await expect(review(page).getByRole("heading")).toBeVisible();
   const prompt=await review(page).getByRole("heading").innerText();
-  const current=(await data(page)).cards.find(card=>card.japanese===prompt)!;
+  // Chapter 1 cards show kana on the front; the Kanji page card keeps its kanji.
+  const current=(await data(page)).cards.find(card=>card.japanese===prompt||card.kana===prompt)!;
+  expect(prompt).not.toBe("学生");
   await expect(review(page).locator("[data-flashcard-answer]")).toHaveCount(0);
   await expect(review(page).getByRole("group",{name:"Rate your recall"})).toHaveCount(0);
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
   await expect(review(page).locator("[data-flashcard-answer]")).toBeFocused();
   await expect(review(page).getByText(current.meaning,{exact:true})).toBeVisible();
-  if(current.kana) await expect(review(page).getByText(current.kana,{exact:true})).toBeVisible();
+  if(current.kind==="kanji") await expect(review(page).getByText(current.kana,{exact:true})).toBeVisible();
   await review(page).getByRole("button",{name:/^Good/}).click();
   await expect(review(page).getByRole("button",{name:"Reveal answer",exact:true})).toBeFocused();
   await page.reload();
@@ -58,9 +60,10 @@ test("review directions hide answers until revealed and keep independent ratings
   await expect(visibleMain(page).getByRole("region",{name:"Queue complete"})).toBeVisible();
   await visibleMain(page).getByRole("button",{name:"English → Japanese",exact:true}).click();
   await expect(review(page).getByRole("heading",{name:"student",exact:true})).toBeVisible();
-  await expect(review(page).getByText("学生",{exact:true})).toHaveCount(0);
+  await expect(review(page).getByText("がくせい",{exact:true})).toHaveCount(0);
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
-  await expect(review(page).getByText("学生",{exact:true})).toBeVisible();
+  await expect(review(page).getByText("がくせい",{exact:true})).toBeVisible();
+  await expect(review(page).getByText("学生",{exact:true})).toHaveCount(0);
   await review(page).getByRole("button",{name:/^Easy/}).click();
   const saved=(await data(page)).cards[0];
   expect(saved.progress.recognition.reviews).toBe(1);
@@ -75,17 +78,18 @@ test("answer hints respect study toggles while recall prompts always remain read
   await page.addInitScript((key)=>localStorage.setItem(key,JSON.stringify({version:1,show:{romaji:false,english:false,kana:false}})),READING_KEY);
   await page.goto("/flashcards");
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
-  for(const kind of ["kana","romaji","english"]){
+  for(const kind of ["romaji","english"]){
     await expect(review(page).locator('[data-reading-hint="'+kind+'"]').first().locator(":scope > span[id]")).toBeHidden();
   }
-  await review(page).getByRole("button",{name:"Reveal kana reading for 学生",exact:true}).click();
-  await expect(review(page).getByText("がくせい",{exact:true})).toBeVisible();
+  // A Chapter 1 card already shows kana on the front, so it has no separate kana reading.
+  await expect(review(page).getByRole("heading",{name:"がくせい",exact:true})).toBeVisible();
+  await expect(review(page).locator('[data-reading-hint="kana"]')).toHaveCount(0);
   await expect(review(page).locator("[data-reading-hint=english]").first().locator(":scope > span[id]")).toBeHidden();
   await visibleMain(page).getByRole("button",{name:"English → Japanese",exact:true}).click();
   await expect(review(page).getByRole("heading",{name:"student",exact:true})).toBeVisible();
   await expect(review(page).locator("[data-flashcard-answer]")).toHaveCount(0);
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
-  await expect(review(page).getByText("学生",{exact:true})).toBeVisible();
+  await expect(review(page).getByText("がくせい",{exact:true})).toBeVisible();
   expect(await page.evaluate((key)=>JSON.parse(localStorage.getItem(key)!).show,READING_KEY)).toEqual({romaji:false,english:false,kana:false});
 });
 
@@ -93,7 +97,7 @@ test("chapter filters share the daily new-card cap and switching direction has i
   await seed(page,setNewLimit(addFlashcard(deck(),tea,Date.now()+1),1));
   await page.goto("/flashcards");
   await visibleMain(page).getByRole("checkbox",{name:"Chapter 2",exact:true}).check();
-  await expect(review(page).getByRole("heading",{name:"お茶",exact:true})).toBeVisible();
+  await expect(review(page).getByRole("heading",{name:"おちゃ",exact:true})).toBeVisible();
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
   await review(page).getByRole("button",{name:/^Good/}).click();
   await visibleMain(page).getByRole("button",{name:"All saved cards",exact:true}).click();
@@ -109,7 +113,7 @@ test("setting zero new cards still allows due reviews, and Again waits ten minut
   saved=reviewFlashcard(saved,saved.cards[0].id,"recognition","good",Date.now()-2*86400000,0);
   await seed(page,setNewLimit(saved,0));
   await page.goto("/flashcards");
-  await expect(review(page).getByRole("heading",{name:"学生",exact:true})).toBeVisible();
+  await expect(review(page).getByRole("heading",{name:"がくせい",exact:true})).toBeVisible();
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
   await review(page).getByRole("button",{name:/^Again/}).click();
   await expect(review(page)).toHaveCount(0);
@@ -128,7 +132,7 @@ test("storage failure keeps flashcards and reviews in memory while navigating wi
   await page.goto("/chapters/1");
   await visibleMain(page).getByRole("button",{name:"Add to flashcards: 学生",exact:true}).first().click();
   await page.locator("aside").first().getByRole("link",{name:"Flashcards",exact:true}).click();
-  await expect(review(page).getByRole("heading",{name:"学生",exact:true})).toBeVisible();
+  await expect(review(page).getByRole("heading",{name:"がくせい",exact:true})).toBeVisible();
   await expect(visibleMain(page).getByText("This browser cannot save flashcards.",{exact:false})).toBeVisible();
   await review(page).getByRole("button",{name:"Reveal answer",exact:true}).click();
   await review(page).getByRole("button",{name:/^Good/}).click();
@@ -140,7 +144,7 @@ test("removing and undoing a card preserves its separate review histories",async
   const saved=reviewFlashcard(deck(),deck().cards[0].id,"recognition","good",Date.now()-2*86400000,0);
   await seed(page,saved);await page.goto("/flashcards");
   await visibleMain(page).locator("summary").filter({hasText:"Manage saved cards"}).click();
-  await visibleMain(page).getByRole("button",{name:"Remove 学生 from flashcards",exact:true}).click();
+  await visibleMain(page).getByRole("button",{name:"Remove がくせい from flashcards",exact:true}).click();
   expect((await data(page)).cards).toHaveLength(0);
   await visibleMain(page).getByRole("button",{name:"Undo removal",exact:true}).click();
   expect((await data(page)).cards[0].progress).toEqual(saved.cards[0].progress);
@@ -181,4 +185,16 @@ test("flashcards is current in the phone menu, and the review card fits a phone 
   const link=page.locator("#mobile-nav").getByRole("link",{name:"Flashcards",exact:true});
   await expect(link).toHaveAttribute("aria-current","true");
   await link.click();await expect(page.locator("#mobile-nav")).toBeHidden();
+});
+
+test("cards follow the book's kanji pace: kana before Chapter 8, Kanji lesson characters with readings from Chapter 8",async({page})=>{
+  const week:FlashcardDraft={kind:"vocabulary",japanese:"今週",kana:"こんしゅう",romaji:"konshuu",meaning:"this week",source:{key:"chapter:9",label:"Chapter 9 › Time",href:"/chapters/9#vocab"}};
+  const mountain:FlashcardDraft={kind:"vocabulary",japanese:"山",kana:"やま",romaji:"yama",meaning:"mountain",source:{key:"chapter:9",label:"Chapter 9 › Nature",href:"/chapters/9#vocab"}};
+  await seed(page,addFlashcard(addFlashcard(EMPTY_FLASHCARDS,week,Date.now()),mountain,Date.now()+1));
+  await page.goto("/flashcards");
+  await visibleMain(page).locator("summary").filter({hasText:"Manage saved cards"}).click();
+  const list=visibleMain(page).locator("details").filter({hasText:"Manage saved cards"});
+  await expect(list.locator("ruby").filter({hasText:"今週"}).locator("rt")).toHaveText("こんしゅう");
+  await expect(list.getByText("やま",{exact:true})).toBeVisible();
+  await expect(list.getByText("山",{exact:true})).toHaveCount(0);
 });

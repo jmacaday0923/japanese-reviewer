@@ -8,6 +8,7 @@ import { newFlashcardSeed, useFlashcardShuffleSeed } from "@/components/use-flas
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { ReadingControls, ReadingHint } from "@/components/ReadingPreferences";
 import Furigana from "@/components/Furigana";
+import { flashcardFace } from "@/lib/flashcard-face";
 import { flashcardStore, useFlashcards } from "@/components/use-flashcards";
 import {
   DIRECTIONS, RATINGS, addFlashcards, bulkAddMessage, shuffledFlashcardIds, inSources, performance, removeFlashcard, removeFlashcards, restoreFlashcards, reviewFlashcard,
@@ -48,9 +49,19 @@ function MistakeAnswer({ card }: { card: SavedFlashcard }) {
   </dl>;
 }
 
-export function ReviewCard({ card, direction, now, onRate }: {
-  card: SavedFlashcard; direction: Direction; now: number; onRate: (rating: Rating) => void;
+// The card's Japanese as the book would show it at that chapter.
+function CardJapanese({ card, familiar }: { card: SavedFlashcard; familiar: string }) {
+  const face = flashcardFace(card, familiar);
+  if (face.reading) return <ruby className="checkpoint-ruby">{face.text}<rp>(</rp><rt lang="ja">{face.reading}</rt><rp>)</rp></ruby>;
+  return face.scope ? <Furigana text={face.text} scope={face.scope} strict={false} /> : <>{face.text}</>;
+}
+
+export function ReviewCard({ card, direction, now, onRate, familiar = "" }: {
+  card: SavedFlashcard; direction: Direction; now: number; onRate: (rating: Rating) => void; familiar?: string;
 }) {
+  const face = flashcardFace(card, familiar);
+  // Hide the kana row when the front already shows the word in kana or with its reading.
+  const kanaShown = face.text === card.kana || !!face.reading;
   const [revealed, setRevealed] = useState(false);
   const mistake = card.kind === "mistake";
   const answer = useRef<HTMLDivElement>(null);
@@ -59,7 +70,7 @@ export function ReviewCard({ card, direction, now, onRate }: {
     <article data-flashcard-review="" className="mt-5 min-w-0 rounded-card border border-border bg-surface p-5 sm:p-8">
       <p className="text-xs font-semibold uppercase tracking-wider text-subtle">{card.kind} · {mistake ? "Question → answer" : card.kind === "kana" ? (direction === "recognition" ? "Kana → reading" : "Romaji → kana") : DIRECTION_LABELS[direction]}</p>
       {mistake ? <MistakeCard card={card} /> : <h2 className="mt-5 break-words text-3xl font-semibold leading-relaxed text-foreground sm:text-4xl" lang={direction === "recognition" ? "ja" : "en"}>
-        {direction === "recognition" ? card.japanese : card.kind === "kana" ? <ReadingHint kind="romaji" context="this reverse kana card" compact>{card.meaning}</ReadingHint> : <StudyText display={studyDisplay(englishCatalog, card.meaning)} />}
+        {direction === "recognition" ? <CardJapanese card={card} familiar={familiar} /> : card.kind === "kana" ? <ReadingHint kind="romaji" context="this reverse kana card" compact>{card.meaning}</ReadingHint> : <StudyText display={studyDisplay(englishCatalog, card.meaning)} />}
       </h2>}
       <p className="mt-3 text-sm text-muted">{mistake ? "You missed this question in practice. Answer it in your head, then reveal the answer and rate yourself." : "Recall the answer, then reveal it and rate how well you remembered."}</p>
       {!revealed ? (
@@ -69,16 +80,16 @@ export function ReviewCard({ card, direction, now, onRate }: {
       ) : (
         <div ref={answer} tabIndex={-1} data-flashcard-answer="" className="mt-6 border-t border-border pt-5 focus-visible:outline-2 focus-visible:outline-accent-text">
           {mistake && <MistakeAnswer card={card} />}
-          {direction === "recall" && <p lang="ja" className="break-words text-3xl font-semibold leading-relaxed">{card.japanese}</p>}
+          {direction === "recall" && <p lang="ja" className="break-words text-3xl font-semibold leading-relaxed"><CardJapanese card={card} familiar={familiar} /></p>}
           {!mistake && <dl className="mt-3 space-y-3">
-            {card.kana && <div><dt className="text-xs text-subtle">Kana readings</dt><dd lang="ja" className="mt-1 break-words text-lg"><ReadingHint kind="kana" context={card.japanese}>{card.kana}</ReadingHint></dd></div>}
+            {card.kana && !kanaShown && <div><dt className="text-xs text-subtle">Kana readings</dt><dd lang="ja" className="mt-1 break-words text-lg"><ReadingHint kind="kana" context={card.japanese}>{card.kana}</ReadingHint></dd></div>}
             {card.romaji && (card.kind !== "kana" || direction === "recall") && <div><dt className="text-xs text-subtle">Romaji</dt><dd className="mt-1 break-words text-accent-text"><ReadingHint kind="romaji" context={card.japanese}>{card.romaji}</ReadingHint></dd></div>}
             {direction === "recognition" && <div><dt className="text-xs text-subtle">{card.kind === "kana" ? "Reading (romaji)" : "Meaning"}</dt><dd className="mt-1 break-words text-lg"><ReadingHint kind={card.kind === "kana" ? "romaji" : "english"} context={card.japanese}><StudyText display={studyDisplay(englishCatalog, card.meaning)} /></ReadingHint></dd></div>}
           </dl>}
           {card.examples.length > 0 && (
             <div className="mt-6 rounded-control border border-border bg-background p-4">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-subtle">Source example</h3>
-              <p lang="ja" className="mt-2 break-words text-lg leading-relaxed">{card.examples[0].japanese}</p>
+              <p lang="ja" className="mt-2 break-words text-lg leading-relaxed">{face.scope ? <Furigana text={card.examples[0].japanese} scope={face.scope} strict={false} /> : card.examples[0].japanese}</p>
               {card.examples[0].romaji && <p className="mt-2 break-words text-sm text-accent-text"><ReadingHint kind="romaji" context="the source example">{card.examples[0].romaji}</ReadingHint></p>}
               <p className="mt-2 break-words text-sm text-muted"><ReadingHint kind="english" context="the source example"><StudyText display={studyDisplay(englishCatalog, card.examples[0].english)} /></ReadingHint></p>
               <Link href={card.examples[0].href} className="mt-3 inline-flex min-h-11 items-center text-sm text-accent-text hover:underline">Open example in lesson →</Link>
@@ -104,7 +115,7 @@ export function ReviewCard({ card, direction, now, onRate }: {
   );
 }
 
-export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo[] }) {
+export default function FlashcardDashboard({ decks, familiarKanji = "" }: { decks: FlashcardDeckInfo[]; familiarKanji?: string }) {
   const { ready, saved, data } = useFlashcards();
   const initialSeed = useFlashcardShuffleSeed();
   const [seed, setSeed] = useState<number | null>(null);
@@ -201,7 +212,7 @@ export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo
         </div>
       ) : current ? (
         <ReviewCard key={(seed ?? initialSeed) + ":" + direction + ":" + current.id + ":" + current.progress[direction].reviews + ":" + selected.slice().sort().join(",")}
-          card={current} direction={direction} now={now} onRate={rate} />
+          card={current} direction={direction} now={now} onRate={rate} familiar={familiarKanji} />
       ) : (
         <section data-queue-complete="" tabIndex={-1} className="mt-6 rounded-card border border-border bg-surface p-6 focus-visible:outline-2 focus-visible:outline-accent-text" aria-label="Queue complete">
           <h2 className="text-xl font-semibold">{queue.totalCount === 0 ? "No saved cards in this selection" : "You’re caught up for now"}</h2>
@@ -246,8 +257,8 @@ export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo
         </div>}
         <ul className="mt-2 divide-y divide-border">
           {filtered.slice(0, manageLimit).map((card) => <li key={card.id} className="flex flex-wrap items-center justify-between gap-2 py-3">
-            <div className="min-w-0 flex-1"><p lang="ja" className="break-words font-medium">{card.japanese}</p><p className="break-words text-sm text-muted">{card.kind === "kana" ? <ReadingHint kind="romaji" context="this saved kana card" compact>{card.meaning}</ReadingHint> : <StudyText display={studyDisplay(englishCatalog, card.meaning)} />}</p></div>
-            <button type="button" aria-label={"Remove " + card.japanese + " from flashcards"} className={BUTTON + " text-muted"}
+            <div className="min-w-0 flex-1"><p lang="ja" className="break-words font-medium"><CardJapanese card={card} familiar={familiarKanji} /></p><p className="break-words text-sm text-muted">{card.kind === "kana" ? <ReadingHint kind="romaji" context="this saved kana card" compact>{card.meaning}</ReadingHint> : <StudyText display={studyDisplay(englishCatalog, card.meaning)} />}</p></div>
+            <button type="button" aria-label={"Remove " + flashcardFace(card, familiarKanji).text + " from flashcards"} className={BUTTON + " text-muted"}
               onClick={() => { flashcardStore.update((data) => removeFlashcard(data, card.id)); setRemoved([card]); }}>Remove</button>
           </li>)}
         </ul>
