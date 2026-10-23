@@ -19,10 +19,18 @@ function getBank() {
         drafts.push(...(item.flashcards ?? []).filter((draft): draft is FlashcardDraft => draft !== null));
       }
     }
-    const key = kind + ":" + page.ch;
-    return { info: { key, slug: kind + "-" + page.ch, label: label + " " + page.ch, title: page.title, count: new Set(drafts.map(flashcardId)).size },
-      deck: { version: 1 as const, key, drafts } };
-  }));
+    const key = kind + ":" + page.ch, slug = kind + "-" + page.ch;
+    const count = (items: FlashcardDraft[]) => new Set(items.map(flashcardId)).size;
+    const decks: { info: FlashcardDeckInfo; deck: FlashcardDeck }[] = [{ info: { key, slug, label: label + " " + page.ch, title: page.title, count: count(drafts) },
+      deck: { version: 1 as const, key, drafts } }];
+    // Chapters also get a words-only deck without the lesson sentences. Its cards are the
+    // same cards as the full deck's, so adding both never duplicates a card or its history.
+    const words = drafts.filter((draft) => draft.kind === "vocabulary");
+    if (kind === "chapter" && words.length) decks.push({
+      info: { key, slug: slug + "-vocabulary", label: label + " " + page.ch + " vocabulary", title: page.title, count: count(words), vocabularyOnly: true },
+      deck: { version: 1 as const, key, drafts: words } });
+    return decks;
+  })).flat();
   return bank;
 }
 export const getFlashcardDeckInfos = (): FlashcardDeckInfo[] => getBank().map((item) => item.info);

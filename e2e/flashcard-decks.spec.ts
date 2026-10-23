@@ -146,3 +146,38 @@ test("kana character cards reveal a reading and use romaji as their reverse prom
   await expect(reading).toHaveText(character.romaji);
   await expect(review(page).getByText("Romaji → kana",{exact:false})).toBeVisible();
 });
+
+test("each chapter has a vocabulary-only deck with just its word cards",async({request})=>{
+  for(const chapter of library.chapters){
+    const key="chapter:"+chapter.ch;
+    const words=parseFlashcardDeck(await (await request.get("/flashcard-decks/chapter-"+chapter.ch+"-vocabulary")).json(),key);
+    const all=parseFlashcardDeck(await (await request.get("/flashcard-decks/chapter-"+chapter.ch)).json(),key);
+    expect(words.length).toBeGreaterThan(0);
+    expect(words.every(draft=>draft.kind==="vocabulary")).toBeTruthy();
+    expect(words.map(flashcardId)).toEqual(all.filter(draft=>draft.kind==="vocabulary").map(flashcardId));
+  }
+  expect((await request.get("/flashcard-decks/kana-1-vocabulary")).status()).toBe(404);
+});
+
+test("the Vocabulary only tab adds words without sentences, and the full deck later merges with them",async({page})=>{
+  await page.goto("/flashcards");
+  const picker=visibleMain(page).getByRole("region",{name:"Pre-made decks",exact:true});
+  const tabs=picker.getByRole("tablist",{name:"Deck type"}).getByRole("tab");
+  await expect(tabs).toHaveText(["All cards","Vocabulary only"]);
+  await tabs.nth(1).click();
+  await expect(picker.getByRole("checkbox")).toHaveCount(library.chapters.length);
+  await picker.getByRole("checkbox",{name:/^Chapter 1 vocabulary —/}).check();
+  await picker.getByRole("button",{name:"Add selected decks and review",exact:true}).click();
+  await expect(review(page)).toBeVisible();
+  const words=(await readData(page)).cards;
+  expect(words.length).toBeGreaterThan(0);
+  expect(words.every(card=>card.kind==="vocabulary")).toBeTruthy();
+  await tabs.nth(1).focus(); await page.keyboard.press("ArrowLeft");
+  await expect(tabs.first()).toHaveAttribute("aria-selected","true");
+  await picker.getByRole("checkbox",{name:/^Chapter 1 —/}).check();
+  await picker.getByRole("button",{name:"Add selected decks and review",exact:true}).click();
+  await expect(picker.getByRole("status")).toContainText(words.length+" already saved");
+  const all=(await readData(page)).cards;
+  expect(all.some(card=>card.kind==="sentence")).toBeTruthy();
+  expect(all.filter(card=>card.kind==="vocabulary")).toHaveLength(words.length);
+});

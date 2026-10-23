@@ -145,7 +145,7 @@ export function bulkAddMessage(result: Omit<BulkAddResult, "data">): string {
   return result.added + " added · " + result.existing + " already saved" +
     (result.skipped ? " · " + result.skipped + " could not be added (deck full or invalid content)." : ".");
 }
-export type FlashcardDeckInfo = { key: string; slug: string; label: string; title: string; count: number };
+export type FlashcardDeckInfo = { key: string; slug: string; label: string; title: string; count: number; vocabularyOnly?: boolean };
 export type FlashcardDeck = { version: 1; key: string; drafts: FlashcardDraft[] };
 // Validate fetched decks atomically. A failed request or malformed deck imports nothing.
 export function parseFlashcardDeck(value: unknown, key: string): FlashcardDraft[] {
