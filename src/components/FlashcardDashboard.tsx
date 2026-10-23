@@ -10,7 +10,7 @@ import { ReadingControls, ReadingHint } from "@/components/ReadingPreferences";
 import Furigana from "@/components/Furigana";
 import { flashcardStore, useFlashcards } from "@/components/use-flashcards";
 import {
-  DIRECTIONS, RATINGS, addFlashcards, bulkAddMessage, shuffledFlashcardIds, inSources, performance, removeFlashcard, restoreFlashcard, reviewFlashcard,
+  DIRECTIONS, RATINGS, addFlashcards, bulkAddMessage, shuffledFlashcardIds, inSources, performance, removeFlashcard, removeFlashcards, restoreFlashcards, reviewFlashcard,
   reviewQueue, scheduleReview, setNewLimit, sourceOptions,
   type Direction, type Rating, type SavedFlashcard, type FlashcardDraft, type FlashcardDeckInfo,
 } from "@/lib/flashcards";
@@ -112,7 +112,8 @@ export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo
   const [direction, setDirection] = useState<Direction>("recognition");
   const [selected, setSelected] = useState<string[]>([]);
   const [mistakesOnly, setMistakesOnly] = useState(false);
-  const [removed, setRemoved] = useState<SavedFlashcard | null>(null);
+  const [removed, setRemoved] = useState<SavedFlashcard[]>([]);
+  const [confirmClear, setConfirmClear] = useState(false);
   const [manageLimit, setManageLimit] = useState(20);
   const [reviewed, setReviewed] = useState(0);
   const container = useRef<HTMLDivElement>(null);
@@ -225,15 +226,29 @@ export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo
         </div>
       </section>
 
-      {removed && <p role="status" className="mt-5 text-sm text-muted">Card removed. <button type="button" className="min-h-11 px-2 text-accent-text hover:underline"
-        onClick={() => { flashcardStore.update((data) => restoreFlashcard(data, removed)); setRemoved(null); }}>Undo removal</button></p>}
+      {removed.length > 0 && <p role="status" className="mt-5 text-sm text-muted">{removed.length === 1 ? "Card removed." : removed.length + " cards removed."} <button type="button" className="min-h-11 px-2 text-accent-text hover:underline"
+        onClick={() => { flashcardStore.update((data) => restoreFlashcards(data, removed)); setRemoved([]); }}>Undo removal</button></p>}
       {filtered.length > 0 && <details className="mt-7 rounded-card border border-border p-4">
         <summary className="min-h-11 cursor-pointer py-2 text-sm font-semibold">Manage saved cards ({filtered.length})</summary>
+        {/* Removes the cards in the current selection, or every saved card when nothing is filtered. */}
+        {!confirmClear ? <button type="button" className={BUTTON + " mt-2 text-muted"} onClick={() => setConfirmClear(true)}>
+          {filtered.length === data.cards.length ? "Remove all " + filtered.length + " saved " + (filtered.length === 1 ? "card" : "cards")
+            : filtered.length === 1 ? "Remove this card" : "Remove these " + filtered.length + " cards"}
+        </button> : <div role="group" aria-label="Confirm removing cards" className="mt-2 rounded-card border border-border-strong bg-surface p-4">
+          <p className="text-sm">Remove {filtered.length === data.cards.length ? "all " : ""}{filtered.length} {filtered.length === 1 ? "card" : "cards"} and {filtered.length === 1 ? "its" : "their"} review history? You can undo this until you leave this page.</p>
+          <div className="mt-3 flex flex-wrap gap-3">
+            <button type="button" className={BUTTON + " border-accent bg-accent text-accent-foreground hover:bg-accent-hover"}
+              onClick={() => { const cards = filtered; flashcardStore.update((data) => removeFlashcards(data, cards.map((card) => card.id))); setRemoved(cards); setConfirmClear(false); }}>
+              Yes, remove {filtered.length} {filtered.length === 1 ? "card" : "cards"}
+            </button>
+            <button type="button" className={BUTTON} onClick={() => setConfirmClear(false)}>Keep my cards</button>
+          </div>
+        </div>}
         <ul className="mt-2 divide-y divide-border">
           {filtered.slice(0, manageLimit).map((card) => <li key={card.id} className="flex flex-wrap items-center justify-between gap-2 py-3">
             <div className="min-w-0 flex-1"><p lang="ja" className="break-words font-medium">{card.japanese}</p><p className="break-words text-sm text-muted">{card.kind === "kana" ? <ReadingHint kind="romaji" context="this saved kana card" compact>{card.meaning}</ReadingHint> : <StudyText display={studyDisplay(englishCatalog, card.meaning)} />}</p></div>
             <button type="button" aria-label={"Remove " + card.japanese + " from flashcards"} className={BUTTON + " text-muted"}
-              onClick={() => { flashcardStore.update((data) => removeFlashcard(data, card.id)); setRemoved(card); }}>Remove</button>
+              onClick={() => { flashcardStore.update((data) => removeFlashcard(data, card.id)); setRemoved([card]); }}>Remove</button>
           </li>)}
         </ul>
         {filtered.length > manageLimit && <button type="button" className={BUTTON + " mt-3"} onClick={() => setManageLimit((limit) => limit + 20)}>Show more saved cards</button>}

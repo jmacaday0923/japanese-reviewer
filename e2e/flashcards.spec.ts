@@ -146,6 +146,31 @@ test("removing and undoing a card preserves its separate review histories",async
   expect((await data(page)).cards[0].progress).toEqual(saved.cards[0].progress);
 });
 
+test("remove all saved cards asks first, can be undone, and can remove just the filtered chapter",async({page})=>{
+  const reviewed=reviewFlashcard(deck(),deck().cards[0].id,"recognition","good",Date.now()-2*86400000,0);
+  await seed(page,addFlashcard(reviewed,tea,Date.now()));await page.goto("/flashcards");
+  const main=visibleMain(page);
+  await main.locator("summary").filter({hasText:"Manage saved cards"}).click();
+  await main.getByRole("button",{name:"Remove all 2 saved cards",exact:true}).click();
+  const confirm=main.getByRole("group",{name:"Confirm removing cards"});
+  await expect(confirm).toContainText("Remove all 2 cards and their review history?");
+  await confirm.getByRole("button",{name:"Keep my cards",exact:true}).click();
+  expect((await data(page)).cards).toHaveLength(2);
+  await main.getByRole("button",{name:"Remove all 2 saved cards",exact:true}).click();
+  await confirm.getByRole("button",{name:"Yes, remove 2 cards",exact:true}).click();
+  expect((await data(page)).cards).toHaveLength(0);
+  await expect(main.getByRole("status").filter({hasText:"2 cards removed."})).toBeVisible();
+  await main.getByRole("button",{name:"Undo removal",exact:true}).click();
+  const restored=(await data(page)).cards;
+  expect(restored).toHaveLength(2);
+  expect(restored.find(card=>card.japanese==="学生")!.progress).toEqual(reviewed.cards[0].progress);
+  await main.getByRole("checkbox",{name:"Chapter 2",exact:true}).check();
+  await main.locator("summary").filter({hasText:"Manage saved cards"}).click();
+  await main.getByRole("button",{name:"Remove this card",exact:true}).click();
+  await confirm.getByRole("button",{name:"Yes, remove 1 card",exact:true}).click();
+  expect((await data(page)).cards.map(card=>card.japanese)).toEqual(["学生"]);
+});
+
 test("flashcards is current in the phone menu, and the review card fits a phone viewport",async({page})=>{
   await seed(page,deck());await page.setViewportSize({width:375,height:800});
   await page.goto("/flashcards");

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
 import {
   FLASHCARD_KEY, FLASHCARD_SERVER_SNAPSHOT, EMPTY_FLASHCARDS, DEFAULT_NEW_LIMIT, MAX_CARDS,
-  flashcardId, parseFlashcardData, addFlashcards, parseFlashcardDeck, shuffledFlashcardIds, addFlashcard, removeFlashcard, restoreFlashcard, setNewLimit,
+  flashcardId, parseFlashcardData, addFlashcards, parseFlashcardDeck, shuffledFlashcardIds, addFlashcard, removeFlashcard, restoreFlashcard, removeFlashcards, restoreFlashcards, setNewLimit,
   scheduleReview, reviewFlashcard, reviewQueue, sourceOptions, performance, localDay, createFlashcardStore,
 } from "../src/lib/flashcards.ts";
 
@@ -295,4 +295,21 @@ test("random queue: due cards stay ahead of new cards; future reviews and unrela
   const after=reviewQueue(data,"recognition",["chapter:1"],now+600000,order);
   assert.deepEqual(after.cards.map(card=>card.japanese),["学生","先生"]);
   assert.equal(reviewQueue(setNewLimit(data,0),"recognition",[],now+600000,order).cards.length,1);
+});
+
+test("removing several cards is one change and restoring brings back their histories without duplicates", () => {
+  const now = 1_700_000_000_000;
+  const a = { kind: "vocabulary", japanese: "学生", kana: "がくせい", romaji: "gakusei", meaning: "student", source: { key: "chapter:1", label: "Chapter 1", href: "/chapters/1#vocab" } };
+  const b = { ...a, japanese: "先生", kana: "せんせい", romaji: "sensei", meaning: "teacher" };
+  const c = { ...a, japanese: "医者", kana: "いしゃ", romaji: "isha", meaning: "doctor" };
+  let data = addFlashcards(EMPTY_FLASHCARDS, [a, b, c], now).data;
+  data = reviewFlashcard(data, data.cards[0].id, "recognition", "good", now, 0);
+  const gone = data.cards.slice(0, 2);
+  const after = removeFlashcards(data, gone.map(card => card.id));
+  assert.deepEqual(after.cards.map(card => card.japanese), ["医者"]);
+  assert.equal(removeFlashcards(after, ["missing"]), after);
+  const back = restoreFlashcards(after, gone);
+  assert.equal(back.cards.length, 3);
+  assert.deepEqual(back.cards.find(card => card.japanese === "学生").progress, data.cards[0].progress);
+  assert.equal(restoreFlashcards(back, gone), back);
 });

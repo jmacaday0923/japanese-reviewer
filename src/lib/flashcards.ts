@@ -175,7 +175,17 @@ export function removeFlashcard(data: FlashcardData, id: string): FlashcardData 
   return data.cards.some((card) => card.id === id) ? { ...data, cards: data.cards.filter((card) => card.id !== id) } : data;
 }
 export function restoreFlashcard(data: FlashcardData, card: SavedFlashcard): FlashcardData {
-  return data.cards.some((item) => item.id === card.id) || data.cards.length >= MAX_CARDS ? data : { ...data, cards: [...data.cards, card] };
+  return restoreFlashcards(data, [card]);
+}
+// Bulk removal for "Remove all": one write, and the removed cards can be restored with their history.
+export function removeFlashcards(data: FlashcardData, ids: readonly string[]): FlashcardData {
+  const remove = new Set(ids);
+  return data.cards.some((card) => remove.has(card.id)) ? { ...data, cards: data.cards.filter((card) => !remove.has(card.id)) } : data;
+}
+export function restoreFlashcards(data: FlashcardData, cards: readonly SavedFlashcard[]): FlashcardData {
+  const present = new Set(data.cards.map((card) => card.id));
+  const back = cards.filter((card) => !present.has(card.id)).slice(0, Math.max(0, MAX_CARDS - data.cards.length));
+  return back.length ? { ...data, cards: [...data.cards, ...back] } : data;
 }
 export function setNewLimit(data: FlashcardData, limit: number): FlashcardData {
   return integer(limit, 200) && limit !== data.newLimit ? { ...data, newLimit: limit } : data;
