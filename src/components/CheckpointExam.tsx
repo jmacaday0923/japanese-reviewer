@@ -4,7 +4,10 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import type { CheckpointExam as Exam, CheckpointPresentation, CheckpointTextPart } from "@/types/checkpoint";
 import CheckpointText from "@/components/CheckpointText";
+import { checkpointTextParts } from "@/lib/checkpoint-display";
 import { ReadingHint } from "@/components/ReadingPreferences";
+import { saveMistakes } from "@/components/use-flashcards";
+import { checkpointMistake } from "@/lib/mistakes";
 import {
   checkpointScore, checkpointByChapter, checkpointKey, questionScore, checkpointCoverage, checkpointAnchor,
   chooseCheckpointAnswer, selectCheckpointPart, submitCheckpointAttempt,
@@ -48,10 +51,15 @@ export default function CheckpointExam({ exam, presentation }: { exam: Exam; pre
   function select(id: string) {
     setConfirm(null); store.update(state => selectCheckpointPart(exam, state, id));
   }
+  const plain = (value: string, parts?: CheckpointTextPart[]) => (parts ?? checkpointTextParts(value, presentation)).map(p => p.text).join("");
   function finish() {
     setConfirm(null);
+    const missed = exam.parts.flatMap(p => p.questions.filter(q => state.answers[q.id] && state.answers[q.id] !== q.correctChoiceId)
+      .map(q => checkpointMistake(exam, p, q, plain, presentation?.prepared?.questions[q.id])));
     store.update(state => submitCheckpointAttempt(exam, state, new Date().toISOString()));
-    setAnnouncement("Exam submitted. " + score.correct + " of " + score.total + " correct.");
+    saveMistakes(missed);
+    setAnnouncement("Exam submitted. " + score.correct + " of " + score.total + " correct." +
+      (missed.length ? " " + missed.length + (missed.length === 1 ? " mistake" : " mistakes") + " saved to your flashcards." : ""));
     summary.current?.focus();
   }
   function retry() {

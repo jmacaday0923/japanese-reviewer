@@ -7,6 +7,7 @@ import FlashcardDeckPicker from "@/components/FlashcardDeckPicker";
 import { newFlashcardSeed, useFlashcardShuffleSeed } from "@/components/use-flashcard-shuffle";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { ReadingControls, ReadingHint } from "@/components/ReadingPreferences";
+import Furigana from "@/components/Furigana";
 import { flashcardStore, useFlashcards } from "@/components/use-flashcards";
 import {
   DIRECTIONS, RATINGS, addFlashcards, bulkAddMessage, shuffledFlashcardIds, inSources, performance, removeFlashcard, restoreFlashcard, reviewFlashcard,
@@ -31,31 +32,49 @@ function intervalLabel(card: SavedFlashcard, direction: Direction, rating: Ratin
   return next.intervalDays === 0 ? Math.round((next.dueAt - now) / 60_000) + " min" : next.intervalDays + (next.intervalDays === 1 ? " day" : " days");
 }
 
+// A missed exercise question: the question on the front, the answer and why on the back.
+function MistakeCard({ card }: { card: SavedFlashcard }) {
+  const scope = card.sources[0].key.replace(":", "/");
+  return <>
+    <h2 className="mt-5 whitespace-pre-line break-words text-2xl font-semibold leading-loose text-foreground" lang="ja"><Furigana text={card.japanese} scope={scope} strict={false} /></h2>
+    {card.romaji && <p className="mt-2 break-words text-sm text-accent-text"><ReadingHint kind="romaji" context="this question">{card.romaji}</ReadingHint></p>}
+  </>;
+}
+function MistakeAnswer({ card }: { card: SavedFlashcard }) {
+  const scope = card.sources[0].key.replace(":", "/");
+  return <dl className="space-y-3" data-mistake-answer="">
+    <div><dt className="text-xs text-subtle">Correct answer</dt><dd lang="ja" className="mt-1 whitespace-pre-line break-words text-2xl font-semibold leading-loose"><Furigana text={card.kana} scope={scope} strict={false} /></dd></div>
+    <div><dt className="text-xs text-subtle">Why</dt><dd className="mt-1 break-words leading-relaxed"><Furigana text={card.meaning} scope={scope} strict={false} /></dd></div>
+  </dl>;
+}
+
 export function ReviewCard({ card, direction, now, onRate }: {
   card: SavedFlashcard; direction: Direction; now: number; onRate: (rating: Rating) => void;
 }) {
   const [revealed, setRevealed] = useState(false);
+  const mistake = card.kind === "mistake";
   const answer = useRef<HTMLDivElement>(null);
   useEffect(() => { if (revealed) answer.current?.focus(); }, [revealed]);
   return (
     <article data-flashcard-review="" className="mt-5 min-w-0 rounded-card border border-border bg-surface p-5 sm:p-8">
-      <p className="text-xs font-semibold uppercase tracking-wider text-subtle">{card.kind} · {card.kind === "kana" ? (direction === "recognition" ? "Kana → reading" : "Romaji → kana") : DIRECTION_LABELS[direction]}</p>
-      <h2 className="mt-5 break-words text-3xl font-semibold leading-relaxed text-foreground sm:text-4xl" lang={direction === "recognition" ? "ja" : "en"}>
+      <p className="text-xs font-semibold uppercase tracking-wider text-subtle">{card.kind} · {mistake ? "Question → answer" : card.kind === "kana" ? (direction === "recognition" ? "Kana → reading" : "Romaji → kana") : DIRECTION_LABELS[direction]}</p>
+      {mistake ? <MistakeCard card={card} /> : <h2 className="mt-5 break-words text-3xl font-semibold leading-relaxed text-foreground sm:text-4xl" lang={direction === "recognition" ? "ja" : "en"}>
         {direction === "recognition" ? card.japanese : card.kind === "kana" ? <ReadingHint kind="romaji" context="this reverse kana card" compact>{card.meaning}</ReadingHint> : <StudyText display={studyDisplay(englishCatalog, card.meaning)} />}
-      </h2>
-      <p className="mt-3 text-sm text-muted">Recall the answer, then reveal it and rate how well you remembered.</p>
+      </h2>}
+      <p className="mt-3 text-sm text-muted">{mistake ? "You missed this question in practice. Answer it in your head, then reveal the answer and rate yourself." : "Recall the answer, then reveal it and rate how well you remembered."}</p>
       {!revealed ? (
         <button type="button" onClick={() => setRevealed(true)} className={BUTTON + " mt-6 border-accent bg-accent text-accent-foreground hover:bg-accent-hover"}>
           Reveal answer
         </button>
       ) : (
         <div ref={answer} tabIndex={-1} data-flashcard-answer="" className="mt-6 border-t border-border pt-5 focus-visible:outline-2 focus-visible:outline-accent-text">
+          {mistake && <MistakeAnswer card={card} />}
           {direction === "recall" && <p lang="ja" className="break-words text-3xl font-semibold leading-relaxed">{card.japanese}</p>}
-          <dl className="mt-3 space-y-3">
+          {!mistake && <dl className="mt-3 space-y-3">
             {card.kana && <div><dt className="text-xs text-subtle">Kana readings</dt><dd lang="ja" className="mt-1 break-words text-lg"><ReadingHint kind="kana" context={card.japanese}>{card.kana}</ReadingHint></dd></div>}
             {card.romaji && (card.kind !== "kana" || direction === "recall") && <div><dt className="text-xs text-subtle">Romaji</dt><dd className="mt-1 break-words text-accent-text"><ReadingHint kind="romaji" context={card.japanese}>{card.romaji}</ReadingHint></dd></div>}
             {direction === "recognition" && <div><dt className="text-xs text-subtle">{card.kind === "kana" ? "Reading (romaji)" : "Meaning"}</dt><dd className="mt-1 break-words text-lg"><ReadingHint kind={card.kind === "kana" ? "romaji" : "english"} context={card.japanese}><StudyText display={studyDisplay(englishCatalog, card.meaning)} /></ReadingHint></dd></div>}
-          </dl>
+          </dl>}
           {card.examples.length > 0 && (
             <div className="mt-6 rounded-control border border-border bg-background p-4">
               <h3 className="text-xs font-semibold uppercase tracking-wider text-subtle">Source example</h3>
@@ -92,6 +111,7 @@ export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo
   const now = useSyncExternalStore(subscribeClock, readClock, serverClock);
   const [direction, setDirection] = useState<Direction>("recognition");
   const [selected, setSelected] = useState<string[]>([]);
+  const [mistakesOnly, setMistakesOnly] = useState(false);
   const [removed, setRemoved] = useState<SavedFlashcard | null>(null);
   const [manageLimit, setManageLimit] = useState(20);
   const [reviewed, setReviewed] = useState(0);
@@ -99,10 +119,12 @@ export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo
   useEffect(() => {
     if (reviewed > 0) container.current?.querySelector<HTMLElement>("[data-flashcard-review] button, [data-queue-complete]")?.focus();
   }, [reviewed]);
-  const queue = reviewQueue(data, direction, selected, now, shuffledFlashcardIds(data.cards, seed ?? initialSeed));
+  const shown = mistakesOnly ? { ...data, cards: data.cards.filter((card) => card.kind === "mistake") } : data;
+  const queue = reviewQueue(shown, direction, selected, now, shuffledFlashcardIds(data.cards, seed ?? initialSeed));
+  const mistakeCount = data.cards.filter((card) => card.kind === "mistake").length;
   const current = queue.cards[0];
   const options = sourceOptions(data.cards);
-  const filtered = data.cards.filter((card) => inSources(card, selected));
+  const filtered = shown.cards.filter((card) => inSources(card, selected));
   function rate(rating: Rating) {
     if (!current) return;
     const changed = flashcardStore.update((data) => reviewFlashcard(data, current.id, direction, rating, Date.now(), current.progress[direction].reviews));
@@ -136,7 +158,12 @@ export default function FlashcardDashboard({ decks }: { decks: FlashcardDeckInfo
         </fieldset>
         <fieldset className="mt-5">
           <legend className="text-sm font-semibold">Chapters and study pages</legend>
-          <button type="button" className={BUTTON + " mt-2"} aria-pressed={selected.length === 0} onClick={() => setSelected([])}>All saved cards</button>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <button type="button" className={BUTTON} aria-pressed={selected.length === 0} onClick={() => setSelected([])}>All saved cards</button>
+            <button type="button" className={BUTTON + (mistakesOnly ? " border-accent-text bg-accent-soft text-accent-text" : "")} aria-pressed={mistakesOnly}
+              onClick={() => setMistakesOnly((value) => !value)}>Mistakes only ({mistakeCount})</button>
+          </div>
+          <p className="mt-2 text-xs leading-relaxed text-muted">Workbook and checkpoint questions you get wrong are saved here automatically as mistake cards. They review in the Japanese → meaning direction.</p>
           <div className="mt-2 flex max-h-48 flex-wrap gap-x-5 gap-y-1 overflow-y-auto">
             {options.map((option) => <label key={option.key} className="inline-flex min-h-11 max-w-full items-center gap-2 break-words text-sm">
               <input type="checkbox" checked={selected.includes(option.key)} onChange={() => choose(option.key)} className="size-4 shrink-0 accent-accent" />

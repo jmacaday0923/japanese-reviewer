@@ -6,7 +6,7 @@ export const RATINGS: readonly Rating[] = ["again", "hard", "good", "easy"];
 export type FlashcardSource = { key: string; label: string; href: string };
 export type FlashcardExample = { japanese: string; romaji: string; english: string; href: string };
 export type FlashcardDraft = {
-  kind: "vocabulary" | "kanji" | "sentence" | "kana";
+  kind: "vocabulary" | "kanji" | "sentence" | "kana" | "mistake";
   japanese: string; kana: string; romaji: string; meaning: string;
   source: FlashcardSource; example?: FlashcardExample;
 };
@@ -37,11 +37,13 @@ const record = (value: unknown): value is Record<string, unknown> => typeof valu
 const time = (value: unknown): value is number => typeof value === "number" && Number.isFinite(value) && value >= 0 && value <= 8e15;
 const integer = (value: unknown, max: number): value is number => typeof value === "number" && Number.isInteger(value) && value >= 0 && value <= max;
 const text = (value: unknown, max = 3000): value is string => typeof value === "string" && value.length <= max;
+// Study pages need a section anchor; a checkpoint links to the question it came from.
+const SOURCE_ROUTE = /^\/(?:(chapters|kana|kanji)\/([A-Za-z0-9_-]{1,40})#[A-Za-z0-9_-]{1,100}|(checkpoints)\/([A-Za-z0-9_-]{1,40})(?:#[A-Za-z0-9_-]{1,100})?)$/;
 function source(value: unknown): FlashcardSource | null {
   if (!record(value) || !text(value.href, 250) || !text(value.label, 200)) return null;
-  const route = value.href.match(/^\/(chapters|kana|kanji)\/([A-Za-z0-9_-]{1,40})#([A-Za-z0-9_-]{1,100})$/);
+  const route = value.href.match(SOURCE_ROUTE);
   if (!route) return null;
-  const key = (route[1] === "chapters" ? "chapter" : route[1]) + ":" + route[2];
+  const key = route[3] ? "checkpoint:" + route[4] : (route[1] === "chapters" ? "chapter" : route[1]) + ":" + route[2];
   return value.key === key ? { key, label: value.label, href: value.href } : null;
 }
 function example(value: unknown): FlashcardExample | null {
@@ -51,7 +53,7 @@ function example(value: unknown): FlashcardExample | null {
   return { japanese: value.japanese, romaji: value.romaji, english: value.english, href: value.href };
 }
 function core(value: unknown): Pick<FlashcardDraft, "kind" | "japanese" | "kana" | "romaji" | "meaning"> | null {
-  if (!record(value) || typeof value.kind !== "string" || !["vocabulary", "kanji", "sentence", "kana"].includes(value.kind) ||
+  if (!record(value) || typeof value.kind !== "string" || !["vocabulary", "kanji", "sentence", "kana", "mistake"].includes(value.kind) ||
       !text(value.japanese) || !value.japanese.trim() || !text(value.kana) || !text(value.romaji) ||
       !text(value.meaning) || !value.meaning.trim()) return null;
   return { kind: value.kind as FlashcardDraft["kind"], japanese: value.japanese, kana: value.kana, romaji: value.romaji, meaning: value.meaning };
@@ -118,6 +120,24 @@ export function addFlashcards(data: FlashcardData, drafts: readonly FlashcardDra
   }
   return { data: changed ? { ...data, cards: [...cards.values()] } : data, added, existing, skipped };
 }
+// A missed question becomes a "mistake" card. Missing it again brings a card
+// that is already scheduled back for review now, without losing its history.
+export function addMistakes(data: FlashcardData, drafts: readonly FlashcardDraft[], now: number): FlashcardData {
+  const mistakes = drafts.filter((draft) => draft.kind === "mistake");
+  const ids = new Set(mistakes.map((draft) => core(draft) ? flashcardId(draft) : "").filter(Boolean));
+  const added = addFlashcards(data, mistakes, now).data;
+  if (!time(now)) return added;
+  let changed = added !== data;
+  const cards = added.cards.map((card) => {
+    const state = card.progress.recognition;
+    if (!ids.has(card.id) || state.reviews === 0 || state.dueAt <= now) return card;
+    changed = true;
+    return { ...card, progress: { ...card.progress, recognition: { ...state, dueAt: now, intervalDays: 0 } } };
+  });
+  return changed ? { ...added, cards } : data;
+}
+// Mistake cards ask the question and reveal the answer, so they only review in that direction.
+export const reviewsIn = (card: Pick<SavedFlashcard, "kind">, direction: Direction) => card.kind !== "mistake" || direction === "recognition";
 export function addFlashcard(data: FlashcardData, draft: FlashcardDraft, now: number): FlashcardData {
   return addFlashcards(data, [draft], now).data;
 }
@@ -194,7 +214,7 @@ export function inSources(card: SavedFlashcard, selected: readonly string[]): bo
 export function reviewQueue(data: FlashcardData, direction: Direction, selected: readonly string[], now: number, order?: readonly string[]) {
   const ranks = order ? new Map(order.map((id, rank) => [id, rank])) : null;
   const randomOrder = (a: SavedFlashcard, b: SavedFlashcard) => (ranks?.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (ranks?.get(b.id) ?? Number.MAX_SAFE_INTEGER);
-  const filtered = data.cards.filter((card) => inSources(card, selected));
+  const filtered = data.cards.filter((card) => inSources(card, selected) && reviewsIn(card, direction));
   const introduced = data.daily.day === localDay(now) ? data.daily[direction] : [];
   const remaining = Math.max(0, data.newLimit - introduced.length);
   const due = filtered.filter((card) => card.progress[direction].reviews > 0 && card.progress[direction].dueAt <= now)

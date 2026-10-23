@@ -46,6 +46,13 @@ export type ExerciseDisplayNode = { text: string } | { display: StudyDisplay } |
   tag: string; attrs: Record<string, string>; children: ExerciseDisplayNode[];
 };
 
+// Plain text of prepared display nodes, for saving a question as a flashcard.
+export function exerciseDisplayText(nodes: ExerciseDisplayNode[]): string {
+  const text = (list: ExerciseDisplayNode[]): string => list.map(node => "text" in node ? node.text : "display" in node ? node.display.primary
+    : node.tag === "br" ? "\n" : text(node.children)).join("");
+  return text(nodes).replace(/[ \t]+/g, " ").replace(/ *\n */g, "\n").trim();
+}
+
 // Only this question's reviewed display strings cross the client boundary.
 // Keep hidden models as plain data until requested, rather than serializing
 // thousands of React elements for answers which have not been opened.

@@ -3,7 +3,7 @@ import WorkbookExercises from "@/components/WorkbookExercises";
 import { workbookSet } from "@/lib/workbook-bank";
 import { createElement, Fragment, type ReactNode } from "react";
 import ExerciseAnswers from "@/components/ExerciseAnswers";
-import { prepareExerciseDisplay } from "@/lib/study-markup";
+import { exerciseDisplayText, prepareExerciseDisplay } from "@/lib/study-markup";
 import { legacyNodeBindings, type LegacyActivity } from "@/lib/legacy-exercises";
 import englishCatalog from "@/data/english-display.json";
 import catalog from "@/data/japanese-display.json";
@@ -14,6 +14,7 @@ import Furigana from "@/components/Furigana";
 export default function StudyHtml({ html, scope = "", literal = false, english = false, furigana = true, activities = [] }: { html: string; scope?: string; literal?: boolean; english?: boolean; furigana?: boolean; activities?: LegacyActivity[] }) {
   const nodes = parseStudyMarkup(html);
   const bindings = legacyNodeBindings(nodes, activities);
+  const chapter = /^chapter\/([^/]+)\//.exec(scope)?.[1];
   function instructions(activity: LegacyActivity, original?: ReactNode) {
     return <div data-exercise-directions={activity.heading} className="px-1">
       <p lang="ja" className="text-lg leading-relaxed">{activity.instructionsJa}</p>
@@ -51,12 +52,14 @@ export default function StudyHtml({ html, scope = "", literal = false, english =
       const rows = activity.questions.map(q => ({
         id: q.id, number: q.number, accepted: q.accepted,
         prompt: <StudyHtml html={q.promptHtml} scope={scope} />,
+        promptText: exerciseDisplayText(prepareExerciseDisplay(parseStudyMarkup(q.promptHtml), catalog, scope)),
         model: prepareExerciseDisplay(parseStudyMarkup(q.modelHtml), catalog, scope.replace(/\/exercises$/, "/answers")),
         explanation: prepareExerciseDisplay(parseStudyMarkup(q.explanationHtml), catalog, scope.replace(/\/exercises$/, "/answers")),
       }));
       return <Fragment key={index}>
         {binding.showInstructions && instructions(activity)}
-        <ExerciseAnswers heading={activity.heading} answerHeading={activity.answerHeading} mode={activity.mode} rows={rows} />
+        <ExerciseAnswers heading={activity.heading} answerHeading={activity.answerHeading} mode={activity.mode} rows={rows}
+          source={chapter ? { chapter, heading: activity.heading, title: activity.title } : undefined} />
       </Fragment>;
     }
     if (node.tag === "div" && node.attrs["data-workbook-set"]) {

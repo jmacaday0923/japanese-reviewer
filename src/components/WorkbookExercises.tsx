@@ -4,6 +4,8 @@ import { useId, useRef, useState, type KeyboardEvent } from "react";
 import type { WorkbookQuestion, WorkbookSet } from "@/types/workbook";
 import { ReadingHint } from "@/components/ReadingPreferences";
 import Furigana from "@/components/Furigana";
+import { saveMistakes } from "@/components/use-flashcards";
+import { workbookMistake } from "@/lib/mistakes";
 import { applyGrades, createActivity, editAnswer, restartActivity, retryIncorrect, summarize } from "@/lib/exercises";
 import { gradeWorkbook, workbookOrder } from "@/lib/workbook";
 import { PRIMARY_BUTTON, SECONDARY_BUTTON, PracticeSummary, Verdict } from "@/components/PracticeParts";
@@ -36,7 +38,8 @@ export default function WorkbookExercises({ set }: { set: WorkbookSet }) {
       setNotice("Question " + question.number + ": compare your answer with the model, then mark your self-check.");
     } else {
       setState(s => applyGrades(s, { [question.id]: grade }));
-      setNotice("Question " + question.number + ": " + grade + ".");
+      if (grade === "incorrect") saveMistakes([workbookMistake(set, question)]);
+      setNotice("Question " + question.number + ": " + grade + "." + (grade === "incorrect" ? " Saved to your mistakes deck." : ""));
     }
   }
   function edit(id: string, value: string) {
@@ -107,7 +110,7 @@ export default function WorkbookExercises({ set }: { set: WorkbookSet }) {
             <p lang="en" data-workbook-why className="mt-3 text-base leading-relaxed">{text(q.whyEn)}</p>
             {q.mode === "self" && !locked && <div className="mt-4 flex flex-wrap gap-2">
               <button type="button" className={SECONDARY_BUTTON} onClick={() => { setState(s => applyGrades(s, { [q.id]: "correct" })); setNotice("Self-check recorded: satisfied."); }}>I’m satisfied</button>
-              <button type="button" className={SECONDARY_BUTTON} onClick={() => { setState(s => applyGrades(s, { [q.id]: "incorrect" })); setNotice("Self-check recorded: needs review."); }}>Needs review</button>
+              <button type="button" className={SECONDARY_BUTTON} onClick={() => { setState(s => applyGrades(s, { [q.id]: "incorrect" })); saveMistakes([workbookMistake(set, q)]); setNotice("Self-check recorded: needs review. Saved to your mistakes deck."); }}>Needs review</button>
             </div>}
           </div>}
         </li>;

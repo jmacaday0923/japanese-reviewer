@@ -6,17 +6,21 @@ import { PRIMARY_BUTTON, SECONDARY_BUTTON, PracticeSummary, Verdict } from "@/co
 import { ReadingHint } from "@/components/ReadingPreferences";
 import { normalizeWorkbook } from "@/lib/workbook";
 import ExerciseText from "@/components/ExerciseText";
-import type { ExerciseDisplayNode } from "@/lib/study-markup";
+import { exerciseDisplayText, type ExerciseDisplayNode } from "@/lib/study-markup";
+import { saveMistakes } from "@/components/use-flashcards";
+import { legacyMistake, type LegacyMistakeSource } from "@/lib/mistakes";
 
 export type ExerciseAnswerRow = {
   id: string; number: string; accepted: string[];
-  prompt: ReactNode; model: ExerciseDisplayNode[]; explanation: ExerciseDisplayNode[];
+  prompt: ReactNode; promptText: string; model: ExerciseDisplayNode[]; explanation: ExerciseDisplayNode[];
 };
-type Props = { heading: string; answerHeading: string; mode: "choice" | "particle" | "kana" | "self"; rows: ExerciseAnswerRow[] };
+type Props = { heading: string; answerHeading: string; mode: "choice" | "particle" | "kana" | "self"; rows: ExerciseAnswerRow[]; source?: LegacyMistakeSource };
 
 // The trusted prompt/model nodes are prepared by the server. No source datasets
 // or display catalogs enter this client module. Answers stay in this open page.
-export default function ExerciseAnswers({ heading, answerHeading, mode, rows }: Props) {
+export default function ExerciseAnswers({ heading, answerHeading, mode, rows, source }: Props) {
+  const miss = (q: ExerciseAnswerRow) => { if (source) saveMistakes([legacyMistake(source, q.promptText, exerciseDisplayText(q.model), exerciseDisplayText(q.explanation))]); };
+  const saved = source ? " Saved to your mistakes deck." : "";
   const uid = useId(), root = useRef<HTMLDivElement>(null);
   const [state, setState] = useState(() => createActivity(rows.map(q => q.id)));
   const [revealed, setRevealed] = useState<string[]>([]);
@@ -45,7 +49,8 @@ export default function ExerciseAnswers({ heading, answerHeading, mode, rows }: 
     } else {
       const grade = mode === "kana" ? q.accepted.some(form => normalizeWorkbook(form) === normalizeWorkbook(value)) ? "correct" : "incorrect" : gradeParticle(q, value);
       setState(s => applyGrades(s, { [q.id]: grade }));
-      setNotice("Question " + q.number + ": " + grade + ".");
+      if (grade === "incorrect") miss(q);
+      setNotice("Question " + q.number + ": " + grade + "." + (grade === "incorrect" ? saved : ""));
     }
   }
   function enter(event: KeyboardEvent<HTMLTextAreaElement>, q: ExerciseAnswerRow) {
@@ -107,7 +112,7 @@ export default function ExerciseAnswers({ heading, answerHeading, mode, rows }: 
                   <a href={"#" + answerHeading} className="mt-2 inline-flex min-h-11 items-center text-sm text-accent-text underline underline-offset-2">Source answer key</a>
                   {selfCheck && !locked && <div className="mt-2 flex flex-wrap gap-2">
                     <button type="button" className={SECONDARY_BUTTON} onClick={() => { setState(s => applyGrades(s, { [q.id]: "correct" })); setNotice("Self-check recorded: satisfied."); }}>I’m satisfied</button>
-                    <button type="button" className={SECONDARY_BUTTON} onClick={() => { setState(s => applyGrades(s, { [q.id]: "incorrect" })); setNotice("Self-check recorded: needs review."); }}>Needs review</button>
+                    <button type="button" className={SECONDARY_BUTTON} onClick={() => { setState(s => applyGrades(s, { [q.id]: "incorrect" })); miss(q); setNotice("Self-check recorded: needs review." + saved); }}>Needs review</button>
                   </div>}
                 </div>}
               </div>}
