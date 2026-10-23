@@ -1097,6 +1097,76 @@
         }
       ],
       "transformations": []
+    },
+    {
+      "chapter": "12",
+      "order": [
+        {
+          "id": "sb-c12-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "きょうは ひまだから、ともだちと あそびます。",
+            "romaji": "kyou wa hima dakara, tomodachi to asobimasu.",
+            "english": "Because I'm free today, I'll go out with my friends.",
+            "source": {
+              "heading": "c12-kara-dakara",
+              "table": 1,
+              "row": 6
+            }
+          },
+          "tokens": [
+            "きょうは",
+            "ひまだから、",
+            "ともだちと",
+            "あそびます。"
+          ],
+          "why": "Each sentence gives the reason first. Nouns and な-adjectives take だから, and い-adjectives and verbs take から.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c12-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "いいえ、だれも いません。",
+            "romaji": "iie, dare mo imasen.",
+            "english": "No, there is no one.",
+            "source": {
+              "heading": "c12-question-word-conversations",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "tokens": [
+            "いいえ、",
+            "だれも",
+            "いません。"
+          ],
+          "why": "A question with か (someone, something, somewhere) is often answered with も and a negative verb. A question with が asks for a specific answer.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c12-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "すずきさんは せが たかいです。",
+            "romaji": "suzuki san wa se ga takai desu.",
+            "english": "Suzuki is tall.",
+            "source": {
+              "heading": "c12-12-10-body-adjective",
+              "table": 1,
+              "row": 11
+            }
+          },
+          "tokens": [
+            "すずきさんは",
+            "せが",
+            "たかいです。"
+          ],
+          "why": "To describe a part of the body, mark it with が: あたまが いたいです means my head hurts. The common adjectives are だるい (sluggish, tired) and いたい (painful). The person goes before it with は, as in すずきさんは せが たかいです.",
+          "whyParagraph": 2
+        }
+      ],
+      "transformations": []
     }
   ]
 }

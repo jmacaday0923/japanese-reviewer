@@ -8,7 +8,7 @@
     "limits": "This is a curated content review with exact source rows, rule quotations and reviewed question fingerprints. It is not a general Japanese tokenizer or proof that every arbitrary future sentence is grammatical."
   },
   "sources": {
-    "chaptersSha256": "89776261067e2d1ee67554b5bc229e67848691d67912daffba82ac3e986e14a4",
+    "chaptersSha256": "4eee915c39595ff40ff1b56af6eb6d6e7fdf7ca2f18d35ba320e860819902369",
     "kanjiSha256": "2cceecfbcb9d4087d304757aa156161f2f6c53dd9aa7891fc09a47f92ec39234",
     "chapter5Sha256": "7859f0edb18b9d413f0d158625e2ee1dde3f8314d6cd049f815f23f3fb0ea39c"
   },

@@ -74,6 +74,8 @@ export function tableFlashcards(table: ReadingTableData, context: FlashcardConte
       kind = "kanji"; japanese = get("kanji"); kana = get("readings"); meaning = get("pair"); romaji = "";
     } else if (headers.includes("dictionary form") && headers.includes("plain potential") && headers.includes("polite potential") && get("meaning")) {
       kind = "vocabulary"; japanese = get("plain potential"); meaning = get("meaning"); romaji = "";
+    } else if (headers.includes("dictionary form") && headers.includes("plain volitional") && headers.includes("polite volitional") && get("meaning")) {
+      kind = "vocabulary"; japanese = get("plain volitional"); meaning = get("meaning"); romaji = "";
     } else if (headers.includes("japanese") && meaning) {
       kind = "sentence"; japanese = get("japanese");
     } else if (headers.includes("meaning") && headers.includes("on'yomi") && headers.includes("kun'yomi")) {

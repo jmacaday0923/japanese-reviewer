@@ -17,9 +17,9 @@ const plainFor = shown => (value, parts) => (parts ?? checkpointTextParts(value,
 const mistakeFor = (exam, part, q, shown) => checkpointMistake(exam, part, q, plainFor(shown), shown?.prepared?.questions[q.id]);
 const valid = drafts => { const result = addFlashcards(EMPTY_FLASHCARDS, drafts, 1000); return result.skipped === 0 && result.added === new Set(drafts.map(d => JSON.stringify([d.japanese, d.kana, d.meaning]))).size; };
 
-test("every Chapter 11 workbook question makes a valid mistake card linked to its exercise", () => {
+test("every workbook question (Chapters 11 and 12) makes a valid mistake card linked to its exercise", () => {
   const drafts = sets.flatMap(set => set.questions.map(q => workbookMistake(set, q)));
-  assert.equal(drafts.length, 90);
+  assert.equal(drafts.length, sets.reduce((sum, set) => sum + set.questions.length, 0));
   assert.ok(valid(drafts));
   const choice = workbookMistake(sets.find(s => s.id === "c11-change-choices"), sets.find(s => s.id === "c11-change-choices").questions[0]);
   assert.match(choice.japanese, /\n1\. きれいな\n2\. きれいで/);

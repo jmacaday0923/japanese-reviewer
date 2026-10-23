@@ -2016,6 +2016,1316 @@
           "heading": "c11-translation-practice"
         }
       ]
+    },
+    {
+      "chapter": "12",
+      "sets": [
+        {
+          "id": "c12-reason-choices",
+          "chapter": "12",
+          "title": "れんしゅう: Choose the proper reason (page 27)",
+          "sourcePage": 27,
+          "instructionsJa": "〈れんしゅう〉",
+          "instructionsEn": "Please choose the proper reason for each question. Example: なぜ このまちが すきですか。 → しずかで きれい ですから",
+          "heading": "c12-reason-choices",
+          "questions": [
+            {
+              "id": "c12-reason-choices-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "どうして おそく なりましたか。",
+              "model": "おそく おきました から",
+              "whyEn": "You were late because you got up late.",
+              "source": {
+                "printedPage": 27,
+                "number": 1
+              },
+              "romaji": "doushite osoku narimashita ka.",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "すき ですから"
+                },
+                {
+                  "id": "b",
+                  "text": "ちょっと たかかった ですから"
+                },
+                {
+                  "id": "c",
+                  "text": "仕事が あります から"
+                },
+                {
+                  "id": "d",
+                  "text": "おそく おきました から"
+                },
+                {
+                  "id": "e",
+                  "text": "一年間 日本で べんきょうしました から"
+                },
+                {
+                  "id": "f",
+                  "text": "ここから 見えませんから"
+                }
+              ],
+              "correctChoiceId": "d"
+            },
+            {
+              "id": "c12-reason-choices-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "なぜ 日本語が じょうずですか。",
+              "model": "一年間 日本で べんきょうしました から",
+              "whyEn": "You are good at Japanese because you studied in Japan for a year.",
+              "source": {
+                "printedPage": 27,
+                "number": 2
+              },
+              "romaji": "naze nihongo ga jouzu desu ka.",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "すき ですから"
+                },
+                {
+                  "id": "b",
+                  "text": "ちょっと たかかった ですから"
+                },
+                {
+                  "id": "c",
+                  "text": "仕事が あります から"
+                },
+                {
+                  "id": "d",
+                  "text": "おそく おきました から"
+                },
+                {
+                  "id": "e",
+                  "text": "一年間 日本で べんきょうしました から"
+                },
+                {
+                  "id": "f",
+                  "text": "ここから 見えませんから"
+                }
+              ],
+              "correctChoiceId": "e"
+            },
+            {
+              "id": "c12-reason-choices-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "どうして パーティーに 行きませんか。",
+              "model": "仕事が あります から",
+              "whyEn": "You aren't going to the party because you have work.",
+              "source": {
+                "printedPage": 27,
+                "number": 3
+              },
+              "romaji": "doushite pa-ti- ni ikimasen ka.",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "すき ですから"
+                },
+                {
+                  "id": "b",
+                  "text": "ちょっと たかかった ですから"
+                },
+                {
+                  "id": "c",
+                  "text": "仕事が あります から"
+                },
+                {
+                  "id": "d",
+                  "text": "おそく おきました から"
+                },
+                {
+                  "id": "e",
+                  "text": "一年間 日本で べんきょうしました から"
+                },
+                {
+                  "id": "f",
+                  "text": "ここから 見えませんから"
+                }
+              ],
+              "correctChoiceId": "c"
+            },
+            {
+              "id": "c12-reason-choices-4",
+              "number": 4,
+              "mode": "choice",
+              "prompt": "なぜ 買いませんでしたか。",
+              "model": "ちょっと たかかった ですから",
+              "whyEn": "You didn't buy it because it was a little expensive.",
+              "source": {
+                "printedPage": 27,
+                "number": 4
+              },
+              "romaji": "naze kaimasen deshita ka.",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "すき ですから"
+                },
+                {
+                  "id": "b",
+                  "text": "ちょっと たかかった ですから"
+                },
+                {
+                  "id": "c",
+                  "text": "仕事が あります から"
+                },
+                {
+                  "id": "d",
+                  "text": "おそく おきました から"
+                },
+                {
+                  "id": "e",
+                  "text": "一年間 日本で べんきょうしました から"
+                },
+                {
+                  "id": "f",
+                  "text": "ここから 見えませんから"
+                }
+              ],
+              "correctChoiceId": "b"
+            },
+            {
+              "id": "c12-reason-choices-5",
+              "number": 5,
+              "mode": "choice",
+              "prompt": "どうして 大きくしましたか。",
+              "model": "ここから 見えませんから",
+              "whyEn": "You made it bigger because it couldn't be seen from here.",
+              "source": {
+                "printedPage": 27,
+                "number": 5
+              },
+              "romaji": "doushite ookiku shimashita ka.",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "すき ですから"
+                },
+                {
+                  "id": "b",
+                  "text": "ちょっと たかかった ですから"
+                },
+                {
+                  "id": "c",
+                  "text": "仕事が あります から"
+                },
+                {
+                  "id": "d",
+                  "text": "おそく おきました から"
+                },
+                {
+                  "id": "e",
+                  "text": "一年間 日本で べんきょうしました から"
+                },
+                {
+                  "id": "f",
+                  "text": "ここから 見えませんから"
+                }
+              ],
+              "correctChoiceId": "f"
+            },
+            {
+              "id": "c12-reason-choices-6",
+              "number": 6,
+              "mode": "choice",
+              "prompt": "なんで これを えらびましたか。",
+              "model": "すき ですから",
+              "whyEn": "You chose this one because you like it.",
+              "source": {
+                "printedPage": 27,
+                "number": 6
+              },
+              "romaji": "nande kore o erabimashita ka.",
+              "choices": [
+                {
+                  "id": "a",
+                  "text": "すき ですから"
+                },
+                {
+                  "id": "b",
+                  "text": "ちょっと たかかった ですから"
+                },
+                {
+                  "id": "c",
+                  "text": "仕事が あります から"
+                },
+                {
+                  "id": "d",
+                  "text": "おそく おきました から"
+                },
+                {
+                  "id": "e",
+                  "text": "一年間 日本で べんきょうしました から"
+                },
+                {
+                  "id": "f",
+                  "text": "ここから 見えませんから"
+                }
+              ],
+              "correctChoiceId": "a"
+            }
+          ]
+        },
+        {
+          "id": "c12-volitional-forms",
+          "chapter": "12",
+          "title": "れんしゅう: Complete the table (page 31)",
+          "sourcePage": 31,
+          "instructionsJa": "〈れんしゅう〉",
+          "instructionsEn": "Please complete the table. Write the polite volitional form (ましょう). After checking, compare the ます form, the plain volitional form and the meaning.",
+          "heading": "c12-volitional-forms",
+          "questions": [
+            {
+              "id": "c12-volitional-forms-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "もどる",
+              "model": "もどりましょう",
+              "whyEn": "ます form: もどります. Plain volitional: もどろう. Meaning: let's go back.",
+              "source": {
+                "printedPage": 31,
+                "number": 1
+              },
+              "accepted": [
+                "もどりましょう"
+              ],
+              "romaji": "modoru"
+            },
+            {
+              "id": "c12-volitional-forms-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "きく",
+              "model": "ききましょう",
+              "whyEn": "ます form: ききます. Plain volitional: きこう. Meaning: let's listen.",
+              "source": {
+                "printedPage": 31,
+                "number": 2
+              },
+              "accepted": [
+                "ききましょう"
+              ],
+              "romaji": "kiku"
+            },
+            {
+              "id": "c12-volitional-forms-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "はなす",
+              "model": "はなしましょう",
+              "whyEn": "ます form: はなします. Plain volitional: はなそう. Meaning: let's talk.",
+              "source": {
+                "printedPage": 31,
+                "number": 3
+              },
+              "accepted": [
+                "はなしましょう"
+              ],
+              "romaji": "hanasu"
+            },
+            {
+              "id": "c12-volitional-forms-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "よむ",
+              "model": "よみましょう",
+              "whyEn": "ます form: よみます. Plain volitional: よもう. Meaning: let's read.",
+              "source": {
+                "printedPage": 31,
+                "number": 4
+              },
+              "accepted": [
+                "よみましょう"
+              ],
+              "romaji": "yomu"
+            },
+            {
+              "id": "c12-volitional-forms-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "かいものする",
+              "model": "かいものしましょう",
+              "whyEn": "ます form: かいものします. Plain volitional: かいものしよう. Meaning: let's go shopping.",
+              "source": {
+                "printedPage": 31,
+                "number": 5
+              },
+              "accepted": [
+                "かいものしましょう"
+              ],
+              "romaji": "kaimono suru"
+            },
+            {
+              "id": "c12-volitional-forms-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "はらう",
+              "model": "はらいましょう",
+              "whyEn": "ます form: はらいます. Plain volitional: はらおう. Meaning: let's pay.",
+              "source": {
+                "printedPage": 31,
+                "number": 6
+              },
+              "accepted": [
+                "はらいましょう"
+              ],
+              "romaji": "harau"
+            },
+            {
+              "id": "c12-volitional-forms-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "だす",
+              "model": "だしましょう",
+              "whyEn": "ます form: だします. Plain volitional: だそう. Meaning: let's submit.",
+              "source": {
+                "printedPage": 31,
+                "number": 7
+              },
+              "accepted": [
+                "だしましょう"
+              ],
+              "romaji": "dasu"
+            },
+            {
+              "id": "c12-volitional-forms-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "つくる",
+              "model": "つくりましょう",
+              "whyEn": "ます form: つくります. Plain volitional: つくろう. Meaning: let's make.",
+              "source": {
+                "printedPage": 31,
+                "number": 8
+              },
+              "accepted": [
+                "つくりましょう"
+              ],
+              "romaji": "tsukuru"
+            },
+            {
+              "id": "c12-volitional-forms-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "べんきょうする",
+              "model": "べんきょうしましょう",
+              "whyEn": "ます form: べんきょうします. Plain volitional: べんきょうしよう. Meaning: let's study.",
+              "source": {
+                "printedPage": 31,
+                "number": 9
+              },
+              "accepted": [
+                "べんきょうしましょう"
+              ],
+              "romaji": "benkyou suru"
+            },
+            {
+              "id": "c12-volitional-forms-10",
+              "number": 10,
+              "mode": "text",
+              "prompt": "かえす",
+              "model": "かえしましょう",
+              "whyEn": "ます form: かえします. Plain volitional: かえそう. Meaning: let's give it back.",
+              "source": {
+                "printedPage": 31,
+                "number": 10
+              },
+              "accepted": [
+                "かえしましょう"
+              ],
+              "romaji": "kaesu"
+            }
+          ]
+        },
+        {
+          "id": "c12-grammar-choices",
+          "chapter": "12",
+          "title": "I. ぶんぽう けいしきの はんだん: Selecting grammar form (page 34)",
+          "sourcePage": 34,
+          "instructionsJa": "I. ぶんぽう けいしきの はんだん",
+          "instructionsEn": "Please choose the correct grammatical pattern.",
+          "heading": "c12-grammar-choices",
+          "questions": [
+            {
+              "id": "c12-grammar-choices-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "ア：おととい、どこかへ 行きましたか。\nイ：いいえ、（　）行きませんでした。",
+              "model": "どこへも",
+              "whyEn": "The answer is negative (いきませんでした), so use どこへも, nowhere.",
+              "source": {
+                "printedPage": 34,
+                "number": 1
+              },
+              "romaji": "A: ototoi, dokoka e ikimashita ka. B: iie, ____ ikimasen deshita.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "どこへか"
+                },
+                {
+                  "id": "2",
+                  "text": "どこへも"
+                },
+                {
+                  "id": "3",
+                  "text": "どこかへ"
+                },
+                {
+                  "id": "4",
+                  "text": "どこかも"
+                }
+              ],
+              "correctChoiceId": "2"
+            },
+            {
+              "id": "c12-grammar-choices-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "ともだち（　）いつも カラオケで うたを うたいます。",
+              "model": "とは",
+              "whyEn": "With friends is と. Adding は for emphasis makes とは.",
+              "source": {
+                "printedPage": 34,
+                "number": 2
+              },
+              "romaji": "tomodachi ____ itsumo karaoke de uta o utaimasu.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "をは"
+                },
+                {
+                  "id": "2",
+                  "text": "では"
+                },
+                {
+                  "id": "3",
+                  "text": "とは"
+                },
+                {
+                  "id": "4",
+                  "text": "へは"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c12-grammar-choices-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "いつ（　）いいですか。",
+              "model": "が",
+              "whyEn": "いつ is the subject of いいですか, and a question word as the subject takes が: いつが いいですか, when is good?",
+              "source": {
+                "printedPage": 34,
+                "number": 3
+              },
+              "romaji": "itsu ____ ii desu ka.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "に"
+                },
+                {
+                  "id": "2",
+                  "text": "は"
+                },
+                {
+                  "id": "3",
+                  "text": "の"
+                },
+                {
+                  "id": "4",
+                  "text": "が"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c12-grammar-choices-4",
+              "number": 4,
+              "mode": "choice",
+              "prompt": "ア：かばんは つくえの 上に ありますか。\nイ：いいえ、つくえの 上（　）ありません。",
+              "model": "には",
+              "whyEn": "The answer stresses the place: に plus は makes には, not on the desk.",
+              "source": {
+                "printedPage": 34,
+                "number": 4
+              },
+              "romaji": "A: kaban wa tsukue no ue ni arimasu ka. B: iie, tsukue no ue ____ arimasen.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "にか"
+                },
+                {
+                  "id": "2",
+                  "text": "かに"
+                },
+                {
+                  "id": "3",
+                  "text": "には"
+                },
+                {
+                  "id": "4",
+                  "text": "かも"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c12-grammar-choices-5",
+              "number": 5,
+              "mode": "choice",
+              "prompt": "あした、だれ（　）会いますか。",
+              "model": "かと",
+              "whyEn": "だれか is someone, and と is with: だれかと あいますか, are you meeting someone?",
+              "source": {
+                "printedPage": 34,
+                "number": 5
+              },
+              "romaji": "ashita, dare ____ aimasu ka.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "かを"
+                },
+                {
+                  "id": "2",
+                  "text": "かと"
+                },
+                {
+                  "id": "3",
+                  "text": "かへ"
+                },
+                {
+                  "id": "4",
+                  "text": "かも"
+                }
+              ],
+              "correctChoiceId": "2"
+            },
+            {
+              "id": "c12-grammar-choices-6",
+              "number": 6,
+              "mode": "choice",
+              "prompt": "ア：ちかくの レストランで いっしょに ひるごはんを（　）。\nイ：はい、食べましょう。",
+              "model": "たべませんか",
+              "whyEn": "B answers with たべましょう, so A is inviting: たべませんか, won't you eat?",
+              "source": {
+                "printedPage": 34,
+                "number": 6
+              },
+              "romaji": "A: chikaku no resutoran de issho ni hirugohan o ____. B: hai, tabemashou.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "たべます"
+                },
+                {
+                  "id": "2",
+                  "text": "たべません"
+                },
+                {
+                  "id": "3",
+                  "text": "たべました"
+                },
+                {
+                  "id": "4",
+                  "text": "たべませんか"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c12-grammar-choices-7",
+              "number": 7,
+              "mode": "choice",
+              "prompt": "ア：どうして せんしゅう 仕事を 休みましたか。\nイ：一日中、からだ（　）ですから。",
+              "model": "が だるかった",
+              "whyEn": "A part of the body takes が, and last week is in the past, so use が だるかった.",
+              "source": {
+                "printedPage": 34,
+                "number": 7
+              },
+              "romaji": "A: doushite senshuu shigoto o yasumimashita ka. B: ichinichijuu, karada ____ desu kara.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "が だるい"
+                },
+                {
+                  "id": "2",
+                  "text": "を だるい"
+                },
+                {
+                  "id": "3",
+                  "text": "が だるかった"
+                },
+                {
+                  "id": "4",
+                  "text": "を だるかった"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c12-grammar-choices-8",
+              "number": 8,
+              "mode": "choice",
+              "prompt": "ア：なにを 見ますか。\nイ：（　）見ません。",
+              "model": "なにも",
+              "whyEn": "The verb is negative (みません), so use なにも, nothing.",
+              "source": {
+                "printedPage": 34,
+                "number": 8
+              },
+              "romaji": "A: nani o mimasu ka. B: ____ mimasen.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "なにを"
+                },
+                {
+                  "id": "2",
+                  "text": "なにに"
+                },
+                {
+                  "id": "3",
+                  "text": "なにが"
+                },
+                {
+                  "id": "4",
+                  "text": "なにも"
+                }
+              ],
+              "correctChoiceId": "4"
+            }
+          ]
+        },
+        {
+          "id": "c12-word-order",
+          "chapter": "12",
+          "title": "II. ぶんの くみたて: Sentence composition (page 35)",
+          "sourcePage": 35,
+          "instructionsJa": "II. ぶんの くみたて",
+          "instructionsEn": "Please rearrange the words to complete the sentence. Select a word to add it, and select a chosen word to put it back.",
+          "heading": "c12-word-order",
+          "questions": [
+            {
+              "id": "c12-word-order-1",
+              "number": 1,
+              "mode": "order",
+              "prompt": "アナさんは 一日中 ＿＿ ＿＿ ＿＿ ＿＿ が いたいです。",
+              "model": "アナさんは 一日中 へやを そうじしたから かたが いたいです。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 35,
+                "number": 1
+              },
+              "tokens": [
+                "そうじ",
+                "かた",
+                "へやを",
+                "したから"
+              ],
+              "acceptedOrders": [
+                [
+                  2,
+                  0,
+                  3,
+                  1
+                ]
+              ],
+              "before": "アナさんは 一日中",
+              "after": "が いたいです。"
+            },
+            {
+              "id": "c12-word-order-2",
+              "number": 2,
+              "mode": "order",
+              "prompt": "明日 ＿＿ ＿＿ ＿＿ ＿＿ べんきょうします。",
+              "model": "明日 しけんが あるから べんきょうします。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 35,
+                "number": 2
+              },
+              "tokens": [
+                "しけん",
+                "ある",
+                "から",
+                "が"
+              ],
+              "acceptedOrders": [
+                [
+                  0,
+                  3,
+                  1,
+                  2
+                ]
+              ],
+              "before": "明日",
+              "after": "べんきょうします。"
+            },
+            {
+              "id": "c12-word-order-3",
+              "number": 3,
+              "mode": "order",
+              "prompt": "あぶない ＿＿ ＿＿ ＿＿ ＿＿ 行きません。",
+              "model": "あぶないですから あそこへ 行きません。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 35,
+                "number": 3
+              },
+              "tokens": [
+                "あそこ",
+                "から",
+                "へ",
+                "です"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  1,
+                  0,
+                  2
+                ]
+              ],
+              "before": "あぶない",
+              "after": "行きません。"
+            },
+            {
+              "id": "c12-word-order-4",
+              "number": 4,
+              "mode": "order",
+              "prompt": "ベンさん ＿＿ ＿＿ ＿＿ ＿＿ か。",
+              "model": "ベンさんは だれかと 会いましたか。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 35,
+                "number": 4
+              },
+              "tokens": [
+                "と",
+                "だれか",
+                "会いました",
+                "は"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  1,
+                  0,
+                  2
+                ]
+              ],
+              "before": "ベンさん",
+              "after": "か。"
+            },
+            {
+              "id": "c12-word-order-5",
+              "number": 5,
+              "mode": "order",
+              "prompt": "おかあさんは 今日の ＿＿ ＿＿ ＿＿ ＿＿ です。",
+              "model": "おかあさんは 今日の あさ からだが だるかったです。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 35,
+                "number": 5
+              },
+              "tokens": [
+                "が",
+                "あさ",
+                "だるかった",
+                "からだ"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              ],
+              "before": "おかあさんは 今日の",
+              "after": "です。"
+            },
+            {
+              "id": "c12-word-order-6",
+              "number": 6,
+              "mode": "order",
+              "prompt": "日よう日に ＿＿ ＿＿ ＿＿ ＿＿ 。",
+              "model": "日よう日に どこかへ 行きませんか。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 35,
+                "number": 6
+              },
+              "tokens": [
+                "行きません",
+                "どこか",
+                "へ",
+                "か"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  2,
+                  0,
+                  3
+                ]
+              ],
+              "before": "日よう日に",
+              "after": "。"
+            },
+            {
+              "id": "c12-word-order-7",
+              "number": 7,
+              "mode": "order",
+              "prompt": "明日 ＿＿ ＿＿ ＿＿ ＿＿ 行きましょう。",
+              "model": "明日 休みだから こうえんへ 行きましょう。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 35,
+                "number": 7
+              },
+              "tokens": [
+                "から",
+                "へ",
+                "こうえん",
+                "休みだ"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  0,
+                  2,
+                  1
+                ]
+              ],
+              "before": "明日",
+              "after": "行きましょう。"
+            },
+            {
+              "id": "c12-word-order-8",
+              "number": 8,
+              "mode": "order",
+              "prompt": "たくさん 食べたので、今日 ＿＿ ＿＿ ＿＿ ＿＿ なりました。",
+              "model": "たくさん 食べたので、今日 おなかが とても いたく なりました。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "source": {
+                "printedPage": 35,
+                "number": 8
+              },
+              "tokens": [
+                "とても",
+                "いたく",
+                "おなか",
+                "が"
+              ],
+              "acceptedOrders": [
+                [
+                  2,
+                  3,
+                  0,
+                  1
+                ]
+              ],
+              "before": "たくさん 食べたので、今日",
+              "after": "なりました。"
+            }
+          ]
+        },
+        {
+          "id": "c12-text-grammar",
+          "chapter": "12",
+          "title": "III. ぶんしょうの ぶんぽう: Text grammar (page 36)",
+          "sourcePage": 36,
+          "instructionsJa": "III. ぶんしょうの ぶんぽう",
+          "instructionsEn": "Please read the conversation above and choose the proper word or phrase for blanks (1) to (3).",
+          "passageId": "c12-party-passage",
+          "heading": "c12-text-grammar",
+          "questions": [
+            {
+              "id": "c12-text-grammar-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "（1）に はいる ことばは どれですか。",
+              "model": "なにか",
+              "whyEn": "Mike asks whether something is happening that day: なにか ありますか, is there anything? The book prints なにを twice, as options 1 and 4.",
+              "source": {
+                "printedPage": 36,
+                "number": 1
+              },
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "なにを"
+                },
+                {
+                  "id": "2",
+                  "text": "なにで"
+                },
+                {
+                  "id": "3",
+                  "text": "なにか"
+                },
+                {
+                  "id": "4",
+                  "text": "なにを"
+                }
+              ],
+              "correctChoiceId": "3"
+            },
+            {
+              "id": "c12-text-grammar-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "（2）に はいる ことばは どれですか。",
+              "model": "行きませんか",
+              "whyEn": "Ana is inviting Mike, and he answers いいですよ, so use the invitation いきませんか.",
+              "source": {
+                "printedPage": 36,
+                "number": 2
+              },
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "行きました"
+                },
+                {
+                  "id": "2",
+                  "text": "行きません"
+                },
+                {
+                  "id": "3",
+                  "text": "行きましたか"
+                },
+                {
+                  "id": "4",
+                  "text": "行きませんか"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c12-text-grammar-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "（3）に はいる ことばは どれですか。",
+              "model": "あるので",
+              "whyEn": "The exam on Monday is the reason Yamada can't come. It is still in the future, so use the present form: あるので.",
+              "source": {
+                "printedPage": 36,
+                "number": 3
+              },
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "あるなから"
+                },
+                {
+                  "id": "2",
+                  "text": "あったから"
+                },
+                {
+                  "id": "3",
+                  "text": "あるので"
+                },
+                {
+                  "id": "4",
+                  "text": "あったので"
+                }
+              ],
+              "correctChoiceId": "3"
+            }
+          ]
+        },
+        {
+          "id": "c12-reading-comprehension",
+          "chapter": "12",
+          "title": "IV. どっかい: Reading comprehension (page 37)",
+          "sourcePage": 37,
+          "instructionsJa": "IV. どっかい",
+          "instructionsEn": "Please read the passage above and answer the questions.",
+          "passageId": "c12-oversleep-passage",
+          "heading": "c12-reading-comprehension",
+          "questions": [
+            {
+              "id": "c12-reading-comprehension-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "この人は ゆうべ どうやって 帰りましたか。",
+              "model": "あるいて 帰りました",
+              "whyEn": "The last train had gone and there were no taxis or buses, so the writer walked home: あるいて かえりました.",
+              "source": {
+                "printedPage": 37,
+                "number": 1
+              },
+              "romaji": "kono hito wa yuube douyatte kaerimashita ka.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "タクシーで 帰りました"
+                },
+                {
+                  "id": "2",
+                  "text": "電車で 帰りました"
+                },
+                {
+                  "id": "3",
+                  "text": "バスで 帰りました"
+                },
+                {
+                  "id": "4",
+                  "text": "あるいて 帰りました"
+                }
+              ],
+              "correctChoiceId": "4"
+            },
+            {
+              "id": "c12-reading-comprehension-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "なぜ クラスにちこくしましたか。",
+              "model": "からだがだるいから",
+              "whyEn": "After walking home for about an hour, the writer's body felt sluggish, so they overslept and were late.",
+              "source": {
+                "printedPage": 37,
+                "number": 2
+              },
+              "romaji": "naze kurasu ni chikoku shimashita ka.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "電車が来ませんでしたから"
+                },
+                {
+                  "id": "2",
+                  "text": "しけんがありますから"
+                },
+                {
+                  "id": "3",
+                  "text": "からだがだるいから"
+                },
+                {
+                  "id": "4",
+                  "text": "先生がしんぱいしましたから"
+                }
+              ],
+              "correctChoiceId": "3"
+            }
+          ]
+        },
+        {
+          "id": "c12-personal-answers",
+          "chapter": "12",
+          "title": "V. といと こたえ: Question and answer (page 38)",
+          "sourcePage": 38,
+          "instructionsJa": "V. といと こたえ",
+          "instructionsEn": "Please write your answer in sentence form. The model is only one example. Your answer is fine if the grammar and meaning are correct.",
+          "heading": "c12-personal-answers",
+          "questions": [
+            {
+              "id": "c12-personal-answers-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "日本が すきですか。どうしてですか。",
+              "model": "はい、すきです。日本の りょうりが おいしいですから。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 1
+              },
+              "romaji": "nihon ga suki desu ka. doushite desu ka."
+            },
+            {
+              "id": "c12-personal-answers-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "どうして 日本語を べんきょうしますか。",
+              "model": "日本の アニメが すきですから。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 2
+              },
+              "romaji": "doushite nihongo o benkyoushimasu ka."
+            },
+            {
+              "id": "c12-personal-answers-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "どうして JLRC で 日本語を べんきょうしますか。",
+              "model": "先生が やさしいですから。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 3
+              },
+              "romaji": "doushite JLRC de nihongo o benkyoushimasu ka."
+            },
+            {
+              "id": "c12-personal-answers-4",
+              "number": 4,
+              "mode": "self",
+              "prompt": "モールへ 行きます。モールで なにを 買いますか。",
+              "model": "くつを 買います。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 4
+              },
+              "romaji": "mo-ru e ikimasu. mo-ru de nani o kaimasu ka."
+            },
+            {
+              "id": "c12-personal-answers-5",
+              "number": 5,
+              "mode": "self",
+              "prompt": "来週の 日よう日に どこかへ 行きますか。",
+              "model": "いいえ、どこへも 行きません。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 5
+              },
+              "romaji": "raishuu no nichiyoubi ni dokoka e ikimasu ka."
+            },
+            {
+              "id": "c12-personal-answers-6",
+              "number": 6,
+              "mode": "self",
+              "prompt": "すきなけいたいの ブランドは なんですか? どうして そのブランドが すきですか。",
+              "model": "ソニーです。カメラが いいですから。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 6
+              },
+              "romaji": "suki na keitai no burando wa nan desu ka? doushite sono burando ga suki desu ka."
+            },
+            {
+              "id": "c12-personal-answers-7",
+              "number": 7,
+              "mode": "self",
+              "prompt": "日本に 行きましたか。いつ 行きましたか。どうして 行きましたか。",
+              "model": "はい、行きました。きょねんの はるに 行きました。さくらが きれいですから。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 7
+              },
+              "romaji": "nihon ni ikimashita ka. itsu ikimashita ka. doushite ikimashita ka."
+            },
+            {
+              "id": "c12-personal-answers-8",
+              "number": 8,
+              "mode": "self",
+              "prompt": "きらいなのみものは なんですか? どうしてですか。",
+              "model": "コーヒーです。にがいですから。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 8
+              },
+              "romaji": "kirai na nomimono wa nan desu ka? doushite desu ka."
+            },
+            {
+              "id": "c12-personal-answers-9",
+              "number": 9,
+              "mode": "self",
+              "prompt": "ことしのクリスマスやすみに どこかへ 行きますか。",
+              "model": "はい、かぞくと うみへ 行きます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 9
+              },
+              "romaji": "kotoshi no kurisumasu yasumi ni dokoka e ikimasu ka."
+            },
+            {
+              "id": "c12-personal-answers-10",
+              "number": 10,
+              "mode": "self",
+              "prompt": "きょう なにか 食べたいものが ありますか。",
+              "model": "はい、ラーメンが 食べたいです。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 38,
+                "number": 10
+              },
+              "romaji": "kyou nanika tabetai mono ga arimasu ka."
+            }
+          ]
+        },
+        {
+          "id": "c12-translation-practice",
+          "chapter": "12",
+          "title": "VI. わやくの れんしゅう: English to Japanese translation (page 38)",
+          "sourcePage": 38,
+          "instructionsJa": "VI. わやくの れんしゅう",
+          "instructionsEn": "Please translate to Japanese, then compare your answer with the model.",
+          "heading": "c12-translation-practice",
+          "questions": [
+            {
+              "id": "c12-translation-practice-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "A: Why did you take a vacation yesterday?\nB: I'm sorry. I was not feeling well. My head was painful.\nA: Did you go to the hospital?\nB: No, I slept in my room the whole day.\nA: Did you drink medicine?\nB: Yes, I drank medicine.",
+              "model": "ア：きのう どうして やすみましたか。\nイ：すみません。からだが だるかったです。あたまが いたかったです。\nア：びょういんへ 行きましたか。\nイ：いいえ、一日中 部屋で ねました。\nア：くすりを のみましたか。\nイ：はい、のみました。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 38,
+                "number": 1
+              }
+            },
+            {
+              "id": "c12-translation-practice-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "A: Did you eat breakfast?\nB: No, I didn't eat breakfast.\nA: Let's eat breakfast together at the new restaurant across the office.",
+              "model": "ア：あさごはんを 食べましたか。\nイ：いいえ、食べませんでした。\nア：じゃあ、かいしゃの まえの 新しい レストランで いっしょに あさごはんを 食べましょう。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 38,
+                "number": 2
+              }
+            },
+            {
+              "id": "c12-translation-practice-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "A: Are you going somewhere on Sunday?\nB: No, I am not going anywhere.",
+              "model": "ア：日曜日に どこかへ 行きますか。\nイ：いいえ、どこへも 行きません。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 38,
+                "number": 3
+              }
+            },
+            {
+              "id": "c12-translation-practice-4",
+              "number": 4,
+              "mode": "self",
+              "prompt": "A: Are you free tonight?\nB: Yes, I am free. Why?\nA: Why don't we watch a movie together.\nB: Yes, let's watch.",
+              "model": "ア：今晩 ひまですか。\nイ：はい、ひまです。どうしてですか。\nア：いっしょに えいがを 見ませんか。\nイ：はい、見ましょう。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 38,
+                "number": 4
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

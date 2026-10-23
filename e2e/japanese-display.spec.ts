@@ -9,7 +9,7 @@ const chapter8 = chapters.find(c => c.ch === "8")!;
 const reportedId = /<h3 id="([^"]+)">Part U: Answer the question<\/h3>/.exec(chapter8.sections.find(s => s.id === "exercises")!.html)![1];
 const reportedTable = (page: import("@playwright/test").Page) => visibleMain(page).locator(`[id="${reportedId}"]`).locator("xpath=following-sibling::div[contains(@class,'tw')][1]");
 
-for (const path of [...Array.from({ length: 11 }, (_, i) => `/chapters/${i + 1}`), "/kana/1", "/kanji/1", "/kanji/2"]) {
+for (const path of [...Array.from({ length: 12 }, (_, i) => `/chapters/${i + 1}`), "/kana/1", "/kanji/1", "/kanji/2"]) {
   test(`${path}: Japanese is visible and common romaji prompts are hidden by default`, async ({ page }) => {
     await page.goto(path);
     await expect(aids(page)).toBeEnabled();

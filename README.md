@@ -1,6 +1,6 @@
 # Japanese Lesson Reviewer
 
-A personal study site for Japanese lessons. Search vocabulary, grammar, kana and kanji across the study pages, review Chapters 1–11, practise with flashcards and exercises, and assess progress with checkpoints and listening exams.
+A personal study site for Japanese lessons. Search vocabulary, grammar, kana and kanji across the study pages, review Chapters 1–12, practise with flashcards and exercises, and assess progress with checkpoints and listening exams.
 
 Built with Next.js 16.4 (App Router, Cache Components), React 19.3, TypeScript and Tailwind CSS 4. Deployed on Vercel.
 
@@ -85,7 +85,7 @@ The search lives in the URL of the home page, so a search can be bookmarked or s
 | --- | --- | --- |
 | `q` | Any text, matched case-insensitively against kana, romaji and English | empty |
 | `category` | `vocab`, `grammar`, `script` (Kana & Kanji), `practice`, `answers` | all |
-| `chapter` | `1` to `11`, `kana`, `kanji`, `practice` (derived from the current study pages) | all |
+| `chapter` | `1` to `12`, `kana`, `kanji`, `practice` (derived from the current study pages) | all |
 
 - Example: `/?q=gakkou&category=vocab&chapter=1`
 - Unknown values fall back to the default. Other parameters and the `#hash` are kept.
@@ -106,7 +106,7 @@ To add another chapter: add an entry to `src/data/exercises.json` like the exist
 
 ## Sentence building
 
-Every chapter has a **Sentence building** panel in its Exercises section, below existing interactive practice where present. Arrange word and phrase tiles to reconstruct three lesson examples per chapter (33 puzzles across the current 11 chapters). Select a chosen tile to remove it, use **Undo last tile** or **Clear sentence**, then **Check answer**. Tiles work with touch, mouse and keyboard; dragging is not required. This activity checks the source sentence's order; other natural Japanese orders may be possible.
+Every chapter has a **Sentence building** panel in its Exercises section, below existing interactive practice where present. Arrange word and phrase tiles to reconstruct three lesson examples per chapter (36 puzzles across the current 12 chapters). Select a chosen tile to remove it, use **Undo last tile** or **Clear sentence**, then **Check answer**. Tiles work with touch, mouse and keyboard; dragging is not required. This activity checks the source sentence's order; other natural Japanese orders may be possible.
 
 Chapters 1, 6 and 10 also offer **Transformations**: 12 curated positive-to-negative and polite-to-casual questions. Type kana or romaji from the lesson. Grading ignores whitespace, case, character width and final full stops; it preserves particles, long vowels, meaning and tense. Only source-printed alternatives, optional particles and the documented negative copulas are accepted. There is no automatic conjugator or open-ended grammar checker.
 
@@ -288,6 +288,12 @@ All 12 activities show a smaller English instruction directly below the Japanese
 No answer key was supplied. All keys and explanations are **added model answers**, not official textbook answers. Typed exercises request kana and accept reviewed printed variants; this is not an unrestricted Japanese sentence evaluator. Text-grammar question 3 accepts both が and を with 書けます. Other transformation drills explicitly request the textbook's が pattern. The potential chart uses 五段／一段／special labels to clarify the PDF's terminology.
 
 `migration/chapter-11-audit.json` records source checksums, printed-page coverage, keys, adaptations, reading notes and hashes proving Chapters 1–10 are unchanged. Adding Chapter 11 did not extend the existing Chapter 5/10 checkpoint scope. The later Chapter 10 curriculum revision uses separate v2 storage as described above. Future chapters can append workbook sets and source reference markup without changing the grading component.
+
+## Chapter 12
+
+`/chapters/12` adds **Reason, Volitional Form, Parts of the Body**, adapted from the supplied scanned Chapter12.pdf (printed pages 23–38): 33 vocabulary entries, all ten sentence patterns (から・ので, なぜ・どうして・なんで, なにか／なにが／なにも, には・へは・では・とは, ましょう, ましょうか, ませんか and body part が adjective), the から・ので chart, the 14-row volitional chart, two reading passages and all 51 workbook questions.
+
+It follows the revised Chapter 11 layout: English and kana headings and explanations, and kanji only where the book prints them, each with its reading from `src/data/furigana.json`. The 51 questions are in 8 activities; 37 are checked automatically (choices, the volitional table and word tiles) and 14 personal and translation questions use self-check. No answer key was supplied, so keys and explanations are added model answers. `migration/chapter-12-audit.json` records the source checksum, keys, adaptations and hashes proving Chapters 1–11 are unchanged.
 
 ## Older chapter practice and study plans
 

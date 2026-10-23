@@ -101,9 +101,9 @@ test.describe("readers", () => {
     await expect(pager()).toHaveCount(2);
     await expect(pager().nth(0)).toHaveAttribute("href", "/chapters/9");
     await expect(pager().nth(1)).toHaveAttribute("href", "/chapters/11");
-    await page.goto("/chapters/11");
+    await page.goto("/chapters/12");
     await expect(pager()).toHaveCount(1);
-    await expect(pager()).toHaveAttribute("href", "/chapters/10");
+    await expect(pager()).toHaveAttribute("href", "/chapters/11");
     await page.goto("/kana/1");
     await expect(visibleMain(page).getByRole("navigation", { name: "Kana pages" }).getByRole("link")).toHaveCount(0);
   });

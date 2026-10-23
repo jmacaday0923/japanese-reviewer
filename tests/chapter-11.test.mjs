@@ -14,8 +14,9 @@ const sets = read("src/data/workbook-exercises.json").chapters.find(c => c.chapt
 const questions = sets.flatMap(s => s.questions), audit = read("migration/chapter-11-audit.json");
 const hash = value => createHash("sha256").update(JSON.stringify(value)).digest("hex");
 test("Chapter 11 appends to the course while preserving every earlier chapter object", () => {
-  assert.deepEqual(chapters.map(c => c.ch), Array.from({ length: 11 }, (_, i) => String(i + 1)));
-  for (const previous of chapters.filter(c => c.ch !== "11")) assert.equal(hash(previous), audit.previousChapterHashes[previous.ch]);
+  // Later chapters are appended after Chapter 11.
+  assert.deepEqual(chapters.slice(0, 11).map(c => c.ch), Array.from({ length: 11 }, (_, i) => String(i + 1)));
+  for (const previous of chapters.filter(c => Number(c.ch) < 11)) assert.equal(hash(previous), audit.previousChapterHashes[previous.ch]);
   assert.deepEqual(chapter.sections.map(s => s.id), ["lessons", "vocab", "mixups", "exercises", "answers"]);
   assert.equal(chapter.sections.at(-1).title, "Model answers");
   for (const name of ["c11-11-1-wa-ga-adjectives", "c11-11-2-naru", "c11-11-3-suru", "c11-11-4-potential", "c11-11-5-mieru-kikoeru"])

@@ -1,0 +1,489 @@
+{
+  "version": 1,
+  "chapter": "12",
+  "sourceFile": "Chapter12.pdf",
+  "sourceSha256": "2822b1c141a4db3d52a7e7b081126e71522f31c8b3fcd3bb3c48f0c32a5b4ca7",
+  "printedPages": [
+    23,
+    38
+  ],
+  "sourceIsScan": true,
+  "textReview": "All 19 embedded page images visually reviewed, covering printed Chapter 12 pages 23 to 38.",
+  "patterns": [
+    "ぶんけい 12.1 Reason + から・ので",
+    "ぶんけい 12.2 なぜ・どうして・なんで",
+    "ぶんけい 12.3 なにか・だれか・どこかへ",
+    "ぶんけい 12.4 なにが・だれが・どれが",
+    "ぶんけい 12.5 なにも・だれも・どこへも",
+    "ぶんけい 12.6 には・へは・では・とは",
+    "ぶんけい 12.7 ましょう",
+    "ぶんけい 12.8 ましょうか",
+    "ぶんけい 12.9 ませんか",
+    "ぶんけい 12.10 Part of the Body が Adjective"
+  ],
+  "vocabularyCount": 33,
+  "workbookQuestionCount": 51,
+  "automaticQuestions": 37,
+  "selfCheckQuestions": 14,
+  "modelAnswersAreGenerated": true,
+  "adaptations": [
+    "No supplied answer key; all keys and explanations are added model answers. Personal and translation answers use self-check.",
+    "Kanji appear only where the printed chapter uses them, and every kanji word shows its reading above it from the reviewed list in src/data/furigana.json. Headings, instructions and explanations use English and kana, following the book.",
+    "Conversation lines are listed without the printed A and B labels, one line per row, with an English translation for each.",
+    "The p.27 reason exercise is a matching task (a to f); each reason is used once.",
+    "The p.31 table asks for the polite volitional form (ましょう). The ます form, plain volitional form and meaning are shown after checking.",
+    "Text grammar (1) on p.36 prints なにを as both option 1 and option 4. Both are kept as printed; the answer is option 3, なにか.",
+    "Grammar question 3 on p.34 (いつ（ ）いいですか) is keyed to が, the subject of いいですか.",
+    "Model answers for personal questions use only grammar taught up to this chapter, plus the たい form the book itself uses in question 10."
+  ],
+  "readingNotes": [
+    {
+      "passage": "c12-party-passage",
+      "words": [
+        "ざんねんですね"
+      ]
+    },
+    {
+      "passage": "c12-oversleep-passage",
+      "words": [
+        "あさねぼう",
+        "しんぱいする",
+        "おきゃくさん",
+        "さいご",
+        "クラスにちこくする",
+        "スタッフ",
+        "つく"
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "c12-reason-choices",
+      "heading": "c12-reason-choices",
+      "printedPage": 27,
+      "questions": [
+        {
+          "id": "c12-reason-choices-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "おそく おきました から",
+          "correctChoiceId": "d"
+        },
+        {
+          "id": "c12-reason-choices-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "一年間 日本で べんきょうしました から",
+          "correctChoiceId": "e"
+        },
+        {
+          "id": "c12-reason-choices-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "仕事が あります から",
+          "correctChoiceId": "c"
+        },
+        {
+          "id": "c12-reason-choices-4",
+          "number": 4,
+          "mode": "choice",
+          "model": "ちょっと たかかった ですから",
+          "correctChoiceId": "b"
+        },
+        {
+          "id": "c12-reason-choices-5",
+          "number": 5,
+          "mode": "choice",
+          "model": "ここから 見えませんから",
+          "correctChoiceId": "f"
+        },
+        {
+          "id": "c12-reason-choices-6",
+          "number": 6,
+          "mode": "choice",
+          "model": "すき ですから",
+          "correctChoiceId": "a"
+        }
+      ]
+    },
+    {
+      "id": "c12-volitional-forms",
+      "heading": "c12-volitional-forms",
+      "printedPage": 31,
+      "questions": [
+        {
+          "id": "c12-volitional-forms-1",
+          "number": 1,
+          "mode": "text",
+          "model": "もどりましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-2",
+          "number": 2,
+          "mode": "text",
+          "model": "ききましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-3",
+          "number": 3,
+          "mode": "text",
+          "model": "はなしましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-4",
+          "number": 4,
+          "mode": "text",
+          "model": "よみましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-5",
+          "number": 5,
+          "mode": "text",
+          "model": "かいものしましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-6",
+          "number": 6,
+          "mode": "text",
+          "model": "はらいましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-7",
+          "number": 7,
+          "mode": "text",
+          "model": "だしましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-8",
+          "number": 8,
+          "mode": "text",
+          "model": "つくりましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-9",
+          "number": 9,
+          "mode": "text",
+          "model": "べんきょうしましょう",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-volitional-forms-10",
+          "number": 10,
+          "mode": "text",
+          "model": "かえしましょう",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c12-grammar-choices",
+      "heading": "c12-grammar-choices",
+      "printedPage": 34,
+      "questions": [
+        {
+          "id": "c12-grammar-choices-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "どこへも",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c12-grammar-choices-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "とは",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c12-grammar-choices-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "が",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c12-grammar-choices-4",
+          "number": 4,
+          "mode": "choice",
+          "model": "には",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c12-grammar-choices-5",
+          "number": 5,
+          "mode": "choice",
+          "model": "かと",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c12-grammar-choices-6",
+          "number": 6,
+          "mode": "choice",
+          "model": "たべませんか",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c12-grammar-choices-7",
+          "number": 7,
+          "mode": "choice",
+          "model": "が だるかった",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c12-grammar-choices-8",
+          "number": 8,
+          "mode": "choice",
+          "model": "なにも",
+          "correctChoiceId": "4"
+        }
+      ]
+    },
+    {
+      "id": "c12-word-order",
+      "heading": "c12-word-order",
+      "printedPage": 35,
+      "questions": [
+        {
+          "id": "c12-word-order-1",
+          "number": 1,
+          "mode": "order",
+          "model": "アナさんは 一日中 へやを そうじしたから かたが いたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-word-order-2",
+          "number": 2,
+          "mode": "order",
+          "model": "明日 しけんが あるから べんきょうします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-word-order-3",
+          "number": 3,
+          "mode": "order",
+          "model": "あぶないですから あそこへ 行きません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-word-order-4",
+          "number": 4,
+          "mode": "order",
+          "model": "ベンさんは だれかと 会いましたか。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-word-order-5",
+          "number": 5,
+          "mode": "order",
+          "model": "おかあさんは 今日の あさ からだが だるかったです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-word-order-6",
+          "number": 6,
+          "mode": "order",
+          "model": "日よう日に どこかへ 行きませんか。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-word-order-7",
+          "number": 7,
+          "mode": "order",
+          "model": "明日 休みだから こうえんへ 行きましょう。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-word-order-8",
+          "number": 8,
+          "mode": "order",
+          "model": "たくさん 食べたので、今日 おなかが とても いたく なりました。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c12-text-grammar",
+      "heading": "c12-text-grammar",
+      "printedPage": 36,
+      "questions": [
+        {
+          "id": "c12-text-grammar-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "なにか",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c12-text-grammar-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "行きませんか",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c12-text-grammar-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "あるので",
+          "correctChoiceId": "3"
+        }
+      ]
+    },
+    {
+      "id": "c12-reading-comprehension",
+      "heading": "c12-reading-comprehension",
+      "printedPage": 37,
+      "questions": [
+        {
+          "id": "c12-reading-comprehension-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "あるいて 帰りました",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c12-reading-comprehension-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "からだがだるいから",
+          "correctChoiceId": "3"
+        }
+      ]
+    },
+    {
+      "id": "c12-personal-answers",
+      "heading": "c12-personal-answers",
+      "printedPage": 38,
+      "questions": [
+        {
+          "id": "c12-personal-answers-1",
+          "number": 1,
+          "mode": "self",
+          "model": "はい、すきです。日本の りょうりが おいしいですから。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-2",
+          "number": 2,
+          "mode": "self",
+          "model": "日本の アニメが すきですから。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-3",
+          "number": 3,
+          "mode": "self",
+          "model": "先生が やさしいですから。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-4",
+          "number": 4,
+          "mode": "self",
+          "model": "くつを 買います。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-5",
+          "number": 5,
+          "mode": "self",
+          "model": "いいえ、どこへも 行きません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-6",
+          "number": 6,
+          "mode": "self",
+          "model": "ソニーです。カメラが いいですから。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-7",
+          "number": 7,
+          "mode": "self",
+          "model": "はい、行きました。きょねんの はるに 行きました。さくらが きれいですから。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-8",
+          "number": 8,
+          "mode": "self",
+          "model": "コーヒーです。にがいですから。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-9",
+          "number": 9,
+          "mode": "self",
+          "model": "はい、かぞくと うみへ 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-personal-answers-10",
+          "number": 10,
+          "mode": "self",
+          "model": "はい、ラーメンが 食べたいです。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c12-translation-practice",
+      "heading": "c12-translation-practice",
+      "printedPage": 38,
+      "questions": [
+        {
+          "id": "c12-translation-practice-1",
+          "number": 1,
+          "mode": "self",
+          "model": "ア：きのう どうして やすみましたか。\nイ：すみません。からだが だるかったです。あたまが いたかったです。\nア：びょういんへ 行きましたか。\nイ：いいえ、一日中 部屋で ねました。\nア：くすりを のみましたか。\nイ：はい、のみました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-translation-practice-2",
+          "number": 2,
+          "mode": "self",
+          "model": "ア：あさごはんを 食べましたか。\nイ：いいえ、食べませんでした。\nア：じゃあ、かいしゃの まえの 新しい レストランで いっしょに あさごはんを 食べましょう。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-translation-practice-3",
+          "number": 3,
+          "mode": "self",
+          "model": "ア：日曜日に どこかへ 行きますか。\nイ：いいえ、どこへも 行きません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c12-translation-practice-4",
+          "number": 4,
+          "mode": "self",
+          "model": "ア：今晩 ひまですか。\nイ：はい、ひまです。どうしてですか。\nア：いっしょに えいがを 見ませんか。\nイ：はい、見ましょう。",
+          "correctChoiceId": null
+        }
+      ]
+    }
+  ],
+  "questionDataSha256": "6c2dfa50a588b36af7240810ef5524e350d17620cdd1df4831e5b440ee5ed9c7",
+  "previousChapterHashes": {
+    "1": "fcb7cc4577bcd889e0c5691ad2ccb32db590916db6be859680f79210f815ea2f",
+    "2": "6f86cf68c36ec2de4fc7d50e98d64cc90dbc373e9f2e264f1a60c9f4c89eadb5",
+    "3": "f0068f578f8bebaf8db2e600ecb60fd8dede8df79507d6a54f3b6814a0424205",
+    "4": "71258037cbc1b33450d1d31f72256a1428933d1a6131b310ab870deac072b0e5",
+    "5": "fe04d1e80ea6aabe8fd19c0f52b2f742ec983bc524d124444ea6bf4d3603b044",
+    "6": "fcf66703797c342f46ffb4d267add642c32aafd3170c048f5767d669a9a29fca",
+    "7": "edc9c1c055016c78e9e81c0367c904a86bc34aefa91ed95c09a20c5707e60782",
+    "8": "37c43fb29be4ea196b0a484115cc7123fab2240cf003b7bf776a4e91f9a11809",
+    "9": "3894cb096eeab009e8077bd3b8f7d665270eb86cf762c1d223d9e5070f025841",
+    "10": "b8b460a8d09146229ba4e170ba0c982e457edab318b7a0502da624b674ec8dd9",
+    "11": "13ea0b3b494ae4369b9902c7869563c209de81716c80b7d7290d0b64f928cc0d"
+  },
+  "chapterSha256": "c654af4479a733fa90e521da908b0bcacc13af19e4f32f4205d711e81ba31cea"
+}

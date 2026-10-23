@@ -15,8 +15,9 @@ test("Chapter 11 appears on the dashboard, after Chapter 10, with its full outli
   await expect(visibleMain(page).locator("[data-workbook-activity]")).toHaveCount(12);
   await expect(visibleMain(page).locator("[data-workbook-question]")).toHaveCount(90);
   const pager = visibleMain(page).getByRole("navigation", { name: "Chapter pages" });
-  await expect(pager.getByRole("link")).toHaveCount(1);
-  await pager.getByRole("link").click();
+  await expect(pager.getByRole("link")).toHaveCount(2);
+  await expect(pager.getByRole("link").last()).toHaveAttribute("href", "/chapters/12");
+  await pager.getByRole("link").first().click();
   await expect(page).toHaveURL("/chapters/10");
   await expect(visibleMain(page).getByRole("navigation", { name: "Chapter pages" }).getByRole("link").last()).toHaveAttribute("href", "/chapters/11");
   await expect(visibleMain(page).getByRole("link", { name: "Vocabulary checkpoint", exact: true })).toBeVisible();
