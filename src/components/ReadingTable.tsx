@@ -30,6 +30,8 @@ export default function ReadingTable({ table, flashcards = [], scope = "" }: { t
         <tbody role={examples ? "rowgroup" : undefined}>
           {table.rows.map((row, r) => {
             const context = rowLabel(table.headers, row, "row " + (r + 1));
+            // A row with its own Kana column keeps that reading as the optional hint.
+            const furigana = !row.some((_, c) => cellKind(table.headers, row, c) === "kana");
             return (
               <tr key={r} role={examples ? "row" : undefined}>
                 {row.map((html, c) => {
@@ -37,7 +39,7 @@ export default function ReadingTable({ table, flashcards = [], scope = "" }: { t
                   const japanese = isJapaneseColumn(table.headers[c]);
                   const value = <span lang={japanese || kind === "kana" ? "ja" : kind === "english" ? "en" : undefined}
                     className={kind === "kana" ? "reading-kana" : japanese ? "reading-japanese" : kind ? "reading-supporting" : undefined}
-                    ><StudyHtml html={html} scope={scope} literal={kind === "romaji"} english={kind === "english"} /></span>;
+                    ><StudyHtml html={html} scope={scope} literal={kind === "romaji"} english={kind === "english"} furigana={furigana} /></span>;
                   return (
                     <td key={c} role={examples ? "cell" : undefined}
                       className={examples ? japanese ? "reading-example-primary" : kind ? "reading-example-support" : "reading-example-speaker" : undefined}>

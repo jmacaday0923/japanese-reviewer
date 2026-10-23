@@ -3,6 +3,7 @@
 import { useId, useRef, useState, type KeyboardEvent } from "react";
 import type { WorkbookQuestion, WorkbookSet } from "@/types/workbook";
 import { ReadingHint } from "@/components/ReadingPreferences";
+import Furigana from "@/components/Furigana";
 import { applyGrades, createActivity, editAnswer, restartActivity, retryIncorrect, summarize } from "@/lib/exercises";
 import { gradeWorkbook, workbookOrder } from "@/lib/workbook";
 import { PRIMARY_BUTTON, SECONDARY_BUTTON, PracticeSummary, Verdict } from "@/components/PracticeParts";
@@ -15,6 +16,8 @@ export default function WorkbookExercises({ set }: { set: WorkbookSet }) {
   const uid = useId();
   const root = useRef<HTMLDivElement>(null);
   const summary = summarize(state);
+  const scope = "chapter/" + set.chapter;
+  const text = (value: string) => <Furigana text={value} scope={scope} />;
   function focusQuestion(id: string) {
     requestAnimationFrame(() => {
       const item = root.current?.querySelector('[data-workbook-question="' + id + '"]');
@@ -59,7 +62,7 @@ export default function WorkbookExercises({ set }: { set: WorkbookSet }) {
     <p className="mt-2 text-xs leading-relaxed text-muted">
       {set.questions.length} questions · Printed page {set.sourcePage} · {selfCheck ? "Self-check: several answers can be valid." : "Check answers here."} Progress stays while this page is open; reloading starts fresh.
     </p>
-    {set.wordBank && <p lang="ja" className="mt-3 rounded-control border border-border bg-background p-3 text-lg leading-loose">ことば：{set.wordBank.join(" ／ ")}</p>}
+    {set.wordBank && <p lang="ja" className="mt-3 rounded-control border border-border bg-background p-3 text-lg leading-loose">ことば：{text(set.wordBank.join(" ／ "))}</p>}
     <ol className="mt-4 space-y-4" style={{ listStyle: "none", paddingLeft: 0 }}>
       {set.questions.map(q => {
         const progress = state.progress[q.id], checked = progress.status !== "unanswered";
@@ -68,24 +71,24 @@ export default function WorkbookExercises({ set }: { set: WorkbookSet }) {
         const promptId = uid + "-" + q.id + "-prompt", feedbackId = uid + "-" + q.id + "-feedback";
         return <li key={q.id} data-workbook-question={q.id} className="min-w-0 rounded-card border border-border bg-background/40 p-4 sm:p-5">
           <p className="text-xs font-semibold text-muted">Question {q.number}{locked ? " · Answer kept" : ""}</p>
-          <p id={promptId} lang={q.mode === "self" && set.id.endsWith("translation-practice") ? "en" : "ja"} className="mt-3 whitespace-pre-line break-words text-xl leading-loose">{q.prompt}</p>
+          <p id={promptId} lang={q.mode === "self" && set.id.endsWith("translation-practice") ? "en" : "ja"} className="mt-3 whitespace-pre-line break-words text-xl leading-loose">{text(q.prompt)}</p>
           {q.romaji && <div className="mt-2 text-sm text-muted"><ReadingHint kind="romaji" context={set.title + " question " + q.number} compact>{q.romaji}</ReadingHint></div>}
           {q.mode === "choice" ? <fieldset disabled={locked} aria-describedby={promptId + (checked ? " " + feedbackId : "")} className="mt-4">
             <legend className="sr-only">Answer question {q.number}</legend>
             <div className="grid gap-2 sm:grid-cols-2">
               {q.choices!.map(choice => <label key={choice.id} className={"flex min-h-12 min-w-0 cursor-pointer items-start gap-3 rounded-control border p-3 " + (progress.value === choice.id ? "border-accent bg-accent-soft" : "border-border")}>
                 <input type="radio" name={uid + "-" + q.id} value={choice.id} checked={progress.value === choice.id} onChange={() => edit(q.id, choice.id)} className="mt-1.5 size-4 shrink-0 accent-accent" />
-                <span lang="ja" className="min-w-0 break-words text-lg leading-relaxed">{choice.id}. {choice.text}</span>
+                <span lang="ja" className="min-w-0 break-words text-lg leading-relaxed">{choice.id}. {text(choice.text)}</span>
               </label>)}
             </div>
           </fieldset> : q.mode === "order" ? <div className="mt-4" role="group" aria-label={"Arrange question " + q.number} aria-describedby={promptId}>
-            <p lang="ja" className="text-lg leading-relaxed">{q.before}</p>
+            <p lang="ja" className="text-lg leading-relaxed">{q.before && text(q.before)}</p>
             <div data-workbook-chosen className="my-3 flex min-h-14 flex-wrap gap-2 rounded-control border border-border p-2" aria-label="Chosen words">
-              {order.map((id, i) => <button key={id} type="button" disabled={locked} aria-label={"Remove word " + (i + 1) + ": " + q.tokens![id]} className={SECONDARY_BUTTON} onClick={() => edit(q.id, order.filter(item => item !== id).join(","))}><span lang="ja">{q.tokens![id]}</span></button>)}
+              {order.map((id, i) => <button key={id} type="button" disabled={locked} aria-label={"Remove word " + (i + 1) + ": " + q.tokens![id]} className={SECONDARY_BUTTON} onClick={() => edit(q.id, order.filter(item => item !== id).join(","))}><span lang="ja">{text(q.tokens![id])}</span></button>)}
             </div>
-            <p lang="ja" className="text-lg">{q.after}</p>
+            <p lang="ja" className="text-lg">{q.after && text(q.after)}</p>
             <div data-workbook-tiles className="mt-4 flex flex-wrap gap-2" aria-label="Available words">
-              {q.tokens!.map((token, id) => <button key={id} type="button" disabled={locked || order.includes(id)} className={SECONDARY_BUTTON} onClick={() => edit(q.id, [...order, id].join(","))}><span lang="ja">{token}</span></button>)}
+              {q.tokens!.map((token, id) => <button key={id} type="button" disabled={locked || order.includes(id)} className={SECONDARY_BUTTON} onClick={() => edit(q.id, [...order, id].join(","))}><span lang="ja">{text(token)}</span></button>)}
             </div>
             <div className="mt-3 flex flex-wrap gap-2">
               <button type="button" disabled={locked || !order.length} className={SECONDARY_BUTTON} onClick={() => edit(q.id, order.slice(0, -1).join(","))}>Undo last word</button>
@@ -100,9 +103,8 @@ export default function WorkbookExercises({ set }: { set: WorkbookSet }) {
           <button type="button" disabled={locked} onClick={() => check(q)} className={PRIMARY_BUTTON + " mt-4"}>{q.mode === "self" ? "Show model answer" : "Check answer"}</button>
           {(checked || revealed) && <div id={feedbackId} data-workbook-feedback className="mt-4 border-t border-border pt-4">
             {q.mode === "self" ? <p className="text-sm font-semibold">Model answer · Compare your own response</p> : <Verdict status={progress.status as "correct" | "incorrect"} />}
-            <p lang="ja" className="mt-3 whitespace-pre-line break-words text-xl leading-loose">{q.model}</p>
-            <p lang="ja" className="mt-3 text-lg leading-relaxed">{q.whyJa}</p>
-            <div className="mt-2 text-sm text-muted"><ReadingHint kind="english" context={set.title + " explanation " + q.number} compact>{q.whyEn}</ReadingHint></div>
+            <p lang="ja" className="mt-3 whitespace-pre-line break-words text-xl leading-loose">{text(q.model)}</p>
+            <p lang="en" data-workbook-why className="mt-3 text-base leading-relaxed">{text(q.whyEn)}</p>
             {q.mode === "self" && !locked && <div className="mt-4 flex flex-wrap gap-2">
               <button type="button" className={SECONDARY_BUTTON} onClick={() => { setState(s => applyGrades(s, { [q.id]: "correct" })); setNotice("Self-check recorded: satisfied."); }}>I’m satisfied</button>
               <button type="button" className={SECONDARY_BUTTON} onClick={() => { setState(s => applyGrades(s, { [q.id]: "incorrect" })); setNotice("Self-check recorded: needs review."); }}>Needs review</button>

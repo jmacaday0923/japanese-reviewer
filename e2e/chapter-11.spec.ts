@@ -112,7 +112,10 @@ test("word tiles support undo, removal and keyboard selection", async ({ page })
   await page.goto("/chapters/11#c11-word-order");
   const item = question(page,"c11-word-order-1"), bank = item.locator("[data-workbook-tiles] button");
   await bank.nth(2).focus(); await page.keyboard.press("Enter");
-  await expect(item.locator("[data-workbook-chosen] button")).toHaveText(["五月"]);
+  const chosen = item.locator("[data-workbook-chosen] button");
+  await expect(chosen).toHaveCount(1);
+  await expect(chosen).toHaveAttribute("aria-label", "Remove word 1: 五月");
+  await expect(chosen.locator("rt")).toHaveText("ごがつ");
   await item.getByRole("button",{name:"Undo last word",exact:true}).click();
   await expect(item.locator("[data-workbook-chosen] button")).toHaveCount(0);
   for (const id of [2,1,3,0]) await bank.nth(id).click();
@@ -131,8 +134,10 @@ test("reading support starts closed and reveals independently; notes stay below 
   await expect(english).not.toHaveAttribute("open");
   await english.locator("summary").click();
   await expect(english).toHaveAttribute("open","");
-  await expect(visibleMain(page).locator("#exercises")).toContainText("いい思い出");
-  await expect(visibleMain(page).locator("ruby, rt")).toHaveCount(0);
+  await expect(visibleMain(page).locator("#exercises")).toContainText("いいおもいで");
+  await expect(block.locator(".reading-japanese ruby").first()).toContainText("大学");
+  await expect(block.locator(".reading-japanese rt").first()).toHaveText("だいがく");
+  await expect(romaji.locator("ruby")).toHaveCount(0);
   const hint = question(page,"c11-personal-answers-1").locator('[data-reading-hint="romaji"]');
   await expect(hint.locator(":scope > span[id]")).toBeHidden();
   await hint.getByRole("button").click();
@@ -203,4 +208,20 @@ for (const width of [320,375]) test(width + "px: questions, word tiles, readings
   await page.goto("/chapters/11#c11-word-order");
   expect(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
   await expect(question(page,"c11-word-order-1").locator("[data-workbook-tiles]")).toBeVisible();
+});
+test("book kanji show furigana in lessons, workbook questions and model answers, but not in headings", async ({ page }) => {
+  await page.goto("/chapters/11");
+  const main = visibleMain(page);
+  const example = main.locator("#lessons tr", { hasText: "なりました" }).first();
+  await expect(example.locator("rt").first()).toHaveText("しゃいん");
+  await expect(main.locator("#lessons h3 ruby, #exercises h3 ruby, #answers h3 ruby")).toHaveCount(0);
+  await expect(main.getByRole("heading", { name: "ぶんけい 11.2 Verb of Change なる" })).toBeVisible();
+  const item = question(page, "c11-potential-sentences-3");
+  await expect(item.locator("rt")).toHaveText(["かんじ", "か"]);
+  await item.getByRole("textbox", { name: "Your answer", exact: true }).fill("かんじが かけます");
+  await item.getByRole("button", { name: "Check answer", exact: true }).click();
+  await expect(item.locator("[data-workbook-feedback] rt")).toHaveText(["かんじ", "か"]);
+  await expect(item.locator("[data-workbook-why]")).toBeVisible();
+  await page.goto("/chapters/10");
+  await expect(visibleMain(page).locator("#lessons ruby")).toHaveCount(0);
 });

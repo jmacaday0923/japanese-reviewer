@@ -3,13 +3,13 @@
   "scope": "All 15 study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.",
   "method": "Exact reviewed display strings. Original source text remains available as a romaji hint; native reading/workbook disclosures stay closed until opened.",
   "sourceHashes": {
-    "src/data/chapters.json": "45c9acc5692d9cc681ce2a2f4f3b1593b7fc8972bb544d0b50101db1386b885d",
+    "src/data/chapters.json": "89776261067e2d1ee67554b5bc229e67848691d67912daffba82ac3e986e14a4",
     "src/data/kana.json": "677dc9d1a4f2ace6908a1bc02f3f17ebc6905524dd24fc33dff7a3ae84e98435",
     "src/data/kanji.json": "2cceecfbcb9d4087d304757aa156161f2f6c53dd9aa7891fc09a47f92ec39234",
     "src/data/practice.json": "5a23e3eb45afff8f5bb6c48eca77e39c756c57b49b5ed7b8dccfddcd461af8aa",
     "src/data/exercises.json": "1147c19bd967c53a386f8dc7972846ab3dcc4cafd66cb6a6c6ff2d73e99b1f71",
-    "src/data/sentence-exercises.json": "598fcf17a92adeb1b39fd9f3357b7ed9fb7b85d578bdf071d55e5cfe594095e4",
-    "src/data/workbook-exercises.json": "7daa11fd5b93dc0e2989bf4cf7fd114de6324a5fb7b65f036a70411689224af2"
+    "src/data/sentence-exercises.json": "93518e702c185799c37ba51c35dc4ae2a63324d7554a32140c2d63b36674d423",
+    "src/data/workbook-exercises.json": "471a0ea0ae9090dbaf6df80c60f21115f2ab28df6a8242b682d6e89c326d19e9"
   },
   "displayHashes": {
     "src/data/japanese-display.json": "ca788915141b5f05f1f56804551fbbda7f3e0598d5366ada31c51eab14a0471e",
@@ -93,9 +93,9 @@
     {
       "page": "chapter/11",
       "sections": 5,
-      "textNodes": 615,
+      "textNodes": 616,
       "japaneseDisplays": 0,
-      "nativeJapaneseNodes": 426
+      "nativeJapaneseNodes": 424
     },
     {
       "page": "kana/1",
@@ -126,6 +126,6 @@
       "nativeJapaneseNodes": 175
     }
   ],
-  "reviewedSourceNodes": 37792,
+  "reviewedSourceNodes": 37793,
   "changedSourceNodes": 10463
 }

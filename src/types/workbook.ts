@@ -1,6 +1,6 @@
 export type WorkbookQuestion = {
   id: string; number: number; mode: "choice" | "text" | "order" | "self";
-  prompt: string; romaji?: string; model: string; whyJa: string; whyEn: string;
+  prompt: string; romaji?: string; model: string; whyEn: string;
   source: { printedPage: number; number: number };
   accepted?: string[];
   choices?: { id: string; text: string }[]; correctChoiceId?: string; acceptedChoiceIds?: string[];

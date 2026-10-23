@@ -7,6 +7,7 @@ import { createActivity, editAnswer, applyGrades, retryIncorrect, summarize } fr
 import { buildSearchIndex, searchGroups } from "../src/lib/search.ts";
 import { splitReadingContent } from "../src/lib/reading-content.ts";
 import { collectFlashcardExamples, sectionFlashcards } from "../src/lib/flashcard-content.ts";
+import { furiganaPage, furiganaParts, parseFuriganaEntry } from "../src/lib/furigana.ts";
 const read = path => JSON.parse(readFileSync(new URL("../" + path, import.meta.url), "utf8"));
 const chapters = read("src/data/chapters.json"), chapter = chapters.find(c => c.ch === "11");
 const sets = read("src/data/workbook-exercises.json").chapters.find(c => c.chapter === "11").sets;
@@ -33,7 +34,7 @@ test("all 90 printed workbook prompts appear in twelve source-linked interactive
     assert.ok(html.includes('id="' + set.heading + '"'));
     assert.deepEqual(set.questions.map(q => q.source.number), Array.from({ length: set.questions.length }, (_, i) => i + 1));
     assert.ok(set.questions.every(q => q.source.printedPage === set.sourcePage));
-    for (const q of set.questions) assert.ok(q.model && q.whyJa && q.whyEn);
+    for (const q of set.questions) assert.ok(q.model && q.whyEn && !("whyJa" in q));
     const reference = audit.sets.find(s => s.id === set.id);
     assert.deepEqual(reference.questions.map(q => q.id), set.questions.map(q => q.id));
     assert.deepEqual(reference.questions.map(q => q.model), set.questions.map(q => q.model));
@@ -125,8 +126,8 @@ test("two Japanese reading passages keep independent closed support and source-s
   assert.equal((html.match(/data-reading-support="romaji"/g) ?? []).length, 2);
   assert.equal((html.match(/data-reading-support="english"/g) ?? []).length, 2);
   assert.doesNotMatch(html, /<details[^>]*\bopen\b/);
-  assert.ok(html.includes("システム工学") && html.includes("いい思い出"));
-  assert.deepEqual(audit.readingNotes.map(p => p.words), [["システム工学"],["バンドのメンバー","選手","スポーツキャンプ","いい思い出"]]);
+  assert.ok(html.includes("システムこうがく") && html.includes("いいおもいで"));
+  assert.deepEqual(audit.readingNotes.map(p => p.words), [["システムこうがく"],["バンドのメンバー","せんしゅ","スポーツキャンプ","いいおもいで"]]);
 });
 test("vocabulary, lesson sentences and potential forms feed search and source-backed flashcards", () => {
   const index = buildSearchIndex([{ kind:"chapter", label:"Chapter", basePath:"/chapters", pages:[chapter] }]);
@@ -139,4 +140,26 @@ test("vocabulary, lesson sentences and potential forms feed search and source-ba
   assert.equal(cards.filter(c => c.kind === "sentence").length, 86);
   assert.ok(cards.some(c => c.japanese === "こられる" && c.meaning === "can come"));
   assert.ok(cards.every(c => c.source.href.startsWith("/chapters/11#")));
+});
+test("kanji appear only where the book prints them, each with a reviewed reading, and headings stay in English and kana", () => {
+  const book = read("src/data/furigana.json"), page = furiganaPage(book, "chapter/11/lessons");
+  for (const [word, marked] of Object.entries(page)) for (const part of parseFuriganaEntry(word, marked))
+    if (part.reading) assert.match(part.reading, /^[ぁ-ゖー]+$/u);
+  const kanji = text => /[\p{Script=Han}々]/u.test(text);
+  const texts = [chapter.intro, ...chapter.sections.flatMap(s => s.html.replace(/<[^>]+>/g, "\n").split("\n"))];
+  for (const set of sets) {
+    texts.push(set.title, set.instructionsJa, set.instructionsEn, ...(set.wordBank ?? []));
+    for (const q of set.questions) texts.push(q.prompt, q.model, q.whyEn, q.before ?? "", q.after ?? "", ...(q.tokens ?? []), ...(q.choices ?? []).map(c => c.text));
+  }
+  let readings = 0;
+  for (const text of texts) readings += furiganaParts(text, page).filter(part => part.reading).length;
+  assert.ok(readings > 300);
+  for (const text of [chapter.intro, ...chapter.toc.map(t => t.t), ...sets.flatMap(s => [s.title, s.instructionsJa, s.instructionsEn])]) assert.ok(!kanji(text), text);
+  // Only the book's own Japanese (examples, passages, questions) keeps kanji.
+  for (const s of chapter.sections) for (const m of s.html.matchAll(/<(h3|h4|p)( [^>]*)?>([^<]*)<\/\1>/g))
+    if (!(m[2] ?? "").includes('lang="ja"')) assert.ok(!kanji(m[3]), m[3]);
+  assert.deepEqual(furiganaParts("火よう日に", page), [{ text: "火", reading: "か" }, { text: "よう" }, { text: "日", reading: "び" }, { text: "に" }]);
+  assert.deepEqual(furiganaParts("この人は 日本人です", page).filter(p => p.reading).map(p => p.reading), ["ひと", "にほんじん"]);
+  assert.throws(() => furiganaParts("曜日", page), /Missing furigana/);
+  assert.equal(furiganaPage(book, "chapter/10/lessons"), undefined);
 });

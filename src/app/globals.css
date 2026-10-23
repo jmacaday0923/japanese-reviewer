@@ -387,6 +387,6 @@
 
 .reading-compact > button { min-height: 44px; }
 
-/* Chapter 5 checkpoint: retained kanji always have readings above them. */
+/* Checkpoints and Chapter 11: retained kanji always have readings above them. */
 .checkpoint-ruby { ruby-position: over; ruby-align: center; }
 .checkpoint-ruby rt { font-size: 0.55em; font-weight: 400; color: var(--muted); }

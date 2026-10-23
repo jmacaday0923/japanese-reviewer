@@ -26,32 +26,33 @@
   "modelAnswersAreGenerated": true,
   "adaptations": [
     "No supplied answer key; all keys and explanations are added model answers. Open cloze, personal and translation answers use self-check.",
-    "PDF page 15 labels are clarified as 五段／一段／special rather than treating all 五段 verbs as irregular.",
+    "PDF page 15 keeps the book's Irregular, Regular and Special verb names, with う-verb (ごだん) and る-verb (いちだん) given as the common alternative names.",
     "The ADZ company name is written エーディーゼット in Japanese to avoid Latin text in the primary sentence.",
     "Source page 9 ambiguously glosses パソコン as laptop; its meaning is computer. Its sentence remains unchanged.",
     "Source p.16 says object を changes to が; that is the explicit instruction for these drills, not a claim that every potential construction universally forbids を.",
     "Source p.17 アナさんが聞こえますか is retained with a note explaining the implied voice.",
-    "Parenthetical/ruby readings above kanji are not reproduced; separate readings remain optional.",
+    "Kanji appear only where the printed chapter uses them, and every kanji word shows its reading above it from the reviewed list in src/data/furigana.json. Headings, instructions and explanations use English and kana, following the book.",
     "Reading passages retain the source wording, with romaji and English supplied in closed disclosures.",
     "Head office 本社 and branch 支店 were already taught in Chapters 1 and 3; they are not repeated as new-reading notes.",
     "PDF p.16 asks for potential form and meaning; users type the polite potential and compare the English meaning after checking.",
     "No new checkpoint is added; the Chapter 5 and 10 checkpoint scopes and keys remain unchanged.",
-    "Text-grammar p.20 question 3 accepts both が and を with 書けます; the model retains the textbook が pattern without rejecting a valid object-marker variant."
+    "Text-grammar p.20 question 3 accepts both が and を with 書けます; the model retains the textbook が pattern without rejecting a valid object-marker variant.",
+    "Model answer explanations are in English only. The earlier Japanese explanations used kanji the book has not introduced."
   ],
   "readingNotes": [
     {
       "passage": "c11-engineer-passage",
       "words": [
-        "システム工学"
+        "システムこうがく"
       ]
     },
     {
       "passage": "c11-friends-passage",
       "words": [
         "バンドのメンバー",
-        "選手",
+        "せんしゅ",
         "スポーツキャンプ",
-        "いい思い出"
+        "いいおもいで"
       ]
     }
   ],
@@ -728,7 +729,7 @@
           "id": "c11-personal-answers-7",
           "number": 7,
           "mode": "self",
-          "model": "はい、土よう日に 日本語のクラスが あります。",
+          "model": "はい、どようびに 日本語のクラスが あります。",
           "correctChoiceId": null
         },
         {
@@ -770,7 +771,7 @@
           "id": "c11-translation-practice-2",
           "number": 2,
           "mode": "self",
-          "model": "ア：日本のりょうりが すきですか。\nイ：はい、日本のりょうりが 大すきです。\nア：さしみと すしが 食べられますか。\nイ：はい、さしみと すしは おいしいです。",
+          "model": "ア：日本のりょうりが すきですか。\nイ：はい、日本のりょうりが だいすきです。\nア：さしみと すしが 食べられますか。\nイ：はい、さしみと すしは おいしいです。",
           "correctChoiceId": null
         },
         {
@@ -797,5 +798,5 @@
       "purpose": "Standard potential-form groups and the separate verbs 見える／聞こえる."
     }
   ],
-  "questionDataSha256": "7daa11fd5b93dc0e2989bf4cf7fd114de6324a5fb7b65f036a70411689224af2"
+  "questionDataSha256": "471a0ea0ae9090dbaf6df80c60f21115f2ab28df6a8242b682d6e89c326d19e9"
 }

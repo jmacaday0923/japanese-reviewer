@@ -1050,7 +1050,7 @@
             "りょうりが",
             "すきです。"
           ],
-          "why": "Use は for the person or topic and が for the thing liked, disliked, wanted, or the skill being described. 好き・きらい・上手・へた behave as な-adjectives; ほしい is an い-adjective.",
+          "why": "A は B が is a pattern used with certain adjectives and verbs. A, marked with は, is the person or topic. B, marked with が, is the thing liked, disliked, wanted, or the skill being described. すき, きらい, じょうず and へた are な-adjectives. ほしい is an い-adjective.",
           "whyParagraph": 2
         },
         {
@@ -1071,7 +1071,7 @@
             "きれいに",
             "なりました。"
           ],
-          "why": "なる describes a change of state. A noun or な-adjective takes に before なります. An い-adjective loses its final い and takes く before なります.",
+          "why": "The verb なる means to become. It describes a change that happens by itself. A noun or な-adjective takes に before なります. An い-adjective drops its final い and takes く before なります.",
           "whyParagraph": 2
         },
         {
@@ -1092,7 +1092,7 @@
             "が",
             "ひけます。"
           ],
-          "why": "The potential form expresses ability or the possibility of doing an action. In this textbook drill, change an action’s を-marked object to が. Keep other markers such as で, に and と.",
+          "why": "The potential form says that you can do something, because you are able to or because it is possible. When you use a potential verb, the object marker を changes to が. All the other markers, such as で, に and と, stay the same.",
           "whyParagraph": 2
         }
       ],
