@@ -23,8 +23,8 @@ for(const [kind,file] of groups) for(const page of load(file)){
     }
   }
 }
-test("flashcard content: all 60 individual kanji, structured vocabulary and sentences are supported",()=>{
-  assert.equal(all.filter(item=>item.draft.kind==="kanji" && /^\p{Script=Han}$/u.test(item.draft.japanese)).length,60);
+test("flashcard content: all 90 individual kanji, structured vocabulary and sentences are supported",()=>{
+  assert.equal(all.filter(item=>item.draft.kind==="kanji" && /^\p{Script=Han}$/u.test(item.draft.japanese)).length,90);
   assert.ok(all.filter(item=>item.draft.kind==="vocabulary").length>1900);
   assert.ok(all.filter(item=>item.draft.kind==="sentence").length>1800);
   assert.ok(all.some(item=>item.context.kind==="chapter"));

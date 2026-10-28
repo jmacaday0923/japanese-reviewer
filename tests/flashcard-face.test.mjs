@@ -3,10 +3,10 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { splitReadingContent } from "../src/lib/reading-content.ts";
 import { collectFlashcardExamples, sectionFlashcards } from "../src/lib/flashcard-content.ts";
-import { flashcardFace, kanjiLessonCharacters, firstChapter } from "../src/lib/flashcard-face.ts";
+import { flashcardFace, familiarKanji, kanjiLessonCharacters, firstChapter } from "../src/lib/flashcard-face.ts";
 import { furiganaPage, furiganaParts } from "../src/lib/furigana.ts";
 const load = name => JSON.parse(readFileSync(new URL("../src/data/" + name + ".json", import.meta.url), "utf8"));
-const familiar = kanjiLessonCharacters(load("kanji")), book = load("furigana");
+const familiar = familiarKanji(load("kanji")), book = load("furigana");
 const kanji = text => [...text.matchAll(/[\p{Script=Han}々]/gu)].map(m => m[0]);
 const asSaved = draft => ({ ...draft, sources: [draft.source] });
 function drafts(page, kind = "chapter") {
@@ -19,6 +19,8 @@ test("the familiar kanji are the 60 characters taught on the Kanji 1 and Kanji 2
   assert.equal(familiar.length, 60);
   assert.equal(new Set(familiar).size, 60);
   assert.ok(familiar.startsWith("一二三") && familiar.includes("週") && !familiar.includes("族"));
+  // Kanji 3 and later pages go with later chapters and don't widen the set.
+  assert.ok(load("kanji").length > 2 && !familiar.includes("大") && kanjiLessonCharacters(load("kanji")).includes("大"));
 });
 
 test("Chapters 1 to 7 cards show no kanji at all", () => {

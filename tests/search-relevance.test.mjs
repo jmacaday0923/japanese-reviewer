@@ -25,7 +25,7 @@ for (const q of ["gakusei", "がくせい", "学生", "student", "  ＧＡＫＵ
     const groups = searchGroups(library, state(q));
     assert.equal(groups[0].entry.x, "がくせい | 学生 | gakusei | student");
     assert.equal(groups[0].entry.c, "vocab");
-    assert.deepEqual(groups[0].occurrences.map((entry) => library.pages[entry.p].href), ["/chapters/1", "/kana/1"]);
+    assert.deepEqual(groups[0].occurrences.map((entry) => library.pages[entry.p].href), ["/chapters/1", "/kana/1", "/kanji/3"]);
     if (normalizeSearchText(q) === "gakusei") {
       const example = groups.findIndex((group) => group.entry.c === "grammar");
       const partial = groups.findIndex((group) => group.entry.x.includes("ryuugakusei"));

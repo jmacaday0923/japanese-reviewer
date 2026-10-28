@@ -183,7 +183,7 @@ Use **Add to flashcards** beside a structured vocabulary row, an individual kanj
 
 Each eligible lesson table has **Add all N to flashcards** in its header. It saves all supported rows in one transaction, merges duplicates and retains both review histories. Kana sound charts save their paired hiragana/katakana and romaji reading. Kana word-example tables save the whole word with its meaning, rather than giving a sound fragment the word’s translation. Kanji comparisons retain their paired characters and readings. Exercise answer sheets and unpaired content are not converted.
 
-On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There are 14 decks: 11 chapters, Kana 1 and Kanji 1–2. Deck metadata follows the current library. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
+On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There is a full deck for each chapter (1–12), Kana 1 and Kanji 1–3, plus a vocabulary-only deck for each chapter. Deck metadata follows the current library. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
 
 The shared content bank ships with the app. Your saved cards and per-direction schedules use the existing browser storage; there is no database or account setup. Importing again adds newly available content without resetting existing progress. Removed cards return if you deliberately import their deck again. Clearing browser site data removes saved cards/progress; the app still provides the pre-made bank.
 
@@ -294,6 +294,12 @@ No answer key was supplied. All keys and explanations are **added model answers*
 `/chapters/12` adds **Reason, Volitional Form, Parts of the Body**, adapted from the supplied scanned Chapter12.pdf (printed pages 23–38): 33 vocabulary entries, all ten sentence patterns (から・ので, なぜ・どうして・なんで, なにか／なにが／なにも, には・へは・では・とは, ましょう, ましょうか, ませんか and body part が adjective), the から・ので chart, the 14-row volitional chart, two reading passages and all 51 workbook questions.
 
 It follows the revised Chapter 11 layout: English and kana headings and explanations, and kanji only where the book prints them, each with its reading from `src/data/furigana.json`. The 51 questions are in 8 activities; 37 are checked automatically (choices, the volitional table and word tiles) and 14 personal and translation questions use self-check. No answer key was supplied, so keys and explanations are added model answers. `migration/chapter-12-audit.json` records the source checksum, keys, adaptations and hashes proving Chapters 1–11 are unchanged.
+
+## Kanji 3
+
+`/kanji/3` adds **Adjectives, Colors and Everyday Verbs**: kanji 61 to 90 from the JLRC Kanji Workbook N5, Lessons 7 to 9 (the supplied scan `Kanji 61-90.pdf`, printed pages 37–51). It follows the Kanji 2 layout: a reading and word table for each kanji, pattern word lists, look-alike and reading notes, Parts A to D from the workbook's practice and test pages, added self-test Parts E to J, and an answer key of model answers (the workbook key was not supplied). `migration/kanji-3-audit.json` records the source checksum, page map, test keys and hashes proving Kanji 1 and 2 are unchanged.
+
+Flashcards for Chapters 8–10 still show only Kanji 1 and 2 characters (`FAMILIAR_KANJI_PAGES` in `src/lib/flashcard-face.ts`), because Kanji 3 is taught alongside later chapters.
 
 ## Older chapter practice and study plans
 

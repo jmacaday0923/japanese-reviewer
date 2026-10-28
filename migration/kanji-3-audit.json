@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "page": "/kanji/3",
+  "sourceFile": "Kanji 61-90.pdf",
+  "sourceSha256": "c2413e46bf9d93e4e2721265d1e2f0ed21d5f058cb9f8947b648c10e95cc6ff9",
+  "sourceIsScan": true,
+  "printedPages": [
+    37,
+    51
+  ],
+  "workbookLessons": [
+    7,
+    8,
+    9
+  ],
+  "kanji": "大小安高新古長早近明少多有名色白青赤茶黒書行食飲買見生休帰売",
+  "textReview": "All 16 embedded page images visually reviewed: the 30 kanji tables, three れんしゅう pages and three テスト pages.",
+  "pageMap": {
+    "lesson7": {
+      "kanji": [
+        37,
+        38
+      ],
+      "practice": 39,
+      "testI": 40,
+      "testII": 41
+    },
+    "lesson8": {
+      "kanji": [
+        42,
+        43
+      ],
+      "practice": 44,
+      "testI": 45,
+      "testII": 46
+    },
+    "lesson9": {
+      "kanji": [
+        47,
+        48
+      ],
+      "practice": 49,
+      "testI": 50,
+      "testII": 51
+    }
+  },
+  "testKeys": {
+    "C": "131431242141231121231332412121",
+    "D": "234234342331321341244341142331"
+  },
+  "modelAnswersAreGenerated": true,
+  "adaptations": [
+    "No answer key was supplied. Parts A to D are the workbook's practice and test items with model answers; parts E to J are added self-test practice built only from words in this set and Kanji 1 and 2.",
+    "Chinese readings are written in katakana, as on Kanji 1 and 2. Readings the workbook brackets without examples stay in square brackets.",
+    "The workbook lists 小鳥 (ことり) under the Chinese readings; こ is shown with the Japanese readings, with a note.",
+    "The workbook writes 茶 with no Japanese reading; the table says none.",
+    "Part D shows the test sentence in brackets, so words that share a sound (おおきい, おおい) can be told apart.",
+    "Practice pictures (安全第一, 和食, お茶を出す女) are listed under Extra words from the exercises."
+  ],
+  "previousPageHashes": {
+    "1": "5f9de78f6f157bfa92497e403ee616754d3e6f7f6d0044292b50b5fd0ef8b14f",
+    "2": "5cc67bdc2ac0f578ce640648888b1194edecf3c2d0b7d8f1420b5ab2d8f83808"
+  },
+  "pageSha256": "c873bf6eafa88f87db810ce09506f8fa3425ea8bcc55cce41d446e72627990fb"
+}

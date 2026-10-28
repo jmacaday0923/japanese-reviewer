@@ -170,7 +170,7 @@ test.describe("missing pages", () => {
   // With Cache Components a missing dynamic page can stream with status 200 or 404
   test.use({ allowedStatuses: [404] });
 
-  for (const path of ["/chapters/99", "/kana/2", "/kanji/abc", "/kanji/3", "/practice/2", "/lessons/abc", "/lessons/21"]) {
+  for (const path of ["/chapters/99", "/kana/2", "/kanji/abc", "/kanji/4", "/practice/2", "/lessons/abc", "/lessons/21"]) {
     test(`${path} shows the not found page`, async ({ page }) => {
       await page.goto(path);
       await expect(page.getByRole("heading", { name: "Page not found", level: 1 })).toBeVisible();

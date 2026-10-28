@@ -17,6 +17,11 @@ export function kanjiLessonCharacters(pages: readonly Chapter[]): string {
   }).join("");
 }
 
+// Chapters 8 to 10 go with the Kanji 1 and Kanji 2 pages. Later Kanji pages
+// are taught alongside later chapters, so they don't widen this set.
+export const FAMILIAR_KANJI_PAGES = 2;
+export const familiarKanji = (pages: readonly Chapter[]) => kanjiLessonCharacters(pages.slice(0, FAMILIAR_KANJI_PAGES));
+
 // The earliest chapter a card was saved from decides how it looks. The Kana
 // page counts as the very start of the course; Kanji pages keep their kanji.
 export function firstChapter(card: Pick<SavedFlashcard, "sources">): number | null {
