@@ -19,8 +19,9 @@ test("Chapter 13 appears after Chapter 12 with all ten activities and furigana o
   const row = main.locator("#lessons tr", { hasText: "I work at a Japanese company." }).first();
   await expect(row.locator("rt").first()).toHaveText("にほん");
   const pager = main.getByRole("navigation", { name: "Chapter pages" });
-  await expect(pager.getByRole("link")).toHaveCount(1);
-  await expect(pager.getByRole("link")).toHaveAttribute("href", "/chapters/12");
+  await expect(pager.getByRole("link")).toHaveCount(2);
+  await expect(pager.getByRole("link").first()).toHaveAttribute("href", "/chapters/12");
+  await expect(pager.getByRole("link").last()).toHaveAttribute("href", "/chapters/14");
 });
 
 test("all 73 checked Chapter 13 questions accept their model in the browser", async ({ page }) => {

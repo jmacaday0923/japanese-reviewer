@@ -5286,6 +5286,1795 @@
           ]
         }
       ]
+    },
+    {
+      "chapter": "14",
+      "sets": [
+        {
+          "id": "c14-wearing-verbs",
+          "chapter": "14",
+          "title": "れんしゅう: Put on and take off (page 58)",
+          "sourcePage": 58,
+          "instructionsJa": "〈れんしゅう〉",
+          "instructionsEn": "Please complete each sentence with the verb for putting it on or taking it off. Type the verb in the polite form, such as しめます, or the whole sentence. Example: ネクタイを しめます。 ネクタイを はずします。",
+          "heading": "c14-wearing-verbs",
+          "questions": [
+            {
+              "id": "c14-wearing-verbs-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "ゆびわを ＿＿。（put on）",
+              "romaji": "yubiwa o ____. (put on)",
+              "model": "ゆびわを します。",
+              "whyEn": "Accessories such as a ring, a watch or earrings take する.",
+              "accepted": [
+                "ゆびわを します。",
+                "します。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "ゆびわを ＿＿。（take off）",
+              "romaji": "yubiwa o ____. (take off)",
+              "model": "ゆびわを はずします。",
+              "whyEn": "Glasses, ties, belts, hats and accessories are removed with はずす.",
+              "accepted": [
+                "ゆびわを はずします。",
+                "はずします。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "ぼうしを ＿＿。（put on）",
+              "romaji": "boushi o ____. (put on)",
+              "model": "ぼうしを かぶります。",
+              "whyEn": "A hat takes かぶる.",
+              "accepted": [
+                "ぼうしを かぶります。",
+                "かぶります。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "ぼうしを ＿＿。（take off）",
+              "romaji": "boushi o ____. (take off)",
+              "model": "ぼうしを はずします。",
+              "whyEn": "The book's chart uses はずす for a hat. ぬぐ is also common, so ぬぎます is accepted.",
+              "accepted": [
+                "ぼうしを はずします。",
+                "ぼうしを ぬぎます。",
+                "はずします。",
+                "ぬぎます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "サンダルを ＿＿。（put on）",
+              "romaji": "sandaru o ____. (put on)",
+              "model": "サンダルを はきます。",
+              "whyEn": "Lower garments and footwear take はく.",
+              "accepted": [
+                "サンダルを はきます。",
+                "はきます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "サンダルを ＿＿。（take off）",
+              "romaji": "sandaru o ____. (take off)",
+              "model": "サンダルを ぬぎます。",
+              "whyEn": "Clothes and footwear come off with ぬぐ.",
+              "accepted": [
+                "サンダルを ぬぎます。",
+                "ぬぎます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "とけいを ＿＿。（put on）",
+              "romaji": "tokei o ____. (put on)",
+              "model": "とけいを します。",
+              "whyEn": "Accessories such as a ring, a watch or earrings take する.",
+              "accepted": [
+                "とけいを します。",
+                "します。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 4
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "とけいを ＿＿。（take off）",
+              "romaji": "tokei o ____. (take off)",
+              "model": "とけいを はずします。",
+              "whyEn": "Glasses, ties, belts, hats and accessories are removed with はずす.",
+              "accepted": [
+                "とけいを はずします。",
+                "はずします。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 4
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "サングラスを ＿＿。（put on）",
+              "romaji": "sangurasu o ____. (put on)",
+              "model": "サングラスを かけます。",
+              "whyEn": "Glasses and sunglasses take かける.",
+              "accepted": [
+                "サングラスを かけます。",
+                "かけます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 5
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-10",
+              "number": 10,
+              "mode": "text",
+              "prompt": "サングラスを ＿＿。（take off）",
+              "romaji": "sangurasu o ____. (take off)",
+              "model": "サングラスを はずします。",
+              "whyEn": "Glasses, ties, belts, hats and accessories are removed with はずす.",
+              "accepted": [
+                "サングラスを はずします。",
+                "はずします。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 5
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-11",
+              "number": 11,
+              "mode": "text",
+              "prompt": "うわぎを ＿＿。（put on）",
+              "romaji": "uwagi o ____. (put on)",
+              "model": "うわぎを きます。",
+              "whyEn": "Upper garments such as a jacket or coat take きる.",
+              "accepted": [
+                "うわぎを きます。",
+                "うわぎを 着ます。",
+                "きます。",
+                "着ます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 6
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-12",
+              "number": 12,
+              "mode": "text",
+              "prompt": "うわぎを ＿＿。（take off）",
+              "romaji": "uwagi o ____. (take off)",
+              "model": "うわぎを ぬぎます。",
+              "whyEn": "Clothes and footwear come off with ぬぐ.",
+              "accepted": [
+                "うわぎを ぬぎます。",
+                "ぬぎます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 6
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-13",
+              "number": 13,
+              "mode": "text",
+              "prompt": "ベルトを ＿＿。（put on）",
+              "romaji": "beruto o ____. (put on)",
+              "model": "ベルトを しめます。",
+              "whyEn": "A necktie or belt takes しめる.",
+              "accepted": [
+                "ベルトを しめます。",
+                "しめます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 7
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-14",
+              "number": 14,
+              "mode": "text",
+              "prompt": "ベルトを ＿＿。（take off）",
+              "romaji": "beruto o ____. (take off)",
+              "model": "ベルトを はずします。",
+              "whyEn": "Glasses, ties, belts, hats and accessories are removed with はずす.",
+              "accepted": [
+                "ベルトを はずします。",
+                "はずします。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 7
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-15",
+              "number": 15,
+              "mode": "text",
+              "prompt": "パンツを ＿＿。（put on）",
+              "romaji": "pantsu o ____. (put on)",
+              "model": "パンツを はきます。",
+              "whyEn": "Lower garments and footwear take はく.",
+              "accepted": [
+                "パンツを はきます。",
+                "はきます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 8
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-16",
+              "number": 16,
+              "mode": "text",
+              "prompt": "パンツを ＿＿。（take off）",
+              "romaji": "pantsu o ____. (take off)",
+              "model": "パンツを ぬぎます。",
+              "whyEn": "Clothes and footwear come off with ぬぐ.",
+              "accepted": [
+                "パンツを ぬぎます。",
+                "ぬぎます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 8
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-17",
+              "number": 17,
+              "mode": "text",
+              "prompt": "コートを ＿＿。（put on）",
+              "romaji": "ko-to o ____. (put on)",
+              "model": "コートを きます。",
+              "whyEn": "Upper garments such as a jacket or coat take きる.",
+              "accepted": [
+                "コートを きます。",
+                "コートを 着ます。",
+                "きます。",
+                "着ます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 9
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-18",
+              "number": 18,
+              "mode": "text",
+              "prompt": "コートを ＿＿。（take off）",
+              "romaji": "ko-to o ____. (take off)",
+              "model": "コートを ぬぎます。",
+              "whyEn": "Clothes and footwear come off with ぬぐ.",
+              "accepted": [
+                "コートを ぬぎます。",
+                "ぬぎます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 9
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-19",
+              "number": 19,
+              "mode": "text",
+              "prompt": "スリッパを ＿＿。（put on）",
+              "romaji": "surippa o ____. (put on)",
+              "model": "スリッパを はきます。",
+              "whyEn": "Lower garments and footwear take はく.",
+              "accepted": [
+                "スリッパを はきます。",
+                "はきます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 10
+              }
+            },
+            {
+              "id": "c14-wearing-verbs-20",
+              "number": 20,
+              "mode": "text",
+              "prompt": "スリッパを ＿＿。（take off）",
+              "romaji": "surippa o ____. (take off)",
+              "model": "スリッパを ぬぎます。",
+              "whyEn": "Clothes and footwear come off with ぬぐ.",
+              "accepted": [
+                "スリッパを ぬぎます。",
+                "ぬぎます。"
+              ],
+              "source": {
+                "printedPage": 58,
+                "number": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "c14-mae-ni",
+          "chapter": "14",
+          "title": "れんしゅう: Complete the sentence with まえに (page 60)",
+          "sourcePage": 60,
+          "instructionsJa": "〈れんしゅう〉",
+          "instructionsEn": "Please use まえに to complete the sentences. The part after ＞ happens first. Example: にほんへ いきます ＋ ＞ にほんごを べんきょうしたい → にほんへ いくまえに にほんごを べんきょうしたいです。",
+          "heading": "c14-mae-ni",
+          "questions": [
+            {
+              "id": "c14-mae-ni-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "パソコンを おきます ＞ つくえを きれいにします",
+              "romaji": "pasokon o okimasu ＞ tsukue o kirei ni shimasu",
+              "model": "パソコンを おくまえに つくえを きれいにします。",
+              "whyEn": "おきます → おく + まえに.",
+              "accepted": [
+                "パソコンを おくまえに つくえを きれいにします。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-mae-ni-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "レポートを 書きます ＞ 社長に そうだんします",
+              "romaji": "repo-to o kakimasu ＞ shachou ni soudan shimasu",
+              "model": "レポートを 書くまえに 社長に そうだんします。",
+              "whyEn": "かきます → かく + まえに.",
+              "accepted": [
+                "レポートを 書くまえに 社長に そうだんします。",
+                "レポートを かくまえに しゃちょうに そうだんします。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-mae-ni-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "来ます ＞ 友だちに 電話を かけます",
+              "romaji": "kimasu ＞ tomodachi ni denwa o kakemasu",
+              "model": "来るまえに 友だちに 電話を かけます。",
+              "whyEn": "きます → くる + まえに. くる is a Special verb.",
+              "accepted": [
+                "来るまえに 友だちに 電話を かけます。",
+                "くるまえに ともだちに でんわを かけます。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-mae-ni-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "帰ります ＞ やさいを 買います",
+              "romaji": "kaerimasu ＞ yasai o kaimasu",
+              "model": "帰るまえに やさいを 買います。",
+              "whyEn": "かえります → かえる + まえに.",
+              "accepted": [
+                "帰るまえに やさいを 買います。",
+                "かえるまえに やさいを かいます。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 4
+              }
+            },
+            {
+              "id": "c14-mae-ni-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "びょういんへ 行きます ＞ くすりを 飲みます",
+              "romaji": "byouin e ikimasu ＞ kusuri o nomimasu",
+              "model": "びょういんへ 行くまえに くすりを 飲みます。",
+              "whyEn": "いきます → いく + まえに.",
+              "accepted": [
+                "びょういんへ 行くまえに くすりを 飲みます。",
+                "びょういんへ いくまえに くすりを のみます。",
+                "びょういんに 行くまえに くすりを 飲みます。",
+                "びょういんに いくまえに くすりを のみます。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 5
+              }
+            },
+            {
+              "id": "c14-mae-ni-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "シャワーを あびます ＞ へやを そうじします",
+              "romaji": "shawa- o abimasu ＞ heya o souji shimasu",
+              "model": "シャワーを あびるまえに へやを そうじします。",
+              "whyEn": "あびます → あびる + まえに.",
+              "accepted": [
+                "シャワーを あびるまえに へやを そうじします。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 6
+              }
+            },
+            {
+              "id": "c14-mae-ni-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "寝ます ＞ 本を読みました",
+              "romaji": "nemasu ＞ hon o yomimashita",
+              "model": "寝るまえに 本を 読みました。",
+              "whyEn": "ねます → ねる + まえに. The verb before まえに stays in the dictionary form; the past is at the end: よみました.",
+              "accepted": [
+                "寝るまえに 本を 読みました。",
+                "ねるまえに ほんを よみました。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 7
+              }
+            },
+            {
+              "id": "c14-mae-ni-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "おふろに 入ります ＞ からだを 洗います",
+              "romaji": "ofuro ni hairimasu ＞ karada o araimasu",
+              "model": "おふろに 入るまえに からだを 洗います。",
+              "whyEn": "はいります → はいる + まえに.",
+              "accepted": [
+                "おふろに 入るまえに からだを 洗います。",
+                "おふろに はいるまえに からだを あらいます。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 8
+              }
+            },
+            {
+              "id": "c14-mae-ni-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "学校へ 行きます ＞ 朝ごはんを 食べます",
+              "romaji": "gakkou e ikimasu ＞ asagohan o tabemasu",
+              "model": "学校へ 行くまえに 朝ごはんを 食べます。",
+              "whyEn": "いきます → いく + まえに.",
+              "accepted": [
+                "学校へ 行くまえに 朝ごはんを 食べます。",
+                "がっこうへ いくまえに あさごはんを たべます。",
+                "学校に 行くまえに 朝ごはんを 食べます。",
+                "がっこうに いくまえに あさごはんを たべます。"
+              ],
+              "source": {
+                "printedPage": 60,
+                "number": 9
+              }
+            }
+          ]
+        },
+        {
+          "id": "c14-tsumori",
+          "chapter": "14",
+          "title": "れんしゅう: Use つもり in positive and negative sentences (page 63)",
+          "sourcePage": 63,
+          "instructionsJa": "〈れんしゅう〉",
+          "instructionsEn": "Please use つもり in a positive and a negative sentence. Type the verb with つもりです, such as いくつもりです, or the whole sentence. Example: にほんへ いく。 → にほんへ いくつもりです。 → にほんへ いかないつもりです。",
+          "heading": "c14-tsumori",
+          "questions": [
+            {
+              "id": "c14-tsumori-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "火よう日に 山田さんと 話します。（つもり）",
+              "romaji": "kayoubi ni yamada san to hanashimasu. (tsumori)",
+              "model": "火よう日に 山田さんと 話すつもりです。",
+              "whyEn": "はなします → はなす; ない form: はなさない. Add つもりです.",
+              "accepted": [
+                "火よう日に 山田さんと 話すつもりです。",
+                "かようびに やまださんと はなすつもりです。",
+                "火よう日に 山田さんと 話すつもりだ。",
+                "かようびに やまださんと はなすつもりだ。",
+                "山田さんと 話すつもりです。",
+                "やまださんと はなすつもりです。",
+                "山田さんと 話すつもりだ。",
+                "やまださんと はなすつもりだ。",
+                "話すつもりです。",
+                "はなすつもりです。",
+                "話すつもりだ。",
+                "はなすつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-tsumori-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "火よう日に 山田さんと 話します。（ないつもり）",
+              "romaji": "kayoubi ni yamada san to hanashimasu. (nai tsumori)",
+              "model": "火よう日に 山田さんと 話さないつもりです。",
+              "whyEn": "はなします → はなす; ない form: はなさない. Add つもりです to the ない form.",
+              "accepted": [
+                "火よう日に 山田さんと 話さないつもりです。",
+                "かようびに やまださんと はなさないつもりです。",
+                "火よう日に 山田さんと 話さないつもりだ。",
+                "かようびに やまださんと はなさないつもりだ。",
+                "山田さんと 話さないつもりです。",
+                "やまださんと はなさないつもりです。",
+                "山田さんと 話さないつもりだ。",
+                "やまださんと はなさないつもりだ。",
+                "話さないつもりです。",
+                "はなさないつもりです。",
+                "話さないつもりだ。",
+                "はなさないつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-tsumori-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "新しいカメラを 買います。（つもり）",
+              "romaji": "atarashii kamera o kaimasu. (tsumori)",
+              "model": "新しいカメラを 買うつもりです。",
+              "whyEn": "かいます → かう; ない form: かわない (う becomes わ). Add つもりです.",
+              "accepted": [
+                "新しいカメラを 買うつもりです。",
+                "あたらしいカメラを かうつもりです。",
+                "新しいカメラを 買うつもりだ。",
+                "あたらしいカメラを かうつもりだ。",
+                "カメラを 買うつもりです。",
+                "カメラを かうつもりです。",
+                "カメラを 買うつもりだ。",
+                "カメラを かうつもりだ。",
+                "買うつもりです。",
+                "かうつもりです。",
+                "買うつもりだ。",
+                "かうつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-tsumori-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "新しいカメラを 買います。（ないつもり）",
+              "romaji": "atarashii kamera o kaimasu. (nai tsumori)",
+              "model": "新しいカメラを 買わないつもりです。",
+              "whyEn": "かいます → かう; ない form: かわない (う becomes わ). Add つもりです to the ない form.",
+              "accepted": [
+                "新しいカメラを 買わないつもりです。",
+                "あたらしいカメラを かわないつもりです。",
+                "新しいカメラを 買わないつもりだ。",
+                "あたらしいカメラを かわないつもりだ。",
+                "カメラを 買わないつもりです。",
+                "カメラを かわないつもりです。",
+                "カメラを 買わないつもりだ。",
+                "カメラを かわないつもりだ。",
+                "買わないつもりです。",
+                "かわないつもりです。",
+                "買わないつもりだ。",
+                "かわないつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-tsumori-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "東京に すみます。（つもり）",
+              "romaji": "toukyou ni sumimasu. (tsumori)",
+              "model": "東京に すむつもりです。",
+              "whyEn": "すみます → すむ; ない form: すまない. Add つもりです.",
+              "accepted": [
+                "東京に すむつもりです。",
+                "とうきょうに すむつもりです。",
+                "東京に すむつもりだ。",
+                "とうきょうに すむつもりだ。",
+                "すむつもりです。",
+                "すむつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-tsumori-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "東京に すみます。（ないつもり）",
+              "romaji": "toukyou ni sumimasu. (nai tsumori)",
+              "model": "東京に すまないつもりです。",
+              "whyEn": "すみます → すむ; ない form: すまない. Add つもりです to the ない form.",
+              "accepted": [
+                "東京に すまないつもりです。",
+                "とうきょうに すまないつもりです。",
+                "東京に すまないつもりだ。",
+                "とうきょうに すまないつもりだ。",
+                "すまないつもりです。",
+                "すまないつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-tsumori-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "日本語の 本を かります。（つもり）",
+              "romaji": "nihongo no hon o karimasu. (tsumori)",
+              "model": "日本語の 本を かりるつもりです。",
+              "whyEn": "かります → かりる (borrow, a Regular verb); ない form: かりない. Add つもりです.",
+              "accepted": [
+                "日本語の 本を かりるつもりです。",
+                "にほんごの ほんを かりるつもりです。",
+                "日本語の 本を かりるつもりだ。",
+                "にほんごの ほんを かりるつもりだ。",
+                "本を かりるつもりです。",
+                "ほんを かりるつもりです。",
+                "本を かりるつもりだ。",
+                "ほんを かりるつもりだ。",
+                "かりるつもりです。",
+                "かりるつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 4
+              }
+            },
+            {
+              "id": "c14-tsumori-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "日本語の 本を かります。（ないつもり）",
+              "romaji": "nihongo no hon o karimasu. (nai tsumori)",
+              "model": "日本語の 本を かりないつもりです。",
+              "whyEn": "かります → かりる (borrow, a Regular verb); ない form: かりない. Add つもりです to the ない form.",
+              "accepted": [
+                "日本語の 本を かりないつもりです。",
+                "にほんごの ほんを かりないつもりです。",
+                "日本語の 本を かりないつもりだ。",
+                "にほんごの ほんを かりないつもりだ。",
+                "本を かりないつもりです。",
+                "ほんを かりないつもりです。",
+                "本を かりないつもりだ。",
+                "ほんを かりないつもりだ。",
+                "かりないつもりです。",
+                "かりないつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 4
+              }
+            },
+            {
+              "id": "c14-tsumori-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "くろい くつを はきます。（つもり）",
+              "romaji": "kuroi kutsu o hakimasu. (tsumori)",
+              "model": "くろい くつを はくつもりです。",
+              "whyEn": "はきます → はく; ない form: はかない. Add つもりです.",
+              "accepted": [
+                "くろい くつを はくつもりです。",
+                "くろい くつを はくつもりだ。",
+                "くつを はくつもりです。",
+                "くつを はくつもりだ。",
+                "はくつもりです。",
+                "はくつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 5
+              }
+            },
+            {
+              "id": "c14-tsumori-10",
+              "number": 10,
+              "mode": "text",
+              "prompt": "くろい くつを はきます。（ないつもり）",
+              "romaji": "kuroi kutsu o hakimasu. (nai tsumori)",
+              "model": "くろい くつを はかないつもりです。",
+              "whyEn": "はきます → はく; ない form: はかない. Add つもりです to the ない form.",
+              "accepted": [
+                "くろい くつを はかないつもりです。",
+                "くろい くつを はかないつもりだ。",
+                "くつを はかないつもりです。",
+                "くつを はかないつもりだ。",
+                "はかないつもりです。",
+                "はかないつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 5
+              }
+            },
+            {
+              "id": "c14-tsumori-11",
+              "number": 11,
+              "mode": "text",
+              "prompt": "友だちに そうだんします。（つもり）",
+              "romaji": "tomodachi ni soudan shimasu. (tsumori)",
+              "model": "友だちに そうだんするつもりです。",
+              "whyEn": "そうだんします → そうだんする; ない form: そうだんしない. Add つもりです.",
+              "accepted": [
+                "友だちに そうだんするつもりです。",
+                "ともだちに そうだんするつもりです。",
+                "友だちに そうだんするつもりだ。",
+                "ともだちに そうだんするつもりだ。",
+                "そうだんするつもりです。",
+                "そうだんするつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 6
+              }
+            },
+            {
+              "id": "c14-tsumori-12",
+              "number": 12,
+              "mode": "text",
+              "prompt": "友だちに そうだんします。（ないつもり）",
+              "romaji": "tomodachi ni soudan shimasu. (nai tsumori)",
+              "model": "友だちに そうだんしないつもりです。",
+              "whyEn": "そうだんします → そうだんする; ない form: そうだんしない. Add つもりです to the ない form.",
+              "accepted": [
+                "友だちに そうだんしないつもりです。",
+                "ともだちに そうだんしないつもりです。",
+                "友だちに そうだんしないつもりだ。",
+                "ともだちに そうだんしないつもりだ。",
+                "そうだんしないつもりです。",
+                "そうだんしないつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 6
+              }
+            },
+            {
+              "id": "c14-tsumori-13",
+              "number": 13,
+              "mode": "text",
+              "prompt": "明日 プレゼントを おくります。（つもり）",
+              "romaji": "ashita purezento o okurimasu. (tsumori)",
+              "model": "明日 プレゼントを おくるつもりです。",
+              "whyEn": "おくります → おくる; ない form: おくらない. Add つもりです.",
+              "accepted": [
+                "明日 プレゼントを おくるつもりです。",
+                "あした プレゼントを おくるつもりです。",
+                "明日 プレゼントを おくるつもりだ。",
+                "あした プレゼントを おくるつもりだ。",
+                "プレゼントを おくるつもりです。",
+                "プレゼントを おくるつもりだ。",
+                "おくるつもりです。",
+                "おくるつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 7
+              }
+            },
+            {
+              "id": "c14-tsumori-14",
+              "number": 14,
+              "mode": "text",
+              "prompt": "明日 プレゼントを おくります。（ないつもり）",
+              "romaji": "ashita purezento o okurimasu. (nai tsumori)",
+              "model": "明日 プレゼントを おくらないつもりです。",
+              "whyEn": "おくります → おくる; ない form: おくらない. Add つもりです to the ない form.",
+              "accepted": [
+                "明日 プレゼントを おくらないつもりです。",
+                "あした プレゼントを おくらないつもりです。",
+                "明日 プレゼントを おくらないつもりだ。",
+                "あした プレゼントを おくらないつもりだ。",
+                "プレゼントを おくらないつもりです。",
+                "プレゼントを おくらないつもりだ。",
+                "おくらないつもりです。",
+                "おくらないつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 7
+              }
+            },
+            {
+              "id": "c14-tsumori-15",
+              "number": 15,
+              "mode": "text",
+              "prompt": "りょかんに とまります。（つもり）",
+              "romaji": "ryokan ni tomarimasu. (tsumori)",
+              "model": "りょかんに とまるつもりです。",
+              "whyEn": "とまります → とまる; ない form: とまらない. Add つもりです.",
+              "accepted": [
+                "りょかんに とまるつもりです。",
+                "りょかんに とまるつもりだ。",
+                "とまるつもりです。",
+                "とまるつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 8
+              }
+            },
+            {
+              "id": "c14-tsumori-16",
+              "number": 16,
+              "mode": "text",
+              "prompt": "りょかんに とまります。（ないつもり）",
+              "romaji": "ryokan ni tomarimasu. (nai tsumori)",
+              "model": "りょかんに とまらないつもりです。",
+              "whyEn": "とまります → とまる; ない form: とまらない. Add つもりです to the ない form.",
+              "accepted": [
+                "りょかんに とまらないつもりです。",
+                "りょかんに とまらないつもりだ。",
+                "とまらないつもりです。",
+                "とまらないつもりだ。"
+              ],
+              "source": {
+                "printedPage": 63,
+                "number": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "c14-grammar-choices",
+          "chapter": "14",
+          "title": "I. ぶんぽう けいしきの はんだん: Selecting grammar form (page 66)",
+          "sourcePage": 66,
+          "instructionsJa": "I. ぶんぽう けいしきの はんだん",
+          "instructionsEn": "Please choose the correct grammatical pattern.",
+          "heading": "c14-grammar-choices",
+          "questions": [
+            {
+              "id": "c14-grammar-choices-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "このカメラは（　）ですが あたらしいカメラを 買わないつもりです。",
+              "romaji": "kono kamera wa ____ desu ga atarashii kamera o kawanai tsumori desu.",
+              "model": "ふるい",
+              "whyEn": "が shows a contrast: the camera is old, but I don't plan to buy a new one. ふるい (old) is the opposite of あたらしい.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "あぶない"
+                },
+                {
+                  "id": "2",
+                  "text": "ながい"
+                },
+                {
+                  "id": "3",
+                  "text": "ふるい"
+                },
+                {
+                  "id": "4",
+                  "text": "おおきい"
+                }
+              ],
+              "correctChoiceId": "3",
+              "source": {
+                "printedPage": 66,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-grammar-choices-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "部屋に（　）まえに くつを ぬぎました。",
+              "romaji": "heya ni ____ mae ni kutsu o nugimashita.",
+              "model": "はいる",
+              "whyEn": "まえに follows the dictionary form, even in a past sentence: はいるまえに.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "はいり"
+                },
+                {
+                  "id": "2",
+                  "text": "はいった"
+                },
+                {
+                  "id": "3",
+                  "text": "はいる"
+                },
+                {
+                  "id": "4",
+                  "text": "はいらない"
+                }
+              ],
+              "correctChoiceId": "3",
+              "source": {
+                "printedPage": 66,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-grammar-choices-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "白いセーターを（　）。",
+              "romaji": "shiroi se-ta- o ____.",
+              "model": "きます",
+              "whyEn": "A sweater is an upper garment, so it takes きる: きます.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "はきます"
+                },
+                {
+                  "id": "2",
+                  "text": "かけます"
+                },
+                {
+                  "id": "3",
+                  "text": "きます"
+                },
+                {
+                  "id": "4",
+                  "text": "かぶります"
+                }
+              ],
+              "correctChoiceId": "3",
+              "source": {
+                "printedPage": 66,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-grammar-choices-4",
+              "number": 4,
+              "mode": "choice",
+              "prompt": "ア：留学したあと なにを するつもりですか。\nイ：大学で 日本語を（　）つもりです。",
+              "romaji": "A: ryuugaku shita ato nani o suru tsumori desu ka. B: daigaku de nihongo o ____ tsumori desu.",
+              "model": "おしえる",
+              "whyEn": "つもりです follows the dictionary form: おしえるつもりです, I plan to teach. おしえない would be a plan not to teach, which does not answer what you will do.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "おしえた"
+                },
+                {
+                  "id": "2",
+                  "text": "おしえる"
+                },
+                {
+                  "id": "3",
+                  "text": "おしえない"
+                },
+                {
+                  "id": "4",
+                  "text": "おしえ"
+                }
+              ],
+              "correctChoiceId": "2",
+              "source": {
+                "printedPage": 66,
+                "number": 4
+              }
+            },
+            {
+              "id": "c14-grammar-choices-5",
+              "number": 5,
+              "mode": "choice",
+              "prompt": "ア：アナさんと 会いましたか。\nイ：いいえ、りょうに 行きました（　）アナさんが いませんでした。",
+              "romaji": "A: ana san to aimashita ka. B: iie, ryou ni ikimashita ____ ana san ga imasen deshita.",
+              "model": "が",
+              "whyEn": "I went to the dormitory, but Ana wasn't there: the two parts contrast, so use が.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "から"
+                },
+                {
+                  "id": "2",
+                  "text": "が"
+                },
+                {
+                  "id": "3",
+                  "text": "ので"
+                },
+                {
+                  "id": "4",
+                  "text": "まで"
+                }
+              ],
+              "correctChoiceId": "2",
+              "source": {
+                "printedPage": 66,
+                "number": 5
+              }
+            },
+            {
+              "id": "c14-grammar-choices-6",
+              "number": 6,
+              "mode": "choice",
+              "prompt": "ア：あたらしいアパートは どうですか。\nイ：へやは ひろい（　）そとは ちょっと うるさいです。",
+              "romaji": "A: atarashii apa-to wa dou desu ka. B: heya wa hiroi ____ soto wa chotto urusai desu.",
+              "model": "ですが",
+              "whyEn": "The room is big, but outside is a little noisy: a contrast, so use ですが.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "ながら"
+                },
+                {
+                  "id": "2",
+                  "text": "ですから"
+                },
+                {
+                  "id": "3",
+                  "text": "まえに"
+                },
+                {
+                  "id": "4",
+                  "text": "ですが"
+                }
+              ],
+              "correctChoiceId": "4",
+              "source": {
+                "printedPage": 66,
+                "number": 6
+              }
+            },
+            {
+              "id": "c14-grammar-choices-7",
+              "number": 7,
+              "mode": "choice",
+              "prompt": "ぼうしを（　）です。",
+              "romaji": "boushi o ____ desu.",
+              "model": "かぶりたい",
+              "whyEn": "A hat takes かぶる: かぶりたいです, I want to wear a hat.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "はきたい"
+                },
+                {
+                  "id": "2",
+                  "text": "しめたい"
+                },
+                {
+                  "id": "3",
+                  "text": "きたい"
+                },
+                {
+                  "id": "4",
+                  "text": "かぶりたい"
+                }
+              ],
+              "correctChoiceId": "4",
+              "source": {
+                "printedPage": 66,
+                "number": 7
+              }
+            },
+            {
+              "id": "c14-grammar-choices-8",
+              "number": 8,
+              "mode": "choice",
+              "prompt": "あさっては しけんが あるから、あしたの パーティーへ（　）つもりです。",
+              "romaji": "asatte wa shiken ga aru kara, ashita no pa-ti- e ____ tsumori desu.",
+              "model": "いかない",
+              "whyEn": "There is an exam, so the plan is not to go. つもりです follows the ない form: いかないつもりです.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "いかない"
+                },
+                {
+                  "id": "2",
+                  "text": "いかなかった"
+                },
+                {
+                  "id": "3",
+                  "text": "いきたい"
+                },
+                {
+                  "id": "4",
+                  "text": "いきたくない"
+                }
+              ],
+              "correctChoiceId": "1",
+              "source": {
+                "printedPage": 66,
+                "number": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "c14-word-order",
+          "chapter": "14",
+          "title": "II. ぶんの くみたて: Sentence composition (page 67)",
+          "sourcePage": 67,
+          "instructionsJa": "II. ぶんの くみたて",
+          "instructionsEn": "Please rearrange the words to complete the sentence. Select a word to add it, and select a chosen word to put it back.",
+          "heading": "c14-word-order",
+          "questions": [
+            {
+              "id": "c14-word-order-1",
+              "number": 1,
+              "mode": "order",
+              "prompt": "ごはんを ＿＿ ＿＿ ＿＿ ＿＿ をあらいましょう。",
+              "model": "ごはんを 食べるまえに てを あらいましょう。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "まえ",
+                "て",
+                "に",
+                "食べる"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  0,
+                  2,
+                  1
+                ]
+              ],
+              "before": "ごはんを",
+              "after": "をあらいましょう。",
+              "source": {
+                "printedPage": 67,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-word-order-2",
+              "number": 2,
+              "mode": "order",
+              "prompt": "日本大学 ＿＿ ＿＿ ＿＿ ＿＿ つもりです。",
+              "model": "日本大学で 日本語を べんきょうする つもりです。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "する",
+                "で",
+                "べんきょう",
+                "日本語を"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  3,
+                  2,
+                  0
+                ]
+              ],
+              "before": "日本大学",
+              "after": "つもりです。",
+              "source": {
+                "printedPage": 67,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-word-order-3",
+              "number": 3,
+              "mode": "order",
+              "prompt": "＿＿ ＿＿ ＿＿ ＿＿ どちらですか。",
+              "model": "すみませんが、おてあらいは どちらですか。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "おてあらい",
+                "が",
+                "は",
+                "すみません"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  1,
+                  0,
+                  2
+                ]
+              ],
+              "after": "どちらですか。",
+              "source": {
+                "printedPage": 67,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-word-order-4",
+              "number": 4,
+              "mode": "order",
+              "prompt": "レポート ＿＿ ＿＿ ＿＿ ＿＿ は 書きませんでした。",
+              "model": "レポートを だしましたけど、なまえは 書きませんでした。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "だしました",
+                "なまえ",
+                "けど",
+                "を"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  0,
+                  2,
+                  1
+                ]
+              ],
+              "before": "レポート",
+              "after": "は 書きませんでした。",
+              "source": {
+                "printedPage": 67,
+                "number": 4
+              }
+            },
+            {
+              "id": "c14-word-order-5",
+              "number": 5,
+              "mode": "order",
+              "prompt": "パーティーに ＿＿ ＿＿ ＿＿ ＿＿ はきました。",
+              "model": "パーティーに ながくて くろい スカートを はきました。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "スカート",
+                "ながくて",
+                "を",
+                "くろい"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              ],
+              "before": "パーティーに",
+              "after": "はきました。",
+              "source": {
+                "printedPage": 67,
+                "number": 5
+              }
+            },
+            {
+              "id": "c14-word-order-6",
+              "number": 6,
+              "mode": "order",
+              "prompt": "土曜日に ＿＿ ＿＿ ＿＿ ＿＿ が あります。",
+              "model": "土曜日に ともだちと あそびたいですが、アルバイトが あります。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "あそびたい",
+                "アルバイト",
+                "ですが",
+                "ともだちと"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  0,
+                  2,
+                  1
+                ]
+              ],
+              "before": "土曜日に",
+              "after": "が あります。",
+              "source": {
+                "printedPage": 67,
+                "number": 6
+              }
+            },
+            {
+              "id": "c14-word-order-7",
+              "number": 7,
+              "mode": "order",
+              "prompt": "毎晩 ＿＿ ＿＿ ＿＿ ＿＿ 飲みます。",
+              "model": "毎晩 ねるまえに ぎゅうにゅうを 飲みます。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "まえに",
+                "を",
+                "ねる",
+                "ぎゅうにゅう"
+              ],
+              "acceptedOrders": [
+                [
+                  2,
+                  0,
+                  3,
+                  1
+                ]
+              ],
+              "before": "毎晩",
+              "after": "飲みます。",
+              "source": {
+                "printedPage": 67,
+                "number": 7
+              }
+            },
+            {
+              "id": "c14-word-order-8",
+              "number": 8,
+              "mode": "order",
+              "prompt": "かんじは むずかしいですから、 ＿＿ ＿＿ ＿＿ ＿＿ です。",
+              "model": "かんじは むずかしいですから、れんしゅうを する つもりです。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "を",
+                "つもり",
+                "する",
+                "れんしゅう"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  0,
+                  2,
+                  1
+                ]
+              ],
+              "before": "かんじは むずかしいですから、",
+              "after": "です。",
+              "source": {
+                "printedPage": 67,
+                "number": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "c14-text-grammar",
+          "chapter": "14",
+          "title": "III. ぶんしょうの ぶんぽう: Text grammar (page 68)",
+          "sourcePage": 68,
+          "instructionsJa": "III. ぶんしょうの ぶんぽう",
+          "instructionsEn": "Please read the conversation above and choose the proper word or phrase for blanks (1) to (3).",
+          "passageId": "c14-return-passage",
+          "heading": "c14-text-grammar",
+          "questions": [
+            {
+              "id": "c14-text-grammar-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "（1）に はいる ことばは どれですか。",
+              "model": "りょこう",
+              "whyEn": "Kim has just come back from a month in Korea, so Abe asks about the trip: りょこうは よかったですか.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "そうじ"
+                },
+                {
+                  "id": "2",
+                  "text": "りょこう"
+                },
+                {
+                  "id": "3",
+                  "text": "ゲーム"
+                },
+                {
+                  "id": "4",
+                  "text": "びょうき"
+                }
+              ],
+              "correctChoiceId": "2",
+              "source": {
+                "printedPage": 68,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-text-grammar-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "（2）に はいる ことばは どれですか。",
+              "model": "いました",
+              "whyEn": "Kim is a person, and a person staying somewhere takes いる: かんこくに いっかげつぐらい いました.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "ありました"
+                },
+                {
+                  "id": "2",
+                  "text": "できました"
+                },
+                {
+                  "id": "3",
+                  "text": "しりました"
+                },
+                {
+                  "id": "4",
+                  "text": "いました"
+                }
+              ],
+              "correctChoiceId": "4",
+              "source": {
+                "printedPage": 68,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-text-grammar-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "（3）に はいる ことばは どれですか。",
+              "model": "べんきょうしたけど",
+              "whyEn": "Kim studied every night but did not pass. The second part is not what you would expect, so use けど.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "べんきょうしたから"
+                },
+                {
+                  "id": "2",
+                  "text": "べんきょうしながら"
+                },
+                {
+                  "id": "3",
+                  "text": "べんきょうしたけど"
+                },
+                {
+                  "id": "4",
+                  "text": "べんきょうするつもりなので"
+                }
+              ],
+              "correctChoiceId": "3",
+              "source": {
+                "printedPage": 68,
+                "number": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c14-reading-comprehension",
+          "chapter": "14",
+          "title": "IV. どっかい: Reading comprehension (page 69)",
+          "sourcePage": 69,
+          "instructionsJa": "IV. どっかい",
+          "instructionsEn": "Please read the passage above and answer the questions.",
+          "passageId": "c14-fireworks-passage",
+          "heading": "c14-reading-comprehension",
+          "questions": [
+            {
+              "id": "c14-reading-comprehension-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "この人は 花火を いつ 見ますか。",
+              "romaji": "kono hito wa hanabi o itsu mimasu ka.",
+              "model": "七月のおわりごろ 見ます",
+              "whyEn": "The fireworks near the apartment are around the end of July: しちがつの おわりごろ.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "毎日 4時半ごろ 見ます"
+                },
+                {
+                  "id": "2",
+                  "text": "毎週 土よう日 見ます"
+                },
+                {
+                  "id": "3",
+                  "text": "毎年のおわりごろ 見ます"
+                },
+                {
+                  "id": "4",
+                  "text": "七月のおわりごろ 見ます"
+                }
+              ],
+              "correctChoiceId": "4",
+              "source": {
+                "printedPage": 69,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-reading-comprehension-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "この人は どんなゆかたを 着ますか。",
+              "romaji": "kono hito wa donna yukata o kimasu ka.",
+              "model": "新しいゆかたを 買いました",
+              "whyEn": "The writer bought a yukata at a department store last week. The two friends got theirs from Saori's mother.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "新しいゆかたを 買いました"
+                },
+                {
+                  "id": "2",
+                  "text": "お母さんから もらいました"
+                },
+                {
+                  "id": "3",
+                  "text": "さおりさんの お母さんから もらいました"
+                },
+                {
+                  "id": "4",
+                  "text": "マリさんから もらいました"
+                }
+              ],
+              "correctChoiceId": "1",
+              "source": {
+                "printedPage": 69,
+                "number": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "c14-personal-answers",
+          "chapter": "14",
+          "title": "V. といと こたえ: Question and answer (page 70)",
+          "sourcePage": 70,
+          "instructionsJa": "V. といと こたえ",
+          "instructionsEn": "Please write your answer in sentence form. The model is only one example. Your answer is fine if the grammar and meaning are correct.",
+          "heading": "c14-personal-answers",
+          "questions": [
+            {
+              "id": "c14-personal-answers-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "来年 なにを するつもりですか。",
+              "romaji": "rainen nani o suru tsumori desu ka.",
+              "model": "日本へ りょこうに 行くつもりです。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-personal-answers-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "ねるまえに なにを しますか。",
+              "romaji": "neru mae ni nani o shimasu ka.",
+              "model": "ねるまえに 本を 読みます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-personal-answers-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "めがねを かけますか。",
+              "romaji": "megane o kakemasu ka.",
+              "model": "いいえ、めがねを かけません。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-personal-answers-4",
+              "number": 4,
+              "mode": "self",
+              "prompt": "ぼうしを かぶりますか。",
+              "romaji": "boushi o kaburimasu ka.",
+              "model": "はい、ときどき ぼうしを かぶります。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 4
+              }
+            },
+            {
+              "id": "c14-personal-answers-5",
+              "number": 5,
+              "mode": "self",
+              "prompt": "日本で はたらくつもりですか。",
+              "romaji": "nihon de hataraku tsumori desu ka.",
+              "model": "はい、日本で はたらくつもりです。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 5
+              }
+            },
+            {
+              "id": "c14-personal-answers-6",
+              "number": 6,
+              "mode": "self",
+              "prompt": "日本で 日本語を べんきょうするつもりですか。",
+              "romaji": "nihon de nihongo o benkyou suru tsumori desu ka.",
+              "model": "いいえ、日本では べんきょうしないつもりです。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 6
+              }
+            },
+            {
+              "id": "c14-personal-answers-7",
+              "number": 7,
+              "mode": "self",
+              "prompt": "つぎの JLPT を うけるつもりですか。",
+              "romaji": "tsugi no JLPT o ukeru tsumori desu ka.",
+              "model": "はい、つぎの JLPT を うけるつもりです。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 7
+              }
+            },
+            {
+              "id": "c14-personal-answers-8",
+              "number": 8,
+              "mode": "self",
+              "prompt": "日本語のクラスのまえに、べんきょうしますか。",
+              "romaji": "nihongo no kurasu no mae ni, benkyou shimasu ka.",
+              "model": "はい、クラスのまえに すこし べんきょうします。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 8
+              }
+            },
+            {
+              "id": "c14-personal-answers-9",
+              "number": 9,
+              "mode": "self",
+              "prompt": "とけいを していますか。",
+              "romaji": "tokei o shite imasu ka.",
+              "model": "はい、とけいを しています。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 9
+              }
+            },
+            {
+              "id": "c14-personal-answers-10",
+              "number": 10,
+              "mode": "self",
+              "prompt": "来年 どこかへ 行くつもりですか。どこへ 行きますか。",
+              "romaji": "rainen dokoka e iku tsumori desu ka. doko e ikimasu ka.",
+              "model": "はい、行くつもりです。かんこくへ 行きます。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 70,
+                "number": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "c14-translation-practice",
+          "chapter": "14",
+          "title": "VI. わやくの れんしゅう: English to Japanese translation (page 70)",
+          "sourcePage": 70,
+          "instructionsJa": "VI. わやくの れんしゅう",
+          "instructionsEn": "Please translate to Japanese, then compare your answer with the model.",
+          "heading": "c14-translation-practice",
+          "questions": [
+            {
+              "id": "c14-translation-practice-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "A: What do you plan to do next year?\nB: I plan to study in a Japanese university.\nA: Before going to Japan, will you study Japanese?\nB: Yes, I plan to study for a year.",
+              "model": "ア：来年 なにを するつもりですか。\nイ：日本の 大学で べんきょうするつもりです。\nア：日本へ 行くまえに 日本語を べんきょうしますか。\nイ：はい、一年 べんきょうするつもりです。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 70,
+                "number": 1
+              }
+            },
+            {
+              "id": "c14-translation-practice-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "A: How was the exam?\nB: It was okay, but the Kanji exam was very difficult.\nA: How about the grammar exam?\nB: The grammar was easy.",
+              "model": "ア：しけんは どうでしたか。\nイ：だいじょうぶでしたが、漢字の しけんは とても むずかしかったです。\nア：ぶんぽうの しけんは どうでしたか。\nイ：ぶんぽうは やさしかったです。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 70,
+                "number": 2
+              }
+            },
+            {
+              "id": "c14-translation-practice-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "A: What will you wear tomorrow?\nB: I will wear a blue dress. How about you?\nA: I will wear a black shirt.",
+              "model": "ア：明日 なにを 着ますか。\nイ：あおい ワンピースを 着ます。あなたは?\nア：わたしは くろい シャツを 着ます。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 70,
+                "number": 3
+              }
+            },
+            {
+              "id": "c14-translation-practice-4",
+              "number": 4,
+              "mode": "self",
+              "prompt": "A: Before going home, I plan to consult with Teacher Tanaka.\nB: Teacher Tanaka went home early today.",
+              "model": "ア：帰るまえに 田中先生に そうだんするつもりです。\nイ：田中先生は 今日 はやく 帰りましたよ。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 70,
+                "number": 4
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

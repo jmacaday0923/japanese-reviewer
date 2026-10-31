@@ -1238,6 +1238,79 @@
         }
       ],
       "transformations": []
+    },
+    {
+      "chapter": "14",
+      "order": [
+        {
+          "id": "sb-c14-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "バスに のるまえに きっぷを 買います。",
+            "romaji": "basu ni noru mae ni kippu o kaimasu.",
+            "english": "Before riding the bus, I buy a ticket.",
+            "source": {
+              "heading": "c14-14-1-mae-ni",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "tokens": [
+            "バスに",
+            "のるまえに",
+            "きっぷを",
+            "買います。"
+          ],
+          "why": "Put まえに after the dictionary form to say before doing something: いくまえに, before going. A noun takes の: しょくじの まえに, before the meal. The part with まえに happens second, so the sentence ends with what you do first: バスに のるまえに きっぷを かいます, I buy a ticket before riding the bus.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c14-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "友だちと いっしょに 山を のぼるつもりです。",
+            "romaji": "tomodachi to issho ni yama o noboru tsumori desu.",
+            "english": "I plan to climb a mountain with my friends.",
+            "source": {
+              "heading": "c14-14-2-tsumori",
+              "table": 1,
+              "row": 3
+            }
+          },
+          "tokens": [
+            "友だちと",
+            "いっしょに",
+            "山を",
+            "のぼるつもりです。"
+          ],
+          "why": "Put つもりです after the dictionary form to say what you plan or intend to do: のぼるつもりです, I plan to climb. It is a plan you have already decided on. In casual speech, use つもりだ, as in the last two examples.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c14-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "新しい アパートは やすいけど、とても せまいです。",
+            "romaji": "atarashii apa-to wa yasui kedo, totemo semai desu.",
+            "english": "The new apartment is cheap, but it's very small.",
+            "source": {
+              "heading": "c14-14-7-keredo",
+              "table": 1,
+              "row": 1
+            }
+          },
+          "tokens": [
+            "新しい",
+            "アパートは",
+            "やすいけど、",
+            "とても",
+            "せまいです。"
+          ],
+          "why": "けれど joins two parts inside one sentence, like が, and shows that the second part is different from what you would expect. けれども is the formal form and けど is the casual form.",
+          "whyParagraph": 2
+        }
+      ],
+      "transformations": []
     }
   ]
 }

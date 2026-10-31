@@ -1,0 +1,699 @@
+{
+  "version": 1,
+  "chapter": "14",
+  "sourceFile": "Chapter14.pdf",
+  "sourceSha256": "45db9c3368bcd4cc49f603645b908a9b864a7852d324ac4217f0cceb177671d7",
+  "printedPages": [
+    55,
+    70
+  ],
+  "sourceIsScan": true,
+  "textReview": "The single-page FireShot capture was rendered at 2.5× in 24 tiles and every tile visually reviewed, covering printed Chapter 14 pages 55 to 70.",
+  "patterns": [
+    "ぶんけい 14.1 Dictionary Form + まえに",
+    "ぶんけい 14.2 Dictionary Form + つもりです",
+    "ぶんけい 14.3 ない Form + つもりです",
+    "ぶんけい 14.4 A が、B",
+    "ぶんけい 14.5 A. しかし B",
+    "ぶんけい 14.6 A. でも B",
+    "ぶんけい 14.7 A けれど(も)・けど、B"
+  ],
+  "vocabularyCount": 31,
+  "workbookQuestionCount": 80,
+  "automaticQuestions": 66,
+  "selfCheckQuestions": 14,
+  "modelAnswersAreGenerated": true,
+  "adaptations": [
+    "No supplied answer key; all keys and explanations are added model answers. Personal and translation answers use self-check.",
+    "Kanji appear only where the printed chapter uses them, and every kanji word shows its reading above it from the reviewed list in src/data/furigana.json. Headings, instructions and explanations use English and kana, following the book.",
+    "The p.57 clothing chart is shown as one row per verb, with the clothing it goes with.",
+    "The 14.2 and 14.3 examples show the つもり sentence; the book also prints the plain ます sentence before it. Conversation lines are listed without the printed A and B labels.",
+    "The p.58 exercise has a put-on and a take-off blank for each of its 10 items, so it is 20 questions. The verb alone or the whole sentence is accepted, and 着ます is accepted for きます. For ぼうし the book's chart uses はずす; ぬぎます is also accepted.",
+    "The p.60 exercise accepts the whole sentence in kana or with the book's kanji, and へ or に for the destination.",
+    "The p.63 exercise has a positive and a negative つもり sentence for each of its 8 sentences, so it is 16 questions. The verb with つもりです alone or the whole sentence is accepted, and so is つもりだ.",
+    "In the p.69 passage, the printed 花火の 行くまえに is shown as 花火に 行くまえに.",
+    "The vocabulary list prints sunglass; it is shown as sunglasses.",
+    "Personal question 9 on p.70 uses しています, as printed, and its model answer keeps that form."
+  ],
+  "readingNotes": [
+    {
+      "passage": "c14-return-passage",
+      "words": [
+        "おひさしぶりです",
+        "なるほど",
+        "がんばってください",
+        "がんばります"
+      ]
+    },
+    {
+      "passage": "c14-fireworks-passage",
+      "words": [
+        "おわり",
+        "もらう",
+        "すずしい"
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "c14-wearing-verbs",
+      "heading": "c14-wearing-verbs",
+      "printedPage": 58,
+      "questions": [
+        {
+          "id": "c14-wearing-verbs-1",
+          "number": 1,
+          "mode": "text",
+          "model": "ゆびわを します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-2",
+          "number": 2,
+          "mode": "text",
+          "model": "ゆびわを はずします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-3",
+          "number": 3,
+          "mode": "text",
+          "model": "ぼうしを かぶります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-4",
+          "number": 4,
+          "mode": "text",
+          "model": "ぼうしを はずします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-5",
+          "number": 5,
+          "mode": "text",
+          "model": "サンダルを はきます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-6",
+          "number": 6,
+          "mode": "text",
+          "model": "サンダルを ぬぎます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-7",
+          "number": 7,
+          "mode": "text",
+          "model": "とけいを します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-8",
+          "number": 8,
+          "mode": "text",
+          "model": "とけいを はずします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-9",
+          "number": 9,
+          "mode": "text",
+          "model": "サングラスを かけます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-10",
+          "number": 10,
+          "mode": "text",
+          "model": "サングラスを はずします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-11",
+          "number": 11,
+          "mode": "text",
+          "model": "うわぎを きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-12",
+          "number": 12,
+          "mode": "text",
+          "model": "うわぎを ぬぎます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-13",
+          "number": 13,
+          "mode": "text",
+          "model": "ベルトを しめます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-14",
+          "number": 14,
+          "mode": "text",
+          "model": "ベルトを はずします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-15",
+          "number": 15,
+          "mode": "text",
+          "model": "パンツを はきます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-16",
+          "number": 16,
+          "mode": "text",
+          "model": "パンツを ぬぎます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-17",
+          "number": 17,
+          "mode": "text",
+          "model": "コートを きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-18",
+          "number": 18,
+          "mode": "text",
+          "model": "コートを ぬぎます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-19",
+          "number": 19,
+          "mode": "text",
+          "model": "スリッパを はきます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-wearing-verbs-20",
+          "number": 20,
+          "mode": "text",
+          "model": "スリッパを ぬぎます。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c14-mae-ni",
+      "heading": "c14-mae-ni",
+      "printedPage": 60,
+      "questions": [
+        {
+          "id": "c14-mae-ni-1",
+          "number": 1,
+          "mode": "text",
+          "model": "パソコンを おくまえに つくえを きれいにします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-mae-ni-2",
+          "number": 2,
+          "mode": "text",
+          "model": "レポートを 書くまえに 社長に そうだんします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-mae-ni-3",
+          "number": 3,
+          "mode": "text",
+          "model": "来るまえに 友だちに 電話を かけます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-mae-ni-4",
+          "number": 4,
+          "mode": "text",
+          "model": "帰るまえに やさいを 買います。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-mae-ni-5",
+          "number": 5,
+          "mode": "text",
+          "model": "びょういんへ 行くまえに くすりを 飲みます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-mae-ni-6",
+          "number": 6,
+          "mode": "text",
+          "model": "シャワーを あびるまえに へやを そうじします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-mae-ni-7",
+          "number": 7,
+          "mode": "text",
+          "model": "寝るまえに 本を 読みました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-mae-ni-8",
+          "number": 8,
+          "mode": "text",
+          "model": "おふろに 入るまえに からだを 洗います。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-mae-ni-9",
+          "number": 9,
+          "mode": "text",
+          "model": "学校へ 行くまえに 朝ごはんを 食べます。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c14-tsumori",
+      "heading": "c14-tsumori",
+      "printedPage": 63,
+      "questions": [
+        {
+          "id": "c14-tsumori-1",
+          "number": 1,
+          "mode": "text",
+          "model": "火よう日に 山田さんと 話すつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-2",
+          "number": 2,
+          "mode": "text",
+          "model": "火よう日に 山田さんと 話さないつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-3",
+          "number": 3,
+          "mode": "text",
+          "model": "新しいカメラを 買うつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-4",
+          "number": 4,
+          "mode": "text",
+          "model": "新しいカメラを 買わないつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-5",
+          "number": 5,
+          "mode": "text",
+          "model": "東京に すむつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-6",
+          "number": 6,
+          "mode": "text",
+          "model": "東京に すまないつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-7",
+          "number": 7,
+          "mode": "text",
+          "model": "日本語の 本を かりるつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-8",
+          "number": 8,
+          "mode": "text",
+          "model": "日本語の 本を かりないつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-9",
+          "number": 9,
+          "mode": "text",
+          "model": "くろい くつを はくつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-10",
+          "number": 10,
+          "mode": "text",
+          "model": "くろい くつを はかないつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-11",
+          "number": 11,
+          "mode": "text",
+          "model": "友だちに そうだんするつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-12",
+          "number": 12,
+          "mode": "text",
+          "model": "友だちに そうだんしないつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-13",
+          "number": 13,
+          "mode": "text",
+          "model": "明日 プレゼントを おくるつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-14",
+          "number": 14,
+          "mode": "text",
+          "model": "明日 プレゼントを おくらないつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-15",
+          "number": 15,
+          "mode": "text",
+          "model": "りょかんに とまるつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-tsumori-16",
+          "number": 16,
+          "mode": "text",
+          "model": "りょかんに とまらないつもりです。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c14-grammar-choices",
+      "heading": "c14-grammar-choices",
+      "printedPage": 66,
+      "questions": [
+        {
+          "id": "c14-grammar-choices-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "ふるい",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c14-grammar-choices-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "はいる",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c14-grammar-choices-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "きます",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c14-grammar-choices-4",
+          "number": 4,
+          "mode": "choice",
+          "model": "おしえる",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c14-grammar-choices-5",
+          "number": 5,
+          "mode": "choice",
+          "model": "が",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c14-grammar-choices-6",
+          "number": 6,
+          "mode": "choice",
+          "model": "ですが",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c14-grammar-choices-7",
+          "number": 7,
+          "mode": "choice",
+          "model": "かぶりたい",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c14-grammar-choices-8",
+          "number": 8,
+          "mode": "choice",
+          "model": "いかない",
+          "correctChoiceId": "1"
+        }
+      ]
+    },
+    {
+      "id": "c14-word-order",
+      "heading": "c14-word-order",
+      "printedPage": 67,
+      "questions": [
+        {
+          "id": "c14-word-order-1",
+          "number": 1,
+          "mode": "order",
+          "model": "ごはんを 食べるまえに てを あらいましょう。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-word-order-2",
+          "number": 2,
+          "mode": "order",
+          "model": "日本大学で 日本語を べんきょうする つもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-word-order-3",
+          "number": 3,
+          "mode": "order",
+          "model": "すみませんが、おてあらいは どちらですか。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-word-order-4",
+          "number": 4,
+          "mode": "order",
+          "model": "レポートを だしましたけど、なまえは 書きませんでした。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-word-order-5",
+          "number": 5,
+          "mode": "order",
+          "model": "パーティーに ながくて くろい スカートを はきました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-word-order-6",
+          "number": 6,
+          "mode": "order",
+          "model": "土曜日に ともだちと あそびたいですが、アルバイトが あります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-word-order-7",
+          "number": 7,
+          "mode": "order",
+          "model": "毎晩 ねるまえに ぎゅうにゅうを 飲みます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-word-order-8",
+          "number": 8,
+          "mode": "order",
+          "model": "かんじは むずかしいですから、れんしゅうを する つもりです。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c14-text-grammar",
+      "heading": "c14-text-grammar",
+      "printedPage": 68,
+      "questions": [
+        {
+          "id": "c14-text-grammar-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "りょこう",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c14-text-grammar-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "いました",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c14-text-grammar-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "べんきょうしたけど",
+          "correctChoiceId": "3"
+        }
+      ]
+    },
+    {
+      "id": "c14-reading-comprehension",
+      "heading": "c14-reading-comprehension",
+      "printedPage": 69,
+      "questions": [
+        {
+          "id": "c14-reading-comprehension-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "七月のおわりごろ 見ます",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c14-reading-comprehension-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "新しいゆかたを 買いました",
+          "correctChoiceId": "1"
+        }
+      ]
+    },
+    {
+      "id": "c14-personal-answers",
+      "heading": "c14-personal-answers",
+      "printedPage": 70,
+      "questions": [
+        {
+          "id": "c14-personal-answers-1",
+          "number": 1,
+          "mode": "self",
+          "model": "日本へ りょこうに 行くつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-2",
+          "number": 2,
+          "mode": "self",
+          "model": "ねるまえに 本を 読みます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-3",
+          "number": 3,
+          "mode": "self",
+          "model": "いいえ、めがねを かけません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-4",
+          "number": 4,
+          "mode": "self",
+          "model": "はい、ときどき ぼうしを かぶります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-5",
+          "number": 5,
+          "mode": "self",
+          "model": "はい、日本で はたらくつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-6",
+          "number": 6,
+          "mode": "self",
+          "model": "いいえ、日本では べんきょうしないつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-7",
+          "number": 7,
+          "mode": "self",
+          "model": "はい、つぎの JLPT を うけるつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-8",
+          "number": 8,
+          "mode": "self",
+          "model": "はい、クラスのまえに すこし べんきょうします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-9",
+          "number": 9,
+          "mode": "self",
+          "model": "はい、とけいを しています。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-personal-answers-10",
+          "number": 10,
+          "mode": "self",
+          "model": "はい、行くつもりです。かんこくへ 行きます。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c14-translation-practice",
+      "heading": "c14-translation-practice",
+      "printedPage": 70,
+      "questions": [
+        {
+          "id": "c14-translation-practice-1",
+          "number": 1,
+          "mode": "self",
+          "model": "ア：来年 なにを するつもりですか。\nイ：日本の 大学で べんきょうするつもりです。\nア：日本へ 行くまえに 日本語を べんきょうしますか。\nイ：はい、一年 べんきょうするつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-translation-practice-2",
+          "number": 2,
+          "mode": "self",
+          "model": "ア：しけんは どうでしたか。\nイ：だいじょうぶでしたが、漢字の しけんは とても むずかしかったです。\nア：ぶんぽうの しけんは どうでしたか。\nイ：ぶんぽうは やさしかったです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-translation-practice-3",
+          "number": 3,
+          "mode": "self",
+          "model": "ア：明日 なにを 着ますか。\nイ：あおい ワンピースを 着ます。あなたは?\nア：わたしは くろい シャツを 着ます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c14-translation-practice-4",
+          "number": 4,
+          "mode": "self",
+          "model": "ア：帰るまえに 田中先生に そうだんするつもりです。\nイ：田中先生は 今日 はやく 帰りましたよ。",
+          "correctChoiceId": null
+        }
+      ]
+    }
+  ],
+  "questionDataSha256": "de91496e4e47925a32bc0a9cc805226f4d0aae6b5ef85f10d62e757ed570ec74",
+  "previousChapterHashes": {
+    "1": "fcb7cc4577bcd889e0c5691ad2ccb32db590916db6be859680f79210f815ea2f",
+    "2": "6f86cf68c36ec2de4fc7d50e98d64cc90dbc373e9f2e264f1a60c9f4c89eadb5",
+    "3": "f0068f578f8bebaf8db2e600ecb60fd8dede8df79507d6a54f3b6814a0424205",
+    "4": "71258037cbc1b33450d1d31f72256a1428933d1a6131b310ab870deac072b0e5",
+    "5": "fe04d1e80ea6aabe8fd19c0f52b2f742ec983bc524d124444ea6bf4d3603b044",
+    "6": "fcf66703797c342f46ffb4d267add642c32aafd3170c048f5767d669a9a29fca",
+    "7": "edc9c1c055016c78e9e81c0367c904a86bc34aefa91ed95c09a20c5707e60782",
+    "8": "37c43fb29be4ea196b0a484115cc7123fab2240cf003b7bf776a4e91f9a11809",
+    "9": "3894cb096eeab009e8077bd3b8f7d665270eb86cf762c1d223d9e5070f025841",
+    "10": "b8b460a8d09146229ba4e170ba0c982e457edab318b7a0502da624b674ec8dd9",
+    "11": "13ea0b3b494ae4369b9902c7869563c209de81716c80b7d7290d0b64f928cc0d",
+    "12": "c654af4479a733fa90e521da908b0bcacc13af19e4f32f4205d711e81ba31cea",
+    "13": "5300015a6d934b2185aa30fb67b73ec789c439bad8f2c71ab69d83d2e62c465a"
+  },
+  "chapterSha256": "39c0a2c094c746afd708829bacdaf94dc8aa70da028d00a9723594b5771d0a9a"
+}
