@@ -4,13 +4,13 @@
   "referenceCommit": "c6e7c91",
   "method": "Render existing question/answer table pairs as interactive practice. Preserve all original source datasets and anchors. Exact source-backed finite answers only; other tasks use model comparison.",
   "sourceHashes": {
-    "src/data/chapters.json": "9e82c91cbf20575ee1e2a665672967f227fbb6438093dc26a3f5ae29f7cbb760",
+    "src/data/chapters.json": "61b808d6a528d55591160636834356b9d91ddd937021b90fd84a77e2a5521d90",
     "src/data/japanese-display.json": "ca788915141b5f05f1f56804551fbbda7f3e0598d5366ada31c51eab14a0471e",
     "src/data/english-display.json": "14229f18b772361e6107130d97a260bd5c40663ebc58563f3e2962bbefefc954",
     "src/data/exercises.json": "1147c19bd967c53a386f8dc7972846ab3dcc4cafd66cb6a6c6ff2d73e99b1f71",
-    "src/data/sentence-exercises.json": "dd3163fd6e3f163c46d8cb6f532f1af49df384f9dff1367cab4723f4d9aeddc8",
-    "src/data/workbook-exercises.json": "de91496e4e47925a32bc0a9cc805226f4d0aae6b5ef85f10d62e757ed570ec74",
-    "src/data/chapter-guides.json": "1bc812016865f1992eec2c3b9860e919441748e92aa4d2160e7b021b35aea38e",
+    "src/data/sentence-exercises.json": "e8133800250e5b8473973ea4311b4a71b879a8ea8fbefe69b159e44cf54c42ae",
+    "src/data/workbook-exercises.json": "d740f6897269dcded12dda99ba5277178c3a0bf8b4619efbd0355ba639d36578",
+    "src/data/chapter-guides.json": "0a741d97ea4a6850f7769031023f1a5e02b10f551a50f1e7a59c364430274c21",
     "src/data/chapter-reading-support.json": "eacec09dc38656dd29e81a05a93b743f73c38c93de9aa2f1608e75740d36a25d"
   },
   "activities": 291,

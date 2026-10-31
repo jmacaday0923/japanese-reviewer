@@ -1311,6 +1311,77 @@
         }
       ],
       "transformations": []
+    },
+    {
+      "chapter": "15",
+      "order": [
+        {
+          "id": "sb-c15-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "仕事の あとで ともだちと いっしょに 帰ります。",
+            "romaji": "shigoto no ato de tomodachi to issho ni kaerimasu.",
+            "english": "After work, I go home with my friends.",
+            "source": {
+              "heading": "c15-15-1-ato",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "tokens": [
+            "仕事の",
+            "あとで",
+            "ともだちと",
+            "いっしょに",
+            "帰ります。"
+          ],
+          "why": "あとで means after. The first action happens, then the second: しごとの あとで かえります, after work I go home. A noun takes の before あとで. で is often left out: しあいの あと.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c15-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "うたを うたったり おどったりしました。",
+            "romaji": "uta o utattari odottari shimashita.",
+            "english": "I sang, danced and so on.",
+            "source": {
+              "heading": "c15-15-2-tari",
+              "table": 1,
+              "row": 7
+            }
+          },
+          "tokens": [
+            "うたを",
+            "うたったり",
+            "おどったりしました。"
+          ],
+          "why": "Add り to the た form to list actions as examples, in no particular order: テニスを したり えいがを みたり します, I play tennis, watch movies and so on. The list ends with する, and する carries the tense: うたったり おどったり しました.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c15-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "中国語が ぜんぜん 話せません。",
+            "romaji": "chuugokugo ga zenzen hanasemasen.",
+            "english": "I can't speak Chinese at all.",
+            "source": {
+              "heading": "c15-15-5-zenzen",
+              "table": 1,
+              "row": 4
+            }
+          },
+          "tokens": [
+            "中国語が",
+            "ぜんぜん",
+            "話せません。"
+          ],
+          "why": "ぜんぜん with a negative verb means not at all: ぜんぜん わかりませんでした, I didn't understand at all. In casual speech ぜんぜん is sometimes used with a positive adjective: ぜんぜん いい, completely okay.",
+          "whyParagraph": 2
+        }
+      ],
+      "transformations": []
     }
   ]
 }

@@ -1,0 +1,670 @@
+{
+  "version": 1,
+  "chapter": "15",
+  "sourceFile": "Chapter15.pdf",
+  "sourceSha256": "c18cb1b208bdbda4530373286abcd8e0af27721f784789c8adc8a96c976d9bb5",
+  "printedPages": [
+    71,
+    86
+  ],
+  "sourceIsScan": true,
+  "textReview": "The single-page FireShot capture was rendered at 2.5× in 24 tiles and every tile visually reviewed, covering printed Chapter 15 pages 71 to 86. An earlier capture stopped at page 83 and was replaced.",
+  "patterns": [
+    "ぶんけい 15.1 Noun + の あと(で)",
+    "ぶんけい 15.2 〜たり、〜たり します",
+    "ぶんけい 15.3 だけ",
+    "ぶんけい 15.4 しか 〜ない",
+    "ぶんけい 15.5 ぜんぜん 〜ない",
+    "ぶんけい 15.6 あまり 〜ない"
+  ],
+  "vocabularyCount": 28,
+  "workbookQuestionCount": 76,
+  "automaticQuestions": 61,
+  "selfCheckQuestions": 15,
+  "modelAnswersAreGenerated": true,
+  "adaptations": [
+    "No supplied answer key; all keys and explanations are added model answers. Personal and translation answers use self-check.",
+    "Kanji appear only where the printed chapter uses them, and every kanji word shows its reading above it from the reviewed list in src/data/furigana.json. Headings, instructions and explanations use English and kana, following the book.",
+    "The p.73 ない and た form chart gains a Meaning column. The book's group numbers are kept in the Verb group column.",
+    "The 15.1 verb and 15.2 examples show the joined sentence; the book also prints the two parts it joins. English translations are full sentences instead of the book's short glosses.",
+    "The p.73 table asks for the ない form and the た form. Both are typed in one answer, separated by a space. For きる, the chapter's word (cut) gives きらない きった; the Chapter 14 word (wear) gives きない きた, which is also accepted.",
+    "The p.77 and p.79 exercises accept the whole sentence in kana or with the book's kanji, あと or あとで, ご or あと(で) after a span of time, and へ or に for the destination.",
+    "Text grammar blank (1) on p.84 has two parts, (1.A) and (1.B), answered by one choice.",
+    "Sentence composition question 1 on p.83 also accepts あまり からい りょうりを, which is grammatical.",
+    "Personal questions 1 to 5 on p.86 ask for たり〜たり; the instruction is kept with the question."
+  ],
+  "readingNotes": [
+    {
+      "passage": "c15-sunday-passage",
+      "words": [
+        "たのしみましょう",
+        "ほしい"
+      ]
+    },
+    {
+      "passage": "c15-new-employee-passage",
+      "words": [
+        "今年のはじめ",
+        "さんかする",
+        "あたらしいこと",
+        "しょるいを せいりする",
+        "まなぶ"
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "c15-verb-forms",
+      "heading": "c15-verb-forms",
+      "printedPage": 73,
+      "questions": [
+        {
+          "id": "c15-verb-forms-1",
+          "number": 1,
+          "mode": "text",
+          "model": "のまない のんだ",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-2",
+          "number": 2,
+          "mode": "text",
+          "model": "あらわない あらった",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-3",
+          "number": 3,
+          "mode": "text",
+          "model": "のぼらない のぼった",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-4",
+          "number": 4,
+          "mode": "text",
+          "model": "つかわない つかった",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-5",
+          "number": 5,
+          "mode": "text",
+          "model": "みがかない みがいた",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-6",
+          "number": 6,
+          "mode": "text",
+          "model": "ねない ねた",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-7",
+          "number": 7,
+          "mode": "text",
+          "model": "あびない あびた",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-8",
+          "number": 8,
+          "mode": "text",
+          "model": "かさない かした",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-9",
+          "number": 9,
+          "mode": "text",
+          "model": "かえさない かえした",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-10",
+          "number": 10,
+          "mode": "text",
+          "model": "つくらない つくった",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-11",
+          "number": 11,
+          "mode": "text",
+          "model": "わからない わかった",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-12",
+          "number": 12,
+          "mode": "text",
+          "model": "えらばない えらんだ",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-13",
+          "number": 13,
+          "mode": "text",
+          "model": "ひかない ひいた",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-14",
+          "number": 14,
+          "mode": "text",
+          "model": "わすれない わすれた",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-15",
+          "number": 15,
+          "mode": "text",
+          "model": "はじまらない はじまった",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-16",
+          "number": 16,
+          "mode": "text",
+          "model": "やすまない やすんだ",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-17",
+          "number": 17,
+          "mode": "text",
+          "model": "おかない おいた",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-18",
+          "number": 18,
+          "mode": "text",
+          "model": "おきない おきた",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-19",
+          "number": 19,
+          "mode": "text",
+          "model": "きらない きった",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-verb-forms-20",
+          "number": 20,
+          "mode": "text",
+          "model": "こない きた",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c15-ato-forms",
+      "heading": "c15-ato-forms",
+      "printedPage": 77,
+      "questions": [
+        {
+          "id": "c15-ato-forms-1",
+          "number": 1,
+          "mode": "text",
+          "model": "クラスが おわったあとで スーパーへ 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-2",
+          "number": 2,
+          "mode": "text",
+          "model": "一か月ご 国へ もどります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-3",
+          "number": 3,
+          "mode": "text",
+          "model": "しゃしんを とったあとで あなたに 見せます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-4",
+          "number": 4,
+          "mode": "text",
+          "model": "映画を 見たあとで カラオケへ 行きましょう。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-5",
+          "number": 5,
+          "mode": "text",
+          "model": "くすりを 飲んだあとで 寝ます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-6",
+          "number": 6,
+          "mode": "text",
+          "model": "仕事のあとで 友だちと あそびます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-7",
+          "number": 7,
+          "mode": "text",
+          "model": "十日間ご 国に 帰ります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-8",
+          "number": 8,
+          "mode": "text",
+          "model": "ギターを ひいたあとで マンガを 読みます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-9",
+          "number": 9,
+          "mode": "text",
+          "model": "せんたくしたあとで へやを そうじします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-ato-forms-10",
+          "number": 10,
+          "mode": "text",
+          "model": "ぶちょうに そうだんしたあとで みんなに せつめいします。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c15-tari-forms",
+      "heading": "c15-tari-forms",
+      "printedPage": 79,
+      "questions": [
+        {
+          "id": "c15-tari-forms-1",
+          "number": 1,
+          "mode": "text",
+          "model": "土よう日に えいがを 見たり 買い物を したり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-2",
+          "number": 2,
+          "mode": "text",
+          "model": "しゅうまつ へやを そうじしたり 小説を 読んだり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-3",
+          "number": 3,
+          "mode": "text",
+          "model": "カラオケへ 行ったり いえで れんしゅうしたり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-4",
+          "number": 4,
+          "mode": "text",
+          "model": "うたを うたったり ピアノを ひいたり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-5",
+          "number": 5,
+          "mode": "text",
+          "model": "山に のぼったり 海で およいだり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-6",
+          "number": 6,
+          "mode": "text",
+          "model": "さくぶんを 書いたり 日本の おんがくを 聞いたり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-7",
+          "number": 7,
+          "mode": "text",
+          "model": "ときどき 友だちと 話したり コーヒーを 飲んだり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-8",
+          "number": 8,
+          "mode": "text",
+          "model": "本を 読んだり ばんごはんを 食べたり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-9",
+          "number": 9,
+          "mode": "text",
+          "model": "しゃしんを とったり えを かいたり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-tari-forms-10",
+          "number": 10,
+          "mode": "text",
+          "model": "バスケットボールを したり バドミントンを したり します。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c15-grammar-choices",
+      "heading": "c15-grammar-choices",
+      "printedPage": 81,
+      "questions": [
+        {
+          "id": "c15-grammar-choices-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "だけ",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c15-grammar-choices-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "かいものをしたり、りょうりをつくったり",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c15-grammar-choices-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "そつぎょう",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c15-grammar-choices-4",
+          "number": 4,
+          "mode": "choice",
+          "model": "しか",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c15-grammar-choices-5",
+          "number": 5,
+          "mode": "choice",
+          "model": "あまり",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c15-grammar-choices-6",
+          "number": 6,
+          "mode": "choice",
+          "model": "ぜんぜん",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c15-grammar-choices-7",
+          "number": 7,
+          "mode": "choice",
+          "model": "きった",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c15-grammar-choices-8",
+          "number": 8,
+          "mode": "choice",
+          "model": "の",
+          "correctChoiceId": "3"
+        }
+      ]
+    },
+    {
+      "id": "c15-word-order",
+      "heading": "c15-word-order",
+      "printedPage": 83,
+      "questions": [
+        {
+          "id": "c15-word-order-1",
+          "number": 1,
+          "mode": "order",
+          "model": "からい りょうりを あまり 食べませんでした。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-word-order-2",
+          "number": 2,
+          "mode": "order",
+          "model": "田中先生と 話した あとで 帰りました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-word-order-3",
+          "number": 3,
+          "mode": "order",
+          "model": "教室の 中に ふたりの がくせいしか いません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-word-order-4",
+          "number": 4,
+          "mode": "order",
+          "model": "しごとの あと コーヒーを 飲みましょう。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-word-order-5",
+          "number": 5,
+          "mode": "order",
+          "model": "最近、いそがしく なったから あまり 出かけません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-word-order-6",
+          "number": 6,
+          "mode": "order",
+          "model": "明日の夜 仕事を した あとで どこかへ 行きませんか。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-word-order-7",
+          "number": 7,
+          "mode": "order",
+          "model": "にねんご 日本に すみたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-word-order-8",
+          "number": 8,
+          "mode": "order",
+          "model": "れいぞうこに たまごが さんこしか ありません。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c15-text-grammar",
+      "heading": "c15-text-grammar",
+      "printedPage": 84,
+      "questions": [
+        {
+          "id": "c15-text-grammar-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "ひまじゃない／ひまな",
+          "correctChoiceId": "4"
+        },
+        {
+          "id": "c15-text-grammar-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "そのあと",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c15-text-grammar-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "します",
+          "correctChoiceId": "1"
+        }
+      ]
+    },
+    {
+      "id": "c15-reading-comprehension",
+      "heading": "c15-reading-comprehension",
+      "printedPage": 85,
+      "questions": [
+        {
+          "id": "c15-reading-comprehension-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "毎日 おきゃくさんに 電話を かけます",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c15-reading-comprehension-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "はやく 帰ります",
+          "correctChoiceId": "3"
+        }
+      ]
+    },
+    {
+      "id": "c15-personal-answers",
+      "heading": "c15-personal-answers",
+      "printedPage": 86,
+      "questions": [
+        {
+          "id": "c15-personal-answers-1",
+          "number": 1,
+          "mode": "self",
+          "model": "休みの日に えいがを 見たり 買い物を したり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-2",
+          "number": 2,
+          "mode": "self",
+          "model": "シャワーを あびたり あさごはんを 食べたり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-3",
+          "number": 3,
+          "mode": "self",
+          "model": "本を 読んだり おんがくを 聞いたり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-4",
+          "number": 4,
+          "mode": "self",
+          "model": "へやを そうじしたり せんたくしたり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-5",
+          "number": 5,
+          "mode": "self",
+          "model": "かぞくと パーティーを したり うたを うたったり します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-6",
+          "number": 6,
+          "mode": "self",
+          "model": "日本の 会社で はたらくつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-7",
+          "number": 7,
+          "mode": "self",
+          "model": "はい、N4 を べんきょうしたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-8",
+          "number": 8,
+          "mode": "self",
+          "model": "ごねんご 日本に すむつもりです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-9",
+          "number": 9,
+          "mode": "self",
+          "model": "いいえ、どこへも 行きません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-personal-answers-10",
+          "number": 10,
+          "mode": "self",
+          "model": "クラスの あとで ばんごはんを つくります。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c15-translation-practice",
+      "heading": "c15-translation-practice",
+      "printedPage": 86,
+      "questions": [
+        {
+          "id": "c15-translation-practice-1",
+          "number": 1,
+          "mode": "self",
+          "model": "ア：日本語を べんきょうしたあとで なにを するつもりですか。\nイ：日本の ソフトウェアの 会社で はたらくつもりです。\nア：大学で なにを べんきょうしましたか。\nイ：ソフトウェア エンジニアリングを べんきょうしました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-translation-practice-2",
+          "number": 2,
+          "mode": "self",
+          "model": "ア：かいぎに 社員が なんにん 来ましたか。\nイ：10人しか 来ませんでした。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-translation-practice-3",
+          "number": 3,
+          "mode": "self",
+          "model": "ア：いま 教室の 中に がくせいが なんにん いますか。\nイ：二人だけ います。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-translation-practice-4",
+          "number": 4,
+          "mode": "self",
+          "model": "ア：小説を 読みますか。\nイ：いいえ、小説は ぜんぜん 読みません。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c15-translation-practice-5",
+          "number": 5,
+          "mode": "self",
+          "model": "ア：仕事の あとで 駅の まえの きっさてんで コーヒーを 飲みましょう。\nイ：ええ、仕事の あとで 行きましょう。",
+          "correctChoiceId": null
+        }
+      ]
+    }
+  ],
+  "questionDataSha256": "d740f6897269dcded12dda99ba5277178c3a0bf8b4619efbd0355ba639d36578",
+  "previousChapterHashes": {
+    "1": "fcb7cc4577bcd889e0c5691ad2ccb32db590916db6be859680f79210f815ea2f",
+    "2": "6f86cf68c36ec2de4fc7d50e98d64cc90dbc373e9f2e264f1a60c9f4c89eadb5",
+    "3": "f0068f578f8bebaf8db2e600ecb60fd8dede8df79507d6a54f3b6814a0424205",
+    "4": "71258037cbc1b33450d1d31f72256a1428933d1a6131b310ab870deac072b0e5",
+    "5": "fe04d1e80ea6aabe8fd19c0f52b2f742ec983bc524d124444ea6bf4d3603b044",
+    "6": "fcf66703797c342f46ffb4d267add642c32aafd3170c048f5767d669a9a29fca",
+    "7": "edc9c1c055016c78e9e81c0367c904a86bc34aefa91ed95c09a20c5707e60782",
+    "8": "37c43fb29be4ea196b0a484115cc7123fab2240cf003b7bf776a4e91f9a11809",
+    "9": "3894cb096eeab009e8077bd3b8f7d665270eb86cf762c1d223d9e5070f025841",
+    "10": "b8b460a8d09146229ba4e170ba0c982e457edab318b7a0502da624b674ec8dd9",
+    "11": "13ea0b3b494ae4369b9902c7869563c209de81716c80b7d7290d0b64f928cc0d",
+    "12": "c654af4479a733fa90e521da908b0bcacc13af19e4f32f4205d711e81ba31cea",
+    "13": "5300015a6d934b2185aa30fb67b73ec789c439bad8f2c71ab69d83d2e62c465a",
+    "14": "39c0a2c094c746afd708829bacdaf94dc8aa70da028d00a9723594b5771d0a9a"
+  },
+  "chapterSha256": "40a35eaf7bd026ec94d4bd52078e2c7290333e974be90ff5e0a5ab62af9a0fa1"
+}

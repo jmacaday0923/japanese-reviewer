@@ -79,6 +79,8 @@ export function tableFlashcards(table: ReadingTableData, context: FlashcardConte
     } else if (headers.includes("dictionary form") && headers.includes("stem form") && get("meaning")) {
       // A stem alone can look like a noun (あそび), so the meaning says which form it is.
       kind = "vocabulary"; japanese = get("stem form"); meaning = get("meaning") + " (stem form)"; romaji = "";
+    } else if (headers.includes("dictionary form") && headers.includes("た form") && get("meaning")) {
+      kind = "vocabulary"; japanese = get("た form"); meaning = get("meaning") + " (た form)"; romaji = "";
     } else if (headers.includes("japanese") && meaning) {
       kind = "sentence"; japanese = get("japanese");
     } else if (headers.includes("meaning") && headers.includes("on'yomi") && headers.includes("kun'yomi")) {

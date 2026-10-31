@@ -7075,6 +7075,1732 @@
           ]
         }
       ]
+    },
+    {
+      "chapter": "15",
+      "sets": [
+        {
+          "id": "c15-verb-forms",
+          "chapter": "15",
+          "title": "れんしゅう: Complete the table (page 73)",
+          "sourcePage": 73,
+          "instructionsJa": "〈れんしゅう〉",
+          "instructionsEn": "Please complete the table. Type the ない form and the た form in kana, with a space between them. Example: たべる → たべない たべた",
+          "heading": "c15-verb-forms",
+          "questions": [
+            {
+              "id": "c15-verb-forms-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "のむ",
+              "romaji": "nomu",
+              "model": "のまない のんだ",
+              "whyEn": "む → まない, んだ.",
+              "accepted": [
+                "のまない のんだ",
+                "のまない・のんだ",
+                "のまない/のんだ",
+                "のまない／のんだ",
+                "のまない、のんだ"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-verb-forms-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "あらう",
+              "romaji": "arau",
+              "model": "あらわない あらった",
+              "whyEn": "う → わない (not あない), った.",
+              "accepted": [
+                "あらわない あらった",
+                "あらわない・あらった",
+                "あらわない/あらった",
+                "あらわない／あらった",
+                "あらわない、あらった"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 2
+              }
+            },
+            {
+              "id": "c15-verb-forms-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "のぼる",
+              "romaji": "noboru",
+              "model": "のぼらない のぼった",
+              "whyEn": "る → らない, った.",
+              "accepted": [
+                "のぼらない のぼった",
+                "のぼらない・のぼった",
+                "のぼらない/のぼった",
+                "のぼらない／のぼった",
+                "のぼらない、のぼった"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 3
+              }
+            },
+            {
+              "id": "c15-verb-forms-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "つかう",
+              "romaji": "tsukau",
+              "model": "つかわない つかった",
+              "whyEn": "う → わない, った.",
+              "accepted": [
+                "つかわない つかった",
+                "つかわない・つかった",
+                "つかわない/つかった",
+                "つかわない／つかった",
+                "つかわない、つかった"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 4
+              }
+            },
+            {
+              "id": "c15-verb-forms-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "みがく",
+              "romaji": "migaku",
+              "model": "みがかない みがいた",
+              "whyEn": "く → かない, いた.",
+              "accepted": [
+                "みがかない みがいた",
+                "みがかない・みがいた",
+                "みがかない/みがいた",
+                "みがかない／みがいた",
+                "みがかない、みがいた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 5
+              }
+            },
+            {
+              "id": "c15-verb-forms-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "ねる",
+              "romaji": "neru",
+              "model": "ねない ねた",
+              "whyEn": "Regular verb: drop る.",
+              "accepted": [
+                "ねない ねた",
+                "ねない・ねた",
+                "ねない/ねた",
+                "ねない／ねた",
+                "ねない、ねた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 6
+              }
+            },
+            {
+              "id": "c15-verb-forms-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "あびる",
+              "romaji": "abiru",
+              "model": "あびない あびた",
+              "whyEn": "Regular verb: drop る.",
+              "accepted": [
+                "あびない あびた",
+                "あびない・あびた",
+                "あびない/あびた",
+                "あびない／あびた",
+                "あびない、あびた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 7
+              }
+            },
+            {
+              "id": "c15-verb-forms-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "かす",
+              "romaji": "kasu",
+              "model": "かさない かした",
+              "whyEn": "す → さない, した.",
+              "accepted": [
+                "かさない かした",
+                "かさない・かした",
+                "かさない/かした",
+                "かさない／かした",
+                "かさない、かした"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 8
+              }
+            },
+            {
+              "id": "c15-verb-forms-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "かえす",
+              "romaji": "kaesu",
+              "model": "かえさない かえした",
+              "whyEn": "す → さない, した.",
+              "accepted": [
+                "かえさない かえした",
+                "かえさない・かえした",
+                "かえさない/かえした",
+                "かえさない／かえした",
+                "かえさない、かえした"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 9
+              }
+            },
+            {
+              "id": "c15-verb-forms-10",
+              "number": 10,
+              "mode": "text",
+              "prompt": "つくる",
+              "romaji": "tsukuru",
+              "model": "つくらない つくった",
+              "whyEn": "る → らない, った.",
+              "accepted": [
+                "つくらない つくった",
+                "つくらない・つくった",
+                "つくらない/つくった",
+                "つくらない／つくった",
+                "つくらない、つくった"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 10
+              }
+            },
+            {
+              "id": "c15-verb-forms-11",
+              "number": 11,
+              "mode": "text",
+              "prompt": "わかる",
+              "romaji": "wakaru",
+              "model": "わからない わかった",
+              "whyEn": "る → らない, った.",
+              "accepted": [
+                "わからない わかった",
+                "わからない・わかった",
+                "わからない/わかった",
+                "わからない／わかった",
+                "わからない、わかった"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 11
+              }
+            },
+            {
+              "id": "c15-verb-forms-12",
+              "number": 12,
+              "mode": "text",
+              "prompt": "えらぶ",
+              "romaji": "erabu",
+              "model": "えらばない えらんだ",
+              "whyEn": "ぶ → ばない, んだ.",
+              "accepted": [
+                "えらばない えらんだ",
+                "えらばない・えらんだ",
+                "えらばない/えらんだ",
+                "えらばない／えらんだ",
+                "えらばない、えらんだ"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 12
+              }
+            },
+            {
+              "id": "c15-verb-forms-13",
+              "number": 13,
+              "mode": "text",
+              "prompt": "ひく",
+              "romaji": "hiku",
+              "model": "ひかない ひいた",
+              "whyEn": "く → かない, いた.",
+              "accepted": [
+                "ひかない ひいた",
+                "ひかない・ひいた",
+                "ひかない/ひいた",
+                "ひかない／ひいた",
+                "ひかない、ひいた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 13
+              }
+            },
+            {
+              "id": "c15-verb-forms-14",
+              "number": 14,
+              "mode": "text",
+              "prompt": "わすれる",
+              "romaji": "wasureru",
+              "model": "わすれない わすれた",
+              "whyEn": "Regular verb: drop る.",
+              "accepted": [
+                "わすれない わすれた",
+                "わすれない・わすれた",
+                "わすれない/わすれた",
+                "わすれない／わすれた",
+                "わすれない、わすれた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 14
+              }
+            },
+            {
+              "id": "c15-verb-forms-15",
+              "number": 15,
+              "mode": "text",
+              "prompt": "はじまる",
+              "romaji": "hajimaru",
+              "model": "はじまらない はじまった",
+              "whyEn": "る → らない, った.",
+              "accepted": [
+                "はじまらない はじまった",
+                "はじまらない・はじまった",
+                "はじまらない/はじまった",
+                "はじまらない／はじまった",
+                "はじまらない、はじまった"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 15
+              }
+            },
+            {
+              "id": "c15-verb-forms-16",
+              "number": 16,
+              "mode": "text",
+              "prompt": "やすむ",
+              "romaji": "yasumu",
+              "model": "やすまない やすんだ",
+              "whyEn": "む → まない, んだ.",
+              "accepted": [
+                "やすまない やすんだ",
+                "やすまない・やすんだ",
+                "やすまない/やすんだ",
+                "やすまない／やすんだ",
+                "やすまない、やすんだ"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 16
+              }
+            },
+            {
+              "id": "c15-verb-forms-17",
+              "number": 17,
+              "mode": "text",
+              "prompt": "おく",
+              "romaji": "oku",
+              "model": "おかない おいた",
+              "whyEn": "く → かない, いた.",
+              "accepted": [
+                "おかない おいた",
+                "おかない・おいた",
+                "おかない/おいた",
+                "おかない／おいた",
+                "おかない、おいた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 17
+              }
+            },
+            {
+              "id": "c15-verb-forms-18",
+              "number": 18,
+              "mode": "text",
+              "prompt": "おきる",
+              "romaji": "okiru",
+              "model": "おきない おきた",
+              "whyEn": "Regular verb: drop る.",
+              "accepted": [
+                "おきない おきた",
+                "おきない・おきた",
+                "おきない/おきた",
+                "おきない／おきた",
+                "おきない、おきた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 18
+              }
+            },
+            {
+              "id": "c15-verb-forms-19",
+              "number": 19,
+              "mode": "text",
+              "prompt": "きる",
+              "romaji": "kiru",
+              "model": "きらない きった",
+              "whyEn": "きる (cut), this chapter's word, is an Irregular verb: きらない, きった. きる (wear) is Regular, so きない きた is also accepted.",
+              "accepted": [
+                "きらない きった",
+                "きらない・きった",
+                "きらない/きった",
+                "きらない／きった",
+                "きらない、きった",
+                "きない きた",
+                "きない・きた",
+                "きない/きた",
+                "きない／きた",
+                "きない、きた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 19
+              }
+            },
+            {
+              "id": "c15-verb-forms-20",
+              "number": 20,
+              "mode": "text",
+              "prompt": "くる",
+              "romaji": "kuru",
+              "model": "こない きた",
+              "whyEn": "Special verb: くる → こない, きた.",
+              "accepted": [
+                "こない きた",
+                "こない・きた",
+                "こない/きた",
+                "こない／きた",
+                "こない、きた"
+              ],
+              "source": {
+                "printedPage": 73,
+                "number": 20
+              }
+            }
+          ]
+        },
+        {
+          "id": "c15-ato-forms",
+          "chapter": "15",
+          "title": "れんしゅう: Complete the sentence with あとで or ご (page 77)",
+          "sourcePage": 77,
+          "instructionsJa": "〈れんしゅう〉",
+          "instructionsEn": "Please change to あとで or ご to complete the sentence, and end in the polite form. Example: ごはんを たべる ＋ ねた → ごはんを たべたあとで ねました。",
+          "heading": "c15-ato-forms",
+          "questions": [
+            {
+              "id": "c15-ato-forms-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "クラスが おわる ＋ スーパーへ 行く",
+              "romaji": "kurasu ga owaru + su-pa- e iku",
+              "model": "クラスが おわったあとで スーパーへ 行きます。",
+              "whyEn": "おわる → おわった + あとで.",
+              "accepted": [
+                "クラスが おわったあとで スーパーへ 行きます。",
+                "クラスが おわったあとで スーパーへ いきます。",
+                "クラスが おわったあとで スーパーに 行きます。",
+                "クラスが おわったあとで スーパーに いきます。",
+                "クラスが おわったあと スーパーへ 行きます。",
+                "クラスが おわったあと スーパーへ いきます。",
+                "クラスが おわったあと スーパーに 行きます。",
+                "クラスが おわったあと スーパーに いきます。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-ato-forms-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "一か月 ＋ 国へ もどる",
+              "romaji": "ikkagetsu + kuni e modoru",
+              "model": "一か月ご 国へ もどります。",
+              "whyEn": "A span of time takes ご or あと(で) directly: いっかげつご.",
+              "accepted": [
+                "一か月ご 国へ もどります。",
+                "いっかげつご くにへ もどります。",
+                "一か月ご 国に もどります。",
+                "いっかげつご くにに もどります。",
+                "一か月あとで 国へ もどります。",
+                "いっかげつあとで くにへ もどります。",
+                "一か月あとで 国に もどります。",
+                "いっかげつあとで くにに もどります。",
+                "一か月あと 国へ もどります。",
+                "いっかげつあと くにへ もどります。",
+                "一か月あと 国に もどります。",
+                "いっかげつあと くにに もどります。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 2
+              }
+            },
+            {
+              "id": "c15-ato-forms-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "しゃしんを とる ＋ あなたに 見せる",
+              "romaji": "shashin o toru + anata ni miseru",
+              "model": "しゃしんを とったあとで あなたに 見せます。",
+              "whyEn": "とる → とった + あとで.",
+              "accepted": [
+                "しゃしんを とったあとで あなたに 見せます。",
+                "しゃしんを とったあとで あなたに みせます。",
+                "しゃしんを とったあと あなたに 見せます。",
+                "しゃしんを とったあと あなたに みせます。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 3
+              }
+            },
+            {
+              "id": "c15-ato-forms-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "映画を 見る ＋ カラオケへ 行きましょう",
+              "romaji": "eiga o miru + karaoke e ikimashou",
+              "model": "映画を 見たあとで カラオケへ 行きましょう。",
+              "whyEn": "みる → みた + あとで. The ending stays as printed: いきましょう.",
+              "accepted": [
+                "映画を 見たあとで カラオケへ 行きましょう。",
+                "えいがを みたあとで カラオケへ いきましょう。",
+                "映画を 見たあとで カラオケに 行きましょう。",
+                "えいがを みたあとで カラオケに いきましょう。",
+                "映画を 見たあと カラオケへ 行きましょう。",
+                "えいがを みたあと カラオケへ いきましょう。",
+                "映画を 見たあと カラオケに 行きましょう。",
+                "えいがを みたあと カラオケに いきましょう。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 4
+              }
+            },
+            {
+              "id": "c15-ato-forms-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "くすりを 飲む ＋ 寝る",
+              "romaji": "kusuri o nomu + neru",
+              "model": "くすりを 飲んだあとで 寝ます。",
+              "whyEn": "のむ → のんだ + あとで.",
+              "accepted": [
+                "くすりを 飲んだあとで 寝ます。",
+                "くすりを のんだあとで ねます。",
+                "くすりを 飲んだあと 寝ます。",
+                "くすりを のんだあと ねます。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 5
+              }
+            },
+            {
+              "id": "c15-ato-forms-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "仕事 ＋ 友だちと あそぶ",
+              "romaji": "shigoto + tomodachi to asobu",
+              "model": "仕事のあとで 友だちと あそびます。",
+              "whyEn": "A noun takes の: しごとの あとで.",
+              "accepted": [
+                "仕事のあとで 友だちと あそびます。",
+                "しごとのあとで ともだちと あそびます。",
+                "仕事のあと 友だちと あそびます。",
+                "しごとのあと ともだちと あそびます。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 6
+              }
+            },
+            {
+              "id": "c15-ato-forms-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "十日間 ＋ 国に 帰る",
+              "romaji": "tookakan + kuni ni kaeru",
+              "model": "十日間ご 国に 帰ります。",
+              "whyEn": "A span of time takes ご or あと(で) directly: とおかかんご.",
+              "accepted": [
+                "十日間ご 国に 帰ります。",
+                "とおかかんご くにに かえります。",
+                "十日間ご 国へ 帰ります。",
+                "とおかかんご くにへ かえります。",
+                "十日間あとで 国に 帰ります。",
+                "とおかかんあとで くにに かえります。",
+                "十日間あとで 国へ 帰ります。",
+                "とおかかんあとで くにへ かえります。",
+                "十日間あと 国に 帰ります。",
+                "とおかかんあと くにに かえります。",
+                "十日間あと 国へ 帰ります。",
+                "とおかかんあと くにへ かえります。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 7
+              }
+            },
+            {
+              "id": "c15-ato-forms-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "ギターを ひく ＋ マンガを 読む",
+              "romaji": "gita- o hiku + manga o yomu",
+              "model": "ギターを ひいたあとで マンガを 読みます。",
+              "whyEn": "ひく → ひいた + あとで.",
+              "accepted": [
+                "ギターを ひいたあとで マンガを 読みます。",
+                "ギターを ひいたあとで マンガを よみます。",
+                "ギターを ひいたあと マンガを 読みます。",
+                "ギターを ひいたあと マンガを よみます。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 8
+              }
+            },
+            {
+              "id": "c15-ato-forms-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "せんたくする ＋ へやを そうじする",
+              "romaji": "sentaku suru + heya o souji suru",
+              "model": "せんたくしたあとで へやを そうじします。",
+              "whyEn": "せんたくする → せんたくした + あとで.",
+              "accepted": [
+                "せんたくしたあとで へやを そうじします。",
+                "せんたくしたあと へやを そうじします。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 9
+              }
+            },
+            {
+              "id": "c15-ato-forms-10",
+              "number": 10,
+              "mode": "text",
+              "prompt": "ぶちょうに そうだんする ＋ みんなに せつめいする",
+              "romaji": "buchou ni soudan suru + minna ni setsumei suru",
+              "model": "ぶちょうに そうだんしたあとで みんなに せつめいします。",
+              "whyEn": "そうだんする → そうだんした + あとで.",
+              "accepted": [
+                "ぶちょうに そうだんしたあとで みんなに せつめいします。",
+                "ぶちょうに そうだんしたあと みんなに せつめいします。"
+              ],
+              "source": {
+                "printedPage": 77,
+                "number": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "c15-tari-forms",
+          "chapter": "15",
+          "title": "れんしゅう: Complete the sentence with 〜たり 〜たり します (page 79)",
+          "sourcePage": 79,
+          "instructionsJa": "〈れんしゅう〉",
+          "instructionsEn": "Please change to 〜たり 〜たり します to complete the sentence. Example: ごはんを たべる ＋ ねる → ごはんを たべたり ねたり します。",
+          "heading": "c15-tari-forms",
+          "questions": [
+            {
+              "id": "c15-tari-forms-1",
+              "number": 1,
+              "mode": "text",
+              "prompt": "土よう日に えいがを 見る ＋ 買い物をする",
+              "romaji": "doyoubi ni eiga o miru + kaimono o suru",
+              "model": "土よう日に えいがを 見たり 買い物を したり します。",
+              "whyEn": "みる → みたり, する → したり, then します.",
+              "accepted": [
+                "土よう日に えいがを 見たり 買い物を したり します。",
+                "どようびに えいがを みたり かいものを したり します。",
+                "土よう日に えいがを 見たり 買い物したり します。",
+                "どようびに えいがを みたり かいものしたり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-tari-forms-2",
+              "number": 2,
+              "mode": "text",
+              "prompt": "しゅうまつ へやを そうじする ＋ 小説を 読む",
+              "romaji": "shuumatsu heya o souji suru + shousetsu o yomu",
+              "model": "しゅうまつ へやを そうじしたり 小説を 読んだり します。",
+              "whyEn": "そうじする → そうじしたり, よむ → よんだり.",
+              "accepted": [
+                "しゅうまつ へやを そうじしたり 小説を 読んだり します。",
+                "しゅうまつ へやを そうじしたり しょうせつを よんだり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 2
+              }
+            },
+            {
+              "id": "c15-tari-forms-3",
+              "number": 3,
+              "mode": "text",
+              "prompt": "カラオケへ 行く ＋ いえで れんしゅうする",
+              "romaji": "karaoke e iku + ie de renshuu suru",
+              "model": "カラオケへ 行ったり いえで れんしゅうしたり します。",
+              "whyEn": "いく → いったり (not いいたり), れんしゅうする → れんしゅうしたり.",
+              "accepted": [
+                "カラオケへ 行ったり いえで れんしゅうしたり します。",
+                "カラオケへ いったり いえで れんしゅうしたり します。",
+                "カラオケに 行ったり いえで れんしゅうしたり します。",
+                "カラオケに いったり いえで れんしゅうしたり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 3
+              }
+            },
+            {
+              "id": "c15-tari-forms-4",
+              "number": 4,
+              "mode": "text",
+              "prompt": "うたを うたう ＋ ピアノを ひく",
+              "romaji": "uta o utau + piano o hiku",
+              "model": "うたを うたったり ピアノを ひいたり します。",
+              "whyEn": "うたう → うたったり, ひく → ひいたり.",
+              "accepted": [
+                "うたを うたったり ピアノを ひいたり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 4
+              }
+            },
+            {
+              "id": "c15-tari-forms-5",
+              "number": 5,
+              "mode": "text",
+              "prompt": "山に のぼる ＋ 海で およぐ",
+              "romaji": "yama ni noboru + umi de oyogu",
+              "model": "山に のぼったり 海で およいだり します。",
+              "whyEn": "のぼる → のぼったり, およぐ → およいだり.",
+              "accepted": [
+                "山に のぼったり 海で およいだり します。",
+                "やまに のぼったり うみで およいだり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 5
+              }
+            },
+            {
+              "id": "c15-tari-forms-6",
+              "number": 6,
+              "mode": "text",
+              "prompt": "さくぶんを 書く ＋ 日本の おんがくを 聞く",
+              "romaji": "sakubun o kaku + nihon no ongaku o kiku",
+              "model": "さくぶんを 書いたり 日本の おんがくを 聞いたり します。",
+              "whyEn": "かく → かいたり, きく → きいたり.",
+              "accepted": [
+                "さくぶんを 書いたり 日本の おんがくを 聞いたり します。",
+                "さくぶんを かいたり にほんの おんがくを きいたり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 6
+              }
+            },
+            {
+              "id": "c15-tari-forms-7",
+              "number": 7,
+              "mode": "text",
+              "prompt": "ときどき 友だちと 話す ＋ コーヒーを 飲む",
+              "romaji": "tokidoki tomodachi to hanasu + ko-hi- o nomu",
+              "model": "ときどき 友だちと 話したり コーヒーを 飲んだり します。",
+              "whyEn": "はなす → はなしたり, のむ → のんだり.",
+              "accepted": [
+                "ときどき 友だちと 話したり コーヒーを 飲んだり します。",
+                "ときどき ともだちと はなしたり コーヒーを のんだり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 7
+              }
+            },
+            {
+              "id": "c15-tari-forms-8",
+              "number": 8,
+              "mode": "text",
+              "prompt": "本を 読む ＋ ばんごはんを 食べる",
+              "romaji": "hon o yomu + bangohan o taberu",
+              "model": "本を 読んだり ばんごはんを 食べたり します。",
+              "whyEn": "よむ → よんだり, たべる → たべたり.",
+              "accepted": [
+                "本を 読んだり ばんごはんを 食べたり します。",
+                "ほんを よんだり ばんごはんを たべたり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 8
+              }
+            },
+            {
+              "id": "c15-tari-forms-9",
+              "number": 9,
+              "mode": "text",
+              "prompt": "しゃしんを とる ＋ えを かく",
+              "romaji": "shashin o toru + e o kaku",
+              "model": "しゃしんを とったり えを かいたり します。",
+              "whyEn": "とる → とったり, かく → かいたり.",
+              "accepted": [
+                "しゃしんを とったり えを かいたり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 9
+              }
+            },
+            {
+              "id": "c15-tari-forms-10",
+              "number": 10,
+              "mode": "text",
+              "prompt": "バスケットボールをする ＋ バドミントンをする",
+              "romaji": "basukettobo-ru o suru + badominton o suru",
+              "model": "バスケットボールを したり バドミントンを したり します。",
+              "whyEn": "する → したり, then します.",
+              "accepted": [
+                "バスケットボールを したり バドミントンを したり します。",
+                "バスケットボールを したり バドミントンしたり します。",
+                "バスケットボールしたり バドミントンを したり します。",
+                "バスケットボールしたり バドミントンしたり します。"
+              ],
+              "source": {
+                "printedPage": 79,
+                "number": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "c15-grammar-choices",
+          "chapter": "15",
+          "title": "I. ぶんぽう けいしきの はんだん: Selecting grammar form (page 81)",
+          "sourcePage": 81,
+          "instructionsJa": "I. ぶんぽう けいしきの はんだん",
+          "instructionsEn": "Please choose the correct grammatical pattern.",
+          "heading": "c15-grammar-choices",
+          "questions": [
+            {
+              "id": "c15-grammar-choices-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "ア：つくえの 上に 本が 5さつ ありますね。\nイ：いいえ、3さつ（　）ですよ。",
+              "romaji": "A: tsukue no ue ni hon ga gosatsu arimasu ne. B: iie, sansatsu ____ desu yo.",
+              "model": "だけ",
+              "whyEn": "The sentence ends in a positive です, so use だけ: さんさつだけです. しか would need a negative.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "しか"
+                },
+                {
+                  "id": "2",
+                  "text": "だけ"
+                },
+                {
+                  "id": "3",
+                  "text": "の"
+                },
+                {
+                  "id": "4",
+                  "text": "が"
+                }
+              ],
+              "correctChoiceId": "2",
+              "source": {
+                "printedPage": 81,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-grammar-choices-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "しゅうまつ（　）しました。",
+              "romaji": "shuumatsu ____ shimashita.",
+              "model": "かいものをしたり、りょうりをつくったり",
+              "whyEn": "Listing actions before します uses the た form + り: したり, つくったり.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "かいものをする、りょうりをつくる"
+                },
+                {
+                  "id": "2",
+                  "text": "かいものをし、りょうりをつくり"
+                },
+                {
+                  "id": "3",
+                  "text": "かいものをしない、りょうりをつくらない"
+                },
+                {
+                  "id": "4",
+                  "text": "かいものをしたり、りょうりをつくったり"
+                }
+              ],
+              "correctChoiceId": "4",
+              "source": {
+                "printedPage": 81,
+                "number": 2
+              }
+            },
+            {
+              "id": "c15-grammar-choices-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "（　）したあと 日本の会社で はたらく つもりです。",
+              "romaji": "____ shita ato nihon no kaisha de hataraku tsumori desu.",
+              "model": "そつぎょう",
+              "whyEn": "Work at a company comes after graduating: そつぎょうしたあと.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "そうじ"
+                },
+                {
+                  "id": "2",
+                  "text": "そつぎょう"
+                },
+                {
+                  "id": "3",
+                  "text": "せんたく"
+                },
+                {
+                  "id": "4",
+                  "text": "ざんぎょう"
+                }
+              ],
+              "correctChoiceId": "2",
+              "source": {
+                "printedPage": 81,
+                "number": 3
+              }
+            },
+            {
+              "id": "c15-grammar-choices-4",
+              "number": 4,
+              "mode": "choice",
+              "prompt": "ア：マリさん、本を ぜんぶ 読みましたか。\nイ：すみません、10ページ（　）読みませんでした。",
+              "romaji": "A: mari san, hon o zenbu yomimashita ka. B: sumimasen, juppe-ji ____ yomimasen deshita.",
+              "model": "しか",
+              "whyEn": "Only ten pages, with a negative verb: じゅっぺーじしか よみませんでした.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "しか"
+                },
+                {
+                  "id": "2",
+                  "text": "ちょっと"
+                },
+                {
+                  "id": "3",
+                  "text": "たいてい"
+                },
+                {
+                  "id": "4",
+                  "text": "さいきん"
+                }
+              ],
+              "correctChoiceId": "1",
+              "source": {
+                "printedPage": 81,
+                "number": 4
+              }
+            },
+            {
+              "id": "c15-grammar-choices-5",
+              "number": 5,
+              "mode": "choice",
+              "prompt": "先月 忙しかったから（　）あそばなかった。",
+              "romaji": "sengetsu isogashikatta kara ____ asobanakatta.",
+              "model": "あまり",
+              "whyEn": "Busy, so I didn't go out much: あまり with the negative あそばなかった.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "だけ"
+                },
+                {
+                  "id": "2",
+                  "text": "しか"
+                },
+                {
+                  "id": "3",
+                  "text": "あまり"
+                },
+                {
+                  "id": "4",
+                  "text": "いつも"
+                }
+              ],
+              "correctChoiceId": "3",
+              "source": {
+                "printedPage": 81,
+                "number": 5
+              }
+            },
+            {
+              "id": "c15-grammar-choices-6",
+              "number": 6,
+              "mode": "choice",
+              "prompt": "ア：からいりょうりを 食べますか。\nイ：いいえ、（　）食べません。",
+              "romaji": "A: karai ryouri o tabemasu ka. B: iie, ____ tabemasen.",
+              "model": "ぜんぜん",
+              "whyEn": "いいえ with a negative verb: ぜんぜん たべません, I don't eat it at all.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "とても"
+                },
+                {
+                  "id": "2",
+                  "text": "さいご"
+                },
+                {
+                  "id": "3",
+                  "text": "ぜんぜん"
+                },
+                {
+                  "id": "4",
+                  "text": "あとで"
+                }
+              ],
+              "correctChoiceId": "3",
+              "source": {
+                "printedPage": 81,
+                "number": 6
+              }
+            },
+            {
+              "id": "c15-grammar-choices-7",
+              "number": 7,
+              "mode": "choice",
+              "prompt": "やさいを（　）あとで、れいぞうこに いれます。",
+              "romaji": "yasai o ____ ato de, reizouko ni iremasu.",
+              "model": "きった",
+              "whyEn": "あとで follows the た form. きる (cut) is an Irregular verb, so its た form is きった. きた is the た form of くる or きる (wear).",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "きり"
+                },
+                {
+                  "id": "2",
+                  "text": "きた"
+                },
+                {
+                  "id": "3",
+                  "text": "きる"
+                },
+                {
+                  "id": "4",
+                  "text": "きった"
+                }
+              ],
+              "correctChoiceId": "4",
+              "source": {
+                "printedPage": 81,
+                "number": 7
+              }
+            },
+            {
+              "id": "c15-grammar-choices-8",
+              "number": 8,
+              "mode": "choice",
+              "prompt": "かいぎ（　）あとで、いいレストランへ 行きましょう。",
+              "romaji": "kaigi ____ ato de, ii resutoran e ikimashou.",
+              "model": "の",
+              "whyEn": "A noun takes の before あとで: かいぎの あとで.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "な"
+                },
+                {
+                  "id": "2",
+                  "text": "で"
+                },
+                {
+                  "id": "3",
+                  "text": "の"
+                },
+                {
+                  "id": "4",
+                  "text": "が"
+                }
+              ],
+              "correctChoiceId": "3",
+              "source": {
+                "printedPage": 81,
+                "number": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "c15-word-order",
+          "chapter": "15",
+          "title": "II. ぶんの くみたて: Sentence composition (page 83)",
+          "sourcePage": 83,
+          "instructionsJa": "II. ぶんの くみたて",
+          "instructionsEn": "Please rearrange the words to complete the sentence. Select a word to add it, and select a chosen word to put it back.",
+          "heading": "c15-word-order",
+          "questions": [
+            {
+              "id": "c15-word-order-1",
+              "number": 1,
+              "mode": "order",
+              "prompt": "＿＿ ＿＿ ＿＿ ＿＿ 食べませんでした。",
+              "model": "からい りょうりを あまり 食べませんでした。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "りょうり",
+                "からい",
+                "あまり",
+                "を"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  0,
+                  3,
+                  2
+                ],
+                [
+                  2,
+                  1,
+                  0,
+                  3
+                ]
+              ],
+              "after": "食べませんでした。",
+              "source": {
+                "printedPage": 83,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-word-order-2",
+              "number": 2,
+              "mode": "order",
+              "prompt": "田中先生 ＿＿ ＿＿ ＿＿ ＿＿ 帰りました。",
+              "model": "田中先生と 話した あとで 帰りました。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "あと",
+                "と",
+                "で",
+                "話した"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  3,
+                  0,
+                  2
+                ]
+              ],
+              "before": "田中先生",
+              "after": "帰りました。",
+              "source": {
+                "printedPage": 83,
+                "number": 2
+              }
+            },
+            {
+              "id": "c15-word-order-3",
+              "number": 3,
+              "mode": "order",
+              "prompt": "教室の 中に ＿＿ ＿＿ ＿＿ ＿＿ いません。",
+              "model": "教室の 中に ふたりの がくせいしか いません。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "ふたり",
+                "がくせい",
+                "の",
+                "しか"
+              ],
+              "acceptedOrders": [
+                [
+                  0,
+                  2,
+                  1,
+                  3
+                ]
+              ],
+              "before": "教室の 中に",
+              "after": "いません。",
+              "source": {
+                "printedPage": 83,
+                "number": 3
+              }
+            },
+            {
+              "id": "c15-word-order-4",
+              "number": 4,
+              "mode": "order",
+              "prompt": "＿＿ ＿＿ ＿＿ ＿＿ を 飲みましょう。",
+              "model": "しごとの あと コーヒーを 飲みましょう。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "コーヒー",
+                "あと",
+                "しごと",
+                "の"
+              ],
+              "acceptedOrders": [
+                [
+                  2,
+                  3,
+                  1,
+                  0
+                ]
+              ],
+              "after": "を 飲みましょう。",
+              "source": {
+                "printedPage": 83,
+                "number": 4
+              }
+            },
+            {
+              "id": "c15-word-order-5",
+              "number": 5,
+              "mode": "order",
+              "prompt": "最近、 ＿＿ ＿＿ ＿＿ ＿＿ 出かけません。",
+              "model": "最近、いそがしく なったから あまり 出かけません。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "あまり",
+                "なった",
+                "から",
+                "いそがしく"
+              ],
+              "acceptedOrders": [
+                [
+                  3,
+                  1,
+                  2,
+                  0
+                ]
+              ],
+              "before": "最近、",
+              "after": "出かけません。",
+              "source": {
+                "printedPage": 83,
+                "number": 5
+              }
+            },
+            {
+              "id": "c15-word-order-6",
+              "number": 6,
+              "mode": "order",
+              "prompt": "明日の夜 仕事を ＿＿ ＿＿ ＿＿ ＿＿ 行きませんか。",
+              "model": "明日の夜 仕事を した あとで どこかへ 行きませんか。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "へ",
+                "あとで",
+                "した",
+                "どこか"
+              ],
+              "acceptedOrders": [
+                [
+                  2,
+                  1,
+                  3,
+                  0
+                ]
+              ],
+              "before": "明日の夜 仕事を",
+              "after": "行きませんか。",
+              "source": {
+                "printedPage": 83,
+                "number": 6
+              }
+            },
+            {
+              "id": "c15-word-order-7",
+              "number": 7,
+              "mode": "order",
+              "prompt": "にねん ＿＿ ＿＿ ＿＿ ＿＿ です。",
+              "model": "にねんご 日本に すみたいです。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "ご",
+                "すみたい",
+                "に",
+                "日本"
+              ],
+              "acceptedOrders": [
+                [
+                  0,
+                  3,
+                  2,
+                  1
+                ]
+              ],
+              "before": "にねん",
+              "after": "です。",
+              "source": {
+                "printedPage": 83,
+                "number": 7
+              }
+            },
+            {
+              "id": "c15-word-order-8",
+              "number": 8,
+              "mode": "order",
+              "prompt": "れいぞうこに ＿＿ ＿＿ ＿＿ ＿＿ ありません。",
+              "model": "れいぞうこに たまごが さんこしか ありません。",
+              "whyEn": "Arrange all four pieces without changing the printed beginning or ending. Compare the complete model sentence and its particles after checking.",
+              "tokens": [
+                "が",
+                "たまご",
+                "しか",
+                "さんこ"
+              ],
+              "acceptedOrders": [
+                [
+                  1,
+                  0,
+                  3,
+                  2
+                ]
+              ],
+              "before": "れいぞうこに",
+              "after": "ありません。",
+              "source": {
+                "printedPage": 83,
+                "number": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "c15-text-grammar",
+          "chapter": "15",
+          "title": "III. ぶんしょうの ぶんぽう: Text grammar (page 84)",
+          "sourcePage": 84,
+          "instructionsJa": "III. ぶんしょうの ぶんぽう",
+          "instructionsEn": "Please read the conversation above and choose the proper word or phrase for blanks (1) to (3). Blank (1) has two parts, A and B.",
+          "passageId": "c15-sunday-passage",
+          "heading": "c15-text-grammar",
+          "questions": [
+            {
+              "id": "c15-text-grammar-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "（1.A）と（1.B）に はいる ことばは どれですか。",
+              "model": "ひまじゃない／ひまな",
+              "whyEn": "あまり needs a negative, so (1.A) is ひまじゃない. Before the noun じかん, a な-adjective takes な: ひまな じかん.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "ひまだ／ひまだ"
+                },
+                {
+                  "id": "2",
+                  "text": "ひまじゃない／ひまだ"
+                },
+                {
+                  "id": "3",
+                  "text": "ひまだ／ひまな"
+                },
+                {
+                  "id": "4",
+                  "text": "ひまじゃない／ひまな"
+                }
+              ],
+              "correctChoiceId": "4",
+              "source": {
+                "printedPage": 84,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-text-grammar-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "（2）に はいる ことばは どれですか。",
+              "model": "そのあと",
+              "whyEn": "First karaoke, then a movie: そのあと, after that.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "そのあと"
+                },
+                {
+                  "id": "2",
+                  "text": "だから"
+                },
+                {
+                  "id": "3",
+                  "text": "しかし"
+                },
+                {
+                  "id": "4",
+                  "text": "それでは"
+                }
+              ],
+              "correctChoiceId": "1",
+              "source": {
+                "printedPage": 84,
+                "number": 2
+              }
+            },
+            {
+              "id": "c15-text-grammar-3",
+              "number": 3,
+              "mode": "choice",
+              "prompt": "（3）に はいる ことばは どれですか。",
+              "model": "します",
+              "whyEn": "Chris will do the cleaning and laundry on Saturday: そうじと せんたくを します.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "します"
+                },
+                {
+                  "id": "2",
+                  "text": "なります"
+                },
+                {
+                  "id": "3",
+                  "text": "きます"
+                },
+                {
+                  "id": "4",
+                  "text": "いきます"
+                }
+              ],
+              "correctChoiceId": "1",
+              "source": {
+                "printedPage": 84,
+                "number": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "c15-reading-comprehension",
+          "chapter": "15",
+          "title": "IV. どっかい: Reading comprehension (page 85)",
+          "sourcePage": 85,
+          "instructionsJa": "IV. どっかい",
+          "instructionsEn": "Please read the passage above and answer the questions.",
+          "passageId": "c15-new-employee-passage",
+          "heading": "c15-reading-comprehension",
+          "questions": [
+            {
+              "id": "c15-reading-comprehension-1",
+              "number": 1,
+              "mode": "choice",
+              "prompt": "この人は 仕事で なにを しますか。",
+              "romaji": "kono hito wa shigoto de nani o shimasu ka.",
+              "model": "毎日 おきゃくさんに 電話を かけます",
+              "whyEn": "From noon the writer calls customers: おきゃくさんに でんわを したり. In the morning they read emails, not write them.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "毎朝 メールを 書きます"
+                },
+                {
+                  "id": "2",
+                  "text": "毎日 おきゃくさんに 電話を かけます"
+                },
+                {
+                  "id": "3",
+                  "text": "毎日 おきゃくさんと カラオケに 行きます"
+                },
+                {
+                  "id": "4",
+                  "text": "毎日 新しいしゃいんと 話します"
+                }
+              ],
+              "correctChoiceId": "2",
+              "source": {
+                "printedPage": 85,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-reading-comprehension-2",
+              "number": 2,
+              "mode": "choice",
+              "prompt": "この人は これから なにを しますか。",
+              "romaji": "kono hito wa korekara nani o shimasu ka.",
+              "model": "はやく 帰ります",
+              "whyEn": "Tomorrow is Saturday, so the writer will go home first: さきに かえります.",
+              "choices": [
+                {
+                  "id": "1",
+                  "text": "ひとりで カラオケへ 行きます"
+                },
+                {
+                  "id": "2",
+                  "text": "かいぎに さんかします"
+                },
+                {
+                  "id": "3",
+                  "text": "はやく 帰ります"
+                },
+                {
+                  "id": "4",
+                  "text": "ともだちに 電話を します"
+                }
+              ],
+              "correctChoiceId": "3",
+              "source": {
+                "printedPage": 85,
+                "number": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "c15-personal-answers",
+          "chapter": "15",
+          "title": "V. といと こたえ: Question and answer (page 86)",
+          "sourcePage": 86,
+          "instructionsJa": "V. といと こたえ",
+          "instructionsEn": "Please write your answer in sentence form. Where the question says so, use 〜たり 〜たり. The model is only one example. Your answer is fine if the grammar and meaning are correct.",
+          "heading": "c15-personal-answers",
+          "questions": [
+            {
+              "id": "c15-personal-answers-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "休みの日に なにを しますか。（use たり〜たり）",
+              "romaji": "yasumi no hi ni nani o shimasu ka. (use tari ~ tari)",
+              "model": "休みの日に えいがを 見たり 買い物を したり します。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-personal-answers-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "あさ おきたあと、なにを しますか。（use たり〜たり）",
+              "romaji": "asa okita ato, nani o shimasu ka. (use tari ~ tari)",
+              "model": "シャワーを あびたり あさごはんを 食べたり します。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 2
+              }
+            },
+            {
+              "id": "c15-personal-answers-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "よる ねるまえに、なにを しますか。（use たり〜たり）",
+              "romaji": "yoru neru mae ni, nani o shimasu ka. (use tari ~ tari)",
+              "model": "本を 読んだり おんがくを 聞いたり します。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 3
+              }
+            },
+            {
+              "id": "c15-personal-answers-4",
+              "number": 4,
+              "mode": "self",
+              "prompt": "今週の日よう日に なにを しますか。（use たり〜たり）",
+              "romaji": "konshuu no nichiyoubi ni nani o shimasu ka. (use tari ~ tari)",
+              "model": "へやを そうじしたり せんたくしたり します。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 4
+              }
+            },
+            {
+              "id": "c15-personal-answers-5",
+              "number": 5,
+              "mode": "self",
+              "prompt": "今年のクリスマス休みに なにを しますか。（use たり〜たり）",
+              "romaji": "kotoshi no kurisumasu yasumi ni nani o shimasu ka. (use tari ~ tari)",
+              "model": "かぞくと パーティーを したり うたを うたったり します。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 5
+              }
+            },
+            {
+              "id": "c15-personal-answers-6",
+              "number": 6,
+              "mode": "self",
+              "prompt": "日本語の トレーニングのあと なにを するつもりですか。",
+              "romaji": "nihongo no tore-ningu no ato nani o suru tsumori desu ka.",
+              "model": "日本の 会社で はたらくつもりです。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 6
+              }
+            },
+            {
+              "id": "c15-personal-answers-7",
+              "number": 7,
+              "mode": "self",
+              "prompt": "N5 コースのあと N4 をべんきょうしたいですか。",
+              "romaji": "N5 ko-su no ato N4 o benkyou shitai desu ka.",
+              "model": "はい、N4 を べんきょうしたいです。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 7
+              }
+            },
+            {
+              "id": "c15-personal-answers-8",
+              "number": 8,
+              "mode": "self",
+              "prompt": "ごねんご なにを するつもりですか。",
+              "romaji": "gonen go nani o suru tsumori desu ka.",
+              "model": "ごねんご 日本に すむつもりです。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 8
+              }
+            },
+            {
+              "id": "c15-personal-answers-9",
+              "number": 9,
+              "mode": "self",
+              "prompt": "今日の クラスのあと どこかへ 行きますか。",
+              "romaji": "kyou no kurasu no ato dokoka e ikimasu ka.",
+              "model": "いいえ、どこへも 行きません。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 9
+              }
+            },
+            {
+              "id": "c15-personal-answers-10",
+              "number": 10,
+              "mode": "self",
+              "prompt": "今日の クラスのあと なにを しますか。",
+              "romaji": "kyou no kurasu no ato nani o shimasu ka.",
+              "model": "クラスの あとで ばんごはんを つくります。",
+              "whyEn": "Your personal answer can differ from the model. Check that it answers the question and uses a suitable particle, tense and polite ending.",
+              "source": {
+                "printedPage": 86,
+                "number": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "c15-translation-practice",
+          "chapter": "15",
+          "title": "VI. わやくの れんしゅう: English to Japanese translation (page 86)",
+          "sourcePage": 86,
+          "instructionsJa": "VI. わやくの れんしゅう",
+          "instructionsEn": "Please translate to Japanese, then compare your answer with the model.",
+          "heading": "c15-translation-practice",
+          "questions": [
+            {
+              "id": "c15-translation-practice-1",
+              "number": 1,
+              "mode": "self",
+              "prompt": "A: After studying Japanese, what do you plan to do?\nB: I plan to work in a Japanese software company.\nA: What did you study at the university?\nB: I studied software engineering.",
+              "model": "ア：日本語を べんきょうしたあとで なにを するつもりですか。\nイ：日本の ソフトウェアの 会社で はたらくつもりです。\nア：大学で なにを べんきょうしましたか。\nイ：ソフトウェア エンジニアリングを べんきょうしました。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 86,
+                "number": 1
+              }
+            },
+            {
+              "id": "c15-translation-practice-2",
+              "number": 2,
+              "mode": "self",
+              "prompt": "A: How many employees came to the meeting?\nB: Only 10 employees came. (use しか)",
+              "model": "ア：かいぎに 社員が なんにん 来ましたか。\nイ：10人しか 来ませんでした。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 86,
+                "number": 2
+              }
+            },
+            {
+              "id": "c15-translation-practice-3",
+              "number": 3,
+              "mode": "self",
+              "prompt": "A: How many students are inside the classroom now?\nB: Only two students are inside. (use だけ)",
+              "model": "ア：いま 教室の 中に がくせいが なんにん いますか。\nイ：二人だけ います。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 86,
+                "number": 3
+              }
+            },
+            {
+              "id": "c15-translation-practice-4",
+              "number": 4,
+              "mode": "self",
+              "prompt": "A: Do you read novels?\nB: No, I don’t read novels at all.",
+              "model": "ア：小説を 読みますか。\nイ：いいえ、小説は ぜんぜん 読みません。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 86,
+                "number": 4
+              }
+            },
+            {
+              "id": "c15-translation-practice-5",
+              "number": 5,
+              "mode": "self",
+              "prompt": "A: After work, let’s drink coffee at the coffeeshop in front of the train station.\nB: Yeah, let’s go after work.",
+              "model": "ア：仕事の あとで 駅の まえの きっさてんで コーヒーを 飲みましょう。\nイ：ええ、仕事の あとで 行きましょう。",
+              "whyEn": "Preserve the dialogue’s meaning, tense and relationships. Other natural Japanese translations can be valid; compare them yourself rather than matching one sentence exactly.",
+              "source": {
+                "printedPage": 86,
+                "number": 5
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

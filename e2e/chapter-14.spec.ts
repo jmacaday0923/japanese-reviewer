@@ -19,8 +19,9 @@ test("Chapter 14 appears after Chapter 13 with all nine activities and furigana 
   const row = main.locator("#lessons tr", { hasText: "Before going to Japan, I want to study Japanese." }).first();
   await expect(row.locator("rt").first()).toHaveText("にほん");
   const pager = main.getByRole("navigation", { name: "Chapter pages" });
-  await expect(pager.getByRole("link")).toHaveCount(1);
-  await expect(pager.getByRole("link")).toHaveAttribute("href", "/chapters/13");
+  await expect(pager.getByRole("link")).toHaveCount(2);
+  await expect(pager.getByRole("link").first()).toHaveAttribute("href", "/chapters/13");
+  await expect(pager.getByRole("link").last()).toHaveAttribute("href", "/chapters/15");
 });
 
 test("all 66 checked Chapter 14 questions accept their model in the browser", async ({ page }) => {

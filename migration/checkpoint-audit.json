@@ -1238,6 +1238,6 @@
     }
   ],
   "dataSha256": "a9147e563b944288b66427334d0bbcd23fc5f1aa23b19a83bdcb87a015c34b33",
-  "chapterDataSha256": "9e82c91cbf20575ee1e2a665672967f227fbb6438093dc26a3f5ae29f7cbb760",
+  "chapterDataSha256": "61b808d6a528d55591160636834356b9d91ddd937021b90fd84a77e2a5521d90",
   "curriculumReview": "Chapter 10 revision 2 uses 4 Kanji 1 reading items, 4 Kanji 1 written-form items, 24 kana context items and 8 paraphrases. Prerequisites: checkpoint-curriculum-audit.json; superseded banks: checkpoint-v1-archive.json."
 }
