@@ -111,9 +111,9 @@ test.describe("readers", () => {
     });
 
     test("the last chapter links to the previous one", async ({ page }) => {
-      await page.goto("/chapters/12");
+      await page.goto("/chapters/13");
       await expect(pager(page)).toHaveCount(1);
-      await expect(pager(page)).toHaveAttribute("href", "/chapters/11");
+      await expect(pager(page)).toHaveAttribute("href", "/chapters/12");
     });
 
     test("kana pages have no pager", async ({ page }) => {

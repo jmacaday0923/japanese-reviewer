@@ -1167,6 +1167,77 @@
         }
       ],
       "transformations": []
+    },
+    {
+      "chapter": "13",
+      "order": [
+        {
+          "id": "sb-c13-order-1",
+          "type": "order",
+          "example": {
+            "japanese": "日本の 会社に つとめます。",
+            "romaji": "nihon no kaisha ni tsutomemasu.",
+            "english": "I work at a Japanese company.",
+            "source": {
+              "heading": "c13-13-1-ni-verb",
+              "table": 2,
+              "row": 4
+            }
+          },
+          "tokens": [
+            "日本の",
+            "会社に",
+            "つとめます。"
+          ],
+          "why": "Some verbs use the marker に to point to a target: the place you live in, stay at or arrive at, the company you work at, the vehicle you ride, the person you meet, or the place you put something or go into. A is that target, and に comes right after it.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c13-order-2",
+          "type": "order",
+          "example": {
+            "japanese": "毎日 ひるごはんを 食べに 帰ります。",
+            "romaji": "mainichi hirugohan o tabe ni kaerimasu.",
+            "english": "Every day I go home to eat lunch.",
+            "source": {
+              "heading": "c13-13-3-purpose",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "tokens": [
+            "毎日",
+            "ひるごはんを",
+            "食べに",
+            "帰ります。"
+          ],
+          "why": "To say why you go somewhere, put the stem and に before a verb of motion: いく (go), かえる (go home), くる (come) or もどる (go back). The に marks the purpose: たべに かえります, I go home to eat.",
+          "whyParagraph": 2
+        },
+        {
+          "id": "sb-c13-order-3",
+          "type": "order",
+          "example": {
+            "japanese": "電車に のりながら、おんがくを 聞きます。",
+            "romaji": "densha ni norinagara, ongaku o kikimasu.",
+            "english": "I listen to music while riding the train.",
+            "source": {
+              "heading": "c13-13-4-nagara",
+              "table": 1,
+              "row": 2
+            }
+          },
+          "tokens": [
+            "電車に",
+            "のりながら、",
+            "おんがくを",
+            "聞きます。"
+          ],
+          "why": "Add ながら to the stem to do two things at the same time: みながら, while watching. The ながら action comes first, and the main action comes last and carries the tense: ニュースを みながら、あさごはんを たべます.",
+          "whyParagraph": 2
+        }
+      ],
+      "transformations": []
     }
   ]
 }

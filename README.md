@@ -1,6 +1,6 @@
 # Japanese Lesson Reviewer
 
-A personal study site for Japanese lessons. Search vocabulary, grammar, kana and kanji across the study pages, review Chapters 1–12, practise with flashcards and exercises, and assess progress with checkpoints and listening exams.
+A personal study site for Japanese lessons. Search vocabulary, grammar, kana and kanji across the study pages, review Chapters 1–13, practise with flashcards and exercises, and assess progress with checkpoints and listening exams.
 
 Built with Next.js 16.4 (App Router, Cache Components), React 19.3, TypeScript and Tailwind CSS 4. Deployed on Vercel.
 
@@ -85,7 +85,7 @@ The search lives in the URL of the home page, so a search can be bookmarked or s
 | --- | --- | --- |
 | `q` | Any text, matched case-insensitively against kana, romaji and English | empty |
 | `category` | `vocab`, `grammar`, `script` (Kana & Kanji), `practice`, `answers` | all |
-| `chapter` | `1` to `12`, `kana`, `kanji`, `practice` (derived from the current study pages) | all |
+| `chapter` | `1` to `13`, `kana`, `kanji`, `practice` (derived from the current study pages) | all |
 
 - Example: `/?q=gakkou&category=vocab&chapter=1`
 - Unknown values fall back to the default. Other parameters and the `#hash` are kept.
@@ -106,7 +106,7 @@ To add another chapter: add an entry to `src/data/exercises.json` like the exist
 
 ## Sentence building
 
-Every chapter has a **Sentence building** panel in its Exercises section, below existing interactive practice where present. Arrange word and phrase tiles to reconstruct three lesson examples per chapter (36 puzzles across the current 12 chapters). Select a chosen tile to remove it, use **Undo last tile** or **Clear sentence**, then **Check answer**. Tiles work with touch, mouse and keyboard; dragging is not required. This activity checks the source sentence's order; other natural Japanese orders may be possible.
+Every chapter has a **Sentence building** panel in its Exercises section, below existing interactive practice where present. Arrange word and phrase tiles to reconstruct three lesson examples per chapter (39 puzzles across the current 13 chapters). Select a chosen tile to remove it, use **Undo last tile** or **Clear sentence**, then **Check answer**. Tiles work with touch, mouse and keyboard; dragging is not required. This activity checks the source sentence's order; other natural Japanese orders may be possible.
 
 Chapters 1, 6 and 10 also offer **Transformations**: 12 curated positive-to-negative and polite-to-casual questions. Type kana or romaji from the lesson. Grading ignores whitespace, case, character width and final full stops; it preserves particles, long vowels, meaning and tense. Only source-printed alternatives, optional particles and the documented negative copulas are accepted. There is no automatic conjugator or open-ended grammar checker.
 
@@ -183,7 +183,7 @@ Use **Add to flashcards** beside a structured vocabulary row, an individual kanj
 
 Each eligible lesson table has **Add all N to flashcards** in its header. It saves all supported rows in one transaction, merges duplicates and retains both review histories. Kana sound charts save their paired hiragana/katakana and romaji reading. Kana word-example tables save the whole word with its meaning, rather than giving a sound fragment the word’s translation. Kanji comparisons retain their paired characters and readings. Exercise answer sheets and unpaired content are not converted.
 
-On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There is a full deck for each chapter (1–12), Kana 1 and Kanji 1–3, plus a vocabulary-only deck for each chapter. Deck metadata follows the current library. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
+On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There is a full deck for each chapter (1–13), Kana 1 and Kanji 1–3, plus a vocabulary-only deck for each chapter. Deck metadata follows the current library. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
 
 The shared content bank ships with the app. Your saved cards and per-direction schedules use the existing browser storage; there is no database or account setup. Importing again adds newly available content without resetting existing progress. Removed cards return if you deliberately import their deck again. Clearing browser site data removes saved cards/progress; the app still provides the pre-made bank.
 
@@ -294,6 +294,12 @@ No answer key was supplied. All keys and explanations are **added model answers*
 `/chapters/12` adds **Reason, Volitional Form, Parts of the Body**, adapted from the supplied scanned Chapter12.pdf (printed pages 23–38): 33 vocabulary entries, all ten sentence patterns (から・ので, なぜ・どうして・なんで, なにか／なにが／なにも, には・へは・では・とは, ましょう, ましょうか, ませんか and body part が adjective), the から・ので chart, the 14-row volitional chart, two reading passages and all 51 workbook questions.
 
 It follows the revised Chapter 11 layout: English and kana headings and explanations, and kanji only where the book prints them, each with its reading from `src/data/furigana.json`. The 51 questions are in 8 activities; 37 are checked automatically (choices, the volitional table and word tiles) and 14 personal and translation questions use self-check. No answer key was supplied, so keys and explanations are added model answers. `migration/chapter-12-audit.json` records the source checksum, keys, adaptations and hashes proving Chapters 1–11 are unchanged.
+
+## Chapter 13
+
+`/chapters/13` adds **Stem Form, Want To, Purpose and While**, adapted from the supplied Chapter13.pdf (a single-page capture of printed pages 39–54): 30 vocabulary entries, all four sentence patterns (A に Verb, Pre-ます + たい／たくない, Pre-ます or noun + に いく・かえる・くる・もどる, and Pre-ます + ながら), the verb list for に, the 14-row stem-form chart, two reading passages and all 88 workbook questions.
+
+It follows the Chapter 12 layout, with kanji only where the book prints them, each with its reading from `src/data/furigana.json`. The 88 questions are in 10 activities; 73 are checked automatically and 15 personal and translation questions use self-check. The stem table takes the dictionary form and stem in one answer. The たい exercise has a たい and a たくない question for each printed sentence, and accepts the changed verb alone or the whole sentence. The に いく and ながら exercises accept the whole sentence in kana or with the book's kanji. No answer key was supplied, so keys and explanations are added model answers. `migration/chapter-13-audit.json` records the source checksum, keys, adaptations and hashes proving Chapters 1–12 are unchanged.
 
 ## Kanji 3
 

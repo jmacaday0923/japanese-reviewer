@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "scope": "All 17 study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.",
+  "scope": "All 18 study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.",
   "method": "Exact reviewed display strings. Original source text remains available as a romaji hint; native reading/workbook disclosures stay closed until opened.",
   "sourceHashes": {
-    "src/data/chapters.json": "4eee915c39595ff40ff1b56af6eb6d6e7fdf7ca2f18d35ba320e860819902369",
+    "src/data/chapters.json": "d218768c012550757bceebccf300f916695ac8ac121e805e0b617ed842eb0345",
     "src/data/kana.json": "677dc9d1a4f2ace6908a1bc02f3f17ebc6905524dd24fc33dff7a3ae84e98435",
     "src/data/kanji.json": "0261bd7328d5c8789badb2e962e924c79f1e54dbaec32ccd4d24fdcee85affaa",
     "src/data/practice.json": "5a23e3eb45afff8f5bb6c48eca77e39c756c57b49b5ed7b8dccfddcd461af8aa",
     "src/data/exercises.json": "1147c19bd967c53a386f8dc7972846ab3dcc4cafd66cb6a6c6ff2d73e99b1f71",
-    "src/data/sentence-exercises.json": "6353099a9b3969370f308adc00dea75188319602b8ad2fd3ac7b97ff92a61d92",
-    "src/data/workbook-exercises.json": "6c2dfa50a588b36af7240810ef5524e350d17620cdd1df4831e5b440ee5ed9c7"
+    "src/data/sentence-exercises.json": "390b6feb81ce8311ba12b2e38d5a1d9334927eb2c766bf8353b37a5908952204",
+    "src/data/workbook-exercises.json": "7907419a8c5bbc65b8f6f4f9fc7cef5ea6542a6eba8272b3769abfb5242c8115"
   },
   "displayHashes": {
     "src/data/japanese-display.json": "ca788915141b5f05f1f56804551fbbda7f3e0598d5366ada31c51eab14a0471e",
@@ -18,7 +18,7 @@
   "catalogEntries": 8941,
   "scopedEntries": 148,
   "englishReferenceEntries": 148,
-  "nativePanels": 120,
+  "nativePanels": 134,
   "pages": [
     {
       "page": "chapter/1",
@@ -105,6 +105,13 @@
       "nativeJapaneseNodes": 457
     },
     {
+      "page": "chapter/13",
+      "sections": 5,
+      "textNodes": 481,
+      "japaneseDisplays": 0,
+      "nativeJapaneseNodes": 305
+    },
+    {
       "page": "kana/1",
       "sections": 5,
       "textNodes": 3962,
@@ -140,6 +147,6 @@
       "nativeJapaneseNodes": 175
     }
   ],
-  "reviewedSourceNodes": 40472,
+  "reviewedSourceNodes": 40953,
   "changedSourceNodes": 10524
 }

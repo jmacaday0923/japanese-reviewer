@@ -136,7 +136,7 @@ test("plain text from the page HTML", () => {
 });
 
 test("chapter options come from the data, numbers first", () => {
-  assert.deepEqual(chapters.map((o) => o.value), ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "kana", "kanji", "practice"]);
+  assert.deepEqual(chapters.map((o) => o.value), ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "kana", "kanji", "practice"]);
   assert.deepEqual(chapters.at(-1), { value: "practice", label: "N5 practice" });
   assert.deepEqual(buildChapterOptions(["10", "2", "zeta", "kanji", "practice", "2", "1", "alpha", "kana"]).map((o) => o.value), [
     "1", "2", "10", "kana", "kanji", "practice", "alpha", "zeta",

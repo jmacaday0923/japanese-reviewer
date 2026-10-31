@@ -15,7 +15,7 @@ export function cellText(html: string): string {
 
 // Only known language columns receive the larger Japanese typography.
 export function isJapaneseColumn(header: string): boolean {
-  return ["japanese", "word", "kanji", "kana", "hiragana", "katakana", "example word", "dictionary form", "polite potential", "plain potential", "polite volitional", "plain volitional"].includes(cellText(header).toLowerCase());
+  return ["japanese", "word", "kanji", "kana", "hiragana", "katakana", "example word", "dictionary form", "polite potential", "plain potential", "polite volitional", "plain volitional", "stem form"].includes(cellText(header).toLowerCase());
 }
 
 // Reference charts keep their column relationships; sentence examples can stack.

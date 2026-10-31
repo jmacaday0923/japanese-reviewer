@@ -15,7 +15,8 @@ const hash = value => createHash("sha256").update(JSON.stringify(value)).digest(
 const kanji = text => /[\p{Script=Han}々]/u.test(text);
 
 test("Chapter 12 follows Chapter 11 with the same five sections and every sentence pattern in the outline", () => {
-  assert.deepEqual(chapters.map(c => c.ch), Array.from({ length: 12 }, (_, i) => String(i + 1)));
+  // Later chapters are appended after Chapter 12.
+  assert.deepEqual(chapters.slice(0, 12).map(c => c.ch), Array.from({ length: 12 }, (_, i) => String(i + 1)));
   for (const previous of chapters.slice(0, 11)) assert.equal(hash(previous), audit.previousChapterHashes[previous.ch]);
   assert.equal(hash(chapter), audit.chapterSha256);
   assert.equal(chapter.title, "Reason, Volitional Form, Parts of the Body");

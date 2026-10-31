@@ -165,7 +165,7 @@ test.describe("search", () => {
     await page.goto("/");
     const s = search(page);
     const labels = await s.chapter.locator("option").allTextContents();
-    expect(labels).toEqual(["All chapters", ...Array.from({ length: 12 }, (_, i) => `Chapter ${i + 1}`), "Kana", "Kanji", "N5 practice"]);
+    expect(labels).toEqual(["All chapters", ...Array.from({ length: 13 }, (_, i) => `Chapter ${i + 1}`), "Kana", "Kanji", "N5 practice"]);
 
     for (const [value, label] of [["kana", "Kana"], ["kanji", "Kanji"], ["practice", "N5 practice"]]) {
       await s.chapter.selectOption({ label });

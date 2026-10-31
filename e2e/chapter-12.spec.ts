@@ -19,8 +19,9 @@ test("Chapter 12 appears after Chapter 11 with all eight activities and furigana
   const row = main.locator("#lessons tr", { hasText: "Why do you like Japanese?" }).first();
   await expect(row.locator("rt").first()).toHaveText("にほんご");
   const pager = main.getByRole("navigation", { name: "Chapter pages" });
-  await expect(pager.getByRole("link")).toHaveCount(1);
-  await expect(pager.getByRole("link")).toHaveAttribute("href", "/chapters/11");
+  await expect(pager.getByRole("link")).toHaveCount(2);
+  await expect(pager.getByRole("link").first()).toHaveAttribute("href", "/chapters/11");
+  await expect(pager.getByRole("link").last()).toHaveAttribute("href", "/chapters/13");
 });
 
 test("all 37 checked Chapter 12 questions accept their model in the browser", async ({ page }) => {

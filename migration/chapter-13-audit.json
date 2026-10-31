@@ -1,0 +1,758 @@
+{
+  "version": 1,
+  "chapter": "13",
+  "sourceFile": "Chapter13.pdf",
+  "sourceSha256": "8a0e335584f71f70e0a61df78f19d47b3416aa90e82ec64772b484da624d9cea",
+  "printedPages": [
+    39,
+    54
+  ],
+  "sourceIsScan": true,
+  "textReview": "The single-page FireShot capture was rendered at 2.5× in 24 tiles and every tile visually reviewed, covering printed Chapter 13 pages 39 to 54.",
+  "patterns": [
+    "ぶんけい 13.1 A に Verb",
+    "ぶんけい 13.2 Pre-ます + たいです",
+    "ぶんけい 13.3 Pre-ます / Noun + に いく・かえる・くる・もどる",
+    "ぶんけい 13.4 Pre-ます + ながら"
+  ],
+  "vocabularyCount": 30,
+  "workbookQuestionCount": 88,
+  "automaticQuestions": 73,
+  "selfCheckQuestions": 15,
+  "modelAnswersAreGenerated": true,
+  "adaptations": [
+    "No supplied answer key; all keys and explanations are added model answers. Personal and translation answers use self-check.",
+    "Kanji appear only where the printed chapter uses them, and every kanji word shows its reading above it from the reviewed list in src/data/furigana.json. Headings, instructions and explanations use English and kana, following the book.",
+    "The 13.3 and 13.4 examples show the joined sentence; the book also prints the two parts it joins.",
+    "The p.43 table asks for the dictionary form and the stem form. Both are typed in one answer, separated by a space. For work, つとめる (this chapter's verb) and はたらく are both accepted.",
+    "The p.45 たい exercise has seven sentences with a たい line and a たくない line each, so it is 14 questions. The changed verb alone or the whole sentence is accepted, and たくありません is accepted for たくない.",
+    "The p.47 and p.49 exercises accept the whole sentence in kana or with the book's kanji. へ and に are both accepted for the destination, and noun verbs may take に directly (かいものに, そうだんに).",
+    "The p.45 sentence 2 prints テブール; it is shown as テーブル.",
+    "Grammar question 4 on p.50 is keyed to に (はいる takes に), and へ is also accepted because ぎんこうの なかへ はいりました is natural Japanese.",
+    "In the p.52 conversation, あべさん speaks two lines in a row, as printed: she asks where Kim put the bag, then remembers it was the library.",
+    "Personal questions 8 to 10 on p.54 are casual, so their model answers are casual too."
+  ],
+  "readingNotes": [
+    {
+      "passage": "c13-restaurant-passage",
+      "words": [
+        "それでは",
+        "そうしましょう",
+        "わすれる",
+        "〜かな"
+      ]
+    },
+    {
+      "passage": "c13-lunch-passage",
+      "words": [
+        "もってくる",
+        "でも",
+        "いそぐ"
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "id": "c13-stem-forms",
+      "heading": "c13-stem-forms",
+      "printedPage": 43,
+      "questions": [
+        {
+          "id": "c13-stem-forms-1",
+          "number": 1,
+          "mode": "text",
+          "model": "とまる とまり",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-2",
+          "number": 2,
+          "mode": "text",
+          "model": "のる のり",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-3",
+          "number": 3,
+          "mode": "text",
+          "model": "あう あい",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-4",
+          "number": 4,
+          "mode": "text",
+          "model": "のむ のみ",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-5",
+          "number": 5,
+          "mode": "text",
+          "model": "べんきょうする べんきょうし",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-6",
+          "number": 6,
+          "mode": "text",
+          "model": "やすむ やすみ",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-7",
+          "number": 7,
+          "mode": "text",
+          "model": "おく おき",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-8",
+          "number": 8,
+          "mode": "text",
+          "model": "はいる はいり",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-9",
+          "number": 9,
+          "mode": "text",
+          "model": "すむ すみ",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-10",
+          "number": 10,
+          "mode": "text",
+          "model": "つとめる つとめ",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-11",
+          "number": 11,
+          "mode": "text",
+          "model": "おきる おき",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-12",
+          "number": 12,
+          "mode": "text",
+          "model": "ねる ね",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-13",
+          "number": 13,
+          "mode": "text",
+          "model": "いく いき",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-14",
+          "number": 14,
+          "mode": "text",
+          "model": "せんたくする せんたくし",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-15",
+          "number": 15,
+          "mode": "text",
+          "model": "くる き",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-16",
+          "number": 16,
+          "mode": "text",
+          "model": "よむ よみ",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-17",
+          "number": 17,
+          "mode": "text",
+          "model": "うる うり",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-stem-forms-18",
+          "number": 18,
+          "mode": "text",
+          "model": "かう かい",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c13-tai-forms",
+      "heading": "c13-tai-forms",
+      "printedPage": 45,
+      "questions": [
+        {
+          "id": "c13-tai-forms-1",
+          "number": 1,
+          "mode": "text",
+          "model": "土よう日に かいものしたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-2",
+          "number": 2,
+          "mode": "text",
+          "model": "土よう日に かいものしたくないです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-3",
+          "number": 3,
+          "mode": "text",
+          "model": "かびんを テーブルの上に おきたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-4",
+          "number": 4,
+          "mode": "text",
+          "model": "かびんを テーブルの上に おきたくないです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-5",
+          "number": 5,
+          "mode": "text",
+          "model": "このへやで べんきょうしたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-6",
+          "number": 6,
+          "mode": "text",
+          "model": "このへやで べんきょうしたくないです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-7",
+          "number": 7,
+          "mode": "text",
+          "model": "日本の会社に つとめたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-8",
+          "number": 8,
+          "mode": "text",
+          "model": "日本の会社に つとめたくないです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-9",
+          "number": 9,
+          "mode": "text",
+          "model": "新しい本を かいたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-10",
+          "number": 10,
+          "mode": "text",
+          "model": "新しい本を かいたくないです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-11",
+          "number": 11,
+          "mode": "text",
+          "model": "ホラーえいがを 見たいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-12",
+          "number": 12,
+          "mode": "text",
+          "model": "ホラーえいがを 見たくないです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-13",
+          "number": 13,
+          "mode": "text",
+          "model": "日よう日に へやを そうじしたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-tai-forms-14",
+          "number": 14,
+          "mode": "text",
+          "model": "日よう日に へやを そうじしたくないです。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c13-purpose",
+      "heading": "c13-purpose",
+      "printedPage": 47,
+      "questions": [
+        {
+          "id": "c13-purpose-1",
+          "number": 1,
+          "mode": "text",
+          "model": "ジョンさんは 日本へ えいごを おしえに 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-2",
+          "number": 2,
+          "mode": "text",
+          "model": "毎日 しょくどうへ ひるごはんを 食べに 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-3",
+          "number": 3,
+          "mode": "text",
+          "model": "デパートへ かいものに 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-4",
+          "number": 4,
+          "mode": "text",
+          "model": "いえへ わすれものを とりに 帰ります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-5",
+          "number": 5,
+          "mode": "text",
+          "model": "大学に 友だちに 会いに 来ました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-6",
+          "number": 6,
+          "mode": "text",
+          "model": "ぶちょうの オフィスへ そうだんしに 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-7",
+          "number": 7,
+          "mode": "text",
+          "model": "クラスメイトの いえへ じしょを かりに 行きました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-8",
+          "number": 8,
+          "mode": "text",
+          "model": "カフェに コーヒーを 飲みに 来ました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-9",
+          "number": 9,
+          "mode": "text",
+          "model": "こうえんへ 田中さんと 話しに 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-purpose-10",
+          "number": 10,
+          "mode": "text",
+          "model": "としょかんへ 本を かえしに 行きました。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c13-nagara",
+      "heading": "c13-nagara",
+      "printedPage": 49,
+      "questions": [
+        {
+          "id": "c13-nagara-1",
+          "number": 1,
+          "mode": "text",
+          "model": "さんぽを しながら 友だちと 話します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-2",
+          "number": 2,
+          "mode": "text",
+          "model": "日本語を べんきょうしながら アルバイトを しました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-3",
+          "number": 3,
+          "mode": "text",
+          "model": "うたを うたいながら おどります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-4",
+          "number": 4,
+          "mode": "text",
+          "model": "おきゃくさんと 話しながら メモを 書きました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-5",
+          "number": 5,
+          "mode": "text",
+          "model": "かんがえながら レポートを 書きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-6",
+          "number": 6,
+          "mode": "text",
+          "model": "本を 読みながら おんがくを 聞きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-7",
+          "number": 7,
+          "mode": "text",
+          "model": "あるきながら アナさんと けいたいで 話します。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-8",
+          "number": 8,
+          "mode": "text",
+          "model": "りょうりを つくりながら ニュースを 見ます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-9",
+          "number": 9,
+          "mode": "text",
+          "model": "友だちと おさけを 飲みながら サッカーを 見ます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-nagara-10",
+          "number": 10,
+          "mode": "text",
+          "model": "電車に のりながら しょうせつを 読みます。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c13-grammar-choices",
+      "heading": "c13-grammar-choices",
+      "printedPage": 50,
+      "questions": [
+        {
+          "id": "c13-grammar-choices-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "に",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c13-grammar-choices-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "を",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c13-grammar-choices-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "に",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c13-grammar-choices-4",
+          "number": 4,
+          "mode": "choice",
+          "model": "に",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c13-grammar-choices-5",
+          "number": 5,
+          "mode": "choice",
+          "model": "に",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c13-grammar-choices-6",
+          "number": 6,
+          "mode": "choice",
+          "model": "なにか",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c13-grammar-choices-7",
+          "number": 7,
+          "mode": "choice",
+          "model": "つくり",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c13-grammar-choices-8",
+          "number": 8,
+          "mode": "choice",
+          "model": "に",
+          "correctChoiceId": "4"
+        }
+      ]
+    },
+    {
+      "id": "c13-word-order",
+      "heading": "c13-word-order",
+      "printedPage": 51,
+      "questions": [
+        {
+          "id": "c13-word-order-1",
+          "number": 1,
+          "mode": "order",
+          "model": "火よう日に モールへ たなかさんと あいに 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-word-order-2",
+          "number": 2,
+          "mode": "order",
+          "model": "去年 有名な ホテルに 家族と とまりました。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-word-order-3",
+          "number": 3,
+          "mode": "order",
+          "model": "おそく おきましたから あさごはんは 食べませんでした。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-word-order-4",
+          "number": 4,
+          "mode": "order",
+          "model": "おんがくを ききながら スポーツの ざっしを 読みます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-word-order-5",
+          "number": 5,
+          "mode": "order",
+          "model": "毎日 ひるごはんを たべに かえります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-word-order-6",
+          "number": 6,
+          "mode": "order",
+          "model": "わたしは からい りょうりを たべたくないです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-word-order-7",
+          "number": 7,
+          "mode": "order",
+          "model": "おふろに はいりながら うたを うたいます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-word-order-8",
+          "number": 8,
+          "mode": "order",
+          "model": "来年 日本の かいしゃに つとめたいです。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c13-text-grammar",
+      "heading": "c13-text-grammar",
+      "printedPage": 52,
+      "questions": [
+        {
+          "id": "c13-text-grammar-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "もどりましょう",
+          "correctChoiceId": "1"
+        },
+        {
+          "id": "c13-text-grammar-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "どこか",
+          "correctChoiceId": "3"
+        },
+        {
+          "id": "c13-text-grammar-3",
+          "number": 3,
+          "mode": "choice",
+          "model": "とりに行きましょう",
+          "correctChoiceId": "2"
+        }
+      ]
+    },
+    {
+      "id": "c13-reading-comprehension",
+      "heading": "c13-reading-comprehension",
+      "printedPage": 53,
+      "questions": [
+        {
+          "id": "c13-reading-comprehension-1",
+          "number": 1,
+          "mode": "choice",
+          "model": "いそぎましたから",
+          "correctChoiceId": "2"
+        },
+        {
+          "id": "c13-reading-comprehension-2",
+          "number": 2,
+          "mode": "choice",
+          "model": "ひとりで しょくどうで 食べました",
+          "correctChoiceId": "4"
+        }
+      ]
+    },
+    {
+      "id": "c13-personal-answers",
+      "heading": "c13-personal-answers",
+      "printedPage": 54,
+      "questions": [
+        {
+          "id": "c13-personal-answers-1",
+          "number": 1,
+          "mode": "self",
+          "model": "ラーメンが 食べたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-2",
+          "number": 2,
+          "mode": "self",
+          "model": "友だちと えいがを 見たいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-3",
+          "number": 3,
+          "mode": "self",
+          "model": "日本の おかしを 買いに 行きます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-4",
+          "number": 4,
+          "mode": "self",
+          "model": "きょうとへ 行きたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-5",
+          "number": 5,
+          "mode": "self",
+          "model": "はい、ときどき ごはんを 食べながら けいたいを 使います。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-6",
+          "number": 6,
+          "mode": "self",
+          "model": "いいえ、買いたくないです。いまの けいたいが すきですから。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-7",
+          "number": 7,
+          "mode": "self",
+          "model": "日本の 会社で はたらきたいです。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-8",
+          "number": 8,
+          "mode": "self",
+          "model": "うん、見たい。アニメの えいがを 見たい。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-9",
+          "number": 9,
+          "mode": "self",
+          "model": "うみへ 行きたい。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-personal-answers-10",
+          "number": 10,
+          "mode": "self",
+          "model": "うん、読む。日本の まんがを 読みたい。",
+          "correctChoiceId": null
+        }
+      ]
+    },
+    {
+      "id": "c13-translation-practice",
+      "heading": "c13-translation-practice",
+      "printedPage": 54,
+      "questions": [
+        {
+          "id": "c13-translation-practice-1",
+          "number": 1,
+          "mode": "self",
+          "model": "ア：学校で ひるごはんを 食べますか。\nイ：いいえ、毎日 ひるごはんを 食べに 家へ 帰ります。\nア：家は 学校から とても ちかいですか。\nイ：はい、あるいて 10分 かかります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-translation-practice-2",
+          "number": 2,
+          "mode": "self",
+          "model": "ア：新聞を 読みますか。\nイ：いいえ、読みません。毎朝 あさごはんを 食べながら ニュースを 見ます。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-translation-practice-3",
+          "number": 3,
+          "mode": "self",
+          "model": "ア：こんしゅうまつ どこかへ 行きたいですか。\nイ：いいえ、どこへも 行きたくないです。月よう日に しけんが ありますから、べんきょうします。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-translation-practice-4",
+          "number": 4,
+          "mode": "self",
+          "model": "ア：来年 そふに 会いに 日本へ 行きます。\nイ：おじいさんは 日本人ですか。\nア：はい、そふの 家は ながのに あります。とうきょうから ながのまで しんかんせんに のります。",
+          "correctChoiceId": null
+        },
+        {
+          "id": "c13-translation-practice-5",
+          "number": 5,
+          "mode": "self",
+          "model": "ア：どこで はたらきたいですか。\nイ：日本の 会社に つとめたいです。",
+          "correctChoiceId": null
+        }
+      ]
+    }
+  ],
+  "questionDataSha256": "7907419a8c5bbc65b8f6f4f9fc7cef5ea6542a6eba8272b3769abfb5242c8115",
+  "previousChapterHashes": {
+    "1": "fcb7cc4577bcd889e0c5691ad2ccb32db590916db6be859680f79210f815ea2f",
+    "2": "6f86cf68c36ec2de4fc7d50e98d64cc90dbc373e9f2e264f1a60c9f4c89eadb5",
+    "3": "f0068f578f8bebaf8db2e600ecb60fd8dede8df79507d6a54f3b6814a0424205",
+    "4": "71258037cbc1b33450d1d31f72256a1428933d1a6131b310ab870deac072b0e5",
+    "5": "fe04d1e80ea6aabe8fd19c0f52b2f742ec983bc524d124444ea6bf4d3603b044",
+    "6": "fcf66703797c342f46ffb4d267add642c32aafd3170c048f5767d669a9a29fca",
+    "7": "edc9c1c055016c78e9e81c0367c904a86bc34aefa91ed95c09a20c5707e60782",
+    "8": "37c43fb29be4ea196b0a484115cc7123fab2240cf003b7bf776a4e91f9a11809",
+    "9": "3894cb096eeab009e8077bd3b8f7d665270eb86cf762c1d223d9e5070f025841",
+    "10": "b8b460a8d09146229ba4e170ba0c982e457edab318b7a0502da624b674ec8dd9",
+    "11": "13ea0b3b494ae4369b9902c7869563c209de81716c80b7d7290d0b64f928cc0d",
+    "12": "c654af4479a733fa90e521da908b0bcacc13af19e4f32f4205d711e81ba31cea"
+  },
+  "chapterSha256": "5300015a6d934b2185aa30fb67b73ec789c439bad8f2c71ab69d83d2e62c465a"
+}
