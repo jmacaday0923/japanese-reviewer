@@ -89,23 +89,37 @@ test.describe("readers", () => {
     await expect(page).toHaveURL("/checkpoints");
   });
 
-  test("chapter previous and next", async ({ page }) => {
-    const pager = () => visibleMain(page).getByRole("navigation", { name: "Chapter pages" }).getByRole("link");
-    await page.goto("/chapters/1");
-    await expect(pager()).toHaveCount(1);
-    await expect(pager()).toHaveAttribute("href", "/chapters/2");
-    await pager().click();
-    await expect(page).toHaveURL("/chapters/2");
-    await expect(pager()).toHaveCount(2);
-    await page.goto("/chapters/10");
-    await expect(pager()).toHaveCount(2);
-    await expect(pager().nth(0)).toHaveAttribute("href", "/chapters/9");
-    await expect(pager().nth(1)).toHaveAttribute("href", "/chapters/11");
-    await page.goto("/chapters/12");
-    await expect(pager()).toHaveCount(1);
-    await expect(pager()).toHaveAttribute("href", "/chapters/11");
-    await page.goto("/kana/1");
-    await expect(visibleMain(page).getByRole("navigation", { name: "Kana pages" }).getByRole("link")).toHaveCount(0);
+  // One page each: these pages take several seconds to load on CI, and
+  // together they ran past a single test's 30s timeout
+  test.describe("chapter previous and next", () => {
+    const pager = (page: Page) => visibleMain(page).getByRole("navigation", { name: "Chapter pages" }).getByRole("link");
+
+    test("the first chapter links to the next one", async ({ page }) => {
+      await page.goto("/chapters/1");
+      await expect(pager(page)).toHaveCount(1);
+      await expect(pager(page)).toHaveAttribute("href", "/chapters/2");
+      await pager(page).click();
+      await expect(page).toHaveURL("/chapters/2");
+      await expect(pager(page)).toHaveCount(2);
+    });
+
+    test("a middle chapter links both ways", async ({ page }) => {
+      await page.goto("/chapters/10");
+      await expect(pager(page)).toHaveCount(2);
+      await expect(pager(page).nth(0)).toHaveAttribute("href", "/chapters/9");
+      await expect(pager(page).nth(1)).toHaveAttribute("href", "/chapters/11");
+    });
+
+    test("the last chapter links to the previous one", async ({ page }) => {
+      await page.goto("/chapters/12");
+      await expect(pager(page)).toHaveCount(1);
+      await expect(pager(page)).toHaveAttribute("href", "/chapters/11");
+    });
+
+    test("kana pages have no pager", async ({ page }) => {
+      await page.goto("/kana/1");
+      await expect(visibleMain(page).getByRole("navigation", { name: "Kana pages" }).getByRole("link")).toHaveCount(0);
+    });
   });
 
   test("desktop outline links jump below the header; Back and Forward follow fragments", async ({ page }) => {
