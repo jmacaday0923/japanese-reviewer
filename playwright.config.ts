@@ -14,6 +14,9 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 1 : 0,
+  // CI runners are several times slower than a laptop, and the reader pages
+  // are megabytes of HTML, so tests that visit several of them need longer
+  timeout: process.env.CI ? 60_000 : 30_000,
   // On CI: annotations in the GitHub summary, plus an HTML report for the uploaded artifact
   reporter: process.env.CI ? [["github"], ["html", { open: "never" }]] : [["list"], ["html", { open: "never" }]],
   use: { baseURL, trace: "retain-on-failure" },
