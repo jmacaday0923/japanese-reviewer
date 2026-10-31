@@ -183,7 +183,7 @@ Use **Add to flashcards** beside a structured vocabulary row, an individual kanj
 
 Each eligible lesson table has **Add all N to flashcards** in its header. It saves all supported rows in one transaction, merges duplicates and retains both review histories. Kana sound charts save their paired hiragana/katakana and romaji reading. Kana word-example tables save the whole word with its meaning, rather than giving a sound fragment the word’s translation. Kanji comparisons retain their paired characters and readings. Exercise answer sheets and unpaired content are not converted.
 
-On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There is a full deck for each chapter (1–15), Kana 1 and Kanji 1–3, plus a vocabulary-only deck for each chapter. Deck metadata follows the current library. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
+On **Flashcards**, choose one or more **Pre-made decks**, then **Add selected decks and review**. There is a full deck for each chapter (1–15), Kana 1 and Kanji 1–4, plus a vocabulary-only deck for each chapter. Deck metadata follows the current library. The bank is derived from the same source-backed rows as the lesson buttons; each selected deck loads from **/flashcard-decks/[deck]** on demand. Only deck names/counts are included in the initial flashcards page, not the whole bank.
 
 The shared content bank ships with the app. Your saved cards and per-direction schedules use the existing browser storage; there is no database or account setup. Importing again adds newly available content without resetting existing progress. Removed cards return if you deliberately import their deck again. Clearing browser site data removes saved cards/progress; the app still provides the pre-made bank.
 
@@ -318,6 +318,10 @@ It follows the Chapter 14 layout, with kanji only where the book prints them, ea
 `/kanji/3` adds **Adjectives, Colors and Everyday Verbs**: kanji 61 to 90 from the JLRC Kanji Workbook N5, Lessons 7 to 9 (the supplied scan `Kanji 61-90.pdf`, printed pages 37–51). It follows the Kanji 2 layout: a reading and word table for each kanji, pattern word lists, look-alike and reading notes, Parts A to D from the workbook's practice and test pages, added self-test Parts E to J, and an answer key of model answers (the workbook key was not supplied). `migration/kanji-3-audit.json` records the source checksum, page map, test keys and hashes proving Kanji 1 and 2 are unchanged.
 
 Flashcards for Chapters 8–10 still show only Kanji 1 and 2 characters (`FAMILIAR_KANJI_PAGES` in `src/lib/flashcard-face.ts`), because Kanji 3 is taught alongside later chapters.
+
+## Kanji 4
+
+`/kanji/4` adds **Verbs, Words and Places in Town**: kanji 91 to 120 from the JLRC Kanji Workbook N5, Lessons 10 to 12 (the supplied scan `Kanji 91-120.pdf`, printed pages 52–66). It follows the Kanji 3 layout: a reading and word table for each kanji, pattern word lists (including transitive and intransitive verb pairs), look-alike and reading notes, Parts A to D from the workbook's practice and test pages, added self-test Parts E to J, and an answer key of model answers (the workbook key was not supplied). `migration/kanji-4-audit.json` records the source checksum, page map, test keys and hashes proving Kanji 1 to 3 are unchanged. Like Kanji 3, it doesn't change which kanji Chapter 8–10 flashcards show.
 
 ## Older chapter practice and study plans
 

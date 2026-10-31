@@ -1605,5 +1605,534 @@
         "l": 3
       }
     ]
+  },
+  {
+    "ch": "4",
+    "title": "Verbs, Words and Places in Town",
+    "intro": "This lesson covers kanji 91 to 120 of the JLRC N5 Kanji Workbook. Kanji 91 to 100 are verbs about moving and doors: enter, exit, stop, cut, stand, hold, wait, close, open and hear. Kanji 101 to 110 are about knowing and words: know, study, meet, wear, use, make, say, language, talk and read. Kanji 111 to 120 are places around town: store, school, country, house, car, road, station, capital, metropolis and direction. Many example words reuse kanji from Kanji 1 to 3, like 大, 高, 新 and 売.",
+    "sections": [
+      {
+        "id": "lessons",
+        "title": "Lessons",
+        "html": "<h3 id=\"c4-how-the-readings-are-shown\">How the readings are shown</h3><p>The same two kinds of reading from Kanji 1 to 3 apply here. The Japanese reading (kun'yomi) is meaning-based and usually appears when a kanji stands alone or has kana after it. The Chinese reading (on'yomi) is sound-based and usually appears inside compound words. As before, the tables write the Chinese reading in katakana.</p><ul><li>This set has no special (starred) readings.</li><li>A reading in square brackets is listed for completeness, but the workbook gives no example words for it, such as [リツ], [ジ], [タイ], [ヘイ], [カイ], [チ], [チャク] and [みやこ].</li><li>The workbook also lists ハイ for 閉. Dictionaries give only ヘイ, and neither appears in an N5 word.</li><li>None means the workbook shows no reading of that kind. 校, 駅 and 京 have no Japanese reading.</li><li>A reading followed by a word in brackets, like いり (in いりぐち), only appears in that word.</li><li>The Strokes column shows the number the workbook gives.</li></ul><h3 id=\"c4-enter-insert\">入 (enter, insert)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>enter, insert</td><td>ニュウ</td><td>はい(る), い(れる), いり (in いりぐち)</td><td>2</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>入る</td><td>はいる</td><td>hairu</td><td>to enter</td></tr><tr><td>入れる</td><td>いれる</td><td>ireru</td><td>to insert, to put in</td></tr><tr><td>入口</td><td>いりぐち</td><td>iriguchi</td><td>entrance</td></tr><tr><td>入学</td><td>にゅうがく</td><td>nyuugaku</td><td>entering school</td></tr></tbody></table></div><h3 id=\"c4-exit-leave-come-out\">出 (exit, leave, come out)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>exit, leave, come out</td><td>シュツ</td><td>だ(す), で(る), で(かける)</td><td>5</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>出す</td><td>だす</td><td>dasu</td><td>to take out, to put out, to submit</td></tr><tr><td>出る</td><td>でる</td><td>deru</td><td>to leave, to come out</td></tr><tr><td>出かける</td><td>でかける</td><td>dekakeru</td><td>to leave, to go out</td></tr><tr><td>外出</td><td>がいしゅつ</td><td>gaishutsu</td><td>going out, trip</td></tr></tbody></table></div><h3 id=\"c4-stop\">止 (stop)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>stop</td><td>シ</td><td>と(める), と(まる)</td><td>4</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>止める</td><td>とめる</td><td>tomeru</td><td>to stop (something)</td></tr><tr><td>止まる</td><td>とまる</td><td>tomaru</td><td>to stop (by itself)</td></tr><tr><td>中止</td><td>ちゅうし</td><td>chuushi</td><td>cancellation</td></tr></tbody></table></div><h3 id=\"c4-cut\">切 (cut)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>cut</td><td>セツ</td><td>き(る), きっ (in きって)</td><td>4</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>切る</td><td>きる</td><td>kiru</td><td>to cut</td></tr><tr><td>切手</td><td>きって</td><td>kitte</td><td>postage stamp</td></tr><tr><td>大切な</td><td>たいせつな</td><td>taisetsu na</td><td>important</td></tr><tr><td>しん切な</td><td>しんせつな</td><td>shinsetsu na</td><td>kind</td></tr></tbody></table></div><h3 id=\"c4-stand-up\">立 (stand up)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>stand up</td><td>[リツ, リュウ]</td><td>た(つ)</td><td>5</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>立つ</td><td>たつ</td><td>tatsu</td><td>to stand</td></tr></tbody></table></div><h3 id=\"c4-hold-have\">持 (hold, have)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>hold, have</td><td>[ジ]</td><td>も(つ)</td><td>9</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>持つ</td><td>もつ</td><td>motsu</td><td>to hold, to have</td></tr><tr><td>気持ち</td><td>きもち</td><td>kimochi</td><td>feelings</td></tr></tbody></table></div><h3 id=\"c4-wait\">待 (wait)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>wait</td><td>[タイ, ダイ]</td><td>ま(つ)</td><td>9</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>待つ</td><td>まつ</td><td>matsu</td><td>to wait</td></tr></tbody></table></div><h3 id=\"c4-close\">閉 (close)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>close</td><td>[ヘイ, ハイ]</td><td>し(める), し(まる)</td><td>11</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>閉める</td><td>しめる</td><td>shimeru</td><td>to close (something)</td></tr><tr><td>閉まる</td><td>しまる</td><td>shimaru</td><td>to close (by itself)</td></tr></tbody></table></div><h3 id=\"c4-open\">開 (open)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>open</td><td>[カイ]</td><td>あ(ける), あ(く)</td><td>12</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>開ける</td><td>あける</td><td>akeru</td><td>to open (something)</td></tr><tr><td>開く</td><td>あく</td><td>aku</td><td>to open (by itself)</td></tr></tbody></table></div><h3 id=\"c4-hear-listen-ask\">聞 (hear, listen, ask)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>hear, listen, ask</td><td>ブン</td><td>き(く)</td><td>14</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>聞く</td><td>きく</td><td>kiku</td><td>to hear, to listen, to ask</td></tr><tr><td>新聞</td><td>しんぶん</td><td>shinbun</td><td>newspaper</td></tr></tbody></table></div><h3 id=\"c4-know\">知 (know)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>know</td><td>[チ]</td><td>し(る)</td><td>8</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>知る</td><td>しる</td><td>shiru</td><td>to know</td></tr></tbody></table></div><h3 id=\"c4-study-learn\">学 (study, learn)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>study, learn</td><td>ガク, ガッ (in がっこう)</td><td>まな(ぶ)</td><td>8</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>学ぶ</td><td>まなぶ</td><td>manabu</td><td>to study, to learn</td></tr><tr><td>入学</td><td>にゅうがく</td><td>nyuugaku</td><td>entering school</td></tr><tr><td>学生</td><td>がくせい</td><td>gakusei</td><td>student</td></tr><tr><td>学校</td><td>がっこう</td><td>gakkou</td><td>school</td></tr><tr><td>大学</td><td>だいがく</td><td>daigaku</td><td>university</td></tr><tr><td>見学</td><td>けんがく</td><td>kengaku</td><td>field trip, inspection</td></tr></tbody></table></div><h3 id=\"c4-meet\">会 (meet)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>meet</td><td>カイ</td><td>あ(う)</td><td>6</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>会う</td><td>あう</td><td>au</td><td>to meet</td></tr><tr><td>会話</td><td>かいわ</td><td>kaiwa</td><td>conversation</td></tr><tr><td>会長</td><td>かいちょう</td><td>kaichou</td><td>chairperson</td></tr><tr><td>会社</td><td>かいしゃ</td><td>kaisha</td><td>company</td></tr><tr><td>社会</td><td>しゃかい</td><td>shakai</td><td>society</td></tr></tbody></table></div><h3 id=\"c4-wear-arrive\">着 (wear, arrive)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>wear, arrive</td><td>[チャク]</td><td>き(る), つ(く), ぎ (in うわぎ)</td><td>12</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>着る</td><td>きる</td><td>kiru</td><td>to wear</td></tr><tr><td>上着</td><td>うわぎ</td><td>uwagi</td><td>jacket</td></tr><tr><td>着く</td><td>つく</td><td>tsuku</td><td>to arrive</td></tr></tbody></table></div><h3 id=\"c4-use\">使 (use)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>use</td><td>シ</td><td>つか(う)</td><td>8</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>使う</td><td>つかう</td><td>tsukau</td><td>to use</td></tr><tr><td>使い方</td><td>つかいかた</td><td>tsukaikata</td><td>way of using</td></tr><tr><td>使よう</td><td>しよう</td><td>shiyou</td><td>use, utilization</td></tr></tbody></table></div><h3 id=\"c4-make\">作 (make)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>make</td><td>サク, サッ (in さっか)</td><td>つく(る)</td><td>7</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>作る</td><td>つくる</td><td>tsukuru</td><td>to make</td></tr><tr><td>作ぶん</td><td>さくぶん</td><td>sakubun</td><td>composition, essay</td></tr><tr><td>作家</td><td>さっか</td><td>sakka</td><td>writer</td></tr></tbody></table></div><h3 id=\"c4-say-word\">言 (say, word)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>say, word</td><td>ゲン</td><td>い(う), こと (in ことば)</td><td>7</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>言う</td><td>いう</td><td>iu</td><td>to say</td></tr><tr><td>言ば</td><td>ことば</td><td>kotoba</td><td>word</td></tr><tr><td>言語</td><td>げんご</td><td>gengo</td><td>language</td></tr></tbody></table></div><h3 id=\"c4-language\">語 (language)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>language</td><td>ゴ</td><td>がたり (in ものがたり)</td><td>14</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>もの語</td><td>ものがたり</td><td>monogatari</td><td>tale, legend, story</td></tr><tr><td>言語</td><td>げんご</td><td>gengo</td><td>language</td></tr><tr><td>日本語</td><td>にほんご</td><td>nihongo</td><td>Japanese language</td></tr><tr><td>英語</td><td>えいご</td><td>eigo</td><td>English language</td></tr></tbody></table></div><h3 id=\"c4-talk-speak\">話 (talk, speak)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>talk, speak</td><td>ワ</td><td>はな(す), はなし</td><td>13</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>話す</td><td>はなす</td><td>hanasu</td><td>to talk, to speak</td></tr><tr><td>話</td><td>はなし</td><td>hanashi</td><td>story, speech</td></tr><tr><td>電話</td><td>でんわ</td><td>denwa</td><td>telephone</td></tr><tr><td>会話</td><td>かいわ</td><td>kaiwa</td><td>conversation</td></tr></tbody></table></div><h3 id=\"c4-read\">読 (read)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>read</td><td>ドク</td><td>よ(む)</td><td>14</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>読む</td><td>よむ</td><td>yomu</td><td>to read</td></tr><tr><td>読書</td><td>どくしょ</td><td>dokusho</td><td>reading</td></tr></tbody></table></div><h3 id=\"c4-store\">店 (store)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>store</td><td>テン</td><td>みせ</td><td>8</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>店</td><td>みせ</td><td>mise</td><td>store, shop</td></tr><tr><td>店員</td><td>てんいん</td><td>ten'in</td><td>salesperson, clerk</td></tr><tr><td>本店</td><td>ほんてん</td><td>honten</td><td>head office</td></tr><tr><td>売店</td><td>ばいてん</td><td>baiten</td><td>store, stall</td></tr></tbody></table></div><h3 id=\"c4-school\">校 (school)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>school</td><td>コウ</td><td>none</td><td>10</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>学校</td><td>がっこう</td><td>gakkou</td><td>school</td></tr><tr><td>高校</td><td>こうこう</td><td>koukou</td><td>high school</td></tr><tr><td>校長</td><td>こうちょう</td><td>kouchou</td><td>school principal</td></tr></tbody></table></div><h3 id=\"c4-country\">国 (country)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>country</td><td>コク, ゴク (in ちゅうごく)</td><td>くに</td><td>8</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>国</td><td>くに</td><td>kuni</td><td>country</td></tr><tr><td>外国</td><td>がいこく</td><td>gaikoku</td><td>foreign country</td></tr><tr><td>外国人</td><td>がいこくじん</td><td>gaikokujin</td><td>foreigner</td></tr><tr><td>中国</td><td>ちゅうごく</td><td>chuugoku</td><td>China</td></tr></tbody></table></div><h3 id=\"c4-house\">家 (house)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>house</td><td>カ</td><td>いえ, うち</td><td>10</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>家</td><td>いえ</td><td>ie</td><td>house</td></tr><tr><td>家</td><td>うち</td><td>uchi</td><td>house, home</td></tr><tr><td>作家</td><td>さっか</td><td>sakka</td><td>writer</td></tr><tr><td>家ぞく</td><td>かぞく</td><td>kazoku</td><td>family</td></tr></tbody></table></div><h3 id=\"c4-car-wheel\">車 (car, wheel)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>car, wheel</td><td>シャ</td><td>くるま</td><td>7</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>車</td><td>くるま</td><td>kuruma</td><td>car</td></tr><tr><td>電車</td><td>でんしゃ</td><td>densha</td><td>train</td></tr><tr><td>中古車</td><td>ちゅうこしゃ</td><td>chuukosha</td><td>second-hand car</td></tr></tbody></table></div><h3 id=\"c4-way-road\">道 (way, road)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>way, road</td><td>ドウ</td><td>みち</td><td>12</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>道</td><td>みち</td><td>michi</td><td>way, road</td></tr><tr><td>水道</td><td>すいどう</td><td>suidou</td><td>water supply</td></tr></tbody></table></div><h3 id=\"c4-station\">駅 (station)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>station</td><td>エキ</td><td>none</td><td>14</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>駅</td><td>えき</td><td>eki</td><td>train station</td></tr></tbody></table></div><h3 id=\"c4-capital\">京 (capital)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>capital</td><td>キョウ</td><td>none</td><td>8</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>京都</td><td>きょうと</td><td>kyouto</td><td>Kyoto</td></tr><tr><td>東京</td><td>とうきょう</td><td>toukyou</td><td>Tokyo</td></tr></tbody></table></div><h3 id=\"c4-metropolis-capital\">都 (metropolis, capital)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>metropolis, capital</td><td>ト, ツ (in つごう)</td><td>[みやこ]</td><td>11</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>京都</td><td>きょうと</td><td>kyouto</td><td>Kyoto</td></tr><tr><td>東京都</td><td>とうきょうと</td><td>toukyouto</td><td>Tokyo area</td></tr><tr><td>都ごう</td><td>つごう</td><td>tsugou</td><td>convenience</td></tr></tbody></table></div><h3 id=\"c4-direction\">方 (direction)</h3><div class=\"tw\"><table><thead><tr><th>Meaning</th><th>On'yomi</th><th>Kun'yomi</th><th>Strokes</th></tr></thead><tbody><tr><td>direction</td><td>ホウ</td><td>かた, がた (in ゆうがた)</td><td>4</td></tr></tbody></table></div><div class=\"tw\"><table><thead><tr><th>Word</th><th>Kana</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>方</td><td>かた</td><td>kata</td><td>person (polite)</td></tr><tr><td>読み方</td><td>よみかた</td><td>yomikata</td><td>way of reading</td></tr><tr><td>ゆう方</td><td>ゆうがた</td><td>yuugata</td><td>evening, dusk</td></tr><tr><td>右の方</td><td>みぎのほう</td><td>migi no hou</td><td>right direction</td></tr><tr><td>方ほう</td><td>ほうほう</td><td>houhou</td><td>method</td></tr></tbody></table></div>"
+      },
+      {
+        "id": "vocab",
+        "title": "Vocabulary",
+        "html": "<p>These are the patterns that show up again and again in this set. Say each table out loud once, then cover the Kana column and test yourself.</p><h3 id=\"c4-verb-pairs\">Verb pairs: doing it, or it happens</h3><p>Several kanji in this set start two verbs. The verb with を is something you do to a thing: ドアを しめます, I close the door. The verb with が happens by itself: ドアが しまります, the door closes.</p><div class=\"tw\"><table><thead><tr><th>Kana</th><th>Kanji</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>とめる</td><td>止める</td><td>tomeru</td><td>to stop (something)</td></tr><tr><td>とまる</td><td>止まる</td><td>tomaru</td><td>to stop (by itself)</td></tr><tr><td>しめる</td><td>閉める</td><td>shimeru</td><td>to close (something)</td></tr><tr><td>しまる</td><td>閉まる</td><td>shimaru</td><td>to close (by itself)</td></tr><tr><td>あける</td><td>開ける</td><td>akeru</td><td>to open (something)</td></tr><tr><td>あく</td><td>開く</td><td>aku</td><td>to open (by itself)</td></tr><tr><td>いれる</td><td>入れる</td><td>ireru</td><td>to put in</td></tr><tr><td>はいる</td><td>入る</td><td>hairu</td><td>to enter</td></tr><tr><td>だす</td><td>出す</td><td>dasu</td><td>to take out</td></tr><tr><td>でる</td><td>出る</td><td>deru</td><td>to leave, to come out</td></tr></tbody></table></div><p>開く is あく here, the door opens. 聞く (ask, hear) looks similar but is きく.</p><h3 id=\"c4-everyday-verbs\">Everyday verbs</h3><p>The kanji stays the same and only the hiragana after it changes: 待つ, 待ちます, 待ちました.</p><div class=\"tw\"><table><thead><tr><th>Kana</th><th>Kanji</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>たつ</td><td>立つ</td><td>tatsu</td><td>to stand</td></tr><tr><td>もつ</td><td>持つ</td><td>motsu</td><td>to hold</td></tr><tr><td>まつ</td><td>待つ</td><td>matsu</td><td>to wait</td></tr><tr><td>きく</td><td>聞く</td><td>kiku</td><td>to hear, to ask</td></tr><tr><td>しる</td><td>知る</td><td>shiru</td><td>to know</td></tr><tr><td>まなぶ</td><td>学ぶ</td><td>manabu</td><td>to study, to learn</td></tr><tr><td>あう</td><td>会う</td><td>au</td><td>to meet</td></tr><tr><td>きる</td><td>着る</td><td>kiru</td><td>to wear</td></tr><tr><td>つく</td><td>着く</td><td>tsuku</td><td>to arrive</td></tr><tr><td>つかう</td><td>使う</td><td>tsukau</td><td>to use</td></tr><tr><td>つくる</td><td>作る</td><td>tsukuru</td><td>to make</td></tr><tr><td>いう</td><td>言う</td><td>iu</td><td>to say</td></tr><tr><td>はなす</td><td>話す</td><td>hanasu</td><td>to talk</td></tr><tr><td>よむ</td><td>読む</td><td>yomu</td><td>to read</td></tr><tr><td>きる</td><td>切る</td><td>kiru</td><td>to cut</td></tr><tr><td>でかける</td><td>出かける</td><td>dekakeru</td><td>to go out</td></tr></tbody></table></div><p>きる is two different verbs: 着る (wear) and 切る (cut). The kanji tells you which one it is.</p><h3 id=\"c4-school-language-and-talking\">School, language and talking</h3><p>学 and 校 are taught now, so the school words from Kanji 3 can be written in full. 語 after a country makes its language.</p><div class=\"tw\"><table><thead><tr><th>Kana</th><th>Kanji</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>がっこう</td><td>学校</td><td>gakkou</td><td>school</td></tr><tr><td>だいがく</td><td>大学</td><td>daigaku</td><td>university</td></tr><tr><td>がくせい</td><td>学生</td><td>gakusei</td><td>student</td></tr><tr><td>にゅうがく</td><td>入学</td><td>nyuugaku</td><td>entering school</td></tr><tr><td>けんがく</td><td>見学</td><td>kengaku</td><td>field trip</td></tr><tr><td>こうちょう</td><td>校長</td><td>kouchou</td><td>school principal</td></tr><tr><td>にほんご</td><td>日本語</td><td>nihongo</td><td>Japanese language</td></tr><tr><td>えいご</td><td>英語</td><td>eigo</td><td>English language</td></tr><tr><td>げんご</td><td>言語</td><td>gengo</td><td>language</td></tr><tr><td>ことば</td><td>言ば</td><td>kotoba</td><td>word</td></tr><tr><td>かいわ</td><td>会話</td><td>kaiwa</td><td>conversation</td></tr><tr><td>でんわ</td><td>電話</td><td>denwa</td><td>telephone</td></tr><tr><td>はなし</td><td>話</td><td>hanashi</td><td>story</td></tr><tr><td>どくしょ</td><td>読書</td><td>dokusho</td><td>reading</td></tr><tr><td>さくぶん</td><td>作ぶん</td><td>sakubun</td><td>composition</td></tr><tr><td>ものがたり</td><td>もの語</td><td>monogatari</td><td>tale, story</td></tr></tbody></table></div><h3 id=\"c4-town-and-travel\">Town and travel</h3><p>Kanji 111 to 120 are places and ways of getting around.</p><div class=\"tw\"><table><thead><tr><th>Kana</th><th>Kanji</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>みせ</td><td>店</td><td>mise</td><td>store</td></tr><tr><td>てんいん</td><td>店員</td><td>ten'in</td><td>salesperson</td></tr><tr><td>ほんてん</td><td>本店</td><td>honten</td><td>head office</td></tr><tr><td>えき</td><td>駅</td><td>eki</td><td>train station</td></tr><tr><td>でんしゃ</td><td>電車</td><td>densha</td><td>train</td></tr><tr><td>くるま</td><td>車</td><td>kuruma</td><td>car</td></tr><tr><td>みち</td><td>道</td><td>michi</td><td>road</td></tr><tr><td>すいどう</td><td>水道</td><td>suidou</td><td>water supply</td></tr><tr><td>とうきょう</td><td>東京</td><td>toukyou</td><td>Tokyo</td></tr><tr><td>きょうと</td><td>京都</td><td>kyouto</td><td>Kyoto</td></tr><tr><td>とうきょうと</td><td>東京都</td><td>toukyouto</td><td>Tokyo area</td></tr><tr><td>くに</td><td>国</td><td>kuni</td><td>country</td></tr><tr><td>がいこく</td><td>外国</td><td>gaikoku</td><td>foreign country</td></tr><tr><td>がいこくじん</td><td>外国人</td><td>gaikokujin</td><td>foreigner</td></tr><tr><td>ちゅうごく</td><td>中国</td><td>chuugoku</td><td>China</td></tr><tr><td>いえ</td><td>家</td><td>ie</td><td>house</td></tr><tr><td>かぞく</td><td>家ぞく</td><td>kazoku</td><td>family</td></tr></tbody></table></div><p>家 is いえ or うち. うち is more personal, like home.</p><h3 id=\"c4-words-made-with-houkata\">Words made with 方</h3><p>After a verb's ます stem, 方 (かた) means the way of doing it. On its own, 方 is a polite word for person. As ほう, it means a direction or side.</p><div class=\"tw\"><table><thead><tr><th>Kana</th><th>Kanji</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>よみかた</td><td>読み方</td><td>yomikata</td><td>way of reading</td></tr><tr><td>つかいかた</td><td>使い方</td><td>tsukaikata</td><td>way of using</td></tr><tr><td>かた</td><td>方</td><td>kata</td><td>person (polite)</td></tr><tr><td>ゆうがた</td><td>ゆう方</td><td>yuugata</td><td>evening</td></tr><tr><td>みぎのほう</td><td>右の方</td><td>migi no hou</td><td>right direction</td></tr><tr><td>ほうほう</td><td>方ほう</td><td>houhou</td><td>method</td></tr></tbody></table></div><h3 id=\"c4-extra-words-from-the-exercises\">Extra words from the exercises</h3><p>The workbook's practice pages and tests use a few more words that are not in the kanji tables.</p><div class=\"tw\"><table><thead><tr><th>Kana</th><th>Kanji</th><th>Romaji</th><th>English</th></tr></thead><tbody><tr><td>でぐち</td><td>出口</td><td>deguchi</td><td>exit</td></tr><tr><td>とうきょうえき</td><td>東京駅</td><td>toukyou eki</td><td>Tokyo Station</td></tr><tr><td>かぞく</td><td>家族</td><td>kazoku</td><td>family</td></tr><tr><td>ちゅうごくじん</td><td>中国人</td><td>chuugokujin</td><td>Chinese person</td></tr><tr><td>てんき</td><td>天気</td><td>tenki</td><td>weather</td></tr></tbody></table></div><p>出口 and 東京駅 are on the practice pictures. 族, 天 and 気 are not taught in this workbook yet.</p>"
+      },
+      {
+        "id": "mixups",
+        "title": "Easy to mix up",
+        "html": "<h3 id=\"c4-enter-person-and-eight\">入, 人 and 八 (enter, person and eight)</h3><ul><li>入 (enter) has its right stroke start higher, with the left stroke leaning on it.</li><li>人 (person, from Kanji 1) has the longer stroke on the left.</li><li>八 (eight) has two strokes that do not touch.</li><li>人 and 木 were wrong choices for 入ります in the workbook.</li></ul><h3 id=\"c4-exit-and-its-look-alikes\">出, 山, 止 and 正 (exit and its look-alikes)</h3><ul><li>出 (exit) is like two 山 (mountain) stacked, with one line down the middle.</li><li>止 (stop) and 正 (correct, not taught yet) were also wrong choices for 出かけます.</li></ul><h3 id=\"c4-stop-and-its-look-alikes\">止, 上, 下 and 正 (stop and its look-alikes)</h3><ul><li>止 (stop) has a short stroke on the left and a tall one in the middle.</li><li>上 (up) and 下 (down) are from Kanji 2.</li><li>正 is 止 with a bar on top. It is not taught yet.</li></ul><h3 id=\"c4-cut-and-its-parts\">切, 七, 刀 and 比 (cut and its parts)</h3><ul><li>切 (cut) is 七 (seven) with 刀 (knife) on the right.</li><li>七, 比 and 刀 alone were wrong choices for 切りました.</li></ul><h3 id=\"c4-stand-and-position\">立 and 位 (stand)</h3><ul><li>立 (stand) is a person standing on the ground.</li><li>位 adds the person radical 亻. It was a wrong choice for 立っている, and it is not taught yet.</li></ul><h3 id=\"c4-hold-wait-time-and-temple\">持, 待, 時 and 寺 (hold, wait, time and temple)</h3><ul><li>All four have 寺 on the right.</li><li>持 (hold) has the hand radical 扌: you hold with your hand.</li><li>待 (wait) has the step radical 彳.</li><li>時 (time, from Kanji 2) has the sun 日.</li></ul><h3 id=\"c4-the-gate-kanji\">閉, 開, 聞 and 間 (the gate kanji)</h3><ul><li>All four are a gate 門 with something inside.</li><li>閉 (close) has 才 inside, like a bar across the gate.</li><li>開 (open) has 开 inside, two hands opening it.</li><li>聞 (hear) has an ear 耳 inside.</li><li>間 (between, from Kanji 2) has the sun 日 inside.</li></ul><h3 id=\"c4-know-and-its-look-alikes\">知, 和, 味 and 矢 (know and its look-alikes)</h3><ul><li>知 (know) is an arrow 矢 next to a mouth 口.</li><li>和 and 味 were wrong choices for 知りません. They are not taught yet.</li></ul><h3 id=\"c4-study-and-letter\">学 and 字 (study and letter)</h3><ul><li>学 (study) has three short strokes and a crown on top.</li><li>字 (letter) has a roof 宀 instead. 字先 and 字生 were wrong choices for 学生.</li></ul><h3 id=\"c4-meet-and-its-look-alikes\">会, 全 and 合 (meet and its look-alikes)</h3><ul><li>会 (meet) has 二 and a small hook under the roof.</li><li>全 and 合 were wrong choices for 会います. They are not taught yet.</li></ul><h3 id=\"c4-use-and-its-look-alikes\">使, 便, 吏 and 更 (use and its look-alikes)</h3><ul><li>使 (use) is the person radical 亻 next to 吏.</li><li>便, 吏 and 更 were wrong choices for 使います. They are not taught yet.</li></ul><h3 id=\"c4-make-and-yesterday\">作 and 昨 (make and yesterday)</h3><ul><li>作 (make) has the person radical 亻.</li><li>昨 (yesterday) has the sun 日 instead. It is not taught yet.</li><li>作る takes only る: 作くります was a wrong choice.</li></ul><h3 id=\"c4-the-speech-kanji\">言, 語, 話 and 読 (the speech kanji)</h3><ul><li>言 (say) is also the speech radical on the left of 語, 話 and 読.</li><li>語 (language) adds 吾, 話 (talk) adds 舌 (tongue), and 読 (read) adds 売 (sell, from Kanji 3).</li></ul><h3 id=\"c4-talk-and-the-tongue-kanji\">話, 舌, 活 and 括 (talk and the tongue kanji)</h3><ul><li>話 (talk) is speech 言 with a tongue 舌.</li><li>活 has water 氵 and 括 has the hand 扌. Both were wrong choices for はなし, and they are not taught yet.</li></ul><h3 id=\"c4-store-and-its-look-alikes\">店, 点, 占 and 居 (store and its look-alikes)</h3><ul><li>店 (store) is 占 under a roof 广.</li><li>点, 占 and 居 were wrong choices for みせ. They are not taught yet.</li></ul><h3 id=\"c4-country-and-the-box-kanji\">国, 玉, 回 and 園 (country and the box kanji)</h3><ul><li>国 (country) is a jewel 玉 inside a box.</li><li>回 and 園 also sit inside a box. 玉 alone was a wrong choice too.</li></ul><h3 id=\"c4-house-and-its-look-alikes\">家, 族, 旅 and 像 (house and its look-alikes)</h3><ul><li>家 (house) is a pig 豕 under a roof 宀.</li><li>族, 旅 and 像 were wrong choices for いえ. They are not taught yet.</li></ul><h3 id=\"c4-car-and-its-look-alikes\">車, 重, 連 and 乗 (car and its look-alikes)</h3><ul><li>車 (car) looks like a cart from above: wheels on an axle.</li><li>重, 連 and 乗 were wrong choices for くるま. They are not taught yet.</li></ul><h3 id=\"c4-direction-and-its-look-alikes\">方, 万, 力 and 刀 (direction and its look-alikes)</h3><ul><li>方 (direction) has a dot on top.</li><li>万 (ten thousand, from Kanji 1) has a flat bar on top and no dot.</li><li>力 (power) and 刀 (knife) have no top bar.</li></ul><h3 id=\"c4-station-and-the-horse\">駅, 馬, 鳥 and 訳 (station and the horse)</h3><ul><li>駅 (station) is a horse 馬 with 尺 on the right: horses once waited at stations.</li><li>鳥 (bird) and 訳 were wrong choices for えき. They are not taught yet.</li></ul><h3 id=\"c4-road-and-its-look-alikes\">道, 首, 週 and 周 (road and its look-alikes)</h3><ul><li>道 (road) is 首 (head) on the walking radical 辶.</li><li>週 (week, from Kanji 2) is 周 on the same radical.</li></ul><h3 id=\"c4-school-and-its-look-alikes\">校, 交 and 文 (school and its look-alikes)</h3><ul><li>校 (school) is a tree 木 next to 交.</li><li>交長, 父長 and 文長 were wrong choices for 校長.</li></ul><h3 id=\"c4-metropolis-and-part\">都 and 部 (metropolis and part)</h3><ul><li>都 (metropolis) has 者 on the left.</li><li>部, 限 and 郊 were wrong choices for 東京都. They are not taught yet.</li></ul><h3 id=\"c4-readings-of-enter\">Readings of 入 (enter): はい, い, いり, にゅう</h3><ul><li>はい in 入る and い in 入れる.</li><li>いり in 入口 (いりぐち).</li><li>にゅう in 入学.</li></ul><h3 id=\"c4-readings-of-exit\">Readings of 出 (exit): だ, で, しゅつ</h3><ul><li>だ in 出す, で in 出る and 出かける.</li><li>しゅつ in 外出.</li></ul><h3 id=\"c4-readings-of-stop\">Readings of 止 (stop): と, し</h3><ul><li>と in 止める and 止まる.</li><li>し in 中止.</li></ul><h3 id=\"c4-readings-of-cut\">Readings of 切 (cut): き, きっ, せつ</h3><ul><li>き in 切る and きっ in 切手 (きって).</li><li>せつ in 大切な and しん切な.</li></ul><h3 id=\"c4-readings-of-study\">Readings of 学 (study): まな, がく, がっ</h3><ul><li>まな in 学ぶ.</li><li>がく in 学生, 大学 and 見学, but がっ in 学校.</li></ul><h3 id=\"c4-readings-of-meet\">Readings of 会 (meet): あ, かい</h3><ul><li>あ in 会う.</li><li>かい in 会話, 会長 and 会社, and in 社会 (しゃかい).</li></ul><h3 id=\"c4-readings-of-wear-arrive\">Readings of 着 (wear, arrive): き, つ, ぎ</h3><ul><li>き in 着る (wear) and つ in 着く (arrive).</li><li>ぎ in 上着 (うわぎ).</li></ul><h3 id=\"c4-readings-of-use\">Readings of 使 (use): つか, し</h3><ul><li>つか in 使う and 使い方.</li><li>し in 使よう.</li></ul><h3 id=\"c4-readings-of-make\">Readings of 作 (make): つく, さく, さっ</h3><ul><li>つく in 作る.</li><li>さく in 作ぶん, but さっ in 作家.</li></ul><h3 id=\"c4-readings-of-say\">Readings of 言 (say): い, こと, げん</h3><ul><li>い in 言う and こと in 言ば.</li><li>げん in 言語.</li></ul><h3 id=\"c4-readings-of-language\">Readings of 語 (language): がたり, ご</h3><ul><li>がたり in もの語 (ものがたり).</li><li>ご in 言語, 日本語 and 英語.</li></ul><h3 id=\"c4-readings-of-talk\">Readings of 話 (talk): はな, はなし, わ</h3><ul><li>はな in 話す and はなし for 話 on its own.</li><li>わ in 電話 and 会話.</li></ul><h3 id=\"c4-readings-of-store\">Readings of 店 (store): みせ, てん</h3><ul><li>みせ for 店 on its own.</li><li>てん in 店員, 本店 and 売店.</li></ul><h3 id=\"c4-readings-of-country\">Readings of 国 (country): くに, こく, ごく</h3><ul><li>くに for 国 on its own.</li><li>こく in 外国 and 外国人, but ごく in 中国.</li></ul><h3 id=\"c4-readings-of-house\">Readings of 家 (house): いえ, うち, か</h3><ul><li>いえ or うち for 家 on its own.</li><li>か in 作家 and 家ぞく.</li></ul><h3 id=\"c4-readings-of-metropolis\">Readings of 都 (metropolis): と, つ</h3><ul><li>と in 京都 and 東京都.</li><li>つ in 都ごう (つごう).</li></ul><h3 id=\"c4-readings-of-direction\">Readings of 方 (direction): かた, がた, ほう</h3><ul><li>かた in 方 (person) and 読み方, がた in ゆう方.</li><li>ほう in 右の方 and 方ほう.</li></ul><h3 id=\"c4-opposites-and-pairs\">Opposites and pairs</h3><p>Learning these in pairs helps, because each member reminds you of the other.</p><div class=\"tw\"><table><thead><tr><th>Pair</th><th>Kanji</th><th>Readings</th></tr></thead><tbody><tr><td>open and close (something)</td><td>開ける / 閉める</td><td>あける / しめる</td></tr><tr><td>open and close (by itself)</td><td>開く / 閉まる</td><td>あく / しまる</td></tr><tr><td>enter and leave</td><td>入る / 出る</td><td>はいる / でる</td></tr><tr><td>put in and take out</td><td>入れる / 出す</td><td>いれる / だす</td></tr><tr><td>entrance and exit</td><td>入口 / 出口</td><td>いりぐち / でぐち</td></tr><tr><td>stop (something) and stop (by itself)</td><td>止める / 止まる</td><td>とめる / とまる</td></tr><tr><td>talk and listen</td><td>話す / 聞く</td><td>はなす / きく</td></tr><tr><td>read and write</td><td>読む / 書く</td><td>よむ / かく</td></tr><tr><td>wear and arrive (one kanji)</td><td>着る / 着く</td><td>きる / つく</td></tr><tr><td>house (two readings)</td><td>家 / 家</td><td>いえ / うち</td></tr></tbody></table></div><h3 id=\"c4-sound-changes\">Sound changes</h3><p>The same piece of a word can change its sound depending on what comes before or after it. These are the ones in this set.</p><div class=\"tw\"><table><thead><tr><th>Piece</th><th>Plain</th><th>Changes</th><th>Examples</th></tr></thead><tbody><tr><td>学 (study)</td><td>がく</td><td>がっ</td><td>学校 がっこう</td></tr><tr><td>国 (country)</td><td>こく</td><td>ごく</td><td>中国 ちゅうごく</td></tr><tr><td>作 (make)</td><td>さく</td><td>さっ</td><td>作家 さっか</td></tr><tr><td>切 (cut)</td><td>きる</td><td>きっ</td><td>切手 きって</td></tr><tr><td>方 (way, person)</td><td>かた</td><td>がた</td><td>ゆう方 ゆうがた</td></tr><tr><td>語 (tell, in story)</td><td>かたり</td><td>がたり</td><td>もの語 ものがたり</td></tr></tbody></table></div>"
+      },
+      {
+        "id": "exercises",
+        "title": "Exercises",
+        "html": "<h3 id=\"c4-part-a-read-the-kanji-words\">Part A: Read the kanji words</h3><p>Write the hiragana reading of the underlined word. If the word came from a sentence, part of the sentence is shown in brackets.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>外出</td><td></td></tr><tr><td>2</td><td>中止</td><td></td></tr><tr><td>3</td><td>大切な</td><td></td></tr><tr><td>4</td><td>気持ち</td><td></td></tr><tr><td>5</td><td>入口</td><td></td></tr><tr><td>6</td><td>閉めます (ドアを 閉めます)</td><td></td></tr><tr><td>7</td><td>開けます (ドアを 開けます)</td><td></td></tr><tr><td>8</td><td>入学します (おとうとは 入学します)</td><td></td></tr><tr><td>9</td><td>入れます (カードを かばんに 入れます)</td><td></td></tr><tr><td>10</td><td>しん切 (先生は しん切です)</td><td></td></tr><tr><td>11</td><td>学校</td><td></td></tr><tr><td>12</td><td>会社</td><td></td></tr><tr><td>13</td><td>大学</td><td></td></tr><tr><td>14</td><td>電話</td><td></td></tr><tr><td>15</td><td>会長</td><td></td></tr><tr><td>16</td><td>作ぶん (作ぶんを 書きます)</td><td></td></tr><tr><td>17</td><td>使います (パソコンを 使います)</td><td></td></tr><tr><td>18</td><td>上着 (上着を 買います)</td><td></td></tr><tr><td>19</td><td>着きます (えきに 着きます)</td><td></td></tr><tr><td>20</td><td>話します (友だちと 話します)</td><td></td></tr><tr><td>21</td><td>高校</td><td></td></tr><tr><td>22</td><td>本店</td><td></td></tr><tr><td>23</td><td>外国人</td><td></td></tr><tr><td>24</td><td>方ほう</td><td></td></tr><tr><td>25</td><td>家族</td><td></td></tr><tr><td>26</td><td>電車 (電車に のります)</td><td></td></tr><tr><td>27</td><td>都ごう (都ごうが わるいです)</td><td></td></tr><tr><td>28</td><td>水道 (水道のみずが 飲めます)</td><td></td></tr><tr><td>29</td><td>作家 (有名な作家です)</td><td></td></tr><tr><td>30</td><td>店員 (店員と はなします)</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-b-write-the-words-in-kanji\">Part B: Write the words in kanji</h3><p>Each word is given in hiragana. Write it in kanji and give its meaning.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>とまる</td><td></td></tr><tr><td>2</td><td>きる</td><td></td></tr><tr><td>3</td><td>だす</td><td></td></tr><tr><td>4</td><td>まつ</td><td></td></tr><tr><td>5</td><td>たつ</td><td></td></tr><tr><td>6</td><td>しんぶん</td><td></td></tr><tr><td>7</td><td>きく</td><td></td></tr><tr><td>8</td><td>しまる</td><td></td></tr><tr><td>9</td><td>もつ</td><td></td></tr><tr><td>10</td><td>でかける</td><td></td></tr><tr><td>11</td><td>しる</td><td></td></tr><tr><td>12</td><td>けんがく</td><td></td></tr><tr><td>13</td><td>どくしょ</td><td></td></tr><tr><td>14</td><td>まなぶ</td><td></td></tr><tr><td>15</td><td>げんご</td><td></td></tr><tr><td>16</td><td>はなす</td><td></td></tr><tr><td>17</td><td>にゅうがく</td><td></td></tr><tr><td>18</td><td>あう</td><td></td></tr><tr><td>19</td><td>つくる</td><td></td></tr><tr><td>20</td><td>かいわ</td><td></td></tr><tr><td>21</td><td>ばいてん</td><td></td></tr><tr><td>22</td><td>がっこう</td><td></td></tr><tr><td>23</td><td>くるま</td><td></td></tr><tr><td>24</td><td>よみかた</td><td></td></tr><tr><td>25</td><td>えき</td><td></td></tr><tr><td>26</td><td>みち</td><td></td></tr><tr><td>27</td><td>とうきょうと</td><td></td></tr><tr><td>28</td><td>みせ</td><td></td></tr><tr><td>29</td><td>みぎのほう</td><td></td></tr><tr><td>30</td><td>ちゅうこしゃ</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-c-read-the-test-words\">Part C: Read the test words</h3><p>These are the words from the workbook's reading tests (テスト I). The workbook gives four readings to choose from. Write the reading, then check it in the answer key, which also gives the workbook's choice number.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>聞きます (毎日おんがくを 聞きます)</td><td></td></tr><tr><td>2</td><td>待ちます (そとで 待ちます)</td><td></td></tr><tr><td>3</td><td>切りました (やさいを 切りました)</td><td></td></tr><tr><td>4</td><td>入りました (きょうしつに 入りました)</td><td></td></tr><tr><td>5</td><td>閉めます (ドアを 閉めます)</td><td></td></tr><tr><td>6</td><td>開きます (まどが 開きます)</td><td></td></tr><tr><td>7</td><td>持ちます (かばんを 持ちます)</td><td></td></tr><tr><td>8</td><td>止まりました (おみせのまえで くるまが 止まりました)</td><td></td></tr><tr><td>9</td><td>外出 (あした 外出を します)</td><td></td></tr><tr><td>10</td><td>立って (前に 立ってください)</td><td></td></tr><tr><td>11</td><td>着きました (何時に 着きましたか)</td><td></td></tr><tr><td>12</td><td>日本語 (日本語が わかります)</td><td></td></tr><tr><td>13</td><td>使いましょう (これを 使いましょう)</td><td></td></tr><tr><td>14</td><td>大学生 (大学生ですか)</td><td></td></tr><tr><td>15</td><td>作りました (りょうりを 作りました)</td><td></td></tr><tr><td>16</td><td>言います (朝は「おはよう」と 言います)</td><td></td></tr><tr><td>17</td><td>読みます (しょうせつを 読みます)</td><td></td></tr><tr><td>18</td><td>着ます (シャツを 着ます)</td><td></td></tr><tr><td>19</td><td>会いました (アナさんに 会いました)</td><td></td></tr><tr><td>20</td><td>話して (ゆっくり 話してください)</td><td></td></tr><tr><td>21</td><td>外国 (外国へ 行きます)</td><td></td></tr><tr><td>22</td><td>道 (道を とおります)</td><td></td></tr><tr><td>23</td><td>読み方 (この漢字の読み方は なんですか)</td><td></td></tr><tr><td>24</td><td>店 (あの店で 買いました)</td><td></td></tr><tr><td>25</td><td>家 (りょうしんは 家に いません)</td><td></td></tr><tr><td>26</td><td>外国 (外国から 来ました)</td><td></td></tr><tr><td>27</td><td>駅 (しぶや駅で おります)</td><td></td></tr><tr><td>28</td><td>中国人 (先生は 中国人ですか)</td><td></td></tr><tr><td>29</td><td>車 (スーパーへ 車で 行きました)</td><td></td></tr><tr><td>30</td><td>学校 (学校の名前は なんですか)</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-d-write-the-test-words-in-kanji\">Part D: Write the test words in kanji</h3><p>These are the words from the workbook's kanji tests (テスト II). The workbook gives four kanji to choose from. Write the kanji, then check it in the answer key, which also gives the workbook's choice number.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>きりました (くだものを もうきりました)</td><td></td></tr><tr><td>2</td><td>もちます (にもつを もちます)</td><td></td></tr><tr><td>3</td><td>しめます (ドアを しめます)</td><td></td></tr><tr><td>4</td><td>あきます (おみせは 十時に あきます)</td><td></td></tr><tr><td>5</td><td>ききます (先生に しつもんを ききます)</td><td></td></tr><tr><td>6</td><td>はいります (今晩 おふろに はいりますか)</td><td></td></tr><tr><td>7</td><td>でかけます (ちょっと でかけます)</td><td></td></tr><tr><td>8</td><td>とめます (くるまを とめます)</td><td></td></tr><tr><td>9</td><td>たっている (そこに たっているひとは わたしの友だちです)</td><td></td></tr><tr><td>10</td><td>まちます (五分 まちます)</td><td></td></tr><tr><td>11</td><td>いいます (「Happy Birthday」は 日本語で 何と いいますか)</td><td></td></tr><tr><td>12</td><td>がくせい (いもうとは がくせいです)</td><td></td></tr><tr><td>13</td><td>しりません (あのひとを しりません)</td><td></td></tr><tr><td>14</td><td>つくります (りょうりを つくります)</td><td></td></tr><tr><td>15</td><td>つかいます (このきょうかしょを つかいます)</td><td></td></tr><tr><td>16</td><td>うわぎ (さむいから うわぎを きます)</td><td></td></tr><tr><td>17</td><td>よみます (わたしは 毎日 しんぶんを よみます)</td><td></td></tr><tr><td>18</td><td>あいます (明日 友だちに あいます)</td><td></td></tr><tr><td>19</td><td>どくしょ (わたしのしゅみは どくしょです)</td><td></td></tr><tr><td>20</td><td>はなし (おもしろいはなしが あります)</td><td></td></tr><tr><td>21</td><td>こうこう (あのこうこうは とても有名です)</td><td></td></tr><tr><td>22</td><td>くに (わたしのくには さむいです)</td><td></td></tr><tr><td>23</td><td>いえ (うみから わたしのいえは とおいです)</td><td></td></tr><tr><td>24</td><td>くるま (くるまは べんりです)</td><td></td></tr><tr><td>25</td><td>かた (あのかたは たなかしゃちょうです)</td><td></td></tr><tr><td>26</td><td>えき (えきで 会いましょう)</td><td></td></tr><tr><td>27</td><td>みち (このみちは ながいです)</td><td></td></tr><tr><td>28</td><td>とうきょうと (とうきょうとの天気は 一日あついです)</td><td></td></tr><tr><td>29</td><td>みせ (そのみせは 近くて べんりです)</td><td></td></tr><tr><td>30</td><td>こうちょう (こうちょうに そうだんします)</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-e-read-it-in-hiragana\">Part E: Read it in hiragana</h3><p>Write the hiragana reading of each word.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>入口</td><td></td></tr><tr><td>2</td><td>出口</td><td></td></tr><tr><td>3</td><td>切手</td><td></td></tr><tr><td>4</td><td>気持ち</td><td></td></tr><tr><td>5</td><td>学ぶ</td><td></td></tr><tr><td>6</td><td>会話</td><td></td></tr><tr><td>7</td><td>社会</td><td></td></tr><tr><td>8</td><td>上着</td><td></td></tr><tr><td>9</td><td>使い方</td><td></td></tr><tr><td>10</td><td>作家</td><td></td></tr><tr><td>11</td><td>言ば</td><td></td></tr><tr><td>12</td><td>もの語</td><td></td></tr><tr><td>13</td><td>本店</td><td></td></tr><tr><td>14</td><td>中国</td><td></td></tr><tr><td>15</td><td>京都</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-f-write-it-in-kanji\">Part F: Write it in kanji</h3><p>Use kanji for the words you have learned. Keep the hiragana parts (like る and う) as they are.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>はいる</td><td></td></tr><tr><td>2</td><td>でる</td><td></td></tr><tr><td>3</td><td>とめる</td><td></td></tr><tr><td>4</td><td>まつ</td><td></td></tr><tr><td>5</td><td>あける</td><td></td></tr><tr><td>6</td><td>しる</td><td></td></tr><tr><td>7</td><td>いう</td><td></td></tr><tr><td>8</td><td>よむ</td><td></td></tr><tr><td>9</td><td>がっこう</td><td></td></tr><tr><td>10</td><td>にほんご</td><td></td></tr><tr><td>11</td><td>かいわ</td><td></td></tr><tr><td>12</td><td>がいこく</td><td></td></tr><tr><td>13</td><td>いえ</td><td></td></tr><tr><td>14</td><td>くるま</td><td></td></tr><tr><td>15</td><td>とうきょう</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-g-what-does-it-mean\">Part G: What does it mean?</h3><p>Give the English meaning.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>中止</td><td></td></tr><tr><td>2</td><td>大切な</td><td></td></tr><tr><td>3</td><td>しん切な</td><td></td></tr><tr><td>4</td><td>気持ち</td><td></td></tr><tr><td>5</td><td>見学</td><td></td></tr><tr><td>6</td><td>使よう</td><td></td></tr><tr><td>7</td><td>店員</td><td></td></tr><tr><td>8</td><td>水道</td><td></td></tr><tr><td>9</td><td>都ごう</td><td></td></tr><tr><td>10</td><td>方ほう</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-h-pick-the-right-kanji\">Part H: Pick the right kanji</h3><p>Choose the kanji that matches the meaning. Write the letter and the kanji.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>Which kanji means wait? (a) 持 (b) 待 (c) 時 (d) 寺</td><td></td></tr><tr><td>2</td><td>Which kanji means hold, have? (a) 待 (b) 寺 (c) 持 (d) 時</td><td></td></tr><tr><td>3</td><td>Which kanji means close? (a) 開 (b) 閉 (c) 聞 (d) 間</td><td></td></tr><tr><td>4</td><td>Which kanji means open? (a) 閉 (b) 間 (c) 聞 (d) 開</td><td></td></tr><tr><td>5</td><td>Which kanji means hear, listen? (a) 開 (b) 聞 (c) 閉 (d) 間</td><td></td></tr><tr><td>6</td><td>Which kanji means enter? (a) 人 (b) 八 (c) 入 (d) 大</td><td></td></tr><tr><td>7</td><td>Which kanji means stop? (a) 上 (b) 止 (c) 正 (d) 下</td><td></td></tr><tr><td>8</td><td>Which kanji means station? (a) 馬 (b) 鳥 (c) 訳 (d) 駅</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-i-read-the-verb-forms\">Part I: Read the verb forms</h3><p>Write each verb form in hiragana.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>入れました</td><td></td></tr><tr><td>2</td><td>出かけません</td><td></td></tr><tr><td>3</td><td>止まって</td><td></td></tr><tr><td>4</td><td>持っています</td><td></td></tr><tr><td>5</td><td>待ちましょう</td><td></td></tr><tr><td>6</td><td>知りません</td><td></td></tr><tr><td>7</td><td>着いた</td><td></td></tr><tr><td>8</td><td>話して</td><td></td></tr></tbody></table></div><h3 id=\"c4-part-j-opposites-and-pairs\">Part J: Opposites and pairs</h3><p>Write the kanji for the opposite or partner word.</p><div class=\"tw\"><table><thead><tr><th>#</th><th>Question</th><th>Your answer</th></tr></thead><tbody><tr><td>1</td><td>開ける</td><td></td></tr><tr><td>2</td><td>入る</td><td></td></tr><tr><td>3</td><td>開く</td><td></td></tr><tr><td>4</td><td>止める</td><td></td></tr><tr><td>5</td><td>入口</td><td></td></tr><tr><td>6</td><td>話す</td><td></td></tr><tr><td>7</td><td>読む</td><td></td></tr><tr><td>8</td><td>入れる</td><td></td></tr></tbody></table></div>"
+      },
+      {
+        "id": "answers",
+        "title": "Answer key",
+        "html": "<p>Parts A to D follow the exercises in the Kanji Workbook N5, Lessons 10 to 12. The workbook's own answer key was not available, so these answers were worked out from the lessons and the word lists. They are model answers, not the official answer key. If one differs from the workbook's key, trust the workbook.</p><h3 id=\"c4-part-a-read-the-kanji-words-2\">Part A: Read the kanji words</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th></tr></thead><tbody><tr><td>1</td><td>がいしゅつ</td></tr><tr><td>2</td><td>ちゅうし</td></tr><tr><td>3</td><td>たいせつな</td></tr><tr><td>4</td><td>きもち</td></tr><tr><td>5</td><td>いりぐち</td></tr><tr><td>6</td><td>しめます</td></tr><tr><td>7</td><td>あけます</td></tr><tr><td>8</td><td>にゅうがくします</td></tr><tr><td>9</td><td>いれます</td></tr><tr><td>10</td><td>しんせつ</td></tr><tr><td>11</td><td>がっこう</td></tr><tr><td>12</td><td>かいしゃ</td></tr><tr><td>13</td><td>だいがく</td></tr><tr><td>14</td><td>でんわ</td></tr><tr><td>15</td><td>かいちょう</td></tr><tr><td>16</td><td>さくぶん</td></tr><tr><td>17</td><td>つかいます</td></tr><tr><td>18</td><td>うわぎ</td></tr><tr><td>19</td><td>つきます</td></tr><tr><td>20</td><td>はなします</td></tr><tr><td>21</td><td>こうこう</td></tr><tr><td>22</td><td>ほんてん</td></tr><tr><td>23</td><td>がいこくじん</td></tr><tr><td>24</td><td>ほうほう</td></tr><tr><td>25</td><td>かぞく</td></tr><tr><td>26</td><td>でんしゃ</td></tr><tr><td>27</td><td>つごう</td></tr><tr><td>28</td><td>すいどう</td></tr><tr><td>29</td><td>さっか</td></tr><tr><td>30</td><td>てんいん</td></tr></tbody></table></div><p>Number 10: only しん切 is underlined in 先生は しん切です, so the answer is しんせつ. Numbers 6 to 9, 17 and 19 to 20: the ます is part of the underlined word.</p><h3 id=\"c4-part-b-write-the-words-in-kanji-2\">Part B: Write the words in kanji</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th><th>Meaning</th></tr></thead><tbody><tr><td>1</td><td>止まる</td><td>to stop (by itself)</td></tr><tr><td>2</td><td>切る</td><td>to cut</td></tr><tr><td>3</td><td>出す</td><td>to take out, to submit</td></tr><tr><td>4</td><td>待つ</td><td>to wait</td></tr><tr><td>5</td><td>立つ</td><td>to stand</td></tr><tr><td>6</td><td>新聞</td><td>newspaper</td></tr><tr><td>7</td><td>聞く</td><td>to hear, to listen, to ask</td></tr><tr><td>8</td><td>閉まる</td><td>to close (by itself)</td></tr><tr><td>9</td><td>持つ</td><td>to hold, to have</td></tr><tr><td>10</td><td>出かける</td><td>to go out</td></tr><tr><td>11</td><td>知る</td><td>to know</td></tr><tr><td>12</td><td>見学</td><td>field trip, inspection</td></tr><tr><td>13</td><td>読書</td><td>reading</td></tr><tr><td>14</td><td>学ぶ</td><td>to study, to learn</td></tr><tr><td>15</td><td>言語</td><td>language</td></tr><tr><td>16</td><td>話す</td><td>to talk, to speak</td></tr><tr><td>17</td><td>入学</td><td>entering school</td></tr><tr><td>18</td><td>会う</td><td>to meet</td></tr><tr><td>19</td><td>作る</td><td>to make</td></tr><tr><td>20</td><td>会話</td><td>conversation</td></tr><tr><td>21</td><td>売店</td><td>store, stall</td></tr><tr><td>22</td><td>学校</td><td>school</td></tr><tr><td>23</td><td>車</td><td>car</td></tr><tr><td>24</td><td>読み方</td><td>way of reading</td></tr><tr><td>25</td><td>駅</td><td>train station</td></tr><tr><td>26</td><td>道</td><td>way, road</td></tr><tr><td>27</td><td>東京都</td><td>Tokyo area</td></tr><tr><td>28</td><td>店</td><td>store, shop</td></tr><tr><td>29</td><td>右の方</td><td>right direction</td></tr><tr><td>30</td><td>中古車</td><td>second-hand car</td></tr></tbody></table></div><p>Number 1 is 止まる (stop by itself) and number 8 is 閉まる (close by itself), because they end in まる. 止める and 閉める end in める.</p><h3 id=\"c4-part-c-read-the-test-words-2\">Part C: Read the test words</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th><th>Why</th></tr></thead><tbody><tr><td>1</td><td>ききます (choice 3)</td><td>聞く is きく: ききます. かきます is 書きます.</td></tr><tr><td>2</td><td>まちます (choice 3)</td><td>待つ is まつ. もちます is 持ちます, which looks similar.</td></tr><tr><td>3</td><td>きりました (choice 4)</td><td>切る is きる: きりました.</td></tr><tr><td>4</td><td>はいりました (choice 1)</td><td>入る is はいる: はいりました.</td></tr><tr><td>5</td><td>しめます (choice 2)</td><td>閉める is しめる. とめます is 止めます.</td></tr><tr><td>6</td><td>あきます (choice 2)</td><td>With が, 開く is あく: the window opens.</td></tr><tr><td>7</td><td>もちます (choice 1)</td><td>持つ is もつ. まちます is 待ちます.</td></tr><tr><td>8</td><td>とまりました (choice 3)</td><td>止まる is とまる. しまりました is 閉まりました.</td></tr><tr><td>9</td><td>がいしゅつ (choice 1)</td><td>外出 is がいしゅつ, with しゅつ for 出.</td></tr><tr><td>10</td><td>たって (choice 4)</td><td>立つ is たつ: たってください.</td></tr><tr><td>11</td><td>つきました (choice 1)</td><td>Arriving is 着く, つく: つきました. きました would be wore.</td></tr><tr><td>12</td><td>にほんご (choice 2)</td><td>日本語 is にほんご, with ご.</td></tr><tr><td>13</td><td>つかいましょう (choice 4)</td><td>使う is つかう.</td></tr><tr><td>14</td><td>だいがくせい (choice 4)</td><td>大学生 is だいがくせい.</td></tr><tr><td>15</td><td>つくりました (choice 2)</td><td>作る is つくる.</td></tr><tr><td>16</td><td>いいます (choice 2)</td><td>言う is いう: いいます.</td></tr><tr><td>17</td><td>よみます (choice 3)</td><td>読む is よむ.</td></tr><tr><td>18</td><td>きます (choice 1)</td><td>With シャツを, 着る is wear: きます.</td></tr><tr><td>19</td><td>あいました (choice 4)</td><td>会う is あう: あいました.</td></tr><tr><td>20</td><td>はなして (choice 4)</td><td>話す is はなす: はなしてください.</td></tr><tr><td>21</td><td>がいこく (choice 3)</td><td>外国 is がいこく. かんこく is Korea.</td></tr><tr><td>22</td><td>みち (choice 2)</td><td>道 is みち.</td></tr><tr><td>23</td><td>よみかた (choice 3)</td><td>方 after a verb stem is かた: よみかた.</td></tr><tr><td>24</td><td>みせ (choice 2)</td><td>店 on its own is みせ.</td></tr><tr><td>25</td><td>いえ (choice 4)</td><td>家 is いえ here. うち is also a reading of 家, but it is not one of the choices.</td></tr><tr><td>26</td><td>がいこく (choice 3)</td><td>外国 is がいこく.</td></tr><tr><td>27</td><td>えき (choice 4)</td><td>駅 is えき.</td></tr><tr><td>28</td><td>ちゅうごくじん (choice 3)</td><td>中国人 is ちゅうごくじん. 国 becomes ごく after ちゅう.</td></tr><tr><td>29</td><td>くるま (choice 4)</td><td>車 is くるま.</td></tr><tr><td>30</td><td>がっこう (choice 3)</td><td>学校 is がっこう. がく becomes がっ.</td></tr></tbody></table></div><h3 id=\"c4-part-d-write-the-test-words-in-kanji-2\">Part D: Write the test words in kanji</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th><th>Why</th></tr></thead><tbody><tr><td>1</td><td>切りました (choice 2)</td><td>Cut is 切る. 七 and 刀 alone are only parts of it.</td></tr><tr><td>2</td><td>持ちます (choice 3)</td><td>Hold is 持つ, with the hand radical 扌. 待 is wait.</td></tr><tr><td>3</td><td>閉めます (choice 3)</td><td>Close is 閉める, with 才 inside the gate. 開 is open.</td></tr><tr><td>4</td><td>開きます (choice 1)</td><td>Open is 開く. 閉 is close and 聞 is hear.</td></tr><tr><td>5</td><td>聞きます (choice 2)</td><td>Asking is 聞く, with an ear 耳 inside the gate.</td></tr><tr><td>6</td><td>入ります (choice 4)</td><td>Enter is 入る. 人 is person.</td></tr><tr><td>7</td><td>出かけます (choice 1)</td><td>Go out is 出かける.</td></tr><tr><td>8</td><td>止めます (choice 1)</td><td>Stop is 止める. 上 is up and 下 is down.</td></tr><tr><td>9</td><td>立っている (choice 4)</td><td>Stand is 立つ. 位 has an extra person radical.</td></tr><tr><td>10</td><td>待ちます (choice 1)</td><td>Wait is 待つ, with the step radical 彳.</td></tr><tr><td>11</td><td>言います (choice 1)</td><td>Say is 言う.</td></tr><tr><td>12</td><td>学生 (choice 4)</td><td>Student is 学生: 学 (study) and 生 (life). 字 is letter.</td></tr><tr><td>13</td><td>知りません (choice 4)</td><td>Know is 知る.</td></tr><tr><td>14</td><td>作ります (choice 1)</td><td>Make is 作る, with only る after the kanji. 作くります has an extra く.</td></tr><tr><td>15</td><td>使います (choice 1)</td><td>Use is 使う.</td></tr><tr><td>16</td><td>上着 (choice 3)</td><td>Jacket is 上着, the top (上) thing you wear (着).</td></tr><tr><td>17</td><td>読みます (choice 2)</td><td>Read is 読む. 売 alone is sell.</td></tr><tr><td>18</td><td>会います (choice 4)</td><td>Meet is 会う.</td></tr><tr><td>19</td><td>読書 (choice 2)</td><td>Reading is 読書: read (読) and write (書).</td></tr><tr><td>20</td><td>話 (choice 3)</td><td>Story is 話, はなし.</td></tr><tr><td>21</td><td>高校 (choice 3)</td><td>High school is 高校, こうこう. 学校 is がっこう.</td></tr><tr><td>22</td><td>国 (choice 4)</td><td>Country is 国, a jewel 玉 inside a box.</td></tr><tr><td>23</td><td>家 (choice 1)</td><td>House is 家.</td></tr><tr><td>24</td><td>車 (choice 4)</td><td>Car is 車.</td></tr><tr><td>25</td><td>方 (choice 2)</td><td>The polite word for person is 方, かた.</td></tr><tr><td>26</td><td>駅 (choice 4)</td><td>Station is 駅, with the horse 馬.</td></tr><tr><td>27</td><td>道 (choice 2)</td><td>Road is 道.</td></tr><tr><td>28</td><td>東京都 (choice 1)</td><td>The Tokyo area is 東京都, with 都.</td></tr><tr><td>29</td><td>店 (choice 3)</td><td>Store is 店.</td></tr><tr><td>30</td><td>校長 (choice 1)</td><td>Principal is 校長.</td></tr></tbody></table></div><h3 id=\"c4-part-e-read-it-in-hiragana-2\">Part E: Read it in hiragana</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th></tr></thead><tbody><tr><td>1</td><td>いりぐち</td></tr><tr><td>2</td><td>でぐち</td></tr><tr><td>3</td><td>きって</td></tr><tr><td>4</td><td>きもち</td></tr><tr><td>5</td><td>まなぶ</td></tr><tr><td>6</td><td>かいわ</td></tr><tr><td>7</td><td>しゃかい</td></tr><tr><td>8</td><td>うわぎ</td></tr><tr><td>9</td><td>つかいかた</td></tr><tr><td>10</td><td>さっか</td></tr><tr><td>11</td><td>ことば</td></tr><tr><td>12</td><td>ものがたり</td></tr><tr><td>13</td><td>ほんてん</td></tr><tr><td>14</td><td>ちゅうごく</td></tr><tr><td>15</td><td>きょうと</td></tr></tbody></table></div><h3 id=\"c4-part-f-write-it-in-kanji-2\">Part F: Write it in kanji</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th></tr></thead><tbody><tr><td>1</td><td>入る</td></tr><tr><td>2</td><td>出る</td></tr><tr><td>3</td><td>止める</td></tr><tr><td>4</td><td>待つ</td></tr><tr><td>5</td><td>開ける</td></tr><tr><td>6</td><td>知る</td></tr><tr><td>7</td><td>言う</td></tr><tr><td>8</td><td>読む</td></tr><tr><td>9</td><td>学校</td></tr><tr><td>10</td><td>日本語</td></tr><tr><td>11</td><td>会話</td></tr><tr><td>12</td><td>外国</td></tr><tr><td>13</td><td>家</td></tr><tr><td>14</td><td>車</td></tr><tr><td>15</td><td>東京</td></tr></tbody></table></div><h3 id=\"c4-part-g-what-does-it-mean-2\">Part G: What does it mean?</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th></tr></thead><tbody><tr><td>1</td><td>cancellation</td></tr><tr><td>2</td><td>important</td></tr><tr><td>3</td><td>kind</td></tr><tr><td>4</td><td>feelings</td></tr><tr><td>5</td><td>field trip, inspection</td></tr><tr><td>6</td><td>use, utilization</td></tr><tr><td>7</td><td>salesperson, clerk</td></tr><tr><td>8</td><td>water supply</td></tr><tr><td>9</td><td>convenience</td></tr><tr><td>10</td><td>method</td></tr></tbody></table></div><h3 id=\"c4-part-h-pick-the-right-kanji-2\">Part H: Pick the right kanji</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th><th>Why</th></tr></thead><tbody><tr><td>1</td><td>(b) 待</td><td>待 has the step radical 彳. 持 has the hand 扌.</td></tr><tr><td>2</td><td>(c) 持</td><td>持 has the hand radical 扌: you hold with your hand.</td></tr><tr><td>3</td><td>(b) 閉</td><td>閉 has 才 inside the gate 門, like a bar across it.</td></tr><tr><td>4</td><td>(d) 開</td><td>開 has 开 inside the gate: two hands opening it.</td></tr><tr><td>5</td><td>(b) 聞</td><td>聞 has an ear 耳 inside the gate.</td></tr><tr><td>6</td><td>(c) 入</td><td>入 has its right stroke start higher. 人 has the longer stroke on the left.</td></tr><tr><td>7</td><td>(b) 止</td><td>止 has a short stroke on the left and a tall one in the middle.</td></tr><tr><td>8</td><td>(d) 駅</td><td>駅 is a horse 馬 with 尺 on the right.</td></tr></tbody></table></div><h3 id=\"c4-part-i-read-the-verb-forms-2\">Part I: Read the verb forms</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th></tr></thead><tbody><tr><td>1</td><td>いれました</td></tr><tr><td>2</td><td>でかけません</td></tr><tr><td>3</td><td>とまって</td></tr><tr><td>4</td><td>もっています</td></tr><tr><td>5</td><td>まちましょう</td></tr><tr><td>6</td><td>しりません</td></tr><tr><td>7</td><td>ついた</td></tr><tr><td>8</td><td>はなして</td></tr></tbody></table></div><h3 id=\"c4-part-j-opposites-and-pairs-2\">Part J: Opposites and pairs</h3><div class=\"tw\"><table><thead><tr><th>#</th><th>Answer</th><th>Readings</th></tr></thead><tbody><tr><td>1</td><td>閉める</td><td>あける / しめる</td></tr><tr><td>2</td><td>出る</td><td>はいる / でる</td></tr><tr><td>3</td><td>閉まる</td><td>あく / しまる</td></tr><tr><td>4</td><td>止まる</td><td>とめる / とまる</td></tr><tr><td>5</td><td>出口</td><td>いりぐち / でぐち</td></tr><tr><td>6</td><td>聞く</td><td>はなす / きく</td></tr><tr><td>7</td><td>書く</td><td>よむ / かく</td></tr><tr><td>8</td><td>出す</td><td>いれる / だす</td></tr></tbody></table></div><p>If you miss more than a few in one part, go back to the matching table and try that part again the next day. Parts C, D and H are where the look-alike kanji hide.</p>"
+      }
+    ],
+    "toc": [
+      {
+        "a": "c4-how-the-readings-are-shown",
+        "t": "How the readings are shown",
+        "l": 3
+      },
+      {
+        "a": "c4-enter-insert",
+        "t": "入 (enter, insert)",
+        "l": 3
+      },
+      {
+        "a": "c4-exit-leave-come-out",
+        "t": "出 (exit, leave, come out)",
+        "l": 3
+      },
+      {
+        "a": "c4-stop",
+        "t": "止 (stop)",
+        "l": 3
+      },
+      {
+        "a": "c4-cut",
+        "t": "切 (cut)",
+        "l": 3
+      },
+      {
+        "a": "c4-stand-up",
+        "t": "立 (stand up)",
+        "l": 3
+      },
+      {
+        "a": "c4-hold-have",
+        "t": "持 (hold, have)",
+        "l": 3
+      },
+      {
+        "a": "c4-wait",
+        "t": "待 (wait)",
+        "l": 3
+      },
+      {
+        "a": "c4-close",
+        "t": "閉 (close)",
+        "l": 3
+      },
+      {
+        "a": "c4-open",
+        "t": "開 (open)",
+        "l": 3
+      },
+      {
+        "a": "c4-hear-listen-ask",
+        "t": "聞 (hear, listen, ask)",
+        "l": 3
+      },
+      {
+        "a": "c4-know",
+        "t": "知 (know)",
+        "l": 3
+      },
+      {
+        "a": "c4-study-learn",
+        "t": "学 (study, learn)",
+        "l": 3
+      },
+      {
+        "a": "c4-meet",
+        "t": "会 (meet)",
+        "l": 3
+      },
+      {
+        "a": "c4-wear-arrive",
+        "t": "着 (wear, arrive)",
+        "l": 3
+      },
+      {
+        "a": "c4-use",
+        "t": "使 (use)",
+        "l": 3
+      },
+      {
+        "a": "c4-make",
+        "t": "作 (make)",
+        "l": 3
+      },
+      {
+        "a": "c4-say-word",
+        "t": "言 (say, word)",
+        "l": 3
+      },
+      {
+        "a": "c4-language",
+        "t": "語 (language)",
+        "l": 3
+      },
+      {
+        "a": "c4-talk-speak",
+        "t": "話 (talk, speak)",
+        "l": 3
+      },
+      {
+        "a": "c4-read",
+        "t": "読 (read)",
+        "l": 3
+      },
+      {
+        "a": "c4-store",
+        "t": "店 (store)",
+        "l": 3
+      },
+      {
+        "a": "c4-school",
+        "t": "校 (school)",
+        "l": 3
+      },
+      {
+        "a": "c4-country",
+        "t": "国 (country)",
+        "l": 3
+      },
+      {
+        "a": "c4-house",
+        "t": "家 (house)",
+        "l": 3
+      },
+      {
+        "a": "c4-car-wheel",
+        "t": "車 (car, wheel)",
+        "l": 3
+      },
+      {
+        "a": "c4-way-road",
+        "t": "道 (way, road)",
+        "l": 3
+      },
+      {
+        "a": "c4-station",
+        "t": "駅 (station)",
+        "l": 3
+      },
+      {
+        "a": "c4-capital",
+        "t": "京 (capital)",
+        "l": 3
+      },
+      {
+        "a": "c4-metropolis-capital",
+        "t": "都 (metropolis, capital)",
+        "l": 3
+      },
+      {
+        "a": "c4-direction",
+        "t": "方 (direction)",
+        "l": 3
+      },
+      {
+        "a": "c4-verb-pairs",
+        "t": "Verb pairs: doing it, or it happens",
+        "l": 3
+      },
+      {
+        "a": "c4-everyday-verbs",
+        "t": "Everyday verbs",
+        "l": 3
+      },
+      {
+        "a": "c4-school-language-and-talking",
+        "t": "School, language and talking",
+        "l": 3
+      },
+      {
+        "a": "c4-town-and-travel",
+        "t": "Town and travel",
+        "l": 3
+      },
+      {
+        "a": "c4-words-made-with-houkata",
+        "t": "Words made with 方",
+        "l": 3
+      },
+      {
+        "a": "c4-extra-words-from-the-exercises",
+        "t": "Extra words from the exercises",
+        "l": 3
+      },
+      {
+        "a": "c4-enter-person-and-eight",
+        "t": "入, 人 and 八 (enter, person and eight)",
+        "l": 3
+      },
+      {
+        "a": "c4-exit-and-its-look-alikes",
+        "t": "出, 山, 止 and 正 (exit and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-stop-and-its-look-alikes",
+        "t": "止, 上, 下 and 正 (stop and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-cut-and-its-parts",
+        "t": "切, 七, 刀 and 比 (cut and its parts)",
+        "l": 3
+      },
+      {
+        "a": "c4-stand-and-position",
+        "t": "立 and 位 (stand)",
+        "l": 3
+      },
+      {
+        "a": "c4-hold-wait-time-and-temple",
+        "t": "持, 待, 時 and 寺 (hold, wait, time and temple)",
+        "l": 3
+      },
+      {
+        "a": "c4-the-gate-kanji",
+        "t": "閉, 開, 聞 and 間 (the gate kanji)",
+        "l": 3
+      },
+      {
+        "a": "c4-know-and-its-look-alikes",
+        "t": "知, 和, 味 and 矢 (know and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-study-and-letter",
+        "t": "学 and 字 (study and letter)",
+        "l": 3
+      },
+      {
+        "a": "c4-meet-and-its-look-alikes",
+        "t": "会, 全 and 合 (meet and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-use-and-its-look-alikes",
+        "t": "使, 便, 吏 and 更 (use and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-make-and-yesterday",
+        "t": "作 and 昨 (make and yesterday)",
+        "l": 3
+      },
+      {
+        "a": "c4-the-speech-kanji",
+        "t": "言, 語, 話 and 読 (the speech kanji)",
+        "l": 3
+      },
+      {
+        "a": "c4-talk-and-the-tongue-kanji",
+        "t": "話, 舌, 活 and 括 (talk and the tongue kanji)",
+        "l": 3
+      },
+      {
+        "a": "c4-store-and-its-look-alikes",
+        "t": "店, 点, 占 and 居 (store and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-country-and-the-box-kanji",
+        "t": "国, 玉, 回 and 園 (country and the box kanji)",
+        "l": 3
+      },
+      {
+        "a": "c4-house-and-its-look-alikes",
+        "t": "家, 族, 旅 and 像 (house and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-car-and-its-look-alikes",
+        "t": "車, 重, 連 and 乗 (car and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-direction-and-its-look-alikes",
+        "t": "方, 万, 力 and 刀 (direction and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-station-and-the-horse",
+        "t": "駅, 馬, 鳥 and 訳 (station and the horse)",
+        "l": 3
+      },
+      {
+        "a": "c4-road-and-its-look-alikes",
+        "t": "道, 首, 週 and 周 (road and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-school-and-its-look-alikes",
+        "t": "校, 交 and 文 (school and its look-alikes)",
+        "l": 3
+      },
+      {
+        "a": "c4-metropolis-and-part",
+        "t": "都 and 部 (metropolis and part)",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-enter",
+        "t": "Readings of 入 (enter): はい, い, いり, にゅう",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-exit",
+        "t": "Readings of 出 (exit): だ, で, しゅつ",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-stop",
+        "t": "Readings of 止 (stop): と, し",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-cut",
+        "t": "Readings of 切 (cut): き, きっ, せつ",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-study",
+        "t": "Readings of 学 (study): まな, がく, がっ",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-meet",
+        "t": "Readings of 会 (meet): あ, かい",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-wear-arrive",
+        "t": "Readings of 着 (wear, arrive): き, つ, ぎ",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-use",
+        "t": "Readings of 使 (use): つか, し",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-make",
+        "t": "Readings of 作 (make): つく, さく, さっ",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-say",
+        "t": "Readings of 言 (say): い, こと, げん",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-language",
+        "t": "Readings of 語 (language): がたり, ご",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-talk",
+        "t": "Readings of 話 (talk): はな, はなし, わ",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-store",
+        "t": "Readings of 店 (store): みせ, てん",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-country",
+        "t": "Readings of 国 (country): くに, こく, ごく",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-house",
+        "t": "Readings of 家 (house): いえ, うち, か",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-metropolis",
+        "t": "Readings of 都 (metropolis): と, つ",
+        "l": 3
+      },
+      {
+        "a": "c4-readings-of-direction",
+        "t": "Readings of 方 (direction): かた, がた, ほう",
+        "l": 3
+      },
+      {
+        "a": "c4-opposites-and-pairs",
+        "t": "Opposites and pairs",
+        "l": 3
+      },
+      {
+        "a": "c4-sound-changes",
+        "t": "Sound changes",
+        "l": 3
+      },
+      {
+        "a": "c4-part-a-read-the-kanji-words",
+        "t": "Part A: Read the kanji words",
+        "l": 3
+      },
+      {
+        "a": "c4-part-b-write-the-words-in-kanji",
+        "t": "Part B: Write the words in kanji",
+        "l": 3
+      },
+      {
+        "a": "c4-part-c-read-the-test-words",
+        "t": "Part C: Read the test words",
+        "l": 3
+      },
+      {
+        "a": "c4-part-d-write-the-test-words-in-kanji",
+        "t": "Part D: Write the test words in kanji",
+        "l": 3
+      },
+      {
+        "a": "c4-part-e-read-it-in-hiragana",
+        "t": "Part E: Read it in hiragana",
+        "l": 3
+      },
+      {
+        "a": "c4-part-f-write-it-in-kanji",
+        "t": "Part F: Write it in kanji",
+        "l": 3
+      },
+      {
+        "a": "c4-part-g-what-does-it-mean",
+        "t": "Part G: What does it mean?",
+        "l": 3
+      },
+      {
+        "a": "c4-part-h-pick-the-right-kanji",
+        "t": "Part H: Pick the right kanji",
+        "l": 3
+      },
+      {
+        "a": "c4-part-i-read-the-verb-forms",
+        "t": "Part I: Read the verb forms",
+        "l": 3
+      },
+      {
+        "a": "c4-part-j-opposites-and-pairs",
+        "t": "Part J: Opposites and pairs",
+        "l": 3
+      },
+      {
+        "a": "c4-part-a-read-the-kanji-words-2",
+        "t": "Part A: Read the kanji words",
+        "l": 3
+      },
+      {
+        "a": "c4-part-b-write-the-words-in-kanji-2",
+        "t": "Part B: Write the words in kanji",
+        "l": 3
+      },
+      {
+        "a": "c4-part-c-read-the-test-words-2",
+        "t": "Part C: Read the test words",
+        "l": 3
+      },
+      {
+        "a": "c4-part-d-write-the-test-words-in-kanji-2",
+        "t": "Part D: Write the test words in kanji",
+        "l": 3
+      },
+      {
+        "a": "c4-part-e-read-it-in-hiragana-2",
+        "t": "Part E: Read it in hiragana",
+        "l": 3
+      },
+      {
+        "a": "c4-part-f-write-it-in-kanji-2",
+        "t": "Part F: Write it in kanji",
+        "l": 3
+      },
+      {
+        "a": "c4-part-g-what-does-it-mean-2",
+        "t": "Part G: What does it mean?",
+        "l": 3
+      },
+      {
+        "a": "c4-part-h-pick-the-right-kanji-2",
+        "t": "Part H: Pick the right kanji",
+        "l": 3
+      },
+      {
+        "a": "c4-part-i-read-the-verb-forms-2",
+        "t": "Part I: Read the verb forms",
+        "l": 3
+      },
+      {
+        "a": "c4-part-j-opposites-and-pairs-2",
+        "t": "Part J: Opposites and pairs",
+        "l": 3
+      }
+    ]
   }
 ]

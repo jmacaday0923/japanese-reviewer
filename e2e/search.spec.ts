@@ -10,11 +10,12 @@ test.describe("search", () => {
     await expect(first).toContainText("student");
     await expect(first.getByRole("link")).toHaveAttribute("href", "/chapters/1#c1-people-and-jobs");
     const summary = first.locator("summary");
-    // Kana 1 and Kanji 3 (学生) also list the word
-    await expect(summary).toHaveText("Also in 2 other locations");
+    // Kana 1, Kanji 3 (学生) and Kanji 4 (under 学) also list the word
+    await expect(summary).toHaveText("Also in 3 other locations");
     await summary.focus();
     await page.keyboard.press("Enter");
     await expect(first.getByRole("link", { name: /Kanji 3/ })).toHaveAttribute("href", /^\/kanji\/3#c3-/);
+    await expect(first.getByRole("link", { name: /Kanji 4/ })).toHaveAttribute("href", /^\/kanji\/4#c4-/);
     const other = first.getByRole("link", { name: /Kana 1/ });
     await expect(other).toBeVisible();
     const href = (await other.getAttribute("href"))!;

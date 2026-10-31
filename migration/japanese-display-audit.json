@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "scope": "All 20 study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.",
+  "scope": "All 21 study pages; lessons, vocabulary, mix-ups, exercises, answers, and introductions. Search keeps all readings visible.",
   "method": "Exact reviewed display strings. Original source text remains available as a romaji hint; native reading/workbook disclosures stay closed until opened.",
   "sourceHashes": {
     "src/data/chapters.json": "61b808d6a528d55591160636834356b9d91ddd937021b90fd84a77e2a5521d90",
     "src/data/kana.json": "677dc9d1a4f2ace6908a1bc02f3f17ebc6905524dd24fc33dff7a3ae84e98435",
-    "src/data/kanji.json": "0261bd7328d5c8789badb2e962e924c79f1e54dbaec32ccd4d24fdcee85affaa",
+    "src/data/kanji.json": "2ec21e04c9f2de0d30f372f22d58b52ca4e0b6a9a157b36275eed372ccbf5058",
     "src/data/practice.json": "5a23e3eb45afff8f5bb6c48eca77e39c756c57b49b5ed7b8dccfddcd461af8aa",
     "src/data/exercises.json": "1147c19bd967c53a386f8dc7972846ab3dcc4cafd66cb6a6c6ff2d73e99b1f71",
     "src/data/sentence-exercises.json": "e8133800250e5b8473973ea4311b4a71b879a8ea8fbefe69b159e44cf54c42ae",
@@ -154,6 +154,13 @@
       "nativeJapaneseNodes": 1065
     },
     {
+      "page": "kanji/4",
+      "sections": 5,
+      "textNodes": 2011,
+      "japaneseDisplays": 61,
+      "nativeJapaneseNodes": 1095
+    },
+    {
       "page": "practice/1",
       "sections": 2,
       "textNodes": 356,
@@ -161,6 +168,6 @@
       "nativeJapaneseNodes": 175
     }
   ],
-  "reviewedSourceNodes": 41958,
-  "changedSourceNodes": 10524
+  "reviewedSourceNodes": 43969,
+  "changedSourceNodes": 10585
 }

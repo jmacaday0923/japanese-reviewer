@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "page": "/kanji/4",
+  "sourceFile": "Kanji 91-120.pdf",
+  "sourceSha256": "7386f85279ff90e31a488eef78ff02f62ffa0228127a9ed9f54140f792656396",
+  "sourceIsScan": true,
+  "printedPages": [
+    52,
+    66
+  ],
+  "workbookLessons": [
+    10,
+    11,
+    12
+  ],
+  "kanji": "入出止切立持待閉開聞知学会着使作言語話読店校国家車道駅京都方",
+  "textReview": "The single-page FireShot capture was rendered at 2.5× in 21 tiles and every tile visually reviewed: the 30 kanji tables, three れんしゅう pages and three テスト pages.",
+  "pageMap": {
+    "lesson10": {
+      "kanji": [
+        52,
+        53
+      ],
+      "practice": 54,
+      "testI": 55,
+      "testII": 56
+    },
+    "lesson11": {
+      "kanji": [
+        57,
+        58
+      ],
+      "practice": 59,
+      "testI": 60,
+      "testII": 61
+    },
+    "lesson12": {
+      "kanji": [
+        62,
+        63
+      ],
+      "practice": 64,
+      "testI": 65,
+      "testII": 66
+    }
+  },
+  "testKeys": {
+    "C": "334122131412442231443232434343",
+    "D": "233124114114411324233414242131"
+  },
+  "modelAnswersAreGenerated": true,
+  "adaptations": [
+    "No answer key was supplied. Parts A to D are the workbook's practice and test items with model answers; parts E to J are added self-test practice built from words in this set and Kanji 1 to 3.",
+    "Chinese readings are written in katakana, as on Kanji 1 to 3. Readings the workbook brackets without examples stay in square brackets.",
+    "The workbook lists ヘイ and ハイ for 閉; the readings note says dictionaries give only ヘイ. Both stay in the table as printed.",
+    "Readings that appear in only one word (いり, きっ, ぎ, こと, がたり, ガッ, サッ, ゴク, ツ, がた) are shown with that word in brackets.",
+    "Parts C and D show the test sentence in brackets, so words that share a sound (きる for 着る and 切る) can be told apart.",
+    "Practice pictures (入口, 出口, 日本語, 会話, 東京駅) and test words not in the tables (家族, 中国人, 天気) are listed under Extra words from the exercises.",
+    "Part I reads verb forms and Part J asks for opposites and pairs, because this set is mostly verbs and places rather than adjectives."
+  ],
+  "previousPageHashes": {
+    "1": "5f9de78f6f157bfa92497e403ee616754d3e6f7f6d0044292b50b5fd0ef8b14f",
+    "2": "5cc67bdc2ac0f578ce640648888b1194edecf3c2d0b7d8f1420b5ab2d8f83808",
+    "3": "c873bf6eafa88f87db810ce09506f8fa3425ea8bcc55cce41d446e72627990fb"
+  },
+  "pageSha256": "369c5d023e1cc66048422d626c5adac549ccc18f230c81f0d6f5f8cacf20cbf3"
+}

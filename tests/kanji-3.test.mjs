@@ -18,7 +18,8 @@ function parts(section) {
 }
 
 test("Kanji 3 follows Kanji 2 and leaves Kanji 1 and 2 unchanged", () => {
-  assert.deepEqual(pages.map(p => p.ch), ["1", "2", "3"]);
+  // Later Kanji pages are appended after Kanji 3.
+  assert.deepEqual(pages.slice(0, 3).map(p => p.ch), ["1", "2", "3"]);
   for (const previous of pages.slice(0, 2)) assert.equal(hash(previous), audit.previousPageHashes[previous.ch]);
   assert.equal(hash(page), audit.pageSha256);
   assert.equal(page.title, "Adjectives, Colors and Everyday Verbs");
